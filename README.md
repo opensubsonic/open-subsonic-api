@@ -35,8 +35,8 @@ hugo server
 
 ## Running a container locally
 
-You can run docsy-example inside a [Docker](https://docs.docker.com/)
-container, the container runs with a volume bound to the `docsy-example`
+You can run this project inside a [Docker](https://docs.docker.com/)
+container, the container runs with a volume bound to the project's source
 folder. This approach doesn't require you to install any dependencies other
 than [Docker Desktop](https://www.docker.com/products/docker-desktop) on
 Windows and Mac, and [Docker Compose](https://docs.docker.com/compose/install/)
@@ -59,8 +59,8 @@ on Linux.
 1. Verify that the service is working. 
 
    Open your web browser and type `http://localhost:1313` in your navigation bar,
-   This opens a local instance of the docsy-example homepage. You can now make
-   changes to the docsy example and those changes will immediately show up in your
+   This opens a local instance of the project's homepage. You can now make
+   changes to the source code and those changes will immediately show up in your
    browser after you save.
 
 ### Cleanup

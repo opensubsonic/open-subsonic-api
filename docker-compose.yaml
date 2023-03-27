@@ -3,7 +3,6 @@ version: "3.3"
 services:
 
   site:
-    image: docsy/docsy-example
     build:
       context: .
     command: server
