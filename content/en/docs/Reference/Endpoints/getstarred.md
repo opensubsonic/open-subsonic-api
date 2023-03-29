@@ -1,6 +1,6 @@
 ---
-title: "getNowPlaying"
-linkTitle: "z getNowPlaying"
+title: "getStarred"  
+linkTitle: "z getStarred"
 description: >
     Returns starred songs, albums and artists.
 ---
