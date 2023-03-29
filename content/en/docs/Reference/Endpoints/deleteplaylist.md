@@ -1,18 +1,44 @@
 ---
-title: "updatePlaylist"
-linkTitle: "z updatePlaylist"
+title: "deletePlaylist"
+linkTitle: "deletePlaylist"
 description: >
-    Updates a playlist. Only the owner of a playlist is allowed to update it.
+    Deletes a saved playlist.
 ---
-
-## TODO
 
 `http://your-server/rest/deletePlaylist` Since [1.2.0](../subsonic-versions)
 
 Deletes a saved playlist.
 
-| Parameter | Required | Default | Comment |
-| --- | --- | --- | --- |
-| `id` | yes |     | ID of the playlist to delete, as obtained by `getPlaylists`. |
+### Parameters
 
-Returns an empty `<subsonic-response>` element on success.
+| Parameter | Req. | OpenS. | Default | Comment |
+| --- | --- | --- | --- | --- |
+| `id` | **Yes** |  |    | ID of the playlist to delete, as obtained by [`getPlaylists`](../getplaylists). |
+
+### Example
+
+{{< alert color="primary" >}} <http://your-server/rest/deletePlaylist.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+
+### Result
+
+An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
+
+{{< tabpane persistLang=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic" lang="json">}}{
+  "subsonic-response": {
+    "status":"ok",
+    "version":"1.16.1",
+    "type":"AwesomeServerName",
+    "serverVersion":"0.1.3 (tag)"
+  }
+}
+{{< /tab >}}
+{{< tab header="Subsonic" lang="json" >}}{
+  "subsonic-response": {
+    "status":"ok",
+    "version":"1.16.1",
+  }
+}
+{{< /tab >}}
+{{< /tabpane >}}

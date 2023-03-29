@@ -1,6 +1,6 @@
 ---
 title: "Subsonic API versions"
-linkTitle: "Subsonic API versions"
+linkTitle: "Subsonic API versions [OS]"
 weight: 100
 description: >
   Subsonic API versions.

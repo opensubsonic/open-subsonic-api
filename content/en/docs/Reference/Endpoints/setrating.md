@@ -18,7 +18,7 @@ Sets the rating for a music file.
 
 ### Example
 
-{{< alert color="primary" >}} http://your-server/rest/setRating.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/setRating.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
 
 ### Result
 

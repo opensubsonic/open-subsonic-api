@@ -1,53 +1,22 @@
 ---
-title: "getAlbum"
-linkTitle: "getAlbum"
+title: "shares"
+linkTitle: "shares"
 description: >
-    Returns details for an album.
+  Shares.
 ---
-
-`http://your-server/rest/getAlbum` Since [1.8.0](../../subsonic-versions)
-
-Returns details for an album, including a list of songs. This method organizes music according to ID3 tags.
-
-### Parameters
-
-| Parameter | Req. | OpenS. | Default | Comment |
-| --- | --- | --- | --- | --- |
-| `id` | **Yes** |  |    | The album ID. |
-
-### Example
-
-{{< alert color="primary" >}} <http://your-server/rest/getAlbum.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
-
-### Result
-
-A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`album`](../../responses/albumid3withsongs) element on success.
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}{
-  "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-    "type":"AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)",
-    "album": {
-        "id": "200000021",
-        "parent": "100000036",
-        "album": "Forget and Remember",
-        "title": "Forget and Remember",
-        "name": "Forget and Remember",
-        "isDir": true,
-        "coverArt": "al-200000021",
-        "songCount": 20,
-        "created": "2021-07-22T02:09:31+00:00",
-        "duration": 4248,
-        "playCount": 0,
-        "artistId": "100000036",
-        "artist": "Comfort Fit",
-        "year": 2005,
-        "genre": "Hip-Hop",
-        "song": [
+"share": [
+    {
+        "id": "12",
+        "url": "http://localhost:8989/share.php?id=12&secret=fXlKyEv3",
+        "description": "Forget and Remember (Comfort Fit)",
+        "username": "user",
+        "created": "2023-03-16T04:13:09+00:00",
+        "visitCount": 0,
+        "entry": [
             {
                 "id": "300000116",
                 "parent": "200000021",
@@ -96,32 +65,19 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
             }
         ]
     }
-  }
+  ]
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}{
-  "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-    "type":"AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)",
-    "album": {
-        "id": "200000021",
-        "parent": "100000036",
-        "album": "Forget and Remember",
-        "title": "Forget and Remember",
-        "name": "Forget and Remember",
-        "isDir": true,
-        "coverArt": "al-200000021",
-        "songCount": 20,
-        "created": "2021-07-22T02:09:31+00:00",
-        "duration": 4248,
-        "playCount": 0,
-        "artistId": "100000036",
-        "artist": "Comfort Fit",
-        "year": 2005,
-        "genre": "Hip-Hop",
-        "song": [
+"share": [
+    {
+        "id": "12",
+        "url": "http://localhost:8989/share.php?id=12&secret=fXlKyEv3",
+        "description": "Forget and Remember (Comfort Fit)",
+        "username": "user",
+        "created": "2023-03-16T04:13:09+00:00",
+        "visitCount": 0,
+        "entry": [
             {
                 "id": "300000116",
                 "parent": "200000021",
@@ -170,11 +126,11 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
             }
         ]
     }
-  }
+  ]
 }
 {{< /tab >}}
 {{< /tabpane >}}
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `album` | [`album`](../../responses/albumid3withsongs) | **Yes** |     | The album |
+| `share` | Array of [`share`](../share) | **Yes** |     | A list of share |

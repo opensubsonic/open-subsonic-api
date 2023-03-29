@@ -1,19 +1,44 @@
 ---
 title: "deleteUser"
-linkTitle: "z deleteUser"
+linkTitle: "deleteUser"
 description: >
     Deletes an existing user on the server.
 ---
 
-## TODO
-
-`http://your-server/rest/deleteUser` Since [1.3.0](../subsonic-versions)
+`http://your-server/rest/deleteUser` Since [1.3.0](../../subsonic-versions)
 
 Deletes an existing user on the server, using the following parameters:
 
-| Parameter | Required | Default | Comment |
-| --- | --- | --- | --- |
-| `username` | Yes |     | The name of the user to delete. |
+### Parameters
 
-Returns an empty `<subsonic-response>` element on success.
+| Parameter | Req. | OpenS. | Default | Comment |
+| --- | --- | --- | --- | --- |
+| `username` | **Yes** |  |    | The name of the user to delete. |
 
+### Example
+
+{{< alert color="primary" >}} <http://your-server/rest/deleteUser.view?usernamed=test&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+
+### Result
+
+An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
+
+{{< tabpane persistLang=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic" lang="json">}}{
+  "subsonic-response": {
+    "status":"ok",
+    "version":"1.16.1",
+    "type":"AwesomeServerName",
+    "serverVersion":"0.1.3 (tag)"
+  }
+}
+{{< /tab >}}
+{{< tab header="Subsonic" lang="json" >}}{
+  "subsonic-response": {
+    "status":"ok",
+    "version":"1.16.1",
+  }
+}
+{{< /tab >}}
+{{< /tabpane >}}

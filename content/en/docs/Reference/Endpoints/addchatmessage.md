@@ -1,18 +1,44 @@
 ---
 title: "addChatMessage"
-linkTitle: "z addChatMessage"
+linkTitle: "addChatMessage"
 description: >
     Adds a message to the chat log.
 ---
 
-## TODO
-
-`http://your-server/rest/addChatMessage` Since [1.2.0](../subsonic-versions)
+`http://your-server/rest/addChatMessage` Since [1.2.0](../../subsonic-versions)
 
 Adds a message to the chat log.
 
-| Parameter | Required | Default | Comment |
-| --- | --- | --- | --- |
-| `message` | Yes |     | The chat message. |
+### Parameters
 
-Returns an empty `<subsonic-response>` element on success.
+| Parameter | Req. | OpenS. | Default | Comment |
+| --- | --- | --- | --- | --- |
+| `message` | **Yes** |   |  | The chat message. |
+
+### Example
+
+{{< alert color="primary" >}} <http://your-server/rest/addChatMessage.view?message=hello&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+
+### Result
+
+An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
+
+{{< tabpane persistLang=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic" lang="json">}}{
+  "subsonic-response": {
+    "status":"ok",
+    "version":"1.16.1",
+    "type":"AwesomeServerName",
+    "serverVersion":"0.1.3 (tag)"
+  }
+}
+{{< /tab >}}
+{{< tab header="Subsonic" lang="json" >}}{
+  "subsonic-response": {
+    "status":"ok",
+    "version":"1.16.1",
+  }
+}
+{{< /tab >}}
+{{< /tabpane >}}

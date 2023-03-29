@@ -19,7 +19,7 @@ Creates or updates a bookmark (a position within a media file). Bookmarks are pe
 
 ### Example
 
-{{< alert color="primary" >}} http://your-server/rest/createBookmark.view?id=123&position=12&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/createBookmark.view?id=123&position=12&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
 
 ### Result
 

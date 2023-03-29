@@ -19,7 +19,7 @@ Attaches a star to a song, album or artist.
 
 ### Example
 
-{{< alert color="primary" >}} http://your-server/rest/star.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/star.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
 
 ### Result
 
