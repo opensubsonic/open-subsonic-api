@@ -1,14 +1,13 @@
 ---
 title: "Child"
-linkTitle: "Child"
+linkTitle: "Child [OS]"
 description: >
   A media.
 ---
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
-{
+{{< tab header="OpenSubsonic" lang="json">}}{
   "id": "082f435a363c32c57d5edb6a678a28d4",
   "parent": "e8a0685e3f3ec6f251649af2b58b8617",
   "isDir": false,
@@ -35,8 +34,7 @@ description: >
   "isVideo": false
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}
-{
+{{< tab header="Subsonic" lang="json" >}}{
   "id": "082f435a363c32c57d5edb6a678a28d4",
   "parent": "e8a0685e3f3ec6f251649af2b58b8617",
   "isDir": false,
@@ -103,3 +101,11 @@ description: >
 
 - `played`
 {{< /alert >}}
+
+---
+
+### OpenSubsonic server support
+
+| Server | Min vers. | Comment |
+| --- | --- | --- |
+| **Navidrome** | 0.49.0 | Support `played`|

@@ -4,25 +4,8 @@ linkTitle: "OpenSubsonic API"
 date: 2017-01-06
 weight: 2
 description: >
-    The OpenSubsonic API allows anyone to build their own programs using a compatible server, whether they're on the web, the desktop or on mobile devices. All the OpenSubsonic-compatible apps (clients and servers) are built using the OpenSubsonic API.
+    API details and methods.
 ---
-
-Feel free to join the [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions) forum for discussions, suggestions and questions.
-
-## Introduction
-
-The OpenSubsonic API allows you to call methods that respond in [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) style xml or json. Since most clients now only rely on json, this documentation only shows the json answers in the documentation.
-
-This project is built upon the original [Subsonic API](https://www.subsonic.org/pages/api.jsp)
-
-Since the original project is now abandonned, a group of Subsonic clients and servers associated to expand and fix the original API.
-
-This is done by:
-
-- improving documentation to fill some gaps that could have lead some servers to build different implementations.
-- simple non breaking extensions to the API.
-- adding new well documented endpoints.
-- try to ensure that clients still support legacy Subsonic servers.
 
 See [API Reference](../api-reference) for the basic API documentation. (Mandatory parameters, authentication, error handling, ...)
 
@@ -30,7 +13,7 @@ See [API Reference](../api-reference) for the basic API documentation. (Mandator
 
 Starting with version [1.8.0](../subsonic-versions), the API provides methods for accessing the media collection organized according to ID3 tags, rather than file structure.
 
-For instance, browsing through the collection using ID3 tags should use the `getArtists`, `getArtist` and `getAlbum` methods. To browse using file structure you would use `getIndexes` and `getMusicDirectory`.
+For instance, browsing through the collection using ID3 tags should use the [`getArtists`](../endpoints/getartists), [`getArtist`](../endpoints/getartist) and [`getAlbum`](../endpoints/getalbum) methods. To browse using file structure you would use [`getIndexes`](../endpoints/getindexes) and [`getMusicDirectory`](../endpoints/getmusicdirectory).
 
 Correspondingly, there are two sets of methods for searching, starring and album lists. Refer to the method documentation for details.
 

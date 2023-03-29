@@ -1,11 +1,9 @@
 ---
 title: "search3"
-linkTitle: "search3"
+linkTitle: "search3 [OS]"
 description: >
     Returns albums, artists and songs matching the given search criteria. Supports paging through the result.
 ---
-
-## search3
 
 `http://your-server/rest/search3` Since [1.8.0](../../subsonic-versions)
 
@@ -17,7 +15,7 @@ Music is organized according to ID3 tags.
 
 | Parameter | Requ. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `query` | **Yes** | *See below |     | Search query. |
+| `query` | **Yes** | See below* |     | Search query. |
 | `artistCount` | No |   | 20  | Maximum number of artists to return. |
 | `artistOffset` | No |   | 0   | Search result offset for artists. Used for paging. |
 | `albumCount` | No |   | 20  | Maximum number of albums to return. |
@@ -30,7 +28,7 @@ Music is organized according to ID3 tags.
 
 ### Example
 
-{{< alert color="primary" >}} http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=OpenSubsonic&f=json&query=""&artistCount=1&albumCount=1&songCount=1 {{< /alert >}}
+{{< alert color="primary" >}} http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json&query=""&artistCount=1&albumCount=1&songCount=1 {{< /alert >}}
 
 ### Result
 
@@ -42,7 +40,7 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
   "subsonic-response": {
     "status": "ok",
     "version": "1.16.1",
-    "type": "opensubsonic",
+    "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
     "searchResult3": {
       "artist": [
@@ -108,8 +106,6 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
   "subsonic-response": {
     "status": "ok",
     "version": "1.16.1",
-    "type": "opensubsonic",
-    "serverVersion": "0.1.3 (tag)",
     "searchResult3": {
       "artist": [
         {
@@ -175,3 +171,16 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `searchResult3` | [`searchResult3`](../../responses/searchresult3) | **Yes** |     | The result of the search |
+
+---
+
+### OpenSubsonic server support
+
+| Server | Min vers. | Comment |
+| --- | --- | --- |
+| **Navidrome** | 0.3.0 | Support `query=""` |
+| **Gonic** | 0.15.0 | Support `query=""` |
+| **Ampache** | 5.5.7 | Support `query=""` |
+| **Funkwhale** | 1.2.8 | Support not passing a query parameter. |
+| **Astiga** |  | Support `query=` |
+| **LMS** | 3.35.1 | Support `query=` |

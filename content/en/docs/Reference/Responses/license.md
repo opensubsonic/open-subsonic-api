@@ -7,16 +7,14 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
-"license": {
+{{< tab header="OpenSubsonic" lang="json">}}{
     "valid": true,
     "email": "demo@demo.org",
     "licenseExpires": "2017-04-11T10:42:50.842Z",
     "trialExpires": "2017-04-11T10:42:50.842Z"
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}
-"license": {
+{{< tab header="Subsonic" lang="json" >}}{
     "valid": true,
     "email": "demo@demo.org",
     "licenseExpires": "2017-04-11T10:42:50.842Z",

@@ -7,8 +7,7 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
-"searchResult3": {
+{{< tab header="OpenSubsonic" lang="json">}}{
   "artist": [
     {
       "id": "37ec820ca7193e17040c98f7da7c4b51",
@@ -66,8 +65,7 @@ description: >
   ]
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}
-"searchResult3": {
+{{< tab header="Subsonic" lang="json" >}}{
   "artist": [
     {
       "id": "37ec820ca7193e17040c98f7da7c4b51",

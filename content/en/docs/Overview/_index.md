@@ -3,36 +3,47 @@ title: "Overview"
 linkTitle: "Overview"
 weight: 1
 description: >
-  Here's where your user finds out if your project is for them.
+  What is OpenSubsonic API.
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+The OpenSubsonic API allows anyone to build their own programs using a compatible server, whether they’re on the web, the desktop or on mobile devices. All the OpenSubsonic-compatible apps (clients and servers) are built using the OpenSubsonic API.
 
+The OpenSubsonic API allows you to call methods that respond in [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) style xml or json. Since most clients now only rely on json, this documentation only shows the json answers in the documentation.
 
-The Overview is where your users find out about your project. Depending on the size of your docset, you can have a separate overview page (like this one) or put your overview contents in the Documentation landing page (like in the Docsy User Guide). 
+This project is built upon the original [Subsonic API](https://www.subsonic.org/pages/api.jsp)
 
-Try answering these questions for your user in this page:
+Since the original project is now abandonned, a group of Subsonic clients and servers associated to expand and fix the original API.
 
-## What is it?
+This is done by:
 
-Introduce your project, including what it does or lets you do, why you would use it, and its primary goal (and how it achieves it). This should be similar to your README description, though you can go into a little more detail here if you want.
+- improving documentation to fill some gaps that could have lead some servers to build different implementations.
+- simple non breaking extensions to the API.
+- adding new well documented endpoints.
+- try to ensure that clients still support legacy Subsonic servers.
 
-## Why do I want it?
+See [OpenSubsonic API](../reference/opensubsonic-api) for the API documentation.
 
-Help your user know if your project will help them. Useful information can include: 
+## Participants
 
-* **What is it good for?**: What types of problems does your project solve? What are the benefits of using it?
+OpenSubsonic is built with servers and clients trying to improve the global media center ecosystem by providing a common expandable API that can fit most of the needs of modern music apps.
 
-* **What is it not good for?**: For example, point out situations that might intuitively seem suited for your project, but aren't for some reason. Also mention known limitations, scaling issues, or anything else that might let your users know if the project is not for them.
+Any server or client can join the organisation and make proposal [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions). The only condititions is that if (as a client) you request an API extensions that are accepted you engage yourself in implementing it in your client in a timely manner.
 
-* **What is it *not yet* good for?**: Highlight any useful features that are coming soon.
+### Servers
 
-## Where should I go next?
+- [Ampache](https://ampache.org/)
+- [Astiga](https://asti.ga)
+- [Gonic](https://github.com/sentriz/gonic)
+- [LMS - Lightweight Music Server](https://github.com/epoupon/lms)
+- [Navidrome](https://www.navidrome.org/)
+- [Supysonic](https://github.com/spl0k/supysonic)
 
-Give your users next steps from the Overview. For example:
+### Clients
 
-* [Getting Started](/docs/getting-started/): Get started with $project
-* [Examples](/docs/examples/): Check out some example code!
+- [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)
+- [Supersonic](https://github.com/dweymouth/supersonic)
+- [Symfonium](https://symfonium.app/)
 
+## Join us
+
+Feel free to join the [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions) forum for discussions, suggestions and questions.

@@ -1,6 +1,6 @@
 ---
 title: "subsonic-response"
-linkTitle: "subsonic-response"
+linkTitle: "subsonic-response [OS]"
 description: >
   Common answer wrapper.
 ---
@@ -11,7 +11,7 @@ description: >
   "subsonic-response": {
     "status":"ok",
     "version":"1.16.1",
-    "type":"opensubsonic",
+    "type":"AwesomeServerName",
     "serverVersion":"0.1.3 (tag)"
   }
 }
@@ -37,3 +37,16 @@ description: >
 - `type` containing the server type/name (Ex: Navidrome or Gonic)
 - `serverVersion` containing the server version (Ex: 1.2.3) this is different from the `version` field that expose the Subsonic API version.
 {{< /alert >}}
+
+---
+
+### OpenSubsonic server support
+
+| Server | Min vers. | Comment |
+| --- | --- | --- |
+| **Navidrome** |  | Support `type` and `serverVersion` |
+| **Gonic** |  | Support `type` |
+| **Ampache** | 5.5.6 | Support `type` and `serverVersion`|
+| **Funkwhale** |  |  Support `type`, version is exposed as `funkwhaleVersion` |
+| **Astiga** |  | Expose `Astiga/production` in `serverVersion` |
+| **LMS** |  | Support `type` |

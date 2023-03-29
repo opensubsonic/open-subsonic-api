@@ -12,9 +12,11 @@ In the documentation all changes from the original Subsonic API will be emphasiz
 
 {{< alert color="warning" title="OpenSubsonic" >}}Changes (Required or optional) related to OpenSubsonic.{{< /alert >}}
 
+All endpoints or responses modified by the OpenSubsonic API will have **[OS]** indicator in the navigation menu.
+
 ### Subsonic-response
 
-Servers compatible with OpenSubsonic must return an expanded [`subsonic-response`](../api-reference#subsonic-response) containing server name and server version.
+Servers compatible with OpenSubsonic must return an expanded [`subsonic-response`](../api-reference#subsonic-response) containing server name and optional server version.
 
 ### Search3
 

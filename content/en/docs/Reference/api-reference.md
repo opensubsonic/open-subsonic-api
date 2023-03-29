@@ -1,6 +1,6 @@
 ---
 title: "API Reference"
-linkTitle: "API Reference"
+linkTitle: "API Reference [OS]"
 date: 2017-01-05
 weight: 4
 description: >
@@ -29,20 +29,21 @@ Remember to [URL encode](http://www.w3schools.com/tags/ref_urlencode.asp) the re
 
 If you are targeting API version [1.12.0](../subsonic-versions) or earlier, authentication is performed by sending the password as clear text or hex-encoded. Examples:
 
-`http://your-server/rest/ping.view?u=joe&p=sesame&v=1.12.0&c=myapp`
+{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=sesame&v=1.12.0&c=AwesomeServerName&f=json {{< /alert >}}
 
-`http://your-server/rest/ping.view?u=joe&p=enc:736573616d65&v=1.12.0&c=myapp`
+{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=enc:736573616d65&v=1.12.0&c=AwesomeServerName&f=json {{< /alert >}}
 
 Starting with API version [1.13.0](../subsonic-versions), the recommended authentication scheme is to send an authentication token, calculated as a *one-way salted hash* of the password.
 
 This involves two steps:
 
 1. For each REST call, generate a random string called the *salt*. Send this as parameter `s`.
-    Use a salt length of at least six characters.2.  Calculate the authentication token as follows: **token = md5(password + salt)**. The md5() function takes a string and returns the 32-byte ASCII hexadecimal representation of the MD5 hash, using lower case characters for the hex values. The '+' operator represents concatenation of the two strings. Treat the strings as UTF-8 encoded when calculating the hash. Send the result as parameter `t`.
+    Use a salt length of at least six characters.
+2. Calculate the authentication token as follows: **token = md5(password + salt)**. The md5() function takes a string and returns the 32-byte ASCII hexadecimal representation of the MD5 hash, using lower case characters for the hex values. The '+' operator represents concatenation of the two strings. Treat the strings as UTF-8 encoded when calculating the hash. Send the result as parameter `t`.
 
 For example: if the password is **sesame** and the random salt is **c19b2d**, then **token = md5("sesamec19b2d") = 26719a1196d2a940705a59634eb18eab**. The corresponding request URL then becomes:
 
-`http://your-server/rest/ping.view?u=joe&t=26719a1196d2a940705a59634eb18eab&s=c19b2d&v=1.12.0&c=myapp`
+{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&t=26719a1196d2a940705a59634eb18eab&s=c19b2d&v=1.13.0&c=AwesomeServerName&f=json {{< /alert >}}
 
 ## Subsonic-response
 
@@ -54,7 +55,7 @@ All API endpoint unless noted otherwise returns a [`subsonic-response`](../respo
   "subsonic-response": {
     "status":"ok",
     "version":"1.16.1",
-    "type":"opensubsonic",
+    "type":"AwesomeServerName",
     "serverVersion":"0.1.3 (tag)"
   }
 }
@@ -78,7 +79,7 @@ All API endpoint unless noted otherwise returns a [`subsonic-response`](../respo
 {{< alert color="warning" title="OpenSubsonic" >}}2 fields are added:
 
 - `type` containing the server type/name (Ex: Navidrome or Gonic)
-- `serverVersion` containing the server version (Ex: 1.2.3) this is different from the `version` field that expose the Subsonic API version.
+- `serverVersion` containing the server version (Ex: 1.2.3 (beta)) this is different from the `version` field that expose the Subsonic API version.
 {{< /alert >}}
 
 ## Error handling
@@ -91,7 +92,7 @@ If a method fails it will return an error code and message in an `error` element
   "subsonic-response": {
     "status": "failed",
     "version": "1.16.1",
-    "type": "opensubsonic",
+    "type": "AwesomeServerName",
     "serverVersion":"0.1.3 (tag)",
     "error": {
         "code":40,

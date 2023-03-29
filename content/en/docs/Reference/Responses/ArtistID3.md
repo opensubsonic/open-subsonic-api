@@ -7,8 +7,7 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
-{
+{{< tab header="OpenSubsonic" lang="json">}}{
   "id": "37ec820ca7193e17040c98f7da7c4b51",
   "name": "2 Mello",
   "coverArt": "ar-37ec820ca7193e17040c98f7da7c4b51_0",
@@ -18,8 +17,7 @@ description: >
   "starred": "2017-04-11T10:42:50.842Z"
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}
-{
+{{< tab header="Subsonic" lang="json" >}}{
   "id": "37ec820ca7193e17040c98f7da7c4b51",
   "name": "2 Mello",
   "coverArt": "ar-37ec820ca7193e17040c98f7da7c4b51_0",
