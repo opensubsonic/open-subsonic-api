@@ -9,6 +9,8 @@ description: >
 
 See [API Reference](../api-reference) for the basic API documentation. (Mandatory parameters, authentication, error handling, ...)
 
+Be sure to read [OpenSubsonic changes](../opensubsonic-changes) to easily identify the changes brought by OpenSubsonic.
+
 ## File structure vs ID3 tags
 
 Starting with version [1.8.0](../subsonic-versions), the API provides methods for accessing the media collection organized according to ID3 tags, rather than file structure.

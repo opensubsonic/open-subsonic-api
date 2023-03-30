@@ -12,16 +12,11 @@ The OpenSubsonic API allows you to call methods that respond in [REST](http://en
 
 This project is built upon the original [Subsonic API](https://www.subsonic.org/pages/api.jsp)
 
-Since the original project is now abandonned, a group of Subsonic clients and servers associated to expand and fix the original API.
+See:
 
-This is done by:
-
-- improving documentation to fill some gaps that could have lead some servers to build different implementations.
-- simple non breaking extensions to the API.
-- adding new well documented endpoints.
-- try to ensure that clients still support legacy Subsonic servers.
-
-See [OpenSubsonic API](../reference/opensubsonic-api) for the API documentation.
+- [OpenSubsonic API](../reference/opensubsonic-api) for the API documentation.
+- [Goals](#goals) for some of the goals of this project.
+- [Issues](#addressing-issues-with-the-subsonic-api) for some of the issues this projects tries to solve over the original API.
 
 ## Participants
 
@@ -43,6 +38,26 @@ Any server or client can join the organisation and make proposal [OpenSubsonic](
 - [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)
 - [Supersonic](https://github.com/dweymouth/supersonic)
 - [Symfonium](https://symfonium.app/)
+
+## Goals
+
+The OpenSubsonic API has several goals, which include:
+
+- Being an open, collaboratively maintained specification.
+- Ensuring security across all extensions.
+- Maintaining complete backwards compatibility with the existing Subsonic API.
+- Offering piecewise optional implementation for servers and clients.
+
+## Addressing Issues with the Subsonic API
+
+Some of the issues the OpenSubsonic API aims to address include:
+
+- Outdated and insecure authentication methods.
+- Suboptimal versioning schema.
+- Insufficient methods for expressing server functionality.
+- Lack of an open and collaborative way to evolve the API.
+
+By extending the existing Subsonic API, the OpenSubsonic API hopes to create a more secure, flexible, and collaborative environment for the Subsonic ecosystem.
 
 ## Join us
 
