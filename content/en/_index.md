@@ -27,7 +27,7 @@ The OpenSubsonic API enhances the Subsonic API by introducing the following key 
 
 ## Getting Started
 
-To get started with the OpenSubsonic API, [explore the documentation](docs/overview) to learn more about the features and implementation process.
+To get started with the OpenSubsonic API, [explore the documentation](docs) to learn more about the features and implementation process.
 
 For developers interested in contributing to the OpenSubsonic API, visit the [GitHub organization](https://github.com/opensubsonic/open-subsonic-api) and follow the guidelines for submitting proposals and engaging in discussions.
 

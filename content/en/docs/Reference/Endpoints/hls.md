@@ -13,7 +13,7 @@ Creates an HLS ([HTTP Live Streaming](http://en.wikipedia.org/wiki/HTTP_Live_Str
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `id` | **Yes** |  |   | A string which uniquely identifies the media file to stream. |
+| `id` | **Yes** |  |   | A string which uniquely identifies the media file to stream.|
 | `bitRate` | No  | |    | If specified, the server will attempt to limit the bitrate to this value, in kilobits per second. If this parameter is specified more than once, the server will create a **variant playlist**, suitable for adaptive bitrate streaming. The playlist will support streaming at all the specified bitrates. The server will automatically choose video dimensions that are suitable for the given bitrates. Since [1.9.0](../../subsonic-versions) you may explicitly request a certain width (480) and height (360) like so: `bitRate=1000@480x360` |
 | `audioTrack` | No  | |    | The ID of the audio track to use. See[`getVideoInfo`](../getvideoinfo) for how to get the list of available audio tracks for a video. |
 
