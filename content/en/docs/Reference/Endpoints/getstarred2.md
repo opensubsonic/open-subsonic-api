@@ -1,19 +1,38 @@
 ---
 title: "getStarred2"
-linkTitle: "z getStarred2"
+linkTitle: "getStarred2"
 description: >
     Returns starred songs, albums and artists.
 ---
 
-## TODO
+`http://your-server/rest/getStarred2` Since [1.8.0](../../subsonic-versions)
 
-`http://your-server/rest/getStarred2` Since [1.8.0](../subsonic-versions)
+Similar to [`getStarred`](../getstarred), but organizes music according to ID3 tags.
 
-Similar to `getStarred`, but organizes music according to ID3 tags.
+### Parameters
 
-| Parameter | Required | Default | Comment |
-| --- | --- | --- | --- |
-| `musicFolderId` | No  |     | (Since [1.12.0](../subsonic-versions)) Only return results from the music folder with the given ID. See `getMusicFolders`. |
+| Parameter | Req. | OpenS. | Default | Comment |
+| --- | --- | --- | --- | --- |
+| `musicFolderId` | No  |  |    | (Since [1.12.0](../../subsonic-versions)) Only return results from the music folder with the given ID. See `getMusicFolders`. |
 
-Returns a `<subsonic-response>` element with a nested `<starred2>` element on success. [Example](http://subsonic.org/pages/inc/api/examples/starred2_example_1.xml).
+### Example
 
+{{< alert color="primary" >}} <http://your-server/rest/getStarred2.view?u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+
+### Result
+
+A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`starred2`](../../responses/starred2) element on success.
+
+{{< tabpane persistLang=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic" lang="json">}}
+// TODO
+{{< /tab >}}
+{{< tab header="Subsonic" lang="json" >}}
+// TODO
+{{< /tab >}}
+{{< /tabpane >}}
+
+| Field |  Type | Req. | OpenS. | Details |
+| --- | --- | --- | --- | --- |
+| `starred2` | [`starred2`](../../responses/starred2) | **Yes** |     | The song |

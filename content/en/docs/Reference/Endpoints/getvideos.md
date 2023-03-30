@@ -1,14 +1,36 @@
 ---
 title: "getVideos"
-linkTitle: "z getVideos"
+linkTitle: "getVideos"
 description: >
     Returns all video files.
 ---
-
-## TODO
 
 `http://your-server/rest/getVideos` Since [1.8.0](../subsonic-versions)
 
 Returns all video files.
 
-Returns a `<subsonic-response>` element with a nested `<videos>` element on success. [Example](http://subsonic.org/pages/inc/api/examples/videos_example_1.xml).
+### Parameters
+
+Takes no extra parameters.
+
+### Example
+
+{{< alert color="primary" >}} <http://your-server/rest/getVideos.view?&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+
+### Result
+
+A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`videos`](../../responses/videos) element on success.
+
+{{< tabpane persistLang=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic" lang="json">}}
+// TODO
+{{< /tab >}}
+{{< tab header="Subsonic" lang="json" >}}
+// TODO
+{{< /tab >}}
+{{< /tabpane >}}
+
+| Field |  Type | Req. | OpenS. | Details |
+| --- | --- | --- | --- | --- |
+| `videos` | [`videos`](../../responses/videos) | **Yes** |     | The videos |
