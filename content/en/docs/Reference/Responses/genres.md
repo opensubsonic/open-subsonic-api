@@ -1,35 +1,13 @@
 ---
-title: "getGenres"
-linkTitle: "getGenres"
+title: "genres"
+linkTitle: "genres"
 description: >
-    Returns all genres.
+  Genres list.
 ---
-
-`http://your-server/rest/getGenres` Since [1.9.0](../../subsonic-versions)
-
-Returns all genres.
-
-### Parameters
-
-Takes no extra parameters.
-
-### Example
-
-{{< alert color="primary" >}} <http://your-server/rest/getGenres.view?&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
-
-### Result
-
-A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`genres`](../../responses/genres) element on success.
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}{
-  "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-    "type":"AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)",
-    "genres": {
         "genre": [
             {
                 "songCount": 1,
@@ -68,14 +46,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
             }
         ]
     }
-  }
-}
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}{
-  "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-     "genres": {
         "genre": [
             {
                 "songCount": 1,
@@ -114,11 +86,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
             }
         ]
     }
-  }
-}
 {{< /tab >}}
 {{< /tabpane >}}
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `genres` | [`genres`](../../responses/genres) | **Yes** |     | The genre list |
+| `genre` | Array of [`genre`](../genre) | No |     | List of genre |

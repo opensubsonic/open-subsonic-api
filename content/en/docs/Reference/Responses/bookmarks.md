@@ -1,35 +1,13 @@
 ---
-title: "getBookmarks"
-linkTitle: "getBookmarks"
+title: "bookmarks"
+linkTitle: "bookmarks"
 description: >
-    Returns all bookmarks for this user.
+  Bookmarks list.
 ---
-
-`http://your-server/rest/getBookmarks` Since [1.9.0](../../subsonic-versions)
-
-Returns all bookmarks for this user. A bookmark is a position within a certain media file.
-
-### Parameters
-
-Takes no extra parameters.
-
-### Example
-
-{{< alert color="primary" >}} <http://your-server/rest/getBookmarks.view?u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
-
-### Result
-
-A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`bookmarks`](../../responses/bookmarks) element on success.
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}{
-  "subsonic-response": {
-    "status": "ok",
-    "version": "1.16.1",
-    "type": "AwesomeServerName",
-    "serverVersion": "0.1.3 (tag)",
-    "bookmarks": {
       "bookmark": [
         {
           "entry": {
@@ -96,14 +74,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
         }
       ]
     }
-  }
-}
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}{
-  "subsonic-response": {
-    "status": "ok",
-    "version": "1.16.1",
-    "bookmarks": {
       "bookmark": [
         {
           "entry": {
@@ -170,11 +142,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
         }
       ]
     }
-  }
-}
 {{< /tab >}}
 {{< /tabpane >}}
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `bookmarks` | [`bookmarks`](../../responses/bookmarks) | **Yes** |     | The bookmarks |
+| `bookmark` | Array of [`bookmark`](../bookmark) | No |     | List of bookmark |

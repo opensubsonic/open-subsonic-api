@@ -61,14 +61,4 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `id` | `string` | **Yes** |     | Id of the playlist |
-| `name` | `string` | **Yes** |     | Name of the playlist |
-| `comment` | `string` | No|     | A commnet |
-| `owner` | `string` | No |     | Owner of the playlist |
-| `public` | `boolean` | No|     | Is the playlist public |
-| `songCount` | `int` | **Yes** |     | number of songs |
-| `duration` | `int` | **Yes** |     | Playlist duration in seconds |
-| `created` | `string` | **Yes** |     | Creation date [ISO 8601] |
-| `changed` | `string` | **Yes** |     | Last changed date [ISO 8601] |
-| `coverArt` | `string` | No |     | A cover Art Id |
-| `allowedUser` | Array of `string` | No |     | A list of allowed usernames |
+| `playlist` | Array of [`playlist`](../playlist) | **Yes** |     | A list of playlist |
