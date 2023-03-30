@@ -33,7 +33,7 @@ Creates a new user on the server, using the following parameters:
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/createUser.view?username=test&password=test&email=test@test.com&name=radio&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/createUser.view?username=test&password=test&email=test@test.com&name=radio&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

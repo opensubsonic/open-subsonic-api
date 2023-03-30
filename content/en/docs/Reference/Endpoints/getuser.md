@@ -17,7 +17,7 @@ Get details about a given user, including which authorization roles and folder a
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getUser.view?username=tata&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getUser.view?username=tata&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

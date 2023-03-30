@@ -18,7 +18,7 @@ Searches for and returns lyrics for a given song.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getLyrics.view?artist=toto&title=tata&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getLyrics.view?artist=toto&title=tata&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

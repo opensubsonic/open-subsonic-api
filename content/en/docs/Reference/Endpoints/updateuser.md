@@ -33,7 +33,7 @@ Modifies an existing user on the server.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/updateUser.view?username=test&password=test&email=test@test.com&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/updateUser.view?username=test&password=test&email=test@test.com&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

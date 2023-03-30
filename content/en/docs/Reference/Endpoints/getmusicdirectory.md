@@ -17,7 +17,7 @@ Returns a listing of all files in a music directory. Typically used to get list 
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getMusicDirectory.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getMusicDirectory.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

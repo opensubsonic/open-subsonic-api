@@ -21,7 +21,7 @@ Returns random songs matching the given criteria.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getRandomSongs.view?u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getRandomSongs.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

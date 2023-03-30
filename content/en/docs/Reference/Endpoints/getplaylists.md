@@ -17,7 +17,7 @@ Returns all playlists a user is allowed to play.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getPlaylists.view?u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getPlaylists.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

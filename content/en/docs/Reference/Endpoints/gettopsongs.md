@@ -18,7 +18,7 @@ Returns top songs for the given artist, using data from [last.fm](http://last.fm
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getTopSongs.view?artist=toto&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getTopSongs.view?artist=toto&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

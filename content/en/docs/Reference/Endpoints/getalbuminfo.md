@@ -17,7 +17,7 @@ Returns album notes, image URLs etc, using data from [last.fm](http://last.fm).
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getAlbumInfo.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getAlbumInfo.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

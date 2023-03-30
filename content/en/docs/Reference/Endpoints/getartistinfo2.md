@@ -19,7 +19,7 @@ Similar to [`getArtistInfo`](../getartistinfo), but organizes music according to
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getArtistInfo2.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getArtistInfo2.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

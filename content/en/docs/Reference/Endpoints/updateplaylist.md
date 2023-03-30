@@ -22,7 +22,7 @@ Updates a playlist. Only the owner of a playlist is allowed to update it.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/updatePlaylist.view?playlistId=123&name=test&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/updatePlaylist.view?playlistId=123&name=test&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

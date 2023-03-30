@@ -19,7 +19,7 @@ Adds a new internet radio station. Only users with admin privileges are allowed 
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/createInternetRadioStation.view?streamUrl=url&name=radio&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/createInternetRadioStation.view?streamUrl=url&name=radio&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

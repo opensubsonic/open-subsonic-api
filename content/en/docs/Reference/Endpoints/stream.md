@@ -27,7 +27,7 @@ Servers should not automatically count usage of this endpoint as a finished play
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/stream.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/stream.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

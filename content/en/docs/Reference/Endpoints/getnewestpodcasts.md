@@ -17,7 +17,7 @@ Returns the most recently published Podcast episodes.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getNewestPodcasts.view?title=tata&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getNewestPodcasts.view?title=tata&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

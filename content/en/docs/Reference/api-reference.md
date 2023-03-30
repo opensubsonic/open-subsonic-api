@@ -29,9 +29,9 @@ Remember to [URL encode](http://www.w3schools.com/tags/ref_urlencode.asp) the re
 
 If you are targeting API version [1.12.0](../subsonic-versions) or earlier, authentication is performed by sending the password as clear text or hex-encoded. Examples:
 
-{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=sesame&v=1.12.0&c=AwesomeServerName&f=json {{< /alert >}}
+{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=sesame&v=1.12.0&c=AwesomeClientName&f=json {{< /alert >}}
 
-{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=enc:736573616d65&v=1.12.0&c=AwesomeServerName&f=json {{< /alert >}}
+{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=enc:736573616d65&v=1.12.0&c=AwesomeClientName&f=json {{< /alert >}}
 
 Starting with API version [1.13.0](../subsonic-versions), the recommended authentication scheme is to send an authentication token, calculated as a *one-way salted hash* of the password.
 
@@ -43,7 +43,7 @@ This involves two steps:
 
 For example: if the password is **sesame** and the random salt is **c19b2d**, then **token = md5("sesamec19b2d") = 26719a1196d2a940705a59634eb18eab**. The corresponding request URL then becomes:
 
-{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&t=26719a1196d2a940705a59634eb18eab&s=c19b2d&v=1.13.0&c=AwesomeServerName&f=json {{< /alert >}}
+{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&t=26719a1196d2a940705a59634eb18eab&s=c19b2d&v=1.13.0&c=AwesomeClientName&f=json {{< /alert >}}
 
 ## Subsonic-response
 

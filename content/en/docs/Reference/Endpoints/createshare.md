@@ -19,7 +19,7 @@ Creates a public URL that can be used by anyone to stream music or video from th
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/createShare.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/createShare.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

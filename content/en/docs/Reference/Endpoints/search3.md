@@ -28,7 +28,7 @@ Music is organized according to ID3 tags.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json&query=>""&artistCount=1&albumCount=1&songCount=1 {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json&query=>""&artistCount=1&albumCount=1&songCount=1 {{< /alert >}}
 
 ### Result
 

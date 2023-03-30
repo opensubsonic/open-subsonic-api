@@ -19,7 +19,7 @@ Returns artist info with biography, image URLs and similar artists, using data f
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getArtistInfo.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getArtistInfo.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 

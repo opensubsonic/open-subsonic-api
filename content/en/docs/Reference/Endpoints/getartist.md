@@ -17,7 +17,7 @@ Returns details for an artist, including a list of albums. This method organizes
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getArtist.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeServerName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} <http://your-server/rest/getArtist.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
 
 ### Result
 
