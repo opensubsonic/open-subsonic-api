@@ -3,8 +3,10 @@ title: "Overview"
 linkTitle: "Documentation"
 weight: 1
 description: >
-  What is OpenSubsonic API.
+  Complete API documentation and reference.
 ---
+
+## What is OpenSubsonic API.
 
 The OpenSubsonic API allows anyone to build their own programs using a compatible server, whether they’re on the web, the desktop or on mobile devices. All the OpenSubsonic-compatible apps (clients and servers) are built using the OpenSubsonic API.
 
@@ -14,7 +16,7 @@ This project is built upon the original [Subsonic API](https://www.subsonic.org/
 
 See:
 
-- [OpenSubsonic API](reference/opensubsonic-api) for the API documentation.
+- [OpenSubsonic API](./opensubsonic-api) for the API documentation.
 - [Goals](#goals) for some of the goals of this project.
 - [Issues](#addressing-issues-with-the-subsonic-api) for some of the issues this projects tries to solve over the original API.
 

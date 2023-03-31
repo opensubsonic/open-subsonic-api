@@ -4,7 +4,6 @@ linkTitle: "API Reference [OS]"
 opensubsonic:
 - Clarification
 - Extension
-date: 2017-01-05
 weight: 4
 description: >
   Common API documentation.

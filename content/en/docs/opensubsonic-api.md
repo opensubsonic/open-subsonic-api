@@ -1,7 +1,6 @@
 ---
 title: "OpenSubsonic API"
 linkTitle: "OpenSubsonic API"
-date: 2017-01-06
 weight: 2
 description: >
     API details and methods.
