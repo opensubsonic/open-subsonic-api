@@ -1,6 +1,8 @@
 ---
 title: "AlbumID3WithSongs"
 linkTitle: "AlbumID3WithSongs [OS]"
+opensubsonic:
+- Extension
 description: >
   Album with songs.
 ---
@@ -161,7 +163,8 @@ description: >
 | `userRating` | `int` | No | **Yes**    | The user rating of the album. [1-5]|
 | `song` | Array of [`Child`](../child) | No |     | The list of songs |
 
-{{< alert color="warning" title="OpenSubsonic" >}}New fields are added:
+{{< alert color="warning" title="OpenSubsonic" >}}
+New fields are added:
 
 - `played`
 - `userRating`

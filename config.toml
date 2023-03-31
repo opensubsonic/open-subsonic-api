@@ -18,18 +18,19 @@ enableGitInfo = true
 
 # You can add your own taxonomies
 [taxonomies]
+opensubsonic = "opensubsonic"
 tag = "tags"
 category = "categories"
 
 [params.taxonomy]
 # set taxonomyCloud = [] to hide taxonomy clouds
-taxonomyCloud = ["tags", "categories"]
+taxonomyCloud = ["tags", "categories", "opensubsonic"]
 
 # If used, must have same length as taxonomyCloud
-taxonomyCloudTitle = ["Tag Cloud", "Categories"]
+taxonomyCloudTitle = ["Tag Cloud", "Categories", "OpenSubsonic"]
 
 # set taxonomyPageHeader = [] to hide taxonomies on the page headers
-taxonomyPageHeader = ["tags", "categories"]
+taxonomyPageHeader = ["tags", "categories", "opensubsonic"]
 
 
 # Highlighting config

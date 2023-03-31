@@ -1,6 +1,9 @@
 ---
 title: "API Reference"
 linkTitle: "API Reference [OS]"
+opensubsonic:
+- Clarification
+- Extension
 date: 2017-01-05
 weight: 4
 description: >
@@ -21,7 +24,7 @@ Please note that all methods take the following parameters:
 | `c` | **Yes** |   |    | A unique string identifying the client application. |
 | `f` | No  |   | xml | Request data to be returned in this format. Supported values are "xml", "json" (since [1.4.0](../subsonic-versions)) and "jsonp" (since [1.6.0](../subsonic-versions)). If using jsonp, specify name of javascript callback function using a `callback` parameter. |
 
-*) Either `p` or *both* `t` and `s` must be specified.
+*) Either `p` or both `t` and `s` must be specified.
 
 Remember to [URL encode](http://www.w3schools.com/tags/ref_urlencode.asp) the request parameters. All methods (except those that return binary data) returns XML documents conforming to the [subsonic-rest-api.xsd](../subsonic-versions) schema. The XML documents are encoded with UTF-8.
 
@@ -29,9 +32,9 @@ Remember to [URL encode](http://www.w3schools.com/tags/ref_urlencode.asp) the re
 
 If you are targeting API version [1.12.0](../subsonic-versions) or earlier, authentication is performed by sending the password as clear text or hex-encoded. Examples:
 
-{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=sesame&v=1.12.0&c=AwesomeClientName&f=json {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/ping.view?u=joe&p=sesame&v=1.12.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
-{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&p=enc:736573616d65&v=1.12.0&c=AwesomeClientName&f=json {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/ping.view?u=joe&p=enc:736573616d65&v=1.12.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 Starting with API version [1.13.0](../subsonic-versions), the recommended authentication scheme is to send an authentication token, calculated as a *one-way salted hash* of the password.
 
@@ -43,7 +46,7 @@ This involves two steps:
 
 For example: if the password is **sesame** and the random salt is **c19b2d**, then **token = md5("sesamec19b2d") = 26719a1196d2a940705a59634eb18eab**. The corresponding request URL then becomes:
 
-{{< alert color="primary" >}} http://your-server/rest/ping.view?u=joe&t=26719a1196d2a940705a59634eb18eab&s=c19b2d&v=1.13.0&c=AwesomeClientName&f=json {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/ping.view?u=joe&t=26719a1196d2a940705a59634eb18eab&s=c19b2d&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ## Subsonic-response
 
@@ -76,7 +79,8 @@ All API endpoint unless noted otherwise returns a [`subsonic-response`](../respo
 | `type` | `string` | **Yes** | **Yes**    | The server actual name. [Ex: `Navidrome` or `Gonic`] |
 | `serverVersion` | `string` | No | **Yes**    | The server actual version. [Ex: `1.2.3 (beta)`] |
 
-{{< alert color="warning" title="OpenSubsonic" >}}2 fields are added:
+{{< alert color="warning" title="OpenSubsonic" >}}
+New fields are added:
 
 - `type` containing the server type/name (Ex: Navidrome or Gonic)
 - `serverVersion` containing the server version (Ex: 1.2.3 (beta)) this is different from the `version` field that expose the Subsonic API version.
@@ -134,4 +138,6 @@ The following error codes are defined:
 | 60  | The trial period for the Subsonic server is over. Please upgrade to Subsonic Premium. Visit subsonic.org for details. |
 | 70  | The requested data was not found. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}Servers must return error **41** if they do not support the token authentification.{{< /alert >}}
+{{< alert color="warning" title="OpenSubsonic" >}}
+Servers must return error **41** if they do not support the token authentification.
+{{< /alert >}}

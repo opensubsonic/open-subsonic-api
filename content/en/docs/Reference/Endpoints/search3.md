@@ -1,6 +1,8 @@
 ---
 title: "search3"
 linkTitle: "search3 [OS]"
+opensubsonic:
+- Clarification
 description: >
     Returns albums, artists and songs matching the given search criteria. Supports paging through the result.
 ---
@@ -24,7 +26,9 @@ Music is organized according to ID3 tags.
 | `songOffset` | No |   | 0   | Search result offset for songs. Used for paging. |
 | `musicFolderId` | No |   |     | (Since [1.12.0](../../subsonic-versions)) Only return results from music folder with the given ID. See `getMusicFolders`. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}Servers must support an **empty query** and return all the data to allow clients to properly access all the media information for offline sync.{{< /alert >}}
+{{< alert color="warning" title="OpenSubsonic" >}}
+Servers must support an **empty query** and return all the data to allow clients to properly access all the media information for offline sync.
+{{< /alert >}}
 
 ### Example
 

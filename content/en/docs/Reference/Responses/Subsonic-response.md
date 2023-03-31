@@ -1,6 +1,8 @@
 ---
 title: "subsonic-response"
 linkTitle: "subsonic-response [OS]"
+opensubsonic:
+- Extension
 description: >
   Common answer wrapper.
 ---
@@ -34,7 +36,8 @@ description: >
 | `type` | `string` | **Yes** | **Yes**    | The server actual name. [Ex: `Navidrome` or `Gonic`] |
 | `serverVersion` | `string` | No | **Yes**    | The server actual version. [Ex: `1.2.3 (beta)`] |
 
-{{< alert color="warning" title="OpenSubsonic" >}}New fields are added:
+{{< alert color="warning" title="OpenSubsonic" >}}
+New fields are added:
 
 - `type` containing the server type/name (Ex: Navidrome or Gonic)
 - `serverVersion` containing the server version (Ex: 1.2.3) this is different from the `version` field that expose the Subsonic API version.

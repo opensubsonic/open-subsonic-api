@@ -1,6 +1,8 @@
 ---
 title: "Child"
 linkTitle: "Child [OS]"
+opensubsonic:
+- Extension
 description: >
   A media.
 ---
@@ -99,7 +101,8 @@ description: >
 | `originalHeight` | `int` | No |     | The video original Height |
 | `played` | `string` | No | **Yes**    | Date the album was last played. [ISO 8601]|
 
-{{< alert color="warning" title="OpenSubsonic" >}}New fields are added:
+{{< alert color="warning" title="OpenSubsonic" >}}
+New fields are added:
 
 - `played`
 {{< /alert >}}

@@ -3,25 +3,33 @@ title: "OpenSubsonic changes"
 linkTitle: "OpenSubsonic changes"
 weight: 5
 description: >
-  The list of all API changes in OpenSubsonic API vs the original Subsonic API.
+ API changes in OpenSubsonic API vs the original Subsonic API.
 ---
 
 ## Changes
 
 In the documentation all changes from the original Subsonic API will be emphasized with the following warning:
 
-{{< alert color="warning" title="OpenSubsonic" >}}Changes (Required or optional) related to OpenSubsonic.{{< /alert >}}
+{{< alert color="warning" title="OpenSubsonic" >}}
+Changes (Required or optional) related to OpenSubsonic.
+{{< /alert >}}
 
 All endpoints or responses modified by the OpenSubsonic API will have **[OS]** indicator in the navigation menu.
 
-### Subsonic-response
+OpenSubsonic expand the original API via 3 different ways:
 
-Servers compatible with OpenSubsonic must return an expanded [`subsonic-response`](../api-reference#subsonic-response) containing server name and optional server version.
+- **Clarifications**: Documentation improvement to ensure consistency in server answers or actions where doubt was possible.
+- **Extensions**: Non breaking changes to the API to improve clients life. Like new returned field, or new parameters to existing functions.
+- **Additions**: New endpoints added to provide functions that could not be provided via non breaking extensions.
 
-### Search3
+### Clarifications
 
-Servers compatible with OpenSubsonic must accept an empty query for [`search3`](../endpoints/search3#subsonic-response).
+[List of clarifications](/opensubsonic/clarification/)
 
-### Responses
+### Extensions
 
-Servers compatible with OpenSubsonic can return additional information for the media see the different [responses](../responses).
+[List of extensions](/opensubsonic/extension/)
+
+### Additions
+
+[List of additions](/opensubsonic/addition/)

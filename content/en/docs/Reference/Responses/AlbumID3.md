@@ -1,6 +1,8 @@
 ---
 title: "AlbumID3"
 linkTitle: "AlbumID3 [OS]"
+opensubsonic:
+- Extension
 description: >
   An album from ID3 tags.
 ---
@@ -58,7 +60,8 @@ description: >
 | `played` | `string` | No | **Yes**    | Date the album was last played. [ISO 8601]|
 | `userRating` | `int` | No | **Yes**    | The user rating of the album. [1-5]|
 
-{{< alert color="warning" title="OpenSubsonic" >}}New fields are added:
+{{< alert color="warning" title="OpenSubsonic" >}}
+New fields are added:
 
 - `played`
 - `userRating`
