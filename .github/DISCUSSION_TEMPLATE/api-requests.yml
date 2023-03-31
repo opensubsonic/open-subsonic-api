@@ -1,0 +1,59 @@
+title: "[API Request] "
+labels: ["API: Request", "Status: New request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Fill this template for your API extension request.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of change
+      options:
+        - API Clarification
+        - API tweak
+        - API extension
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Proposal description
+      description: "Explain the proposal in details. What it adds, why it's needed, who will benefit."
+      placeholder: As much details as possible.
+    validations:
+      required: true
+  - type: textarea
+    id: backward
+    attributes:
+      label: Backward compatibility impact
+      description: "Explain if the proposal can have backward compatibility impacts. Currently it's better to propose new endpoints than breaking this."
+      placeholder: As much details as possible.
+  - type: checkboxes
+    attributes:
+      label: Backward compatibility
+      options:
+        - label: "No backward compatibility impact."
+  - type: textarea
+    id: details
+    attributes:
+      label: API details
+      description: "Describe the actual API (endpoint, parameters, return values)."
+      placeholder: As much details as possible.
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security impacts
+      description: "Describe any possible security impacts."
+  - type: textarea
+    id: issues
+    attributes:
+      label: Potential issues
+      description: "Describe any possible issues that may arise from this API."
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternative solutions
+      description: "If you already have alternative idea to fit the need."
