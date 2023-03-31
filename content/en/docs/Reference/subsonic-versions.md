@@ -35,6 +35,6 @@ This table shows the REST API version implemented in different Subsonic versions
 
 Note that a Subsonic-compatible server is backward compatible with a REST client if and only if the major version is the same, and the minor version of the client is less than or equal to the server's. For example, if the server has REST API version 2.2, it supports client versions 2.0, 2.1 and 2.2, but not versions 1.x, 2.3+ or 3.x. The third part of the version number is not used to determine compatibility.
 
-{{< alert color="warning" title="OpenSubsonic" >}} 
+{{< alert color="warning" title="OpenSubsonic" >}}
 OpenSubsonic servers should support at least **1.14.0**. It is not required to support version **1.16.1**, but this is still highly recommended.
 {{< /alert >}}

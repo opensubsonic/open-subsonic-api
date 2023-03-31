@@ -2,7 +2,7 @@
 title: "getChatMessages"
 linkTitle: "getChatMessages"
 description: >
-    Returns the current visible (non-expired) chat messages.
+  Returns the current visible (non-expired) chat messages.
 ---
 
 `http://your-server/rest/getChatMessages` Since [1.2.0](../../subsonic-versions)
@@ -13,7 +13,7 @@ Returns the current visible (non-expired) chat messages.
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `since` | No  |  |    | Only return messages newer than this time (in millis since Jan 1 1970). |
+| `since` | No  |  |  | Only return messages newer than this time (in millis since Jan 1 1970). |
 
 ### Example
 
@@ -27,52 +27,52 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-    "subsonic-response": {
-        "status": "ok",
-        "version": "1.16.1",
-        "type": "AwesomeServerName",
-        "serverVersion": "0.1.3 (tag)",
-        "chatMessages": {
-            "chatMessage": [
-                {
-                    "username": "admin",
-                    "time": 1678935707000,
-                    "message": "Api Script Testing"
-                },
-                {
-                    "username": "user",
-                    "time": 1678935699000,
-                    "message": "Api Script Testing"
-                }
-            ]
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
+    "chatMessages": {
+      "chatMessage": [
+        {
+          "username": "admin",
+          "time": 1678935707000,
+          "message": "Api Script Testing"
+        },
+        {
+          "username": "user",
+          "time": 1678935699000,
+          "message": "Api Script Testing"
         }
+      ]
     }
+  }
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
 {
-    "subsonic-response": {
-        "status": "ok",
-        "version": "1.16.1",
-        "chatMessages": {
-            "chatMessage": [
-                {
-                    "username": "admin",
-                    "time": 1678935707000,
-                    "message": "Api Script Testing"
-                },
-                {
-                    "username": "user",
-                    "time": 1678935699000,
-                    "message": "Api Script Testing"
-                }
-            ]
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "chatMessages": {
+      "chatMessage": [
+        {
+          "username": "admin",
+          "time": 1678935707000,
+          "message": "Api Script Testing"
+        },
+        {
+          "username": "user",
+          "time": 1678935699000,
+          "message": "Api Script Testing"
         }
+      ]
     }
+  }
 }
 {{< /tab >}}
 {{< /tabpane >}}
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `chatMessages` | [`chatMessages`](../../responses/chatmessages) | **Yes** |     | The message list |
+| `chatMessages` | [`chatMessages`](../../responses/chatmessages) | **Yes** |   | The message list |

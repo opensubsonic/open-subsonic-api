@@ -5,7 +5,7 @@ description: >
     Deletes a Podcast episode.
 ---
 
-`http://your-server/rest/deletePodcastEpisode` Since [1.9.0](../subsonic-versions)
+`http://your-server/rest/deletePodcastEpisode` Since [1.9.0](../../subsonic-versions)
 
 Deletes a Podcast episode. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).
 
