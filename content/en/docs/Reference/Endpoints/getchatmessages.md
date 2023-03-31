@@ -17,7 +17,7 @@ Returns the current visible (non-expired) chat messages.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getChatMessages.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getChatMessages.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -25,7 +25,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
     "subsonic-response": {
         "status": "ok",
         "version": "1.16.1",
@@ -48,7 +49,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     }
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
     "subsonic-response": {
         "status": "ok",
         "version": "1.16.1",

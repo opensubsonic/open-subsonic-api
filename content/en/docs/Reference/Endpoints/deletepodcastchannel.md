@@ -17,7 +17,7 @@ Deletes a Podcast channel. Note: The user must be authorized for Podcast adminis
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/deletePodcastChannel.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/deletePodcastChannel.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -25,16 +25,18 @@ An empty [`subsonic-response`](../../responses/subsonic-response) element on suc
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-    "type":"AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)"
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)"
   }
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "subsonic-response": {
     "status":"ok",
     "version":"1.16.1",

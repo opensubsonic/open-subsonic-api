@@ -19,7 +19,7 @@ Returns all Podcast channels the server subscribes to, and (optionally) their ep
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getPodcasts.view?title=tata&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getPodcasts.view?title=tata&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

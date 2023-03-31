@@ -7,7 +7,8 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "id": "800000075",
   "name": "testcreate",
   "owner": "user",
@@ -18,7 +19,8 @@ description: >
   "duration": 304
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "id": "800000075",
   "name": "testcreate",
   "owner": "user",

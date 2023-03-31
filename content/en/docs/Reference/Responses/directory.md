@@ -7,7 +7,8 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
     "id": "1",
     "name": "music",
     "child": [
@@ -15,8 +16,8 @@ description: >
             "id": "100000016",
             "parent": "1",
             "isDir": true,
-            "title": "CARN\u00daN",
-            "artist": "CARN\u00daN",
+            "title": "CARNÚN",
+            "artist": "CARNÚN",
             "coverArt": "ar-100000016"
         },
         {
@@ -30,7 +31,8 @@ description: >
     ]
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
     "id": "1",
     "name": "music",
     "child": [
@@ -38,8 +40,8 @@ description: >
             "id": "100000016",
             "parent": "1",
             "isDir": true,
-            "title": "CARN\u00daN",
-            "artist": "CARN\u00daN",
+            "title": "CARNÚN",
+            "artist": "CARNÚN",
             "coverArt": "ar-100000016"
         },
         {

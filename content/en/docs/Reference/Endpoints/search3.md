@@ -28,7 +28,7 @@ Music is organized according to ID3 tags.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json&query=>""&artistCount=1&albumCount=1&songCount=1 {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json&query=""&artistCount=1&albumCount=1&songCount=1` {{< /alert >}}
 
 ### Result
 
@@ -36,7 +36,8 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "subsonic-response": {
     "status": "ok",
     "version": "1.16.1",
@@ -67,7 +68,7 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
           "created": "2023-03-10T02:19:35.784818075Z",
           "artistId": "91c3901ac465b9efc439e4be4270c2b6",
           "userRating": 4,
-          "songCount": 8,
+          "songCount": 8
         }
       ],
       "song": [
@@ -102,7 +103,8 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
   }
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "subsonic-response": {
     "status": "ok",
     "version": "1.16.1",
@@ -119,19 +121,19 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
       ],
       "album": [
         {
-        "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
-        "name": "8-bit lagerfeuer",
-        "artist": "pornophonique",
-        "year": 2007,
-        "coverArt": "al-ad0f112b6dcf83de5e9cae85d07f0d35_640a93a8",
-        "starred": "2023-03-22T01:51:06Z",
-        "duration": 1954,
-        "playCount": 97,
-        "played": "2023-03-28T00:45:13Z",
-        "created": "2023-03-10T02:19:35.784818075Z",
-        "artistId": "91c3901ac465b9efc439e4be4270c2b6",
-        "userRating": 4,
-        "songCount": 8,
+          "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
+          "name": "8-bit lagerfeuer",
+          "artist": "pornophonique",
+          "year": 2007,
+          "coverArt": "al-ad0f112b6dcf83de5e9cae85d07f0d35_640a93a8",
+          "starred": "2023-03-22T01:51:06Z",
+          "duration": 1954,
+          "playCount": 97,
+          "played": "2023-03-28T00:45:13Z",
+          "created": "2023-03-10T02:19:35.784818075Z",
+          "artistId": "91c3901ac465b9efc439e4be4270c2b6",
+          "userRating": 4,
+          "songCount": 8
         }
       ],
       "song": [

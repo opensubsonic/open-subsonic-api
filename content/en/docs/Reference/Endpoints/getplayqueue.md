@@ -15,7 +15,7 @@ Takes no extra parameters.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getPlayQueue.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getPlayQueue.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

@@ -7,19 +7,21 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-    "type":"AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)"
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)"
   }
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1"
+    "status": "ok",
+    "version": "1.16.1"
   }
 }
 {{< /tab >}}

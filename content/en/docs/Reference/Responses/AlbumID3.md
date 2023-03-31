@@ -7,7 +7,8 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
   "name": "8-bit lagerfeuer",
   "artist": "pornophonique",
@@ -23,7 +24,8 @@ description: >
   "userRating": 4
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
   "name": "8-bit lagerfeuer",
   "artist": "pornophonique",

@@ -24,7 +24,7 @@ Returns albums, artists and songs matching the given search criteria. Supports p
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/search2.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/search2.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

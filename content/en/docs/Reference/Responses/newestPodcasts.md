@@ -10,7 +10,8 @@ description: >
 {{< tab header="OpenSubsonic" lang="json">}}
 // TODO
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}// TODO
+{{< tab header="Subsonic" lang="json" >}}
+// TODO
 {{< /tab >}}
 {{< /tabpane >}}
 

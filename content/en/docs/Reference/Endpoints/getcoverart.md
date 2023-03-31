@@ -5,7 +5,7 @@ description: >
     Returns a cover art image.
 ---
 
-`http://your-server/rest/getCoverArt` Since [1.0.0](../subsonic-versions)
+`http://your-server/rest/getCoverArt` Since [1.0.0](../../subsonic-versions)
 
 Returns a cover art image.
 
@@ -18,7 +18,7 @@ Returns a cover art image.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getCoverArt.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getCoverArt.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

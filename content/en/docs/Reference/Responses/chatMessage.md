@@ -7,16 +7,18 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}} {
-    "username": "user",
-    "time": 1678935699000,
-    "message": "Api Script Testing"
+{{< tab header="OpenSubsonic" lang="json">}}
+{
+  "username": "user",
+  "time": 1678935699000,
+  "message": "Api Script Testing"
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
-    "username": "user",
-    "time": 1678935699000,
-    "message": "Api Script Testing"
+{{< tab header="Subsonic" lang="json" >}}
+{
+  "username": "user",
+  "time": 1678935699000,
+  "message": "Api Script Testing"
 }
 {{< /tab >}}
 {{< /tabpane >}}

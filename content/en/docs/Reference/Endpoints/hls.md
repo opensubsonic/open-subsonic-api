@@ -19,7 +19,7 @@ Creates an HLS ([HTTP Live Streaming](http://en.wikipedia.org/wiki/HTTP_Live_Str
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/hls.m3u8?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/hls.m3u8?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

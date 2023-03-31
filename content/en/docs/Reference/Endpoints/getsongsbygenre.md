@@ -20,7 +20,7 @@ Returns songs in a given genre.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getSongsByGenre.view?genre=Rock&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getSongsByGenre.view?genre=Rock&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

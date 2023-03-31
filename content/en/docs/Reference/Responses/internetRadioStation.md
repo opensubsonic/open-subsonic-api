@@ -7,14 +7,16 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "id": "2",
   "name": "HBR1.com - I.D.M. Tranceponder",
   "streamUrl": "http://ubuntu.hbr1.com:19800/trance.ogg",
   "homepageUrl": "http://www.hbr1.com/"
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "id": "2",
   "name": "HBR1.com - I.D.M. Tranceponder",
   "streamUrl": "http://ubuntu.hbr1.com:19800/trance.ogg",

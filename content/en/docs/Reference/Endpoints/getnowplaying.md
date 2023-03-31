@@ -15,7 +15,7 @@ Takes no extra parameters.
 
 ### Example
 
-{{< alert color="primary" >}} <http://your-server/rest/getNowPlaying.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json> {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getNowPlaying.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -23,80 +23,82 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-    "type":"AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)",
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
     "nowPlaying": {
-        "entry": [
-            {
-                "id": "300115266",
-                "parent": "200147046",
-                "title": "Take the Home",
-                "isDir": false,
-                "isVideo": false,
-                "type": "music",
-                "albumId": "200147046",
-                "album": "How I Learned to Love Our Robot Overlords",
-                "artistId": "100002619",
-                "artist": "Raggedy Angry",
-                "coverArt": "300115266",
-                "duration": 227,
-                "bitRate": 222,
-                "userRating": 3,
-                "track": 7,
-                "year": 2010,
-                "genre": "Industrial",
-                "size": 6341039,
-                "discNumber": 1,
-                "suffix": "mp3",
-                "contentType": "audio/mpeg",
-                "path": "Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3",
-                "username": "user",
-                "minutesAgo": 0,
-                "playerId": 0
-            }
-        ]
+      "entry": [
+        {
+          "id": "300115266",
+          "parent": "200147046",
+          "title": "Take the Home",
+          "isDir": false,
+          "isVideo": false,
+          "type": "music",
+          "albumId": "200147046",
+          "album": "How I Learned to Love Our Robot Overlords",
+          "artistId": "100002619",
+          "artist": "Raggedy Angry",
+          "coverArt": "300115266",
+          "duration": 227,
+          "bitRate": 222,
+          "userRating": 3,
+          "track": 7,
+          "year": 2010,
+          "genre": "Industrial",
+          "size": 6341039,
+          "discNumber": 1,
+          "suffix": "mp3",
+          "contentType": "audio/mpeg",
+          "path": "Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3",
+          "username": "user",
+          "minutesAgo": 0,
+          "playerId": 0
+        }
+      ]
     }
   }
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
+    "status": "ok",
+    "version": "1.16.1",
     "nowPlaying": {
-        "entry": [
-            {
-                "id": "300115266",
-                "parent": "200147046",
-                "title": "Take the Home",
-                "isDir": false,
-                "isVideo": false,
-                "type": "music",
-                "albumId": "200147046",
-                "album": "How I Learned to Love Our Robot Overlords",
-                "artistId": "100002619",
-                "artist": "Raggedy Angry",
-                "coverArt": "300115266",
-                "duration": 227,
-                "bitRate": 222,
-                "userRating": 3,
-                "track": 7,
-                "year": 2010,
-                "genre": "Industrial",
-                "size": 6341039,
-                "discNumber": 1,
-                "suffix": "mp3",
-                "contentType": "audio/mpeg",
-                "path": "Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3",
-                "username": "user",
-                "minutesAgo": 0,
-                "playerId": 0
-            }
-        ]
+      "entry": [
+        {
+          "id": "300115266",
+          "parent": "200147046",
+          "title": "Take the Home",
+          "isDir": false,
+          "isVideo": false,
+          "type": "music",
+          "albumId": "200147046",
+          "album": "How I Learned to Love Our Robot Overlords",
+          "artistId": "100002619",
+          "artist": "Raggedy Angry",
+          "coverArt": "300115266",
+          "duration": 227,
+          "bitRate": 222,
+          "userRating": 3,
+          "track": 7,
+          "year": 2010,
+          "genre": "Industrial",
+          "size": 6341039,
+          "discNumber": 1,
+          "suffix": "mp3",
+          "contentType": "audio/mpeg",
+          "path": "Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3",
+          "username": "user",
+          "minutesAgo": 0,
+          "playerId": 0
+        }
+      ]
     }
   }
 }

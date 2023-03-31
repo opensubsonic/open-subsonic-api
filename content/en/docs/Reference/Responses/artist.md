@@ -7,20 +7,22 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}} {
-    "id": "100000002",
-    "name": "Synthetic",
-    "coverArt": "ar-100000002",
-    "albumCount": 1,
-    "starred": "2021-02-22T05:54:18Z"
+{{< tab header="OpenSubsonic" lang="json">}}
+{
+  "id": "100000002",
+  "name": "Synthetic",
+  "coverArt": "ar-100000002",
+  "albumCount": 1,
+  "starred": "2021-02-22T05:54:18Z"
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
-    "id": "100000002",
-    "name": "Synthetic",
-    "coverArt": "ar-100000002",
-    "albumCount": 1,
-    "starred": "2021-02-22T05:54:18Z"
+{{< tab header="Subsonic" lang="json" >}}
+{
+  "id": "100000002",
+  "name": "Synthetic",
+  "coverArt": "ar-100000002",
+  "albumCount": 1,
+  "starred": "2021-02-22T05:54:18Z"
 }
 {{< /tab >}}
 {{< /tabpane >}}

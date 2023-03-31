@@ -7,16 +7,18 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
-    "songCount": 6,
-    "albumCount": 1,
-    "value": "Noise"
+{{< tab header="OpenSubsonic" lang="json">}}
+{
+  "songCount": 6,
+  "albumCount": 1,
+  "value": "Noise"
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
-    "songCount": 6,
-    "albumCount": 1,
-    "value": "Noise"
+{{< tab header="Subsonic" lang="json" >}}
+{
+  "songCount": 6,
+  "albumCount": 1,
+  "value": "Noise"
 }
 {{< /tab >}}
 {{< /tabpane >}}
