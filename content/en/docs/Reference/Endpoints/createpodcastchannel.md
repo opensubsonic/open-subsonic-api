@@ -1,6 +1,8 @@
 ---
 title: "createPodcastChannel"
 linkTitle: "createPodcastChannel"
+categories:
+- Podcast
 description: >
     Adds a new Podcast channel.
 ---

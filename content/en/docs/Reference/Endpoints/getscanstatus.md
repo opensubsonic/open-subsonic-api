@@ -1,6 +1,8 @@
 ---
 title: "getScanStatus"
 linkTitle: "getScanStatus"
+categories:
+- Media library scanning
 description: >
     Returns the current status for media library scanning.
 ---

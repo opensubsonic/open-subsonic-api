@@ -1,6 +1,8 @@
 ---
 title: "getLicense"
 linkTitle: "getLicense"
+categories:
+- System
 description: >
     Get details about the software license. 
 ---

@@ -1,6 +1,8 @@
 ---
 title: "getPlaylists"
 linkTitle: "getPlaylists"
+categories:
+- Playlists
 description: >
   Returns all playlists a user is allowed to play.
 ---

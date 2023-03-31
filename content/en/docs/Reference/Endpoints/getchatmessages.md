@@ -1,6 +1,8 @@
 ---
 title: "getChatMessages"
 linkTitle: "getChatMessages"
+categories:
+- Chat
 description: >
   Returns the current visible (non-expired) chat messages.
 ---

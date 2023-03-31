@@ -1,6 +1,8 @@
 ---
 title: "getShares"
 linkTitle: "getShares"
+categories:
+- Sharing
 description: >
     Returns information about shared media this user is allowed to manage.
 ---

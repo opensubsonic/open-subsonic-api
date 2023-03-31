@@ -1,6 +1,8 @@
 ---
 title: "setRating"
 linkTitle: "setRating"
+categories:
+- Media annotation
 description: >
     Sets the rating for a music file.
 ---

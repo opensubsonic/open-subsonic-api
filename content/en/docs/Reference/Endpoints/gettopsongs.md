@@ -1,6 +1,8 @@
 ---
 title: "getTopSongs"
 linkTitle: "getTopSongs"
+categories:
+- Browsing
 description: >
   Returns top songs for the given artist.
 ---

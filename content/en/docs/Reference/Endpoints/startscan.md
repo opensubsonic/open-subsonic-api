@@ -1,6 +1,8 @@
 ---
 title: "startScan"
 linkTitle: "startScan"
+categories:
+- Media library scanning
 description: >
     Initiates a rescan of the media libraries.
 ---

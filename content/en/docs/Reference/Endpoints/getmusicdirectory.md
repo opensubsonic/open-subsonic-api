@@ -1,6 +1,8 @@
 ---
 title: "getMusicDirectory"
 linkTitle: "getMusicDirectory"
+categories:
+- Browsing
 description: >
   Returns a listing of all files in a music directory.
 ---

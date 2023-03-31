@@ -1,6 +1,8 @@
 ---
 title: "getIndexes"
 linkTitle: "getIndexes"
+categories:
+- Browsing
 description: >
   Returns an indexed structure of all artists.
 ---

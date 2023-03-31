@@ -1,6 +1,8 @@
 ---
 title: "deletePodcastChannel"
 linkTitle: "deletePodcastChannel"
+categories:
+- Podcast
 description: >
     Deletes a Podcast channel.
 ---

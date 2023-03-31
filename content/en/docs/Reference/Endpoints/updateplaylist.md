@@ -1,6 +1,8 @@
 ---
 title: "updatePlaylist"
 linkTitle: "updatePlaylist"
+categories:
+- Playlists
 description: >
     Updates a playlist. Only the owner of a playlist is allowed to update it.
 ---

@@ -1,6 +1,8 @@
 ---
 title: "jukeboxControl"
 linkTitle: "jukeboxControl"
+categories:
+- Jukebox
 description: >
     Controls the jukebox, i.e., playback directly on the server's audio hardware.
 ---

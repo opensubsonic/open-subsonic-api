@@ -1,6 +1,8 @@
 ---
 title: "getBookmarks"
 linkTitle: "getBookmarks"
+categories:
+- Bookmarks
 description: >
     Returns all bookmarks for this user.
 ---

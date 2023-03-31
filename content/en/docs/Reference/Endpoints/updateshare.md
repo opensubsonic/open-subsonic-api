@@ -1,6 +1,8 @@
 ---
 title: "updateShare"
 linkTitle: "updateShare"
+categories:
+- Sharing
 description: >
     Updates the description and/or expiration date for an existing share.
 ---

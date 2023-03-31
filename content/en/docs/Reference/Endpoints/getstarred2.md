@@ -1,6 +1,8 @@
 ---
 title: "getStarred2"
 linkTitle: "getStarred2"
+categories:
+- Lists
 description: >
     Returns starred songs, albums and artists.
 ---

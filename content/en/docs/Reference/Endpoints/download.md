@@ -1,6 +1,8 @@
 ---
 title: "download"
 linkTitle: "download"
+categories:
+- Media retrieval
 description: >
     Downloads a given media file.
 ---

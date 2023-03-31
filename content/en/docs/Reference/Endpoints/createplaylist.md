@@ -1,6 +1,8 @@
 ---
 title: "createPlaylist"
 linkTitle: "createPlaylist"
+categories:
+- Playlists
 description: >
   Creates (or updates) a playlist.
 ---

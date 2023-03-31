@@ -1,6 +1,8 @@
 ---
 title: "getNowPlaying"
 linkTitle: "getNowPlaying"
+categories:
+- Lists
 description: >
     Returns what is currently being played by all users.
 ---

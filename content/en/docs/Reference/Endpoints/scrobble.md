@@ -1,6 +1,8 @@
 ---
 title: "scrobble"
 linkTitle: "scrobble"
+categories:
+- Media annotation
 description: >
     Registers the local playback of one or more media files.
 ---

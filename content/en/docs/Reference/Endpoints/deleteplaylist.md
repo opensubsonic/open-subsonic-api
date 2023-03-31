@@ -1,6 +1,8 @@
 ---
 title: "deletePlaylist"
 linkTitle: "deletePlaylist"
+categories:
+- Playlists
 description: >
     Deletes a saved playlist.
 ---

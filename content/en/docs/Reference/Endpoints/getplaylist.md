@@ -1,6 +1,8 @@
 ---
 title: "getPlaylist"
 linkTitle: "getPlaylist"
+categories:
+- Playlists
 description: >
   Returns a listing of files in a saved playlist.
 ---

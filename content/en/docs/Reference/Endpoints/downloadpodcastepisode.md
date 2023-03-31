@@ -1,6 +1,8 @@
 ---
 title: "downloadPodcastEpisode"
 linkTitle: "downloadPodcastEpisode"
+categories:
+- Podcast
 description: >
     Request the server to start downloading a given Podcast episode. 
 ---

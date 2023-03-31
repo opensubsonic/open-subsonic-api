@@ -1,6 +1,8 @@
 ---
 title: "getSong"
 linkTitle: "getSong"
+categories:
+- Browsing
 description: >
     Returns details for a song.
 ---

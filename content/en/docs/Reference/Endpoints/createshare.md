@@ -1,6 +1,8 @@
 ---
 title: "createShare"
 linkTitle: "createShare"
+categories:
+- Sharing
 description: >
     Creates a public URL that can be used by anyone to stream music or video from the server.
 ---

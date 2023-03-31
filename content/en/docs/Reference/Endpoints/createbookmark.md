@@ -1,6 +1,8 @@
 ---
 title: "createBookmark"
 linkTitle: "createBookmark"
+categories:
+- Bookmarks
 description: >
     Creates or updates a bookmark.
 ---

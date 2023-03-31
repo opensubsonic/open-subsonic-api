@@ -1,6 +1,8 @@
 ---
 title: "getArtists"
 linkTitle: "getArtists"
+categories:
+- Browsing
 description: >
   Returns all artists.
 ---

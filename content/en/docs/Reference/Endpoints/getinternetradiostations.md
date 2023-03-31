@@ -1,6 +1,8 @@
 ---
 title: "getInternetRadioStations"
 linkTitle: "getInternetRadioStations"
+categories:
+- Internet radio
 description: >
   Returns all internet radio stations.
 ---

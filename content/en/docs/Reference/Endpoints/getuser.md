@@ -1,6 +1,8 @@
 ---
 title: "getUser"
 linkTitle: "getUser"
+categories:
+- User management
 description: >
     Get details about a given user, including which authorization roles and folder access it has.
 ---

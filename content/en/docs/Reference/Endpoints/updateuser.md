@@ -1,6 +1,8 @@
 ---
 title: "updateUser"
 linkTitle: "updateUser"
+categories:
+- User management
 description: >
     Modifies an existing user on the server.
 ---

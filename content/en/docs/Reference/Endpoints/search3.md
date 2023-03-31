@@ -3,6 +3,8 @@ title: "search3"
 linkTitle: "search3 [OS]"
 opensubsonic:
 - Clarification
+categories:
+- Searching
 description: >
     Returns albums, artists and songs matching the given search criteria. Supports paging through the result.
 ---

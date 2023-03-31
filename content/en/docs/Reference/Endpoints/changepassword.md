@@ -1,6 +1,8 @@
 ---
 title: "changePassword"
 linkTitle: "changePassword"
+categories:
+- User management
 description: >
     Changes the password of an existing user on the server.
 ---

@@ -1,6 +1,8 @@
 ---
 title: "updateInternetRadioStation"
 linkTitle: "updateInternetRadioStation"
+categories:
+- Internet radio
 description: >
     Updates an existing internet radio station. 
 ---

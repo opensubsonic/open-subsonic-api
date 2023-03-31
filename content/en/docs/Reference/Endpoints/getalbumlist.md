@@ -1,6 +1,8 @@
 ---
 title: "getAlbumList"
 linkTitle: "getAlbumList"
+categories:
+- Lists
 description: >
   Returns a list of random, newest, highest rated etc. albums.
 ---

@@ -1,6 +1,8 @@
 ---
 title: "getNewestPodcasts"
 linkTitle: "getNewestPodcasts"
+categories:
+- Podcast
 description: >
     Returns the most recently published Podcast episodes.
 ---

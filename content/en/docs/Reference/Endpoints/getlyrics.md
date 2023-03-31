@@ -1,6 +1,8 @@
 ---
 title: "getLyrics"
 linkTitle: "getLyrics"
+categories:
+- Media retrieval
 description: >
     Searches for and returns lyrics for a given song.
 ---

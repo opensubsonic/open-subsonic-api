@@ -1,6 +1,8 @@
 ---
 title: "unstar"
 linkTitle: "unstar"
+categories:
+- Media annotation
 description: >
     Attaches a star to a song, album or artist.
 ---

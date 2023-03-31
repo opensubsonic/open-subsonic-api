@@ -1,6 +1,8 @@
 ---
 title: "getAlbumInfo"
 linkTitle: "getAlbumInfo"
+categories:
+- Browsing
 description: >
     Returns album info.
 ---

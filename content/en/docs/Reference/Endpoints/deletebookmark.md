@@ -1,6 +1,8 @@
 ---
 title: "deleteBookmark"
 linkTitle: "deleteBookmark"
+categories:
+- Bookmarks
 description: >
     Creates or updates a bookmark.
 ---

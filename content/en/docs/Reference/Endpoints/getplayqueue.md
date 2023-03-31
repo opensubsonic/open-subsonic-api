@@ -1,6 +1,8 @@
 ---
 title: "getPlayQueue"
 linkTitle: "getPlayQueue"
+categories:
+- Bookmarks
 description: >
     Returns the state of the play queue for this user.
 ---

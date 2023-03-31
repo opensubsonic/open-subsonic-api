@@ -1,6 +1,8 @@
 ---
 title: "deleteShare"
 linkTitle: "deleteShare"
+categories:
+- Sharing
 description: >
     Deletes an existing share.
 ---

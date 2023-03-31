@@ -1,6 +1,8 @@
 ---
 title: "getVideoInfo"
 linkTitle: "getVideoInfo"
+categories:
+- Browsing
 description: >
     Returns details for a video.
 ---

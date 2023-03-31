@@ -1,6 +1,8 @@
 ---
 title: "savePlayQueue"
 linkTitle: "savePlayQueue"
+categories:
+- Bookmarks
 description: >
     Saves the state of the play queue for this user.
 ---

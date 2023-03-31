@@ -1,6 +1,8 @@
 ---
 title: "getAvatar"
 linkTitle: "getAvatar"
+categories:
+- Media retrieval
 description: >
     Returns the avatar (personal image) for a user.
 ---

@@ -1,6 +1,8 @@
 ---
 title: "refreshPodcasts"
 linkTitle: "refreshPodcasts"
+categories:
+- Podcast
 description: >
     Requests the server to check for new Podcast episodes.
 ---

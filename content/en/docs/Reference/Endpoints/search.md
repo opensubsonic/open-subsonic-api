@@ -1,6 +1,8 @@
 ---
 title: "search"
 linkTitle: "search"
+categories:
+- Searching
 description: >
     Returns a listing of files matching the given search criteria. Supports paging through the result.
 ---

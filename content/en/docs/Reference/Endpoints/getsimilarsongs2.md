@@ -1,6 +1,8 @@
 ---
 title: "getSimilarSongs2"
 linkTitle: "getSimilarSongs2"
+categories:
+- Browsing
 description: >
   Returns a random collection of songs from the given artist and similar artists.
 ---

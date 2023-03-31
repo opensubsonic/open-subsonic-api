@@ -1,6 +1,8 @@
 ---
 title: "getMusicFolders"
 linkTitle: "getMusicFolders"
+categories:
+- Browsing
 description: >
   Returns all configured top-level music folders.
 ---

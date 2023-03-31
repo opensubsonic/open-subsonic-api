@@ -1,6 +1,8 @@
 ---
 title: "deletePodcastEpisode"
 linkTitle: "deletePodcastEpisode"
+categories:
+- Podcast
 description: >
     Deletes a Podcast episode.
 ---

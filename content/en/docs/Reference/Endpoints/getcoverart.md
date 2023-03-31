@@ -1,6 +1,8 @@
 ---
 title: "getCoverArt"
 linkTitle: "getCoverArt"
+categories:
+- Media retrieval
 description: >
     Returns a cover art image.
 ---

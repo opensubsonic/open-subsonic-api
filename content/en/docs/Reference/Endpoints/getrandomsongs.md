@@ -1,6 +1,8 @@
 ---
 title: "getRandomSongs"
 linkTitle: "getRandomSongs"
+categories:
+- Lists
 description: >
   Returns random songs matching the given criteria.
 ---

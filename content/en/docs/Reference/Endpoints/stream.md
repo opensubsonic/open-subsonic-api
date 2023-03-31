@@ -1,6 +1,8 @@
 ---
 title: "stream"
 linkTitle: "stream"
+categories:
+- Media retrieval
 description: >
     Streams a given media file.
 ---

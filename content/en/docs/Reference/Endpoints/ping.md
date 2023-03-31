@@ -1,6 +1,8 @@
 ---
 title: "ping"
 linkTitle: "ping"
+categories:
+- System
 description: >
     Used to test connectivity with the server. 
 ---

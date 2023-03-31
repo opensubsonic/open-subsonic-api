@@ -1,6 +1,8 @@
 ---
 title: "addChatMessage"
 linkTitle: "addChatMessage"
+categories:
+- Chat
 description: >
     Adds a message to the chat log.
 ---

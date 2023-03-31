@@ -1,6 +1,8 @@
 ---
 title: "createInternetRadioStation"
 linkTitle: "createInternetRadioStation"
+categories:
+- Internet radio
 description: >
     Adds a new internet radio station.
 ---

@@ -1,6 +1,8 @@
 ---
 title: "deleteInternetRadioStation"
 linkTitle: "deleteInternetRadioStation"
+categories:
+- Internet radio
 description: >
     Deletes an existing internet radio station.
 ---

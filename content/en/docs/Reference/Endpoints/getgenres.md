@@ -1,6 +1,8 @@
 ---
 title: "getGenres"
 linkTitle: "getGenres"
+categories:
+- Browsing
 description: >
   Returns all genres.
 ---

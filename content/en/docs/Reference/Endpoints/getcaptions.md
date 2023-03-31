@@ -1,6 +1,8 @@
 ---
 title: "getCaptions"
 linkTitle: "getCaptions"
+categories:
+- Media retrieval
 description: >
     Returns captions (subtitles) for a video.
 ---

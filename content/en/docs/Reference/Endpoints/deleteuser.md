@@ -1,6 +1,8 @@
 ---
 title: "deleteUser"
 linkTitle: "deleteUser"
+categories:
+- User management
 description: >
     Deletes an existing user on the server.
 ---

@@ -1,6 +1,8 @@
 ---
 title: "getPodcasts"
 linkTitle: "getPodcasts"
+categories:
+- Podcast
 description: >
     Returns all Podcast channels the server subscribes to, and (optionally) their episodes.
 ---

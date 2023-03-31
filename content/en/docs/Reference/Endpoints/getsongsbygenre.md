@@ -1,6 +1,8 @@
 ---
 title: "getSongsByGenre"
 linkTitle: "getSongsByGenre"
+categories:
+- Lists
 description: >
     Returns songs in a given genre.
 ---

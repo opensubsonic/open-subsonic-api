@@ -1,6 +1,8 @@
 ---
 title: "getVideos"
 linkTitle: "getVideos"
+categories:
+- Browsing
 description: >
     Returns all video files.
 ---

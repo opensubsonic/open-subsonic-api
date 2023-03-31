@@ -1,6 +1,8 @@
 ---
 title: "getArtistInfo"
 linkTitle: "getArtistInfo"
+categories:
+- Browsing
 description: >
     Returns artist info.
 ---
