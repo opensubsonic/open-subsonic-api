@@ -6,25 +6,25 @@ description: >
   Complete API documentation and reference.
 ---
 
-## What is OpenSubsonic API.
+## What is OpenSubsonic API?
 
-The OpenSubsonic API allows anyone to build their own programs using a compatible server, whether they’re on the web, the desktop or on mobile devices. All the OpenSubsonic-compatible apps (clients and servers) are built using the OpenSubsonic API.
+The OpenSubsonic API allows anyone to build their own programs using a compatible server, whether they're on the web, the desktop, or on mobile devices. All the OpenSubsonic-compatible apps (clients and servers) are built using the OpenSubsonic API.
 
-The OpenSubsonic API allows you to call methods that respond in [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) style xml or json. Since most clients now only rely on json, this documentation only shows the json answers in the documentation.
+The OpenSubsonic API allows you to call methods that respond in [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) style XML or JSON. Since most clients now only rely on JSON, this documentation only shows the JSON answers in the documentation.
 
-This project is built upon the original [Subsonic API](https://www.subsonic.org/pages/api.jsp)
+This project is built upon the original [Subsonic API](https://www.subsonic.org/pages/api.jsp).
 
 See:
 
 - [OpenSubsonic API](./opensubsonic-api) for the API documentation.
 - [Goals](#goals) for some of the goals of this project.
-- [Issues](#addressing-issues-with-the-subsonic-api) for some of the issues this projects tries to solve over the original API.
+- [Issues](#addressing-issues-with-the-subsonic-api) for some of the issues this project tries to solve over the original API.
 
 ## Participants
 
 OpenSubsonic is built with servers and clients trying to improve the global media center ecosystem by providing a common expandable API that can fit most of the needs of modern music apps.
 
-Any server or client can join the organisation and make proposal [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions). The only condititions is that if (as a client) you request an API extensions that are accepted you engage yourself in implementing it in your client in a timely manner.
+Any server or client can join the organization and make proposals [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions). The only condition is that if (as a client) you request an API extension that is accepted, you engage yourself in implementing it in your client in a timely manner.
 
 ### Servers
 
@@ -63,4 +63,4 @@ By extending the existing Subsonic API, the OpenSubsonic API hopes to create a m
 
 ## Join us
 
-Feel free to join the [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions) forum for discussions, suggestions and questions.
+Feel free to join the [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions) forum for discussions, suggestions, and questions.
