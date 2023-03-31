@@ -45,7 +45,7 @@ New fields are added:
 
 ---
 
-### OpenSubsonic server support
+{{< alert color="warning" title="OpenSubsonic server support" >}}
 
 | Server | Min vers. | Comment |
 | --- | --- | --- |
@@ -55,3 +55,4 @@ New fields are added:
 | **Funkwhale** |  |  Support `type`, version is exposed as `funkwhaleVersion` |
 | **Astiga** |  | Expose `Astiga/production` in `serverVersion` |
 | **LMS** |  | Support `type` |
+{{< /alert >}}

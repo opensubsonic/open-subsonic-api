@@ -69,8 +69,9 @@ New fields are added:
 
 ---
 
-### OpenSubsonic server support
+{{< alert color="warning" title="OpenSubsonic server support" >}}
 
 | Server | Min vers. | Comment |
 | --- | --- | --- |
 | **Navidrome** |  | Support `played` and `userRating` |
+{{< /alert >}}
