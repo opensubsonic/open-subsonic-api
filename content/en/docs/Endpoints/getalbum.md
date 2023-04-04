@@ -34,6 +34,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
+    "openSubsonicVersions": [
+      1
+    ]
     "album": {
       "id": "200000021",
       "parent": "100000036",
@@ -107,8 +110,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
   "subsonic-response": {
     "status": "ok",
     "version": "1.16.1",
-    "type": "AwesomeServerName",
-    "serverVersion": "0.1.3 (tag)",
     "album": {
       "id": "200000021",
       "parent": "100000036",

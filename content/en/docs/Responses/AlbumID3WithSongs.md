@@ -2,7 +2,7 @@
 title: "AlbumID3WithSongs"
 linkTitle: "AlbumID3WithSongs [OS]"
 opensubsonic:
-- Extension
+- Change
 description: >
   Album with songs.
 ---

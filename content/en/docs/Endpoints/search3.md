@@ -49,6 +49,9 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
+    "openSubsonicVersions": [
+      1
+    ]
     "searchResult3": {
       "artist": [
         {

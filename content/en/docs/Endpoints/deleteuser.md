@@ -33,7 +33,10 @@ An empty [`subsonic-response`](../../responses/subsonic-response) element on suc
     "status": "ok",
     "version": "1.16.1",
     "type": "AwesomeServerName",
-    "serverVersion": "0.1.3 (tag)"
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonicVersions": [
+      1
+    ]
   }
 }
 {{< /tab >}}

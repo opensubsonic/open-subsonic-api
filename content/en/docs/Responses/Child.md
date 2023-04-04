@@ -2,7 +2,7 @@
 title: "Child"
 linkTitle: "Child [OS]"
 opensubsonic:
-- Extension
+- Change
 description: >
   A media.
 ---

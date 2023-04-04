@@ -35,6 +35,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
+    "openSubsonicVersions": [
+      1
+    ]
     "indexes": {
       "ignoredArticles": "The An A Die Das Ein Eine Les Le La",
       "index": [

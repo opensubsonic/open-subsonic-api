@@ -2,7 +2,7 @@
 title: "AlbumID3"
 linkTitle: "AlbumID3 [OS]"
 opensubsonic:
-- Extension
+- Change
 description: >
   An album from ID3 tags.
 ---

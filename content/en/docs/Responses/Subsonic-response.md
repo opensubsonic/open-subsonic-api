@@ -2,7 +2,7 @@
 title: "subsonic-response"
 linkTitle: "subsonic-response [OS]"
 opensubsonic:
-- Extension
+- Change
 description: >
   Common answer wrapper.
 ---
@@ -15,7 +15,10 @@ description: >
     "status": "ok",
     "version": "1.16.1",
     "type": "AwesomeServerName",
-    "serverVersion": "0.1.3 (tag)"
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonicVersions": [
+      1
+    ]
   }
 }
 {{< /tab >}}
@@ -34,13 +37,15 @@ description: >
 | `status` | `string` | **Yes** |     | The command result. `ok` or `failed` |
 | `version` | `string` | **Yes** |     | The server supported Subsonic API version. |
 | `type` | `string` | **Yes** | **Yes**    | The server actual name. [Ex: `Navidrome` or `Gonic`] |
-| `serverVersion` | `string` | No | **Yes**    | The server actual version. [Ex: `1.2.3 (beta)`] |
+| `serverVersion` | `string` | **Yes** | **Yes**    | The server actual version. [Ex: `1.2.3 (beta)`] |
+| `openSubsonicVersions` | Array of `int` | **Yes**  | **Yes**    | The supported OpenSubsonic versions [Currently `1`] |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
 
-- `type` containing the server type/name (Ex: Navidrome or Gonic)
-- `serverVersion` containing the server version (Ex: 1.2.3) this is different from the `version` field that expose the Subsonic API version.
+- `type` containing the server type/name (Ex: Navidrome or Gonic). Mandatory to help clients adapt to actual Subsonic API support.
+- `serverVersion` containing the server version (Ex: 1.2.3) this is different from the `version` field that expose the Subsonic API version. Mandatory for clients to be able to detect servers updates and check again supported OpenSubsonic extensions.
+- `openSubsonicVersions` contain the list of supported **OpenSubsonic versions**. Currently only version 1 of OpenSubsonic API exists.
 {{< /alert >}}
 
 ---

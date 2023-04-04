@@ -3,7 +3,7 @@ title: "API Reference"
 linkTitle: "API Reference [OS]"
 opensubsonic:
 - Clarification
-- Extension
+- Change
 weight: 4
 description: >
   Common API documentation.
@@ -53,36 +53,35 @@ All API endpoint unless noted otherwise returns a [`subsonic-response`](../respo
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1",
-    "type":"AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)"
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonicVersions": [
+      1
+    ]
   }
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "subsonic-response": {
-    "status":"ok",
-    "version":"1.16.1"
+    "status": "ok",
+    "version": "1.16.1"
   }
 }
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field |  Type | Req. | OpenS. | Details |
-| --- | --- | --- | --- | --- |
-| `status` | `string` | **Yes** |     | The command result. `ok` or `failed` |
-| `version` | `string` | **Yes** |     | The server supported Subsonic API version. |
-| `type` | `string` | **Yes** | **Yes**    | The server actual name. [Ex: `Navidrome` or `Gonic`] |
-| `serverVersion` | `string` | No | **Yes**    | The server actual version. [Ex: `1.2.3 (beta)`] |
+See: [`subsonic-response`](../responses/subsonic-response) for the field details.
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
 
-- `type` containing the server type/name (Ex: Navidrome or Gonic)
-- `serverVersion` containing the server version (Ex: 1.2.3 (beta)) this is different from the `version` field that expose the Subsonic API version.
+See [`subsonic-response`](../responses/subsonic-response)
 {{< /alert >}}
 
 ## Error handling
@@ -91,12 +90,16 @@ If a method fails it will return an error code and message in an `error` element
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}{
+{{< tab header="OpenSubsonic" lang="json">}}
+{
   "subsonic-response": {
     "status": "failed",
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion":"0.1.3 (tag)",
+    "openSubsonicVersions": [
+      1
+    ]
     "error": {
         "code":40,
         "message":"Wrong username or password"
@@ -104,13 +107,14 @@ If a method fails it will return an error code and message in an `error` element
   }
 }
 {{< /tab >}}
-{{< tab header="Subsonic" lang="json" >}}{
+{{< tab header="Subsonic" lang="json" >}}
+{
   "subsonic-response": {
     "status": "failed",
     "version": "1.16.1",
     "error": {
-        "code":40,
-        "message":"Wrong username or password"
+      "code": 40,
+      "message": "Wrong username or password"
     }
   }
 }
