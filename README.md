@@ -1,5 +1,7 @@
 # OpenSubsonic Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/55c14fbc-7240-4dc0-9092-3cd442400473/deploy-status)](https://app.netlify.com/sites/opensubsonic/deploys)
+
 This is the source code for the OpenSubsonic documentation website. It is built with [Hugo](https://gohugo.io) and the [Docsy][] theme. 
 
 You can find detailed theme instructions in the [Docsy user guide][].
