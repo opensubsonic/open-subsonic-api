@@ -60,9 +60,7 @@ All API endpoint unless noted otherwise returns a [`subsonic-response`](../respo
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonicVersions": [
-      1
-    ]
+    "openSubsonic": true
   }
 }
 {{< /tab >}}
@@ -97,9 +95,7 @@ If a method fails it will return an error code and message in an `error` element
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion":"0.1.3 (tag)",
-    "openSubsonicVersions": [
-      1
-    ]
+    "openSubsonic": true
     "error": {
         "code":40,
         "message":"Wrong username or password"

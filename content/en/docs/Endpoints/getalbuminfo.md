@@ -34,9 +34,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonicVersions": [
-      1
-    ]
+    "openSubsonic": true
     "albumInfo": {
       "notes": "Download the full release here (creative commons). These cripsy beats are ripe with thumping funk and techno influences, sample wizardry and daring shuffles. Composed with the help of unique sound plugins which were especially programmed to measure Comfort Fit’s needs and wishes, we think the chances aren’t bad that you’ll fall for the unique sound signature, bounce and elegance of this unusual Hip Hop production. Ltj bukem / Good looking Rec., UK: \"Really love this music.\" Velanche / XLR8R, UK: \"Awesome job he's done... overall production is dope.\" Kwesi / BBE Music, UK: \"Wooooooowwwww... WHAT THE FUCK! THIS IS WHAT",
       "musicBrainzId": "6e1d48f7-717c-416e-af35-5d2454a13af2",

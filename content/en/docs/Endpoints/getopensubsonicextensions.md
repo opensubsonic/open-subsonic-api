@@ -15,15 +15,11 @@ List the OpenSubsonic extensions supported by this server.
 
 ### Parameters
 
-| Parameter | Req. | OpenS. | Default | Comment |
-| --- | --- | --- | --- | --- |
-| `version` | No | |   1   | The wanted OpenSubsonic API version. (Current only supported value is 1)  |
-
-See [`OpenSubsonic API versions`](../../opensubsonic-versions) For the list of OpenSubsonic versions
+Takes no extra parameters.
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getOpenSubsonicExtensions.view?version=1&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getOpenSubsonicExtensions.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -38,9 +34,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonicVersions": [
-      1
-    ],
+    "openSubsonic": true,
     "openSubsonicExtensions": {
       "template": [
         1,
