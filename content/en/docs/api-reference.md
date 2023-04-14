@@ -94,11 +94,11 @@ If a method fails it will return an error code and message in an `error` element
     "status": "failed",
     "version": "1.16.1",
     "type": "AwesomeServerName",
-    "serverVersion":"0.1.3 (tag)",
-    "openSubsonic": true
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonic": true,
     "error": {
-        "code":40,
-        "message":"Wrong username or password"
+      "code": 40,
+      "message": "Wrong username or password"
     }
   }
 }
@@ -119,8 +119,8 @@ If a method fails it will return an error code and message in an `error` element
 
 | Field | Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `error` | `error` | **Yes** |     | The error details. |
-| `code` | `string` | **Yes** |     | The errod code. |
+| `error` | [`error`](../responses/error) | **Yes** |     | The error details. |
+| `code` | `int` | **Yes** |     | The error code. |
 | `message` | `string` | No |    | A humand readable error message. |
 
 The following error codes are defined:

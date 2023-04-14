@@ -37,6 +37,7 @@ description: >
 | `type` | `string` | **Yes** | **Yes**    | The server actual name. [Ex: `Navidrome` or `Gonic`] |
 | `serverVersion` | `string` | **Yes** | **Yes**    | The server actual version. [Ex: `1.2.3 (beta)`] |
 | `openSubsonic` | `boolean` | **Yes**  | **Yes**    | Must return true if the server support OpenSubsonic API v1 |
+| `error` |  [`error`](../error) | No |    | The error details when `status` is `failed` |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
