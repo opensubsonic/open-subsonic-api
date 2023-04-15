@@ -15,7 +15,7 @@ Returns a cover art image.
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `id` | **Yes** |     | The ID of a song, album or artist. |
+| `id` | **Yes** |     | The coverArt ID. Returned by most entities likes [`Child`](../../responses/child) or [`AlbumID3`](../../responses/albumid3) |
 | `size` | No  |     | If specified, scale image to this size. |
 
 ### Example
