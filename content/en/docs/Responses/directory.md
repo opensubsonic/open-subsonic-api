@@ -64,6 +64,6 @@ description: >
 | `name` | `string` | **Yes**  |     | The directory name |
 | `starred` | `string` | No  |     | Starred date [ISO 8601] |
 | `userRating` | `int` | No  |     | The user rating [1-5] |
-| `averageRating` | `double` | No  |     | The average rating [1.0-5.0] |
+| `averageRating` | `number` | No  |     | The average rating [1.0-5.0] |
 | `playCount` | `long` | No  |     | The play count |
 | `child` | Array of [`Child`](../child) | No |     | The directory content |
