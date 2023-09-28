@@ -1,6 +1,8 @@
 ---
 title: "stream"
-linkTitle: "stream"
+linkTitle: "stream [OS]"
+opensubsonic:
+- Clarification
 categories:
 - Media retrieval
 description: >
@@ -30,3 +32,15 @@ Streams a given media file.
 ### Result
 
 Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with "text/xml").
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+OpenSubsonic servers **must not** count access to this endpoint as a play and increase playcount. Clients can use the [`Scrobble`](../scrobble) endpoint to indicate that a media is played ensuring proper data in all cases.
+{{< /alert >}}
+
+---
+
+{{< alert color="warning" title="OpenSubsonic server support" >}}
+
+| Server | Min vers. | Comment |
+| --- | --- | --- |
+{{< /alert >}}
