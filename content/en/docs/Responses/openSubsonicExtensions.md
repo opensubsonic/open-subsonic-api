@@ -13,9 +13,8 @@ description: >
     1,
     2
   ],
-  "extension2": [
-    2,
-    3
+  "transcodeOffset": [
+    1
   ]
 }
 {{< /tab >}}
