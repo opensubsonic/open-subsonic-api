@@ -1,6 +1,6 @@
 ---
-title: "artist"
-linkTitle: "artist"
+title: "artists"
+linkTitle: "artists"
 description: >
   Artist list.
 ---
