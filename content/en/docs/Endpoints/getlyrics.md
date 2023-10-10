@@ -17,10 +17,13 @@ Searches for and returns lyrics for a given song.
 | --- | --- | --- | --- | --- |
 | `artist` | No  |  |   | The artist name. |
 | `title` | No  |  |   | The song title. |
+| `songId` | No  | **Yes**  |   | The song ID. The [`Song Lyrics`](../../extensions/songlyrics/) extension enables this parameter. |
 
 ### Example
 
 {{< alert color="primary" >}} `http://your-server/rest/getLyrics.view?artist=toto&title=tata&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+
+{{< alert color="primary" >}} `http://your-server/rest/getLyrics.view?songId=123123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -39,6 +42,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "lyrics": {
       "artist": "Metallica",
       "title": "Blitzkrieg",
+      "songId": "123123",
       "value": "Let us have peace, let us have life\n\nLet us escape the cruel night\n\nLet us have time, let the sun shine\n\nLet us beware the deadly sign\n\n\n\nThe day is coming\n\nArmageddon's near\n\nInferno's coming\n\nCan we survive the blitzkrieg?\n\nThe blitzkrieg\n\nThe blitzkrieg\n\n\n\nSave us from fate, save us from hate\n\nSave ourselves before it's too late\n\nCome to our need, hear our plea\n\nSave ourselves before the earth bleeds\n\n\n\nThe day is dawning\n\nThe time is near\n\nAliens calling\n\nCan we survive the blitzkrieg?"
     }
   }

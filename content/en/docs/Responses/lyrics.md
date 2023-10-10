@@ -11,6 +11,7 @@ description: >
 {
   "artist": "Metallica",
   "title": "Blitzkrieg",
+  "songId": "12342",
   "value": "Let us have peace, let us have life\n\nLet us escape the cruel night\n\nLet us have time, let the sun shine\n\nLet us beware the deadly sign\n\n\n\nThe day is coming\n\nArmageddon's near\n\nInferno's coming\n\nCan we survive the blitzkrieg?\n\nThe blitzkrieg\n\nThe blitzkrieg\n\n\n\nSave us from fate, save us from hate\n\nSave ourselves before it's too late\n\nCome to our need, hear our plea\n\nSave ourselves before the earth bleeds\n\n\n\nThe day is dawning\n\nThe time is near\n\nAliens calling\n\nCan we survive the blitzkrieg?"
 }
 {{< /tab >}}
@@ -25,6 +26,7 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `value` | `string` | **Yes** |     | The lyrics |
-| `artist` | `string` | No  |     | The artist name |
-| `title` | `string` | No |     | The song title |
+| `value` | `string` | **Yes** |     | The lyrics. |
+| `artist` | `string` | No  |     | The artist name. |
+| `title` | `string` | No |     | The song title. |
+| `songId` | `string` | No | **Yes**    | The song Id to ensure match. |
