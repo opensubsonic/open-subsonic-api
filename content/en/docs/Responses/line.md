@@ -1,0 +1,44 @@
+---
+title: "line"
+linkTitle: "line [OS]"
+opensubsonic:
+  - Addition
+description: >
+  One line of a song lyric
+---
+
+{{< tabpane persistLang=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic (synced)" lang="json">}}
+{
+  "start": 0,
+  "value": "It's bugging me"
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic (unsynced)" lang="json">}}
+{
+  "value": "It's bugging me"
+}
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
+| Field   | Type     | Req.    | OpenS.  | Details                                                                                                        |
+| ------- | -------- | ------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| `value` | `string` | **Yes** | **Yes** | The actual text of this line                                                                                   |
+| `start` | `number` | No      | **Yes** | The start time of the lyrics, in milliseconds. If this is not part of synced lyrics, start **must** be omitted |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+This is a new OpenSubsonic response type.
+{{< /alert >}}
+
+---
+
+{{< alert color="warning" title="OpenSubsonic server support" >}}
+
+| Server | Min vers. | Comment |
+| ------ | --------- | ------- |
+
+{{< /alert >}}
