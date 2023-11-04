@@ -31,7 +31,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
 {
   "subsonic-response": {
     "status": "ok",
@@ -84,6 +84,22 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     }
   }
 }
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<subsonic-response status="ok" version="1.16.1" type="AwesomeServerName" serverVersion="0.1.3 (tag)" openSubsonic="true">
+  <lyricsList>
+    <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+      <line start="0">It's bugging me</line>
+      <line start="2000">Grating me</line>
+      <line start="3001">And twisting me around...</line>
+    </structuredLyrics>
+    <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+      <line>It's bugging me</line>
+      <line>Grating me</line>
+      <line>And twisting me around...</line>
+    </structuredLyrics>
+  </lyricsList>
+</subsonic-response>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.

@@ -9,9 +9,9 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
 {
-  "structured-lyrics": [
+  "structuredLyrics": [
     {
       "artist": "Muse",
       "artistId": "1234",
@@ -54,6 +54,20 @@ description: >
   ]
 }
 {{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<lyricsList>
+  <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+    <line start="0">It's bugging me</line>
+    <line start="2000">Grating me</line>
+    <line start="3001">And twisting me around...</line>
+  </structuredLyrics>
+  <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+    <line>It's bugging me</line>
+    <line>Grating me</line>
+    <line>And twisting me around...</line>
+  </structuredLyrics>
+</lyricsList>
+{{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.
 {{< /tab >}}
@@ -61,7 +75,7 @@ Does not exist.
 
 | Field              | Type                                               | Req. | OpenS.  | Details           |
 | ------------------ | -------------------------------------------------- | ---- | ------- | ----------------- |
-| `structured-lyric` | Array of [`structuredLyrics`](../structuredlyrics) | No   | **Yes** | Structured lyrics |
+| `structuredLyrics` | Array of [`structuredLyrics`](../structuredlyrics) | No   | **Yes** | Structured lyrics |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type.

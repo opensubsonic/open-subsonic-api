@@ -9,7 +9,7 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic (synced)" lang="json">}}
+{{< tab header="OpenSubsonic synced JSON" lang="json">}}
 {
   "artist": "Muse",
   "artistId": "1234",
@@ -32,7 +32,14 @@ description: >
   ]
 }
 {{< /tab >}}
-{{< tab header="OpenSubsonic (unsynced)" lang="json">}}
+{{< tab header="OpenSubsonic synced XML" lang="xml">}}
+<structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+  <line start="0">It's bugging me</line>
+  <line start="2000">Grating me</line>
+  <line start="3001">And twisting me around...</line>
+</structuredLyrics>
+{{< /tab >}}
+{{< tab header="OpenSubsonic unsynced JSON" lang="json">}}
 {
   "artist": "Muse",
   "artistId": "1234",
@@ -51,6 +58,13 @@ description: >
     }
   ]
 }
+{{< /tab >}}
+{{< tab header="OpenSubsonic unsynced XML" lang="xml">}}
+<structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+  <line>It's bugging me</line>
+  <line>Grating me</line>
+  <line>And twisting me around...</line>
+</structuredLyrics>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.

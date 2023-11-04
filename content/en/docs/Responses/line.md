@@ -9,16 +9,22 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic (synced)" lang="json">}}
+{{< tab header="OpenSubsonic synced JSON" lang="json">}}
 {
   "start": 0,
   "value": "It's bugging me"
 }
 {{< /tab >}}
-{{< tab header="OpenSubsonic (unsynced)" lang="json">}}
+{{< tab header="OpenSubsonic synced XML" lang="xml">}}
+<line start="0">It's bugging me</line>
+{{< /tab >}}
+{{< tab header="OpenSubsonic unsynced JSON" lang="json">}}
 {
   "value": "It's bugging me"
 }
+{{< /tab >}}
+{{< tab header="OpenSubsonic unsynced XML" lang="xml">}}
+<line start="0">It's bugging me</line>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.
