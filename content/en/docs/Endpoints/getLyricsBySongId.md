@@ -21,11 +21,10 @@ description: >
 | ------------ | ------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `id`         | **Yes** | **Yes** |         | The track ID.                                                                                                            |
 | `lang`       | No      | **Yes** |         | Language(s) to include. Use multiple `lang` parameters to select multiple languages. If not specified, return all lyrics |
-| `includeIds` | No      | **Yes** | false   | If true, include artist id in response                                                                                   |
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?&id=123&lang=eng&lang=xxx&includeIds=true&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?&id=123&lang=eng&lang=xxx&&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -42,12 +41,12 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "lyricsList": {
-      "structured-lyrics": [
+      "structuredLyrics": [
         {
-          "artist": "Muse",
-          "artistId": "1234",
-          "title": "Hysteria",
+          "displayArtist": "Muse",
+          "displayTitle": "Hysteria",
           "lang": "eng",
+          "offset": -100,
           "synced": true,
           "line": [
             {
@@ -65,10 +64,10 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           ]
         },
         {
-          "artist": "Muse",
-          "artistId": "1234",
-          "title": "Hysteria",
+          "displayArtist": "Muse",
+          "displayTitle": "Hysteria",
           "lang": "xxx",
+          "offset": 100,
           "synced": false,
           "line": [
             {
@@ -90,17 +89,16 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 {{< tab header="OpenSubsonic XML" lang="xml">}}
 <subsonic-response status="ok" version="1.16.1" type="AwesomeServerName" serverVersion="0.1.3 (tag)" openSubsonic="true">
   <lyricsList>
-    <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+    <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="-100" synced="true">
       <line start="0">It's bugging me</line>
       <line start="2000">Grating me</line>
       <line start="3001">And twisting me around...</line>
     </structuredLyrics>
-    <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="false">
+    <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="100" synced="false">
       <line>It's bugging me</line>
       <line>Grating me</line>
       <line>And twisting me around...</line>
     </structuredLyrics>
-  </lyricsList>
 </subsonic-response>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}

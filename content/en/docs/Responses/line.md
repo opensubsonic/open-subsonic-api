@@ -24,7 +24,7 @@ description: >
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic unsynced XML" lang="xml">}}
-<line start="0">It's bugging me</line>
+<line>It's bugging me</line>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.

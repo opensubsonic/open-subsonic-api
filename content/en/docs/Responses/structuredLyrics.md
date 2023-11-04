@@ -11,10 +11,10 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic synced JSON" lang="json">}}
 {
-  "artist": "Muse",
-  "artistId": "1234",
-  "title": "Hysteria",
+  "displayArtist": "Muse",
+  "displayTitle": "Hysteria",
   "lang": "eng",
+  "offset": -100,
   "synced": true,
   "line": [
     {
@@ -33,7 +33,7 @@ description: >
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic synced XML" lang="xml">}}
-<structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+<structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="-100" synced="true">
   <line start="0">It's bugging me</line>
   <line start="2000">Grating me</line>
   <line start="3001">And twisting me around...</line>
@@ -41,10 +41,10 @@ description: >
 {{< /tab >}}
 {{< tab header="OpenSubsonic unsynced JSON" lang="json">}}
 {
-  "artist": "Muse",
-  "artistId": "1234",
-  "title": "Hysteria",
+  "displayArtist": "Muse",
+  "displayTitle": "Hysteria",
   "lang": "eng",
+  "offset": 100,
   "synced": false,
   "line": [
     {
@@ -60,7 +60,7 @@ description: >
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic unsynced XML" lang="xml">}}
-<structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="false">
+<structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="100" synced="false">
   <line>It's bugging me</line>
   <line>Grating me</line>
   <line>And twisting me around...</line>
@@ -71,14 +71,14 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field      | Type                       | Req.    | OpenS.  | Details                                                                          |
-| ---------- | -------------------------- | ------- | ------- | -------------------------------------------------------------------------------- |
-| `lang`     | `string`                   | **Yes** | **Yes** | The lyrics language                                                              |
-| `synced`   | `boolean`                  | **Yes** | **Yes** | True if the lyrics are synced, false otherwise                                   |
-| `line`     | Array of [`line`](../line) | **Yes** | **Yes** | The actual lyrics. Ordered by start time (synced) or appearance order (unsynced) |
-| `artist`   | `string`                   | No      | **Yes** | The artist name                                                                  |
-| `artistId` | `string`                   | No      | **Yes** | The artist id                                                                    |
-| `title`    | `string`                   | No      | **Yes** | The song name                                                                    |
+| Field           | Type                       | Req.    | OpenS.  | Details                                                                                                                                                                |
+| --------------- | -------------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `lang`          | `string`                   | **Yes** | **Yes** | The lyrics language                                                                                                                                                    |
+| `synced`        | `boolean`                  | **Yes** | **Yes** | True if the lyrics are synced, false otherwise                                                                                                                         |
+| `line`          | Array of [`line`](../line) | **Yes** | **Yes** | The actual lyrics. Ordered by start time (synced) or appearance order (unsynced)                                                                                       |
+| `displayArtist` | `string`                   | No      | **Yes** | The artist name to display. This could be the localized name, or any other value                                                                                       |
+| `displayTitle`  | `string`                   | No      | **Yes** | The title to display. This could be the song title (localized), or any other value                                                                                     |
+| `offset`        | `number`                   | No      | **Yes** | The offset to apply to all lyrics, in milliseconds. Positive means lyrics appear sooner, negative means later. If not included, the offset **must** be assumed to be 0 |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type.
