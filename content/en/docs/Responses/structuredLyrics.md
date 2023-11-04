@@ -60,7 +60,7 @@ description: >
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic unsynced XML" lang="xml">}}
-<structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+<structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="false">
   <line>It's bugging me</line>
   <line>Grating me</line>
   <line>And twisting me around...</line>

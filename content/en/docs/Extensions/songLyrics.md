@@ -93,7 +93,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
       <line start="2000">Grating me</line>
       <line start="3001">And twisting me around...</line>
     </structuredLyrics>
-    <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="true">
+    <structuredLyrics artist="Muse" artistId="1234" title="Hysteria" lang="en" synced="false">
       <line>It's bugging me</line>
       <line>Grating me</line>
       <line>And twisting me around...</line>
