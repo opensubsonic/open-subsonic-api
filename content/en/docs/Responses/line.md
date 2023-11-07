@@ -10,12 +10,12 @@ description: >
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
-// Synced JSON
+// Synced line
 {
   "start": 0,
   "value": "It's bugging me"
 }
-// Unsynced JSON
+// Unsynced line
 {
   "value": "It's bugging me"
 }
