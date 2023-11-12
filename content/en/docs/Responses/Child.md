@@ -179,7 +179,7 @@ description: >
 | `originalWidth` | `int` | No |     | The video original Width |
 | `originalHeight` | `int` | No |     | The video original Height |
 | `played` | `string` | No | **Yes**    | Date the album was last played. [ISO 8601]|
-| `bpm` | `int` | No |   **Yes**   | The BPM of the song. |
+| `bpm` | `int` | No |   **Yes**   | The BPM of the song. The default value when the tag is not present should be -1. |
 | `comment` | `string` | No |  **Yes**    | The comment tag of the song. |
 | `sortName` | `string` | No |  **Yes**   | The song sort name. |
 | `musicBrainzId` | `string` | No |  **Yes**   | The track MusicBrainzID. |
