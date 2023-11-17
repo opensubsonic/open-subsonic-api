@@ -60,6 +60,7 @@ description: >
     ],
     "sortName": "lagerfeuer (8-bit)",
     "originalReleaseDate": "2001-03-10T02:19:35.784818075Z",
+    "releaseDate": "2021-01-01T00:00:00.000000000Z",
     "isCompilation": false,
     "discTitles": [
         {
@@ -198,7 +199,7 @@ description: >
 | `artistId` | `string` | No |    | The id of the artist |
 | `coverArt` | `string` | No |     | A covertArt id.  |
 | `songCount` | `int` | **Yes** |     | Number of songs |
-| `duration` | `int` | **Yes** |     | Total duration of the album |
+| `duration` | `int` | **Yes** |     | Total duration of the album in seconds |
 | `playCount` | `long` | No |     | Number of play of the album |
 | `created` | `string` | **Yes** |     | Date the album was added. [ISO 8601]|
 | `starred` | `string` | No |     | Date the album was starred. [ISO 8601]|
@@ -214,7 +215,8 @@ description: >
 | `releaseTypes` | Array of `string` | No | **Yes**    | The types of this album release. (Album, Compilation, EP, Remix, ...).|
 | `moods` | Array of `string` | No | **Yes**    | The list of all moods of the album. |
 | `sortName` | `string` | No |  **Yes**   | The album sort name. |
-| `originalReleaseDate` | `string` | No |   **Yes**   | Date the album was originally released. [ISO 8601]|
+| `originalReleaseDate` | `string` | No |   **Yes**   | Date the album was originally released. Month and day may be set to 01-01 if only year is known. [ISO 8601] |
+| `releaseDate` | `string` | No |   **Yes**   | Date the specific edition of the album was released. Month and day may be set to 01-01 if only year is known. [ISO 8601] |
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation.|
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 | `song` | Array of [`Child`](../child) | No |     | The list of songs |
