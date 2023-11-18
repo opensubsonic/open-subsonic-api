@@ -10,21 +10,13 @@ description: >
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
-// Synced line
 {
   "start": 0,
   "value": "It's bugging me"
 }
-// Unsynced line
-{
-  "value": "It's bugging me"
-}
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
-<!-- Synced XML -->
 <line start="0">It's bugging me</line>
-<!-- Unsynced XML -->
-<line>It's bugging me</line>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.

@@ -10,7 +10,6 @@ description: >
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
-// Synced lyrics
 {
   "displayArtist": "Muse",
   "displayTitle": "Hysteria",
@@ -32,38 +31,12 @@ description: >
     }
   ]
 }
-// Unsynced lyrics
-{
-  "displayArtist": "Muse",
-  "displayTitle": "Hysteria",
-  "lang": "eng",
-  "offset": 100,
-  "synced": false,
-  "line": [
-    {
-      "value": "It's bugging me"
-    },
-    {
-      "value": "Grating me"
-    },
-    {
-      "value": "And twisting me around..."
-    }
-  ]
-}
 {{< /tab >}}
 {{< tab header="OpenSubsonic synced XML" lang="xml">}}
-<!-- Synced lyrics -->
 <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="-100" synced="true">
   <line start="0">It's bugging me</line>
   <line start="2000">Grating me</line>
   <line start="3001">And twisting me around...</line>
-</structuredLyrics>
-<!-- Unsynced lyrics -->
-<structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="100" synced="false">
-  <line>It's bugging me</line>
-  <line>Grating me</line>
-  <line>And twisting me around...</line>
 </structuredLyrics>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
