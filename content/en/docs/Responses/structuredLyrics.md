@@ -32,7 +32,7 @@ description: >
   ]
 }
 {{< /tab >}}
-{{< tab header="OpenSubsonic synced XML" lang="xml">}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
 <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="-100" synced="true">
   <line start="0">It's bugging me</line>
   <line start="2000">Grating me</line>
