@@ -23,10 +23,10 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field   | Type     | Req.    | OpenS.  | Details                                                                                                        |
-| ------- | -------- | ------- | ------- | -------------------------------------------------------------------------------------------------------------- |
-| `value` | `string` | **Yes** | **Yes** | The actual text of this line                                                                                   |
-| `start` | `number` | No      | **Yes** | The start time of the lyrics, in milliseconds. If this is not part of synced lyrics, start **must** be omitted |
+| Field   | Type     | Req.    | OpenS.  | Details                                                                                                                                                 |
+| ------- | -------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `value` | `string` | **Yes** | **Yes** | The actual text of this line                                                                                                                            |
+| `start` | `number` | No      | **Yes** | The start time of the lyrics, relative to the start time of the track, in milliseconds. If this is not part of synced lyrics, start **must** be omitted |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type.
