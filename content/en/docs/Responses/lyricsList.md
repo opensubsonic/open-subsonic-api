@@ -73,9 +73,9 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field              | Type                                               | Req. | OpenS.  | Details           |
-| ------------------ | -------------------------------------------------- | ---- | ------- | ----------------- |
-| `structuredLyrics` | Array of [`structuredLyrics`](../structuredlyrics) | No   | **Yes** | Structured lyrics |
+| Field              | Type                                               | Req. | OpenS.  | Details                                                                                 |
+| ------------------ | -------------------------------------------------- | ---- | ------- | --------------------------------------------------------------------------------------- |
+| `structuredLyrics` | Array of [`structuredLyrics`](../structuredlyrics) | No   | **Yes** | Structured lyrics. There can be multiple lyrics of the same type with the same language |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type.

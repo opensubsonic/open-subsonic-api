@@ -46,7 +46,7 @@ Does not exist.
 
 | Field           | Type                       | Req.    | OpenS.  | Details                                                                                                                                                                |
 | --------------- | -------------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `lang`          | `string`                   | **Yes** | **Yes** | The lyrics language                                                                                                                                                    |
+| `lang`          | `string`                   | **Yes** | **Yes** | The lyrics language. This must be three-characters (ideally ISO language code). If the language is unknown (e.g. lrc file), the server **must** return `und`           |
 | `synced`        | `boolean`                  | **Yes** | **Yes** | True if the lyrics are synced, false otherwise                                                                                                                         |
 | `line`          | Array of [`line`](../line) | **Yes** | **Yes** | The actual lyrics. Ordered by start time (synced) or appearance order (unsynced)                                                                                       |
 | `displayArtist` | `string`                   | No      | **Yes** | The artist name to display. This could be the localized name, or any other value                                                                                       |

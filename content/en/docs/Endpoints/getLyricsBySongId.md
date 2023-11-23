@@ -13,6 +13,9 @@ description: >
 
 **OpenSubsonic extension name** `songLyrics` (As returned by [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions))
 
+Retrieves structured lyrics from the server for a given song.
+The lyrics can come from embedded tags (`SYLT`/`USLT`), LRC file/text file, or any other external source.
+
 `http://your-server/rest/getLyricsBySongId`
 
 ### Parameters
@@ -22,9 +25,14 @@ description: >
 | `id`         | **Yes** | **Yes** |         | The track ID.                                                                                                            |
 | `lang`       | No      | **Yes** |         | Language(s) to include. Use multiple `lang` parameters to select multiple languages. If not specified, return all lyrics |
 
+{{<alert color="primary" title="Special notes about lang field">}}
+If the user requests one or more language codes, and the server only has `und` lang, the server **must** return the undefined language.
+For example, if the server has `jpn` and `und` and the user requests `swa`, the server must return the `und` lyrics.
+{{< /alert >}}
+
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?&id=123&lang=eng&lang=xxx&&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?&id=123&lang=eng&lang=und&&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -66,7 +74,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
         {
           "displayArtist": "Muse",
           "displayTitle": "Hysteria",
-          "lang": "xxx",
+          "lang": "und",
           "offset": 100,
           "synced": false,
           "line": [
