@@ -36,7 +36,7 @@ description: >
     {
       "displayArtist": "Muse",
       "displayTitle": "Hysteria",
-      "lang": "eng",
+      "lang": "xxx",
       "offset": 100,
       "synced": false,
       "line": [
@@ -56,12 +56,12 @@ description: >
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
 <lyricsList>
-  <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="-100" synced="true">
+  <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="eng" offset="-100" synced="true">
     <line start="0">It's bugging me</line>
     <line start="2000">Grating me</line>
     <line start="3001">And twisting me around...</line>
   </structuredLyrics>
-  <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="en" offset="100" synced="false">
+  <structuredLyrics displayArtist="Muse" displayTitle="Hysteria" lang="xxx" offset="100" synced="false">
     <line>It's bugging me</line>
     <line>Grating me</line>
     <line>And twisting me around...</line>

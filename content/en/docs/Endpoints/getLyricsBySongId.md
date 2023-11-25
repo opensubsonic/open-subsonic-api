@@ -13,26 +13,29 @@ description: >
 
 **OpenSubsonic extension name** `songLyrics` (As returned by [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions))
 
-Retrieves structured lyrics from the server for a given song.
+Retrieves all structured lyrics from the server for a given song.
 The lyrics can come from embedded tags (`SYLT`/`USLT`), LRC file/text file, or any other external source.
 
 `http://your-server/rest/getLyricsBySongId`
 
 ### Parameters
 
-| Parameter    | Req.    | OpenS.  | Default | Comment                                                                                                                  |
-| ------------ | ------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `id`         | **Yes** | **Yes** |         | The track ID.                                                                                                            |
-| `lang`       | No      | **Yes** |         | Language(s) to include. Use multiple `lang` parameters to select multiple languages. If not specified, return all lyrics |
+| Parameter | Req.    | OpenS.  | Default | Comment       |
+| --------- | ------- | ------- | ------- | ------------- |
+| `id`      | **Yes** | **Yes** |         | The track ID. |                                                                                         
 
-{{<alert color="primary" title="Special notes about lang field">}}
-If the user requests one or more language codes, and the server only has `und` lang, the server **must** return the undefined language.
-For example, if the server has `jpn` and `und` and the user requests `swa`, the server must return the `und` lyrics.
+{{< alert color="warning" title="Special notes about the lang field" >}}
+Ideally, the server will return `lang` as an ISO 639 (2/3) code.
+However, tagged files and external lyrics can come with any value as a potential language code, so clients should take care when displaying `lang`.
+
+Furthermore, there is special behavior for the value `xxx`.
+While not an ISO code, it is commonly used by taggers and other parsing software.
+Clients should treat `xxx` as not having a specified language (equivalent to the `und` code).
 {{< /alert >}}
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?&id=123&lang=eng&lang=und&&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?&id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
