@@ -27,6 +27,16 @@ Please note that all methods take the following parameters:
 
 Remember to [URL encode](http://www.w3schools.com/tags/ref_urlencode.asp) the request parameters. All methods (except those that return binary data) returns XML documents conforming to the [subsonic-rest-api.xsd](../subsonic-versions) schema. The XML documents are encoded with UTF-8.
 
+## POST support
+
+OpenSubsonic add official support for `application/x-www-form-urlencoded` POST to pass the argument.
+
+Check that the server support the [HTTP form POST](../extensions/formpost) extension before using it.
+
+The arguments can then be passed in the POST body (Do not forget to URL encode both the keys and values), this allows to overcome the URL size limits when passing many parameters for playlists for example.
+
+{{< alert color="primary" >}} `curl -v -X POST -H 'Content-Type: application/x-www-form-urlencoded' 'http://your-server/rest/ping.view' --data 'c=AwesomeClientName&v=1.12.0&f=json&u=joe&p=sesame'` {{< /alert >}}
+
 ## Authentication
 
 If you are targeting API version [1.12.0](../subsonic-versions) or earlier, authentication is performed by sending the password as clear text or hex-encoded. Examples:
