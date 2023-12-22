@@ -25,7 +25,7 @@ Does not exist.
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `year`  | `integer` | **Yes** |  **Yes**   | The year |
+| `year`  | `integer` | No      |  **Yes**   | The year |
 | `month` | `integer` | No      |  **Yes**   | The month (1-12) |
 | `day`   | `integer` | No      |  **Yes**   | The day (1-31) |
 
