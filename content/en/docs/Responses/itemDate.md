@@ -7,16 +7,16 @@ description: >
 
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
 {
-  "year": 2020
-  "month": 01
-  "day": 01
+  "year": 2020,
+  "month": 1,
+  "day": 1
 }
 {{< /tab >}}
-{{< tab header="OpenSubsonic" lang="xml">}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
   <!-- XML name is the name of the property on the parent object-->
-  <originalReleaseDate year="2020" month="01" day="01"/>
+  <originalReleaseDate year="2020" month="1" day="1"/>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.
