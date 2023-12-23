@@ -59,7 +59,11 @@ description: >
         "cool"
     ],
     "sortName": "lagerfeuer (8-bit)",
-    "originalReleaseDate": "2001-03-10T02:19:35.784818075Z",
+    "originalReleaseDate": {
+        "year": 2001,
+        "month": 3,
+        "day": 10
+    },
     "isCompilation": false,
     "discTitles": [
         {
@@ -214,7 +218,7 @@ description: >
 | `releaseTypes` | Array of `string` | No | **Yes**    | The types of this album release. (Album, Compilation, EP, Remix, ...).|
 | `moods` | Array of `string` | No | **Yes**    | The list of all moods of the album. |
 | `sortName` | `string` | No |  **Yes**   | The album sort name. |
-| `originalReleaseDate` | `string` | No |   **Yes**   | Date the album was originally released. [ISO 8601]|
+| `originalReleaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the album was originally released. |
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation.|
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 | `song` | Array of [`Child`](../child) | No |     | The list of songs |
