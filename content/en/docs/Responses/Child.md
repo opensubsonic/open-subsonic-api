@@ -26,6 +26,8 @@ description: >
     "starred": "2023-03-27T09:45:27Z",
     "duration": 178,
     "bitRate": 880,
+    "bitDepth": 16,
+    "samplingRate": 44100,
     "path": "The New Deal/Live at The Casbah - 2005-04-29/04 - \"polar expedition\".flac",
     "playCount": 8,
     "played": "2023-03-26T22:27:46Z",
@@ -132,6 +134,8 @@ description: >
   "starred": "2023-03-27T09:45:27Z",
   "duration": 178,
   "bitRate": 880,
+  "bitDepth": 16,
+  "samplingRate": 44100,
   "path": "The New Deal/Live at The Casbah - 2005-04-29/04 - \"polar expedition\".flac",
   "playCount": 8,
   "discNumber": 1,
@@ -163,6 +167,8 @@ description: >
 | `transcodedSuffix` | `string` | No |     | The file suffix of the transcoded media.  |
 | `duration` | `int` | No |     | The duration of the media in seconds. |
 | `bitRate` | `int` | No |     | The bitrate of the media. |
+| `bitDepth` | `int` | No |     | The bit depth of the media. |
+| `samplingRate` | `int` | No |     | The sampling rate of the media. |
 | `path` | `string` | No |     | The full path of the media. |
 | `isVideo` | `boolean` | No |     | Media is a video |
 | `userRating` | `int` | No |     | The user rating of the media [1-5] |
