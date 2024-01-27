@@ -33,6 +33,7 @@ Any server or client can join the organization and make proposals [OpenSubsonic]
 - [Gonic](https://github.com/sentriz/gonic)
 - [LMS - Lightweight Music Server](https://github.com/epoupon/lms)
 - [Navidrome](https://www.navidrome.org/)
+- [Nextcloud Music / ownCloud Music](https://github.com/owncloud/music)
 - [Supysonic](https://github.com/spl0k/supysonic)
 
 ### Clients

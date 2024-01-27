@@ -193,4 +193,5 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
 | **Funkwhale** | 1.2.8 | Support not passing a query parameter. |
 | **Astiga** |  | Support `query=` |
 | **LMS** | 3.35.1 | Support `query=` |
+| **Nextcloud Music / ownCloud Music** | 1.10.0 | Support `query=` |
 {{< /alert >}}
