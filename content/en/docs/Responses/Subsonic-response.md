@@ -59,4 +59,5 @@ New fields are added:
 | **Funkwhale** |  |  Support `type`, version is exposed as `funkwhaleVersion` |
 | **Astiga** |  | Expose `Astiga/production` in `serverVersion` |
 | **LMS** |  | Support `type` |
+| **Nextcloud Music / ownCloud Music** | 1.10.0 | Support `openSubsonic`, `type`, and `serverVersion` |
 {{< /alert >}}
