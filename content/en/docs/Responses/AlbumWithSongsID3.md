@@ -64,7 +64,11 @@ description: >
         "month": 3,
         "day": 10
     },
-    "releaseDate": "2021-01-01T00:00:00.000000000Z",
+    "releaseDate": {
+        "year": 2001,
+        "month": 3,
+        "day": 10
+    },
     "isCompilation": false,
     "discTitles": [
         {
@@ -121,7 +125,7 @@ description: >
 | `moods` | Array of `string` | No | **Yes**    | The list of all moods of the album. |
 | `sortName` | `string` | No |  **Yes**   | The album sort name. |
 | `originalReleaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the album was originally released. |
-| `releaseDate` | `string` | No |   **Yes**   | Date the specific edition of the album was released. Month and day may be set to 01-01 if only year is known. [ISO 8601] |
+| `releaseDate` | [`ItemDate`](../itemdate)  | No |   **Yes**   | Date the specific edition of the album was released. |
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation. |
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 
