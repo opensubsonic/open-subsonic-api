@@ -125,7 +125,7 @@ description: >
 | `moods` | Array of `string` | No | **Yes**    | The list of all moods of the album. |
 | `sortName` | `string` | No |  **Yes**   | The album sort name. |
 | `originalReleaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the album was originally released. |
-| `releaseDate` | [`ItemDate`](../itemdate)  | No |   **Yes**   | Date the specific edition of the album was released. |
+| `releaseDate` | [`ItemDate`](../itemdate)  | No |   **Yes**   | Date the specific edition of the album was released. *Note:* for files using ID3 tags, releaseDate should generally be read from the **TDRL** tag. Servers that use a different source for this field should document the behavior. |
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation. |
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 
