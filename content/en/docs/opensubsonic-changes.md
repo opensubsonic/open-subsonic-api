@@ -23,7 +23,7 @@ OpenSubsonic server support will documented by a table at the end of the corresp
 | Server | Min vers. | Comment |
 | --- | --- | --- |
 | **Navidrome** | 0.3.0 | Support `query=""` |
-| **Gonic** | 0.15.0 | Support `query=""` |
+| **gonic** | 0.15.0 | Support `query=""` |
 | **Ampache** | 5.5.7 | Support `query=""` |
 | **Funkwhale** | 1.2.8 | Support not passing a query parameter. |
 | **Astiga** |  | Support `query=` |

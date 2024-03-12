@@ -188,9 +188,10 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
 | Server | Min vers. | Comment |
 | --- | --- | --- |
 | **Navidrome** | 0.3.0 | Support `query=""` |
-| **Gonic** | 0.15.0 | Support `query=""` |
+| **gonic** | 0.15.0 | Support `query=""` |
 | **Ampache** | 5.5.7 | Support `query=""` |
 | **Funkwhale** | 1.2.8 | Support not passing a query parameter. |
 | **Astiga** |  | Support `query=` |
 | **LMS** | 3.35.1 | Support `query=` |
+| **Nextcloud Music / ownCloud Music** | 1.10.0 | Support `query=` |
 {{< /alert >}}
