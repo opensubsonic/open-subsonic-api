@@ -64,6 +64,11 @@ description: >
         "month": 3,
         "day": 10
     },
+    "releaseDate": {
+        "year": 2001,
+        "month": 3,
+        "day": 10
+    },
     "isCompilation": false,
     "discTitles": [
         {
@@ -202,7 +207,7 @@ description: >
 | `artistId` | `string` | No |    | The id of the artist |
 | `coverArt` | `string` | No |     | A covertArt id.  |
 | `songCount` | `int` | **Yes** |     | Number of songs |
-| `duration` | `int` | **Yes** |     | Total duration of the album |
+| `duration` | `int` | **Yes** |     | Total duration of the album in seconds |
 | `playCount` | `long` | No |     | Number of play of the album |
 | `created` | `string` | **Yes** |     | Date the album was added. [ISO 8601]|
 | `starred` | `string` | No |     | Date the album was starred. [ISO 8601]|
@@ -219,6 +224,7 @@ description: >
 | `moods` | Array of `string` | No | **Yes**    | The list of all moods of the album. |
 | `sortName` | `string` | No |  **Yes**   | The album sort name. |
 | `originalReleaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the album was originally released. |
+| `releaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the specific edition of the album was released. *Note:* for files using ID3 tags, releaseDate should generally be read from the **TDRL** tag. Servers that use a different source for this field should document the behavior. |
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation.|
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 | `song` | Array of [`Child`](../child) | No |     | The list of songs |
