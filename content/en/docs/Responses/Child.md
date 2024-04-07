@@ -169,9 +169,9 @@ description: >
 | `transcodedSuffix` | `string` | No |     | The file suffix of the transcoded media.  |
 | `duration` | `int` | No |     | The duration of the media in seconds. |
 | `bitRate` | `int` | No |     | The bitrate of the media. |
-| `bitDepth` | `int` | No |     | The bit depth of the media. |
-| `samplingRate` | `int` | No |     | The sampling rate of the media. |
-| `channelCount` | `int` | No |     | The number of channels of the media. |
+| `bitDepth` | `int` | No | **Yes** | The bit depth of the media. |
+| `samplingRate` | `int` | No | **Yes** | The sampling rate of the media. |
+| `channelCount` | `int` | No | **Yes** | The number of channels of the media. |
 | `path` | `string` | No |     | The full path of the media. |
 | `isVideo` | `boolean` | No |     | Media is a video |
 | `userRating` | `int` | No |     | The user rating of the media [1-5] |
