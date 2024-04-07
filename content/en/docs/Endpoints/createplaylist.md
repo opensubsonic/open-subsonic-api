@@ -113,6 +113,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "bitRate": 20,
           "bitDepth": 16,
           "samplingRate": 44100,
+          "channelCount": 2,
           "userRating": 5,
           "averageRating": 5,
           "track": 4,
