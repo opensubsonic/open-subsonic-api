@@ -41,6 +41,7 @@ Any server or client can join the organization and make proposals [OpenSubsonic]
 - [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)
 - [Supersonic](https://github.com/dweymouth/supersonic)
 - [Symfonium](https://symfonium.app/)
+- [Amperfy](https://github.com/BLeeEZ/amperfy)
 
 ## Goals
 
