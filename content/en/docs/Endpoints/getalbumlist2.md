@@ -45,11 +45,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
       "album": [
         {
           "id": "200000021",
-          "parent": "100000036",
           "album": "Forget and Remember",
           "title": "Forget and Remember",
           "name": "Forget and Remember",
-          "isDir": true,
           "coverArt": "al-200000021",
           "songCount": 20,
           "created": "2021-07-22T02:09:31+00:00",
@@ -62,11 +60,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
         },
         {
           "id": "200000012",
-          "parent": "100000019",
           "album": "Buried in Nausea",
           "title": "Buried in Nausea",
           "name": "Buried in Nausea",
-          "isDir": true,
           "coverArt": "al-200000012",
           "songCount": 9,
           "created": "2021-02-24T01:44:21+00:00",
@@ -91,11 +87,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
       "album": [
         {
           "id": "200000021",
-          "parent": "100000036",
           "album": "Forget and Remember",
           "title": "Forget and Remember",
           "name": "Forget and Remember",
-          "isDir": true,
           "coverArt": "al-200000021",
           "songCount": 20,
           "created": "2021-07-22T02:09:31+00:00",
@@ -108,11 +102,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
         },
         {
           "id": "200000012",
-          "parent": "100000019",
           "album": "Buried in Nausea",
           "title": "Buried in Nausea",
           "name": "Buried in Nausea",
-          "isDir": true,
           "coverArt": "al-200000012",
           "songCount": 9,
           "created": "2021-02-24T01:44:21+00:00",
