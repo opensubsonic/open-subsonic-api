@@ -158,4 +158,5 @@ New fields are added:
 | Server | Min vers. | Comment |
 | --- | --- | --- |
 | **Navidrome** |  | Support `played` and `userRating` |
+| **Nextcloud Music / ownCloud Music** | 2.0.0 | Support `sortName` and `userRating` |
 {{< /alert >}}

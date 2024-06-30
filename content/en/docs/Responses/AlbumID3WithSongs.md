@@ -267,5 +267,6 @@ New fields are added:
 
 | Server | Min vers. | Comment |
 | --- | --- | --- |
+| **Nextcloud Music / ownCloud Music** | 2.0.0 | Support `sortName` and `userRating` |
 
 {{< /alert >}}

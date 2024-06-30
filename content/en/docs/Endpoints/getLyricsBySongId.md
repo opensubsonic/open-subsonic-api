@@ -120,3 +120,12 @@ Does not exist.
 | Field        | Type                          | Req.    | OpenS.  | Details                   |
 | ------------ | ----------------------------- | ------- | ------- | ------------------------- |
 | `lyricsList` | [`lyricsList`](../../responses/lyricslist) | **Yes** | **Yes** | List of structured lyrics |
+
+---
+
+{{< alert color="warning" title="OpenSubsonic server support" >}}
+
+| Server | Min vers. | Comment |
+| --- | --- | --- |
+| **Nextcloud Music / ownCloud Music** | 2.0.0 |  |
+{{< /alert >}}

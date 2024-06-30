@@ -232,4 +232,5 @@ New fields are added:
 | Server | Min vers. | Comment |
 | --- | --- | --- |
 | **Navidrome** | 0.49.0 | Support `played`|
+| **Nextcloud Music / ownCloud Music** | 2.0.0 | Support `played` and `sortName` |
 {{< /alert >}}

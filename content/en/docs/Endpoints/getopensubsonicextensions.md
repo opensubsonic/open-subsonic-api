@@ -72,4 +72,5 @@ This is a new endpoint.
 
 | Server | Min vers. | Comment |
 | --- | --- | --- |
+| **Nextcloud Music / ownCloud Music** | 1.11.0 |  |
 {{< /alert >}}
