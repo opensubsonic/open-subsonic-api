@@ -24,24 +24,29 @@ See:
 
 OpenSubsonic is built with servers and clients trying to improve the global media center ecosystem by providing a common expandable API that can fit most of the needs of modern music apps.
 
-Any server or client can join the organization and make proposals [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions). The only condition is that if (as a client) you request an API extension that is accepted, you engage yourself in implementing it in your client in a timely manner.
+Any server or client can join the organization and make proposals for [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions). The only condition is that if (as a client) you request an API extension that is accepted, you engage yourself in implementing it in your client in a timely manner.
 
 ### Servers
 
-- [Ampache](https://ampache.org/)
-- [Astiga](https://asti.ga)
-- [gonic](https://github.com/sentriz/gonic)
-- [LMS - Lightweight Music Server](https://github.com/epoupon/lms)
-- [Navidrome](https://www.navidrome.org/)
-- [Nextcloud Music / ownCloud Music](https://github.com/owncloud/music)
-- [Supysonic](https://github.com/spl0k/supysonic)
+| Name  | OpenSubsonic documentation  |
+|---|---|
+| [Ampache](https://ampache.org/)  | [Documentation](https://ampache.org/api/subsonic)  |
+| [Astiga](https://asti.ga)  | - |
+| [gonic](https://github.com/sentriz/gonic) | -  |
+| [LMS - Lightweight Music Server](https://github.com/epoupon/lms) | [Documentation](https://github.com/epoupon/lms/blob/master/SUBSONIC.md)  |
+| [Navidrome](https://www.navidrome.org/)  | [Documentation](https://www.navidrome.org/docs/developers/subsonic-api)  |
+| [Nextcloud Music / ownCloud Music](https://github.com/owncloud/music)  | [Documentation](https://github.com/owncloud/music/wiki/OpenSubsonic-API)   |
+| [Supysonic](https://github.com/spl0k/supysonic) | - |
+
 
 ### Clients
 
-- [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)
-- [Supersonic](https://github.com/dweymouth/supersonic)
-- [Symfonium](https://symfonium.app/)
-- [Amperfy](https://github.com/BLeeEZ/amperfy)
+| Name  | OpenSubsonic documentation  |
+|---|---|
+| [Amperfy](https://github.com/BLeeEZ/amperfy)  |   |
+| [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)  |   |
+| [Supersonic](https://github.com/dweymouth/supersonic)  |   |
+| [Symfonium](https://symfonium.app/)  | [Documentation](https://support.symfonium.app/t/1178) |
 
 ## Goals
 
@@ -49,6 +54,7 @@ The OpenSubsonic API has several goals, which include:
 
 - Being an open, collaboratively maintained specification.
 - Ensuring security across all extensions.
+- The API aims for consistent results across all servers, ensuring that every request produces the same outcome. The API definition must be clear and precise, eliminating any ambiguity about the expected results.
 - Maintaining complete backwards compatibility with the existing Subsonic API.
 - Offering piecewise optional implementation for servers and clients.
 

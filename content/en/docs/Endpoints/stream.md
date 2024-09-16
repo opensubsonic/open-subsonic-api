@@ -41,11 +41,3 @@ OpenSubsonic servers **must not** count access to this endpoint as a play and in
 If the server support the [`Transcode Offet`](../../extensions/transcodeoffset/) extension, then it must accept the `timeOffset` parameter for music too.
 
 {{< /alert >}}
-
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-{{< /alert >}}
