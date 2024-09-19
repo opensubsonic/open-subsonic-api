@@ -22,14 +22,6 @@ This extension requires the following endpoints:
 - [`bakeCake`](../invalid) To bake cakes.
 - [`bakeBrownie`](../invalid) To bake brownies.
 
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-{{< /alert >}}
-
 ## Version 2
 
 You can now bake a lot of stuff via the API!
@@ -37,11 +29,3 @@ You can now bake a lot of stuff via the API!
 This extension requires the following endpoints:
 
 - [`bakeSomething`](../invalid) To bake something.
-
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-{{< /alert >}}

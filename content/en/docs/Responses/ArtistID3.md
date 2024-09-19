@@ -63,11 +63,3 @@ New fields are added:
 
 **Note**: Even if some added fields may looks duplicated, it's important to still return the legacy data for compatibility reasons.
 {{< /alert >}}
-
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-{{< /alert >}}

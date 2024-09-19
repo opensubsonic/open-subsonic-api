@@ -65,11 +65,3 @@ Does not exist.
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new endpoint.
 {{< /alert >}}
-
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-{{< /alert >}}
