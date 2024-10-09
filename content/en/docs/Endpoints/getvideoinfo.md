@@ -31,10 +31,31 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 // TODO
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
-// TODO
+{
+   "subsonic-response" : {
+      "status" : "ok",
+      "version" : "1.16.1",
+      "videoInfo" : {
+         "id" : "83"
+      }
+   }
+}
+{{< /tab >}}
+{{< tab header="Subsonic (XML)" lang="xml" >}}
+<subsonic-response status="ok" version="1.14.0">
+<videoInfo id="7058">
+    <captions id="0" name="Planes 2.srt"/>
+    <audioTrack id="1" name="English" languageCode="eng"/>
+    <audioTrack id="3" name="Danish" languageCode="dan"/>
+    <audioTrack id="4" name="Finnish" languageCode="fin"/>
+    <audioTrack id="5" name="Norwegian" languageCode="nor"/>
+    <audioTrack id="6" name="Swedish" languageCode="swe"/>
+    <conversion id="37" bitRate="1000"/>
+  </videoInfo>
+</subsonic-response>
 {{< /tab >}}
 {{< /tabpane >}}
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `videoInfo` | [`videoInfo`](../../responses/videoinfo) | **Yes** |     | The song |
+| `videoInfo` | [`videoInfo`](../../responses/videoinfo) | **Yes** | | |
