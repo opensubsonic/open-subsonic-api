@@ -1,6 +1,6 @@
 ---
 title: "getSimilarSongs"
-linkTitle: "getSimilarSongs"
+linkTitle: "getSimilarSongs [OS]"
 categories:
 - Browsing
 description: >
@@ -103,6 +103,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "status": "ok",
     "version": "1.16.1",
     "similarSongs": {
+      "totalCount": 2,
       "song": [
         {
           "id": "300000060",
