@@ -51,6 +51,7 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "searchResult3": {
+      "totalArtistCount": 1,
       "artist": [
         {
           "id": "37ec820ca7193e17040c98f7da7c4b51",
@@ -61,6 +62,7 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
           "artistImageUrl": "https://demo.org/image.jpg"
         }
       ],
+      "totalAlbumCount": 1,
       "album": [
         {
           "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
@@ -78,6 +80,7 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
           "songCount": 8
         }
       ],
+      "totalArtistCount": 1,
       "song": [
         {
           "id": "082f435a363c32c57d5edb6a678a28d4",

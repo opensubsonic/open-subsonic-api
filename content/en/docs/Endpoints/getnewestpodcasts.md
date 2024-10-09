@@ -1,6 +1,6 @@
 ---
 title: "getNewestPodcasts"
-linkTitle: "getNewestPodcasts"
+linkTitle: "getNewestPodcasts [OS]"
 categories:
 - Podcast
 description: >
@@ -36,6 +36,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "newestPodcasts": {
+      "totalCount": 1,
       "episode": [
         {
           "id": "7390",

@@ -1,6 +1,6 @@
 ---
 title: "getSongsByGenre"
-linkTitle: "getSongsByGenre"
+linkTitle: "getSongsByGenre [OS]"
 categories:
 - Lists
 description: >
@@ -39,6 +39,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "songsByGenre": {
+      "totalCount": 1,
       "song": [
         {
           "id": "300000060",

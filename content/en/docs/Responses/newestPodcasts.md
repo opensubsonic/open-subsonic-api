@@ -1,6 +1,6 @@
 ---
 title: "NewestPodcasts"
-linkTitle: "NewestPodcasts"
+linkTitle: "NewestPodcasts [OS]"
 description: >
   NewestPodcasts.
 ---
@@ -69,6 +69,7 @@ description: >
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field     | Type                                              | Req. | OpenS. | Details |
-| --------- | ------------------------------------------------- | ---- | ------ | ------- |
-| `episode` | An array of [`PodcastEpisode`](../podcastepisode) | No   |        |         |
+| Field        | Type                                              | Req. | OpenS.  | Details                                                                                                                            |
+|--------------|---------------------------------------------------|------|---------|------------------------------------------------------------------------------------------------------------------------------------|
+| `totalCount` | Int                                               | No   | **Yes** | Total item count for the request ignoring `size` and `offset` limits. Use `-1` to denote unsupported, unknown or uncounted values. |
+| `episode`    | An array of [`PodcastEpisode`](../podcastepisode) | No   |         |                                                                                                                                    |
