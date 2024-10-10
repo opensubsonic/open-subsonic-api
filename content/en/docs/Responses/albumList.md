@@ -9,6 +9,7 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
+  "totalCount": 2,
   "album": [
     {
       "id": "200000021",
@@ -87,4 +88,5 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
+| `totalCount` | Int | No |  **Yes**  | Total item count for the request ignoring `size` and `offset` limits |
 | `album` | Array of [`Child`](../child) | No |     | Artist albums|

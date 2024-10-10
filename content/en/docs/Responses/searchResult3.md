@@ -9,6 +9,7 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
+  "totalArtistCount": 1,
   "artist": [
     {
       "id": "37ec820ca7193e17040c98f7da7c4b51",
@@ -19,6 +20,7 @@ description: >
       "artistImageUrl": "https://demo.org/image.jpg"
     }
   ],
+  "totalAlbumCount": 1,
   "album": [
     {
       "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
@@ -36,6 +38,7 @@ description: >
       "songCount": 8,
     }
   ],
+  "totalSongCount": 1,
   "song": [
     {
       "id": "082f435a363c32c57d5edb6a678a28d4",
@@ -133,6 +136,9 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
+| `totalArtistCount` | Int | No |  **Yes**  | Total item count for the request ignoring `artistCount` limits |
 | `artist` | Array of [`ArtistID3`](../artistid3) | No |     | Matching artists |
+| `totalAlbumCount` | Int | No |  **Yes**  | Total item count for the request ignoring `albumCount` limits |
 | `album` | Array of [`AlbumID3`](../albumid3) | No |     |  Matching albums  |
+| `totalSongCount` | Int | No |  **Yes**  | Total item count for the request ignoring `songCount` limits |
 | `song` | Array of [`Child`](../child) | No |     | Matching songs |
