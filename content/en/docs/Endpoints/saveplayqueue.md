@@ -1,6 +1,8 @@
 ---
 title: "savePlayQueue"
-linkTitle: "savePlayQueue"
+linkTitle: "savePlayQueue [OS]"
+opensubsonic:
+- Change
 categories:
 - Bookmarks
 description: >
@@ -15,7 +17,7 @@ Saves the state of the play queue for this user. This includes the tracks in the
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `id` | **Yes** |  |   | ID of a song in the play queue. Use one `id` parameter for each song in the play queue. |
+| `id` | No |  |   | ID of a song in the play queue. Use one `id` parameter for each song in the play queue. |
 | `current` | No  |   |  | The ID of the current playing song. |
 | `position` | No  |  |   | The position in milliseconds within the currently playing song. |
 
@@ -49,3 +51,8 @@ An empty [`subsonic-response`](../../responses/subsonic-response) element on suc
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+**Note** `id` is optional. Send a call without any parameters to clear the currently saved queue.
+{{< /alert >}}
+
