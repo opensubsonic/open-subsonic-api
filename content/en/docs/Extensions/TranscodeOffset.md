@@ -18,11 +18,3 @@ When a server support this extension this means that it support the `timeOffset`
 You can now start transcoding at any position in the media, allowing seeking when transcoding on the clients!
 
 This extension requires the support of the `timeOffset` parameter of the [`stream`](../../endpoints/stream) endpoint for music.
-
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-{{< /alert >}}

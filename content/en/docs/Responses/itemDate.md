@@ -32,12 +32,3 @@ Does not exist.
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type.
 {{< /alert >}}
-
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-
-{{< /alert >}}
