@@ -1,6 +1,6 @@
 ---
 title: "similarSongs"
-linkTitle: "similarSongs [OS]"
+linkTitle: "similarSongs"
 description: >
   SimilarSongs list.
 ---
@@ -9,7 +9,6 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-  "totalCount": 2,
   "song": [
     {
       "id": "300000060",
@@ -132,5 +131,4 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `totalCount` | Int | No |  **Yes**  | Total item count for the request ignoring `size` and `offset` limits. Use `-1` to denote unsupported, unknown or uncounted values. |
 | `song` | Array of [`Child`](../child) | No |   | List of songs |

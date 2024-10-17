@@ -1,6 +1,6 @@
 ---
 title: "getTopSongs"
-linkTitle: "getTopSongs [OS]"
+linkTitle: "getTopSongs"
 categories:
 - Browsing
 description: >
@@ -37,7 +37,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true
     "topSongs": {
-      "totalCount": 2,
       "song": [
         {
           "id": "300000060",
