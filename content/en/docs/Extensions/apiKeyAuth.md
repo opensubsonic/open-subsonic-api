@@ -43,4 +43,4 @@ In both cases, it is recommended that the server provide a meaningful url (confi
 
 ## New error codes
 
-This extension introduces two new errors `42` and `43`, and adds a new field `helpUrl`. See [error](../../responses/error)
+This extension introduces three new errors `42`, `43` and `44`, and adds a new field `helpUrl`. See [error](../../responses/error)

@@ -68,7 +68,7 @@ See [API Key authentication](../extensions/apikeyauth)
 
 For servers that implement [API Key authentication](../extensions/apikeyauth), the recommended authentication is to use an API key.
 This is a token generated from the Subsonic server.
-It may either be passed in as `apiKey=<API key>`, or as a header `Authorization: Bearer <API key>`.
+It must be passed in in as `apiKey=<API key>`.
 Note that `u`/`p` may still be used by servers which are backed by LDAP/PAM/other authentication.
 
 {{< alert color="primary" >}} `http://your-server/rest/ping.view?u=joe&apiKey=43504ab81e2bfae1a7691fe3fc738fdf55ada2757e36f14bcf13d&v=1.16.1&c=AwesomeClientName&f=json` {{< /alert >}}
@@ -161,6 +161,7 @@ The following error codes are defined:
 | 41   | Token authentication not supported for LDAP users.                                                                    |
 | 42   | Password authentication not supported. Use API keys                                                                   |
 | 43   | Multiple conflicting authentication mechanisms provided                                                               |
+| 44   | Invalid API key or username                                                                                           |
 | 50   | User is not authorized for the given operation.                                                                       |
 | 60   | The trial period for the Subsonic server is over. Please upgrade to Subsonic Premium. Visit subsonic.org for details. |
 | 70   | The requested data was not found.                                                                                     |

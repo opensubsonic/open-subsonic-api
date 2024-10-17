@@ -42,6 +42,7 @@ The following error codes are defined:
 | 41   | Token authentication not supported for LDAP users.                                                                    |
 | 42   | Password authentication not supported. Use API keys                                                                   |
 | 43   | Multiple conflicting authentication mechanisms provided                                                               |
+| 44   | Invalid API key or username                                                                                           |
 | 50   | User is not authorized for the given operation.                                                                       |
 | 60   | The trial period for the Subsonic server is over. Please upgrade to Subsonic Premium. Visit subsonic.org for details. |
 | 70   | The requested data was not found.                                                                                     |
