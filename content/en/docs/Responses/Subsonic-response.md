@@ -46,18 +46,3 @@ New fields are added:
 - `serverVersion` containing the server version (Ex: 1.2.3) this is different from the `version` field that expose the Subsonic API version. Mandatory for clients to be able to detect servers updates and check again supported OpenSubsonic extensions.
 - `openSubsonic` must return true if the server support OpenSubsonic API v1
 {{< /alert >}}
-
----
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-| **Navidrome** |  | Support `type` and `serverVersion` |
-| **gonic** |  | Support `type` and `serverVersion` |
-| **Ampache** | 5.5.6 | Support `type` and `serverVersion`|
-| **Funkwhale** |  |  Support `type`, version is exposed as `funkwhaleVersion` |
-| **Astiga** |  | Expose `Astiga/production` in `serverVersion` |
-| **LMS** |  | Support `type` |
-| **Nextcloud Music / ownCloud Music** | 1.10.0 | Support `openSubsonic`, `type`, and `serverVersion` |
-{{< /alert >}}

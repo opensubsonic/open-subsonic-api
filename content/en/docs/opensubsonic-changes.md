@@ -16,19 +16,7 @@ Changes (Required or optional) related to OpenSubsonic.
 
 All endpoints or responses modified by the OpenSubsonic API will have **[OS]** indicator in the navigation menu.
 
-OpenSubsonic server support will documented by a table at the end of the corresponding page. (Ex: [search3](../endpoints/search3))
-
-{{< alert color="warning" title="OpenSubsonic server support" >}}
-
-| Server | Min vers. | Comment |
-| --- | --- | --- |
-| **Navidrome** | 0.3.0 | Support `query=""` |
-| **gonic** | 0.15.0 | Support `query=""` |
-| **Ampache** | 5.5.7 | Support `query=""` |
-| **Funkwhale** | 1.2.8 | Support not passing a query parameter. |
-| **Astiga** |  | Support `query=` |
-| **LMS** | 3.35.1 | Support `query=` |
-{{< /alert >}}
+Most servers and clients have dedicated pages to show what parts of OpenSubsonic they support. See [Overview](../)
 
 OpenSubsonic expand the original API via 3 different ways:
 
