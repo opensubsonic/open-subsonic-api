@@ -1,6 +1,6 @@
 ---
 title: "newestPodcasts"
-linkTitle: "newestPodcasts"
+linkTitle: "newestPodcasts [OS]"
 description: >
   NewestPodcasts.
 ---
@@ -17,3 +17,5 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
+| `totalCount` | Int | No |  **Yes**  | Total item count for the request ignoring `size` and `offset` limits. Use `-1` to denote unsupported, unknown or uncounted values. |
+| `episode` | Array of [`Child`](../child) | No |     | Podcast Episode |

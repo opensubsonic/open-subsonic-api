@@ -1,6 +1,6 @@
 ---
 title: "albumList"
-linkTitle: "albumList"
+linkTitle: "albumList [OS]"
 description: >
   Album list.
 ---
@@ -9,6 +9,7 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
+  "totalCount": 2,
   "album": [
     {
       "id": "200000021",
@@ -87,4 +88,5 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `album` | Array of [`Child`](../child) | No |     | Artist albums|
+| `totalCount` | Int | No | **Yes** | Total item count for the request ignoring `size` and `offset` limits. Use `-1` to denote unsupported, unknown or uncounted values. |
+| `album` | Array of [`Child`](../child) | No | | Artist albums |
