@@ -43,7 +43,7 @@ OpenSubsonic is built to be mostly optional to ease the burden on the servers wh
 To achieve this servers supporting OpenSubsonic have to support a very minimal subset of things.
 
 1. Expand the [`subsonic-response`](../responses/subsonic-response) with the new mandatory fields.
-2. Implement the [`getOpenSubsonicExtensions`](../endpoints/getopensubsonicextensions) endpoint.
+2. Implement the [`getOpenSubsonicExtensions`](../endpoints/getopensubsonicextensions) endpoint. This **must** be accessible without any authentication parameters
 3. Return error **41** ([`API Reference`](../api-reference#error-handling)) if they do not support Subsonic [1.13.0](../subsonic-versions) new authentification system while advertising a version > [1.13.0](../subsonic-versions)
 
 ## List of changes

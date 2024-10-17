@@ -16,9 +16,8 @@ description: >
 This extension requires changes to the semantics of authentication.
 Broadly, there are two general changes:
 
-1. **Required**: A redefinition of the `p` parameter to refer to ah `API key` that is **separate from** the user's server password.
-2. **Required**: The ability to generate temporary tokens, which have a **defined** set of APIs they can ccess
-3. Recommended: Deprecation of token/salt-based authentication. This allows for servers to no longer store the users' passwords in reversible ways
+1. **Required**: A new authentication mechanism: `apiKey` for query.
+2. Recommended: Deprecation of token/salt-based authentication.
 
 ### API keys
 
@@ -29,85 +28,19 @@ The format of the API key is not specified, but it **must** be of reasonable len
 Servers which implement this extension **must** provide some mechanism for viewing active API key(s) and allow for revoking API keys.
 Note that these API keys **do not** expire; as long as they are not revoked by the user, they are assumed to be valid.
 
-#### API key Restrictions
-
-When generating a API key, the an OpenSubsonic server **should** provide for two kinds of ways to limit the access of the API key: "scopes", and "music folders".
-
-Scopes are server-defined, and currently have no specification.
-Recommended scopes include the `*Role` defined for [createUser](https://opensubsonic.netlify.app/docs/endpoints/createuser/) for original Subsonic.
-
-Alternative possible scopes, that likely more align with use today.:
-
-- `admin`: scan, user management?
-- `internet radio`: creating/deleting/updating internet radio
-- `jukebox`: jukebox control
-- `media`: media (images/music/video) access
-- `podcast`: anything related to podcast admin (creating, deleting, downloading, refreshing)
-- `sharing`: sharing capability
-- `download`: ability to download files
-
-Unlike scopes, which are server-specified, music folders are well-defined.
-Specifically, limiting scope by music folder means that a client may **only** make requests to the given music folder id(s), and any responses **must** only include content from authorized music folder(s).
-
-Any request to either a restricted scope or music folder **must** return an error `50` (User is not authorized for the given operation.).
-Additionally, servers which provide the ability to restrict access by music folder **must** only return resources within those folder(s).
-
-Note that a server which seeks to implement this extension need not provide any scoping.
-These are **recommended** enhancements to provide additional security.
-
 #### Using a API key
 
-An API key may be used in two ways.
-Servers which implement this extension **must** support both methods.
-
-1. As part of an HTTP header `Authorization: Bearer <API key>`. The username **must** still be passed in as a query parameter.
-2. As a query parameter `p=?`. This **replaces** the original meaning where `p` was the user's password
-
-> **Note** that servers that implement `apiKeyAuthentication` **must only** accept API keys for `p`: if the user's password is passed in (plaintext or not), this **must** be treated as an error 40.
+An API is used as a query parameter `apiKey=<api key>`.
 
 It is **recommended** that servers which provide API-key authentication deprecate salt/token-based authentication.
 
-The username `u` **must** match the username of the API key, otherwise the server **must** respond with error code 40.
+If multiple conflicting authentication parameters are passed in, the server **must** return an error `43`, `Multiple conflicting authentication mechanisms provided`
 
-Salt-based and api-key (password-based) authentication **should not** be allowed at the same time.
+If a server deprecates salt-based authentication, it **must** return an error `41` (`Token authentication not supported for LDAP users.`).
+Similarly, if a server deprecates password-based authentication, it **must** return an error `42` (`Password authentication not supported. Use API keys`).
 
-#### Useful endpoint for clients
+In both cases, it is recommended that the server provide a meaningful url (configuration url, documentation, etc) in the `helpUrl` to help clients instruct their users how to obtain an API key.
 
-Because API key generation will vary for servers, one possible add-on would be a publicly-accessible endpoint [`keyUrl`](../../endpoints/keyurl), which would return a subsonic response which would include a url (documentation or server specific) to generate a new API key.
-The benefits of this endpoint are that the client can provide server-specific links, without having to understand the server implementation.
+## New error codes
 
-### Media API keys (temporary API keys)
-
-Media keys are API keys with a **defined** limited scope and server/client-defined expiration.
-These are particularly useful for services like Discord RPC, where **temporarily** exposing an item to the public is preferred.
-
-#### Using a media key
-
-Media keys may **only** be passed in as a query parameter, `mk=<media key>`.
-They are also only allowed on a restricted set of endpoints.
-
-##### Allowed endpoints
-
-Media keys are **must** be authorized for the following endpoints:
-
-- `/rest/getCoverArt`
-- `/rest/stream`
-
-Media keys **may** also be authorized for the following additional endpoints:
-
-- `/rest/download`
-- `/rest/getAvatar`
-- `/rest/getCaptions`
-- `/rest/getLyrics`
-- `/rest/getLyricsBySongId`
-- `/rest/hls`
-
-Media keys **must not** be authorized for any other endpoints.
-Usage of a media key on an unauthorized endpoint not listed above **must** return an error `51` - `Media key used for invalid endpoint`.
-
-## New endpoints
-
-This extension requires the following endpoints:
-
-- [`keyUrl`](../../endpoints/keyurl): Returns a URL, either specifically for the server or for general documentation, which points to how to generate a new API key
-- [`mediaKey`](../../endpoints/mediakey): Allows generation of media keys
+This extension introduces two new errors `42` and `43`, and adds a new field `helpUrl`. See [error](../../responses/error)
