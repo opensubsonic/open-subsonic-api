@@ -1,6 +1,6 @@
 ---
 title: "getAlbumList"
-linkTitle: "getAlbumList"
+linkTitle: "getAlbumList [OS]"
 categories:
 - Lists
 description: >
@@ -42,6 +42,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true
     "albumList": {
+      "totalCount": 2,
       "album": [
         {
           "id": "200000021",
