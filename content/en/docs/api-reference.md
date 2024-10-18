@@ -15,7 +15,7 @@ Please note that all methods take the following parameters:
 
 | Parameter | Req.        | OpenS. | Default | Comment                                                                                                                                                                                                                                                            |
 | --------- | ----------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `u`       | **Yes**     |        |         | The username.                                                                                                                                                                                                                                                      |
+| `u`       | **Yes**\*\* |        |         | The username.                                                                                                                                                                                                                                                      |
 | `p`       | **Yes\***   |        |         | The password, either in clear text or hex-encoded with a "enc:" prefix. Since [1.13.0](../subsonic-versions) this should only be used for testing purposes.                                                                                                        |
 | `t`       | **Yes\***   |        |         | (Since [1.13.0](../subsonic-versions)) The authentication token computed as **md5(password + salt)**. See below for details.                                                                                                                                       |
 | `s`       | **Yes\***   |        |         | (Since [1.13.0](../subsonic-versions)) A random string ("salt") used as input for computing the password hash. See below for details.                                                                                                                              |
@@ -26,7 +26,7 @@ Please note that all methods take the following parameters:
 
 \*) Either `p` or both `t` and `s` must be specified.
 
-\*\*) If `apiKey` is specified, then neither `p` nor `t`/`s` can be specified.
+\*\*) If `apiKey` is specified, then none of `p`, `t`, `s`, nor `u` can be specified.
 
 Remember to [URL encode](http://www.w3schools.com/tags/ref_urlencode.asp) the request parameters. All methods (except those that return binary data) returns XML documents conforming to the [subsonic-rest-api.xsd](../subsonic-versions) schema. The XML documents are encoded with UTF-8.
 
@@ -68,7 +68,7 @@ See [API Key authentication](../extensions/apikeyauth)
 
 For servers that implement [API Key authentication](../extensions/apikeyauth), the recommended authentication is to use an API key.
 This is a token generated from the Subsonic server.
-It must be passed in in as `apiKey=<API key>`.
+It must be passed in in as `apiKey=<API key>`, and the `u` parameter **must not be provided**.
 Note that `u`/`p` may still be used by servers which are backed by LDAP/PAM/other authentication.
 
 {{< alert color="primary" >}} `http://your-server/rest/ping.view?u=joe&apiKey=43504ab81e2bfae1a7691fe3fc738fdf55ada2757e36f14bcf13d&v=1.16.1&c=AwesomeClientName&f=json` {{< /alert >}}

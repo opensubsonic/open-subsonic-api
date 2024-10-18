@@ -30,7 +30,8 @@ Note that these API keys **do not** expire; as long as they are not revoked by t
 
 #### Using a API key
 
-An API is used as a query parameter `apiKey=<api key>`.
+An API key is used as a query parameter `apiKey=<api key>`.
+When an API key is provided, the client **must not** provide a `u` parameter; passing in `u` **must** be treated as an error `43`.
 
 It is **recommended** that servers which provide API-key authentication deprecate salt/token-based authentication.
 
