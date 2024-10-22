@@ -159,7 +159,7 @@ The following error codes are defined:
 | 30   | Incompatible Subsonic REST protocol version. Server must upgrade.                                                     |
 | 40   | Wrong username or password.                                                                                           |
 | 41   | Token authentication not supported for LDAP users.                                                                    |
-| 42   | Password authentication not supported. Use API keys                                                                   |
+| 42   | Provided authentication mechanism not supported                                                                       |
 | 43   | Multiple conflicting authentication mechanisms provided                                                               |
 | 44   | Invalid API key or username                                                                                           |
 | 50   | User is not authorized for the given operation.                                                                       |
@@ -168,7 +168,7 @@ The following error codes are defined:
 
 
 {{< alert color="warning" title="OpenSubsonic" >}}
-Servers must return error **41** if they do not support the token authentification, **42** if they do not support encoded password authentication, and **43** if multiple conflicting authentication parameters are passed in at the same time.
+Servers must return error **42** if they do not support a specific authentication mechanism (password-based and/or salt/token-based), and **43** if multiple conflicting authentication parameters are passed in at the same time.
 
 New fields are added, see [`error`](../responses/error)
 {{< /alert >}}

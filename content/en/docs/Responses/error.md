@@ -40,7 +40,7 @@ The following error codes are defined:
 | 30   | Incompatible Subsonic REST protocol version. Server must upgrade.                                                     |
 | 40   | Wrong username or password.                                                                                           |
 | 41   | Token authentication not supported for LDAP users.                                                                    |
-| 42   | Password authentication not supported. Use API keys                                                                   |
+| 42   | Provided authentication mechanism not supported                                                                       |
 | 43   | Multiple conflicting authentication mechanisms provided                                                               |
 | 44   | Invalid API key or username                                                                                           |
 | 50   | User is not authorized for the given operation.                                                                       |

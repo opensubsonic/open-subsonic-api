@@ -33,12 +33,11 @@ Note that these API keys **do not** expire; as long as they are not revoked by t
 An API key is used as a query parameter `apiKey=<api key>`.
 When an API key is provided, the client **must not** provide a `u` parameter; passing in `u` **must** be treated as an error `43`.
 
-It is **recommended** that servers which provide API-key authentication deprecate salt/token-based authentication.
+It is **recommended** that servers which provide API-key authentication no longer support salt/token-based authentication.
 
 If multiple conflicting authentication parameters are passed in, the server **must** return an error `43`, `Multiple conflicting authentication mechanisms provided`
 
-If a server deprecates salt-based authentication, it **must** return an error `41` (`Token authentication not supported for LDAP users.`).
-Similarly, if a server deprecates password-based authentication, it **must** return an error `42` (`Password authentication not supported. Use API keys`).
+If a server removes support for for any particular authentication mechanism, it **must** return an error `42` (`Provided authentication mechanism not supported`).
 
 In both cases, it is recommended that the server provide a meaningful url (configuration url, documentation, etc) in the `helpUrl` to help clients instruct their users how to obtain an API key.
 
