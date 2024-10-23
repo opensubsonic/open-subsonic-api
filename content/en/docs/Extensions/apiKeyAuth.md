@@ -37,7 +37,9 @@ It is **recommended** that servers which provide API-key authentication no longe
 
 If multiple conflicting authentication parameters are passed in, the server **must** return an error `43`, `Multiple conflicting authentication mechanisms provided`
 
-If a server removes support for for any particular authentication mechanism, it **must** return an error `42` (`Provided authentication mechanism not supported`).
+If a server removes support for token-based authentication, it **must** return error `41` (`Token authentication not supported for LDAP users.`).
+
+If a server removes support for for any other particular authentication mechanism, it **must** return an error `42` (`Provided authentication mechanism not supported`).
 
 In both cases, it is recommended that the server provide a meaningful url (configuration url, documentation, etc) in the `helpUrl` to help clients instruct their users how to obtain an API key.
 
