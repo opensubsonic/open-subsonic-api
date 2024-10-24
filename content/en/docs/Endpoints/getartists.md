@@ -34,7 +34,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonic": true
+    "openSubsonic": true,
     "artists": {
       "ignoredArticles": "The An A Die Das Ein Eine Les Le La",
       "index": [
@@ -116,4 +116,4 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `artists` | [`artists`](../../responses/artists) | **Yes** |   | The artist list |
+| `artists` | [`artists`](../../responses/artistsid3) | **Yes** |   | The artist list |
