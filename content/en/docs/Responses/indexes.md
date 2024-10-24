@@ -213,4 +213,4 @@ description: >
 | `lastModified` | `long` | **Yes** |   | Last time the index was modified in milliseconds after January 1, 1970 UTC |
 | `shortcut` | Array of [`Artist`](../artist) | No |     | Shortcut |
 | `child` | Array of [`Child`](../child) | No |     | Array of children|
-| `index` | Array of [`Index`](../indexid3) | No |   | Indexed artists|
+| `index` | Array of [`Index`](../index_) | No |   | Indexed artists|
