@@ -1,6 +1,6 @@
 ---
-title: "IndexID3"
-linkTitle: "IndexID3"
+title: "Index"
+linkTitle: "Index"
 description: >
   An indexed artist list.
 ---
@@ -50,4 +50,4 @@ description: >
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `name` | `string` | **Yes** |   | Index name |
-| `artist` | Array of [`ArtistID3`](../artistid3) | **Yes** |   | The artist name. |
+| `artist` | Array of [`Artist`](../artist) | **Yes** |   | Artist list |
