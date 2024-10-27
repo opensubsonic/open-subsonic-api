@@ -35,7 +35,7 @@ Clients should treat `xxx` as not having a specified language (equivalent to the
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?&id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -110,6 +110,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
       <line>Grating me</line>
       <line>And twisting me around...</line>
     </structuredLyrics>
+  </lyricsList>
 </subsonic-response>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}

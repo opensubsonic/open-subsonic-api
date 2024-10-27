@@ -17,6 +17,8 @@ List the OpenSubsonic extensions supported by this server.
 
 Takes no extra parameters.
 
+**Note**: Unlike all other APIs `getOpenSubsonicExtensions` **must** be publicly accessible.
+
 ### Example
 
 {{< alert color="primary" >}} `http://your-server/rest/getOpenSubsonicExtensions.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
