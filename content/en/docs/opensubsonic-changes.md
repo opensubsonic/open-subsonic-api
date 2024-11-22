@@ -42,7 +42,7 @@ To achieve this servers supporting OpenSubsonic have to support a very minimal s
 
 ### Non breaking changes
 
-[List of non breaking changes](/opensubsonic/changes/)
+[List of non breaking changes](/opensubsonic/change/)
 
 ### Additions
 
