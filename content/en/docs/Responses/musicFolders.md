@@ -39,4 +39,4 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `musicFolder` | Array of [`musicFolder`](../musicfolder) | **Yes** |   | The folders|
+| `musicFolder` | Array of [`musicFolder`](../musicfolder) | No |   | The folders|
