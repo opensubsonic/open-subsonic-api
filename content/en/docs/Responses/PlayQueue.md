@@ -83,9 +83,14 @@ description: >
 {{< /tab >}}
 {{< /tabpane >}}
 
+{{< alert color="primary" title="OpenSubsonic" >}}
+Errata: In the original spec, `current` is required to be an `int`.
+However, as `child` ids are strings, this is updated to note that the id should be a string to be consistent.
+{{< /alert >}}
+
 | Field       | Type                         | Req.    | OpenS. | Details                                             |
 | ----------- | ---------------------------- | ------- | ------ | --------------------------------------------------- |
-| `current`   | `int`                        | No      |        | ID of currently playing track                       |
+| `current`   | `string`                     | No      |        | ID of currently playing track                       |
 | `position`  | `long`                       | No      |        | Position in milliseconds of currently playing track |
 | `username`  | `string`                     | **Yes** |        | The user this queue belongs to                      |
 | `changed`   | `string`                     | **Yes** |        | Date modified [ISO 8601]                            |
