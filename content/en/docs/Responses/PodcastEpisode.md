@@ -62,13 +62,13 @@ description: >
 {{< /tabpane >}}
 
 {{< alert color="primary" title="OpenSubsonic" >}}
-`NowPlayingEntry` extends [`Child`](../child) (See [`Child`](../child) documentation for the corresponding fields)
+`PodcastEntry` extends [`Child`](../child) (See [`Child`](../child) documentation for the corresponding fields)
 {{< /alert >}}
 
 | Field         | Type                              | Req.    | OpenS. | Details                                   |
 | ------------- | ----------------------------------| ------- | ------ | ----------------------------------------- |
 | `streamId`    | `string`                          | No      |        | ID used for streaming podcast             |
 | `channelId`   | `string`                          | **Yes** |        | ID of the podcast channel                 |
-| `description` | `boolean`                         | No      |        | Episode description                       |
+| `description` | `string`                          | No      |        | Episode description                       |
 | `status`      | [PodcastStatus](../podcaststatus) | **Yes** |        | Podcast status                            |
 | `publishDate` | `string`                          | No      |        | Date the episode was published [ISO 8601] |

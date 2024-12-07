@@ -87,4 +87,4 @@ description: >
 | `playing`      | `boolean`                    | **Yes** |        | Whether the queue is currently playing       |
 | `gain`         | `float`                      | **Yes** |        | Volume, in a range of [0.0, 1.0]             |
 | `position`     | `int`                        | No      |        | The current position of the track in seconds |
-| `child`        | Array of [`Child`](../child) | No      |        | The songs currently enqueued in the jukebox  |
+| `entry`        | Array of [`Child`](../child) | No      |        | The songs currently enqueued in the jukebox  |
