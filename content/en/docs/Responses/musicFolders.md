@@ -11,11 +11,11 @@ description: >
 {
   "musicFolder": [
     {
-      "id": "1",
+      "id": 1,
       "name": "music"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "upload"
     }
   ]
@@ -25,11 +25,11 @@ description: >
 {
   "musicFolder": [
     {
-      "id": "1",
+      "id": 1,
       "name": "music"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "upload"
     }
   ]
