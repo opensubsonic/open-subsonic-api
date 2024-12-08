@@ -37,8 +37,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "openSubsonic": true,
     "user": {
       "folder": [
-          "1",
-          "3"
+          1,
+          3
       ],
       "username": "sindre",
       "email": "sindre@activeobjects.no",
@@ -65,8 +65,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "user": {
       "folder": [
-          "1",
-          "3"
+          1,
+          3
       ],
       "username": "sindre",
       "email": "sindre@activeobjects.no",
