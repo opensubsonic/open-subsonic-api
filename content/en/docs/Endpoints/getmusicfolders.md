@@ -36,11 +36,11 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "musicFolders": {
       "musicFolder": [
         {
-          "id": "1",
+          "id": 1,
           "name": "music"
         },
         {
-          "id": "4",
+          "id": 4,
           "name": "upload"
         }
       ]
@@ -56,11 +56,11 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "musicFolders": {
       "musicFolder": [
         {
-          "id": "1",
+          "id": 1,
           "name": "music"
         },
         {
-          "id": "4",
+          "id": 4,
           "name": "upload"
         }
       ]
