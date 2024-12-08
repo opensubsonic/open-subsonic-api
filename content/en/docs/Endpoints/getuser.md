@@ -28,10 +28,63 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
-// TODO
+{
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonic": true,
+    "user": {
+      "folder": [
+          1,
+          3
+      ],
+      "username": "sindre",
+      "email": "sindre@activeobjects.no",
+      "scrobblingEnabled": "true",
+      "adminRole": "false",
+      "settingsRole": "true",
+      "downloadRole": "true",
+      "uploadRole": "false",
+      "playlistRole": "true",
+      "coverArtRole": "true",
+      "commentRole": "true",
+      "podcastRole": "true",
+      "streamRole": "true",
+      "jukeboxRole": "true",
+      "shareRole": "false"
+    }
+  }
+}
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
-// TODO
+{
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "user": {
+      "folder": [
+          1,
+          3
+      ],
+      "username": "sindre",
+      "email": "sindre@activeobjects.no",
+      "scrobblingEnabled": "true",
+      "adminRole": "false",
+      "settingsRole": "true",
+      "downloadRole": "true",
+      "uploadRole": "false",
+      "playlistRole": "true",
+      "coverArtRole": "true",
+      "commentRole": "true",
+      "podcastRole": "true",
+      "streamRole": "true",
+      "jukeboxRole": "true",
+      "shareRole": "false"
+    }
+  }
+}
 {{< /tab >}}
 {{< /tabpane >}}
 

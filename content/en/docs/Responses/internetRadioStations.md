@@ -59,4 +59,4 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `internetRadioStation` | Array of [`internetRadioStation`](../internetradiostation) | **Yes** |   | A list of internetRadioStation |
+| `internetRadioStation` | Array of [`internetRadioStation`](../internetradiostation) | No |   | A list of internetRadioStation |

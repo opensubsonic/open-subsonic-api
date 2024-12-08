@@ -34,7 +34,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonic": true
+    "openSubsonic": true,
     "playlist": {
       "id": "800000075",
       "name": "testcreate",

@@ -32,15 +32,15 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonic": true
+    "openSubsonic": true,
     "musicFolders": {
       "musicFolder": [
         {
-          "id": "1",
+          "id": 1,
           "name": "music"
         },
         {
-          "id": "4",
+          "id": 4,
           "name": "upload"
         }
       ]
@@ -56,11 +56,11 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "musicFolders": {
       "musicFolder": [
         {
-          "id": "1",
+          "id": 1,
           "name": "music"
         },
         {
-          "id": "4",
+          "id": 4,
           "name": "upload"
         }
       ]
