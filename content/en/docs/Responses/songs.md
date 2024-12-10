@@ -1,8 +1,8 @@
 ---
-title: "randomSongs"
-linkTitle: "randomSongs"
+title: "songs"
+linkTitle: "songs"
 description: >
-  RandomSongs list.
+  Songs list.
 ---
 
 {{< tabpane persistLang=false >}}

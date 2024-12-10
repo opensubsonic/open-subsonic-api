@@ -147,4 +147,4 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `share` | Array of [`share`](../share) | **Yes** |   | A list of share |
+| `share` | Array of [`share`](../share) | No |   | A list of share |

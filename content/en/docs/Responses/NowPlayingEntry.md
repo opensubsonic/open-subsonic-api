@@ -80,6 +80,6 @@ description: >
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `username` | `string` | **Yes** |     | The username |
-| `minutesAgo` | `string` | Int |     | Last update |
-| `playerId` | `boolean` |Int |     | Player Id |
+| `minutesAgo` | `string` | **Yes** |     | Last update |
+| `playerId` | `boolean` | **Yes** |     | Player Id |
 | `playerName` | `string` | No |     | Player name |

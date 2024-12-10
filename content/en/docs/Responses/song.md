@@ -15,5 +15,5 @@ description: >
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field |  Type | Req. | OpenS. | Details |
-| --- | --- | --- | --- | --- |
+| Field | Type | Req. | OpenS. | Details |
+| ----- | ---- | ---- | ------ | ------- |

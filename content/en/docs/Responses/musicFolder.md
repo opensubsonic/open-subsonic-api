@@ -9,13 +9,13 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-  "id": "4",
+  "id": 4,
   "name": "upload"
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
 {
-  "id": "4",
+  "id": 4,
   "name": "upload"
 }
 {{< /tab >}}
@@ -23,5 +23,5 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `id` | `string` | **Yes** |     | The id |
+| `id` | `int` | **Yes** |     | The id |
 | `name` | `string` | No |     | The folder name |
