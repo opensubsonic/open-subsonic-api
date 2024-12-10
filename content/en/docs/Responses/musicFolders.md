@@ -11,11 +11,11 @@ description: >
 {
   "musicFolder": [
     {
-      "id": "1",
+      "id": 1,
       "name": "music"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "upload"
     }
   ]
@@ -25,11 +25,11 @@ description: >
 {
   "musicFolder": [
     {
-      "id": "1",
+      "id": 1,
       "name": "music"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "upload"
     }
   ]
@@ -39,4 +39,4 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `musicFolder` | Array of [`musicFolder`](../musicfolder) | **Yes** |   | The folders|
+| `musicFolder` | Array of [`musicFolder`](../musicfolder) | No |   | The folders|

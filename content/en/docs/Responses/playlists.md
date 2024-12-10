@@ -62,4 +62,4 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `playlist` | Array of [`playlist`](../playlist) | **Yes** |     | A list of playlist |
+| `playlist` | Array of [`playlist`](../playlist) | No |     | A list of playlist |
