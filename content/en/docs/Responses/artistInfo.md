@@ -9,7 +9,7 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-  "biography": {},
+  "biography": "Empty biography",
   "musicBrainzId": "1",
   "smallImageUrl": "http://localhost:8989/play/art/f20070e8e11611cc53542a38801d60fa/artist/2/thumb34.jpg",
   "mediumImageUrl": "http://localhost:8989/play/art/2b9b6c057cd4bf21089ce7572e7792b6/artist/2/thumb64.jpg",
@@ -18,7 +18,7 @@ description: >
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
 {
-  "biography": {},
+  "biography": "Empty biography",
   "musicBrainzId": "1",
   "smallImageUrl": "http://localhost:8989/play/art/f20070e8e11611cc53542a38801d60fa/artist/2/thumb34.jpg",
   "mediumImageUrl": "http://localhost:8989/play/art/2b9b6c057cd4bf21089ce7572e7792b6/artist/2/thumb64.jpg",

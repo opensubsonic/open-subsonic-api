@@ -50,4 +50,4 @@ description: >
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `name` | `string` | **Yes** |   | Index name |
-| `artist` | Array of [`Artist`](../artist) | **Yes** |   | Artist list |
+| `artist` | Array of [`Artist`](../artist) | No |   | Artist list |
