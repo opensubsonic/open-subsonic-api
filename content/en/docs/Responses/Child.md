@@ -109,6 +109,7 @@ description: >
         "slow",
         "cool"
     ],
+    "explicitStatus": "explicit",
     "replayGain": {
         "trackGain": 0.1,
         "albumGain": 1.1,
@@ -201,6 +202,7 @@ description: >
 | `displayComposer` | `string` | No |  **Yes**   | The single value display composer. |
 | `moods` | Array of `string` | No | **Yes**    | The list of all moods of the song. |
 | `replayGain` | [`ReplayGain`](../replaygain) | No | **Yes**    | The replaygain data of the song. |
+| `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit", "clean" or "". (For songs extracted from tags "ITUNESADVISORY": 1 = explicit, 2 = clean, MP4 "rtng": 1 or 4 = explicit, 2 = clean. See [`albumID3`](../albumid3) for albums) |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
@@ -219,6 +221,7 @@ New fields are added:
 - `displayComposer`
 - `moods`
 - `replayGain`
+- `explicitStatus`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 
