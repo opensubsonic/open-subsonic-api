@@ -70,6 +70,7 @@ description: >
         "day": 10
     },
     "isCompilation": false,
+    "explicitStatus": "explicit",
     "discTitles": [
         {
             "disc": 0,
@@ -104,6 +105,7 @@ description: >
             "size": 2811819,
             "discNumber": 1,
             "suffix": "mp3",
+            "explicitStatus": "explicit",
             "contentType": "audio/mpeg",
             "path": "user/Comfort Fit/Forget And Remember/1 - Can I Help U?.mp3"
         },
@@ -130,6 +132,7 @@ description: >
             "size": 10715592,
             "discNumber": 1,
             "suffix": "mp3",
+            "explicitStatus": "clean",
             "contentType": "audio/mpeg",
             "path": "user/Comfort Fit/Forget And Remember/2 - Planetary Picknick.mp3"
         }
@@ -238,6 +241,7 @@ description: >
 | `originalReleaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the album was originally released. |
 | `releaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the specific edition of the album was released. *Note:* for files using ID3 tags, releaseDate should generally be read from the **TDRL** tag. Servers that use a different source for this field should document the behavior. |
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation.|
+| `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit" if at least one song is explicit, "clean" if no song is explicit and at least one is "clean" else "". |
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 | `song` | Array of [`Child`](../child) | No |     | The list of songs |
 
@@ -257,6 +261,7 @@ New fields are added:
 - `originalReleaseDate`
 - `isCompilation`
 - `discTitles`
+- `explicitStatus`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 
