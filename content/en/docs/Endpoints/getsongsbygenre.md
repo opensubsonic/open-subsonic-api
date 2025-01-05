@@ -38,7 +38,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
-    "randomSongs": {
+    "songsByGenre": {
       "song": [
         {
           "id": "300000060",
@@ -78,7 +78,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
   "subsonic-response": {
     "status": "ok",
     "version": "1.16.1",
-    "randomSongs": {
+    "songsByGenre": {
       "song": [
         {
           "id": "300000060",
