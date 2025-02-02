@@ -19,7 +19,7 @@ Does not exist.
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `version` | `string` | **Yes** |  **Yes**   | The album version name (Remastered, Anniversary Box Set, ...). |
+| `version` | `string` | **Yes** |  **Yes**   | The album version name ("Remastered", "Anniversary Box Set", or ""). |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type.
