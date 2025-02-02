@@ -13,6 +13,7 @@ description: >
 {
     "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
     "name": "8-bit lagerfeuer",
+    "version": "Deluxe Edition",
     "artist": "pornophonique",
     "year": 2007,
     "coverArt": "al-ad0f112b6dcf83de5e9cae85d07f0d35_640a93a8",
@@ -50,9 +51,6 @@ description: >
         }
     ],
     "displayArtist": "Artist 1 feat. Artist 2",
-    "releaseGroup": {
-        "version": "Deluxe Edition"
-    },
     "releaseTypes": [
         "Album",
         "Remixes"
@@ -108,6 +106,7 @@ description: >
 | --- | --- | --- | --- | --- |
 | `id` | `string` | **Yes** |     | The id of the album |
 | `name` | `string` | **Yes** |     | The album name. |
+| `version` | `string` | No | **Yes** | The album version name (Remastered, Anniversary Box Set, ...). |
 | `artist` | `string` | No |     | Artist name.  |
 | `artistId` | `string` | No |    | The id of the artist |
 | `coverArt` | `string` | No |     | A covertArt id.  |
@@ -125,7 +124,6 @@ description: >
 | `genres` | Array of [`ItemGenre`](../itemgenre) | No | **Yes**    | The list of all genres of the album. |
 | `artists` | Array of [`ArtistID3`](../artistid3) | No | **Yes**    | The list of all album artists of the album. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default)|
 | `displayArtist` | `string` | No |  **Yes**   | The single value display artist. |
-| `releaseGroup` | [`ReleaseGroup`] | No | **Yes** | The release group that this edition of the album belongs to. |
 | `releaseTypes` | Array of `string` | No | **Yes**    | The types of this album release. (Album, Compilation, EP, Remix, ...).|
 | `moods` | Array of `string` | No | **Yes**    | The list of all moods of the album. |
 | `sortName` | `string` | No |  **Yes**   | The album sort name. |
@@ -138,6 +136,7 @@ description: >
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
 
+- `version`
 - `played`
 - `userRating`
 - `recordLabels`
@@ -145,7 +144,6 @@ New fields are added:
 - `genres`
 - `artists`
 - `displayArtist`
-- `releaseGroup`
 - `releaseType`
 - `moods`
 - `sortName`
