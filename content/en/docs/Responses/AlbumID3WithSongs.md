@@ -219,7 +219,7 @@ description: >
 | --- | --- | --- | --- | --- |
 | `id` | `string` | **Yes** |     | The id of the album |
 | `name` | `string` | **Yes** |     | The album name. |
-| `version` | `string` | **Yes** |     | The album version name (Remastered, Anniversary Box Set, ...). |
+| `version` | `string` | No | **Yes** | The album version name (Remastered, Anniversary Box Set, ...). |
 | `artist` | `string` | No |     | Artist name.  |
 | `artistId` | `string` | No |    | The id of the artist |
 | `coverArt` | `string` | No |     | A covertArt id.  |
