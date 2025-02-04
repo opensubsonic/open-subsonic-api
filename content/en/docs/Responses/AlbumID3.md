@@ -80,6 +80,15 @@ description: >
             "disc": 2,
             "title": "Disc 1 title"
         }
+    ],
+    "contributors": [
+        {
+            "role": "composer",
+            "artist": {
+                "id": "ar-3",
+                "name": "Artist 3"
+            }
+        }
     ]
 }
 {{< /tab >}}
@@ -130,6 +139,8 @@ description: >
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation. |
 | `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit" if at least one song is explicit, "clean" if no song is explicit and at least one is "clean" else "". |
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
+| `contributors` | Array of [`Contributor`](../contributor) | No | **Yes**  | The list of all contributor artists of the album. |
+
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
@@ -148,6 +159,7 @@ New fields are added:
 - `isCompilation`
 - `discTitles`
 - `explicitStatus`
+- `contributors`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 
