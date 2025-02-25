@@ -13,6 +13,7 @@ description: >
 {
     "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
     "name": "8-bit lagerfeuer",
+    "version": "Deluxe Edition",
     "artist": "pornophonique",
     "year": 2007,
     "coverArt": "al-ad0f112b6dcf83de5e9cae85d07f0d35_640a93a8",
@@ -105,6 +106,7 @@ description: >
 | --- | --- | --- | --- | --- |
 | `id` | `string` | **Yes** |     | The id of the album |
 | `name` | `string` | **Yes** |     | The album name. |
+| `version` | `string` | No | **Yes** | The album version name (Remastered, Anniversary Box Set, ...). |
 | `artist` | `string` | No |     | Artist name.  |
 | `artistId` | `string` | No |    | The id of the artist |
 | `coverArt` | `string` | No |     | A covertArt id.  |
@@ -134,6 +136,7 @@ description: >
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
 
+- `version`
 - `played`
 - `userRating`
 - `recordLabels`
