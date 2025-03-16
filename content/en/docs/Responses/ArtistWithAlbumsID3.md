@@ -84,7 +84,7 @@ description: >
 
 | Field            | Type                               | Req.    | OpenS.  | Details                                                |
 | ---------------- | ---------------------------------- | ------- | ------- | ------------------------------------------------------ |
-| `id`             | `string`                           | **Yes** |         | The id of the arist                                    |
+| `id`             | `string`                           | **Yes** |         | The id of the artist                                   |
 | `name`           | `string`                           | **Yes** |         | The artist name.                                       |
 | `coverArt`       | `string`                           | No      |         | A covertArt id.                                        |
 | `artistImageUrl` | `string`                           | No      |         | An url to an external image source.                    |
@@ -93,7 +93,7 @@ description: >
 | `album`          | Array of [`AlbumID3`](../albumid3) | No      |         | Artist albums                                          |
 | `musicBrainzId`  | `string`                           | No      | **Yes** | The artist MusicBrainzID.                              |
 | `sortName`       | `string`                           | No      | **Yes** | The artist sort name.                                  |
-| `roles`          | Array of `string`                  | No      | **Yes** | The list of all roles this artist have in the library. |
+| `roles`          | Array of `string`                  | No      | **Yes** | The list of all roles this artist has in the library.  |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:

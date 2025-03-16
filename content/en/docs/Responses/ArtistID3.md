@@ -11,20 +11,20 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-    "id": "37ec820ca7193e17040c98f7da7c4b51",
-    "name": "2 Mello",
-    "coverArt": "ar-37ec820ca7193e17040c98f7da7c4b51_0",
-    "albumCount": 1,
-    "userRating": 5,
-    "artistImageUrl": "https://demo.org/image.jpg",
-    "starred": "2017-04-11T10:42:50.842Z",
-    "musicBrainzId": "189002e7-3285-4e2e-92a3-7f6c30d407a2",
-    "sortName": "Mello (2)",
-    "roles": [
-        "artist",
-        "albumartist",
-        "composer"
-    ]
+  "id": "37ec820ca7193e17040c98f7da7c4b51",
+  "name": "2 Mello",
+  "coverArt": "ar-37ec820ca7193e17040c98f7da7c4b51_0",
+  "albumCount": 1,
+  "userRating": 5,
+  "artistImageUrl": "https://demo.org/image.jpg",
+  "starred": "2017-04-11T10:42:50.842Z",
+  "musicBrainzId": "189002e7-3285-4e2e-92a3-7f6c30d407a2",
+  "sortName": "Mello (2)",
+  "roles": [
+    "artist",
+    "albumartist",
+    "composer"
+  ]
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
@@ -42,7 +42,7 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `id` | `string` | **Yes** |     | The id of the arist |
+| `id` | `string` | **Yes** |     | The id of the artist |
 | `name` | `string` | **Yes** |     | The artist name. |
 | `coverArt` | `string` | No |     | A covertArt id.  |
 | `artistImageUrl` | `string` | No  |   | An url to an external image source. |
@@ -50,7 +50,7 @@ description: >
 | `starred` | `string` | No |     | Date the artist was starred. [ISO 8601]|
 | `musicBrainzId` | `string` | No |  **Yes**   | The artist MusicBrainzID. |
 | `sortName` | `string` | No |  **Yes**   | The artist sort name. |
-| `roles` | Array of `string` | No | **Yes**    | The list of all roles this artist have in the library. |
+| `roles` | Array of `string` | No | **Yes**    | The list of all roles this artist has in the library. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
