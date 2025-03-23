@@ -41,7 +41,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "id": "100000002",
           "name": "Synthetic",
           "coverArt": "ar-100000002",
-          "albumCount": 1,
           "starred": "2021-02-22T05:54:18Z"
         }
       ],
@@ -109,7 +108,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "id": "100000002",
           "name": "Synthetic",
           "coverArt": "ar-100000002",
-          "albumCount": 1,
           "starred": "2021-02-22T05:54:18Z"
         }
       ],

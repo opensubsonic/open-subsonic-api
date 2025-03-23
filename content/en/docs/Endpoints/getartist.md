@@ -36,11 +36,20 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "artist": {
-      "id": "100000002",
-      "name": "Synthetic",
-      "coverArt": "ar-100000002",
+      "id": "37ec820ca7193e17040c98f7da7c4b51",
+      "name": "2 Mello",
+      "coverArt": "ar-37ec820ca7193e17040c98f7da7c4b51_0",
       "albumCount": 1,
-      "starred": "2021-02-22T05:54:18Z",
+      "userRating": 5,
+      "artistImageUrl": "https://demo.org/image.jpg",
+      "starred": "2017-04-11T10:42:50.842Z",
+      "musicBrainzId": "189002e7-3285-4e2e-92a3-7f6c30d407a2",
+      "sortName": "Mello (2)",
+      "roles": [
+        "artist",
+        "albumartist",
+        "composer"
+      ],
       "album": [
         {
           "id": "200000002",
@@ -73,11 +82,13 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "status": "ok",
     "version": "1.16.1",
     "artist": {
-      "id": "100000002",
-      "name": "Synthetic",
-      "coverArt": "ar-100000002",
+      "id": "37ec820ca7193e17040c98f7da7c4b51",
+      "name": "2 Mello",
+      "coverArt": "ar-37ec820ca7193e17040c98f7da7c4b51_0",
       "albumCount": 1,
-      "starred": "2021-02-22T05:54:18Z",
+      "userRating": 5,
+      "artistImageUrl": "https://demo.org/image.jpg",
+      "starred": "2017-04-11T10:42:50.842Z",
       "album": [
         {
           "id": "200000002",
@@ -108,4 +119,4 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `artist` | [`artist`](../../responses/artist) | **Yes** |     | The artist |
+| `artist` | [`artist`](../../responses/artistwithalbumsid3) | **Yes** |     | The artist |
