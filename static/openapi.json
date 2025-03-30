@@ -2792,14 +2792,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/responses/BinaryResponse"
-                                }
-                            }
-                        }
+                        "$ref": "#/components/responses/BinaryResponse"
                     }
                 },
                 "externalDocs": {
