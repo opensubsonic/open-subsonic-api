@@ -8643,9 +8643,9 @@
                         "properties": {
                             "status": {
                                 "type": "string",
-                                "description": "The status of the request. [Ex: success]",
+                                "description": "The command result. `ok`",
                                 "enum": [
-                                    "success"
+                                    "ok"
                                 ]
                             }
                         },
@@ -8676,7 +8676,7 @@
                         "properties": {
                             "status": {
                                 "type": "string",
-                                "description": "The status of the request. [Ex: failed]",
+                                "description": "The command result. `failed`",
                                 "enum": [
                                     "failed"
                                 ]
