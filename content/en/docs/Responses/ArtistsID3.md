@@ -82,4 +82,4 @@ description: >
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `ignoredArticles` | `string` | **Yes** |   | List of ignored articles space separated |
-| `index` | Array of [`IndexID3`](../indexid3) | **Yes** |   | The artist name. |
+| `index` | Array of [`IndexID3`](../indexid3) | No |   | Index list |

@@ -38,7 +38,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonic": true
+    "openSubsonic": true,
     "randomSongs": {
       "song": [
         {
@@ -170,4 +170,4 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `randomSongs` | [`randomSongs`](../../responses/randomsongs)| **Yes** |   | The random songs list |
+| `randomSongs` | [`songs`](../../responses/songs)| **Yes** |   | The random songs list |

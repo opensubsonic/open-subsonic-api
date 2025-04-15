@@ -13,6 +13,7 @@ description: >
 {
     "id": "ad0f112b6dcf83de5e9cae85d07f0d35",
     "name": "8-bit lagerfeuer",
+    "version": "Deluxe Edition",
     "artist": "pornophonique",
     "year": 2007,
     "coverArt": "al-ad0f112b6dcf83de5e9cae85d07f0d35_640a93a8",
@@ -70,6 +71,7 @@ description: >
         "day": 10
     },
     "isCompilation": false,
+    "explicitStatus": "explicit",
     "discTitles": [
         {
             "disc": 0,
@@ -104,6 +106,7 @@ description: >
 | --- | --- | --- | --- | --- |
 | `id` | `string` | **Yes** |     | The id of the album |
 | `name` | `string` | **Yes** |     | The album name. |
+| `version` | `string` | No | **Yes** | The album version name (Remastered, Anniversary Box Set, ...). |
 | `artist` | `string` | No |     | Artist name.  |
 | `artistId` | `string` | No |    | The id of the artist |
 | `coverArt` | `string` | No |     | A covertArt id.  |
@@ -127,11 +130,13 @@ description: >
 | `originalReleaseDate` | [`ItemDate`](../itemdate) | No |   **Yes**   | Date the album was originally released. |
 | `releaseDate` | [`ItemDate`](../itemdate)  | No |   **Yes**   | Date the specific edition of the album was released. *Note:* for files using ID3 tags, releaseDate should generally be read from the **TDRL** tag. Servers that use a different source for this field should document the behavior. |
 | `isCompilation` | `boolean` | No |  **Yes**    | True if the album is a compilation. |
+| `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit" if at least one song is explicit, "clean" if no song is explicit and at least one is "clean" else "". |
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
 
+- `version`
 - `played`
 - `userRating`
 - `recordLabels`
@@ -145,6 +150,7 @@ New fields are added:
 - `originalReleaseDate`
 - `isCompilation`
 - `discTitles`
+- `explicitStatus`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 

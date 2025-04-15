@@ -49,7 +49,7 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonic": true
+    "openSubsonic": true,
     "searchResult3": {
       "totalArtistCount": 1,
       "artist": [

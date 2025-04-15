@@ -29,63 +29,82 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-   "subsonic-response" : {
-      "status" : "ok",
-      "version" : "1.16.1",
-      "newestPodcasts" : {
-         "totalCount": 2,
-         "episode" : [ {
-            "id" : "19",
-            "parent" : "78",
-            "isDir" : false,
-            "title" : "Maria James inquest finding",
-            "album" : "Trace",
-            "artist" : "Podcast",
-            "coverArt" : "78",
-            "size" : 26734080,
-            "contentType" : "audio/mpeg",
-            "suffix" : "mp3",
-            "duration" : 1113,
-            "bitRate" : 192,
-            "playCount" : 0,
-            "created" : "2023-03-16T01:02:36.481Z",
-            "type" : "podcast",
-            "streamId" : "80",
-            "channelId" : "2",
-            "description" : "A Victorian Coroner has failed to name a killer in the 1980 cold case of Maria James. Her sons are devasted. But there's still hope, in leads yet to be chased by police.",
-            "status" : "completed",
-            "publishDate" : "2022-04-01T02:30:00.000Z"
-         }, {
-            "id" : "1",
-            "parent" : "74",
-            "isDir" : false,
-            "title" : "DEVIN TOWNSEND PODCAST #18 - NFT's! Good or bad? Devin discusses with A7X' Matt Shadows...",
-            "album" : "Devin Townsend Podcast",
-            "artist" : "Podcast",
-            "coverArt" : "74",
-            "size" : 70531702,
-            "contentType" : "audio/mpeg",
-            "suffix" : "mp3",
-            "duration" : 4408,
-            "bitRate" : 128,
-            "playCount" : 0,
-            "created" : "2023-03-16T00:56:16.783Z",
-            "type" : "podcast",
-            "streamId" : "76",
-            "channelId" : "1",
-            "description" : "People keep talking to me about NFTs...most people seem to hate them and hated that I was even mentioning them =). After I mentioned it on Twitter, Matt hit me up and offered to give me his perspective on them as his band is heavily involved. I watched videos sent to me about the downsides, and here is an example of the other side I suppose. This is just because I'm trying to wrap my head around it. I'm not planning to do NFTs, I just wanted to learn. Take with a grain of salt, and cheers to Matt for being a good sport =)",
-            "status" : "completed",
-            "publishDate" : "2022-02-01T12:00:45.000Z"
-         } ]
-      }
-   }
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonic": true,
+    "newestPodcasts": {
+      "totalCount": 1,
+      "episode": [
+        {
+          "id": "7390",
+          "parent": "7389",
+          "isDir": "false",
+          "title": "Jonas Gahr Støre",
+          "album": "NRK – Hallo P3",
+          "artist": "Podcast",
+          "year": "2015",
+          "coverArt": "7389",
+          "size": "41808585",
+          "contentType": "audio/mpeg",
+          "suffix": "mp3",
+          "duration": "2619",
+          "bitRate": "128",
+          "isVideo": "false",
+          "created": "2015-09-07T20:07:31.000Z",
+          "artistId": "453",
+          "type": "podcast",
+          "streamId": "7410",
+          "channelId": "17",
+          "description": "Jonas Gahr Støre fra Arbeiderpartiet er med i dagens partilederutspørring i Hallo P3!",
+          "status": "completed",
+          "publishDate": "2015-09-07T15:29:00.000Z"
+        }
+      ]
+    }
+  }
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
-// TODO
+{
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "newestPodcasts": {
+      "episode": [
+        {
+          "id": "7390",
+          "parent": "7389",
+          "isDir": "false",
+          "title": "Jonas Gahr Støre",
+          "album": "NRK – Hallo P3",
+          "artist": "Podcast",
+          "year": "2015",
+          "coverArt": "7389",
+          "size": "41808585",
+          "contentType": "audio/mpeg",
+          "suffix": "mp3",
+          "duration": "2619",
+          "bitRate": "128",
+          "isVideo": "false",
+          "created": "2015-09-07T20:07:31.000Z",
+          "artistId": "453",
+          "type": "podcast",
+          "streamId": "7410",
+          "channelId": "17",
+          "description": "Jonas Gahr Støre fra Arbeiderpartiet er med i dagens partilederutspørring i Hallo P3!",
+          "status": "completed",
+          "publishDate": "2015-09-07T15:29:00.000Z"
+        }
+      ]
+    }
+  }
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `newestPodcasts` | [`newestPodcasts`](../../responses/newestpodcasts) | **Yes** |     | The podcasts |
+| `newestPodcasts` | [`NewestPodcasts`](../../responses/newestpodcasts) | **Yes** |     | The podacsts |

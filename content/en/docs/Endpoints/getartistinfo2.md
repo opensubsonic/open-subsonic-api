@@ -36,9 +36,9 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "version": "1.16.1",
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
-    "openSubsonic": true
+    "openSubsonic": true,
     "artistInfo2": {
-      "biography": {},
+      "biography": "Empty biography",
       "musicBrainzId": "1",
       "smallImageUrl": "http://localhost:8989/play/art/f20070e8e11611cc53542a38801d60fa/artist/2/thumb34.jpg",
       "mediumImageUrl": "http://localhost:8989/play/art/2b9b6c057cd4bf21089ce7572e7792b6/artist/2/thumb64.jpg",
@@ -53,7 +53,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "status": "ok",
     "version": "1.16.1",
     "artistInfo2": {
-      "biography": {},
+      "biography": "Empty biography",
       "musicBrainzId": "1",
       "smallImageUrl": "http://localhost:8989/play/art/f20070e8e11611cc53542a38801d60fa/artist/2/thumb34.jpg",
       "mediumImageUrl": "http://localhost:8989/play/art/2b9b6c057cd4bf21089ce7572e7792b6/artist/2/thumb64.jpg",

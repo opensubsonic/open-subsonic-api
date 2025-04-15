@@ -26,10 +26,93 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 {{< tabpane persistLang=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
-// TODO
+{
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonic": true,
+    "playQueue": {
+      "current": "1234",
+      "position": 1000,
+      "username": "user",
+      "changed": "2023-03-10T02:19:35.784818075Z",
+      "changedBy": "example client",
+      "entry": [
+        {
+          "id": "1234",
+          "parent": "200000021",
+          "title": "Can I Help U?",
+          "isDir": false,
+          "isVideo": false,
+          "type": "music",
+          "albumId": "200000021",
+          "album": "Forget and Remember",
+          "artistId": "100000036",
+          "artist": "Comfort Fit",
+          "coverArt": "1234",
+          "duration": 103,
+          "bitRate": 216,
+          "bitDepth": 16,
+          "samplingRate": 44100,
+          "channelCount": 2,
+          "track": 1,
+          "year": 2005,
+          "genre": "Hip-Hop",
+          "size": 2811819,
+          "discNumber": 1,
+          "suffix": "mp3",
+          "contentType": "audio/mpeg",
+          "path": "user/Comfort Fit/Forget And Remember/1 - Can I Help U?.mp3"
+        }
+      ]
+    }
+  }
+}
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
-// TODO
+{
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "playQueue": {
+      "current": "1234",
+      "position": 1000,
+      "username": "user",
+      "changed": "2023-03-10T02:19:35.784818075Z",
+      "changedBy": "example client",
+      "entry": [
+        {
+          "id": "1234",
+          "parent": "200000021",
+          "title": "Can I Help U?",
+          "isDir": false,
+          "isVideo": false,
+          "type": "music",
+          "albumId": "200000021",
+          "album": "Forget and Remember",
+          "artistId": "100000036",
+          "artist": "Comfort Fit",
+          "coverArt": "1234",
+          "duration": 103,
+          "bitRate": 216,
+          "bitDepth": 16,
+          "samplingRate": 44100,
+          "channelCount": 2,
+          "track": 1,
+          "year": 2005,
+          "genre": "Hip-Hop",
+          "size": 2811819,
+          "discNumber": 1,
+          "suffix": "mp3",
+          "contentType": "audio/mpeg",
+          "path": "user/Comfort Fit/Forget And Remember/1 - Can I Help U?.mp3"
+        }
+      ]
+    }
+  }
+}
 {{< /tab >}}
 {{< /tabpane >}}
 

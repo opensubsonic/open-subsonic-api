@@ -147,4 +147,4 @@ description: >
 | `expires` | `string` | No |     | Share expiration [ISO 8601]  |
 | `lastVisited` | `string` | No |     | Last visit [ISO 8601] |
 | `visitCount` | `int` | **Yes** |     | Visit count|
-| `entry` | Array of [`Child`](../child) | **Yes** |     | A list of share |
+| `entry` | Array of [`Child`](../child) | No |     | A list of share |
