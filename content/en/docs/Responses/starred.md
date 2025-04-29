@@ -134,5 +134,5 @@ description: >
 | Field    | Type                           | Req. | OpenS. | Details         |
 | -------- | ------------------------------ | ---- | ------ | --------------- |
 | `artist` | Array of [`Artist`](../artist) | No   |        | Starred artists |
-| `album`  | Array of [`Child`](../child)   | No   |        | Starred albums  |
+| `album`  | Array of [`Album`](../album)   | No   |        | Starred albums  |
 | `song`   | Array of [`Child`](../child)   | No   |        | Starred songs   |
