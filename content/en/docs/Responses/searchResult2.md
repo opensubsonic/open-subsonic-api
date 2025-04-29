@@ -133,6 +133,6 @@ description: >
 
 | Field    | Type                           | Req. | OpenS. | Details         |
 | -------- | ------------------------------ | ---- | ------ | --------------- |
-| `artist` | Array of [`Artist`](../artist) | No   |        | Starred artists |
-| `album`  | Array of [`Child`](../child)   | No   |        | Starred albums  |
-| `song`   | Array of [`Child`](../child)   | No   |        | Starred songs   |
+| `artist` | Array of [`Artist`](../artist) | No   |        | Matching artists |
+| `album`  | Array of [`Album`](../album)   | No   |        | Matching albums  |
+| `song`   | Array of [`Child`](../child)   | No   |        | Matching songs   |
