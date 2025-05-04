@@ -13,20 +13,23 @@
         {
             "apiKeyAuth": [],
             "protocolVersion": [],
-            "clientName": []
+            "clientName": [],
+            "format": []
         },
         {
             "username": [],
             "legacyPassword": [],
             "protocolVersion": [],
-            "clientName": []
+            "clientName": [],
+            "format": []
         },
         {
             "username": [],
             "token": [],
             "salt": [],
             "protocolVersion": [],
-            "clientName": []
+            "clientName": [],
+            "format": []
         }
     ],
     "paths": {
@@ -47,9 +50,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -89,9 +89,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -133,9 +131,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -180,9 +175,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -233,9 +226,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -284,9 +274,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -337,9 +325,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -388,9 +373,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -445,9 +428,6 @@
                                 "type": "string"
                             }
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -502,9 +482,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -537,9 +515,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -579,9 +554,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -637,9 +610,6 @@
                         "schema": {
                             "type": "integer"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -697,9 +667,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -894,9 +862,6 @@
                                 "type": "string"
                             }
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1018,9 +983,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1053,9 +1016,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1095,9 +1055,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1130,9 +1088,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1172,9 +1127,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1207,9 +1160,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1249,9 +1199,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1284,9 +1232,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1326,9 +1271,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1361,9 +1304,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1403,9 +1343,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1438,9 +1376,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1480,9 +1415,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1515,9 +1448,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1557,9 +1487,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1592,9 +1520,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1630,9 +1555,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1661,9 +1584,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1703,9 +1623,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1734,9 +1652,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1783,9 +1698,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1825,9 +1738,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1874,9 +1784,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -1916,9 +1824,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -1965,9 +1870,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2065,9 +1968,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -2142,9 +2042,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2242,9 +2140,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -2319,9 +2214,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2361,9 +2254,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -2410,9 +2300,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2473,9 +2361,6 @@
                             "type": "boolean",
                             "default": false
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -2533,9 +2418,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2596,9 +2479,6 @@
                             "type": "boolean",
                             "default": false
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -2656,9 +2536,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2698,9 +2576,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -2744,9 +2619,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2785,9 +2658,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -2827,9 +2697,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2854,9 +2722,7 @@
                     "Bookmarks"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2893,9 +2759,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2948,9 +2812,6 @@
                                 "vtt"
                             ]
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -3011,9 +2872,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3051,9 +2910,7 @@
                     "Chat"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3090,9 +2947,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3141,9 +2996,6 @@
                         "schema": {
                             "type": "integer"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -3187,9 +3039,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3214,9 +3064,7 @@
                     "Browsing"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3253,9 +3101,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3304,9 +3150,6 @@
                         "schema": {
                             "type": "integer"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -3354,9 +3197,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3388,9 +3229,7 @@
                     "Internet Radio"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3427,9 +3266,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3461,9 +3298,7 @@
                     "System"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3500,9 +3335,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3551,9 +3384,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -3601,9 +3431,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3639,9 +3467,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -3691,9 +3516,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3736,9 +3559,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -3785,9 +3605,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3819,9 +3637,7 @@
                     "Browsing"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3858,9 +3674,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3901,9 +3715,6 @@
                             "type": "integer",
                             "default": 20
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -3948,9 +3759,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -3982,9 +3791,7 @@
                     "Lists"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4021,9 +3828,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4052,9 +3857,7 @@
                 ],
                 "security": [],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4092,9 +3895,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4134,9 +3935,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -4183,9 +3981,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4225,9 +4021,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -4271,9 +4064,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4305,9 +4096,7 @@
                     "Bookmarks"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4344,9 +4133,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4386,9 +4173,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -4438,9 +4222,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4493,9 +4275,6 @@
                             "type": "boolean",
                             "default": true
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -4544,9 +4323,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4625,9 +4402,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -4690,9 +4464,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4724,9 +4496,7 @@
                     "Media Library Scanning"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4763,9 +4533,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4797,9 +4565,7 @@
                     "Sharing"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4836,9 +4602,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4889,9 +4653,6 @@
                             "default": 50,
                             "minimum": 0
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -4944,9 +4705,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -4997,9 +4756,6 @@
                             "default": 50,
                             "minimum": 0
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5052,9 +4808,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5094,9 +4848,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5143,9 +4894,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5213,9 +4962,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5279,9 +5025,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5321,9 +5065,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5361,9 +5102,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5403,9 +5142,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5443,9 +5179,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5496,9 +5230,6 @@
                             "default": 50,
                             "minimum": 0
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5551,9 +5282,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5593,9 +5322,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5642,9 +5368,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5676,9 +5400,7 @@
                     "User Management"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5715,9 +5437,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5757,9 +5477,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -5806,9 +5523,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5840,9 +5555,7 @@
                     "Browsing"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5879,9 +5592,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -5939,9 +5650,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -6002,9 +5710,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6091,9 +5797,6 @@
                             "minimum": 0.0,
                             "maximum": 1.0
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -6161,9 +5864,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6195,9 +5896,7 @@
                     "System"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6227,9 +5926,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6254,9 +5951,7 @@
                     "Podcast"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6286,9 +5981,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6340,9 +6033,6 @@
                             "type": "integer",
                             "minimum": 0
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -6388,9 +6078,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6439,9 +6127,6 @@
                             "type": "boolean",
                             "default": true
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -6491,9 +6176,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6587,9 +6270,6 @@
                             "type": "integer",
                             "minimum": 0
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -6664,9 +6344,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6781,9 +6459,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -6870,9 +6545,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -6987,9 +6660,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -7076,9 +6746,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7129,9 +6797,6 @@
                             "minimum": 0,
                             "maximum": 5
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -7178,9 +6843,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7242,9 +6905,6 @@
                                 "type": "string"
                             }
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -7298,9 +6958,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7325,9 +6983,7 @@
                     "Media Library Scanning"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7364,9 +7020,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7465,9 +7119,6 @@
                             "type": "boolean",
                             "default": false
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -7536,9 +7187,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7559,9 +7208,7 @@
                     "System"
                 ],
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7601,9 +7248,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7679,9 +7324,6 @@
                                 "type": "string"
                             }
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -7723,9 +7365,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7785,9 +7425,6 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -7841,9 +7478,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -7931,9 +7566,6 @@
                                 "type": "integer"
                             }
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -7999,9 +7631,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -8053,9 +7683,6 @@
                             "type": "integer",
                             "minimum": 0
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -8104,9 +7731,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -8317,9 +7942,6 @@
                                 320
                             ]
                         }
-                    },
-                    {
-                        "$ref": "#/components/parameters/f"
                     }
                 ],
                 "responses": {
@@ -8456,9 +8078,7 @@
                     }
                 },
                 "parameters": [
-                    {
-                        "$ref": "#/components/parameters/f"
-                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -8559,6 +8179,12 @@
                 "type": "apiKey",
                 "name": "c",
                 "description": "A unique string identifying the client application.",
+                "in": "query"
+            },
+            "format": {
+                "name": "f",
+                "type": "apiKey",
+                "description": "The response format. Must be 'xml' or 'json'. For the purposes of this document, only `json` is allowed.",
                 "in": "query"
             }
         },
