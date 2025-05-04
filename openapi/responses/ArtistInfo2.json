@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "description": "Artist info.",
+    "properties": {
+        "biography": {
+            "type": "string",
+            "description": "Artist biography"
+        },
+        "musicBrainzId": {
+            "type": "string",
+            "description": "Artist musicBrainzId"
+        },
+        "lastFmUrl": {
+            "type": "string",
+            "description": "Artist lastFmUrl"
+        },
+        "smallImageUrl": {
+            "type": "string",
+            "description": "Artist smallImageUrl"
+        },
+        "mediumImageUrl": {
+            "type": "string",
+            "description": "Artist mediumImageUrl"
+        },
+        "largeImageUrl": {
+            "type": "string",
+            "description": "Artist largeImageUrl"
+        },
+        "similarArtist": {
+            "type": "array",
+            "items": {
+                "$ref": "./ArtistID3.json"
+            },
+            "description": "Similar artists"
+        }
+    },
+    "externalDocs": {
+        "description": "ArtistInfo2",
+        "url": "https://opensubsonic.netlify.app/docs/responses/artistinfo2/"
+    }
+}

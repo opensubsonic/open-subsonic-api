@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "description": "Artist details.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Artist id"
+        },
+        "name": {
+            "type": "string",
+            "description": "Artist name"
+        },
+        "artistImageUrl": {
+            "type": "string",
+            "description": "Artist image url"
+        },
+        "starred": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Artist starred date [ISO 8601]"
+        },
+        "userRating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "Artist rating [1-5]"
+        },
+        "averageRating": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "Artist average rating [1.0-5.0]"
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ],
+    "externalDocs": {
+        "description": "Artist",
+        "url": "https://opensubsonic.netlify.app/docs/responses/artist/"
+    }
+}

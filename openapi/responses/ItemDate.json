@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "description": "A date for a media item that may be just a year, or year-month, or full date.",
+    "properties": {
+        "year": {
+            "type": "integer",
+            "description": "The year"
+        },
+        "month": {
+            "type": "integer",
+            "description": "The month (1-12)",
+            "minimum": 1,
+            "maximum": 12
+        },
+        "day": {
+            "type": "integer",
+            "description": "The day (1-31)",
+            "minimum": 1,
+            "maximum": 31
+        }
+    },
+    "externalDocs": {
+        "description": "ItemDate",
+        "url": "https://opensubsonic.netlify.app/docs/responses/itemdate/"
+    }
+}

@@ -8190,7 +8190,7 @@
         },
         "schemas": {
             "SubsonicError": {
-                "$ref": "./responses/error.json"
+                "$ref": "./responses/Error.json"
             },
             "SubsonicBaseResponse": {
                 "$ref": "./responses/Subsonic-baseResponse.json"
@@ -8205,7 +8205,7 @@
                 "$ref": "./responses/Subsonic-response.json"
             },
             "ItemGenre": {
-                "$ref": "./responses/itemGenre.json"
+                "$ref": "./responses/ItemGenre.json"
             },
             "ArtistID3": {
                 "$ref": "./responses/ArtistID3.json"
@@ -8220,346 +8220,19 @@
                 "$ref": "./responses/GenericMediaType.json"
             },
             "MediaType": {
-                "type": "string",
-                "enum": [
-                    "song",
-                    "album",
-                    "artist"
-                ],
-                "description": "Note: If you support `musicBrainzId` you must support this field to ensure clients knows what the ID refers to."
+                "$ref": "./responses/MediaType.json"
             },
             "ExplicitStatus": {
-                "type": "string",
-                "enum": [
-                    "clean",
-                    "explicit",
-                    ""
-                ],
-                "description": "Returns “explicit”, “clean” or “”. (For songs extracted from tags “ITUNESADVISORY”: 1 = explicit, 2 = clean, MP4 “rtng”: 1 or 4 = explicit, 2 = clean. See `albumID3` for albums)"
+                "$ref": "./responses/ExplicitStatus.json"
             },
             "Child": {
-                "type": "object",
-                "description": "A media.",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The id of the media."
-                    },
-                    "parent": {
-                        "type": "string",
-                        "description": "The id of the parent (folder/album)"
-                    },
-                    "isDir": {
-                        "type": "boolean",
-                        "description": "The media is a directory"
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "The media name."
-                    },
-                    "album": {
-                        "type": "string",
-                        "description": "The album name."
-                    },
-                    "artist": {
-                        "type": "string",
-                        "description": "The artist name."
-                    },
-                    "track": {
-                        "type": "integer",
-                        "description": "The track number."
-                    },
-                    "year": {
-                        "type": "integer",
-                        "description": "The media year."
-                    },
-                    "genre": {
-                        "type": "string",
-                        "description": "The media genre"
-                    },
-                    "coverArt": {
-                        "type": "string",
-                        "description": "The coverArt id."
-                    },
-                    "size": {
-                        "type": "integer",
-                        "description": "A file size of the media."
-                    },
-                    "contentType": {
-                        "type": "string",
-                        "description": "The mimeType of the media."
-                    },
-                    "suffix": {
-                        "type": "string",
-                        "description": "The file suffix of the media."
-                    },
-                    "transcodedContentType": {
-                        "type": "string",
-                        "description": "The transcoded mediaType if transcoding should happen."
-                    },
-                    "transcodedSuffix": {
-                        "type": "string",
-                        "description": "The file suffix of the transcoded media."
-                    },
-                    "duration": {
-                        "type": "integer",
-                        "description": "The duration of the media in seconds."
-                    },
-                    "bitRate": {
-                        "type": "integer",
-                        "description": "The bitrate of the media."
-                    },
-                    "bitDepth": {
-                        "type": "integer",
-                        "description": "The bit depth of the media."
-                    },
-                    "samplingRate": {
-                        "type": "integer",
-                        "description": "The sampling rate of the media."
-                    },
-                    "channelCount": {
-                        "type": "integer",
-                        "description": "The number of channels of the media."
-                    },
-                    "path": {
-                        "type": "string",
-                        "description": "The full path of the media."
-                    },
-                    "isVideo": {
-                        "type": "boolean",
-                        "description": "Media is a video"
-                    },
-                    "userRating": {
-                        "type": "integer",
-                        "description": "The user rating of the media [1-5]",
-                        "minimum": 1,
-                        "maximum": 5
-                    },
-                    "averageRating": {
-                        "type": "number",
-                        "description": "The average rating of the media [1.0-5.0]",
-                        "minimum": 0,
-                        "maximum": 5
-                    },
-                    "playCount": {
-                        "type": "integer",
-                        "description": "The play count."
-                    },
-                    "discNumber": {
-                        "type": "integer",
-                        "description": "The disc number."
-                    },
-                    "created": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date the media was created. [ISO 8601]"
-                    },
-                    "starred": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date the media was starred. [ISO 8601]"
-                    },
-                    "albumId": {
-                        "type": "string",
-                        "description": "The corresponding album id"
-                    },
-                    "artistId": {
-                        "type": "string",
-                        "description": "The corresponding artist id"
-                    },
-                    "type": {
-                        "$ref": "#/components/schemas/GenericMediaType"
-                    },
-                    "mediaType": {
-                        "$ref": "#/components/schemas/MediaType"
-                    },
-                    "bookmarkPosition": {
-                        "type": "integer",
-                        "description": "The bookmark position in seconds"
-                    },
-                    "originalWidth": {
-                        "type": "integer",
-                        "description": "The video original Width"
-                    },
-                    "originalHeight": {
-                        "type": "integer",
-                        "description": "The video original Height"
-                    },
-                    "played": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date the album was last played. [ISO 8601]"
-                    },
-                    "bpm": {
-                        "type": "integer",
-                        "description": "The BPM of the song."
-                    },
-                    "comment": {
-                        "type": "string",
-                        "description": "The comment tag of the song."
-                    },
-                    "sortName": {
-                        "type": "string",
-                        "description": "The song sort name."
-                    },
-                    "musicBrainzId": {
-                        "type": "string",
-                        "description": "The track MusicBrainzID."
-                    },
-                    "genres": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ItemGenre"
-                        },
-                        "description": "The list of all genres of the song."
-                    },
-                    "artists": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ArtistID3"
-                        },
-                        "description": "The list of all song artists of the song. (Note: Only the required `ArtistID3` fields should be returned by default)"
-                    },
-                    "displayArtist": {
-                        "type": "string",
-                        "description": "The single value display artist."
-                    },
-                    "albumArtists": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ArtistID3"
-                        },
-                        "description": "The list of all album artists of the song. (Note: Only the required `ArtistID3` fields should be returned by default)"
-                    },
-                    "displayAlbumArtist": {
-                        "type": "string",
-                        "description": "The single value display album artist."
-                    },
-                    "contributors": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Contributor"
-                        },
-                        "description": "The list of all contributor artists of the song."
-                    },
-                    "displayComposer": {
-                        "type": "string",
-                        "description": "The single value display composer."
-                    },
-                    "moods": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "description": "The list of all moods of the song."
-                    },
-                    "replayGain": {
-                        "$ref": "#/components/schemas/ReplayGain",
-                        "description": "The replay gain data of the song."
-                    },
-                    "explicitStatus": {
-                        "$ref": "#/components/schemas/ExplicitStatus"
-                    }
-                },
-                "required": [
-                    "id",
-                    "isDir",
-                    "title"
-                ],
-                "externalDocs": {
-                    "description": "Child",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/child/"
-                }
+                "$ref": "./responses/Child.json"
             },
             "Playlist": {
-                "type": "object",
-                "description": "Playlist.",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "Id of the playlist"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "Name of the playlist"
-                    },
-                    "comment": {
-                        "type": "string",
-                        "description": "A comment"
-                    },
-                    "owner": {
-                        "type": "string",
-                        "description": "Owner of the playlist"
-                    },
-                    "public": {
-                        "type": "boolean",
-                        "description": "Is the playlist public"
-                    },
-                    "songCount": {
-                        "type": "integer",
-                        "description": "number of songs"
-                    },
-                    "duration": {
-                        "type": "integer",
-                        "description": "Playlist duration in seconds"
-                    },
-                    "created": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Creation date [ISO 8601]"
-                    },
-                    "changed": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Last changed date [ISO 8601]"
-                    },
-                    "coverArt": {
-                        "type": "string",
-                        "description": "A cover Art Id"
-                    },
-                    "allowedUser": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "description": "A list of allowed usernames"
-                    }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "songCount",
-                    "duration",
-                    "created",
-                    "changed"
-                ],
-                "externalDocs": {
-                    "description": "Playlist",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/playlist/"
-                }
+                "$ref": "./responses/Playlist.json"
             },
             "PlaylistWithSongs": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/Playlist"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "entry": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/Child"
-                                },
-                                "description": "The list of songs"
-                            }
-                        },
-                        "externalDocs": {
-                            "description": "PlaylistWithSongs",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/playlistwithsongs/"
-                        }
-                    }
-                ]
+                "$ref": "./responses/PlaylistWithSongs.json"
             },
             "CreatePlaylistSuccessResponse": {
                 "allOf": [
@@ -8600,80 +8273,10 @@
                 }
             },
             "Share": {
-                "type": "object",
-                "description": "Share.",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The share Id"
-                    },
-                    "url": {
-                        "type": "string",
-                        "description": "The share url"
-                    },
-                    "description": {
-                        "type": "string",
-                        "description": "A description"
-                    },
-                    "username": {
-                        "type": "string",
-                        "description": "The username"
-                    },
-                    "created": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Creation date [ISO 8601]"
-                    },
-                    "expires": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Share expiration [ISO 8601]"
-                    },
-                    "lastVisited": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Last visit [ISO 8601]"
-                    },
-                    "visitCount": {
-                        "type": "integer",
-                        "description": "Visit count"
-                    },
-                    "entry": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "A list of share"
-                    }
-                },
-                "required": [
-                    "id",
-                    "url",
-                    "username",
-                    "created",
-                    "visitCount"
-                ],
-                "externalDocs": {
-                    "description": "Share",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/share/"
-                }
+                "$ref": "./responses/Share.json"
             },
             "Shares": {
-                "type": "object",
-                "description": "Shares.",
-                "properties": {
-                    "share": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Share"
-                        },
-                        "description": "A list of share"
-                    }
-                },
-                "externalDocs": {
-                    "description": "Shares",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/shares/"
-                }
+                "$ref": "./responses/Shares.json"
             },
             "CreateSharesSuccessResponse": {
                 "allOf": [
@@ -8714,252 +8317,19 @@
                 }
             },
             "RecordLabel": {
-                "type": "object",
-                "description": "A record label for an album.",
-                "properties": {
-                    "name": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "name"
-                ],
-                "externalDocs": {
-                    "description": "RecordLabel",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/recordlabel/"
-                }
+                "$ref": "./responses/RecordLabel.json"
             },
             "ItemDate": {
-                "type": "object",
-                "description": "A date for a media item that may be just a year, or year-month, or full date.",
-                "properties": {
-                    "year": {
-                        "type": "integer",
-                        "description": "The year"
-                    },
-                    "month": {
-                        "type": "integer",
-                        "description": "The month (1-12)",
-                        "minimum": 1,
-                        "maximum": 12
-                    },
-                    "day": {
-                        "type": "integer",
-                        "description": "The day (1-31)",
-                        "minimum": 1,
-                        "maximum": 31
-                    }
-                },
-                "externalDocs": {
-                    "description": "ItemDate",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/itemdate/"
-                }
+                "$ref": "./responses/ItemDate.json"
             },
             "DiscTitle": {
-                "type": "object",
-                "description": "A disc title for an album",
-                "properties": {
-                    "disc": {
-                        "type": "integer",
-                        "description": "The disc number."
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "The name of the disc."
-                    }
-                },
-                "required": [
-                    "disc",
-                    "title"
-                ],
-                "externalDocs": {
-                    "description": "DiscTitle",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/disctitle/"
-                }
+                "$ref": "./responses/DiscTitle.json"
             },
             "AlbumID3": {
-                "type": "object",
-                "description": "Album with songs.",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The id of the album"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The album name."
-                    },
-                    "version": {
-                        "type": "string",
-                        "description": "The album version name (Remastered, Anniversary Box Set, …)."
-                    },
-                    "artist": {
-                        "type": "string",
-                        "description": "Artist name."
-                    },
-                    "artistId": {
-                        "type": "string",
-                        "description": "The id of the artist"
-                    },
-                    "coverArt": {
-                        "type": "string",
-                        "description": "A covertArt id."
-                    },
-                    "songCount": {
-                        "type": "integer",
-                        "description": "Number of songs"
-                    },
-                    "duration": {
-                        "type": "integer",
-                        "description": "Total duration of the album in seconds"
-                    },
-                    "playCount": {
-                        "type": "integer",
-                        "description": "Number of play of the album"
-                    },
-                    "created": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date the album was added. [ISO 8601]"
-                    },
-                    "starred": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date the album was added. [ISO 8601]"
-                    },
-                    "year": {
-                        "type": "integer",
-                        "description": "The album year"
-                    },
-                    "genre": {
-                        "type": "string",
-                        "description": "The album genre"
-                    },
-                    "played": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date the album was last played. [ISO 8601]"
-                    },
-                    "userRating": {
-                        "type": "integer",
-                        "minimum": 1,
-                        "maximum": 5,
-                        "description": "The user rating of the album. [1-5]"
-                    },
-                    "recordLabels": {
-                        "type": "array",
-                        "description": "The labels producing the album.",
-                        "items": {
-                            "$ref": "#/components/schemas/RecordLabel"
-                        }
-                    },
-                    "musicBrainzId": {
-                        "type": "string",
-                        "description": "The album MusicBrainzID."
-                    },
-                    "genres": {
-                        "type": "array",
-                        "description": "The list of all genres of the album.",
-                        "items": {
-                            "$ref": "#/components/schemas/ItemGenre"
-                        }
-                    },
-                    "artists": {
-                        "type": "array",
-                        "description": "The list of all album artists of the album.",
-                        "items": {
-                            "$ref": "#/components/schemas/ArtistID3"
-                        }
-                    },
-                    "displayArtist": {
-                        "type": "string",
-                        "description": "The single value display artist."
-                    },
-                    "releaseTypes": {
-                        "type": "array",
-                        "description": "The types of this album release. (Album, Compilation, EP, Remix, …).",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "moods": {
-                        "type": "array",
-                        "description": "The list of all moods of the album.",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "sortName": {
-                        "type": "string",
-                        "description": "The album sort name."
-                    },
-                    "originalReleaseDate": {
-                        "$ref": "#/components/schemas/ItemDate",
-                        "description": "Date the album was originally released."
-                    },
-                    "releaseDate": {
-                        "$ref": "#/components/schemas/ItemDate",
-                        "description": "Date the specific edition of the album was released. Note: for files using ID3 tags, releaseDate should generally be read from the TDRL tag. Servers that use a different source for this field should document the behavior."
-                    },
-                    "isCompilation": {
-                        "type": "boolean",
-                        "description": "True if the album is a compilation."
-                    },
-                    "explicitStatus": {
-                        "$ref": "#/components/schemas/ExplicitStatus"
-                    },
-                    "discTitles": {
-                        "type": "array",
-                        "description": "The list of all disc titles of the album.",
-                        "items": {
-                            "$ref": "#/components/schemas/DiscTitle"
-                        }
-                    },
-                    "song": {
-                        "type": "array",
-                        "description": "The list of songs",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        }
-                    }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "songCount",
-                    "duration",
-                    "created"
-                ],
-                "externalDocs": {
-                    "description": "AlbumID3",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/albumid3/"
-                }
+                "$ref": "./responses/AlbumID3.json"
             },
             "AlbumID3WithSongs": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/AlbumID3"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "song": {
-                                "type": "array",
-                                "description": "The list of songs",
-                                "items": {
-                                    "$ref": "#/components/schemas/Child"
-                                }
-                            }
-                        },
-                        "required": [
-                            "song"
-                        ],
-                        "externalDocs": {
-                            "description": "AlbumID3WithSongs",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/albumid3withsongs/"
-                        }
-                    }
-                ]
+                "$ref": "./responses/AlbumID3WithSongs.json"
             },
             "GetAlbumSuccessResponse": {
                 "allOf": [
@@ -9000,38 +8370,7 @@
                 }
             },
             "AlbumInfo": {
-                "type": "object",
-                "description": "Album info.",
-                "properties": {
-                    "notes": {
-                        "type": "string",
-                        "description": "Album notes"
-                    },
-                    "musicBrainzId": {
-                        "type": "string",
-                        "description": "Album musicBrainzId"
-                    },
-                    "lastFmUrl": {
-                        "type": "string",
-                        "description": "Album lastFmUrl"
-                    },
-                    "smallImageUrl": {
-                        "type": "string",
-                        "description": "Album smallImageUrl"
-                    },
-                    "mediumImageUrl": {
-                        "type": "string",
-                        "description": "Album mediumImageUrl"
-                    },
-                    "largeImageUrl": {
-                        "type": "string",
-                        "description": "Album largeImageUrl"
-                    }
-                },
-                "externalDocs": {
-                    "description": "AlbumInfo",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/albuminfo/"
-                }
+                "$ref": "./responses/AlbumInfo.json"
             },
             "GetAlbumInfoSuccessResponse": {
                 "allOf": [
@@ -9072,37 +8411,10 @@
                 }
             },
             "AlbumListType": {
-                "type": "string",
-                "description": "The list type. Must be one of the following: random, newest, highest, frequent, recent. Since 1.8.0 you can also use alphabeticalByName or alphabeticalByArtist to page through all albums alphabetically, and starred to retrieve starred albums. Since 1.10.1 you can use byYear and byGenre to list albums in a given year range or genre.",
-                "enum": [
-                    "random",
-                    "newest",
-                    "highest",
-                    "frequent",
-                    "recent",
-                    "alphabeticalByName",
-                    "alphabeticalByArtist",
-                    "starred",
-                    "byYear",
-                    "byGenre"
-                ]
+                "$ref": "./responses/AlbumListType.json"
             },
             "AlbumList": {
-                "type": "object",
-                "description": "Album list.",
-                "properties": {
-                    "album": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "Artist albums"
-                    }
-                },
-                "externalDocs": {
-                    "description": "AlbumList",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/albumlist/"
-                }
+                "$ref": "./responses/AlbumList.json"
             },
             "GetAlbumListSuccessResponse": {
                 "allOf": [
@@ -9143,20 +8455,7 @@
                 }
             },
             "AlbumList2": {
-                "type": "object",
-                "properties": {
-                    "album": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/AlbumID3"
-                        },
-                        "description": "Artist albums",
-                        "externalDocs": {
-                            "description": "AlbumList2",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/albumlist2/"
-                        }
-                    }
-                }
+                "$ref": "./responses/AlbumList2.json"
             },
             "GetAlbumList2SuccessResponse": {
                 "allOf": [
@@ -9197,30 +8496,7 @@
                 }
             },
             "ArtistWithAlbumsID3": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/ArtistID3"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "album": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/AlbumID3"
-                                },
-                                "description": "Artist albums"
-                            }
-                        },
-                        "required": [
-                            "album"
-                        ],
-                        "externalDocs": {
-                            "description": "ArtistWithAlbumsID3",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/artistwithalbumsid3/"
-                        }
-                    }
-                ]
+                "$ref": "./responses/ArtistWithAlbumsID3.json"
             },
             "GetArtistSuccessResponse": {
                 "allOf": [
@@ -9261,88 +8537,10 @@
                 }
             },
             "Artist": {
-                "type": "object",
-                "description": "Artist details.",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "Artist id"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "Artist name"
-                    },
-                    "artistImageUrl": {
-                        "type": "string",
-                        "description": "Artist image url"
-                    },
-                    "starred": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Artist starred date [ISO 8601]"
-                    },
-                    "userRating": {
-                        "type": "integer",
-                        "minimum": 1,
-                        "maximum": 5,
-                        "description": "Artist rating [1-5]"
-                    },
-                    "averageRating": {
-                        "type": "number",
-                        "minimum": 1,
-                        "maximum": 5,
-                        "description": "Artist average rating [1.0-5.0]"
-                    }
-                },
-                "required": [
-                    "id",
-                    "name"
-                ],
-                "externalDocs": {
-                    "description": "Artist",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/artist/"
-                }
+                "$ref": "./responses/Artist.json"
             },
             "ArtistInfo": {
-                "type": "object",
-                "description": "Artist info.",
-                "properties": {
-                    "biography": {
-                        "type": "string",
-                        "description": "Artist biography"
-                    },
-                    "musicBrainzId": {
-                        "type": "string",
-                        "description": "Artist musicBrainzId"
-                    },
-                    "lastFmUrl": {
-                        "type": "string",
-                        "description": "Artist lastFmUrl"
-                    },
-                    "smallImageUrl": {
-                        "type": "string",
-                        "description": "Artist smallImageUrl"
-                    },
-                    "mediumImageUrl": {
-                        "type": "string",
-                        "description": "Artist mediumImageUrl"
-                    },
-                    "largeImageUrl": {
-                        "type": "string",
-                        "description": "Artist largeImageUrl"
-                    },
-                    "similarArtist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Artist"
-                        },
-                        "description": "Similar artists"
-                    }
-                },
-                "externalDocs": {
-                    "description": "ArtistInfo",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/artistinfo/"
-                }
+                "$ref": "./responses/ArtistInfo.json"
             },
             "GetArtistInfoSuccessResponse": {
                 "allOf": [
@@ -9383,45 +8581,7 @@
                 }
             },
             "ArtistInfo2": {
-                "type": "object",
-                "description": "Artist info.",
-                "properties": {
-                    "biography": {
-                        "type": "string",
-                        "description": "Artist biography"
-                    },
-                    "musicBrainzId": {
-                        "type": "string",
-                        "description": "Artist musicBrainzId"
-                    },
-                    "lastFmUrl": {
-                        "type": "string",
-                        "description": "Artist lastFmUrl"
-                    },
-                    "smallImageUrl": {
-                        "type": "string",
-                        "description": "Artist smallImageUrl"
-                    },
-                    "mediumImageUrl": {
-                        "type": "string",
-                        "description": "Artist mediumImageUrl"
-                    },
-                    "largeImageUrl": {
-                        "type": "string",
-                        "description": "Artist largeImageUrl"
-                    },
-                    "similarArtist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ArtistID3"
-                        },
-                        "description": "Similar artists"
-                    }
-                },
-                "externalDocs": {
-                    "description": "ArtistInfo2",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/artistinfo2/"
-                }
+                "$ref": "./responses/ArtistInfo2.json"
             },
             "GetArtistInfo2SuccessResponse": {
                 "allOf": [
@@ -9462,25 +8622,7 @@
                 }
             },
             "ArtistsID3": {
-                "type": "object",
-                "description": "A list of indexed Artists.",
-                "externalDocs": {
-                    "description": "ArtistsID3",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/artistsid3/"
-                },
-                "properties": {
-                    "ignoredArticles": {
-                        "type": "string",
-                        "description": "List of ignored articles space separated"
-                    },
-                    "index": {
-                        "type": "array",
-                        "description": "Index list",
-                        "items": {
-                            "$ref": "#/components/schemas/ArtistID3"
-                        }
-                    }
-                }
+                "$ref": "./responses/ArtistsID3.json"
             },
             "GetArtistsSuccessResponse": {
                 "allOf": [
@@ -9521,47 +8663,7 @@
                 }
             },
             "Bookmark": {
-                "type": "object",
-                "description": "A bookmark.",
-                "externalDocs": {
-                    "description": "Bookmark",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/bookmark/"
-                },
-                "properties": {
-                    "position": {
-                        "type": "integer",
-                        "description": "Bookmark position in seconds"
-                    },
-                    "username": {
-                        "type": "string",
-                        "description": "Username"
-                    },
-                    "comment": {
-                        "type": "string",
-                        "description": "Bookmark comment"
-                    },
-                    "created": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Bookmark creation date [ISO 8601]"
-                    },
-                    "changed": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Bookmark last updated date [ISO 8601]"
-                    },
-                    "entry": {
-                        "$ref": "#/components/schemas/Child",
-                        "description": "The bookmark file"
-                    }
-                },
-                "required": [
-                    "position",
-                    "username",
-                    "created",
-                    "changed",
-                    "entry"
-                ]
+                "$ref": "./responses/Bookmark.json"
             },
             "Bookmarks": {
                 "type": "object",

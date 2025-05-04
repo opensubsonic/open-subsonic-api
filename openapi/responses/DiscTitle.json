@@ -1,30 +1,22 @@
----
-title: "DiscTitle"
-linkTitle: "DiscTitle [OS]"
-opensubsonic:
-- Addition
-description: >
-  A disc title for an album
----
-
-{{< tabpane persistLang=false >}}
-{{< tab header="**Example**:" disabled=true />}}
-{{< tab header="OpenSubsonic" lang="json">}}
 {
-  "disc": 0,
-  "title": "The disc title"
+    "type": "object",
+    "description": "A disc title for an album",
+    "properties": {
+        "disc": {
+            "type": "integer",
+            "description": "The disc number."
+        },
+        "title": {
+            "type": "string",
+            "description": "The name of the disc."
+        }
+    },
+    "required": [
+        "disc",
+        "title"
+    ],
+    "externalDocs": {
+        "description": "DiscTitle",
+        "url": "https://opensubsonic.netlify.app/docs/responses/disctitle/"
+    }
 }
-{{< /tab >}}
-{{< tab header="Subsonic"  >}}
-Does not exist.
-{{< /tab >}}
-{{< /tabpane >}}
-
-| Field |  Type | Req. | OpenS. | Details |
-| --- | --- | --- | --- | --- |
-| `disc` | `int` | **Yes** | **Yes**    | The disc numer. |
-| `title` | `string` | **Yes**  | **Yes**     | The name of the disc. |
-
-{{< alert color="warning" title="OpenSubsonic" >}}
-This is a new OpenSubsonic response type.
-{{< /alert >}}

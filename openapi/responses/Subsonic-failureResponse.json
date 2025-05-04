@@ -14,7 +14,7 @@
                     ]
                 },
                 "error": {
-                    "$ref": "./error.json"
+                    "$ref": "./Error.json"
                 }
             },
             "required": [

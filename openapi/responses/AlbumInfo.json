@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "description": "Album info.",
+    "properties": {
+        "notes": {
+            "type": "string",
+            "description": "Album notes"
+        },
+        "musicBrainzId": {
+            "type": "string",
+            "description": "Album musicBrainzId"
+        },
+        "lastFmUrl": {
+            "type": "string",
+            "description": "Album lastFmUrl"
+        },
+        "smallImageUrl": {
+            "type": "string",
+            "description": "Album smallImageUrl"
+        },
+        "mediumImageUrl": {
+            "type": "string",
+            "description": "Album mediumImageUrl"
+        },
+        "largeImageUrl": {
+            "type": "string",
+            "description": "Album largeImageUrl"
+        }
+    },
+    "externalDocs": {
+        "description": "AlbumInfo",
+        "url": "https://opensubsonic.netlify.app/docs/responses/albuminfo/"
+    }
+}

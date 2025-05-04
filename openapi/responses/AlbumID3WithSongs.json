@@ -1,0 +1,26 @@
+{
+    "allOf": [
+        {
+            "$ref": "./AlbumID3.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "song": {
+                    "type": "array",
+                    "description": "The list of songs",
+                    "items": {
+                        "$ref": "./Child.json"
+                    }
+                }
+            },
+            "required": [
+                "song"
+            ],
+            "externalDocs": {
+                "description": "AlbumID3WithSongs",
+                "url": "https://opensubsonic.netlify.app/docs/responses/albumid3withsongs/"
+            }
+        }
+    ]
+}
