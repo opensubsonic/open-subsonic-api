@@ -8208,129 +8208,16 @@
                 "$ref": "./responses/itemGenre.json"
             },
             "ArtistID3": {
-                "type": "object",
-                "description": "An artist from ID3 tags.",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The id of the artist"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The artist name."
-                    },
-                    "coverArt": {
-                        "type": "string",
-                        "description": "A covertArt id."
-                    },
-                    "artistImageUrl": {
-                        "type": "string",
-                        "description": "An url to an external image source."
-                    },
-                    "albumCount": {
-                        "type": "integer",
-                        "description": "Artist album count."
-                    },
-                    "starred": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date the artist was starred. [ISO 8601]"
-                    },
-                    "musicBrainzId": {
-                        "type": "string",
-                        "description": "The artist MusicBrainzID."
-                    },
-                    "sortName": {
-                        "type": "string",
-                        "description": "The artist sort name."
-                    },
-                    "roles": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "description": "The list of all roles this artist has in the library."
-                    }
-                },
-                "required": [
-                    "id",
-                    "name"
-                ],
-                "externalDocs": {
-                    "description": "ArtistID3",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/artistid3/"
-                }
+                "$ref": "./responses/ArtistID3.json"
             },
             "Contributor": {
-                "type": "object",
-                "description": "A contributor artist for a song or an album",
-                "properties": {
-                    "role": {
-                        "type": "string",
-                        "description": "The contributor role."
-                    },
-                    "subRole": {
-                        "type": "string",
-                        "description": "The subRole for roles that may require it. Ex: The instrument for the performer role (TMCL/performer tags). Note: For consistency between different tag formats, the TIPL sub roles should be directly exposed in the role field."
-                    },
-                    "artist": {
-                        "$ref": "#/components/schemas/ArtistID3"
-                    }
-                },
-                "required": [
-                    "role",
-                    "artist"
-                ],
-                "externalDocs": {
-                    "description": "Contributor",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/contributor/"
-                }
+                "$ref": "./responses/Contributor.json"
             },
             "ReplayGain": {
-                "type": "object",
-                "description": "The replay gain data of a song. Note: If the data is not present the field must be ommited in the answer. (But the replayGain field on Child must always be present)",
-                "properties": {
-                    "trackGain": {
-                        "type": "number",
-                        "description": "The track replay gain value. (In Db)"
-                    },
-                    "albumGain": {
-                        "type": "number",
-                        "description": "The album replay gain value. (In Db)"
-                    },
-                    "trackPeak": {
-                        "type": "number",
-                        "description": "The track peak value. (Must be positive)",
-                        "minimum": 0
-                    },
-                    "albumPeak": {
-                        "type": "number",
-                        "description": "The album peak value. (Must be positive)",
-                        "minimum": 0
-                    },
-                    "baseGain": {
-                        "type": "number",
-                        "description": "The base gain value. (In Db) (Ogg Opus Output Gain for example)"
-                    },
-                    "fallbackGain": {
-                        "type": "number",
-                        "description": "An optional fallback gain that clients should apply when the corresponding gain value is missing. (Can be computed from the tracks or exposed as an user setting.)"
-                    }
-                },
-                "externalDocs": {
-                    "description": "Replay Gain",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/replaygain/"
-                }
+                "$ref": "./responses/ReplayGain.json"
             },
             "GenericMediaType": {
-                "type": "string",
-                "enum": [
-                    "music",
-                    "video",
-                    "podcast",
-                    "audiobook"
-                ],
-                "description": "The generic type of media [music/podcast/audiobook/video]"
+                "$ref": "./responses/GenericMediaType.json"
             },
             "MediaType": {
                 "type": "string",
