@@ -46,113 +46,7 @@
             "$ref": "./endpoints/createInternetRadioStation.json"
         },
         "/rest/createPlaylist": {
-            "get": {
-                "summary": "Creates (or updates) a playlist.",
-                "description": "Creates (or updates) a playlist.",
-                "operationId": "createPlaylist",
-                "tags": [
-                    "Playlists"
-                ],
-                "parameters": [
-                    {
-                        "name": "playlistId",
-                        "in": "query",
-                        "description": "The playlist ID. Required if updating an existing playlist.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "name",
-                        "in": "query",
-                        "description": "The human-readable name of the playlist. Required if creating a new playlist.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "songId",
-                        "in": "query",
-                        "description": "ID of a song in the playlist. Use one `songId` parameter for each song in the playlist.",
-                        "explode": true,
-                        "style": "form",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/CreatePlaylistResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "createPlaylist",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/createplaylist/"
-                }
-            },
-            "post": {
-                "summary": "Creates (or updates) a playlist.",
-                "description": "Creates (or updates) a playlist.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postCreatePlaylist",
-                "tags": [
-                    "Playlists"
-                ],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "playlistId": {
-                                        "type": "string",
-                                        "description": "The playlist ID. Required if updating an existing playlist."
-                                    },
-                                    "name": {
-                                        "type": "string",
-                                        "description": "The human-readable name of the playlist. Required if creating a new playlist."
-                                    },
-                                    "songId": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        },
-                                        "description": "ID of a song in the playlist. Use one `songId` parameter for each song in the playlist."
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/EmptySubsonicResponse"
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "createPlaylist",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/createplaylist/"
-                }
-            }
+            "$ref": "./endpoints/createPlaylist.json"
         },
         "/rest/createPodcastChannel": {
             "get": {
@@ -7870,42 +7764,10 @@
                 "$ref": "./schemas/PlaylistWithSongs.json"
             },
             "CreatePlaylistSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "playlist": {
-                                "$ref": "#/components/schemas/PlaylistWithSongs"
-                            }
-                        },
-                        "required": [
-                            "playlist"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/createPlaylist/CreatePlaylistSuccessResponse.json"
             },
             "CreatePlaylistResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested playlist element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/CreatePlaylistSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "CreatePlaylistResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/createplaylist/"
-                }
+                "$ref": "./endpoints/createPlaylist/CreatePlaylistResponse.json"
             },
             "Share": {
                 "$ref": "./schemas/Share.json"
