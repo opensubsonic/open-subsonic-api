@@ -8190,22 +8190,22 @@
         },
         "schemas": {
             "SubsonicError": {
-                "$ref": "./content/en/docs/Responses/error.json"
+                "$ref": "./responses/error.json"
             },
             "SubsonicBaseResponse": {
-                "$ref": "./content/en/docs/Responses/Subsonic-baseResponse.json"
+                "$ref": "./responses/Subsonic-baseResponse.json"
             },
             "SubsonicSuccessResponse": {
-                "$ref": "./content/en/docs/Responses/Subsonic-successResponse.json"
+                "$ref": "./responses/Subsonic-successResponse.json"
             },
             "SubsonicFailureResponse": {
-                "$ref": "./content/en/docs/Responses/Subsonic-failureResponse.json"
+                "$ref": "./responses/Subsonic-failureResponse.json"
             },
             "SubsonicResponse": {
-                "$ref": "./content/en/docs/Responses/Subsonic-response.json"
+                "$ref": "./responses/Subsonic-response.json"
             },
             "ItemGenre": {
-                "$ref": "./content/en/docs/Responses/itemGenre.json"
+                "$ref": "./responses/itemGenre.json"
             },
             "ArtistID3": {
                 "type": "object",
