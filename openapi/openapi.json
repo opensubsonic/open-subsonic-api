@@ -34,76 +34,7 @@
     ],
     "paths": {
         "/rest/addChatMessage": {
-            "get": {
-                "summary": "Adds a message to the chat log.",
-                "description": "Adds a message to the chat log.",
-                "operationId": "getAddChatMessage",
-                "tags": [
-                    "Chat"
-                ],
-                "parameters": [
-                    {
-                        "name": "message",
-                        "in": "query",
-                        "description": "The chat message.",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/EmptySubsonicResponse"
-                    }
-                },
-                "externalDocs": {
-                    "description": "addChatMessage",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/addchatmessage/"
-                }
-            },
-            "post": {
-                "summary": "Adds a message to the chat log.",
-                "description": "Adds a message to the chat log.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postAddChatMessage",
-                "tags": [
-                    "Chat"
-                ],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "message": {
-                                        "type": "string",
-                                        "description": "The chat message."
-                                    }
-                                },
-                                "required": [
-                                    "message"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/EmptySubsonicResponse"
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "addChatMessage",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/addchatmessage/"
-                }
-            }
+            "$ref": "./endpoints/addChatMessage.json"
         },
         "/rest/changePassword": {
             "get": {
@@ -8094,34 +8025,13 @@
     "components": {
         "responses": {
             "EmptySubsonicResponse": {
-                "description": "Successful or failed response",
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "$ref": "#/components/schemas/SubsonicResponse"
-                        }
-                    }
-                }
+                "$ref": "./responses/EmptySubsonicResponse.json"
             },
             "HTTPFormPostNotSupported": {
-                "description": "HTTP form POST (`formPost`) Extension not supported"
+                "$ref": "./responses/HTTPFormPostNotSupported.json"
             },
             "BinaryResponse": {
-                "description": "Success (binary) or error (xml) response",
-                "content": {
-                    "application/binary": {
-                        "schema": {
-                            "type": "string",
-                            "format": "binary"
-                        }
-                    },
-                    "text/xml": {
-                        "schema": {
-                            "type": "object",
-                            "description": "Error response TODO: TO BE DESCRIBED"
-                        }
-                    }
-                }
+                "$ref": "./responses/BinaryResponse.json"
             }
         },
         "parameters": {
@@ -8190,49 +8100,49 @@
         },
         "schemas": {
             "SubsonicError": {
-                "$ref": "./responses/Error.json"
+                "$ref": "./schemas/Error.json"
             },
             "SubsonicBaseResponse": {
-                "$ref": "./responses/SubsonicResponse/SubsonicBaseResponse.json"
+                "$ref": "./schemas/SubsonicResponse/SubsonicBaseResponse.json"
             },
             "SubsonicSuccessResponse": {
-                "$ref": "./responses/SubsonicResponse/SubsonicSuccessResponse.json"
+                "$ref": "./schemas/SubsonicResponse/SubsonicSuccessResponse.json"
             },
             "SubsonicFailureResponse": {
-                "$ref": "./responses/SubsonicResponse/SubsonicFailureResponse.json"
+                "$ref": "./schemas/SubsonicResponse/SubsonicFailureResponse.json"
             },
             "SubsonicResponse": {
-                "$ref": "./responses/SubsonicResponse.json"
+                "$ref": "./schemas/SubsonicResponse.json"
             },
             "ItemGenre": {
-                "$ref": "./responses/ItemGenre.json"
+                "$ref": "./schemas/ItemGenre.json"
             },
             "ArtistID3": {
-                "$ref": "./responses/ArtistID3.json"
+                "$ref": "./schemas/ArtistID3.json"
             },
             "Contributor": {
-                "$ref": "./responses/Contributor.json"
+                "$ref": "./schemas/Contributor.json"
             },
             "ReplayGain": {
-                "$ref": "./responses/ReplayGain.json"
+                "$ref": "./schemas/ReplayGain.json"
             },
             "GenericMediaType": {
-                "$ref": "./responses/GenericMediaType.json"
+                "$ref": "./schemas/GenericMediaType.json"
             },
             "MediaType": {
-                "$ref": "./responses/MediaType.json"
+                "$ref": "./schemas/MediaType.json"
             },
             "ExplicitStatus": {
-                "$ref": "./responses/ExplicitStatus.json"
+                "$ref": "./schemas/ExplicitStatus.json"
             },
             "Child": {
-                "$ref": "./responses/Child.json"
+                "$ref": "./schemas/Child.json"
             },
             "Playlist": {
-                "$ref": "./responses/Playlist.json"
+                "$ref": "./schemas/Playlist.json"
             },
             "PlaylistWithSongs": {
-                "$ref": "./responses/PlaylistWithSongs.json"
+                "$ref": "./schemas/PlaylistWithSongs.json"
             },
             "CreatePlaylistSuccessResponse": {
                 "allOf": [
@@ -8273,10 +8183,10 @@
                 }
             },
             "Share": {
-                "$ref": "./responses/Share.json"
+                "$ref": "./schemas/Share.json"
             },
             "Shares": {
-                "$ref": "./responses/Shares.json"
+                "$ref": "./schemas/Shares.json"
             },
             "CreateSharesSuccessResponse": {
                 "allOf": [
@@ -8317,19 +8227,19 @@
                 }
             },
             "RecordLabel": {
-                "$ref": "./responses/RecordLabel.json"
+                "$ref": "./schemas/RecordLabel.json"
             },
             "ItemDate": {
-                "$ref": "./responses/ItemDate.json"
+                "$ref": "./schemas/ItemDate.json"
             },
             "DiscTitle": {
-                "$ref": "./responses/DiscTitle.json"
+                "$ref": "./schemas/DiscTitle.json"
             },
             "AlbumID3": {
-                "$ref": "./responses/AlbumID3.json"
+                "$ref": "./schemas/AlbumID3.json"
             },
             "AlbumID3WithSongs": {
-                "$ref": "./responses/AlbumID3WithSongs.json"
+                "$ref": "./schemas/AlbumID3WithSongs.json"
             },
             "GetAlbumSuccessResponse": {
                 "allOf": [
@@ -8370,7 +8280,7 @@
                 }
             },
             "AlbumInfo": {
-                "$ref": "./responses/AlbumInfo.json"
+                "$ref": "./schemas/AlbumInfo.json"
             },
             "GetAlbumInfoSuccessResponse": {
                 "allOf": [
@@ -8411,10 +8321,10 @@
                 }
             },
             "AlbumListType": {
-                "$ref": "./responses/AlbumListType.json"
+                "$ref": "./schemas/AlbumListType.json"
             },
             "AlbumList": {
-                "$ref": "./responses/AlbumList.json"
+                "$ref": "./schemas/AlbumList.json"
             },
             "GetAlbumListSuccessResponse": {
                 "allOf": [
@@ -8455,7 +8365,7 @@
                 }
             },
             "AlbumList2": {
-                "$ref": "./responses/AlbumList2.json"
+                "$ref": "./schemas/AlbumList2.json"
             },
             "GetAlbumList2SuccessResponse": {
                 "allOf": [
@@ -8496,7 +8406,7 @@
                 }
             },
             "ArtistWithAlbumsID3": {
-                "$ref": "./responses/ArtistWithAlbumsID3.json"
+                "$ref": "./schemas/ArtistWithAlbumsID3.json"
             },
             "GetArtistSuccessResponse": {
                 "allOf": [
@@ -8537,10 +8447,10 @@
                 }
             },
             "Artist": {
-                "$ref": "./responses/Artist.json"
+                "$ref": "./schemas/Artist.json"
             },
             "ArtistInfo": {
-                "$ref": "./responses/ArtistInfo.json"
+                "$ref": "./schemas/ArtistInfo.json"
             },
             "GetArtistInfoSuccessResponse": {
                 "allOf": [
@@ -8581,7 +8491,7 @@
                 }
             },
             "ArtistInfo2": {
-                "$ref": "./responses/ArtistInfo2.json"
+                "$ref": "./schemas/ArtistInfo2.json"
             },
             "GetArtistInfo2SuccessResponse": {
                 "allOf": [
@@ -8622,7 +8532,7 @@
                 }
             },
             "ArtistsID3": {
-                "$ref": "./responses/ArtistsID3.json"
+                "$ref": "./schemas/ArtistsID3.json"
             },
             "GetArtistsSuccessResponse": {
                 "allOf": [
@@ -8663,10 +8573,10 @@
                 }
             },
             "Bookmark": {
-                "$ref": "./responses/Bookmark.json"
+                "$ref": "./schemas/Bookmark.json"
             },
             "Bookmarks": {
-                "$ref": "./responses/Bookmarks.json"
+                "$ref": "./schemas/Bookmarks.json"
             },
             "GetBookmarksSuccessResponse": {
                 "allOf": [
@@ -8707,10 +8617,10 @@
                 }
             },
             "ChatMessage": {
-                "$ref": "./responses/ChatMessage.json"
+                "$ref": "./schemas/ChatMessage.json"
             },
             "ChatMessages": {
-                "$ref": "./responses/ChatMessages.json"
+                "$ref": "./schemas/ChatMessages.json"
             },
             "GetChatMessagesSuccessResponse": {
                 "allOf": [
@@ -8751,10 +8661,10 @@
                 }
             },
             "Genre": {
-                "$ref": "./responses/Genre.json"
+                "$ref": "./schemas/Genre.json"
             },
             "Genres": {
-                "$ref": "./responses/Genres.json"
+                "$ref": "./schemas/Genres.json"
             },
             "GetGenresSuccessResponse": {
                 "allOf": [
@@ -8795,10 +8705,10 @@
                 }
             },
             "Index": {
-                "$ref": "./responses/Index.json"
+                "$ref": "./schemas/Index.json"
             },
             "Indexes": {
-                "$ref": "./responses/Indexes.json"
+                "$ref": "./schemas/Indexes.json"
             },
             "GetIndexesSuccessResponse": {
                 "allOf": [
@@ -8839,10 +8749,10 @@
                 }
             },
             "InternetRadioStation": {
-                "$ref": "./responses/InternetRadioStation.json"
+                "$ref": "./schemas/InternetRadioStation.json"
             },
             "InternetRadioStations": {
-                "$ref": "./responses/InternetRadioStations.json"
+                "$ref": "./schemas/InternetRadioStations.json"
             },
             "GetInternetRadioStationsSuccessResponse": {
                 "allOf": [
@@ -8883,7 +8793,7 @@
                 }
             },
             "License": {
-                "$ref": "./responses/License.json"
+                "$ref": "./schemas/License.json"
             },
             "GetLicenseSuccessResponse": {
                 "allOf": [
@@ -8924,7 +8834,7 @@
                 }
             },
             "Lyrics": {
-                "$ref": "./responses/Lyrics.json"
+                "$ref": "./schemas/Lyrics.json"
             },
             "GetLyricsSuccessResponse": {
                 "allOf": [
@@ -8965,13 +8875,13 @@
                 }
             },
             "Line": {
-                "$ref": "./responses/Line.json"
+                "$ref": "./schemas/Line.json"
             },
             "StructuredLyrics": {
-                "$ref": "./responses/StructuredLyrics.json"
+                "$ref": "./schemas/StructuredLyrics.json"
             },
             "LyricsList": {
-                "$ref": "./responses/LyricsList.json"
+                "$ref": "./schemas/LyricsList.json"
             },
             "GetLyricsBySongIdSuccessResponse": {
                 "allOf": [
@@ -9012,7 +8922,7 @@
                 }
             },
             "Directory": {
-                "$ref": "./responses/Directory.json"
+                "$ref": "./schemas/Directory.json"
             },
             "GetMusicDirectorySuccessResponse": {
                 "allOf": [
@@ -9053,10 +8963,10 @@
                 }
             },
             "MusicFolder": {
-                "$ref": "./responses/MusicFolder.json"
+                "$ref": "./schemas/MusicFolder.json"
             },
             "MusicFolders": {
-                "$ref": "./responses/MusicFolders.json"
+                "$ref": "./schemas/MusicFolders.json"
             },
             "GetMusicFoldersSuccessResponse": {
                 "allOf": [
@@ -9097,13 +9007,13 @@
                 }
             },
             "PodcastStatus": {
-                "$ref": "./responses/PodcastStatus.json"
+                "$ref": "./schemas/PodcastStatus.json"
             },
             "PodcastEpisode": {
-                "$ref": "./responses/PodcastEpisode.json"
+                "$ref": "./schemas/PodcastEpisode.json"
             },
             "NewestPodcasts": {
-                "$ref": "./responses/NewestPodcasts.json"
+                "$ref": "./schemas/NewestPodcasts.json"
             },
             "GetNewestPodcastsSuccessResponse": {
                 "allOf": [
@@ -9144,10 +9054,10 @@
                 }
             },
             "NowPlayingEntry": {
-                "$ref": "./responses/NowPlayingEntry.json"
+                "$ref": "./schemas/NowPlayingEntry.json"
             },
             "NowPlaying": {
-                "$ref": "./responses/NowPlaying.json"
+                "$ref": "./schemas/NowPlaying.json"
             },
             "GetNowPlayingSuccessResponse": {
                 "allOf": [
@@ -9188,7 +9098,7 @@
                 }
             },
             "OpenSubsonicExtension": {
-                "$ref": "./responses/OpenSubsonicExtension.json"
+                "$ref": "./schemas/OpenSubsonicExtension.json"
             },
             "GetOpenSubsonicExtensionsSuccessResponse": {
                 "allOf": [
@@ -9270,7 +9180,7 @@
                 }
             },
             "Playlists": {
-                "$ref": "./responses/Playlists.json"
+                "$ref": "./schemas/Playlists.json"
             },
             "GetPlaylistsSuccessResponse": {
                 "allOf": [
@@ -9311,7 +9221,7 @@
                 }
             },
             "PlayQueue": {
-                "$ref": "./responses/PlayQueue.json"
+                "$ref": "./schemas/PlayQueue.json"
             },
             "GetPlayQueueSuccessResponse": {
                 "allOf": [
@@ -9390,10 +9300,10 @@
                 }
             },
             "PodcastChannel": {
-                "$ref": "./responses/PodcastChannel.json"
+                "$ref": "./schemas/PodcastChannel.json"
             },
             "Podcasts": {
-                "$ref": "./responses/Podcasts.json"
+                "$ref": "./schemas/Podcasts.json"
             },
             "GetPodcastsSuccessResponse": {
                 "allOf": [
@@ -9434,7 +9344,7 @@
                 }
             },
             "Songs": {
-                "$ref": "./responses/Songs.json"
+                "$ref": "./schemas/Songs.json"
             },
             "GetRandomSongsSuccessResponse": {
                 "allOf": [
@@ -9475,7 +9385,7 @@
                 }
             },
             "ScanStatus": {
-                "$ref": "./responses/ScanStatus.json"
+                "$ref": "./schemas/ScanStatus.json"
             },
             "GetScanStatusSuccessResponse": {
                 "allOf": [
@@ -9554,7 +9464,7 @@
                 }
             },
             "SimilarSongs": {
-                "$ref": "./responses/SimilarSongs.json"
+                "$ref": "./schemas/SimilarSongs.json"
             },
             "GetSimilarSongsSuccessResponse": {
                 "allOf": [
@@ -9595,7 +9505,7 @@
                 }
             },
             "SimilarSongs2": {
-                "$ref": "./responses/SimilarSongs2.json"
+                "$ref": "./schemas/SimilarSongs2.json"
             },
             "GetSimilarSongs2SuccessResponse": {
                 "allOf": [
@@ -9712,7 +9622,7 @@
                 }
             },
             "Starred": {
-                "$ref": "./responses/Starred.json"
+                "$ref": "./schemas/Starred.json"
             },
             "GetStarredSuccessResponse": {
                 "allOf": [
@@ -9753,7 +9663,7 @@
                 }
             },
             "Starred2": {
-                "$ref": "./responses/Starred2.json"
+                "$ref": "./schemas/Starred2.json"
             },
             "GetStarred2SuccessResponse": {
                 "allOf": [
@@ -9794,7 +9704,7 @@
                 }
             },
             "TopSongs": {
-                "$ref": "./responses/TopSongs.json"
+                "$ref": "./schemas/TopSongs.json"
             },
             "GetTopSongsSuccessResponse": {
                 "allOf": [
@@ -9835,7 +9745,7 @@
                 }
             },
             "User": {
-                "$ref": "./responses/User.json"
+                "$ref": "./schemas/User.json"
             },
             "GetUserSuccessResponse": {
                 "allOf": [
@@ -9876,7 +9786,7 @@
                 }
             },
             "Users": {
-                "$ref": "./responses/Users.json"
+                "$ref": "./schemas/Users.json"
             },
             "GetUsersSuccessResponse": {
                 "allOf": [
@@ -9917,7 +9827,7 @@
                 }
             },
             "VideoInfo": {
-                "$ref": "./responses/VideoInfo.json"
+                "$ref": "./schemas/VideoInfo.json"
             },
             "GetVideoInfoSuccessResponse": {
                 "allOf": [
@@ -9958,7 +9868,7 @@
                 }
             },
             "Videos": {
-                "$ref": "./responses/Videos.json"
+                "$ref": "./schemas/Videos.json"
             },
             "GetVideosSuccessResponse": {
                 "allOf": [
@@ -9999,13 +9909,13 @@
                 }
             },
             "JukeboxAction": {
-                "$ref": "./responses/JukeboxAction.json"
+                "$ref": "./schemas/JukeboxAction.json"
             },
             "JukeboxStatus": {
-                "$ref": "./responses/JukeboxStatus.json"
+                "$ref": "./schemas/JukeboxStatus.json"
             },
             "JukeboxPlaylist": {
-                "$ref": "./responses/JukeboxPlaylist.json"
+                "$ref": "./schemas/JukeboxPlaylist.json"
             },
             "JukeboxControlSuccessResponse": {
                 "allOf": [
@@ -10046,7 +9956,7 @@
                 }
             },
             "SearchResult": {
-                "$ref": "./responses/SearchResult.json"
+                "$ref": "./schemas/SearchResult.json"
             },
             "SearchSuccessResponse": {
                 "allOf": [
@@ -10087,7 +9997,7 @@
                 }
             },
             "SearchResult2": {
-                "$ref": "./responses/SearchResult2.json"
+                "$ref": "./schemas/SearchResult2.json"
             },
             "Search2SuccessResponse": {
                 "allOf": [
@@ -10128,7 +10038,7 @@
                 }
             },
             "SearchResult3": {
-                "$ref": "./responses/SearchResult3.json"
+                "$ref": "./schemas/SearchResult3.json"
             },
             "Search3SuccessResponse": {
                 "allOf": [
@@ -10207,7 +10117,7 @@
                 }
             },
             "TokenInfo": {
-                "$ref": "./responses/TokenInfo.json"
+                "$ref": "./schemas/TokenInfo.json"
             },
             "GetTokenInfoSuccessResponse": {
                 "allOf": [
