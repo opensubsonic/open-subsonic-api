@@ -5,7 +5,8 @@
   "main": "none.js",
   "scripts": {
     "start": "hugo server",
-    "build": "hugo build"
+    "build": "hugo build",
+    "build:openapi": "swagger-cli bundle openapi.json -o static/openapi.json --type json"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.3.7",
-    "postcss-cli": "^9.0.2"
+    "postcss-cli": "^9.0.2",
+    "swagger-cli": "^4.0.4"
   }
 }
