@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "A subsonic-response element with a nested shares element on success. Which in turns contains a single share element for the newly created share",
+    "properties": {
+        "subsonic-response": {
+            "oneOf": [
+                {
+                    "$ref": "./CreateSharesSuccessResponse.json"
+                },
+                {
+                    "$ref": "../../schemas/SubsonicResponse/SubsonicFailureResponse.json"
+                }
+            ]
+        }
+    },
+    "externalDocs": {
+        "description": "CreateSharesResponse",
+        "url": "https://opensubsonic.netlify.app/docs/endpoints/createshare/"
+    }
+}
