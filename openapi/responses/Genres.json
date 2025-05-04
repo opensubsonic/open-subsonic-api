@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Genres list.",
+    "externalDocs": {
+        "description": "Genres",
+        "url": "https://opensubsonic.netlify.app/docs/responses/genres/"
+    },
+    "properties": {
+        "genre": {
+            "type": "array",
+            "items": {
+                "$ref": "./Genre.json"
+            },
+            "description": "List of genre"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "description": "Directory.",
+    "externalDocs": {
+        "description": "Directory",
+        "url": "https://opensubsonic.netlify.app/docs/responses/directory/"
+    },
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The id"
+        },
+        "parent": {
+            "type": "string",
+            "description": "Parent item"
+        },
+        "name": {
+            "type": "string",
+            "description": "The directory name"
+        },
+        "starred": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Starred date [ISO 8601]"
+        },
+        "userRating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "The user rating [1-5]"
+        },
+        "averageRating": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "The average rating [1-5]"
+        },
+        "playCount": {
+            "type": "integer",
+            "description": "The play count"
+        },
+        "child": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "The directory content"
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "description": "Artist list.",
+    "externalDocs": {
+        "description": "Indexes",
+        "url": "https://opensubsonic.netlify.app/docs/responses/indexes/"
+    },
+    "properties": {
+        "ignoredArticles": {
+            "type": "string",
+            "description": "The ignored articles"
+        },
+        "lastModified": {
+            "type": "integer",
+            "description": "Last time the index was modified in milliseconds after January 1, 1970 UTC"
+        },
+        "shortcut": {
+            "type": "array",
+            "description": "Shortcut",
+            "items": {
+                "$ref": "./Artist.json"
+            }
+        },
+        "child": {
+            "type": "array",
+            "description": "Array of children",
+            "items": {
+                "$ref": "./Child.json"
+            }
+        },
+        "index": {
+            "type": "array",
+            "description": "Indexed artists",
+            "items": {
+                "$ref": "./Index.json"
+            }
+        }
+    },
+    "required": [
+        "ignoredArticles",
+        "lastModified"
+    ]
+}

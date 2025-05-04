@@ -1,0 +1,17 @@
+{
+    "type": "string",
+    "description": "JukeBox action.",
+    "enum": [
+        "get",
+        "status",
+        "set",
+        "start",
+        "stop",
+        "skip",
+        "add",
+        "clear",
+        "remove",
+        "shuffle",
+        "setGain"
+    ]
+}

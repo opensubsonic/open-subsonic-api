@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "description": "videos. TODO",
+    "externalDocs": {
+        "description": "Videos",
+        "url": "https://opensubsonic.netlify.app/docs/responses/videos/"
+    }
+}

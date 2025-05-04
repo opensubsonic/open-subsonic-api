@@ -8193,16 +8193,16 @@
                 "$ref": "./responses/Error.json"
             },
             "SubsonicBaseResponse": {
-                "$ref": "./responses/Subsonic-baseResponse.json"
+                "$ref": "./responses/SubsonicResponse/SubsonicBaseResponse.json"
             },
             "SubsonicSuccessResponse": {
-                "$ref": "./responses/Subsonic-successResponse.json"
+                "$ref": "./responses/SubsonicResponse/SubsonicSuccessResponse.json"
             },
             "SubsonicFailureResponse": {
-                "$ref": "./responses/Subsonic-failureResponse.json"
+                "$ref": "./responses/SubsonicResponse/SubsonicFailureResponse.json"
             },
             "SubsonicResponse": {
-                "$ref": "./responses/Subsonic-response.json"
+                "$ref": "./responses/SubsonicResponse.json"
             },
             "ItemGenre": {
                 "$ref": "./responses/ItemGenre.json"
@@ -8666,21 +8666,7 @@
                 "$ref": "./responses/Bookmark.json"
             },
             "Bookmarks": {
-                "type": "object",
-                "description": "Bookmarks list.",
-                "externalDocs": {
-                    "description": "Bookmarks",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/bookmarks/"
-                },
-                "properties": {
-                    "bookmark": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Bookmark"
-                        },
-                        "description": "List of bookmark"
-                    }
-                }
+                "$ref": "./responses/Bookmarks.json"
             },
             "GetBookmarksSuccessResponse": {
                 "allOf": [
@@ -8721,48 +8707,10 @@
                 }
             },
             "ChatMessage": {
-                "type": "object",
-                "description": "A chatMessage.",
-                "externalDocs": {
-                    "description": "ChatMessage",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/chatmessage/"
-                },
-                "properties": {
-                    "username": {
-                        "type": "string",
-                        "description": "Username"
-                    },
-                    "time": {
-                        "type": "integer",
-                        "description": "Time in millis since Jan 1 1970"
-                    },
-                    "message": {
-                        "type": "string",
-                        "description": "The message"
-                    }
-                },
-                "required": [
-                    "id",
-                    "username",
-                    "message"
-                ]
+                "$ref": "./responses/ChatMessage.json"
             },
             "ChatMessages": {
-                "type": "object",
-                "description": "Chat messages list.",
-                "externalDocs": {
-                    "description": "ChatMessages",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/chatmessages/"
-                },
-                "properties": {
-                    "chatMessage": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ChatMessage"
-                        },
-                        "description": "List of chatMessage"
-                    }
-                }
+                "$ref": "./responses/ChatMessages.json"
             },
             "GetChatMessagesSuccessResponse": {
                 "allOf": [
@@ -8803,48 +8751,10 @@
                 }
             },
             "Genre": {
-                "type": "object",
-                "description": "A genre.",
-                "externalDocs": {
-                    "description": "Genre",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/genre/"
-                },
-                "properties": {
-                    "value": {
-                        "type": "string",
-                        "description": "Genre name"
-                    },
-                    "songCount": {
-                        "type": "integer",
-                        "description": "Genre song count"
-                    },
-                    "albumCount": {
-                        "type": "integer",
-                        "description": "Genre album count"
-                    }
-                },
-                "required": [
-                    "value",
-                    "songCount",
-                    "albumCount"
-                ]
+                "$ref": "./responses/Genre.json"
             },
             "Genres": {
-                "type": "object",
-                "description": "Genres list.",
-                "externalDocs": {
-                    "description": "Genres",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/genres/"
-                },
-                "properties": {
-                    "genre": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Genre"
-                        },
-                        "description": "List of genre"
-                    }
-                }
+                "$ref": "./responses/Genres.json"
             },
             "GetGenresSuccessResponse": {
                 "allOf": [
@@ -8885,71 +8795,10 @@
                 }
             },
             "Index": {
-                "type": "object",
-                "description": "An indexed artist list.",
-                "externalDocs": {
-                    "description": "Index",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/index_/"
-                },
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "Index name"
-                    },
-                    "artist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Artist"
-                        },
-                        "description": "Artist list"
-                    }
-                },
-                "required": [
-                    "name"
-                ]
+                "$ref": "./responses/Index.json"
             },
             "Indexes": {
-                "type": "object",
-                "description": "Artist list.",
-                "externalDocs": {
-                    "description": "Indexes",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/indexes/"
-                },
-                "properties": {
-                    "ignoredArticles": {
-                        "type": "string",
-                        "description": "The ignored articles"
-                    },
-                    "lastModified": {
-                        "type": "integer",
-                        "description": "Last time the index was modified in milliseconds after January 1, 1970 UTC"
-                    },
-                    "shortcut": {
-                        "type": "array",
-                        "description": "Shortcut",
-                        "items": {
-                            "$ref": "#/components/schemas/Artist"
-                        }
-                    },
-                    "child": {
-                        "type": "array",
-                        "description": "Array of children",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        }
-                    },
-                    "index": {
-                        "type": "array",
-                        "description": "Indexed artists",
-                        "items": {
-                            "$ref": "#/components/schemas/Index"
-                        }
-                    }
-                },
-                "required": [
-                    "ignoredArticles",
-                    "lastModified"
-                ]
+                "$ref": "./responses/Indexes.json"
             },
             "GetIndexesSuccessResponse": {
                 "allOf": [
@@ -8990,52 +8839,10 @@
                 }
             },
             "InternetRadioStation": {
-                "type": "object",
-                "description": "An internetRadioStation.",
-                "externalDocs": {
-                    "description": "InternetRadioStation",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/internetradiostation/"
-                },
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The Id"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The name"
-                    },
-                    "streamUrl": {
-                        "type": "string",
-                        "description": "The streamUrl"
-                    },
-                    "homePageUrl": {
-                        "type": "string",
-                        "description": "Genre name"
-                    }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "streamUrl"
-                ]
+                "$ref": "./responses/InternetRadioStation.json"
             },
             "InternetRadioStations": {
-                "type": "object",
-                "description": "internetRadioStations.",
-                "externalDocs": {
-                    "description": "InternetRadioStations",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/internetradiostations/"
-                },
-                "properties": {
-                    "internetRadioStation": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/InternetRadioStation"
-                        },
-                        "description": "A list of internetRadioStation"
-                    }
-                }
+                "$ref": "./responses/InternetRadioStations.json"
             },
             "GetInternetRadioStationsSuccessResponse": {
                 "allOf": [
@@ -9076,35 +8883,7 @@
                 }
             },
             "License": {
-                "type": "object",
-                "description": "getLicense result.",
-                "externalDocs": {
-                    "description": "License",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/license/"
-                },
-                "properties": {
-                    "valid": {
-                        "type": "boolean",
-                        "description": "The status of the license"
-                    },
-                    "email": {
-                        "type": "string",
-                        "description": "User email"
-                    },
-                    "licenseExpires": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "End of license date. [ISO 8601]"
-                    },
-                    "trialExpires": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "End of trial date. [ISO 8601]"
-                    }
-                },
-                "required": [
-                    "valid"
-                ]
+                "$ref": "./responses/License.json"
             },
             "GetLicenseSuccessResponse": {
                 "allOf": [
@@ -9145,29 +8924,7 @@
                 }
             },
             "Lyrics": {
-                "type": "object",
-                "description": "Lyrics.",
-                "externalDocs": {
-                    "description": "Lyrics",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/lyrics/"
-                },
-                "properties": {
-                    "value": {
-                        "type": "string",
-                        "description": "The lyrics"
-                    },
-                    "artist": {
-                        "type": "string",
-                        "description": "The artist name"
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "The song title"
-                    }
-                },
-                "required": [
-                    "lyrics"
-                ]
+                "$ref": "./responses/Lyrics.json"
             },
             "GetLyricsSuccessResponse": {
                 "allOf": [
@@ -9208,84 +8965,13 @@
                 }
             },
             "Line": {
-                "type": "object",
-                "description": "One line of a song lyric",
-                "externalDocs": {
-                    "description": "Line",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/line/"
-                },
-                "properties": {
-                    "value": {
-                        "type": "string",
-                        "description": "The actual text of this line"
-                    },
-                    "start": {
-                        "type": "number",
-                        "description": "The start time of the lyrics, relative to the start time of the track, in milliseconds. If this is not part of synced lyrics, start __must__ be omitted"
-                    }
-                },
-                "required": [
-                    "value"
-                ]
+                "$ref": "./responses/Line.json"
             },
             "StructuredLyrics": {
-                "type": "object",
-                "description": "Structured lyrics",
-                "externalDocs": {
-                    "description": "StructuredLyrics",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/structuredlyrics/"
-                },
-                "properties": {
-                    "lang": {
-                        "type": "string",
-                        "description": "The lyrics language (ideally ISO 639). If the language is unknown (e.g. lrc file), the server must return `und` (ISO standard) or `xxx` (common value for taggers). Ideally, the server will return lang as an ISO 639 (2/3) code. However, tagged files and external lyrics can come with any value as a potential language code, so clients should take care when displaying lang.\n\nFurthermore, there is special behavior for the value xxx. While not an ISO code, it is commonly used by taggers and other parsing software. Clients should treat xxx as not having a specified language (equivalent to the und code)."
-                    },
-                    "synced": {
-                        "type": "boolean",
-                        "description": "True if the lyrics are synced, false otherwise"
-                    },
-                    "line": {
-                        "type": "array",
-                        "description": "The actual lyrics. Ordered by start time (synced) or appearance order (unsynced)",
-                        "items": {
-                            "$ref": "#/components/schemas/Line"
-                        }
-                    },
-                    "displayArtist": {
-                        "type": "string",
-                        "description": "The artist name to display. This could be the localized name, or any other value"
-                    },
-                    "displayTitle": {
-                        "type": "string",
-                        "description": "The title to display. This could be the song title (localized), or any other value"
-                    },
-                    "offset": {
-                        "type": "number",
-                        "description": "The offset to apply to all lyrics, in milliseconds. Positive means lyrics appear sooner, negative means later. If not included, the offset must be assumed to be 0"
-                    }
-                },
-                "required": [
-                    "lang",
-                    "synced",
-                    "line"
-                ]
+                "$ref": "./responses/StructuredLyrics.json"
             },
             "LyricsList": {
-                "type": "object",
-                "description": "List of structured lyrics",
-                "externalDocs": {
-                    "description": "LyricsList",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/lyricslist/"
-                },
-                "properties": {
-                    "structuredLyrics": {
-                        "type": "array",
-                        "description": "Structured lyrics. There can be multiple lyrics of the same type with the same language",
-                        "items": {
-                            "$ref": "#/components/schemas/StructuredLyrics"
-                        }
-                    }
-                }
+                "$ref": "./responses/LyricsList.json"
             },
             "GetLyricsBySongIdSuccessResponse": {
                 "allOf": [
@@ -9326,58 +9012,7 @@
                 }
             },
             "Directory": {
-                "type": "object",
-                "description": "Directory.",
-                "externalDocs": {
-                    "description": "Directory",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/directory/"
-                },
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The id"
-                    },
-                    "parent": {
-                        "type": "string",
-                        "description": "Parent item"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The directory name"
-                    },
-                    "starred": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Starred date [ISO 8601]"
-                    },
-                    "userRating": {
-                        "type": "integer",
-                        "minimum": 1,
-                        "maximum": 5,
-                        "description": "The user rating [1-5]"
-                    },
-                    "averageRating": {
-                        "type": "number",
-                        "minimum": 1,
-                        "maximum": 5,
-                        "description": "The average rating [1-5]"
-                    },
-                    "playCount": {
-                        "type": "integer",
-                        "description": "The play count"
-                    },
-                    "child": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "The directory content"
-                    }
-                },
-                "required": [
-                    "id",
-                    "name"
-                ]
+                "$ref": "./responses/Directory.json"
             },
             "GetMusicDirectorySuccessResponse": {
                 "allOf": [
@@ -9418,42 +9053,10 @@
                 }
             },
             "MusicFolder": {
-                "type": "object",
-                "description": "MusicFolder.",
-                "externalDocs": {
-                    "description": "MusicFolder",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/musicfolder/"
-                },
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "description": "The id"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The folder name"
-                    }
-                },
-                "required": [
-                    "id"
-                ]
+                "$ref": "./responses/MusicFolder.json"
             },
             "MusicFolders": {
-                "type": "object",
-                "description": "MusicFolders.",
-                "externalDocs": {
-                    "description": "MusicFolders",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/musicfolders/"
-                },
-                "properties": {
-                    "musicFolder": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/MusicFolder"
-                        },
-                        "description": "The folders"
-                    }
-                }
+                "$ref": "./responses/MusicFolders.json"
             },
             "GetMusicFoldersSuccessResponse": {
                 "allOf": [
@@ -9494,77 +9097,13 @@
                 }
             },
             "PodcastStatus": {
-                "type": "string",
-                "description": "An enumeration of possible podcast statuses",
-                "externalDocs": {
-                    "description": "PodcastStatus",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/podcaststatus/"
-                },
-                "enum": [
-                    "new",
-                    "downloading",
-                    "completed",
-                    "error",
-                    "deleted",
-                    "skipped"
-                ]
+                "$ref": "./responses/PodcastStatus.json"
             },
             "PodcastEpisode": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/Child"
-                    },
-                    {
-                        "type": "object",
-                        "description": "A podcast episode.",
-                        "externalDocs": {
-                            "description": "PodcastEpisode",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/podcastepisode/"
-                        },
-                        "properties": {
-                            "streamId": {
-                                "type": "string",
-                                "description": "ID used for streaming podcast"
-                            },
-                            "channelId": {
-                                "type": "string",
-                                "description": "TID of the podcast channel"
-                            },
-                            "description": {
-                                "type": "string",
-                                "description": "Episode description"
-                            },
-                            "status": {
-                                "$ref": "#/components/schemas/PodcastStatus"
-                            },
-                            "publishDate": {
-                                "type": "string",
-                                "format": "date-time",
-                                "description": "Date the episode was published [ISO 8601]"
-                            }
-                        },
-                        "required": [
-                            "channelId",
-                            "status"
-                        ]
-                    }
-                ]
+                "$ref": "./responses/PodcastEpisode.json"
             },
             "NewestPodcasts": {
-                "type": "object",
-                "description": "NewestPodcasts.",
-                "externalDocs": {
-                    "description": "NewestPodcasts",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/newestpodcasts/"
-                },
-                "properties": {
-                    "episode": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/PodcastEpisode"
-                        }
-                    }
-                }
+                "$ref": "./responses/NewestPodcasts.json"
             },
             "GetNewestPodcastsSuccessResponse": {
                 "allOf": [
@@ -9605,62 +9144,10 @@
                 }
             },
             "NowPlayingEntry": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/Child"
-                    },
-                    {
-                        "type": "object",
-                        "description": "NowPlayingEntry.",
-                        "externalDocs": {
-                            "description": "NowPlayingEntry",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/nowplayingentry/"
-                        },
-                        "properties": {
-                            "username": {
-                                "type": "string",
-                                "description": "The username"
-                            },
-                            "minutesAgo": {
-                                "type": "string",
-                                "description": "Last update"
-                            },
-                            "playerId": {
-                                "type": "string",
-                                "description": "Player Id"
-                            },
-                            "playerName": {
-                                "type": "string",
-                                "description": "Player name"
-                            }
-                        },
-                        "required": [
-                            "username",
-                            "minutesAgo",
-                            "playerId"
-                        ]
-                    }
-                ]
+                "$ref": "./responses/NowPlayingEntry.json"
             },
             "NowPlaying": {
-                "type": "object",
-                "description": "nowPlaying.",
-                "externalDocs": {
-                    "description": "NowPlaying",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/nowplaying/"
-                },
-                "properties": {
-                    "entry": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/NowPlayingEntry"
-                        },
-                        "description": "The now playing entries"
-                    }
-                },
-                "required": [
-                    "entry"
-                ]
+                "$ref": "./responses/NowPlaying.json"
             },
             "GetNowPlayingSuccessResponse": {
                 "allOf": [
@@ -9701,29 +9188,7 @@
                 }
             },
             "OpenSubsonicExtension": {
-                "type": "object",
-                "description": "A supported OpenSubsonic API extension.",
-                "externalDocs": {
-                    "description": "OpenSubsonicExtension",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/opensubsonicextension/"
-                },
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "The name of the extension."
-                    },
-                    "versions": {
-                        "type": "array",
-                        "description": "The list of supported versions of the this extension.",
-                        "items": {
-                            "type": "integer"
-                        }
-                    }
-                },
-                "required": [
-                    "name",
-                    "versions"
-                ]
+                "$ref": "./responses/OpenSubsonicExtension.json"
             },
             "GetOpenSubsonicExtensionsSuccessResponse": {
                 "allOf": [
@@ -9805,21 +9270,7 @@
                 }
             },
             "Playlists": {
-                "type": "object",
-                "description": "Playlists.",
-                "externalDocs": {
-                    "description": "Playlists",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/playlists/"
-                },
-                "properties": {
-                    "playlist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Playlist"
-                        },
-                        "description": "The playlists"
-                    }
-                }
+                "$ref": "./responses/Playlists.json"
             },
             "GetPlaylistsSuccessResponse": {
                 "allOf": [
@@ -9860,47 +9311,7 @@
                 }
             },
             "PlayQueue": {
-                "type": "object",
-                "description": "NowPlayingEntry.",
-                "externalDocs": {
-                    "description": "PlayQueue",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/playqueue/"
-                },
-                "properties": {
-                    "current": {
-                        "type": "string",
-                        "description": "ID of currently playing track"
-                    },
-                    "position": {
-                        "type": "integer",
-                        "description": "Position in milliseconds of currently playing track"
-                    },
-                    "username": {
-                        "type": "string",
-                        "description": "The user this queue belongs to"
-                    },
-                    "changed": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Date modified [ISO 8601]"
-                    },
-                    "changedBy": {
-                        "type": "string",
-                        "description": "Name of client app"
-                    },
-                    "entry": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "The list of songs in the queue"
-                    }
-                },
-                "required": [
-                    "username",
-                    "changed",
-                    "changedBy"
-                ]
+                "$ref": "./responses/PlayQueue.json"
             },
             "GetPlayQueueSuccessResponse": {
                 "allOf": [
@@ -9979,74 +9390,10 @@
                 }
             },
             "PodcastChannel": {
-                "type": "object",
-                "description": "A Podcast channel",
-                "externalDocs": {
-                    "description": "PodcastChannel",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/podcastchannel/"
-                },
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The channel ID"
-                    },
-                    "url": {
-                        "type": "string",
-                        "description": "Podcast channel URL"
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "The channel title"
-                    },
-                    "description": {
-                        "type": "string",
-                        "description": "The channel description"
-                    },
-                    "coverArt": {
-                        "type": "string",
-                        "description": "ID used for retrieving cover art"
-                    },
-                    "originalImageUrl": {
-                        "type": "string",
-                        "description": "URL for original image of podcast channel"
-                    },
-                    "status": {
-                        "$ref": "#/components/schemas/PodcastStatus"
-                    },
-                    "errorMessage": {
-                        "type": "string",
-                        "description": "An error message"
-                    },
-                    "episode": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/PodcastEpisode"
-                        },
-                        "description": "Podcast episodes with this channel"
-                    }
-                },
-                "required": [
-                    "id",
-                    "url",
-                    "status"
-                ]
+                "$ref": "./responses/PodcastChannel.json"
             },
             "Podcasts": {
-                "type": "object",
-                "description": "Podcasts.",
-                "externalDocs": {
-                    "description": "Podcasts",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/podcasts/"
-                },
-                "properties": {
-                    "channel": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/PodcastChannel"
-                        },
-                        "description": "Podcast channel(s)"
-                    }
-                }
+                "$ref": "./responses/Podcasts.json"
             },
             "GetPodcastsSuccessResponse": {
                 "allOf": [
@@ -10087,21 +9434,7 @@
                 }
             },
             "Songs": {
-                "type": "object",
-                "description": "Songs list.",
-                "externalDocs": {
-                    "description": "Songs",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/songs/"
-                },
-                "properties": {
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "List of songs"
-                    }
-                }
+                "$ref": "./responses/Songs.json"
             },
             "GetRandomSongsSuccessResponse": {
                 "allOf": [
@@ -10142,25 +9475,7 @@
                 }
             },
             "ScanStatus": {
-                "type": "object",
-                "description": "Scan status information.",
-                "externalDocs": {
-                    "description": "ScanStatus",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/scanstatus/"
-                },
-                "properties": {
-                    "scanning": {
-                        "type": "boolean",
-                        "description": "The status of the scan"
-                    },
-                    "count": {
-                        "type": "integer",
-                        "description": "Scanned item count"
-                    }
-                },
-                "required": [
-                    "scanning"
-                ]
+                "$ref": "./responses/ScanStatus.json"
             },
             "GetScanStatusSuccessResponse": {
                 "allOf": [
@@ -10239,21 +9554,7 @@
                 }
             },
             "SimilarSongs": {
-                "type": "object",
-                "description": "SimilarSongs list.",
-                "externalDocs": {
-                    "description": "SimilarSongs",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/similarsongs/"
-                },
-                "properties": {
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "List of songs"
-                    }
-                }
+                "$ref": "./responses/SimilarSongs.json"
             },
             "GetSimilarSongsSuccessResponse": {
                 "allOf": [
@@ -10294,21 +9595,7 @@
                 }
             },
             "SimilarSongs2": {
-                "type": "object",
-                "description": "SimilarSongs2 list.",
-                "externalDocs": {
-                    "description": "SimilarSongs2",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/similarsongs2/"
-                },
-                "properties": {
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "List of songs"
-                    }
-                }
+                "$ref": "./responses/SimilarSongs2.json"
             },
             "GetSimilarSongs2SuccessResponse": {
                 "allOf": [
@@ -10425,35 +9712,7 @@
                 }
             },
             "Starred": {
-                "type": "object",
-                "description": "starred.",
-                "externalDocs": {
-                    "description": "Starred",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/starred/"
-                },
-                "properties": {
-                    "artist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Artist"
-                        },
-                        "description": "Starred artists"
-                    },
-                    "album": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "Starred albums"
-                    },
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "Starred songs"
-                    }
-                }
+                "$ref": "./responses/Starred.json"
             },
             "GetStarredSuccessResponse": {
                 "allOf": [
@@ -10494,35 +9753,7 @@
                 }
             },
             "Starred2": {
-                "type": "object",
-                "description": "Starred2.",
-                "externalDocs": {
-                    "description": "Starred2",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/starred2/"
-                },
-                "properties": {
-                    "artist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ArtistID3"
-                        },
-                        "description": "Starred artists"
-                    },
-                    "album": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/AlbumID3"
-                        },
-                        "description": "Starred albums"
-                    },
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "Starred songs"
-                    }
-                }
+                "$ref": "./responses/Starred2.json"
             },
             "GetStarred2SuccessResponse": {
                 "allOf": [
@@ -10563,21 +9794,7 @@
                 }
             },
             "TopSongs": {
-                "type": "object",
-                "description": "TopSongs list.",
-                "externalDocs": {
-                    "description": "TopSongs",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/topsongs/"
-                },
-                "properties": {
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "List of songs"
-                    }
-                }
+                "$ref": "./responses/TopSongs.json"
             },
             "GetTopSongsSuccessResponse": {
                 "allOf": [
@@ -10618,101 +9835,7 @@
                 }
             },
             "User": {
-                "type": "object",
-                "description": "user.",
-                "externalDocs": {
-                    "description": "User",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/user/"
-                },
-                "properties": {
-                    "username": {
-                        "type": "string",
-                        "description": "Username"
-                    },
-                    "scrobblingEnabled": {
-                        "type": "boolean",
-                        "description": "Scrobbling enabled"
-                    },
-                    "maxBitRate": {
-                        "type": "integer"
-                    },
-                    "adminRole": {
-                        "type": "boolean",
-                        "description": "Whether the user is an admin"
-                    },
-                    "settingsRole": {
-                        "type": "boolean",
-                        "description": "Whether the user is can edit settings"
-                    },
-                    "downloadRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can download"
-                    },
-                    "uploadRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can upload"
-                    },
-                    "playlistRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can create playlists"
-                    },
-                    "coverArtRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can get cover art"
-                    },
-                    "commentRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can create comments"
-                    },
-                    "podcastRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can create/refresh podcasts"
-                    },
-                    "streamRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can stream"
-                    },
-                    "jukeboxRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can control the jukebox"
-                    },
-                    "shareRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can create a stream"
-                    },
-                    "videoConversionRole": {
-                        "type": "boolean",
-                        "description": "Whether the user can convert videos"
-                    },
-                    "avatarLastChanged": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "Last time the avatar was changed [ISO 8601]"
-                    },
-                    "folder": {
-                        "type": "array",
-                        "items": {
-                            "type": "integer"
-                        },
-                        "description": "Folder ID(s)"
-                    }
-                },
-                "required": [
-                    "username",
-                    "scrobblingEnabled",
-                    "adminRole",
-                    "settingsRole",
-                    "downloadRole",
-                    "uploadRole",
-                    "playlistRole",
-                    "coverArtRole",
-                    "commentRole",
-                    "podcastRole",
-                    "streamRole",
-                    "jukeboxRole",
-                    "shareRole",
-                    "videoConversionRole"
-                ]
+                "$ref": "./responses/User.json"
             },
             "GetUserSuccessResponse": {
                 "allOf": [
@@ -10753,21 +9876,7 @@
                 }
             },
             "Users": {
-                "type": "object",
-                "description": "users.",
-                "externalDocs": {
-                    "description": "Users",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/users/"
-                },
-                "properties": {
-                    "user": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/User"
-                        },
-                        "description": "Array of users"
-                    }
-                }
+                "$ref": "./responses/Users.json"
             },
             "GetUsersSuccessResponse": {
                 "allOf": [
@@ -10808,12 +9917,7 @@
                 }
             },
             "VideoInfo": {
-                "type": "object",
-                "description": "videoInfo. TODO",
-                "externalDocs": {
-                    "description": "VideoInfo",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/videoinfo/"
-                }
+                "$ref": "./responses/VideoInfo.json"
             },
             "GetVideoInfoSuccessResponse": {
                 "allOf": [
@@ -10854,12 +9958,7 @@
                 }
             },
             "Videos": {
-                "type": "object",
-                "description": "videos. TODO",
-                "externalDocs": {
-                    "description": "Videos",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/videos/"
-                }
+                "$ref": "./responses/Videos.json"
             },
             "GetVideosSuccessResponse": {
                 "allOf": [
@@ -10900,78 +9999,13 @@
                 }
             },
             "JukeboxAction": {
-                "type": "string",
-                "description": "JukeBox action.",
-                "enum": [
-                    "get",
-                    "status",
-                    "set",
-                    "start",
-                    "stop",
-                    "skip",
-                    "add",
-                    "clear",
-                    "remove",
-                    "shuffle",
-                    "setGain"
-                ]
+                "$ref": "./responses/JukeboxAction.json"
             },
             "JukeboxStatus": {
-                "type": "object",
-                "description": "jukeboxStatus.",
-                "externalDocs": {
-                    "description": "JukeboxStatus",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/jukeboxstatus/"
-                },
-                "properties": {
-                    "currentIndex": {
-                        "type": "integer",
-                        "description": "The current index of the song being played"
-                    },
-                    "playing": {
-                        "type": "boolean",
-                        "description": "Whether the queue is currently playing"
-                    },
-                    "volume": {
-                        "type": "integer",
-                        "description": "Volume, in a range of [0.0, 1.0]",
-                        "format": "float",
-                        "minimum": 0.0,
-                        "maximum": 1.0
-                    },
-                    "position": {
-                        "type": "integer",
-                        "description": "The current position of the track in seconds"
-                    }
-                },
-                "required": [
-                    "currentIndex",
-                    "playing",
-                    "volume"
-                ]
+                "$ref": "./responses/JukeboxStatus.json"
             },
             "JukeboxPlaylist": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/JukeboxStatus"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "entry": {
-                                "type": "array",
-                                "description": "The songs currently enqueued in the jukebox",
-                                "items": {
-                                    "$ref": "#/components/schemas/Child"
-                                }
-                            }
-                        },
-                        "externalDocs": {
-                            "description": "JukeboxPlaylist",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/jukeboxplaylist/"
-                        }
-                    }
-                ]
+                "$ref": "./responses/JukeboxPlaylist.json"
             },
             "JukeboxControlSuccessResponse": {
                 "allOf": [
@@ -11012,12 +10046,7 @@
                 }
             },
             "SearchResult": {
-                "type": "object",
-                "description": "searchResult. TODO",
-                "externalDocs": {
-                    "description": "SearchResult",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/searchresult/"
-                }
+                "$ref": "./responses/SearchResult.json"
             },
             "SearchSuccessResponse": {
                 "allOf": [
@@ -11058,35 +10087,7 @@
                 }
             },
             "SearchResult2": {
-                "type": "object",
-                "description": "searchResult2",
-                "externalDocs": {
-                    "description": "SearchResult2",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/searchresult2/"
-                },
-                "properties": {
-                    "artist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Artist"
-                        },
-                        "description": "Starred artists"
-                    },
-                    "album": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "Starred albums"
-                    },
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "Starred songs"
-                    }
-                }
+                "$ref": "./responses/SearchResult2.json"
             },
             "Search2SuccessResponse": {
                 "allOf": [
@@ -11127,35 +10128,7 @@
                 }
             },
             "SearchResult3": {
-                "type": "object",
-                "description": "searchResult3",
-                "externalDocs": {
-                    "description": "SearchResult3",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/searchresult3/"
-                },
-                "properties": {
-                    "artist": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/ArtistID3"
-                        },
-                        "description": "Matching artists"
-                    },
-                    "album": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/AlbumID3"
-                        },
-                        "description": "Matching albums"
-                    },
-                    "song": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Child"
-                        },
-                        "description": "Matching songs"
-                    }
-                }
+                "$ref": "./responses/SearchResult3.json"
             },
             "Search3SuccessResponse": {
                 "allOf": [
@@ -11234,21 +10207,7 @@
                 }
             },
             "TokenInfo": {
-                "type": "object",
-                "description": "Information about an API key",
-                "externalDocs": {
-                    "description": "TokenInfo",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/tokeninfo/"
-                },
-                "properties": {
-                    "username": {
-                        "type": "string",
-                        "description": "Username associated with token"
-                    }
-                },
-                "required": [
-                    "username"
-                ]
+                "$ref": "./responses/TokenInfo.json"
             },
             "GetTokenInfoSuccessResponse": {
                 "allOf": [
