@@ -8193,114 +8193,16 @@
                 "$ref": "./content/en/docs/Responses/error.json"
             },
             "SubsonicBaseResponse": {
-                "type": "object",
-                "properties": {
-                    "version": {
-                        "type": "string",
-                        "description": "The server supported Subsonic API version."
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "The server actual name. [Ex: Navidrome or gonic]"
-                    },
-                    "serverVersion": {
-                        "type": "string",
-                        "description": "The server version."
-                    },
-                    "openSubsonic": {
-                        "type": "boolean",
-                        "description": "Must return true if the server support OpenSubsonic API v1"
-                    }
-                },
-                "required": [
-                    "version",
-                    "type",
-                    "serverVersion",
-                    "openSubsonic"
-                ]
+                "$ref": "./content/en/docs/Responses/Subsonic-baseResponse.json"
             },
             "SubsonicSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicBaseResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "status": {
-                                "type": "string",
-                                "description": "The command result. `ok`",
-                                "enum": [
-                                    "ok"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "status"
-                        ],
-                        "example": {
-                            "status": "ok",
-                            "version": "1.16.1",
-                            "type": "AwesomeServerName",
-                            "serverVersion": "0.1.3 (tag)",
-                            "openSubsonic": true
-                        },
-                        "externalDocs": {
-                            "description": "SubsonicResponse",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/subsonic-response/"
-                        }
-                    }
-                ]
+                "$ref": "./content/en/docs/Responses/Subsonic-successResponse.json"
             },
             "SubsonicFailureResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicBaseResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "status": {
-                                "type": "string",
-                                "description": "The command result. `failed`",
-                                "enum": [
-                                    "failed"
-                                ]
-                            },
-                            "error": {
-                                "$ref": "#/components/schemas/SubsonicError"
-                            }
-                        },
-                        "required": [
-                            "status",
-                            "error"
-                        ],
-                        "externalDocs": {
-                            "description": "SubsonicResponse",
-                            "url": "https://opensubsonic.netlify.app/docs/responses/subsonic-response/"
-                        }
-                    }
-                ]
+                "$ref": "./content/en/docs/Responses/Subsonic-failureResponse.json"
             },
             "SubsonicResponse": {
-                "type": "object",
-                "description": "Common answer wrapper.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "SubsonicResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/responses/subsonic-response/"
-                }
+                "$ref": "./content/en/docs/Responses/Subsonic-response.json"
             },
             "ItemGenre": {
                 "$ref": "./content/en/docs/Responses/itemGenre.json"

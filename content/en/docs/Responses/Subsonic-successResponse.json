@@ -1,0 +1,33 @@
+{
+    "allOf": [
+        {
+            "$ref": "./Subsonic-baseResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "The command result. `ok`",
+                    "enum": [
+                        "ok"
+                    ]
+                }
+            },
+            "required": [
+                "status"
+            ],
+            "example": {
+                "status": "ok",
+                "version": "1.16.1",
+                "type": "AwesomeServerName",
+                "serverVersion": "0.1.3 (tag)",
+                "openSubsonic": true
+            },
+            "externalDocs": {
+                "description": "SubsonicResponse",
+                "url": "https://opensubsonic.netlify.app/docs/responses/subsonic-response/"
+            }
+        }
+    ]
+}
