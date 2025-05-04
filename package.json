@@ -6,7 +6,7 @@
   "scripts": {
     "start": "hugo server",
     "build": "hugo build",
-    "build:openapi": "swagger-cli bundle openapi.json -o static/openapi.json --type json"
+    "build:openapi": "swagger-cli bundle openapi.json -o static/openapi.json --type json && swagger-cli validate static/openapi.json"
   },
   "repository": {
     "type": "git",
