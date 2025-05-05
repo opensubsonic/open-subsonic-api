@@ -41,8 +41,13 @@
                 "in": "query",
                 "description": "Used by `add` and `set`. ID of song to add to the jukebox playlist. Use multiple id parameters to add many songs in the same request. (set is similar to a clear followed by a add, but will not change the currently playing track.)",
                 "required": false,
+                "explode": true,
+                "style": "form",
                 "schema": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             },
             {
@@ -87,44 +92,143 @@
             "content": {
                 "application/x-www-form-urlencoded": {
                     "schema": {
-                        "type": "object",
-                        "properties": {
-                            "action": {
-                                "description": "The operation to perform. Must be one of: get, status (since 1.7.0), set (since 1.7.0), start, stop, skip, add, clear, remove, shuffle, setGain",
-                                "type": "string"
+                        "oneOf": [
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "The operation to perform. Must be one of: get, status (since 1.7.0), set (since 1.7.0), start, stop, skip, add, clear, remove, shuffle, setGain",
+                                        "enum": [
+                                            "get",
+                                            "status",
+                                            "start",
+                                            "stop",
+                                            "clear",
+                                            "shuffle"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "action"
+                                ]
                             },
-                            "index": {
-                                "description": "Used by `skip` and `remove`. Zero-based index of the song to skip to or remove.",
-                                "type": "integer",
-                                "minimum": 0
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'remove' action.",
+                                        "enum": [
+                                            "remove"
+                                        ]
+                                    },
+                                    "index": {
+                                        "description": "Zero-based index of the song to remove.",
+                                        "type": "integer",
+                                        "minimum": 0
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "index"
+                                ]
                             },
-                            "offset": {
-                                "description": "(Since 1.7.0) Used by `skip`. Start playing this many seconds into the track.",
-                                "type": "integer",
-                                "minimum": 0
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'skip' action.",
+                                        "enum": [
+                                            "skip"
+                                        ]
+                                    },
+                                    "index": {
+                                        "description": "Zero-based index of the song to skip.",
+                                        "type": "integer",
+                                        "minimum": 0
+                                    },
+                                    "offset": {
+                                        "description": "(Since 1.7.0) Used by `skip`. Start playing this many seconds into the track.",
+                                        "type": "integer",
+                                        "minimum": 0
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "index"
+                                ]
                             },
-                            "id": {
-                                "description": "Used by `add` and `set`. ID of song to add to the jukebox playlist. Use multiple id parameters to add many songs in the same request. (set is similar to a clear followed by an add, but will not change the currently playing track.)",
-                                "type": "string"
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'add' action.",
+                                        "enum": [
+                                            "add"
+                                        ]
+                                    },
+                                    "id": {
+                                        "description": "ID of song to add to the jukebox playlist. Use multiple id parameters to add many songs in the same request. (set is similar to a clear followed by an add, but will not change the currently playing track.)",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "id"
+                                ]
                             },
-                            "gain": {
-                                "description": "Used by `setGain` to control the playback volume. A float value between 0.0 and 1.0.",
-                                "type": "number",
-                                "format": "float",
-                                "minimum": 0.0,
-                                "maximum": 1.0
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'set' action.",
+                                        "enum": [
+                                            "set"
+                                        ]
+                                    },
+                                    "id": {
+                                        "description": "ID of song to add to the jukebox playlist. Use multiple id parameters to add many songs in the same request. (set is similar to a clear followed by an add, but will not change the currently playing track.)",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "id"
+                                ]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'setGain' action.",
+                                        "enum": [
+                                            "setGain"
+                                        ]
+                                    },
+                                    "gain": {
+                                        "description": "Used by `setGain` to control the playback volume. A float value between 0.0 and 1.0.",
+                                        "type": "number",
+                                        "format": "float",
+                                        "minimum": 0.0,
+                                        "maximum": 1.0
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "gain"
+                                ]
                             }
-                        },
-                        "required": [
-                            "action"
                         ]
                     }
                 }
             }
         },
-        "parameters": [
-
-        ],
+        "parameters": [],
         "responses": {
             "200": {
                 "description": "Successful or failed response",
