@@ -1,0 +1,21 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "openSubsonicExtensions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../../schemas/OpenSubsonicExtension.json"
+                    }
+                }
+            },
+            "required": [
+                "openSubsonicExtensions"
+            ]
+        }
+    ]
+}

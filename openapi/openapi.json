@@ -130,967 +130,40 @@
             "$ref": "./endpoints/getGenres.json"
         },
         "/rest/getIndexes": {
-            "get": {
-                "summary": "Returns an indexed structure of all artists.",
-                "description": "Returns an indexed structure of all artists.",
-                "operationId": "getIndexes",
-                "tags": [
-                    "Browsing"
-                ],
-                "parameters": [
-                    {
-                        "name": "musicFolderId",
-                        "in": "query",
-                        "description": "If specified, only return artists in the music folder with the given ID. See `getMusicFolders`.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "ifModifiedSince",
-                        "in": "query",
-                        "description": "If specified, only return a result if the artist collection has changed since the given time (in milliseconds since 1 Jan 1970).",
-                        "required": false,
-                        "schema": {
-                            "type": "integer"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetIndexesResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getIndexes",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getindexes/"
-                }
-            },
-            "post": {
-                "summary": "Returns an indexed structure of all artists.",
-                "description": "Returns an indexed structure of all artists.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetIndexes",
-                "tags": [
-                    "Browsing"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "musicFolderId": {
-                                        "type": "string",
-                                        "description": "If specified, only return artists in the music folder with the given ID. See `getMusicFolders`."
-                                    },
-                                    "ifModifiedSince": {
-                                        "type": "integer",
-                                        "description": "If specified, only return a result if the artist collection has changed since the given time (in milliseconds since 1 Jan 1970)."
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetIndexesResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getIndexes",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getindexes/"
-                }
-            }
+            "$ref": "./endpoints/getIndexes.json"
         },
         "/rest/getInternetRadioStations": {
-            "get": {
-                "summary": "Returns all internet radio stations.",
-                "description": "Returns all internet radio stations. Takes no extra parameters.",
-                "operationId": "getInternetRadioStations",
-                "tags": [
-                    "Internet Radio"
-                ],
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetInternetRadioStationsResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getInternetRadioStations",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getinternetradiostations/"
-                }
-            },
-            "post": {
-                "summary": "Returns all internet radio stations.",
-                "description": "Returns all internet radio stations. Takes no extra parameters.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetInternetRadioStations",
-                "tags": [
-                    "Internet Radio"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetInternetRadioStationsResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getInternetRadioStations",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getinternetradiostations/"
-                }
-            }
+            "$ref": "./endpoints/getInternetRadioStations.json"
         },
         "/rest/getLicense": {
-            "get": {
-                "summary": "Get details about the software license.",
-                "description": "Get details about the software license.",
-                "operationId": "getLicense",
-                "tags": [
-                    "System"
-                ],
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetLicenseResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getLicense",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlicense/"
-                }
-            },
-            "post": {
-                "summary": "Get details about the software license.",
-                "description": "Get details about the software license.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetLicense",
-                "tags": [
-                    "System"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetLicenseResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getLicense",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlicense/"
-                }
-            }
+            "$ref": "./endpoints/getLicense.json"
         },
         "/rest/getLyrics": {
-            "get": {
-                "summary": "Searches for and returns lyrics for a given song.",
-                "description": "Searches for and returns lyrics for a given song.",
-                "operationId": "getLyrics",
-                "tags": [
-                    "Media Retrieval"
-                ],
-                "parameters": [
-                    {
-                        "name": "artist",
-                        "in": "query",
-                        "description": "The artist name.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "title",
-                        "in": "query",
-                        "description": "The song title.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetLyricsResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getLyrics",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyrics/"
-                }
-            },
-            "post": {
-                "summary": "Searches for and returns lyrics for a given song.",
-                "description": "Searches for and returns lyrics for a given song.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetLyrics",
-                "tags": [
-                    "Media Retrieval"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "artist": {
-                                        "type": "string",
-                                        "description": "The artist name."
-                                    },
-                                    "title": {
-                                        "type": "string",
-                                        "description": "The song title."
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetLyricsResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                }
-            }
+            "$ref": "./endpoints/getLyrics.json"
         },
         "/rest/getLyricsBySongId": {
-            "get": {
-                "summary": "Add support for synchronized lyrics, multiple languages, and retrieval by song ID. ",
-                "description": "OpenSubsonic extension name `songLyrics` (As returned by `getOpenSubsonicExtensions`). Retrieves all structured lyrics from the server for a given song. The lyrics can come from embedded tags (SYLT/USLT), LRC file/text file, or any other external source.",
-                "operationId": "getLyricsBySongId",
-                "tags": [
-                    "Media Retrieval"
-                ],
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "query",
-                        "description": "The track ID.",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetLyricsBySongIdResponse"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Extension not supported."
-                    }
-                },
-                "externalDocs": {
-                    "description": "getLyricsBySongId",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyricsbysongid/"
-                }
-            },
-            "post": {
-                "summary": "Add support for synchronized lyrics, multiple languages, and retrieval by song ID.",
-                "description": "OpenSubsonic extension name `songLyrics` (As returned by `getOpenSubsonicExtensions`). Retrieves all structured lyrics from the server for a given song. The lyrics can come from embedded tags (SYLT/USLT), LRC file/text file, or any other external source.",
-                "operationId": "postGetLyricsBySongId",
-                "tags": [
-                    "Media Retrieval"
-                ],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string",
-                                        "description": "The track ID."
-                                    }
-                                },
-                                "required": [
-                                    "id"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetLyricsBySongIdResponse"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Extension not supported."
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getLyricsBySongId",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyricsbysongid/"
-                }
-            }
+            "$ref": "./endpoints/getLyricsBySongId.json"
         },
         "/rest/getMusicDirectory": {
-            "get": {
-                "summary": "Returns a listing of all files in a music directory.",
-                "description": "Returns a listing of all files in a music directory. Typically used to get list of albums for an artist, or list of songs for an album.",
-                "operationId": "getMusicDirectory",
-                "tags": [
-                    "Browsing"
-                ],
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "query",
-                        "description": "A string which uniquely identifies the music folder. Obtained by calls to `getIndexes` or `getMusicDirectory`.",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetMusicDirectoryResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getMusicDirectory",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicdirectory/"
-                }
-            },
-            "post": {
-                "summary": "Returns a listing of all files in a music directory.",
-                "description": "Returns a listing of all files in a music directory. Typically used to get list of albums for an artist, or list of songs for an album.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetMusicDirectory",
-                "tags": [
-                    "Browsing"
-                ],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string",
-                                        "description": "A string which uniquely identifies the music folder. Obtained by calls to `getIndexes` or `getMusicDirectory`."
-                                    }
-                                },
-                                "required": [
-                                    "id"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetMusicDirectoryResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getMusicDirectory",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicdirectory/"
-                }
-            }
+            "$ref": "./endpoints/getMusicDirectory.json"
         },
         "/rest/getMusicFolders": {
-            "get": {
-                "summary": "Returns all configured top-level music folders.",
-                "description": "Returns all configured top-level music folders. Takes no extra parameters.",
-                "operationId": "getMusicFolders",
-                "tags": [
-                    "Browsing"
-                ],
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetMusicFoldersResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getMusicFolders",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicfolders/"
-                }
-            },
-            "post": {
-                "summary": "Returns all configured top-level music folders.",
-                "description": "Returns all configured top-level music folders. Takes no extra parameters.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetMusicFolders",
-                "tags": [
-                    "Browsing"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetMusicFoldersResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getMusicFolders",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicfolders/"
-                }
-            }
+            "$ref": "./endpoints/getMusicFolders.json"
         },
         "/rest/getNewestPodcasts": {
-            "get": {
-                "summary": "Returns the most recently published Podcast episodes.",
-                "description": "Returns the most recently published Podcast episodes.",
-                "operationId": "getNewestPodcasts",
-                "tags": [
-                    "Podcast"
-                ],
-                "parameters": [
-                    {
-                        "name": "count",
-                        "in": "query",
-                        "description": "The maximum number of episodes to return.",
-                        "required": false,
-                        "schema": {
-                            "type": "integer",
-                            "default": 20
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetNewestPodcastsResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getNewestPodcasts",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getnewestpodcasts/"
-                }
-            },
-            "post": {
-                "summary": "Returns the most recently published Podcast episodes.",
-                "description": "Returns the most recently published Podcast episodes.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetNewestPodcasts",
-                "tags": [
-                    "Podcast"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "count": {
-                                        "type": "integer",
-                                        "description": "The maximum number of episodes to return.",
-                                        "default": 20
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetNewestPodcastsResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getNewestPodcasts",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getnewestpodcasts/"
-                }
-            }
+            "$ref": "./endpoints/getNewestPodcasts.json"
         },
         "/rest/getNowPlaying": {
-            "get": {
-                "summary": "Returns what is currently being played by all users.",
-                "description": "Returns what is currently being played by all users. Takes no extra parameters.",
-                "operationId": "getNowPlaying",
-                "tags": [
-                    "Lists"
-                ],
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetNowPlayingResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getNowPlaying",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getnowplaying/"
-                }
-            },
-            "post": {
-                "summary": "Returns what is currently being played by all users.",
-                "description": "Returns what is currently being played by all users. Takes no extra parameters.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetNowPlaying",
-                "tags": [
-                    "Lists"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetNowPlayingResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                }
-            }
+            "$ref": "./endpoints/getNowPlaying.json"
         },
         "/rest/getOpenSubsonicExtensions": {
-            "get": {
-                "summary": "List the OpenSubsonic extensions supported by this server.",
-                "description": "List the OpenSubsonic extensions supported by this server.",
-                "operationId": "getOpenSubsonicExtensions",
-                "tags": [
-                    "System"
-                ],
-                "security": [],
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetOpenSubsonicExtensionsResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getOpenSubsonicExtensions",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getopensubsonicextensions/"
-                }
-            },
-            "post": {
-                "summary": "List the OpenSubsonic extensions supported by this server.",
-                "description": "List the OpenSubsonic extensions supported by this server.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetOpenSubsonicExtensions",
-                "tags": [
-                    "System"
-                ],
-                "security": [],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetOpenSubsonicExtensionsResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getOpenSubsonicExtensions",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getopensubsonicextensions/"
-                }
-            }
+            "$ref": "./endpoints/getOpenSubsonicExtensions.json"
         },
         "/rest/getPlaylist": {
-            "get": {
-                "summary": "Returns a listing of files in a saved playlist.",
-                "description": "Returns a listing of files in a saved playlist.",
-                "operationId": "getPlaylist",
-                "tags": [
-                    "Playlists"
-                ],
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "query",
-                        "description": "ID of the playlist to return, as obtained by `getPlaylists`.",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetPlaylistResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getPlaylist",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylist/"
-                }
-            },
-            "post": {
-                "summary": "Returns a listing of files in a saved playlist.",
-                "description": "Returns a listing of files in a saved playlist.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetPlaylist",
-                "tags": [
-                    "Playlists"
-                ],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string",
-                                        "description": "ID of the playlist to return, as obtained by `getPlaylists`."
-                                    }
-                                },
-                                "required": [
-                                    "id"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetPlaylistResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getPlaylist",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylist/"
-                }
-            }
+            "$ref": "./endpoints/getPlaylist.json"
         },
         "/rest/getPlaylists": {
-            "get": {
-                "summary": "Returns all playlists a user is allowed to play.",
-                "description": "Returns all playlists a user is allowed to play.",
-                "operationId": "getPlaylists",
-                "tags": [
-                    "Playlists"
-                ],
-                "parameters": [
-                    {
-                        "name": "username",
-                        "in": "query",
-                        "description": "(Since 1.8.0) If specified, return playlists for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used.",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetPlaylistsResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "externalDocs": {
-                    "description": "getPlaylists",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylists/"
-                }
-            },
-            "post": {
-                "summary": "Returns all playlists a user is allowed to play.",
-                "description": "Returns all playlists a user is allowed to play.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-                "operationId": "postGetPlaylists",
-                "tags": [
-                    "Playlists"
-                ],
-                "requestBody": {
-                    "required": false,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "username": {
-                                        "type": "string",
-                                        "description": "(Since 1.8.0) If specified, return playlists for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used."
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful or failed response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/GetPlaylistsResponse"
-                                }
-                            }
-                        }
-                    },
-                    "405": {
-                        "$ref": "#/components/responses/HTTPFormPostNotSupported"
-                    }
-                },
-                "externalDocs": {
-                    "description": "getPlaylists",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylists/"
-                }
-            }
+            "$ref": "./endpoints/getPlaylists.json"
         },
         "/rest/getPlayQueue": {
             "get": {
@@ -5369,42 +4442,10 @@
                 "$ref": "./schemas/Indexes.json"
             },
             "GetIndexesSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "indexes": {
-                                "$ref": "#/components/schemas/Indexes"
-                            }
-                        },
-                        "required": [
-                            "indexes"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getIndexes/GetIndexesSuccessResponse.json"
             },
             "GetIndexesResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested indexes element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetIndexesSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetIndexesResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getindexes/"
-                }
+                "$ref": "./endpoints/getIndexes/GetIndexesResponse.json"
             },
             "InternetRadioStation": {
                 "$ref": "./schemas/InternetRadioStation.json"
@@ -5413,124 +4454,28 @@
                 "$ref": "./schemas/InternetRadioStations.json"
             },
             "GetInternetRadioStationsSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "internetRadioStations": {
-                                "$ref": "#/components/schemas/InternetRadioStations"
-                            }
-                        },
-                        "required": [
-                            "internetRadioStations"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getInternetRadioStations/GetInternetRadioStationsSuccessResponse.json"
             },
             "GetInternetRadioStationsResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested internetRadioStations element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetInternetRadioStationsSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetInternetRadioStationsResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getinternetradiostations/"
-                }
+                "$ref": "./endpoints/getInternetRadioStations/GetInternetRadioStationsResponse.json"
             },
             "License": {
                 "$ref": "./schemas/License.json"
             },
             "GetLicenseSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "license": {
-                                "$ref": "#/components/schemas/License"
-                            }
-                        },
-                        "required": [
-                            "license"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getLicense/GetLicenseSuccessResponse.json"
             },
             "GetLicenseResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested license element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetLicenseSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetLicenseResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlicense/"
-                }
+                "$ref": "./endpoints/getLicense/GetLicenseResponse.json"
             },
             "Lyrics": {
                 "$ref": "./schemas/Lyrics.json"
             },
             "GetLyricsSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "lyrics": {
-                                "$ref": "#/components/schemas/Lyrics"
-                            }
-                        },
-                        "required": [
-                            "lyrics"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getLyrics/GetLyricsSuccessResponse.json"
             },
             "GetLyricsResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested lyrics element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetLyricsSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetLicenseResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyrics/"
-                }
+                "$ref": "./endpoints/getLyrics/GetLyricsResponse.json"
             },
             "Line": {
                 "$ref": "./schemas/Line.json"
@@ -5542,83 +4487,19 @@
                 "$ref": "./schemas/LyricsList.json"
             },
             "GetLyricsBySongIdSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "lyricsList": {
-                                "$ref": "#/components/schemas/LyricsList"
-                            }
-                        },
-                        "required": [
-                            "lyricsList"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getLyricsBySongId/GetLyricsBySongIdSuccessResponse.json"
             },
             "GetLyricsBySongIdResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested lyricsList",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetLyricsBySongIdSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetLyricsBySongIdResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyricsbysongid/"
-                }
+                "$ref": "./endpoints/getLyricsBySongId/GetLyricsBySongIdResponse.json"
             },
             "Directory": {
                 "$ref": "./schemas/Directory.json"
             },
             "GetMusicDirectorySuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "directory": {
-                                "$ref": "#/components/schemas/Directory"
-                            }
-                        },
-                        "required": [
-                            "directory"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getMusicDirectory/GetMusicDirectorySuccessResponse.json"
             },
             "GetMusicDirectoryResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested directory element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetMusicDirectorySuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetMusicDirectoryResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicdirectory/"
-                }
+                "$ref": "./endpoints/getMusicDirectory/GetMusicDirectoryResponse.json"
             },
             "MusicFolder": {
                 "$ref": "./schemas/MusicFolder.json"
@@ -5627,42 +4508,10 @@
                 "$ref": "./schemas/MusicFolders.json"
             },
             "GetMusicFoldersSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "musicFolders": {
-                                "$ref": "#/components/schemas/MusicFolders"
-                            }
-                        },
-                        "required": [
-                            "musicFolders"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getMusicFolders/GetMusicFoldersSuccessResponse.json"
             },
             "GetMusicFoldersResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested musicFolders element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetMusicFoldersSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetMusicFoldersResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicfolders/"
-                }
+                "$ref": "./endpoints/getMusicFolders/GetMusicFoldersResponse.json"
             },
             "PodcastStatus": {
                 "$ref": "./schemas/PodcastStatus.json"
@@ -5674,42 +4523,10 @@
                 "$ref": "./schemas/NewestPodcasts.json"
             },
             "GetNewestPodcastsSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "newestPodcasts": {
-                                "$ref": "#/components/schemas/NewestPodcasts"
-                            }
-                        },
-                        "required": [
-                            "newestPodcasts"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getNewestPodcasts/GetNewestPodcastsSuccessResponse.json"
             },
             "GetNewestPodcastsResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested `newestPodcasts` element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetNewestPodcastsSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetNewestPodcastsResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getnewestpodcasts/"
-                }
+                "$ref": "./endpoints/getNewestPodcasts/GetNewestPodcastsResponse.json"
             },
             "NowPlayingEntry": {
                 "$ref": "./schemas/NowPlayingEntry.json"
@@ -5718,165 +4535,34 @@
                 "$ref": "./schemas/NowPlaying.json"
             },
             "GetNowPlayingSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "nowPlaying": {
-                                "$ref": "#/components/schemas/NowPlaying"
-                            }
-                        },
-                        "required": [
-                            "nowPlaying"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getNowPlaying/GetNowPlayingSuccessResponse.json"
             },
             "GetNowPlayingResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested `nowPlaying` element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetNowPlayingSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetNowPlayingResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getnowplaying/"
-                }
+                "$ref": "./endpoints/getNowPlaying/GetNowPlayingResponse.json"
             },
             "OpenSubsonicExtension": {
                 "$ref": "./schemas/OpenSubsonicExtension.json"
             },
             "GetOpenSubsonicExtensionsSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "openSubsonicExtensions": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/OpenSubsonicExtension"
-                                }
-                            }
-                        },
-                        "required": [
-                            "openSubsonicExtensions"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getOpenSubsonicExtensions/GetOpenSubsonicExtensionsSuccessResponse.json"
             },
             "GetOpenSubsonicExtensionsResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested `openSubsonicExtensions` element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetOpenSubsonicExtensionsSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetOpenSubsonicExtensionsResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getopensubsonicextensions/"
-                }
+                "$ref": "./endpoints/getOpenSubsonicExtensions/GetOpenSubsonicExtensionsResponse.json"
             },
             "GetPlaylistSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "playlist": {
-                                "$ref": "#/components/schemas/PlaylistWithSongs"
-                            }
-                        },
-                        "required": [
-                            "playlist"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getPlaylist/GetPlaylistSuccessResponse.json"
             },
             "GetPlaylistResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested playlist element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetPlaylistSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetPlaylistResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylist/"
-                }
+                "$ref": "./endpoints/getPlaylist/GetPlaylistResponse.json"
             },
             "Playlists": {
                 "$ref": "./schemas/Playlists.json"
             },
             "GetPlaylistsSuccessResponse": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/SubsonicSuccessResponse"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "playlists": {
-                                "$ref": "#/components/schemas/Playlists"
-                            }
-                        },
-                        "required": [
-                            "playlists"
-                        ]
-                    }
-                ]
+                "$ref": "./endpoints/getPlaylists/GetPlaylistsSuccessResponse.json"
             },
             "GetPlaylistsResponse": {
-                "type": "object",
-                "description": "A subsonic-response element with a nested `playlists` element on success.",
-                "properties": {
-                    "subsonic-response": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/GetPlaylistsSuccessResponse"
-                            },
-                            {
-                                "$ref": "#/components/schemas/SubsonicFailureResponse"
-                            }
-                        ]
-                    }
-                },
-                "externalDocs": {
-                    "description": "GetPlaylistsResponse",
-                    "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylists/"
-                }
+                "$ref": "./endpoints/getPlaylists/GetPlaylistsResponse.json"
             },
             "PlayQueue": {
                 "$ref": "./schemas/PlayQueue.json"
