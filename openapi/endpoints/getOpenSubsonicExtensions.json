@@ -4,7 +4,8 @@
         "description": "List the OpenSubsonic extensions supported by this server.",
         "operationId": "getOpenSubsonicExtensions",
         "tags": [
-            "System"
+            "System",
+            "Addition"
         ],
         "security": [],
         "parameters": [
@@ -32,7 +33,8 @@
         "description": "List the OpenSubsonic extensions supported by this server.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
         "operationId": "postGetOpenSubsonicExtensions",
         "tags": [
-            "System"
+            "System",
+            "Addition"
         ],
         "security": [],
         "requestBody": {

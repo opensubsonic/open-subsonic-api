@@ -32,6 +32,65 @@
             "format": []
         }
     ],
+    "tags": [
+        {
+            "name": "System"
+        },
+        {
+            "name": "User Management"
+        },
+        {
+            "name": "Media Library Scanning"
+        },
+        {
+            "name": "Searching"
+        },
+        {
+            "name": "Browsing"
+        },
+        {
+            "name": "Playlists"
+        },
+        {
+            "name": "Lists"
+        },
+        {
+            "name": "Media Retrieval"
+        },
+        {
+            "name": "Media Annotation"
+        },
+        {
+            "name": "Sharing"
+        },
+        {
+            "name": "Bookmarks"
+        },
+        {
+            "name": "Internet Radio"
+        },
+        {
+            "name": "Podcast"
+        },
+        {
+            "name": "Jukebox"
+        },
+        {
+            "name": "Chat"
+        },
+        {
+            "name": "Extension"
+        },
+        {
+            "name": "Addition"
+        },
+        {
+            "name": "Change"
+        },
+        {
+            "name": "Clarification"
+        }
+    ],
     "paths": {
         "/rest/addChatMessage": {
             "$ref": "./endpoints/addChatMessage.json"

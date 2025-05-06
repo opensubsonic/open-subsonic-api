@@ -4,7 +4,9 @@
         "description": "OpenSubsonic extension name `apiKeyAuthentication` (As returned by `getOpenSubsonicExtensions`). Returns data about an API key.",
         "operationId": "tokenInfo",
         "tags": [
-            "System"
+            "System",
+            "Addition",
+            "Extension"
         ],
         "parameters": [
 
@@ -34,7 +36,9 @@
         "description": "OpenSubsonic extension name `apiKeyAuthentication` (As returned by `getOpenSubsonicExtensions`). Returns data about an API key.",
         "operationId": "postTokenInfo",
         "tags": [
-            "System"
+            "System",
+            "Addition",
+            "Extension"
         ],
         "requestBody": {
             "required": false,

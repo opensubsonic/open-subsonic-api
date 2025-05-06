@@ -1,8 +1,6 @@
 ---
 title: "OpenAPI schema"
 linkTitle: "OpenAPI schema [OS]"
-opensubsonic:
-  - Clarification
 weight: 3
 description: >
   OpenAPI schema documentation and development guidelines.

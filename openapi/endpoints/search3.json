@@ -4,7 +4,8 @@
         "description": "Returns albums, artists and songs matching the given search criteria. Supports paging through the result.\n\nMusic is organized according to ID3 tags.",
         "operationId": "search3",
         "tags": [
-            "Searching"
+            "Searching",
+            "Clarification"
         ],
         "parameters": [
             {
@@ -114,7 +115,8 @@
         "description": "Returns albums, artists and songs matching the given search criteria. Supports paging through the result.\n\nMusic is organized according to ID3 tags.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
         "operationId": "postSearch3",
         "tags": [
-            "Searching"
+            "Searching",
+            "Clarification"
         ],
         "requestBody": {
             "required": true,

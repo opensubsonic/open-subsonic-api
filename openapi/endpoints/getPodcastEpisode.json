@@ -4,7 +4,8 @@
         "description": "OpenSubsonic extension name getPodcastEpisode (As returned by `getOpenSubsonicExtensions`). Returns details for a podcast episode.",
         "operationId": "getPodcastEpisode",
         "tags": [
-            "Podcast"
+            "Podcast",
+            "Extension"
         ],
         "parameters": [
             {
@@ -42,7 +43,8 @@
         "description": "OpenSubsonic extension name `getPodcastEpisode` (As returned by `getOpenSubsonicExtensions`). Returns details for a podcast episode.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
         "operationId": "postGetPodcastEpisode",
         "tags": [
-            "Podcast"
+            "Podcast",
+            "Extension"
         ],
         "requestBody": {
             "required": true,

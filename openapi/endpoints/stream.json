@@ -4,7 +4,10 @@
         "description": "Streams a given media file.\n\nOpenSubsonic servers must not count access to this endpoint as a play and increase playcount. Clients can use the Scrobble endpoint to indicate that a media is played ensuring proper data in all cases.\n\nIf the server support the Transcode Offet extension, then it must accept the timeOffset parameter for music too.",
         "operationId": "stream",
         "tags": [
-            "Media Retrieval"
+            "Media Retrieval",
+            "Clarification",
+            "Addition",
+            "Extension"
         ],
         "parameters": [
             {
@@ -91,7 +94,10 @@
         "description": "Streams a given media file.\n\nOpenSubsonic servers must not count access to this endpoint as a play and increase playcount. Clients can use the Scrobble endpoint to indicate that a media is played ensuring proper data in all cases.\n\nIf the server supports the Transcode Offset extension, then it must accept the timeOffset parameter for music too.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
         "operationId": "postStream",
         "tags": [
-            "Media Retrieval"
+            "Media Retrieval",
+            "Clarification",
+            "Addition",
+            "Extension"
         ],
         "requestBody": {
             "required": true,

@@ -4,7 +4,8 @@
         "description": "OpenSubsonic extension name `songLyrics` (As returned by `getOpenSubsonicExtensions`). Retrieves all structured lyrics from the server for a given song. The lyrics can come from embedded tags (SYLT/USLT), LRC file/text file, or any other external source.",
         "operationId": "getLyricsBySongId",
         "tags": [
-            "Media Retrieval"
+            "Media Retrieval",
+            "Extension"
         ],
         "parameters": [
             {
@@ -42,7 +43,8 @@
         "description": "OpenSubsonic extension name `songLyrics` (As returned by `getOpenSubsonicExtensions`). Retrieves all structured lyrics from the server for a given song. The lyrics can come from embedded tags (SYLT/USLT), LRC file/text file, or any other external source.",
         "operationId": "postGetLyricsBySongId",
         "tags": [
-            "Media Retrieval"
+            "Media Retrieval",
+            "Extension"
         ],
         "requestBody": {
             "required": true,
