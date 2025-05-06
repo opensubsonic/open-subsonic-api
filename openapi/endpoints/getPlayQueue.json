@@ -15,7 +15,7 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": ""
+                            "$ref": "./getPlayQueue/GetPlayQueueResponse.json"
                         }
                     }
                 }
