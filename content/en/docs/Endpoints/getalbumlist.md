@@ -1,6 +1,6 @@
 ---
 title: "getAlbumList"
-linkTitle: "getAlbumList"
+linkTitle: "getAlbumList [OS]"
 categories:
 - Lists
 description: >
@@ -55,6 +55,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "created": "2021-07-22T02:09:31+00:00",
           "duration": 4248,
           "playCount": 0,
+          "totalCount": 0,
+          "userCount": 0,
           "artistId": "100000036",
           "artist": "Comfort Fit",
           "year": 2005,
@@ -72,6 +74,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "created": "2021-02-24T01:44:21+00:00",
           "duration": 1879,
           "playCount": 0,
+          "totalCount": 0,
+          "userCount": 0,
           "artistId": "100000019",
           "artist": "Various Artists",
           "year": 2012,

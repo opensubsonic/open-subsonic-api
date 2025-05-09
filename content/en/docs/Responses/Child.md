@@ -31,6 +31,8 @@ description: >
   "channelCount": 2,
   "path": "The New Deal/Live at The Casbah - 2005-04-29/04 - \"polar expedition\".flac",
   "playCount": 8,
+  "totalCount": 8,
+  "userCount": 1,
   "played": "2023-03-26T22:27:46Z",
   "discNumber": 1,
   "created": "2023-03-14T17:51:22.112827504Z",
@@ -177,7 +179,9 @@ description: >
 | `isVideo` | `boolean` | No |   | Media is a video |
 | `userRating` | `int` | No |   | The user rating of the media [1-5] |
 | `averageRating` | `number` | No |   | The average rating of the media [1.0-5.0] |
-| `playCount` | `long` | No |   | The play count. |
+| `playCount` | `long` | No |   | Item play count (Deprecated in OS) |
+| `totalCount` | `long` | No | **Yes** | Item play count for all users |
+| `userCount` | `long` | No | **Yes** | Item play count for your user |
 | `discNumber` | `int` | No |   | The disc number. |
 | `created` | `string` | No |   | Date the media was created. [ISO 8601] |
 | `starred` | `string` | No |   | Date the media was starred. [ISO 8601] |

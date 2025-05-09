@@ -36,6 +36,8 @@ description: >
       "created": "2021-02-23T04:24:48+00:00",
       "duration": 4568,
       "playCount": 1,
+      "totalCount": 1,
+      "userCount": 0,
       "artistId": "100000002",
       "artist": "Synthetic",
       "year": 2007,
