@@ -1,6 +1,6 @@
 ---
 title: "getSong"
-linkTitle: "getSong"
+linkTitle: "getSong [OS]"
 categories:
 - Browsing
 description: >
@@ -56,6 +56,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
       "channelCount": 2,
       "path": "The New Deal/Live at The Casbah - 2005-04-29/04 - \"polar expedition\".flac",
       "playCount": 8,
+      "totalCount": 8,
+      "userCount": 1,
       "played": "2023-03-26T22:27:46Z",
       "discNumber": 1,
       "created": "2023-03-14T17:51:22.112827504Z",

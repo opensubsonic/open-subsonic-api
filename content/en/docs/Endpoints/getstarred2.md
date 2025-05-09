@@ -1,6 +1,6 @@
 ---
 title: "getStarred2"
-linkTitle: "getStarred2"
+linkTitle: "getStarred2 [OS]"
 categories:
 - Lists
 description: >
@@ -57,6 +57,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "starred": "2023-03-22T01:51:06Z",
           "duration": 1954,
           "playCount": 97,
+          "totalCount": 97,
+          "userCount": 10,
           "genre": "Hip-Hop",
           "created": "2023-03-10T02:19:35.784818075Z",
           "artistId": "91c3901ac465b9efc439e4be4270c2b6",
@@ -85,6 +87,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "channelCount": 2,
           "path": "The New Deal/Live at The Casbah - 2005-04-29/04 - \"polar expedition\".flac",
           "playCount": 8,
+          "totalCount": 8,
+          "userCount": 1,
           "discNumber": 1,
           "created": "2023-03-14T17:51:22.112827504Z",
           "albumId": "e8a0685e3f3ec6f251649af2b58b8617",

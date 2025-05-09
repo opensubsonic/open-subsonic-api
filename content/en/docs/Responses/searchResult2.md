@@ -1,6 +1,6 @@
 ---
 title: "searchResult2"
-linkTitle: "searchResult2"
+linkTitle: "searchResult2 [OS]"
 description: >
   searchResult2.
 ---
@@ -30,6 +30,8 @@ description: >
       "created": "2021-07-22T02:09:31+00:00",
       "duration": 4248,
       "playCount": 0,
+      "totalCount": 0,
+      "userCount": 0,
       "artistId": "100000036",
       "artist": "Comfort Fit",
       "year": 2005,
@@ -58,6 +60,8 @@ description: >
       "channelCount": 2,
       "path": "The New Deal/Live at The Casbah - 2005-04-29/04 - \"polar expedition\".flac",
       "playCount": 8,
+      "totalCount": 8,
+      "userCount": 1,
       "discNumber": 1,
       "created": "2023-03-14T17:51:22.112827504Z",
       "albumId": "e8a0685e3f3ec6f251649af2b58b8617",
