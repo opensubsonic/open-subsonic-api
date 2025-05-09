@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "description": "searchResult2",
+    "externalDocs": {
+        "description": "SearchResult2",
+        "url": "https://opensubsonic.netlify.app/docs/responses/searchresult2/"
+    },
+    "properties": {
+        "artist": {
+            "type": "array",
+            "items": {
+                "$ref": "./Artist.json"
+            },
+            "description": "Starred artists"
+        },
+        "album": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "Starred albums"
+        },
+        "song": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "Starred songs"
+        }
+    }
+}

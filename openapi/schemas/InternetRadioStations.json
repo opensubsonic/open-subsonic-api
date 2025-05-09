@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "internetRadioStations.",
+    "externalDocs": {
+        "description": "InternetRadioStations",
+        "url": "https://opensubsonic.netlify.app/docs/responses/internetradiostations/"
+    },
+    "properties": {
+        "internetRadioStation": {
+            "type": "array",
+            "items": {
+                "$ref": "./InternetRadioStation.json"
+            },
+            "description": "A list of internetRadioStation"
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "get": {
+        "summary": "Returns all video files.",
+        "description": "Returns all video files.",
+        "operationId": "getVideos",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getVideos/GetVideosResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getVideos",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideos/"
+        }
+    },
+    "post": {
+        "summary": "Returns all video files.",
+        "description": "Returns all video files.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetVideos",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getVideos/GetVideosResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getVideos",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideos/"
+        }
+    }
+}

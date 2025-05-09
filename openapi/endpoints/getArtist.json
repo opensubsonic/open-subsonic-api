@@ -1,0 +1,86 @@
+{
+    "get": {
+        "summary": "Returns details for an artist.",
+        "description": "Returns details for an artist, including a list of albums. This method organizes music according to ID3 tags.",
+        "operationId": "getArtist",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The artist ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getArtist/GetArtistResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getArtist",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartist/"
+        }
+    },
+    "post": {
+        "summary": "Returns details for an artist.",
+        "description": "Returns details for an artist, including a list of albums. This method organizes music according to ID3 tags.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetArtist",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The artist ID."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getArtist/GetArtistResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getArtist",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartist/"
+        }
+    }
+}

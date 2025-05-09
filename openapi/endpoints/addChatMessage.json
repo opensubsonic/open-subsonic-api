@@ -1,0 +1,72 @@
+{
+    "get": {
+        "summary": "Adds a message to the chat log.",
+        "description": "Adds a message to the chat log.",
+        "operationId": "getAddChatMessage",
+        "tags": [
+            "Chat"
+        ],
+        "parameters": [
+            {
+                "name": "message",
+                "in": "query",
+                "description": "The chat message.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "addChatMessage",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/addchatmessage/"
+        }
+    },
+    "post": {
+        "summary": "Adds a message to the chat log.",
+        "description": "Adds a message to the chat log.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postAddChatMessage",
+        "tags": [
+            "Chat"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "message": {
+                                "type": "string",
+                                "description": "The chat message."
+                            }
+                        },
+                        "required": [
+                            "message"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "addChatMessage",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/addchatmessage/"
+        }
+    }
+}

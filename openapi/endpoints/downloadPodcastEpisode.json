@@ -1,0 +1,68 @@
+{
+    "get": {
+        "summary": "Request the server to start downloading a given Podcast episode.",
+        "description": "Request the server to start downloading a given Podcast episode. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).",
+        "operationId": "downloadPodcastEpisode",
+        "tags": [
+            "Podcast"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The ID of the Podcast episode to download",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "downloadPodcastEpisode",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/downloadpodcastepisode/"
+        }
+    },
+    "post": {
+        "summary": "Request the server to start downloading a given Podcast episode.",
+        "description": "Request the server to start downloading a given Podcast episode. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postDownloadPodcastEpisode",
+        "tags": [
+            "Podcast"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The ID of the Podcast episode to download."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        }
+    }
+}

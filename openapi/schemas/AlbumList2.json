@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "album": {
+            "type": "array",
+            "items": {
+                "$ref": "./AlbumID3.json"
+            },
+            "description": "Artist albums",
+            "externalDocs": {
+                "description": "AlbumList2",
+                "url": "https://opensubsonic.netlify.app/docs/responses/albumlist2/"
+            }
+        }
+    }
+}

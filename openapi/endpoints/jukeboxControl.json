@@ -1,0 +1,252 @@
+{
+    "get": {
+        "summary": "Controls the jukebox, i.e., playback directly on the server’s audio hardware.",
+        "description": "Controls the jukebox, i.e., playback directly on the server’s audio hardware. Note: The user must be authorized to control the jukebox (see Settings > Users > User is allowed to play files in jukebox mode).",
+        "operationId": "jukeboxControl",
+        "tags": [
+            "Jukebox"
+        ],
+        "parameters": [
+            {
+                "name": "action",
+                "in": "query",
+                "description": "The operation to perform. Must be one of: get, status (since 1.7.0), set (since 1.7.0), start, stop, skip, add, clear, remove, shuffle, setGain",
+                "required": true,
+                "schema": {
+                    "$ref": "../schemas/JukeboxAction.json"
+                }
+            },
+            {
+                "name": "index",
+                "in": "query",
+                "description": "Used by `skip` and `remove`. Zero-based index of the song to skip to or remove.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            {
+                "name": "offset",
+                "in": "query",
+                "description": "(Since 1.7.0) Used by `skip`. Start playing this many seconds into the track.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            {
+                "name": "id",
+                "in": "query",
+                "description": "Used by `add` and `set`. ID of song to add to the jukebox playlist. Use multiple id parameters to add many songs in the same request. (set is similar to a clear followed by a add, but will not change the currently playing track.)",
+                "required": false,
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "gain",
+                "in": "query",
+                "description": "Used by `setGain` to control the playback volume. A float value between 0.0 and 1.0.",
+                "required": false,
+                "schema": {
+                    "type": "number",
+                    "format": "float",
+                    "minimum": 0.0,
+                    "maximum": 1.0
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./jukeboxControl/JukeboxControlResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "jukeboxControl",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/jukeboxcontrol/"
+        }
+    },
+    "post": {
+        "summary": "Controls the jukebox, i.e., playback directly on the server’s audio hardware.",
+        "description": "Controls the jukebox, i.e., playback directly on the server’s audio hardware. Note: The user must be authorized to control the jukebox (see Settings > Users > User is allowed to play files in jukebox mode).\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postJukeboxControl",
+        "tags": [
+            "Jukebox"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "oneOf": [
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "The operation to perform. Must be one of: get, status (since 1.7.0), set (since 1.7.0), start, stop, skip, add, clear, remove, shuffle, setGain",
+                                        "enum": [
+                                            "get",
+                                            "status",
+                                            "start",
+                                            "stop",
+                                            "clear",
+                                            "shuffle"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "action"
+                                ]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'remove' action.",
+                                        "enum": [
+                                            "remove"
+                                        ]
+                                    },
+                                    "index": {
+                                        "description": "Zero-based index of the song to remove.",
+                                        "type": "integer",
+                                        "minimum": 0
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "index"
+                                ]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'skip' action.",
+                                        "enum": [
+                                            "skip"
+                                        ]
+                                    },
+                                    "index": {
+                                        "description": "Zero-based index of the song to skip.",
+                                        "type": "integer",
+                                        "minimum": 0
+                                    },
+                                    "offset": {
+                                        "description": "(Since 1.7.0) Used by `skip`. Start playing this many seconds into the track.",
+                                        "type": "integer",
+                                        "minimum": 0
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "index"
+                                ]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'add' action.",
+                                        "enum": [
+                                            "add"
+                                        ]
+                                    },
+                                    "id": {
+                                        "description": "ID of song to add to the jukebox playlist. Use multiple id parameters to add many songs in the same request. (set is similar to a clear followed by an add, but will not change the currently playing track.)",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "id"
+                                ]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'set' action.",
+                                        "enum": [
+                                            "set"
+                                        ]
+                                    },
+                                    "id": {
+                                        "description": "ID of song to add to the jukebox playlist. Use multiple id parameters to add many songs in the same request. (set is similar to a clear followed by an add, but will not change the currently playing track.)",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "id"
+                                ]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "action": {
+                                        "description": "'setGain' action.",
+                                        "enum": [
+                                            "setGain"
+                                        ]
+                                    },
+                                    "gain": {
+                                        "description": "Used by `setGain` to control the playback volume. A float value between 0.0 and 1.0.",
+                                        "type": "number",
+                                        "format": "float",
+                                        "minimum": 0.0,
+                                        "maximum": 1.0
+                                    }
+                                },
+                                "required": [
+                                    "action",
+                                    "gain"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./jukeboxControl/JukeboxControlResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "jukeboxControl",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/jukeboxcontrol/"
+        }
+    }
+}

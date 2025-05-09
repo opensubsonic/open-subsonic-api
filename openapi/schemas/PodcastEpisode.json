@@ -1,0 +1,41 @@
+{
+    "allOf": [
+        {
+            "$ref": "./Child.json"
+        },
+        {
+            "type": "object",
+            "description": "A podcast episode.",
+            "externalDocs": {
+                "description": "PodcastEpisode",
+                "url": "https://opensubsonic.netlify.app/docs/responses/podcastepisode/"
+            },
+            "properties": {
+                "streamId": {
+                    "type": "string",
+                    "description": "ID used for streaming podcast"
+                },
+                "channelId": {
+                    "type": "string",
+                    "description": "TID of the podcast channel"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Episode description"
+                },
+                "status": {
+                    "$ref": "./PodcastStatus.json"
+                },
+                "publishDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date the episode was published [ISO 8601]"
+                }
+            },
+            "required": [
+                "channelId",
+                "status"
+            ]
+        }
+    ]
+}

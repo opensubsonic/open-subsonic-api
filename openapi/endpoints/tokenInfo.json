@@ -1,0 +1,79 @@
+{
+    "get": {
+        "summary": "Returns information about an API key",
+        "description": "OpenSubsonic extension name `apiKeyAuthentication` (As returned by `getOpenSubsonicExtensions`). Returns data about an API key.",
+        "operationId": "tokenInfo",
+        "tags": [
+            "System",
+            "Addition",
+            "Extension"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./tokenInfo/GetTokenInfoResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported"
+            }
+        },
+        "externalDocs": {
+            "description": "tokenInfo",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/tokeninfo/"
+        }
+    },
+    "post": {
+        "summary": "Returns information about an API key",
+        "description": "OpenSubsonic extension name `apiKeyAuthentication` (As returned by `getOpenSubsonicExtensions`). Returns data about an API key.",
+        "operationId": "postTokenInfo",
+        "tags": [
+            "System",
+            "Addition",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./tokenInfo/GetTokenInfoResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "tokenInfo",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/tokeninfo/"
+        }
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "get": {
+        "summary": "Returns all Podcast channels the server subscribes to, and (optionally) their episodes.",
+        "description": "Returns all Podcast channels the server subscribes to, and (optionally) their episodes. This method can also be used to return details for only one channel - refer to the id parameter. A typical use case for this method would be to first retrieve all channels without episodes, and then retrieve all episodes for the single channel the user selects.",
+        "operationId": "getPodcasts",
+        "tags": [
+            "Podcast"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "(Since 1.9.0) If specified, only return the Podcast channel with this ID.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "includeEpisodes",
+                "in": "query",
+                "description": "(Since 1.9.0) Whether to include Podcast episodes in the returned result.",
+                "required": false,
+                "schema": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPodcasts/GetPodcastsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getPodcasts",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpodcasts/"
+        }
+    },
+    "post": {
+        "summary": "Returns all Podcast channels the server subscribes to, and (optionally) their episodes.",
+        "description": "Returns all Podcast channels the server subscribes to, and (optionally) their episodes. This method can also be used to return details for only one channel - refer to the id parameter. A typical use case for this method would be to first retrieve all channels without episodes, and then retrieve all episodes for the single channel the user selects.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetPodcasts",
+        "tags": [
+            "Podcast"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "(Since 1.9.0) If specified, only return the Podcast channel with this ID."
+                            },
+                            "includeEpisodes": {
+                                "type": "boolean",
+                                "description": "(Since 1.9.0) Whether to include Podcast episodes in the returned result.",
+                                "default": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPodcasts/GetPodcastsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getPodcasts",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpodcasts/"
+        }
+    }
+}

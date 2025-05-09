@@ -1,0 +1,55 @@
+{
+    "get": {
+        "summary": "Requests the server to check for new Podcast episodes.",
+        "description": "Requests the server to check for new Podcast episodes. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).",
+        "operationId": "refreshPodcasts",
+        "tags": [
+            "Podcast"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "refreshPodcasts",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/refreshpodcasts/"
+        }
+    },
+    "post": {
+        "summary": "Requests the server to check for new Podcast episodes.",
+        "description": "Requests the server to check for new Podcast episodes. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postRefreshPodcasts",
+        "tags": [
+            "Podcast"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "refreshPodcasts",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/refreshpodcasts/"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "Scan status information.",
+    "externalDocs": {
+        "description": "ScanStatus",
+        "url": "https://opensubsonic.netlify.app/docs/responses/scanstatus/"
+    },
+    "properties": {
+        "scanning": {
+            "type": "boolean",
+            "description": "The status of the scan"
+        },
+        "count": {
+            "type": "integer",
+            "description": "Scanned item count"
+        }
+    },
+    "required": [
+        "scanning"
+    ]
+}

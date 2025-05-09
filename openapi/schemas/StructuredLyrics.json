@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "description": "Structured lyrics",
+    "externalDocs": {
+        "description": "StructuredLyrics",
+        "url": "https://opensubsonic.netlify.app/docs/responses/structuredlyrics/"
+    },
+    "properties": {
+        "lang": {
+            "type": "string",
+            "description": "The lyrics language (ideally ISO 639). If the language is unknown (e.g. lrc file), the server must return `und` (ISO standard) or `xxx` (common value for taggers). Ideally, the server will return lang as an ISO 639 (2/3) code. However, tagged files and external lyrics can come with any value as a potential language code, so clients should take care when displaying lang.\n\nFurthermore, there is special behavior for the value xxx. While not an ISO code, it is commonly used by taggers and other parsing software. Clients should treat xxx as not having a specified language (equivalent to the und code)."
+        },
+        "synced": {
+            "type": "boolean",
+            "description": "True if the lyrics are synced, false otherwise"
+        },
+        "line": {
+            "type": "array",
+            "description": "The actual lyrics. Ordered by start time (synced) or appearance order (unsynced)",
+            "items": {
+                "$ref": "./Line.json"
+            }
+        },
+        "displayArtist": {
+            "type": "string",
+            "description": "The artist name to display. This could be the localized name, or any other value"
+        },
+        "displayTitle": {
+            "type": "string",
+            "description": "The title to display. This could be the song title (localized), or any other value"
+        },
+        "offset": {
+            "type": "number",
+            "description": "The offset to apply to all lyrics, in milliseconds. Positive means lyrics appear sooner, negative means later. If not included, the offset must be assumed to be 0"
+        }
+    },
+    "required": [
+        "lang",
+        "synced",
+        "line"
+    ]
+}

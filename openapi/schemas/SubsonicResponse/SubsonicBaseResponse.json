@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "version": {
+            "type": "string",
+            "description": "The server supported Subsonic API version."
+        },
+        "type": {
+            "type": "string",
+            "description": "The server actual name. [Ex: Navidrome or gonic]"
+        },
+        "serverVersion": {
+            "type": "string",
+            "description": "The server version."
+        },
+        "openSubsonic": {
+            "type": "boolean",
+            "description": "Must return true if the server support OpenSubsonic API v1"
+        }
+    },
+    "required": [
+        "version",
+        "type",
+        "serverVersion",
+        "openSubsonic"
+    ]
+}

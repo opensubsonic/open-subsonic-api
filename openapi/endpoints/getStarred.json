@@ -1,0 +1,77 @@
+{
+    "get": {
+        "summary": "Returns starred songs, albums and artists.",
+        "description": "Returns starred songs, albums and artists.",
+        "operationId": "getStarred",
+        "tags": [
+            "Lists"
+        ],
+        "parameters": [
+            {
+                "name": "musicFolderId",
+                "in": "query",
+                "description": "(Since 1.12.0) Only return albums in the music folder with the given ID. See `getMusicFolders`.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getStarred/GetStarredResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getStarred",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getstarred/"
+        }
+    },
+    "post": {
+        "summary": "Returns starred songs, albums and artists.",
+        "description": "Returns starred songs, albums and artists.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetStarred",
+        "tags": [
+            "Lists"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getStarred/GetStarredResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getStarred",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getstarred/"
+        }
+    }
+}

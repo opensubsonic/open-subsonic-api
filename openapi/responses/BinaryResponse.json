@@ -1,0 +1,17 @@
+{
+    "description": "Success (binary) or error (xml) response",
+    "content": {
+        "application/binary": {
+            "schema": {
+                "type": "string",
+                "format": "binary"
+            }
+        },
+        "text/xml": {
+            "schema": {
+                "type": "object",
+                "description": "Error response TODO: TO BE DESCRIBED"
+            }
+        }
+    }
+}

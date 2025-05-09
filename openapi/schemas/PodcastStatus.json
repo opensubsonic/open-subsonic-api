@@ -1,0 +1,16 @@
+{
+    "type": "string",
+    "description": "An enumeration of possible podcast statuses",
+    "externalDocs": {
+        "description": "PodcastStatus",
+        "url": "https://opensubsonic.netlify.app/docs/responses/podcaststatus/"
+    },
+    "enum": [
+        "new",
+        "downloading",
+        "completed",
+        "error",
+        "deleted",
+        "skipped"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "description": "NowPlayingEntry.",
+    "externalDocs": {
+        "description": "PlayQueue",
+        "url": "https://opensubsonic.netlify.app/docs/responses/playqueue/"
+    },
+    "properties": {
+        "current": {
+            "type": "string",
+            "description": "ID of currently playing track"
+        },
+        "position": {
+            "type": "integer",
+            "description": "Position in milliseconds of currently playing track"
+        },
+        "username": {
+            "type": "string",
+            "description": "The user this queue belongs to"
+        },
+        "changed": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date modified [ISO 8601]"
+        },
+        "changedBy": {
+            "type": "string",
+            "description": "Name of client app"
+        },
+        "entry": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "The list of songs in the queue"
+        }
+    },
+    "required": [
+        "username",
+        "changed",
+        "changedBy"
+    ]
+}

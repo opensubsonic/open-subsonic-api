@@ -1,0 +1,141 @@
+{
+    "get": {
+        "summary": "Returns random songs matching the given criteria.",
+        "description": "Returns random songs matching the given criteria.",
+        "operationId": "getRandomSongs",
+        "tags": [
+            "Lists"
+        ],
+        "parameters": [
+            {
+                "name": "size",
+                "in": "query",
+                "description": "The maximum number of songs to return. Max 500.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 10,
+                    "minimum": 0,
+                    "maximum": 500
+                }
+            },
+            {
+                "name": "genre",
+                "in": "query",
+                "description": "Only returns songs belonging to this genre.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "fromYear",
+                "in": "query",
+                "description": "(Since 1.9.0) Only return songs from this year or later.",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            },
+            {
+                "name": "toYear",
+                "in": "query",
+                "description": "Only return songs published before or in this year.",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            },
+            {
+                "name": "musicFolderId",
+                "in": "query",
+                "description": "Only return songs in the music folder with the given ID. See `getMusicFolders`.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getRandomSongs/GetRandomSongsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getRandomSongs",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getrandomsongs/"
+        }
+    },
+    "post": {
+        "summary": "Returns random songs matching the given criteria.",
+        "description": "Returns random songs matching the given criteria.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetRandomSongs",
+        "tags": [
+            "Lists"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "size": {
+                                "type": "integer",
+                                "description": "The maximum number of songs to return. Max 500.",
+                                "default": 10,
+                                "minimum": 0,
+                                "maximum": 500
+                            },
+                            "genre": {
+                                "type": "string",
+                                "description": "Only returns songs belonging to this genre."
+                            },
+                            "fromYear": {
+                                "type": "integer",
+                                "description": "(Since 1.9.0) Only return songs from this year or later."
+                            },
+                            "toYear": {
+                                "type": "integer",
+                                "description": "Only return songs published before or in this year."
+                            },
+                            "musicFolderId": {
+                                "type": "string",
+                                "description": "Only return songs in the music folder with the given ID. See `getMusicFolders`."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getRandomSongs/GetRandomSongsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getRandomSongs",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getrandomsongs/"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Bookmarks list.",
+    "externalDocs": {
+        "description": "Bookmarks",
+        "url": "https://opensubsonic.netlify.app/docs/responses/bookmarks/"
+    },
+    "properties": {
+        "bookmark": {
+            "type": "array",
+            "items": {
+                "$ref": "./Bookmark.json"
+            },
+            "description": "List of bookmark"
+        }
+    }
+}

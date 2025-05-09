@@ -1,0 +1,65 @@
+{
+    "get": {
+        "summary": "Returns what is currently being played by all users.",
+        "description": "Returns what is currently being played by all users. Takes no extra parameters.",
+        "operationId": "getNowPlaying",
+        "tags": [
+            "Lists"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getNowPlaying/GetNowPlayingResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getNowPlaying",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getnowplaying/"
+        }
+    },
+    "post": {
+        "summary": "Returns what is currently being played by all users.",
+        "description": "Returns what is currently being played by all users. Takes no extra parameters.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetNowPlaying",
+        "tags": [
+            "Lists"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getNowPlaying/GetNowPlayingResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        }
+    }
+}

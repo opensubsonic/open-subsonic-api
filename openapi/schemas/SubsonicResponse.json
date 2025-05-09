@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "Common answer wrapper.",
+    "properties": {
+        "subsonic-response": {
+            "oneOf": [
+                {
+                    "$ref": "./SubsonicResponse/SubsonicSuccessResponse.json"
+                },
+                {
+                    "$ref": "./SubsonicResponse/SubsonicFailureResponse.json"
+                }
+            ]
+        }
+    },
+    "externalDocs": {
+        "description": "SubsonicResponse",
+        "url": "https://opensubsonic.netlify.app/docs/responses/subsonic-response/"
+    }
+}

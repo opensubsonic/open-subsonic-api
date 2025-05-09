@@ -1,0 +1,99 @@
+{
+    "get": {
+        "summary": "Adds a new internet radio station.",
+        "description": "Adds a new internet radio station. Only users with admin privileges are allowed to call this method.",
+        "operationId": "createInternetRadioStation",
+        "tags": [
+            "Internet Radio"
+        ],
+        "parameters": [
+            {
+                "name": "streamUrl",
+                "in": "query",
+                "description": "The stream URL for the station.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "The station name.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "homepageUrl",
+                "in": "query",
+                "description": "The home page URL for the station.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createInternetRadioStation",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createinternetradiostation/"
+        }
+    },
+    "post": {
+        "summary": "Adds a new internet radio station.",
+        "description": "Adds a new internet radio station. Only users with admin privileges are allowed to call this method.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postCreateInternetRadioStation",
+        "tags": [
+            "Internet Radio"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "streamUrl": {
+                                "type": "string",
+                                "description": "The stream URL for the station."
+                            },
+                            "name": {
+                                "type": "string",
+                                "description": "The station name."
+                            },
+                            "homepageUrl": {
+                                "type": "string",
+                                "description": "The home page URL for the station."
+                            }
+                        },
+                        "required": [
+                            "streamUrl",
+                            "name"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createInternetRadioStation",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createinternetradiostation/"
+        }
+    }
+}

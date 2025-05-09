@@ -1,0 +1,86 @@
+{
+    "get": {
+        "summary": "Get details about a given user, including which authorization roles and folder access it has.",
+        "description": "Get details about a given user, including which authorization roles and folder access it has. Can be used to enable/disable certain features in the client, such as jukebox control.",
+        "operationId": "getUser",
+        "tags": [
+            "User Management"
+        ],
+        "parameters": [
+            {
+                "name": "username",
+                "in": "query",
+                "description": "The name of the user to retrieve. You can only retrieve your own user unless you have admin privileges.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getUser/GetUserResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getUser",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getuser/"
+        }
+    },
+    "post": {
+        "summary": "Get details about a given user, including which authorization roles and folder access it has.",
+        "description": "Get details about a given user, including which authorization roles and folder access it has. Can be used to enable/disable certain features in the client, such as jukebox control.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetUser",
+        "tags": [
+            "User Management"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "username": {
+                                "type": "string",
+                                "description": "The name of the user to retrieve. You can only retrieve your own user unless you have admin privileges."
+                            }
+                        },
+                        "required": [
+                            "username"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getUser/GetUserResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getUser",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getuser/"
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "get": {
+        "summary": "Add support for synchronized lyrics, multiple languages, and retrieval by song ID. ",
+        "description": "OpenSubsonic extension name `songLyrics` (As returned by `getOpenSubsonicExtensions`). Retrieves all structured lyrics from the server for a given song. The lyrics can come from embedded tags (SYLT/USLT), LRC file/text file, or any other external source.",
+        "operationId": "getLyricsBySongId",
+        "tags": [
+            "Media Retrieval",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The track ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getLyricsBySongId/GetLyricsBySongIdResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported."
+            }
+        },
+        "externalDocs": {
+            "description": "getLyricsBySongId",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyricsbysongid/"
+        }
+    },
+    "post": {
+        "summary": "Add support for synchronized lyrics, multiple languages, and retrieval by song ID.",
+        "description": "OpenSubsonic extension name `songLyrics` (As returned by `getOpenSubsonicExtensions`). Retrieves all structured lyrics from the server for a given song. The lyrics can come from embedded tags (SYLT/USLT), LRC file/text file, or any other external source.",
+        "operationId": "postGetLyricsBySongId",
+        "tags": [
+            "Media Retrieval",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The track ID."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getLyricsBySongId/GetLyricsBySongIdResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported."
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getLyricsBySongId",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyricsbysongid/"
+        }
+    }
+}

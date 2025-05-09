@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Shares.",
+    "properties": {
+        "share": {
+            "type": "array",
+            "items": {
+                "$ref": "./Share.json"
+            },
+            "description": "A list of share"
+        }
+    },
+    "externalDocs": {
+        "description": "Shares",
+        "url": "https://opensubsonic.netlify.app/docs/responses/shares/"
+    }
+}

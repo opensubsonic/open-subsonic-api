@@ -1,0 +1,72 @@
+{
+    "get": {
+        "summary": "Adds a new Podcast channel.",
+        "description": "Adds a new Podcast channel. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).",
+        "operationId": "createPodcastChannel",
+        "tags": [
+            "Podcast"
+        ],
+        "parameters": [
+            {
+                "name": "url",
+                "in": "query",
+                "description": "The URL of the Podcast to add.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createPodcastChannel",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createpodcastchannel/"
+        }
+    },
+    "post": {
+        "summary": "Adds a new Podcast channel.",
+        "description": "Adds a new Podcast channel. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postCreatePodcastChannel",
+        "tags": [
+            "Podcast"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "description": "The URL of the Podcast to add."
+                            }
+                        },
+                        "required": [
+                            "url"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createPodcastChannel",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createpodcastchannel/"
+        }
+    }
+}

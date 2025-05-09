@@ -1,0 +1,97 @@
+{
+    "type": "object",
+    "description": "user.",
+    "externalDocs": {
+        "description": "User",
+        "url": "https://opensubsonic.netlify.app/docs/responses/user/"
+    },
+    "properties": {
+        "username": {
+            "type": "string",
+            "description": "Username"
+        },
+        "scrobblingEnabled": {
+            "type": "boolean",
+            "description": "Scrobbling enabled"
+        },
+        "maxBitRate": {
+            "type": "integer"
+        },
+        "adminRole": {
+            "type": "boolean",
+            "description": "Whether the user is an admin"
+        },
+        "settingsRole": {
+            "type": "boolean",
+            "description": "Whether the user is can edit settings"
+        },
+        "downloadRole": {
+            "type": "boolean",
+            "description": "Whether the user can download"
+        },
+        "uploadRole": {
+            "type": "boolean",
+            "description": "Whether the user can upload"
+        },
+        "playlistRole": {
+            "type": "boolean",
+            "description": "Whether the user can create playlists"
+        },
+        "coverArtRole": {
+            "type": "boolean",
+            "description": "Whether the user can get cover art"
+        },
+        "commentRole": {
+            "type": "boolean",
+            "description": "Whether the user can create comments"
+        },
+        "podcastRole": {
+            "type": "boolean",
+            "description": "Whether the user can create/refresh podcasts"
+        },
+        "streamRole": {
+            "type": "boolean",
+            "description": "Whether the user can stream"
+        },
+        "jukeboxRole": {
+            "type": "boolean",
+            "description": "Whether the user can control the jukebox"
+        },
+        "shareRole": {
+            "type": "boolean",
+            "description": "Whether the user can create a stream"
+        },
+        "videoConversionRole": {
+            "type": "boolean",
+            "description": "Whether the user can convert videos"
+        },
+        "avatarLastChanged": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last time the avatar was changed [ISO 8601]"
+        },
+        "folder": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            },
+            "description": "Folder ID(s)"
+        }
+    },
+    "required": [
+        "username",
+        "scrobblingEnabled",
+        "adminRole",
+        "settingsRole",
+        "downloadRole",
+        "uploadRole",
+        "playlistRole",
+        "coverArtRole",
+        "commentRole",
+        "podcastRole",
+        "streamRole",
+        "jukeboxRole",
+        "shareRole",
+        "videoConversionRole"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Information about an API key",
+    "externalDocs": {
+        "description": "TokenInfo",
+        "url": "https://opensubsonic.netlify.app/docs/responses/tokeninfo/"
+    },
+    "properties": {
+        "username": {
+            "type": "string",
+            "description": "Username associated with token"
+        }
+    },
+    "required": [
+        "username"
+    ]
+}
