@@ -20,8 +20,8 @@ description: >
     "starred": "2023-03-22T01:51:06Z",
     "duration": 1954,
     "playCount": 97,
-    "totalCount": 97,
-    "userCount": 10,
+    "totalPlayCount": 97,
+    "userPlayCount": 10,
     "genre": "Hip-Hop",
     "created": "2023-03-10T02:19:35.784818075Z",
     "artistId": "91c3901ac465b9efc439e4be4270c2b6",
@@ -115,8 +115,8 @@ description: >
 | `songCount` | `int` | **Yes** |     | Number of songs |
 | `duration` | `int` | **Yes** |     | Total duration of the album in seconds |
 | `playCount` | `long` | No |     | Number of plays of the album (Deprecated in OS) |
-| `totalCount` | `long` | No | **Yes** | Number of plays of the album for all users |
-| `userCount` | `long` | No | **Yes** | Number of plays of the album for your user |
+| `totalPlayCount` | `long` | No | **Yes** | Number of plays of the album for all users |
+| `userPlayCount` | `long` | No | **Yes** | Number of plays of the album for your user |
 | `created` | `string` | **Yes** |     | Date the album was added. [ISO 8601]|
 | `starred` | `string` | No |     | Date the album was starred. [ISO 8601]|
 | `year` | `int` | No |     | The album year|

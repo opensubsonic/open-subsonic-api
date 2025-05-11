@@ -66,6 +66,6 @@ description: >
 | `userRating` | `int` | No  |     | The user rating [1-5] |
 | `averageRating` | `number` | No  |     | The average rating [1.0-5.0] |
 | `playCount` | `long` | No  |     | Item play count (Deprecated in OS) |
-| `totalCount` | `long` | No | **Yes** | Item play count for all users |
-| `userCount` | `long` | No | **Yes** | Item play count for your user |
+| `totalPlayCount` | `long` | No | **Yes** | Item play count for all users |
+| `userPlayCount` | `long` | No | **Yes** | Item play count for your user |
 | `child` | Array of [`Child`](../child) | No |     | The directory content |
