@@ -29,14 +29,8 @@
             "description": "Bookmark last updated date [ISO 8601]"
         },
         "entry": {
-            "allOf": [
-                {
-                    "$ref": "./Child.json"
-                },
-                {
-                    "description": "The bookmark file"
-                }
-            ]
+            "allOf": [{"$ref": "./Child.json"}],
+            "description": "The bookmark file"
         }
     },
     "required": [

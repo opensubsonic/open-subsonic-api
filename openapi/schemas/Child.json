@@ -215,14 +215,8 @@
             "description": "The list of all moods of the song."
         },
         "replayGain": {
-            "allOf": [
-                {
-                    "$ref": "./ReplayGain.json"
-                },
-                {
-                    "description": "The replay gain data of the song."
-                }
-            ]
+            "allOf": [{"$ref": "./ReplayGain.json"}],
+            "description": "The replay gain data of the song."
         },
         "explicitStatus": {
             "$ref": "./ExplicitStatus.json"

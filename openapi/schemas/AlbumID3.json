@@ -115,24 +115,12 @@
             "description": "The album sort name."
         },
         "originalReleaseDate": {
-            "allOf": [
-                {
-                    "$ref": "./ItemDate.json"
-                },
-                {
-                    "description": "Date the album was originally released."
-                }
-            ]
+            "allOf": [{"$ref": "./ItemDate.json"}],
+            "description": "Date the album was originally released."
         },
         "releaseDate": {
-            "allOf": [
-                {
-                    "$ref": "./ItemDate.json"
-                },
-                {
-                    "description": "Date the specific edition of the album was released. Note: for files using ID3 tags, releaseDate should generally be read from the TDRL tag. Servers that use a different source for this field should document the behavior."
-                }
-            ]
+            "allOf": [{"$ref": "./ItemDate.json"}],
+            "description": "Date the specific edition of the album was released. Note: for files using ID3 tags, releaseDate should generally be read from the TDRL tag. Servers that use a different source for this field should document the behavior."
         },
         "isCompilation": {
             "type": "boolean",
