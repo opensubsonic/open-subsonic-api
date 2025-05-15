@@ -20,8 +20,8 @@
         }
     },
     "required": [
-        "id",
         "username",
+        "time",
         "message"
     ]
 }

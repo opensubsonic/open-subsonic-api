@@ -20,6 +20,6 @@
         }
     },
     "required": [
-        "lyrics"
+        "value"
     ]
 }
