@@ -4,7 +4,7 @@ linkTitle: "API Reference [OS]"
 opensubsonic:
   - Clarification
   - Change
-weight: 4
+weight: 6
 description: >
   Common API documentation.
 ---

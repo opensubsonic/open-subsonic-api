@@ -1,7 +1,7 @@
 ---
-title: "OpenSubsonic Swagger UI"
+title: "OpenAPI OpenSubsonic Swagger UI"
 type: swagger
-weight: 1
+weight: 4
 description: Reference for the OpenSubsonic API
 ---
 
