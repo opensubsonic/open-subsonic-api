@@ -1,4 +1,6 @@
 [build]
+command = "npm run build:openapi && hugo --gc --minify"
 [build.environment]
 HUGO_VERSION = "0.104.3"
 GO_VERSION = "1.19.2"
+NODE_VERSION = "22.15.1"
