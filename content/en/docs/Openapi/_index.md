@@ -1,12 +1,11 @@
 ---
 title: "OpenAPI schema"
 linkTitle: "OpenAPI schema [OS]"
-weight: 3
 description: >
   OpenAPI schema documentation and development guidelines.
 ---
 
-Can be found [here](/static/openapi.json) Only relevant to OpenSubsonic servers.
+Can be found [here](openapi.json) Only relevant to OpenSubsonic servers.
 
 ## Building
 
@@ -16,11 +15,11 @@ By default the schema is in parts to for easier maintainability. You can build i
 npm run build:openapi
 ```
 
-This will output the schema to `static/openapi.json` and also validate the output for correctness. The end result can be used as-is.
+This will output the schema to `content/en/Openapi/openapi.json` and also validate the output for correctness. The end result can be used as-is.
 
 ### Preservation of previous versions
 
-When a version change happens in the spec, the previous versions' built `openapi.json` should be placed into `static/openapi-x.x.x.json` for archiving purposes.
+When a version change happens in the spec, the previous versions' built `openapi.json` should be placed into `content/en/Openapi/openapi-x.x.x.json` for archiving purposes.
 
 ## Development
 
