@@ -16,11 +16,11 @@
                     "description": "The username"
                 },
                 "minutesAgo": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "Last update"
                 },
                 "playerId": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "Player Id"
                 },
                 "playerName": {
