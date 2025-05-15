@@ -5,4 +5,4 @@ weight: 4
 description: Reference for the OpenSubsonic API
 ---
 
-{{< swaggerui src="openapi.json" >}}
+{{< swaggerui src="/docs/openapi/openapi.json" >}}
