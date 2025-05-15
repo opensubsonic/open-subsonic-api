@@ -6,7 +6,7 @@
   "scripts": {
     "start": "hugo server",
     "build": "npm run build:openapi && hugo --minify",
-    "build:openapi": "swagger-cli bundle openapi/openapi.json -o content/en/docs/Openapi/openapi.json --type json && go run github.com/daveshanley/vacuum@latest lint content/en/docs/Openapi/openapi.json -d -a -e"
+    "build:openapi": "swagger-cli bundle openapi/openapi.json -o content/en/docs/Openapi/openapi.json --type json && npx vacuum lint content/en/docs/Openapi/openapi.json -d -a -e"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/google/docsy-example#readme",
   "devDependencies": {
+    "@quobix/vacuum": "^0.16.9",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.3.7",
     "postcss-cli": "^9.0.2",
