@@ -15,11 +15,11 @@ By default the schema is in parts to for easier maintainability. You can build i
 npm run build:openapi
 ```
 
-This will output the schema to `content/en/Openapi/openapi.json` and also validate the output for correctness. The end result can be used as-is.
+This will output the schema to `content/en/docs/Openapi/openapi.json` and also validate the output for correctness. The end result can be used as-is.
 
 ### Preservation of previous versions
 
-When a version change happens in the spec, the previous versions' built `openapi.json` should be placed into `content/en/Openapi/openapi-x.x.x.json` for archiving purposes.
+When a version change happens in the spec, the previous versions' built `openapi.json` should be placed into `content/en/docs/Openapi/openapi-x.x.x.json` for archiving purposes.
 
 ## Development
 
