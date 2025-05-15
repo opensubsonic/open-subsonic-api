@@ -5,4 +5,4 @@ weight: 5
 description: Reference for the OpenSubsonic API
 ---
 
-{{< redoc src="/docs/openapi/openapi.json" >}}
+{{< redoc "/docs/openapi/openapi.json" >}}
