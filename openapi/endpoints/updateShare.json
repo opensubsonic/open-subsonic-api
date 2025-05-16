@@ -1,0 +1,100 @@
+{
+    "get": {
+        "summary": "Updates the description and/or expiration date for an existing share.",
+        "description": "Updates the description and/or expiration date for an existing share.",
+        "operationId": "updateShare",
+        "tags": [
+            "Sharing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "ID of the share to update.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "description",
+                "in": "query",
+                "description": "A user-defined description that will be displayed to people visiting the shared media.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "expires",
+                "in": "query",
+                "description": "The time at which the share expires. Given as milliseconds since 1970, or zero to remove the expiration.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updateShare",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateshare/"
+        }
+    },
+    "post": {
+        "summary": "Updates the description and/or expiration date for an existing share.",
+        "description": "Updates the description and/or expiration date for an existing share.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postUpdateShare",
+        "tags": [
+            "Sharing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID of the share to update.",
+                                "type": "string"
+                            },
+                            "description": {
+                                "description": "A user-defined description that will be displayed to people visiting the shared media.",
+                                "type": "string"
+                            },
+                            "expires": {
+                                "description": "The time at which the share expires. Given as milliseconds since 1970, or zero to remove the expiration.",
+                                "type": "integer",
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updateShare",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateshare/"
+        }
+    }
+}

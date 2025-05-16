@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "List of structured lyrics",
+    "externalDocs": {
+        "description": "LyricsList",
+        "url": "https://opensubsonic.netlify.app/docs/responses/lyricslist/"
+    },
+    "properties": {
+        "structuredLyrics": {
+            "type": "array",
+            "description": "Structured lyrics. There can be multiple lyrics of the same type with the same language",
+            "items": {
+                "$ref": "./StructuredLyrics.json"
+            }
+        }
+    }
+}

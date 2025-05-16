@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": "integer",
+            "enum": [
+                0,
+                10,
+                20,
+                30,
+                40,
+                41,
+                42,
+                43,
+                44,
+                50,
+                60,
+                70
+            ],
+            "description": "The error code.\n* 0: A generic error.\n* 10: Required parameter is missing.\n* 20: Incompatible Subsonic REST protocol version. Client must upgrade.\n* 30: Incompatible Subsonic REST protocol version. Server must upgrade.\n* 40: Wrong username or password.\n* 41: Token authentication not supported for LDAP users.\n* 42: Provided authentication mechanism not supported.\n* 43: Multiple conflicting authentication mechanisms provided.\n* 44: Invalid API key.\n* 50: User is not authorized for the given operation.\n* 60: The trial period for the Subsonic server is over. Please upgrade to Subsonic Premium. Visit subsonic.org for details.\n* 70: The requested data was not found."
+        },
+        "message": {
+            "type": "string",
+            "description": "The optional error message"
+        },
+        "helpUrl": {
+            "type": "string",
+            "description": "A URL (documentation, configuration, etc) which may provide additional context for the error)"
+        }
+    },
+    "required": [
+        "code"
+    ],
+    "example": {
+        "code": 42,
+        "message": "Authentication mechanism not supported. Use API keys",
+        "helpUrl": "https://example.org/users/apiKey"
+    },
+    "externalDocs": {
+        "description": "Error",
+        "url": "https://opensubsonic.netlify.app/docs/responses/error/"
+    }
+}

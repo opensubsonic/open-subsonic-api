@@ -1,0 +1,69 @@
+{
+    "get": {
+        "summary": "Returns the state of the play queue for this user.",
+        "description": "Returns the state of the play queue for this user (as set by savePlayQueue). This includes the tracks in the play queue, the currently playing track, and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).",
+        "operationId": "getPlayQueue",
+        "tags": [
+            "Bookmarks"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPlayQueue/GetPlayQueueResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getPlayQueue",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplayqueue/"
+        }
+    },
+    "post": {
+        "summary": "Returns the state of the play queue for this user.",
+        "description": "Returns the state of the play queue for this user (as set by savePlayQueue). This includes the tracks in the play queue, the currently playing track, and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetPlayQueue",
+        "tags": [
+            "Bookmarks"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPlayQueue/GetPlayQueueResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getPlayQueue",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplayqueue/"
+        }
+    }
+}

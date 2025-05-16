@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "description": "An indexed artist list.",
+    "externalDocs": {
+        "description": "Index",
+        "url": "https://opensubsonic.netlify.app/docs/responses/index_/"
+    },
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Index name"
+        },
+        "artist": {
+            "type": "array",
+            "items": {
+                "$ref": "./Artist.json"
+            },
+            "description": "Artist list"
+        }
+    },
+    "required": [
+        "name"
+    ]
+}

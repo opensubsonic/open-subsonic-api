@@ -1,0 +1,103 @@
+{
+    "get": {
+        "summary": "Returns a random collection of songs from the given artist and similar artists.",
+        "description": "Returns a random collection of songs from the given artist and similar artists, using data from last.fm. Typically used for artist radio features.",
+        "operationId": "getSimilarSongs",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The artist, album or song ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "count",
+                "in": "query",
+                "description": "Max number of songs to return.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 50,
+                    "minimum": 0
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getSimilarSongs/GetSimilarSongsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getSimilarSongs",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsimilarsongs/"
+        }
+    },
+    "post": {
+        "summary": "Returns a random collection of songs from the given artist and similar artists.",
+        "description": "Returns a random collection of songs from the given artist and similar artists, using data from last.fm. Typically used for artist radio features.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetSimilarSongs",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The artist, album or song ID."
+                            },
+                            "count": {
+                                "type": "integer",
+                                "default": 50,
+                                "minimum": 0,
+                                "description": "Max number of songs to return."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getSimilarSongs/GetSimilarSongsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getSimilarSongs",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsimilarsongs/"
+        }
+    }
+}

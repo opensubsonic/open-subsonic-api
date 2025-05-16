@@ -1,0 +1,96 @@
+{
+    "get": {
+        "summary": "Returns an indexed structure of all artists.",
+        "description": "Returns an indexed structure of all artists.",
+        "operationId": "getIndexes",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "musicFolderId",
+                "in": "query",
+                "description": "If specified, only return artists in the music folder with the given ID. See `getMusicFolders`.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "ifModifiedSince",
+                "in": "query",
+                "description": "If specified, only return a result if the artist collection has changed since the given time (in milliseconds since 1 Jan 1970).",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getIndexes/GetIndexesResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getIndexes",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getindexes/"
+        }
+    },
+    "post": {
+        "summary": "Returns an indexed structure of all artists.",
+        "description": "Returns an indexed structure of all artists.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetIndexes",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "musicFolderId": {
+                                "type": "string",
+                                "description": "If specified, only return artists in the music folder with the given ID. See `getMusicFolders`."
+                            },
+                            "ifModifiedSince": {
+                                "type": "integer",
+                                "description": "If specified, only return a result if the artist collection has changed since the given time (in milliseconds since 1 Jan 1970)."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getIndexes/GetIndexesResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getIndexes",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getindexes/"
+        }
+    }
+}

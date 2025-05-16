@@ -1,7 +1,7 @@
 ---
 title: "OpenSubsonic changes"
 linkTitle: "OpenSubsonic changes"
-weight: 5
+weight: 7
 description: >
  API changes in OpenSubsonic API vs the original Subsonic API.
 ---

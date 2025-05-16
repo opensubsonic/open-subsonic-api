@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "A list of indexed Artists.",
+    "externalDocs": {
+        "description": "ArtistsID3",
+        "url": "https://opensubsonic.netlify.app/docs/responses/artistsid3/"
+    },
+    "properties": {
+        "ignoredArticles": {
+            "type": "string",
+            "description": "List of ignored articles space separated"
+        },
+        "index": {
+            "type": "array",
+            "description": "Index list",
+            "items": {
+                "$ref": "./ArtistID3.json"
+            }
+        }
+    }
+}

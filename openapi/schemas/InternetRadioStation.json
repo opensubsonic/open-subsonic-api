@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "description": "An internetRadioStation.",
+    "externalDocs": {
+        "description": "InternetRadioStation",
+        "url": "https://opensubsonic.netlify.app/docs/responses/internetradiostation/"
+    },
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The Id"
+        },
+        "name": {
+            "type": "string",
+            "description": "The name"
+        },
+        "streamUrl": {
+            "type": "string",
+            "description": "The streamUrl"
+        },
+        "homePageUrl": {
+            "type": "string",
+            "description": "Genre name"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "streamUrl"
+    ]
+}

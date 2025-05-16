@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "description": "Share.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The share Id"
+        },
+        "url": {
+            "type": "string",
+            "description": "The share url"
+        },
+        "description": {
+            "type": "string",
+            "description": "A description"
+        },
+        "username": {
+            "type": "string",
+            "description": "The username"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation date [ISO 8601]"
+        },
+        "expires": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Share expiration [ISO 8601]"
+        },
+        "lastVisited": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last visit [ISO 8601]"
+        },
+        "visitCount": {
+            "type": "integer",
+            "description": "Visit count"
+        },
+        "entry": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "A list of share"
+        }
+    },
+    "required": [
+        "id",
+        "url",
+        "username",
+        "created",
+        "visitCount"
+    ],
+    "externalDocs": {
+        "description": "Share",
+        "url": "https://opensubsonic.netlify.app/docs/responses/share/"
+    }
+}

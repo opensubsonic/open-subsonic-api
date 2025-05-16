@@ -1,0 +1,69 @@
+{
+    "get": {
+        "summary": "Returns all configured top-level music folders.",
+        "description": "Returns all configured top-level music folders. Takes no extra parameters.",
+        "operationId": "getMusicFolders",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getMusicFolders/GetMusicFoldersResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getMusicFolders",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicfolders/"
+        }
+    },
+    "post": {
+        "summary": "Returns all configured top-level music folders.",
+        "description": "Returns all configured top-level music folders. Takes no extra parameters.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetMusicFolders",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getMusicFolders/GetMusicFoldersResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getMusicFolders",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicfolders/"
+        }
+    }
+}

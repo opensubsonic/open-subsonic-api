@@ -1,0 +1,26 @@
+{
+    "allOf": [
+        {
+            "$ref": "./ArtistID3.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "album": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./AlbumID3.json"
+                    },
+                    "description": "Artist albums"
+                }
+            },
+            "required": [
+                "album"
+            ],
+            "externalDocs": {
+                "description": "ArtistWithAlbumsID3",
+                "url": "https://opensubsonic.netlify.app/docs/responses/artistwithalbumsid3/"
+            }
+        }
+    ]
+}

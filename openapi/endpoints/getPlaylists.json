@@ -1,0 +1,83 @@
+{
+    "get": {
+        "summary": "Returns all playlists a user is allowed to play.",
+        "description": "Returns all playlists a user is allowed to play.",
+        "operationId": "getPlaylists",
+        "tags": [
+            "Playlists"
+        ],
+        "parameters": [
+            {
+                "name": "username",
+                "in": "query",
+                "description": "(Since 1.8.0) If specified, return playlists for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPlaylists/GetPlaylistsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getPlaylists",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylists/"
+        }
+    },
+    "post": {
+        "summary": "Returns all playlists a user is allowed to play.",
+        "description": "Returns all playlists a user is allowed to play.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetPlaylists",
+        "tags": [
+            "Playlists"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "username": {
+                                "type": "string",
+                                "description": "(Since 1.8.0) If specified, return playlists for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPlaylists/GetPlaylistsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getPlaylists",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylists/"
+        }
+    }
+}

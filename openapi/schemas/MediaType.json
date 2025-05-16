@@ -1,0 +1,9 @@
+{
+    "type": "string",
+    "enum": [
+        "song",
+        "album",
+        "artist"
+    ],
+    "description": "Note: If you support `musicBrainzId` you must support this field to ensure clients knows what the ID refers to."
+}
