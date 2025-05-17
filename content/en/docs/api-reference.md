@@ -16,13 +16,13 @@ Please note that all methods take the following parameters:
 | Parameter | Req.        | OpenS. | Default | Comment                                                                                                                                                                                                                                                            |
 | --------- | ----------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `u`       | **Yes**\*\* |        |         | The username.                                                                                                                                                                                                                                                      |
-| `p`       | **Yes\***   |        |         | The password, either in clear text or hex-encoded with a "enc:" prefix. Since [1.13.0](../subsonic-versions) this should only be used for testing purposes.                                                                                                        |
-| `t`       | **Yes\***   |        |         | (Since [1.13.0](../subsonic-versions)) The authentication token computed as **md5(password + salt)**. See below for details.                                                                                                                                       |
-| `s`       | **Yes\***   |        |         | (Since [1.13.0](../subsonic-versions)) A random string ("salt") used as input for computing the password hash. See below for details.                                                                                                                              |
-| `apiKey`  | **Yes**\*\* | Yes    |         | [OS] An API key used for authentication                                                                                                                                                                                                                            |
+| `p`       | **Yes**\*   |        |         | The password, either in clear text or hex-encoded with a "enc:" prefix. Since [1.13.0](../subsonic-versions) this should only be used for testing purposes.                                                                                                        |
+| `t`       | **Yes**\*   |        |         | (Since [1.13.0](../subsonic-versions)) The authentication token computed as **md5(password + salt)**. See below for details.                                                                                                                                       |
+| `s`       | **Yes**\*   |        |         | (Since [1.13.0](../subsonic-versions)) A random string ("salt") used as input for computing the password hash. See below for details.                                                                                                                              |
+| `apiKey`  | **Yes**\*\* |**Yes** |         | [OS] An API key used for authentication                                                                                                                                                                                                                            |
 | `v`       | **Yes**     |        |         | The protocol version implemented by the client, i.e., the version of the [subsonic-rest-api.xsd](../subsonic-versions) schema used (see below).                                                                                                                    |
 | `c`       | **Yes**     |        |         | A unique string identifying the client application.                                                                                                                                                                                                                |
-| `f`       | No          |        | xml     | Request data to be returned in this format. Supported values are "xml", "json" (since [1.4.0](../subsonic-versions)) and "jsonp" (since [1.6.0](../subsonic-versions)). If using jsonp, specify name of javascript callback function using a `callback` parameter. |
+| `f`       |   No        |        | xml     | Request data to be returned in this format. Supported values are "xml", "json" (since [1.4.0](../subsonic-versions)) and "jsonp" (since [1.6.0](../subsonic-versions)). If using jsonp, specify name of javascript callback function using a `callback` parameter. |
 
 \*) Either `p` or both `t` and `s` must be specified.
 
@@ -147,7 +147,7 @@ If a method fails it will return an error code and message in an `error` element
 | --------- | ----------------------------- | ------- | ------ | -------------------------------- |
 | `error`   | [`error`](../responses/error) | **Yes** |        | The error details.               |
 | `code`    | `int`                         | **Yes** |        | The error code.                  |
-| `message` | `string`                      | No      |        | A human readable error message. |
+| `message` | `string`                      |   No    |        | A human readable error message. |
 
 The following error codes are defined:
 
