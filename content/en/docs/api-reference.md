@@ -22,7 +22,7 @@ Please note that all methods take the following parameters:
 | `apiKey`  | **Yes**\*\* |**Yes** |         | [OS] An API key used for authentication                                                                                                                                                                                                                            |
 | `v`       | **Yes**     |        |         | The protocol version implemented by the client, i.e., the version of the [subsonic-rest-api.xsd](../subsonic-versions) schema used (see below).                                                                                                                    |
 | `c`       | **Yes**     |        |         | A unique string identifying the client application.                                                                                                                                                                                                                |
-| `f`       | **No**      |        | xml     | Request data to be returned in this format. Supported values are "xml", "json" (since [1.4.0](../subsonic-versions)) and "jsonp" (since [1.6.0](../subsonic-versions)). If using jsonp, specify name of javascript callback function using a `callback` parameter. |
+| `f`       |   No        |        | xml     | Request data to be returned in this format. Supported values are "xml", "json" (since [1.4.0](../subsonic-versions)) and "jsonp" (since [1.6.0](../subsonic-versions)). If using jsonp, specify name of javascript callback function using a `callback` parameter. |
 
 \*) Either `p` or both `t` and `s` must be specified.
 
@@ -147,7 +147,7 @@ If a method fails it will return an error code and message in an `error` element
 | --------- | ----------------------------- | ------- | ------ | -------------------------------- |
 | `error`   | [`error`](../responses/error) | **Yes** |        | The error details.               |
 | `code`    | `int`                         | **Yes** |        | The error code.                  |
-| `message` | `string`                      | **No**  |        | A human readable error message. |
+| `message` | `string`                      |   No    |        | A human readable error message. |
 
 The following error codes are defined:
 
