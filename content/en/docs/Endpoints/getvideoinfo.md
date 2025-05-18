@@ -25,7 +25,7 @@ Returns details for a video, including information about available audio tracks,
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`videoInfo`](../../responses/videoinfo) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 // TODO

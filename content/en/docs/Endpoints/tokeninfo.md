@@ -31,7 +31,7 @@ None
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`tokenInfo`](../../responses/tokenInfo/) on success, or error 44 on invalid token.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {

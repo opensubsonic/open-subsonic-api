@@ -7,7 +7,7 @@ description: >
   Information about an API key
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {

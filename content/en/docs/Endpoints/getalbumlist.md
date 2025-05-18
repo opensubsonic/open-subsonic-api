@@ -31,7 +31,7 @@ Returns a list of random, newest, highest rated etc. albums. Similar to the albu
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`albumList`](../../responses/albumlist) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

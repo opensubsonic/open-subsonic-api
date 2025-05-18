@@ -25,7 +25,7 @@ Returns a listing of files in a saved playlist.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playlist`](../../responses/playlistwithsongs) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

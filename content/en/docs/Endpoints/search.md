@@ -33,7 +33,7 @@ Returns a listing of files matching the given search criteria. Supports paging t
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`searchResult`](../../responses/searchresult) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 // TODO

@@ -25,7 +25,7 @@ Similar to [`getAlbumInfo`](../getalbuminfo), but organizes music according to I
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`albumInfo`](../../responses/albuminfo) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
