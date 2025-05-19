@@ -43,7 +43,12 @@ description: >
   "comment": "This is a song comment",
   "sortName": "Polar expedition",
   "musicBrainzId": "189002e7-3285-4e2e-92a3-7f6c30d407a2",
-  "isrc": "USSM18300073",
+  "isrc": [
+    "USSM18300073",
+    "DELV42300297",
+    "DEE868300011",
+    "DEE868300007"
+  ],
   "genres": [
     {
       "name": "Hip-Hop"
@@ -194,7 +199,7 @@ description: >
 | `comment` | `string` | No |  **Yes**  | The comment tag of the song. |
 | `sortName` | `string` | No |  **Yes**   | The song sort name. |
 | `musicBrainzId` | `string` | No |  **Yes**   | The track MusicBrainzID. |
-| `isrc` | `string` | No |  **Yes**   | The track ISRC. |
+| `isrc` | Array of `string` | No |  **Yes**   | The track ISRC. |
 | `genres` | Array of [`ItemGenre`](../itemgenre) | No | **Yes**  | The list of all genres of the song. |
 | `artists` | Array of [`ArtistID3`](../artistid3) | No | **Yes**  | The list of all song artists of the song. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default)|
 | `displayArtist` | `string` | No |  **Yes**   | The single value display artist. |
