@@ -199,7 +199,7 @@ description: >
 | `comment` | `string` | No |  **Yes**  | The comment tag of the song. |
 | `sortName` | `string` | No |  **Yes**   | The song sort name. |
 | `musicBrainzId` | `string` | No |  **Yes**   | The track MusicBrainzID. |
-| `isrc` | Array of `string` | No |  **Yes**   | The track ISRC. |
+| `isrc` | Array of `string` | No |  **Yes**   | The track ISRC(s). |
 | `genres` | Array of [`ItemGenre`](../itemgenre) | No | **Yes**  | The list of all genres of the song. |
 | `artists` | Array of [`ArtistID3`](../artistid3) | No | **Yes**  | The list of all song artists of the song. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default)|
 | `displayArtist` | `string` | No |  **Yes**   | The single value display artist. |
