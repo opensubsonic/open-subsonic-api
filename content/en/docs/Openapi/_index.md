@@ -7,6 +7,10 @@ description: >
 
 Can be found [here](openapi.json) Only relevant to OpenSubsonic servers.
 
+{{< alert color="warning" title="WIP" >}}
+This work is still ongoing, there are some inconsistencies between the docs and the schema. Users should still check the actual docs and servers results until work on it is completely finished. [Link to full list of differences](https://github.com/opensubsonic/open-subsonic-api/pull/137#issue-2958276443)
+{{< /alert >}}
+
 ## Building
 
 By default the schema is in parts to for easier maintainability. You can build it with the command below.
