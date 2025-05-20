@@ -8,8 +8,26 @@ description: >
 Can be found [here](openapi.json) Only relevant to OpenSubsonic servers.
 
 {{< alert color="warning" title="WIP" >}}
-This work is still ongoing, there are some inconsistencies between the docs and the schema. Users should still check the actual docs and servers results until work on it is completely finished. [Link to full list of differences](https://github.com/opensubsonic/open-subsonic-api/pull/137#issue-2958276443)
+This work is still ongoing, there are some inconsistencies between the docs and the schema. Users should still check the actual docs and servers results until work on it is completely finished.
 {{< /alert >}}
+
+## List of known differences compared to official documentation
+
+- Some undocumented typo fixes
+- Added minimum: 0 to integer types where it's implied (count, offset, unix timestamp, position)
+- **Requires the use of `format=json` parameter**. xml response formats are not supported as of the time of writing this document.
+- All extensions are added to the schema and tagged as "Extension", 
+  and have an additional 404 return type as well that described as "Not 
+  Implemented"
+- Excluded examples. They need to be carefully added incrementally to see how they are merged in Swagger/Redoc docs.
+- Parameters only existing via Extensions are always added and marked in their description field
+- HTTP form POST extensions have an additional response "405 - Method 
+  Not Allowed" as an additional way to indicate when they are not 
+  supported.
+- HTTP form POST extension support might be stricter than what's 
+  allowed (global params - auth and format params - only allowed as query 
+  params, endpoint specific params are the only ones allowed in request 
+  body)
 
 ## Building
 
@@ -24,6 +42,42 @@ This will output the schema to `content/en/docs/Openapi/openapi.json` and also v
 ### Preservation of previous versions
 
 When a version change happens in the spec, the previous versions' built `openapi.json` should be placed into `content/en/docs/Openapi/openapi-x.x.x.json` for archiving purposes.
+
+## Usage
+
+Ideally this should be used as a reference and for automatic client/server code generation.
+
+### Client Code Generation
+
+#### Python
+
+* [openapi-python-client](https://github.com/openapi-generators/openapi-python-client)  ✅ - Auth params need to be passed in at client initialization
+
+* [openapi-generator](https://github.com/OpenAPITools/openapi-generator) 🚧 - Untested
+
+#### Typescript
+
+* [openapi-zod-client](https://www.npmjs.com/package/openapi-zod-client) ✅
+
+* [openapi-typescript](https://www.npmjs.com/package/openapi-typescript) 🚧 - Untested
+
+* [openapi-generator](https://github.com/OpenAPITools/openapi-generator) 🚧 - Untested
+
+#### Kotlin
+
+* [openapi-generator](https://github.com/OpenAPITools/openapi-generator) 🚧 - Untested
+
+#### Dart
+
+* [openapi-generator](https://github.com/OpenAPITools/openapi-generator) 🚧 - Untested
+
+### C#
+
+* [openapi-generator](https://github.com/OpenAPITools/openapi-generator) 🚧 - Untested
+
+### Server Code Generation
+
+🚧 Not Tested
 
 ## Development
 
