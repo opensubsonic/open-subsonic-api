@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "A subsonic-response element with a nested tokenInfo on success, or error 44 on invalid token.",
+    "properties": {
+        "subsonic-response": {
+            "oneOf": [
+                {
+                    "$ref": "./GetTokenInfoSuccessResponse.json"
+                },
+                {
+                    "$ref": "../../schemas/SubsonicResponse/SubsonicFailureResponse.json"
+                }
+            ]
+        }
+    },
+    "externalDocs": {
+        "description": "GetTokenInfoResponse",
+        "url": "https://opensubsonic.netlify.app/docs/endpoints/gettokeninfo/"
+    }
+}

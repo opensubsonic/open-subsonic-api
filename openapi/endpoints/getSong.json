@@ -1,0 +1,82 @@
+{
+    "get": {
+        "summary": "Returns details for a song.",
+        "description": "Returns details for a song.",
+        "operationId": "getSong",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The song ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getSong/GetSongResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getSong",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsong/"
+        }
+    },
+    "post": {
+        "summary": "Returns details for a song.",
+        "description": "Returns details for a song.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetSong",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The song ID."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getSong/GetSongResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        }
+    }
+}

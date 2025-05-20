@@ -1,0 +1,72 @@
+{
+    "get": {
+        "summary": "Deletes a bookmark.",
+        "description": "Deletes a bookmark (a position within a media file). Bookmarks are personal and not visible to other users.",
+        "operationId": "deleteBookmark",
+        "tags": [
+            "Bookmarks"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "ID of the media file for which to delete the bookmark. Other users\u2019 bookmarks are not affected.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deleteBookmark",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deletebookmark/"
+        }
+    },
+    "post": {
+        "summary": "Deletes a bookmark.",
+        "description": "Deletes a bookmark (a position within a media file). Bookmarks are personal and not visible to other users.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postDeleteBookmark",
+        "tags": [
+            "Bookmarks"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "ID of the media file for which to delete the bookmark. Other users’ bookmarks are not affected."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deleteBookmark",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deletebookmark/"
+        }
+    }
+}

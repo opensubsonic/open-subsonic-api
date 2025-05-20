@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "description": "A chatMessage.",
+    "externalDocs": {
+        "description": "ChatMessage",
+        "url": "https://opensubsonic.netlify.app/docs/responses/chatmessage/"
+    },
+    "properties": {
+        "username": {
+            "type": "string",
+            "description": "Username"
+        },
+        "time": {
+            "type": "integer",
+            "description": "Time in millis since Jan 1 1970"
+        },
+        "message": {
+            "type": "string",
+            "description": "The message"
+        }
+    },
+    "required": [
+        "username",
+        "time",
+        "message"
+    ]
+}

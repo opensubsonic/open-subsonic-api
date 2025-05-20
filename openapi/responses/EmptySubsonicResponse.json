@@ -1,0 +1,10 @@
+{
+    "description": "Successful or failed response",
+    "content": {
+        "application/json": {
+            "schema": {
+                "$ref": "../schemas/SubsonicResponse.json"
+            }
+        }
+    }
+}

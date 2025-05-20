@@ -1,0 +1,55 @@
+{
+    "get": {
+        "summary": "Used to test connectivity with the server.",
+        "description": "Test connectivity with the server.",
+        "operationId": "ping",
+        "tags": [
+            "System"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "ping",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/ping/"
+        }
+    },
+    "post": {
+        "summary": "Used to test connectivity with the server.",
+        "description": "Test connectivity with the server.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postPing",
+        "tags": [
+            "System"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "ping",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/ping/"
+        }
+    }
+}

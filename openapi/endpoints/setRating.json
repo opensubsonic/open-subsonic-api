@@ -1,0 +1,86 @@
+{
+    "get": {
+        "summary": "Sets the rating for a music file.",
+        "description": "Sets the rating for a music file.",
+        "operationId": "setRating",
+        "tags": [
+            "Media Annotation"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "A string which uniquely identifies the file (song) or folder (album/artist) to rate.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "rating",
+                "in": "query",
+                "description": "The rating between 1 and 5 (inclusive), or 0 to remove the rating.",
+                "required": true,
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 5
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "setRating",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/setrating/"
+        }
+    },
+    "post": {
+        "summary": "Sets the rating for a music file.",
+        "description": "Sets the rating for a music file.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postSetRating",
+        "tags": [
+            "Media Annotation"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "A string which uniquely identifies the file (song) or folder (album/artist) to rate.",
+                                "type": "string"
+                            },
+                            "rating": {
+                                "description": "The rating between 1 and 5 (inclusive), or 0 to remove the rating.",
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 5
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "rating"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        }
+    }
+}

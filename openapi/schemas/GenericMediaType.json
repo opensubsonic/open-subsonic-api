@@ -1,0 +1,10 @@
+{
+    "type": "string",
+    "enum": [
+        "music",
+        "video",
+        "podcast",
+        "audiobook"
+    ],
+    "description": "The generic type of media [music/podcast/audiobook/video]"
+}

@@ -5,7 +5,8 @@
   "main": "none.js",
   "scripts": {
     "start": "npx hugo server",
-    "build": "npx hugo --gc --minify"
+    "build": "npm run build:openapi && npx hugo --gc --minify",
+    "build:openapi": "swagger-cli bundle openapi/openapi.json -o content/en/docs/Openapi/openapi.json --type json && npx vacuum lint content/en/docs/Openapi/openapi.json -d -a -e"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,11 @@
   },
   "homepage": "https://github.com/google/docsy-example#readme",
   "devDependencies": {
+    "@quobix/vacuum": "^0.16.9",
     "autoprefixer": "^10.4.0",
     "hugo-extended": "0.133.1",
     "postcss": "^8.3.7",
-    "postcss-cli": "^9.0.2"
+    "postcss-cli": "^9.0.2",
+    "swagger-cli": "^4.0.4"
   }
 }

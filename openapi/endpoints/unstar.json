@@ -1,0 +1,107 @@
+{
+    "get": {
+        "summary": "Removes a star to a song, album or artist.",
+        "description": "Removes a star to a song, album or artist.",
+        "operationId": "unstar",
+        "tags": [
+            "Media Annotation"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The ID of the file (song) or folder (album/artist) to star. Multiple parameters allowed.",
+                "required": false,
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "albumId",
+                "in": "query",
+                "description": "The ID of an album to star. Use this rather than `id` if the client accesses the media collection according to ID3 tags rather than file structure. Multiple parameters allowed.",
+                "required": false,
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "artistId",
+                "in": "query",
+                "description": "The ID of an artist to star. Use this rather than `id` if the client accesses the media collection according to ID3 tags rather than file structure. Multiple parameters allowed.",
+                "required": false,
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "unstar",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/unstar/"
+        }
+    },
+    "post": {
+        "summary": "Removes a star to a song, album or artist.",
+        "description": "Removes a star to a song, album or artist.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postUnstar",
+        "tags": [
+            "Media Annotation"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "The ID of the file (song) or folder (album/artist) to unstar. Multiple parameters allowed."
+                            },
+                            "albumId": {
+                                "description": "The ID of an album to unstar. Use this rather than `id` if the client accesses the media collection according to ID3 tags rather than file structure. Multiple parameters allowed."
+                            },
+                            "artistId": {
+                                "description": "The ID of an artist to unstar. Use this rather than `id` if the client accesses the media collection according to ID3 tags rather than file structure. Multiple parameters allowed."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "unstar",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/unstar/"
+        }
+    }
+}

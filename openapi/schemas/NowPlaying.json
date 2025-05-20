@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "nowPlaying.",
+    "externalDocs": {
+        "description": "NowPlaying",
+        "url": "https://opensubsonic.netlify.app/docs/responses/nowplaying/"
+    },
+    "properties": {
+        "entry": {
+            "type": "array",
+            "items": {
+                "$ref": "./NowPlayingEntry.json"
+            },
+            "description": "The now playing entries"
+        }
+    },
+    "required": [
+        "entry"
+    ]
+}

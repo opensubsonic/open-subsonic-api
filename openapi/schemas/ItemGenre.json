@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "A genre returned in list of genres for an item.",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Genre name"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "externalDocs": {
+        "description": "ItemGenre",
+        "url": "https://opensubsonic.netlify.app/docs/responses/itemgenre/"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "get": {
+        "summary": "Returns details for a video.",
+        "description": "Returns details for a video, including information about available audio tracks, subtitles (captions) and conversions.",
+        "operationId": "getVideoInfo",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The video ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getVideoInfo/GetVideoInfoResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getVideoInfo",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideoinfo/"
+        }
+    },
+    "post": {
+        "summary": "Returns details for a video.",
+        "description": "Returns details for a video, including information about available audio tracks, subtitles (captions) and conversions.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetVideoInfo",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The video ID."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getVideoInfo/GetVideoInfoResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getVideoInfo",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideoinfo/"
+        }
+    }
+}

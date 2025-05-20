@@ -1,0 +1,928 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "OpenSubsonic API",
+        "description": "OpenSubsonic API documentation.",
+        "version": "1.16.1"
+    },
+    "servers": [
+        {
+            "url": "{url}",
+            "variables": {
+                "url": {
+                    "default": "https://example-opensubsonic-compatible-server.com",
+                    "description": "The URL of the OpenSubsonic server."
+                }
+            }
+        }
+    ],
+    "security": [
+        {
+            "apiKeyAuth": [],
+            "protocolVersion": [],
+            "clientName": [],
+            "format": []
+        },
+        {
+            "username": [],
+            "legacyPassword": [],
+            "protocolVersion": [],
+            "clientName": [],
+            "format": []
+        },
+        {
+            "username": [],
+            "token": [],
+            "salt": [],
+            "protocolVersion": [],
+            "clientName": [],
+            "format": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "System"
+        },
+        {
+            "name": "User Management"
+        },
+        {
+            "name": "Media Library Scanning"
+        },
+        {
+            "name": "Searching"
+        },
+        {
+            "name": "Browsing"
+        },
+        {
+            "name": "Playlists"
+        },
+        {
+            "name": "Lists"
+        },
+        {
+            "name": "Media Retrieval"
+        },
+        {
+            "name": "Media Annotation"
+        },
+        {
+            "name": "Sharing"
+        },
+        {
+            "name": "Bookmarks"
+        },
+        {
+            "name": "Internet Radio"
+        },
+        {
+            "name": "Podcast"
+        },
+        {
+            "name": "Jukebox"
+        },
+        {
+            "name": "Chat"
+        },
+        {
+            "name": "Extension"
+        },
+        {
+            "name": "Addition"
+        },
+        {
+            "name": "Change"
+        },
+        {
+            "name": "Clarification"
+        }
+    ],
+    "paths": {
+        "/rest/addChatMessage": {
+            "$ref": "./endpoints/addChatMessage.json"
+        },
+        "/rest/changePassword": {
+            "$ref": "./endpoints/changePassword.json"
+        },
+        "/rest/createBookmark": {
+            "$ref": "./endpoints/createBookmark.json"
+        },
+        "/rest/createInternetRadioStation": {
+            "$ref": "./endpoints/createInternetRadioStation.json"
+        },
+        "/rest/createPlaylist": {
+            "$ref": "./endpoints/createPlaylist.json"
+        },
+        "/rest/createPodcastChannel": {
+            "$ref": "./endpoints/createPodcastChannel.json"
+        },
+        "/rest/createShare": {
+            "$ref": "./endpoints/createShare.json"
+        },
+        "/rest/createUser": {
+            "$ref": "./endpoints/createUser.json"
+        },
+        "/rest/deleteBookmark": {
+            "$ref": "./endpoints/deleteBookmark.json"
+        },
+        "/rest/deleteInternetRadioStation": {
+            "$ref": "./endpoints/deleteInternetRadioStation.json"
+        },
+        "/rest/deletePlaylist": {
+            "$ref": "./endpoints/deletePlaylist.json"
+        },
+        "/rest/deletePodcastChannel": {
+            "$ref": "./endpoints/deletePodcastChannel.json"
+        },
+        "/rest/deletePodcastEpisode": {
+            "$ref": "./endpoints/deletePodcastEpisode.json"
+        },
+        "/rest/deleteShare": {
+            "$ref": "./endpoints/deleteShare.json"
+        },
+        "/rest/deleteUser": {
+            "$ref": "./endpoints/deleteUser.json"
+        },
+        "/rest/download": {
+            "$ref": "./endpoints/download.json"
+        },
+        "/rest/downloadPodcastEpisode": {
+            "$ref": "./endpoints/downloadPodcastEpisode.json"
+        },
+        "/rest/getAlbum": {
+            "$ref": "./endpoints/getAlbum.json"
+        },
+        "/rest/getAlbumInfo": {
+            "$ref": "./endpoints/getAlbumInfo.json"
+        },
+        "/rest/getAlbumInfo2": {
+            "$ref": "./endpoints/getAlbumInfo2.json"
+        },
+        "/rest/getAlbumList": {
+            "$ref": "./endpoints/getAlbumList.json"
+        },
+        "/rest/getAlbumList2": {
+            "$ref": "./endpoints/getAlbumList2.json"
+        },
+        "/rest/getArtist": {
+            "$ref": "./endpoints/getArtist.json"
+        },
+        "/rest/getArtistInfo": {
+            "$ref": "./endpoints/getArtistInfo.json"
+        },
+        "/rest/getArtistInfo2": {
+            "$ref": "./endpoints/getArtistInfo2.json"
+        },
+        "/rest/getArtists": {
+            "$ref": "./endpoints/getArtists.json"
+        },
+        "/rest/getAvatar": {
+            "$ref": "./endpoints/getAvatar.json"
+        },
+        "/rest/getBookmarks": {
+            "$ref": "./endpoints/getBookmarks.json"
+        },
+        "/rest/getCaptions": {
+            "$ref": "./endpoints/getCaptions.json"
+        },
+        "/rest/getChatMessages": {
+            "$ref": "./endpoints/getChatMessages.json"
+        },
+        "/rest/getCoverArt": {
+            "$ref": "./endpoints/getCoverArt.json"
+        },
+        "/rest/getGenres": {
+            "$ref": "./endpoints/getGenres.json"
+        },
+        "/rest/getIndexes": {
+            "$ref": "./endpoints/getIndexes.json"
+        },
+        "/rest/getInternetRadioStations": {
+            "$ref": "./endpoints/getInternetRadioStations.json"
+        },
+        "/rest/getLicense": {
+            "$ref": "./endpoints/getLicense.json"
+        },
+        "/rest/getLyrics": {
+            "$ref": "./endpoints/getLyrics.json"
+        },
+        "/rest/getLyricsBySongId": {
+            "$ref": "./endpoints/getLyricsBySongId.json"
+        },
+        "/rest/getMusicDirectory": {
+            "$ref": "./endpoints/getMusicDirectory.json"
+        },
+        "/rest/getMusicFolders": {
+            "$ref": "./endpoints/getMusicFolders.json"
+        },
+        "/rest/getNewestPodcasts": {
+            "$ref": "./endpoints/getNewestPodcasts.json"
+        },
+        "/rest/getNowPlaying": {
+            "$ref": "./endpoints/getNowPlaying.json"
+        },
+        "/rest/getOpenSubsonicExtensions": {
+            "$ref": "./endpoints/getOpenSubsonicExtensions.json"
+        },
+        "/rest/getPlaylist": {
+            "$ref": "./endpoints/getPlaylist.json"
+        },
+        "/rest/getPlaylists": {
+            "$ref": "./endpoints/getPlaylists.json"
+        },
+        "/rest/getPlayQueue": {
+            "$ref": "./endpoints/getPlayQueue.json"
+        },
+        "/rest/getPodcastEpisode": {
+            "$ref": "./endpoints/getPodcastEpisode.json"
+        },
+        "/rest/getPodcasts": {
+            "$ref": "./endpoints/getPodcasts.json"
+        },
+        "/rest/getRandomSongs": {
+            "$ref": "./endpoints/getRandomSongs.json"
+        },
+        "/rest/getScanStatus": {
+            "$ref": "./endpoints/getScanStatus.json"
+        },
+        "/rest/getShares": {
+            "$ref": "./endpoints/getShares.json"
+        },
+        "/rest/getSimilarSongs": {
+            "$ref": "./endpoints/getSimilarSongs.json"
+        },
+        "/rest/getSimilarSongs2": {
+            "$ref": "./endpoints/getSimilarSongs2.json"
+        },
+        "/rest/getSong": {
+            "$ref": "./endpoints/getSong.json"
+        },
+        "/rest/getSongsByGenre": {
+            "$ref": "./endpoints/getSongsByGenre.json"
+        },
+        "/rest/getStarred": {
+            "$ref": "./endpoints/getStarred.json"
+        },
+        "/rest/getStarred2": {
+            "$ref": "./endpoints/getStarred2.json"
+        },
+        "/rest/getTopSongs": {
+            "$ref": "./endpoints/getTopSongs.json"
+        },
+        "/rest/getUser": {
+            "$ref": "./endpoints/getUser.json"
+        },
+        "/rest/getUsers": {
+            "$ref": "./endpoints/getUsers.json"
+        },
+        "/rest/getVideoInfo": {
+            "$ref": "./endpoints/getVideoInfo.json"
+        },
+        "/rest/getVideos": {
+            "$ref": "./endpoints/getVideos.json"
+        },
+        "/rest/hls.m3u8": {
+            "$ref": "./endpoints/hls.m3u8.json"
+        },
+        "/rest/jukeboxControl": {
+            "$ref": "./endpoints/jukeboxControl.json"
+        },
+        "/rest/ping": {
+            "$ref": "./endpoints/ping.json"
+        },
+        "/rest/refreshPodcasts": {
+            "$ref": "./endpoints/refreshPodcasts.json"
+        },
+        "/rest/savePlayQueue": {
+            "$ref": "./endpoints/savePlayQueue.json"
+        },
+        "/rest/scrobble": {
+            "$ref": "./endpoints/scrobble.json"
+        },
+        "/rest/search": {
+            "$ref": "./endpoints/search.json"
+        },
+        "/rest/search2": {
+            "$ref": "./endpoints/search2.json"
+        },
+        "/rest/search3": {
+            "$ref": "./endpoints/search3.json"
+        },
+        "/rest/setRating": {
+            "$ref": "./endpoints/setRating.json"
+        },
+        "/rest/star": {
+            "$ref": "./endpoints/star.json"
+        },
+        "/rest/startScan": {
+            "$ref": "./endpoints/startScan.json"
+        },
+        "/rest/stream": {
+            "$ref": "./endpoints/stream.json"
+        },
+        "/rest/tokenInfo": {
+            "$ref": "./endpoints/tokenInfo.json"
+        },
+        "/rest/unstar": {
+            "$ref": "./endpoints/unstar.json"
+        },
+        "/rest/updateInternetRadioStation": {
+            "$ref": "./endpoints/updateInternetRadioStation.json"
+        },
+        "/rest/updatePlaylist": {
+            "$ref": "./endpoints/updatePlaylist.json"
+        },
+        "/rest/updateShare": {
+            "$ref": "./endpoints/updateShare.json"
+        },
+        "/rest/updateUser": {
+            "$ref": "./endpoints/updateUser.json"
+        }
+    },
+    "components": {
+        "responses": {
+            "EmptySubsonicResponse": {
+                "$ref": "./responses/EmptySubsonicResponse.json"
+            },
+            "HTTPFormPostNotSupported": {
+                "$ref": "./responses/HTTPFormPostNotSupported.json"
+            },
+            "BinaryResponse": {
+                "$ref": "./responses/BinaryResponse.json"
+            }
+        },
+        "parameters": {},
+        "securitySchemes": {
+            "apiKeyAuth": {
+                "type": "apiKey",
+                "name": "apiKey",
+                "in": "query",
+                "description": "[OS] An API key used for authentication. If specified, `p`, `t`, `s` nor `u` can be specified."
+            },
+            "username": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "u",
+                "description": "The username."
+            },
+            "legacyPassword": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "p",
+                "description": "The password, either in clear text or hex-encoded with a “enc:” prefix. Since 1.13.0 this should only be used for testing purposes. `u` must be specified."
+            },
+            "token": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "t",
+                "description": "(Since 1.13.0) The authentication token computed as md5(password + salt). `u` and `s` must be specified. See https://opensubsonic.netlify.app/docs/api-reference/#authentication for details."
+            },
+            "salt": {
+                "type": "apiKey",
+                "in": "query",
+                "name": "s",
+                "description": "(Since 1.13.0) A random string (“salt”) used as input for computing the password hash. `u` and `t` must be specified. See https://opensubsonic.netlify.app/docs/api-reference/#authentication for details."
+            },
+            "protocolVersion": {
+                "type": "apiKey",
+                "name": "v",
+                "description": "The protocol version implemented by the client, i.e., the version of the subsonic-rest-api.xsd schema used (see below).",
+                "in": "query"
+            },
+            "clientName": {
+                "type": "apiKey",
+                "name": "c",
+                "description": "A unique string identifying the client application.",
+                "in": "query"
+            },
+            "format": {
+                "name": "f",
+                "type": "apiKey",
+                "description": "The response format. Must be 'xml' or 'json'. For the purposes of this document, only `json` is allowed.",
+                "in": "query"
+            }
+        },
+        "schemas": {
+            "SubsonicError": {
+                "$ref": "./schemas/Error.json"
+            },
+            "SubsonicBaseResponse": {
+                "$ref": "./schemas/SubsonicResponse/SubsonicBaseResponse.json"
+            },
+            "SubsonicSuccessResponse": {
+                "$ref": "./schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+            },
+            "SubsonicFailureResponse": {
+                "$ref": "./schemas/SubsonicResponse/SubsonicFailureResponse.json"
+            },
+            "SubsonicResponse": {
+                "$ref": "./schemas/SubsonicResponse.json"
+            },
+            "ItemGenre": {
+                "$ref": "./schemas/ItemGenre.json"
+            },
+            "ArtistID3": {
+                "$ref": "./schemas/ArtistID3.json"
+            },
+            "Contributor": {
+                "$ref": "./schemas/Contributor.json"
+            },
+            "ReplayGain": {
+                "$ref": "./schemas/ReplayGain.json"
+            },
+            "GenericMediaType": {
+                "$ref": "./schemas/GenericMediaType.json"
+            },
+            "MediaType": {
+                "$ref": "./schemas/MediaType.json"
+            },
+            "ExplicitStatus": {
+                "$ref": "./schemas/ExplicitStatus.json"
+            },
+            "Child": {
+                "$ref": "./schemas/Child.json"
+            },
+            "Playlist": {
+                "$ref": "./schemas/Playlist.json"
+            },
+            "PlaylistWithSongs": {
+                "$ref": "./schemas/PlaylistWithSongs.json"
+            },
+            "CreatePlaylistSuccessResponse": {
+                "$ref": "./endpoints/createPlaylist/CreatePlaylistSuccessResponse.json"
+            },
+            "CreatePlaylistResponse": {
+                "$ref": "./endpoints/createPlaylist/CreatePlaylistResponse.json"
+            },
+            "Share": {
+                "$ref": "./schemas/Share.json"
+            },
+            "Shares": {
+                "$ref": "./schemas/Shares.json"
+            },
+            "CreateSharesSuccessResponse": {
+                "$ref": "./endpoints/createShares/CreateSharesSuccessResponse.json"
+            },
+            "CreateSharesResponse": {
+                "$ref": "./endpoints/createShares/CreateSharesResponse.json"
+            },
+            "RecordLabel": {
+                "$ref": "./schemas/RecordLabel.json"
+            },
+            "ItemDate": {
+                "$ref": "./schemas/ItemDate.json"
+            },
+            "DiscTitle": {
+                "$ref": "./schemas/DiscTitle.json"
+            },
+            "AlbumID3": {
+                "$ref": "./schemas/AlbumID3.json"
+            },
+            "AlbumID3WithSongs": {
+                "$ref": "./schemas/AlbumID3WithSongs.json"
+            },
+            "GetAlbumSuccessResponse": {
+                "$ref": "./endpoints/getAlbum/GetAlbumSuccessResponse.json"
+            },
+            "GetAlbumResponse": {
+                "$ref": "./endpoints/getAlbum/GetAlbumResponse.json"
+            },
+            "AlbumInfo": {
+                "$ref": "./schemas/AlbumInfo.json"
+            },
+            "GetAlbumInfoSuccessResponse": {
+                "$ref": "./endpoints/getAlbumInfo/GetAlbumInfoSuccessResponse.json"
+            },
+            "GetAlbumInfoResponse": {
+                "$ref": "./endpoints/getAlbumInfo/GetAlbumInfoResponse.json"
+            },
+            "AlbumListType": {
+                "$ref": "./schemas/AlbumListType.json"
+            },
+            "AlbumList": {
+                "$ref": "./schemas/AlbumList.json"
+            },
+            "GetAlbumListSuccessResponse": {
+                "$ref": "./endpoints/getAlbumList/GetAlbumListSuccessResponse.json"
+            },
+            "GetAlbumListResponse": {
+                "$ref": "./endpoints/getAlbumList/GetAlbumListResponse.json"
+            },
+            "AlbumList2": {
+                "$ref": "./schemas/AlbumList2.json"
+            },
+            "GetAlbumList2SuccessResponse": {
+                "$ref": "./endpoints/getAlbumList2/GetAlbumList2SuccessResponse.json"
+            },
+            "GetAlbumList2Response": {
+                "$ref": "./endpoints/getAlbumList2/GetAlbumList2Response.json"
+            },
+            "ArtistWithAlbumsID3": {
+                "$ref": "./schemas/ArtistWithAlbumsID3.json"
+            },
+            "GetArtistSuccessResponse": {
+                "$ref": "./endpoints/getArtist/GetArtistSuccessResponse.json"
+            },
+            "GetArtistResponse": {
+                "$ref": "./endpoints/getArtist/GetArtistResponse.json"
+            },
+            "Artist": {
+                "$ref": "./schemas/Artist.json"
+            },
+            "ArtistInfo": {
+                "$ref": "./schemas/ArtistInfo.json"
+            },
+            "GetArtistInfoSuccessResponse": {
+                "$ref": "./endpoints/getArtistInfo/GetArtistInfoSuccessResponse.json"
+            },
+            "GetArtistInfoResponse": {
+                "$ref": "./endpoints/getArtistInfo/GetArtistInfoResponse.json"
+            },
+            "ArtistInfo2": {
+                "$ref": "./schemas/ArtistInfo2.json"
+            },
+            "GetArtistInfo2SuccessResponse": {
+                "$ref": "./endpoints/getArtistInfo2/GetArtistInfo2SuccessResponse.json"
+            },
+            "GetArtistInfo2Response": {
+                "$ref": "./endpoints/getArtistInfo2/GetArtistInfo2Response.json"
+            },
+            "ArtistsID3": {
+                "$ref": "./schemas/ArtistsID3.json"
+            },
+            "GetArtistsSuccessResponse": {
+                "$ref": "./endpoints/getArtists/GetArtistsSuccessResponse.json"
+            },
+            "GetArtistsResponse": {
+                "$ref": "./endpoints/getArtists/GetArtistsResponse.json"
+            },
+            "Bookmark": {
+                "$ref": "./schemas/Bookmark.json"
+            },
+            "Bookmarks": {
+                "$ref": "./schemas/Bookmarks.json"
+            },
+            "GetBookmarksSuccessResponse": {
+                "$ref": "./endpoints/getBookmarks/GetBookmarksSuccessResponse.json"
+            },
+            "GetBookmarksResponse": {
+                "$ref": "./endpoints/getBookmarks/GetBookmarksResponse.json"
+            },
+            "ChatMessage": {
+                "$ref": "./schemas/ChatMessage.json"
+            },
+            "ChatMessages": {
+                "$ref": "./schemas/ChatMessages.json"
+            },
+            "GetChatMessagesSuccessResponse": {
+                "$ref": "./endpoints/getChatMessages/GetChatMessagesSuccessResponse.json"
+            },
+            "GetChatMessagesResponse": {
+                "$ref": "./endpoints/getChatMessages/GetChatMessagesResponse.json"
+            },
+            "Genre": {
+                "$ref": "./schemas/Genre.json"
+            },
+            "Genres": {
+                "$ref": "./schemas/Genres.json"
+            },
+            "GetGenresSuccessResponse": {
+                "$ref": "./endpoints/getGenres/GetGenresSuccessResponse.json"
+            },
+            "GetGenresResponse": {
+                "$ref": "./endpoints/getGenres/GetGenresResponse.json"
+            },
+            "Index": {
+                "$ref": "./schemas/Index.json"
+            },
+            "Indexes": {
+                "$ref": "./schemas/Indexes.json"
+            },
+            "GetIndexesSuccessResponse": {
+                "$ref": "./endpoints/getIndexes/GetIndexesSuccessResponse.json"
+            },
+            "GetIndexesResponse": {
+                "$ref": "./endpoints/getIndexes/GetIndexesResponse.json"
+            },
+            "InternetRadioStation": {
+                "$ref": "./schemas/InternetRadioStation.json"
+            },
+            "InternetRadioStations": {
+                "$ref": "./schemas/InternetRadioStations.json"
+            },
+            "GetInternetRadioStationsSuccessResponse": {
+                "$ref": "./endpoints/getInternetRadioStations/GetInternetRadioStationsSuccessResponse.json"
+            },
+            "GetInternetRadioStationsResponse": {
+                "$ref": "./endpoints/getInternetRadioStations/GetInternetRadioStationsResponse.json"
+            },
+            "License": {
+                "$ref": "./schemas/License.json"
+            },
+            "GetLicenseSuccessResponse": {
+                "$ref": "./endpoints/getLicense/GetLicenseSuccessResponse.json"
+            },
+            "GetLicenseResponse": {
+                "$ref": "./endpoints/getLicense/GetLicenseResponse.json"
+            },
+            "Lyrics": {
+                "$ref": "./schemas/Lyrics.json"
+            },
+            "GetLyricsSuccessResponse": {
+                "$ref": "./endpoints/getLyrics/GetLyricsSuccessResponse.json"
+            },
+            "GetLyricsResponse": {
+                "$ref": "./endpoints/getLyrics/GetLyricsResponse.json"
+            },
+            "Line": {
+                "$ref": "./schemas/Line.json"
+            },
+            "StructuredLyrics": {
+                "$ref": "./schemas/StructuredLyrics.json"
+            },
+            "LyricsList": {
+                "$ref": "./schemas/LyricsList.json"
+            },
+            "GetLyricsBySongIdSuccessResponse": {
+                "$ref": "./endpoints/getLyricsBySongId/GetLyricsBySongIdSuccessResponse.json"
+            },
+            "GetLyricsBySongIdResponse": {
+                "$ref": "./endpoints/getLyricsBySongId/GetLyricsBySongIdResponse.json"
+            },
+            "Directory": {
+                "$ref": "./schemas/Directory.json"
+            },
+            "GetMusicDirectorySuccessResponse": {
+                "$ref": "./endpoints/getMusicDirectory/GetMusicDirectorySuccessResponse.json"
+            },
+            "GetMusicDirectoryResponse": {
+                "$ref": "./endpoints/getMusicDirectory/GetMusicDirectoryResponse.json"
+            },
+            "MusicFolder": {
+                "$ref": "./schemas/MusicFolder.json"
+            },
+            "MusicFolders": {
+                "$ref": "./schemas/MusicFolders.json"
+            },
+            "GetMusicFoldersSuccessResponse": {
+                "$ref": "./endpoints/getMusicFolders/GetMusicFoldersSuccessResponse.json"
+            },
+            "GetMusicFoldersResponse": {
+                "$ref": "./endpoints/getMusicFolders/GetMusicFoldersResponse.json"
+            },
+            "PodcastStatus": {
+                "$ref": "./schemas/PodcastStatus.json"
+            },
+            "PodcastEpisode": {
+                "$ref": "./schemas/PodcastEpisode.json"
+            },
+            "NewestPodcasts": {
+                "$ref": "./schemas/NewestPodcasts.json"
+            },
+            "GetNewestPodcastsSuccessResponse": {
+                "$ref": "./endpoints/getNewestPodcasts/GetNewestPodcastsSuccessResponse.json"
+            },
+            "GetNewestPodcastsResponse": {
+                "$ref": "./endpoints/getNewestPodcasts/GetNewestPodcastsResponse.json"
+            },
+            "NowPlayingEntry": {
+                "$ref": "./schemas/NowPlayingEntry.json"
+            },
+            "NowPlaying": {
+                "$ref": "./schemas/NowPlaying.json"
+            },
+            "GetNowPlayingSuccessResponse": {
+                "$ref": "./endpoints/getNowPlaying/GetNowPlayingSuccessResponse.json"
+            },
+            "GetNowPlayingResponse": {
+                "$ref": "./endpoints/getNowPlaying/GetNowPlayingResponse.json"
+            },
+            "OpenSubsonicExtension": {
+                "$ref": "./schemas/OpenSubsonicExtension.json"
+            },
+            "GetOpenSubsonicExtensionsSuccessResponse": {
+                "$ref": "./endpoints/getOpenSubsonicExtensions/GetOpenSubsonicExtensionsSuccessResponse.json"
+            },
+            "GetOpenSubsonicExtensionsResponse": {
+                "$ref": "./endpoints/getOpenSubsonicExtensions/GetOpenSubsonicExtensionsResponse.json"
+            },
+            "GetPlaylistSuccessResponse": {
+                "$ref": "./endpoints/getPlaylist/GetPlaylistSuccessResponse.json"
+            },
+            "GetPlaylistResponse": {
+                "$ref": "./endpoints/getPlaylist/GetPlaylistResponse.json"
+            },
+            "Playlists": {
+                "$ref": "./schemas/Playlists.json"
+            },
+            "GetPlaylistsSuccessResponse": {
+                "$ref": "./endpoints/getPlaylists/GetPlaylistsSuccessResponse.json"
+            },
+            "GetPlaylistsResponse": {
+                "$ref": "./endpoints/getPlaylists/GetPlaylistsResponse.json"
+            },
+            "PlayQueue": {
+                "$ref": "./schemas/PlayQueue.json"
+            },
+            "GetPlayQueueSuccessResponse": {
+                "$ref": "./endpoints/getPlayQueue/GetPlayQueueSuccessResponse.json"
+            },
+            "GetPlayQueueResponse": {
+                "$ref": "./endpoints/getPlayQueue/GetPlayQueueResponse.json"
+            },
+            "GetPodcastEpisodeSuccessResponse": {
+                "$ref": "./endpoints/getPodcastEpisode/GetPodcastEpisodeSuccessResponse.json"
+            },
+            "GetPodcastEpisodeResponse": {
+                "$ref": "./endpoints/getPodcastEpisode/GetPodcastEpisodeResponse.json"
+            },
+            "PodcastChannel": {
+                "$ref": "./schemas/PodcastChannel.json"
+            },
+            "Podcasts": {
+                "$ref": "./schemas/Podcasts.json"
+            },
+            "GetPodcastsSuccessResponse": {
+                "$ref": "./endpoints/getPodcasts/GetPodcastsSuccessResponse.json"
+            },
+            "GetPodcastsResponse": {
+                "$ref": "./endpoints/getPodcasts/GetPodcastsResponse.json"
+            },
+            "Songs": {
+                "$ref": "./schemas/Songs.json"
+            },
+            "GetRandomSongsSuccessResponse": {
+                "$ref": "./endpoints/getRandomSongs/GetRandomSongsSuccessResponse.json"
+            },
+            "GetRandomSongsResponse": {
+                "$ref": "./endpoints/getRandomSongs/GetRandomSongsResponse.json"
+            },
+            "ScanStatus": {
+                "$ref": "./schemas/ScanStatus.json"
+            },
+            "GetScanStatusSuccessResponse": {
+                "$ref": "./endpoints/getScanStatus/GetScanStatusSuccessResponse.json"
+            },
+            "GetScanStatusResponse": {
+                "$ref": "./endpoints/getScanStatus/GetScanStatusResponse.json"
+            },
+            "GetSharesSuccessResponse": {
+                "$ref": "./endpoints/getShares/GetSharesSuccessResponse.json"
+            },
+            "GetSharesResponse": {
+                "$ref": "./endpoints/getShares/GetSharesResponse.json"
+            },
+            "SimilarSongs": {
+                "$ref": "./schemas/SimilarSongs.json"
+            },
+            "GetSimilarSongsSuccessResponse": {
+                "$ref": "./endpoints/getSimilarSongs/GetSimilarSongsSuccessResponse.json"
+            },
+            "GetSimilarSongsResponse": {
+                "$ref": "./endpoints/getSimilarSongs/GetSimilarSongsResponse.json"
+            },
+            "SimilarSongs2": {
+                "$ref": "./schemas/SimilarSongs2.json"
+            },
+            "GetSimilarSongs2SuccessResponse": {
+                "$ref": "./endpoints/getSimilarSongs2/GetSimilarSongs2SuccessResponse.json"
+            },
+            "GetSimilarSongs2Response": {
+                "$ref": "./endpoints/getSimilarSongs2/GetSimilarSongs2Response.json"
+            },
+            "GetSongSuccessResponse": {
+                "$ref": "./endpoints/getSong/GetSongSuccessResponse.json"
+            },
+            "GetSongResponse": {
+                "$ref": "./endpoints/getSong/GetSongResponse.json"
+            },
+            "GetSongsByGenreSuccessResponse": {
+                "$ref": "./endpoints/getSongsByGenre/GetSongsByGenreSuccessResponse.json"
+            },
+            "GetSongsByGenreResponse": {
+                "$ref": "./endpoints/getSongsByGenre/GetSongsByGenreResponse.json"
+            },
+            "Starred": {
+                "$ref": "./schemas/Starred.json"
+            },
+            "GetStarredSuccessResponse": {
+                "$ref": "./endpoints/getStarred/GetStarredSuccessResponse.json"
+            },
+            "GetStarredResponse": {
+                "$ref": "./endpoints/getStarred/GetStarredResponse.json"
+            },
+            "Starred2": {
+                "$ref": "./schemas/Starred2.json"
+            },
+            "GetStarred2SuccessResponse": {
+                "$ref": "./endpoints/getStarred2/GetStarred2SuccessResponse.json"
+            },
+            "GetStarred2Response": {
+                "$ref": "./endpoints/getStarred2/GetStarred2Response.json"
+            },
+            "TopSongs": {
+                "$ref": "./schemas/TopSongs.json"
+            },
+            "GetTopSongsSuccessResponse": {
+                "$ref": "./endpoints/getTopSongs/GetTopSongsSuccessResponse.json"
+            },
+            "GetTopSongsResponse": {
+                "$ref": "./endpoints/getTopSongs/GetTopSongsResponse.json"
+            },
+            "User": {
+                "$ref": "./schemas/User.json"
+            },
+            "GetUserSuccessResponse": {
+                "$ref": "./endpoints/getUser/GetUserSuccessResponse.json"
+            },
+            "GetUserResponse": {
+                "$ref": "./endpoints/getUser/GetUserResponse.json"
+            },
+            "Users": {
+                "$ref": "./schemas/Users.json"
+            },
+            "GetUsersSuccessResponse": {
+                "$ref": "./endpoints/getUsers/GetUsersSuccessResponse.json"
+            },
+            "GetUsersResponse": {
+                "$ref": "./endpoints/getUsers/GetUsersResponse.json"
+            },
+            "VideoInfo": {
+                "$ref": "./schemas/VideoInfo.json"
+            },
+            "GetVideoInfoSuccessResponse": {
+                "$ref": "./endpoints/getVideoInfo/GetVideoInfoSuccessResponse.json"
+            },
+            "GetVideoInfoResponse": {
+                "$ref": "./endpoints/getVideoInfo/GetVideoInfoResponse.json"
+            },
+            "Videos": {
+                "$ref": "./schemas/Videos.json"
+            },
+            "GetVideosSuccessResponse": {
+                "$ref": "./endpoints/getVideos/GetVideosSuccessResponse.json"
+            },
+            "GetVideosResponse": {
+                "$ref": "./endpoints/getVideos/GetVideosResponse.json"
+            },
+            "JukeboxAction": {
+                "$ref": "./schemas/JukeboxAction.json"
+            },
+            "JukeboxStatus": {
+                "$ref": "./schemas/JukeboxStatus.json"
+            },
+            "JukeboxPlaylist": {
+                "$ref": "./schemas/JukeboxPlaylist.json"
+            },
+            "JukeboxControlSuccessResponse": {
+                "$ref": "./endpoints/jukeboxControl/JukeboxControlSuccessResponse.json"
+            },
+            "JukeboxControlResponse": {
+                "$ref": "./endpoints/jukeboxControl/JukeboxControlResponse.json"
+            },
+            "SearchResult": {
+                "$ref": "./schemas/SearchResult.json"
+            },
+            "SearchSuccessResponse": {
+                "$ref": "./endpoints/search/SearchSuccessResponse.json"
+            },
+            "SearchResponse": {
+                "$ref": "./endpoints/search/SearchResponse.json"
+            },
+            "SearchResult2": {
+                "$ref": "./schemas/SearchResult2.json"
+            },
+            "Search2SuccessResponse": {
+                "$ref": "./endpoints/search2/Search2SuccessResponse.json"
+            },
+            "Search2Response": {
+                "$ref": "./endpoints/search2/Search2Response.json"
+            },
+            "SearchResult3": {
+                "$ref": "./schemas/SearchResult3.json"
+            },
+            "Search3SuccessResponse": {
+                "$ref": "./endpoints/search3/Search3SuccessResponse.json"
+            },
+            "Search3Response": {
+                "$ref": "./endpoints/search3/Search3Response.json"
+            },
+            "StartScanSuccessResponse": {
+                "$ref": "./endpoints/startScan/StartScanSuccessResponse.json"
+            },
+            "StartScanResponse": {
+                "$ref": "./endpoints/startScan/StartScanResponse.json"
+            },
+            "TokenInfo": {
+                "$ref": "./schemas/TokenInfo.json"
+            },
+            "GetTokenInfoSuccessResponse": {
+                "$ref": "./endpoints/tokenInfo/GetTokenInfoSuccessResponse.json"
+            },
+            "GetTokenInfoResponse": {
+                "$ref": "./endpoints/tokenInfo/GetTokenInfoResponse.json"
+            }
+        }
+    }
+}

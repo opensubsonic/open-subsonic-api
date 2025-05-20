@@ -1,0 +1,38 @@
+{
+    "allOf": [
+        {
+            "$ref": "./Child.json"
+        },
+        {
+            "type": "object",
+            "description": "NowPlayingEntry.",
+            "externalDocs": {
+                "description": "NowPlayingEntry",
+                "url": "https://opensubsonic.netlify.app/docs/responses/nowplayingentry/"
+            },
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "description": "The username"
+                },
+                "minutesAgo": {
+                    "type": "integer",
+                    "description": "Last update"
+                },
+                "playerId": {
+                    "type": "integer",
+                    "description": "Player Id"
+                },
+                "playerName": {
+                    "type": "string",
+                    "description": "Player name"
+                }
+            },
+            "required": [
+                "username",
+                "minutesAgo",
+                "playerId"
+            ]
+        }
+    ]
+}

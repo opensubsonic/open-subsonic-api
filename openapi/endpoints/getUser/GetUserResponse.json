@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "A subsonic-response element with a nested `user` element on success.",
+    "properties": {
+        "subsonic-response": {
+            "oneOf": [
+                {
+                    "$ref": "./GetUserSuccessResponse.json"
+                },
+                {
+                    "$ref": "../../schemas/SubsonicResponse/SubsonicFailureResponse.json"
+                }
+            ]
+        }
+    },
+    "externalDocs": {
+        "description": "GetUserResponse",
+        "url": "https://opensubsonic.netlify.app/docs/endpoints/getuser/"
+    }
+}

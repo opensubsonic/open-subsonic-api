@@ -1,0 +1,9 @@
+{
+    "type": "string",
+    "enum": [
+        "clean",
+        "explicit",
+        ""
+    ],
+    "description": "Returns “explicit”, “clean” or “”. (For songs extracted from tags “ITUNESADVISORY”: 1 = explicit, 2 = clean, MP4 “rtng”: 1 or 4 = explicit, 2 = clean. See `albumID3` for albums)"
+}

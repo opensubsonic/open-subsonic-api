@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "SimilarSongs list.",
+    "externalDocs": {
+        "description": "SimilarSongs",
+        "url": "https://opensubsonic.netlify.app/docs/responses/similarsongs/"
+    },
+    "properties": {
+        "song": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "List of songs"
+        }
+    }
+}

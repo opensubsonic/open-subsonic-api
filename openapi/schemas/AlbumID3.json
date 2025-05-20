@@ -1,0 +1,158 @@
+{
+    "type": "object",
+    "description": "Album with songs.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The id of the album"
+        },
+        "name": {
+            "type": "string",
+            "description": "The album name."
+        },
+        "version": {
+            "type": "string",
+            "description": "The album version name (Remastered, Anniversary Box Set, …)."
+        },
+        "artist": {
+            "type": "string",
+            "description": "Artist name."
+        },
+        "artistId": {
+            "type": "string",
+            "description": "The id of the artist"
+        },
+        "coverArt": {
+            "type": "string",
+            "description": "A covertArt id."
+        },
+        "songCount": {
+            "type": "integer",
+            "description": "Number of songs"
+        },
+        "duration": {
+            "type": "integer",
+            "description": "Total duration of the album in seconds"
+        },
+        "playCount": {
+            "type": "integer",
+            "description": "Number of play of the album"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the album was added. [ISO 8601]"
+        },
+        "starred": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the album was added. [ISO 8601]"
+        },
+        "year": {
+            "type": "integer",
+            "description": "The album year"
+        },
+        "genre": {
+            "type": "string",
+            "description": "The album genre"
+        },
+        "played": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the album was last played. [ISO 8601]"
+        },
+        "userRating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "The user rating of the album. [1-5]"
+        },
+        "recordLabels": {
+            "type": "array",
+            "description": "The labels producing the album.",
+            "items": {
+                "$ref": "./RecordLabel.json"
+            }
+        },
+        "musicBrainzId": {
+            "type": "string",
+            "description": "The album MusicBrainzID."
+        },
+        "genres": {
+            "type": "array",
+            "description": "The list of all genres of the album.",
+            "items": {
+                "$ref": "./ItemGenre.json"
+            }
+        },
+        "artists": {
+            "type": "array",
+            "description": "The list of all album artists of the album.",
+            "items": {
+                "$ref": "./ArtistID3.json"
+            }
+        },
+        "displayArtist": {
+            "type": "string",
+            "description": "The single value display artist."
+        },
+        "releaseTypes": {
+            "type": "array",
+            "description": "The types of this album release. (Album, Compilation, EP, Remix, …).",
+            "items": {
+                "type": "string"
+            }
+        },
+        "moods": {
+            "type": "array",
+            "description": "The list of all moods of the album.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "sortName": {
+            "type": "string",
+            "description": "The album sort name."
+        },
+        "originalReleaseDate": {
+            "allOf": [{"$ref": "./ItemDate.json"}],
+            "description": "Date the album was originally released."
+        },
+        "releaseDate": {
+            "allOf": [{"$ref": "./ItemDate.json"}],
+            "description": "Date the specific edition of the album was released. Note: for files using ID3 tags, releaseDate should generally be read from the TDRL tag. Servers that use a different source for this field should document the behavior."
+        },
+        "isCompilation": {
+            "type": "boolean",
+            "description": "True if the album is a compilation."
+        },
+        "explicitStatus": {
+            "$ref": "./ExplicitStatus.json"
+        },
+        "discTitles": {
+            "type": "array",
+            "description": "The list of all disc titles of the album.",
+            "items": {
+                "$ref": "./DiscTitle.json"
+            }
+        },
+        "song": {
+            "type": "array",
+            "description": "The list of songs",
+            "items": {
+                "$ref": "./Child.json"
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "songCount",
+        "duration",
+        "created"
+    ],
+    "externalDocs": {
+        "description": "AlbumID3",
+        "url": "https://opensubsonic.netlify.app/docs/responses/albumid3/"
+    }
+}

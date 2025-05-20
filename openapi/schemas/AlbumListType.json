@@ -1,0 +1,16 @@
+{
+    "type": "string",
+    "description": "The list type. Must be one of the following: random, newest, highest, frequent, recent. Since 1.8.0 you can also use alphabeticalByName or alphabeticalByArtist to page through all albums alphabetically, and starred to retrieve starred albums. Since 1.10.1 you can use byYear and byGenre to list albums in a given year range or genre.",
+    "enum": [
+        "random",
+        "newest",
+        "highest",
+        "frequent",
+        "recent",
+        "alphabeticalByName",
+        "alphabeticalByArtist",
+        "starred",
+        "byYear",
+        "byGenre"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Playlists.",
+    "externalDocs": {
+        "description": "Playlists",
+        "url": "https://opensubsonic.netlify.app/docs/responses/playlists/"
+    },
+    "properties": {
+        "playlist": {
+            "type": "array",
+            "items": {
+                "$ref": "./Playlist.json"
+            },
+            "description": "The playlists"
+        }
+    }
+}

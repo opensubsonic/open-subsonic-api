@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "TopSongs list.",
+    "externalDocs": {
+        "description": "TopSongs",
+        "url": "https://opensubsonic.netlify.app/docs/responses/topsongs/"
+    },
+    "properties": {
+        "song": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "List of songs"
+        }
+    }
+}

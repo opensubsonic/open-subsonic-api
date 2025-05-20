@@ -1,0 +1,71 @@
+{
+    "get": {
+        "summary": "Returns the avatar (personal image) for a user.",
+        "description": "Returns the avatar (personal image) for a user.",
+        "operationId": "getAvatar",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "parameters": [
+            {
+                "name": "username",
+                "in": "query",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/BinaryResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getAvatar",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getavatar/"
+        }
+    },
+    "post": {
+        "summary": "Returns the avatar (personal image) for a user.",
+        "description": "Returns the avatar (personal image) for a user.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetAvatar",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "username": {
+                                "type": "string",
+                                "description": "The username for which to retrieve the avatar."
+                            }
+                        },
+                        "required": [
+                            "username"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/BinaryResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getAvatar",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getavatar/"
+        }
+    }
+}

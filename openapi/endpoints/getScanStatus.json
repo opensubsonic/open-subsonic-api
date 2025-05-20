@@ -1,0 +1,69 @@
+{
+    "get": {
+        "summary": "Returns the current status for media library scanning.",
+        "description": "Returns the current status for media library scanning. Takes no extra parameters.",
+        "operationId": "getScanStatus",
+        "tags": [
+            "Media Library Scanning"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getScanStatus/GetScanStatusResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getScanStatus",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getscanstatus/"
+        }
+    },
+    "post": {
+        "summary": "Returns the current status for media library scanning.",
+        "description": "Returns the current status for media library scanning. Takes no extra parameters.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetScanStatus",
+        "tags": [
+            "Media Library Scanning"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getScanStatus/GetScanStatusResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getScanStatus",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getscanstatus/"
+        }
+    }
+}

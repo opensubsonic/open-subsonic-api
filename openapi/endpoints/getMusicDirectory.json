@@ -1,0 +1,86 @@
+{
+    "get": {
+        "summary": "Returns a listing of all files in a music directory.",
+        "description": "Returns a listing of all files in a music directory. Typically used to get list of albums for an artist, or list of songs for an album.",
+        "operationId": "getMusicDirectory",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "A string which uniquely identifies the music folder. Obtained by calls to `getIndexes` or `getMusicDirectory`.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getMusicDirectory/GetMusicDirectoryResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getMusicDirectory",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicdirectory/"
+        }
+    },
+    "post": {
+        "summary": "Returns a listing of all files in a music directory.",
+        "description": "Returns a listing of all files in a music directory. Typically used to get list of albums for an artist, or list of songs for an album.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetMusicDirectory",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "A string which uniquely identifies the music folder. Obtained by calls to `getIndexes` or `getMusicDirectory`."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getMusicDirectory/GetMusicDirectoryResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getMusicDirectory",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicdirectory/"
+        }
+    }
+}

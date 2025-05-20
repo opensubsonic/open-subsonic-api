@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "description": "A record label for an album.",
+    "properties": {
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "externalDocs": {
+        "description": "RecordLabel",
+        "url": "https://opensubsonic.netlify.app/docs/responses/recordlabel/"
+    }
+}

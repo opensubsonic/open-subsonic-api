@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "description": "An artist from ID3 tags.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The id of the artist"
+        },
+        "name": {
+            "type": "string",
+            "description": "The artist name."
+        },
+        "coverArt": {
+            "type": "string",
+            "description": "A covertArt id."
+        },
+        "artistImageUrl": {
+            "type": "string",
+            "description": "An url to an external image source."
+        },
+        "albumCount": {
+            "type": "integer",
+            "description": "Artist album count."
+        },
+        "starred": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the artist was starred. [ISO 8601]"
+        },
+        "musicBrainzId": {
+            "type": "string",
+            "description": "The artist MusicBrainzID."
+        },
+        "sortName": {
+            "type": "string",
+            "description": "The artist sort name."
+        },
+        "roles": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "The list of all roles this artist has in the library."
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ],
+    "externalDocs": {
+        "description": "ArtistID3",
+        "url": "https://opensubsonic.netlify.app/docs/responses/artistid3/"
+    }
+}

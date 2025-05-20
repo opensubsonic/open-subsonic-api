@@ -1,0 +1,30 @@
+{
+    "allOf": [
+        {
+            "$ref": "./SubsonicBaseResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "The command result. `failed`",
+                    "enum": [
+                        "failed"
+                    ]
+                },
+                "error": {
+                    "$ref": "../Error.json"
+                }
+            },
+            "required": [
+                "status",
+                "error"
+            ],
+            "externalDocs": {
+                "description": "SubsonicResponse",
+                "url": "https://opensubsonic.netlify.app/docs/responses/subsonic-response/"
+            }
+        }
+    ]
+}

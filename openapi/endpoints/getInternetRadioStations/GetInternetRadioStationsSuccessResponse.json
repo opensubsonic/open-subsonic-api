@@ -1,0 +1,18 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "internetRadioStations": {
+                    "$ref": "../../schemas/InternetRadioStations.json"
+                }
+            },
+            "required": [
+                "internetRadioStations"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "get": {
+        "summary": "Deletes a Podcast episode.",
+        "description": "Deletes a Podcast episode. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).",
+        "operationId": "deletePodcastEpisode",
+        "tags": [
+            "Podcast"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The ID of the Podcast episode to delete.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deletePodcastEpisode",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deletepodcastepisode/"
+        }
+    },
+    "post": {
+        "summary": "Deletes a Podcast episode.",
+        "description": "Deletes a Podcast episode. Note: The user must be authorized for Podcast administration (see Settings > Users > User is allowed to administrate Podcasts).\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postDeletePodcastEpisode",
+        "tags": [
+            "Podcast"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The ID of the Podcast episode to delete."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deletePodcastEpisode",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deletepodcastepisode/"
+        }
+    }
+}
