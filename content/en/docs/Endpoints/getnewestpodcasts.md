@@ -25,7 +25,7 @@ Returns the most recently published Podcast episodes.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`newestPodcasts`](../../responses/newestpodcasts) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

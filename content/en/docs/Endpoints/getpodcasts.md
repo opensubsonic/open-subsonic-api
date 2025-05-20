@@ -27,7 +27,7 @@ Returns all Podcast channels the server subscribes to, and (optionally) their ep
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`podcasts`](../../responses/podcasts) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

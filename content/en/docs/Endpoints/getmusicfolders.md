@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`musicFolders`](../../responses/musicfolders) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

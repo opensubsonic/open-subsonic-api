@@ -29,7 +29,7 @@ Creates (or updates) a playlist.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playlist`](../../responses/playlistwithsongs) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -140,7 +140,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -28,7 +28,7 @@ Returns songs in a given genre.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`songsByGenre`](../../responses/songsbygenre) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

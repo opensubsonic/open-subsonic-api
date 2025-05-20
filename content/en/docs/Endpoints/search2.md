@@ -32,7 +32,7 @@ Returns albums, artists and songs matching the given search criteria. Supports p
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`searchResult2`](../../responses/searchresult2) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

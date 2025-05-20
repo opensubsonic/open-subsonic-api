@@ -5,7 +5,7 @@ description: >
   A supported OpenSubsonic API extension.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

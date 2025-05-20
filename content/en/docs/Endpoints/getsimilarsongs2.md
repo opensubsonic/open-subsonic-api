@@ -26,7 +26,7 @@ Similar to [`getSimilarSongs`](../getsimilarsongs), but organizes music accordin
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`similarSongs2`](../../responses/similarsongs2) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

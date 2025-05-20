@@ -25,7 +25,7 @@ Returns starred songs, albums and artists.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`starred`](../../responses/starred) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

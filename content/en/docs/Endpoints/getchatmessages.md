@@ -25,7 +25,7 @@ Returns the current visible (non-expired) chat messages.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`chatMessages`](../../responses/chatmessages) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
