@@ -40,7 +40,7 @@ Servers must support an **empty query** and return all the data to allow clients
 
 A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searchResult3`](../../responses/searchresult3) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

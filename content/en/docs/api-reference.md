@@ -77,7 +77,7 @@ Note that `u`/`p` may still be used by servers which are backed by LDAP/PAM/othe
 
 All API endpoint unless noted otherwise returns a [`subsonic-response`](../responses/subsonic-response) that indicate the result of the command and give some information about the server.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -112,7 +112,7 @@ See [`subsonic-response`](../responses/subsonic-response)
 
 If a method fails it will return an error code and message in an `error` element. In addition, the `status` attribute of the `subsonic-response` root element will be set to `failed` instead of `ok`. For example:
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -25,7 +25,7 @@ Returns details for an artist, including a list of albums. This method organizes
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`artist`](../../responses/artist) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -26,7 +26,7 @@ Returns top songs for the given artist, using data from [last.fm](http://last.fm
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`topSongs`](../../responses/topsongs) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

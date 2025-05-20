@@ -32,7 +32,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 - [`jukeboxStatus`](../../responses/jukeboxstatus) for all actions but `get`
 - [`jukeboxPlaylist`](../../responses/jukeboxplaylist) for `get` action
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic (Status)" lang="json">}}
 {

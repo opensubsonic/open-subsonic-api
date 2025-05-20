@@ -25,7 +25,7 @@ Get details about a given user, including which authorization roles and folder a
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`user`](../../responses/user) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

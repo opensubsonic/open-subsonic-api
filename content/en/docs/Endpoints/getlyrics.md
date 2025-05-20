@@ -26,7 +26,7 @@ Searches for and returns lyrics for a given song.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`lyrics`](../../responses/lyrics) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
