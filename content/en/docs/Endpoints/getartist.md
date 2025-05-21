@@ -1,6 +1,6 @@
 ---
 title: "getArtist"
-linkTitle: "getArtist"
+linkTitle: "getArtist [OS]"
 categories:
 - Browsing
 description: >
@@ -63,6 +63,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "created": "2021-02-23T04:24:48+00:00",
           "duration": 4568,
           "playCount": 1,
+          "totalPlayCount": 1,
+          "userPlayCount": 0,
           "artistId": "100000002",
           "artist": "Synthetic",
           "year": 2007,
