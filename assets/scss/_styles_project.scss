@@ -1,6 +1,10 @@
 .redoc-container {
     // TODO: Support dark them in the future
     background: white;
+
+    code {
+        background-color: #f5f5f5 !important;
+    }
 }
 
 // Taken from https://github.com/Amoenus/SwaggerDark/releases/download/v1.0.0/SwaggerDark.css as is
