@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "users.",
+    "externalDocs": {
+        "description": "Users",
+        "url": "https://opensubsonic.netlify.app/docs/responses/users/"
+    },
+    "properties": {
+        "user": {
+            "type": "array",
+            "items": {
+                "$ref": "./User.json"
+            },
+            "description": "Array of users"
+        }
+    }
+}

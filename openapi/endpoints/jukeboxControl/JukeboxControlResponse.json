@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "A subsonic-response element with a nested :\n\n- jukeboxStatus for all actions but get\n- jukeboxPlaylist for get action",
+    "properties": {
+        "subsonic-response": {
+            "oneOf": [
+                {
+                    "$ref": "./JukeboxControlSuccessResponse.json"
+                },
+                {
+                    "$ref": "../../schemas/SubsonicResponse/SubsonicFailureResponse.json"
+                }
+            ]
+        }
+    },
+    "externalDocs": {
+        "description": "JukeboxControlSuccessResponse",
+        "url": "https://opensubsonic.netlify.app/docs/endpoints/jukeboxcontrol/"
+    }
+}

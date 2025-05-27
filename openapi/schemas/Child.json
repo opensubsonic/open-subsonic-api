@@ -1,0 +1,234 @@
+{
+    "type": "object",
+    "description": "A media.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The id of the media."
+        },
+        "parent": {
+            "type": "string",
+            "description": "The id of the parent (folder/album)"
+        },
+        "isDir": {
+            "type": "boolean",
+            "description": "The media is a directory"
+        },
+        "title": {
+            "type": "string",
+            "description": "The media name."
+        },
+        "album": {
+            "type": "string",
+            "description": "The album name."
+        },
+        "artist": {
+            "type": "string",
+            "description": "The artist name."
+        },
+        "track": {
+            "type": "integer",
+            "description": "The track number."
+        },
+        "year": {
+            "type": "integer",
+            "description": "The media year."
+        },
+        "genre": {
+            "type": "string",
+            "description": "The media genre"
+        },
+        "coverArt": {
+            "type": "string",
+            "description": "The coverArt id."
+        },
+        "size": {
+            "type": "integer",
+            "description": "A file size of the media."
+        },
+        "contentType": {
+            "type": "string",
+            "description": "The mimeType of the media."
+        },
+        "suffix": {
+            "type": "string",
+            "description": "The file suffix of the media."
+        },
+        "transcodedContentType": {
+            "type": "string",
+            "description": "The transcoded mediaType if transcoding should happen."
+        },
+        "transcodedSuffix": {
+            "type": "string",
+            "description": "The file suffix of the transcoded media."
+        },
+        "duration": {
+            "type": "integer",
+            "description": "The duration of the media in seconds."
+        },
+        "bitRate": {
+            "type": "integer",
+            "description": "The bitrate of the media."
+        },
+        "bitDepth": {
+            "type": "integer",
+            "description": "The bit depth of the media."
+        },
+        "samplingRate": {
+            "type": "integer",
+            "description": "The sampling rate of the media."
+        },
+        "channelCount": {
+            "type": "integer",
+            "description": "The number of channels of the media."
+        },
+        "path": {
+            "type": "string",
+            "description": "The full path of the media."
+        },
+        "isVideo": {
+            "type": "boolean",
+            "description": "Media is a video"
+        },
+        "userRating": {
+            "type": "integer",
+            "description": "The user rating of the media [1-5]",
+            "minimum": 1,
+            "maximum": 5
+        },
+        "averageRating": {
+            "type": "number",
+            "description": "The average rating of the media [1.0-5.0]",
+            "minimum": 0,
+            "maximum": 5
+        },
+        "playCount": {
+            "type": "integer",
+            "description": "The play count."
+        },
+        "discNumber": {
+            "type": "integer",
+            "description": "The disc number."
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the media was created. [ISO 8601]"
+        },
+        "starred": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the media was starred. [ISO 8601]"
+        },
+        "albumId": {
+            "type": "string",
+            "description": "The corresponding album id"
+        },
+        "artistId": {
+            "type": "string",
+            "description": "The corresponding artist id"
+        },
+        "type": {
+            "$ref": "./GenericMediaType.json"
+        },
+        "mediaType": {
+            "$ref": "./MediaType.json"
+        },
+        "bookmarkPosition": {
+            "type": "integer",
+            "description": "The bookmark position in seconds"
+        },
+        "originalWidth": {
+            "type": "integer",
+            "description": "The video original Width"
+        },
+        "originalHeight": {
+            "type": "integer",
+            "description": "The video original Height"
+        },
+        "played": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the album was last played. [ISO 8601]"
+        },
+        "bpm": {
+            "type": "integer",
+            "description": "The BPM of the song."
+        },
+        "comment": {
+            "type": "string",
+            "description": "The comment tag of the song."
+        },
+        "sortName": {
+            "type": "string",
+            "description": "The song sort name."
+        },
+        "musicBrainzId": {
+            "type": "string",
+            "description": "The track MusicBrainzID."
+        },
+        "genres": {
+            "type": "array",
+            "items": {
+                "$ref": "./ItemGenre.json"
+            },
+            "description": "The list of all genres of the song."
+        },
+        "artists": {
+            "type": "array",
+            "items": {
+                "$ref": "./ArtistID3.json"
+            },
+            "description": "The list of all song artists of the song. (Note: Only the required `ArtistID3` fields should be returned by default)"
+        },
+        "displayArtist": {
+            "type": "string",
+            "description": "The single value display artist."
+        },
+        "albumArtists": {
+            "type": "array",
+            "items": {
+                "$ref": "./ArtistID3.json"
+            },
+            "description": "The list of all album artists of the song. (Note: Only the required `ArtistID3` fields should be returned by default)"
+        },
+        "displayAlbumArtist": {
+            "type": "string",
+            "description": "The single value display album artist."
+        },
+        "contributors": {
+            "type": "array",
+            "items": {
+                "$ref": "./Contributor.json"
+            },
+            "description": "The list of all contributor artists of the song."
+        },
+        "displayComposer": {
+            "type": "string",
+            "description": "The single value display composer."
+        },
+        "moods": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "The list of all moods of the song."
+        },
+        "replayGain": {
+            "allOf": [{"$ref": "./ReplayGain.json"}],
+            "description": "The replay gain data of the song."
+        },
+        "explicitStatus": {
+            "$ref": "./ExplicitStatus.json"
+        }
+    },
+    "required": [
+        "id",
+        "isDir",
+        "title"
+    ],
+    "externalDocs": {
+        "description": "Child",
+        "url": "https://opensubsonic.netlify.app/docs/responses/child/"
+    }
+}

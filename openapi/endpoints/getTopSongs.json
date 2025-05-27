@@ -1,0 +1,103 @@
+{
+    "get": {
+        "summary": "Returns top songs for the given artist.",
+        "description": "Returns top songs for the given artist, using data from last.fm.",
+        "operationId": "getTopSongs",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The artist name.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "count",
+                "in": "query",
+                "description": "The maximum number of songs to return.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 50,
+                    "minimum": 0
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getTopSongs/GetTopSongsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getTopSongs",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/gettopsongs/"
+        }
+    },
+    "post": {
+        "summary": "Returns top songs for the given artist.",
+        "description": "Returns top songs for the given artist, using data from last.fm.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetTopSongs",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "The artist name.",
+                                "type": "string"
+                            },
+                            "count": {
+                                "description": "The maximum number of songs to return.",
+                                "type": "integer",
+                                "default": 50,
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getTopSongs/GetTopSongsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getTopSongs",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/gettopsongs/"
+        }
+    }
+}

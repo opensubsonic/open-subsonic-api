@@ -1,0 +1,18 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "videos": {
+                    "$ref": "../../schemas/Videos.json"
+                }
+            },
+            "required": [
+                "videos"
+            ]
+        }
+    ]
+}

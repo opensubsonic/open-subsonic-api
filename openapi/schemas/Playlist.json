@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "description": "Playlist.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Id of the playlist"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the playlist"
+        },
+        "comment": {
+            "type": "string",
+            "description": "A comment"
+        },
+        "owner": {
+            "type": "string",
+            "description": "Owner of the playlist"
+        },
+        "public": {
+            "type": "boolean",
+            "description": "Is the playlist public"
+        },
+        "songCount": {
+            "type": "integer",
+            "description": "number of songs"
+        },
+        "duration": {
+            "type": "integer",
+            "description": "Playlist duration in seconds"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation date [ISO 8601]"
+        },
+        "changed": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last changed date [ISO 8601]"
+        },
+        "coverArt": {
+            "type": "string",
+            "description": "A cover Art Id"
+        },
+        "allowedUser": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "A list of allowed usernames"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "songCount",
+        "duration",
+        "created",
+        "changed"
+    ],
+    "externalDocs": {
+        "description": "Playlist",
+        "url": "https://opensubsonic.netlify.app/docs/responses/playlist/"
+    }
+}

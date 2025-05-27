@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "description": "NewestPodcasts.",
+    "externalDocs": {
+        "description": "NewestPodcasts",
+        "url": "https://opensubsonic.netlify.app/docs/responses/newestpodcasts/"
+    },
+    "properties": {
+        "episode": {
+            "type": "array",
+            "items": {
+                "$ref": "./PodcastEpisode.json"
+            }
+        }
+    }
+}

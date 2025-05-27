@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "description": "A Podcast channel",
+    "externalDocs": {
+        "description": "PodcastChannel",
+        "url": "https://opensubsonic.netlify.app/docs/responses/podcastchannel/"
+    },
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The channel ID"
+        },
+        "url": {
+            "type": "string",
+            "description": "Podcast channel URL"
+        },
+        "title": {
+            "type": "string",
+            "description": "The channel title"
+        },
+        "description": {
+            "type": "string",
+            "description": "The channel description"
+        },
+        "coverArt": {
+            "type": "string",
+            "description": "ID used for retrieving cover art"
+        },
+        "originalImageUrl": {
+            "type": "string",
+            "description": "URL for original image of podcast channel"
+        },
+        "status": {
+            "$ref": "./PodcastStatus.json"
+        },
+        "errorMessage": {
+            "type": "string",
+            "description": "An error message"
+        },
+        "episode": {
+            "type": "array",
+            "items": {
+                "$ref": "./PodcastEpisode.json"
+            },
+            "description": "Podcast episodes with this channel"
+        }
+    },
+    "required": [
+        "id",
+        "url",
+        "status"
+    ]
+}

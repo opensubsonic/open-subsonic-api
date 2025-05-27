@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "One line of a song lyric",
+    "externalDocs": {
+        "description": "Line",
+        "url": "https://opensubsonic.netlify.app/docs/responses/line/"
+    },
+    "properties": {
+        "value": {
+            "type": "string",
+            "description": "The actual text of this line"
+        },
+        "start": {
+            "type": "number",
+            "description": "The start time of the lyrics, relative to the start time of the track, in milliseconds. If this is not part of synced lyrics, start __must__ be omitted"
+        }
+    },
+    "required": [
+        "value"
+    ]
+}

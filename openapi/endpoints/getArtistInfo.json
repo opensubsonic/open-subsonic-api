@@ -1,0 +1,118 @@
+{
+    "get": {
+        "summary": "Returns artist info.",
+        "description": "Returns artist info with biography, image URLs and similar artists, using data from last.fm.",
+        "operationId": "getArtistInfo",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The artist, album or song ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "count",
+                "in": "query",
+                "description": "Max number of similar artists to return.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 20,
+                    "minimum": 0
+                }
+            },
+            {
+                "name": "includeNotPresent",
+                "in": "query",
+                "description": "Whether to return artists that are not present in the media library.",
+                "required": false,
+                "schema": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getArtistInfo/GetArtistInfoResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getArtistInfo",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartistinfo/"
+        }
+    },
+    "post": {
+        "summary": "Returns artist info.",
+        "description": "Returns artist info with biography, image URLs and similar artists, using data from last.fm.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetArtistInfo",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The artist, album or song ID."
+                            },
+                            "count": {
+                                "type": "integer",
+                                "description": "Max number of similar artists to return.",
+                                "default": 20,
+                                "minimum": 0
+                            },
+                            "includeNotPresent": {
+                                "type": "boolean",
+                                "description": "Whether to return artists that are not present in the media library.",
+                                "default": false
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getArtistInfo/GetArtistInfoResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getArtistInfo",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartistinfo/"
+        }
+    }
+}

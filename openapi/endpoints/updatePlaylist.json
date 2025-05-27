@@ -1,0 +1,153 @@
+{
+    "get": {
+        "summary": "Updates a playlist. Only the owner of a playlist is allowed to update it.",
+        "description": "Updates a playlist. Only the owner of a playlist is allowed to update it.",
+        "operationId": "updatePlaylist",
+        "tags": [
+            "Playlists"
+        ],
+        "parameters": [
+            {
+                "name": "playlistId",
+                "in": "query",
+                "description": "The playlist ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "The human-readable name of the playlist.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "comment",
+                "in": "query",
+                "description": "The playlist comment.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "public",
+                "in": "query",
+                "description": "`true` if the playlist should be visible to all users, `false` otherwise.",
+                "required": false,
+                "schema": {
+                    "type": "boolean"
+                }
+            },
+            {
+                "name": "songIdToAdd",
+                "in": "query",
+                "description": "Add this song with this ID to the playlist. Multiple parameters allowed.",
+                "explode": true,
+                "style": "form",
+                "required": false,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "songIndexToRemove",
+                "in": "query",
+                "description": "Remove the song at this position in the playlist. Multiple parameters allowed.",
+                "explode": true,
+                "style": "form",
+                "required": false,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updatePlaylist",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateplaylist/"
+        }
+    },
+    "post": {
+        "summary": "Updates a playlist. Only the owner of a playlist is allowed to update it.",
+        "description": "Updates a playlist. Only the owner of a playlist is allowed to update it.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postUpdatePlaylist",
+        "tags": [
+            "Playlists"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "playlistId": {
+                                "description": "The playlist ID.",
+                                "type": "string"
+                            },
+                            "name": {
+                                "description": "The human-readable name of the playlist.",
+                                "type": "string"
+                            },
+                            "comment": {
+                                "description": "The playlist comment.",
+                                "type": "string"
+                            },
+                            "public": {
+                                "description": "`true` if the playlist should be visible to all users, `false` otherwise.",
+                                "type": "boolean"
+                            },
+                            "songIdToAdd": {
+                                "description": "Add this song with this ID to the playlist. Multiple parameters allowed.",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "songIndexToRemove": {
+                                "description": "Remove the song at this position in the playlist. Multiple parameters allowed.",
+                                "type": "array",
+                                "items": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "required": [
+                            "playlistId"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updatePlaylist",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateplaylist/"
+        }
+    }
+}

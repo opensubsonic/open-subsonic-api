@@ -1,0 +1,83 @@
+{
+    "get": {
+        "summary": "Returns all artists.",
+        "description": "Similar to `getIndexes`, but organizes music according to ID3 tags.",
+        "operationId": "getArtists",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "musicFolderId",
+                "in": "query",
+                "description": "If specified, only return artists in the music folder with the given ID. See `getMusicFolders`.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getArtists/GetArtistsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getArtists",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartists/"
+        }
+    },
+    "post": {
+        "summary": "Returns all artists.",
+        "description": "Similar to `getIndexes`, but organizes music according to ID3 tags.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetArtists",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "musicFolderId": {
+                                "type": "string",
+                                "description": "If specified, only return artists in the music folder with the given ID. See `getMusicFolders`."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getArtists/GetArtistsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getArtists",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartists/"
+        }
+    }
+}

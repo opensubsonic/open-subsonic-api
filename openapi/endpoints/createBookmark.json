@@ -1,0 +1,99 @@
+{
+    "get": {
+        "summary": "Creates or updates a bookmark.",
+        "description": "Creates or updates a bookmark (a position within a media file). Bookmarks are personal and not visible to other users.",
+        "tags": [
+            "Bookmarks"
+        ],
+        "operationId": "createBookmark",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "ID of the media file to bookmark. If a bookmark already exists for this file it will be overwritten.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "position",
+                "in": "query",
+                "description": "The position (in milliseconds) within the media file.",
+                "required": true,
+                "schema": {
+                    "type": "integer"
+                }
+            },
+            {
+                "name": "comment",
+                "in": "query",
+                "description": "A user-defined comment.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createBookmark",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createbookmark/"
+        }
+    },
+    "post": {
+        "summary": "Creates or updates a bookmark.",
+        "description": "Creates or updates a bookmark (a position within a media file). Bookmarks are personal and not visible to other users.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postCreateBookmark",
+        "tags": [
+            "Bookmarks"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "ID of the media file to bookmark. If a bookmark already exists for this file it will be overwritten."
+                            },
+                            "position": {
+                                "type": "integer",
+                                "description": "The position (in milliseconds) within the media file."
+                            },
+                            "comment": {
+                                "type": "string",
+                                "description": "A user-defined comment."
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "position"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createBookmark",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createbookmark/"
+        }
+    }
+}

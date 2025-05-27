@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "description": "A supported OpenSubsonic API extension.",
+    "externalDocs": {
+        "description": "OpenSubsonicExtension",
+        "url": "https://opensubsonic.netlify.app/docs/responses/opensubsonicextension/"
+    },
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the extension."
+        },
+        "versions": {
+            "type": "array",
+            "description": "The list of supported versions of the this extension.",
+            "items": {
+                "type": "integer"
+            }
+        }
+    },
+    "required": [
+        "name",
+        "versions"
+    ]
+}

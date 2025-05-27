@@ -1,0 +1,124 @@
+{
+    "get": {
+        "summary": "Downloads a given media file (HLS).",
+        "description": "Creates an HLS (HTTP Live Streaming) playlist used for streaming video or audio. HLS is a streaming protocol implemented by Apple and works by breaking the overall stream into a sequence of small HTTP-based file downloads. It’s supported by iOS and newer versions of Android. This method also supports adaptive bitrate streaming, see the bitRate parameter.",
+        "operationId": "hls.m3u8",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "A string which uniquely identifies the media file to stream.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "bitRate",
+                "in": "query",
+                "description": "If specified, the server will attempt to limit the bitrate to this value, in kilobits per second. If this parameter is specified more than once, the server will create a variant playlist, suitable for adaptive bitrate streaming. The playlist will support streaming at all the specified bitrates. The server will automatically choose video dimensions that are suitable for the given bitrates. Since 1.9.0 you may explicitly request a certain width (480) and height (360) like so: bitRate=1000@480x360",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            },
+            {
+                "name": "audioTrack",
+                "in": "query",
+                "description": "The ID of the audio track to use. See `getVideoInfo` for how to get the list of available audio tracks for a video.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/vnd.apple.mpegurl": {
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "text/xml": {
+                        "schema": {
+                            "type": "object",
+                            "description": "Error response TODO: TO BE DESCRIBED"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "hls.m3u8",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/hls/"
+        }
+    },
+    "post": {
+        "summary": "Downloads a given media file (HLS).",
+        "description": "Creates an HLS (HTTP Live Streaming) playlist used for streaming video or audio. HLS is a streaming protocol implemented by Apple and works by breaking the overall stream into a sequence of small HTTP-based file downloads. It’s supported by iOS and newer versions of Android. This method also supports adaptive bitrate streaming, see the bitRate parameter.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postHls.m3u8",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "A string which uniquely identifies the media file to stream."
+                            },
+                            "bitRate": {
+                                "type": "integer",
+                                "description": "If specified, the server will attempt to limit the bitrate to this value, in kilobits per second. If set to zero, no limit is imposed."
+                            },
+                            "audioTrack": {
+                                "type": "string",
+                                "description": "The ID of the audio track to use. See `getVideoInfo` for how to get the list of available audio tracks for a video."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/vnd.apple.mpegurl": {
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "text/xml": {
+                        "schema": {
+                            "type": "object",
+                            "description": "Error response TODO: TO BE DESCRIBED"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "hls.m3u8",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/hls/"
+        }
+    }
+}

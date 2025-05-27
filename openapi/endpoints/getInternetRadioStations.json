@@ -1,0 +1,69 @@
+{
+    "get": {
+        "summary": "Returns all internet radio stations.",
+        "description": "Returns all internet radio stations. Takes no extra parameters.",
+        "operationId": "getInternetRadioStations",
+        "tags": [
+            "Internet Radio"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getInternetRadioStations/GetInternetRadioStationsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getInternetRadioStations",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getinternetradiostations/"
+        }
+    },
+    "post": {
+        "summary": "Returns all internet radio stations.",
+        "description": "Returns all internet radio stations. Takes no extra parameters.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetInternetRadioStations",
+        "tags": [
+            "Internet Radio"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getInternetRadioStations/GetInternetRadioStationsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getInternetRadioStations",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getinternetradiostations/"
+        }
+    }
+}

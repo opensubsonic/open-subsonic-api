@@ -1,0 +1,72 @@
+{
+    "get": {
+        "summary": "Deletes an existing user on the server.",
+        "description": "Deletes an existing user on the server.",
+        "operationId": "deleteUser",
+        "tags": [
+            "User Management"
+        ],
+        "parameters": [
+            {
+                "name": "username",
+                "in": "query",
+                "description": "The name of the user to delete.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deleteUser",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deleteuser/"
+        }
+    },
+    "post": {
+        "summary": "Deletes an existing user on the server.",
+        "description": "Deletes an existing user on the server.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postDeleteUser",
+        "tags": [
+            "User Management"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "username": {
+                                "type": "string",
+                                "description": "The name of the user to delete."
+                            }
+                        },
+                        "required": [
+                            "username"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deleteUser",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deleteuser/"
+        }
+    }
+}

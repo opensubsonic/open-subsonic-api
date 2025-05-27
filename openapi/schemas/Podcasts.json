@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Podcasts.",
+    "externalDocs": {
+        "description": "Podcasts",
+        "url": "https://opensubsonic.netlify.app/docs/responses/podcasts/"
+    },
+    "properties": {
+        "channel": {
+            "type": "array",
+            "items": {
+                "$ref": "./PodcastChannel.json"
+            },
+            "description": "Podcast channel(s)"
+        }
+    }
+}

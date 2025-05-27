@@ -1,0 +1,92 @@
+{
+    "get": {
+        "summary": "Searches for and returns lyrics for a given song.",
+        "description": "Searches for and returns lyrics for a given song.",
+        "operationId": "getLyrics",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "parameters": [
+            {
+                "name": "artist",
+                "in": "query",
+                "description": "The artist name.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "title",
+                "in": "query",
+                "description": "The song title.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getLyrics/GetLyricsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getLyrics",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyrics/"
+        }
+    },
+    "post": {
+        "summary": "Searches for and returns lyrics for a given song.",
+        "description": "Searches for and returns lyrics for a given song.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetLyrics",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "artist": {
+                                "type": "string",
+                                "description": "The artist name."
+                            },
+                            "title": {
+                                "type": "string",
+                                "description": "The song title."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getLyrics/GetLyricsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        }
+    }
+}

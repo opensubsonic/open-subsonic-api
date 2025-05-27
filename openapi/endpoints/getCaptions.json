@@ -1,0 +1,119 @@
+{
+    "get": {
+        "summary": "Returns captions (subtitles) for a video.",
+        "description": "Returns captions (subtitles) for a video. Use `getVideoInfo` to get a list of available captions.",
+        "operationId": "getCaptions",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The ID of the video.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "format",
+                "in": "query",
+                "description": "Preferred captions format (“srt” or “vtt”).",
+                "required": false,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "srt",
+                        "vtt"
+                    ]
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Returns the raw video captions.",
+                "content": {
+                    "application/binary": {
+                        "schema": {
+                            "type": "string",
+                            "format": "binary"
+                        }
+                    },
+                    "text/plain": {
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getCaptions",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcaptions/"
+        }
+    },
+    "post": {
+        "summary": "Returns captions (subtitles) for a video.",
+        "description": "Returns captions (subtitles) for a video. Use `getVideoInfo` to get a list of available captions.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetCaptions",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The ID of the video."
+                            },
+                            "format": {
+                                "type": "string",
+                                "description": "Preferred captions format (“srt” or “vtt”).",
+                                "enum": [
+                                    "srt",
+                                    "vtt"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Returns the raw video captions.",
+                "content": {
+                    "application/binary": {
+                        "schema": {
+                            "type": "string",
+                            "format": "binary"
+                        }
+                    },
+                    "text/plain": {
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getCaptions",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcaptions/"
+        }
+    }
+}

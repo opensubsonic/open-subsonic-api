@@ -1,0 +1,85 @@
+{
+    "get": {
+        "summary": "Returns the most recently published Podcast episodes.",
+        "description": "Returns the most recently published Podcast episodes.",
+        "operationId": "getNewestPodcasts",
+        "tags": [
+            "Podcast"
+        ],
+        "parameters": [
+            {
+                "name": "count",
+                "in": "query",
+                "description": "The maximum number of episodes to return.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 20
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getNewestPodcasts/GetNewestPodcastsResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getNewestPodcasts",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getnewestpodcasts/"
+        }
+    },
+    "post": {
+        "summary": "Returns the most recently published Podcast episodes.",
+        "description": "Returns the most recently published Podcast episodes.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetNewestPodcasts",
+        "tags": [
+            "Podcast"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "count": {
+                                "type": "integer",
+                                "description": "The maximum number of episodes to return.",
+                                "default": 20
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getNewestPodcasts/GetNewestPodcastsResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getNewestPodcasts",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getnewestpodcasts/"
+        }
+    }
+}

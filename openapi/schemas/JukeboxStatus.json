@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "description": "jukeboxStatus.",
+    "externalDocs": {
+        "description": "JukeboxStatus",
+        "url": "https://opensubsonic.netlify.app/docs/responses/jukeboxstatus/"
+    },
+    "properties": {
+        "currentIndex": {
+            "type": "integer",
+            "description": "The current index of the song being played"
+        },
+        "playing": {
+            "type": "boolean",
+            "description": "Whether the queue is currently playing"
+        },
+        "volume": {
+            "type": "integer",
+            "description": "Volume, in a range of [0.0, 1.0]",
+            "format": "float",
+            "minimum": 0.0,
+            "maximum": 1.0
+        },
+        "position": {
+            "type": "integer",
+            "description": "The current position of the track in seconds"
+        }
+    },
+    "required": [
+        "currentIndex",
+        "playing",
+        "volume"
+    ]
+}

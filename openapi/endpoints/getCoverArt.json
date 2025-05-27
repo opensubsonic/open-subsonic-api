@@ -1,0 +1,85 @@
+{
+    "get": {
+        "summary": "Returns a cover art image.",
+        "description": "Returns a cover art image.",
+        "operationId": "getCoverArt",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The coverArt ID. Returned by most entities likes `Child` or `AlbumID3`",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "size",
+                "in": "query",
+                "description": "If specified, scale image to this size.",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/BinaryResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getCoverArt",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcoverart/"
+        }
+    },
+    "post": {
+        "summary": "Returns a cover art image.",
+        "description": "Returns a cover art image.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetCoverArt",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The coverArt ID. Returned by most entities likes `Child` or `AlbumID3`"
+                            },
+                            "size": {
+                                "type": "integer",
+                                "description": "If specified, scale image to this size."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/BinaryResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getCoverArt",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcoverart/"
+        }
+    }
+}
