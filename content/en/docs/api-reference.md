@@ -166,7 +166,6 @@ The following error codes are defined:
 | 60   | The trial period for the Subsonic server is over. Please upgrade to Subsonic Premium. Visit subsonic.org for details. |
 | 70   | The requested data was not found.                                                                                     |
 
-
 {{< alert color="warning" title="OpenSubsonic" >}}
 Servers **must** return error `41` if they do not support token-based authentication, `42` if they do not support any other authentication mechanism (password-based and/or API key-based), and `43` if multiple conflicting authentication parameters are passed in at the same time.
 

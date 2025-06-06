@@ -4,7 +4,7 @@ linkTitle: "Template extension"
 OpenSubsonic:
 - Extension
 description: >
-    A template extension.
+  A template extension.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

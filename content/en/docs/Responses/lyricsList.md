@@ -4,7 +4,7 @@ linkTitle: "lyricsList [OS]"
 opensubsonic:
   - Addition
 description: >
-  List of structured lyrics
+  List of structured lyrics.
 ---
 
 {{< tabpane persist=false >}}

@@ -38,7 +38,6 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Nextcloud Music / ownCloud Music](https://github.com/owncloud/music)  | [Documentation](https://github.com/owncloud/music/wiki/OpenSubsonic-API)   |
 | [Supysonic](https://github.com/spl0k/supysonic) | - |
 
-
 ### Clients
 
 | Name  | OpenSubsonic documentation  |

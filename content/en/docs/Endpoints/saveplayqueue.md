@@ -6,7 +6,7 @@ opensubsonic:
 categories:
 - Bookmarks
 description: >
-    Saves the state of the play queue for this user.
+  Saves the state of the play queue for this user.
 ---
 
 `http://your-server/rest/savePlayQueue` Since [1.12.0](../../subsonic-versions)
@@ -55,4 +55,3 @@ An empty [`subsonic-response`](../../responses/subsonic-response) element on suc
 {{< alert color="warning" title="OpenSubsonic" >}}
 **Note** `id` is optional. Send a call without any parameters to clear the currently saved queue.
 {{< /alert >}}
-

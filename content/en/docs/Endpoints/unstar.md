@@ -4,7 +4,7 @@ linkTitle: "unstar"
 categories:
 - Media annotation
 description: >
-    Attaches a star to a song, album or artist.
+  Attaches a star to a song, album or artist.
 ---
 
 `http://your-server/rest/unstar` Since [1.8.0](../../subsonic-versions)

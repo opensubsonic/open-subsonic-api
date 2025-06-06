@@ -4,7 +4,7 @@ linkTitle: "downloadPodcastEpisode"
 categories:
 - Podcast
 description: >
-    Request the server to start downloading a given Podcast episode. 
+  Request the server to start downloading a given Podcast episode.
 ---
 
 `http://your-server/rest/downloadPodcastEpisode` Since [1.9.0](../../subsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "getVideos"
 categories:
 - Browsing
 description: >
-    Returns all video files.
+  Returns all video files.
 ---
 
 `http://your-server/rest/getVideos` Since [1.8.0](../../subsonic-versions)

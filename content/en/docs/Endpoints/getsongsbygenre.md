@@ -4,7 +4,7 @@ linkTitle: "getSongsByGenre"
 categories:
 - Lists
 description: >
-    Returns songs in a given genre.
+  Returns songs in a given genre.
 ---
 
 `http://your-server/rest/getSongsByGenre` Since [1.9.0](../../subsonic-versions)

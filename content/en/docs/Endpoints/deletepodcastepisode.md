@@ -4,7 +4,7 @@ linkTitle: "deletePodcastEpisode"
 categories:
 - Podcast
 description: >
-    Deletes a Podcast episode.
+  Deletes a Podcast episode.
 ---
 
 `http://your-server/rest/deletePodcastEpisode` Since [1.9.0](../../subsonic-versions)

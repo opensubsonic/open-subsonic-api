@@ -4,7 +4,7 @@ linkTitle: "jukeboxControl"
 categories:
 - Jukebox
 description: >
-    Controls the jukebox, i.e., playback directly on the server's audio hardware.
+  Controls the jukebox, i.e., playback directly on the server's audio hardware.
 ---
 
 `http://your-server/rest/jukeboxControl` Since [1.2.0](../../subsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "Contributor [OS]"
 opensubsonic:
 - Addition
 description: >
-  A contributor artist for a song or an album
+  A contributor artist for a song or an album.
 ---
 
 {{< tabpane persist=false >}}

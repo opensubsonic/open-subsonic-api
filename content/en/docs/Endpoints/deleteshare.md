@@ -4,7 +4,7 @@ linkTitle: "deleteShare"
 categories:
 - Sharing
 description: >
-    Deletes an existing share.
+  Deletes an existing share.
 ---
 
 `http://your-server/rest/deleteShare` Since [1.6.0](../../subsonic-versions)

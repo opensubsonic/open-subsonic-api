@@ -4,7 +4,7 @@ linkTitle: "HTTP form POST"
 OpenSubsonic:
   - Extension
 description: >
-  Add support for POST request to the API (application/x-www-form-urlencoded)
+  Add support for POST request to the API (application/x-www-form-urlencoded).
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

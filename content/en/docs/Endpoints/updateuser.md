@@ -4,7 +4,7 @@ linkTitle: "updateUser"
 categories:
 - User management
 description: >
-    Modifies an existing user on the server.
+  Modifies an existing user on the server.
 ---
 
 `http://your-server/rest/updateUser` Since [1.10.1](../../subsonic-versions)
