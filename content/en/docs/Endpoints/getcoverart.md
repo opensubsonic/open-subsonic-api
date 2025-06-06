@@ -4,7 +4,7 @@ linkTitle: "getCoverArt"
 categories:
 - Media retrieval
 description: >
-    Returns a cover art image.
+  Returns a cover art image.
 ---
 
 `http://your-server/rest/getCoverArt` Since [1.0.0](../../subsonic-versions)

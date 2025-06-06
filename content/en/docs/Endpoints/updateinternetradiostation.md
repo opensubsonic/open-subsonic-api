@@ -4,7 +4,7 @@ linkTitle: "updateInternetRadioStation"
 categories:
 - Internet radio
 description: >
-    Updates an existing internet radio station. 
+  Updates an existing internet radio station.
 ---
 
 `http://your-server/rest/updateInternetRadioStation` Since [1.16.0](../../subsonic-versions)

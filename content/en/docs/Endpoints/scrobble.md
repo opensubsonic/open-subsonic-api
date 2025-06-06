@@ -4,7 +4,7 @@ linkTitle: "scrobble"
 categories:
 - Media annotation
 description: >
-    Registers the local playback of one or more media files.
+  Registers the local playback of one or more media files.
 ---
 
 `http://your-server/rest/scrobble` Since [1.5.0](../../subsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "getStarred2"
 categories:
 - Lists
 description: >
-    Returns starred songs, albums and artists.
+  Returns starred songs, albums and artists.
 ---
 
 `http://your-server/rest/getStarred2` Since [1.8.0](../../subsonic-versions)

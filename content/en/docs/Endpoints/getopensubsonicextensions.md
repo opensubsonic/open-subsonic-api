@@ -6,7 +6,7 @@ categories:
 OpenSubsonic:
 - Addition
 description: >
-    List the OpenSubsonic extensions supported by this server.
+  List the OpenSubsonic extensions supported by this server.
 ---
 
 `http://your-server/rest/getOpenSubsonicExtensions` OpenSubsonic version [1](../../opensubsonic-versions)

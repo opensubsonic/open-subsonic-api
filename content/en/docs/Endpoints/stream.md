@@ -8,7 +8,7 @@ opensubsonic:
 categories:
 - Media retrieval
 description: >
-    Streams a given media file.
+  Streams a given media file.
 ---
 
 `http://your-server/rest/stream` Since [1.0.0](../../subsonic-versions)

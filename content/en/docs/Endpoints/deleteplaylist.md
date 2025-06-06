@@ -4,7 +4,7 @@ linkTitle: "deletePlaylist"
 categories:
 - Playlists
 description: >
-    Deletes a saved playlist.
+  Deletes a saved playlist.
 ---
 
 `http://your-server/rest/deletePlaylist` Since [1.2.0](../../subsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "changePassword"
 categories:
 - User management
 description: >
-    Changes the password of an existing user on the server.
+  Changes the password of an existing user on the server.
 ---
 
 `http://your-server/rest/changePassword` Since [1.1.0](../../subsonic-versions)

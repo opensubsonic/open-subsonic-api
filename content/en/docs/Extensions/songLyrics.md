@@ -4,7 +4,7 @@ linkTitle: "Song Lyrics"
 OpenSubsonic:
   - Extension
 description: >
-  Add support for synchronized lyrics, multiple languages, and retrieval by song ID
+  Add support for synchronized lyrics, multiple languages, and retrieval by song ID.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

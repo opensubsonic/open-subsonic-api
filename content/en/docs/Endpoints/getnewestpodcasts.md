@@ -4,7 +4,7 @@ linkTitle: "getNewestPodcasts"
 categories:
 - Podcast
 description: >
-    Returns the most recently published Podcast episodes.
+  Returns the most recently published Podcast episodes.
 ---
 
 `http://your-server/rest/getNewestPodcasts` Since [1.13.0](../../subsonic-versions)

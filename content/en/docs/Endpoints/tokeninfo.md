@@ -7,7 +7,7 @@ opensubsonic:
 categories:
   - System
 description: >
-  Returns information about an API key
+  Returns information about an API key.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

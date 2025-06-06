@@ -4,7 +4,7 @@ linkTitle: "getVideoInfo"
 categories:
 - Browsing
 description: >
-    Returns details for a video.
+  Returns details for a video.
 ---
 
 `http://your-server/rest/getVideoInfo` Since [1.14.0](../../subsonic-versions)

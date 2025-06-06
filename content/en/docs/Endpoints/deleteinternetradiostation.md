@@ -4,7 +4,7 @@ linkTitle: "deleteInternetRadioStation"
 categories:
 - Internet radio
 description: >
-    Deletes an existing internet radio station.
+  Deletes an existing internet radio station.
 ---
 
 `http://your-server/rest/deleteInternetRadioStation` Since [1.16.0](../../subsonic-versions)

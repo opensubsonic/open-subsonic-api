@@ -4,7 +4,7 @@ linkTitle: "getAvatar"
 categories:
 - Media retrieval
 description: >
-    Returns the avatar (personal image) for a user.
+  Returns the avatar (personal image) for a user.
 ---
 
 `http://your-server/rest/getAvatar` Since [1.8.0](../../subsonic-versions)

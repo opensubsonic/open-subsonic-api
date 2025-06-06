@@ -4,7 +4,7 @@ linkTitle: "getNowPlaying"
 categories:
 - Lists
 description: >
-    Returns what is currently being played by all users.
+  Returns what is currently being played by all users.
 ---
 
 `http://your-server/rest/getNowPlaying` Since [1.0.0](../../subsonic-versions)
