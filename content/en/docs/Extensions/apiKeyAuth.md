@@ -4,7 +4,7 @@ linkTitle: "API Key Authentication"
 OpenSubsonic:
   - Extension
 description: >
-  Add a new authentication mechanism involving only an API key, and no
+  Add a new authentication mechanism involving only an API key, and no.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "getLyrics"
 categories:
 - Media retrieval
 description: >
-    Searches for and returns lyrics for a given song.
+  Searches for and returns lyrics for a given song.
 ---
 
 `http://your-server/rest/getLyrics` Since [1.2.0](../../subsonic-versions)

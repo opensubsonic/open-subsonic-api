@@ -4,7 +4,7 @@ linkTitle: "getAlbumInfo"
 categories:
 - Browsing
 description: >
-    Returns album info.
+  Returns album info.
 ---
 
 `http://your-server/rest/getAlbumInfo` Since [1.14.0](../../subsonic-versions)

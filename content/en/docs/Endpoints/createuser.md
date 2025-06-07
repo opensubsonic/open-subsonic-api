@@ -4,7 +4,7 @@ linkTitle: "createUser"
 categories:
 - User management
 description: >
-    Creates a new user on the server.
+  Creates a new user on the server.
 ---
 
 `http://your-server/rest/createUser` Since [1.1.0](../../subsonic-versions)

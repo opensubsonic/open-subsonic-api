@@ -4,7 +4,7 @@ linkTitle: "deleteBookmark"
 categories:
 - Bookmarks
 description: >
-    Creates or updates a bookmark.
+  Creates or updates a bookmark.
 ---
 
 `http://your-server/rest/deleteBookmark` Since [1.9.0](../../subsonic-versions)

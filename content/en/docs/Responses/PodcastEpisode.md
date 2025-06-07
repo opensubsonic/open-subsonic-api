@@ -2,7 +2,7 @@
 title: "PodcastEpisode"
 linkTitle: "PodcastEpisode"
 description: >
-  A Podcast episode
+  A Podcast episode.
 ---
 
 {{< tabpane persist=false >}}

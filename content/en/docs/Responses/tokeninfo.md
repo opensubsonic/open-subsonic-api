@@ -4,7 +4,7 @@ linkTitle: "tokenInfo [OS]"
 opensubsonic:
   - Addition
 description: >
-  Information about an API key
+  Information about an API key.
 ---
 
 {{< tabpane persist=false >}}

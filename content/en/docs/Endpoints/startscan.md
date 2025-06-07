@@ -4,7 +4,7 @@ linkTitle: "startScan"
 categories:
 - Media library scanning
 description: >
-    Initiates a rescan of the media libraries.
+  Initiates a rescan of the media libraries.
 ---
 
 `http://your-server/rest/startScan` Since [1.15.0](../../subsonic-versions)

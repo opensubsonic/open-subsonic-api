@@ -4,7 +4,7 @@ linkTitle: "getBookmarks"
 categories:
 - Bookmarks
 description: >
-    Returns all bookmarks for this user.
+  Returns all bookmarks for this user.
 ---
 
 `http://your-server/rest/getBookmarks` Since [1.9.0](../../subsonic-versions)

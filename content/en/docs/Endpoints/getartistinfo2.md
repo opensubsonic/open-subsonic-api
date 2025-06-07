@@ -4,7 +4,7 @@ linkTitle: "getArtistInfo2"
 categories:
 - Browsing
 description: >
-    Returns artist info.
+  Returns artist info.
 ---
 
 `http://your-server/rest/getArtistInfo2` Since [1.11.0](../../subsonic-versions)

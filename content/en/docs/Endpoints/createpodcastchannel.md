@@ -4,7 +4,7 @@ linkTitle: "createPodcastChannel"
 categories:
 - Podcast
 description: >
-    Adds a new Podcast channel.
+  Adds a new Podcast channel.
 ---
 
 `http://your-server/rest/createPodcastChannel` Since [1.9.0](.././subsonic-versions)

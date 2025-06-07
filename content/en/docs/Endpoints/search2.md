@@ -4,7 +4,7 @@ linkTitle: "search2"
 categories:
 - Searching
 description: >
-    Returns a listing of files matching the given search criteria. Supports paging through the result.
+  Returns a listing of files matching the given search criteria. Supports paging through the result.
 ---
 
 `http://your-server/rest/search2` Since [1.4.0](../../subsonic-versions)

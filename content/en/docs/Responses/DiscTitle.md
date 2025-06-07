@@ -4,7 +4,7 @@ linkTitle: "DiscTitle [OS]"
 opensubsonic:
 - Addition
 description: >
-  A disc title for an album
+  A disc title for an album.
 ---
 
 {{< tabpane persist=false >}}

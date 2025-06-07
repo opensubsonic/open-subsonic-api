@@ -4,7 +4,7 @@ linkTitle: "updateShare"
 categories:
 - Sharing
 description: >
-    Updates the description and/or expiration date for an existing share.
+  Updates the description and/or expiration date for an existing share.
 ---
 
 `http://your-server/rest/updateShare` Since [1.6.0](../../subsonic-versions)

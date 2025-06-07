@@ -4,7 +4,7 @@ linkTitle: "createBookmark"
 categories:
 - Bookmarks
 description: >
-    Creates or updates a bookmark.
+  Creates or updates a bookmark.
 ---
 
 `http://your-server/rest/createBookmark` Since [1.9.0](../../subsonic-versions)

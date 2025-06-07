@@ -4,7 +4,7 @@ linkTitle: "structuredLyrics [OS]"
 opensubsonic:
   - Addition
 description: >
-  Structured lyrics
+  Structured lyrics.
 ---
 
 {{< tabpane persist=false >}}

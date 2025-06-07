@@ -4,7 +4,7 @@ linkTitle: "createInternetRadioStation"
 categories:
 - Internet radio
 description: >
-    Adds a new internet radio station.
+  Adds a new internet radio station.
 ---
 
 `http://your-server/rest/createInternetRadioStation` Since [1.16.0](../../subsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "getSong"
 categories:
 - Browsing
 description: >
-    Returns details for a song.
+  Returns details for a song.
 ---
 
 `http://your-server/rest/getSong` Since [1.8.0](../../subsonic-versions)

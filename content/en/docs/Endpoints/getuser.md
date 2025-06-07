@@ -4,7 +4,7 @@ linkTitle: "getUser"
 categories:
 - User management
 description: >
-    Get details about a given user, including which authorization roles and folder access it has.
+  Get details about a given user, including which authorization roles and folder access it has.
 ---
 
 `http://your-server/rest/getUser` Since [1.3.0](../../subsonic-versions)
