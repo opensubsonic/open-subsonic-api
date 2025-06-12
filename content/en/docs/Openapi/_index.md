@@ -13,20 +13,20 @@ This work is still ongoing, there are some inconsistencies between the docs and 
 
 ## List of known differences compared to official documentation
 
-- Some undocumented typo fixes
-- Added minimum: 0 to integer types where it's implied (count, offset, unix timestamp, position)
-- **Requires the use of `format=json` parameter**. xml response formats are not supported as of the time of writing this document.
-- All extensions are added to the schema and tagged as "Extension", 
-  and have an additional 404 return type as well that described as "Not 
+* Some undocumented typo fixes
+* Added minimum: 0 to integer types where it's implied (count, offset, unix timestamp, position)
+* **Requires the use of `format=json` parameter**. xml response formats are not supported as of the time of writing this document.
+* All extensions are added to the schema and tagged as "Extension",
+  and have an additional 404 return type as well that described as "Not
   Implemented"
-- Excluded examples. They need to be carefully added incrementally to see how they are merged in Swagger/Redoc docs.
-- Parameters only existing via Extensions are always added and marked in their description field
-- HTTP form POST extensions have an additional response "405 - Method 
-  Not Allowed" as an additional way to indicate when they are not 
+* Excluded examples. They need to be carefully added incrementally to see how they are merged in Swagger/Redoc docs.
+* Parameters only existing via Extensions are always added and marked in their description field
+* HTTP form POST extensions have an additional response "405 - Method
+  Not Allowed" as an additional way to indicate when they are not
   supported.
-- HTTP form POST extension support might be stricter than what's 
-  allowed (global params - auth and format params - only allowed as query 
-  params, endpoint specific params are the only ones allowed in request 
+*-* HTTP form POST extension support might be stricter than what's
+  allowed (global params - auth and format params - only allowed as query
+  params, endpoint specific params are the only ones allowed in request
   body)
 
 ## Building
@@ -71,7 +71,7 @@ Ideally this should be used as a reference and for automatic client/server code 
 
 * [openapi-generator](https://github.com/OpenAPITools/openapi-generator) 🚧 - Untested
 
-### C#
+### C\#
 
 * [openapi-generator](https://github.com/OpenAPITools/openapi-generator) 🚧 - Untested
 
@@ -85,7 +85,7 @@ Ideally this should be used as a reference and for automatic client/server code 
 
 ### Folder Structure
 
-* `endpoints`  - matches `paths` section in `openapi.json`, files inside should be added to said section. 
+* `endpoints`  - matches `paths` section in `openapi.json`, files inside should be added to said section.
 
 * `endpoints/{endpoint}.json/{endpoint}/` - supporting schemas for en endpoint, should be added to `components/schemas` section in `openapi.json`
 

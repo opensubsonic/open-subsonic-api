@@ -4,7 +4,7 @@ linkTitle: "getScanStatus"
 categories:
 - Media library scanning
 description: >
-    Returns the current status for media library scanning.
+  Returns the current status for media library scanning.
 ---
 
 `http://your-server/rest/getScanStatus` Since [1.15.0](../../subsonic-versions)

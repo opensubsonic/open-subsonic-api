@@ -4,7 +4,7 @@ linkTitle: "addChatMessage"
 categories:
 - Chat
 description: >
-    Adds a message to the chat log.
+  Adds a message to the chat log.
 ---
 
 `http://your-server/rest/addChatMessage` Since [1.2.0](../../subsonic-versions)

@@ -2,7 +2,7 @@
 title: "PodcastChannel"
 linkTitle: "PodcastChannel"
 description: >
-  A Podcast channel
+  A Podcast channel.
 ---
 
 {{< tabpane persist=false >}}
@@ -78,7 +78,6 @@ description: >
 }
 {{< /tab >}}
 {{< /tabpane >}}
-
 
 | Field              | Type                                            | Req.    | OpenS. | Details                                   |
 | ------------------ | ----------------------------------------------- | ------- | ------ | ----------------------------------------- |

@@ -4,7 +4,7 @@ linkTitle: "getPlayQueue"
 categories:
 - Bookmarks
 description: >
-    Returns the state of the play queue for this user.
+  Returns the state of the play queue for this user.
 ---
 
 `http://your-server/rest/getPlayQueue` Since [1.12.0](../../subsonic-versions)

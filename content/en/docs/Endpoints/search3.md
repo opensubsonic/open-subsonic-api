@@ -6,7 +6,7 @@ opensubsonic:
 categories:
 - Searching
 description: >
-    Returns albums, artists and songs matching the given search criteria. Supports paging through the result.
+  Returns albums, artists and songs matching the given search criteria. Supports paging through the result.
 ---
 
 `http://your-server/rest/search3` Since [1.8.0](../../subsonic-versions)

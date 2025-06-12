@@ -6,7 +6,7 @@ OpenSubsonic:
 categories:
     - Browsing
 description: >
-    Returns details for a podcast episode.
+  Returns details for a podcast episode.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

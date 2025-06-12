@@ -4,7 +4,7 @@ linkTitle: "getShares"
 categories:
 - Sharing
 description: >
-    Returns information about shared media this user is allowed to manage.
+  Returns information about shared media this user is allowed to manage.
 ---
 
 `http://your-server/rest/getShares` Since [1.6.0](../../subsonic-versions)

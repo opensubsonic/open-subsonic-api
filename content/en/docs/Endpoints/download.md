@@ -4,7 +4,7 @@ linkTitle: "download"
 categories:
 - Media retrieval
 description: >
-    Downloads a given media file.
+  Downloads a given media file.
 ---
 
 `http://your-server/rest/download` Since [1.0.0](../../subsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "getLicense"
 categories:
 - System
 description: >
-    Get details about the software license. 
+  Get details about the software license.
 ---
 
 `http://your-server/rest/getLicense` Since [1.0.0](../../subsonic-versions)

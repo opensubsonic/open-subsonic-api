@@ -4,7 +4,7 @@ linkTitle: "setRating"
 categories:
 - Media annotation
 description: >
-    Sets the rating for a music file.
+  Sets the rating for a music file.
 ---
 
 `http://your-server/rest/setRating` Since [1.6.0](../../subsonic-versions)

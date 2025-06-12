@@ -4,7 +4,7 @@ linkTitle: "line [OS]"
 opensubsonic:
   - Addition
 description: >
-  One line of a song lyric
+  One line of a song lyric.
 ---
 
 {{< tabpane persist=false >}}

@@ -4,7 +4,7 @@ linkTitle: "getCaptions"
 categories:
 - Media retrieval
 description: >
-    Returns captions (subtitles) for a video.
+  Returns captions (subtitles) for a video.
 ---
 
 `http://your-server/rest/getCaptions` Since [1.14.0](../../subsonic-versions)

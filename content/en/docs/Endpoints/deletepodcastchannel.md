@@ -4,7 +4,7 @@ linkTitle: "deletePodcastChannel"
 categories:
 - Podcast
 description: >
-    Deletes a Podcast channel.
+  Deletes a Podcast channel.
 ---
 
 `http://your-server/rest/deletePodcastChannel` Since [1.9.0](../../subsonic-versions)

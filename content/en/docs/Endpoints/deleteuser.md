@@ -4,7 +4,7 @@ linkTitle: "deleteUser"
 categories:
 - User management
 description: >
-    Deletes an existing user on the server.
+  Deletes an existing user on the server.
 ---
 
 `http://your-server/rest/deleteUser` Since [1.3.0](../../subsonic-versions)
