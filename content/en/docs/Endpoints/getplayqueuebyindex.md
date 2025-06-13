@@ -1,6 +1,6 @@
 ---
-title: "getPlayQueue2"
-linkTitle: "getPlayQueue2"
+title: "getPlayQueueByIndex"
+linkTitle: "getPlayQueueByIndex"
 categories:
   - Bookmarks
 OpenSubsonic:
@@ -9,7 +9,7 @@ description: >
   Returns the state of the play queue for this user.
 ---
 
-`http://your-server/rest/getPlayQueue` Since [1.12.0](../../subsonic-versions)
+`http://your-server/rest/getPlayQueueByIndex` Since [1.12.0](../../subsonic-versions)
 
 Returns the state of the play queue for this user (as set by `savePlayQueue` or `savePlayQueue2`). This includes the tracks in the play queue, the currently playing track index (1-based), and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).
 
@@ -19,7 +19,7 @@ Takes no extra parameters.
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getPlayQueue.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getPlayQueueByIndex.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
