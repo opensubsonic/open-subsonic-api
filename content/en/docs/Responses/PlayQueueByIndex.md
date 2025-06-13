@@ -1,6 +1,6 @@
 ---
-title: "PlayQueue2"
-linkTitle: "PlayQueue2"
+title: "PlayQueueByIndex"
+linkTitle: "PlayQueueByIndex"
 description: >
   NowPlayingEntry, with index-based positioning.
 ---
