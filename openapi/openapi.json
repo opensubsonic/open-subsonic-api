@@ -234,6 +234,9 @@
         "/rest/getPlayQueue": {
             "$ref": "./endpoints/getPlayQueue.json"
         },
+        "/rest/getPlayQueueByIndex": {
+            "$ref": "./endpoints/getPlayQueueByIndex.json"
+        },
         "/rest/getPodcastEpisode": {
             "$ref": "./endpoints/getPodcastEpisode.json"
         },
@@ -296,6 +299,9 @@
         },
         "/rest/savePlayQueue": {
             "$ref": "./endpoints/savePlayQueue.json"
+        },
+        "/rest/savePlayQueueByIndex": {
+            "$ref": "./endpoints/savePlayQueueByIndex.json"
         },
         "/rest/scrobble": {
             "$ref": "./endpoints/scrobble.json"
@@ -725,11 +731,20 @@
             "PlayQueue": {
                 "$ref": "./schemas/PlayQueue.json"
             },
+            "PlayQueueByIndex": {
+                "$ref": "./schemas/PlayQueueByIndex.json"
+            },
             "GetPlayQueueSuccessResponse": {
                 "$ref": "./endpoints/getPlayQueue/GetPlayQueueSuccessResponse.json"
             },
             "GetPlayQueueResponse": {
                 "$ref": "./endpoints/getPlayQueue/GetPlayQueueResponse.json"
+            },
+            "GetPlayQueueByIndexSuccessResponse": {
+                "$ref": "./endpoints/getPlayQueueByIndex/GetPlayQueueByIndexSuccessResponse.json"
+            },
+            "GetPlayQueueByIndexResponse": {
+                "$ref": "./endpoints/getPlayQueueByIndex/GetPlayQueueByIndexResponse.json"
             },
             "GetPodcastEpisodeSuccessResponse": {
                 "$ref": "./endpoints/getPodcastEpisode/GetPodcastEpisodeSuccessResponse.json"
