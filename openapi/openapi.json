@@ -731,11 +731,20 @@
             "PlayQueue": {
                 "$ref": "./schemas/PlayQueue.json"
             },
+            "PlayQueueByIndex": {
+                "$ref": "./schemas/PlayQueueByIndex.json"
+            },
             "GetPlayQueueSuccessResponse": {
                 "$ref": "./endpoints/getPlayQueue/GetPlayQueueSuccessResponse.json"
             },
             "GetPlayQueueResponse": {
                 "$ref": "./endpoints/getPlayQueue/GetPlayQueueResponse.json"
+            },
+            "GetPlayQueueByIndexSuccessResponse": {
+                "$ref": "./endpoints/getPlayQueueByIndex/GetPlayQueueByIndexSuccessResponse.json"
+            },
+            "GetPlayQueueByIndexResponse": {
+                "$ref": "./endpoints/getPlayQueueByIndex/GetPlayQueueByIndexResponse.json"
             },
             "GetPodcastEpisodeSuccessResponse": {
                 "$ref": "./endpoints/getPodcastEpisode/GetPodcastEpisodeSuccessResponse.json"

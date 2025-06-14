@@ -6,12 +6,12 @@
         {
             "type": "object",
             "properties": {
-                "playQueue": {
+                "playQueueByIndex": {
                     "$ref": "../../schemas/PlayQueueByIndex.json"
                 }
             },
             "required": [
-                "PlayQueueByIndex"
+                "playQueueByIndex"
             ]
         }
     ]

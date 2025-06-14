@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "NowPlayingEntry.",
+    "description": "NowPlayingEntry with queue index.",
     "externalDocs": {
         "description": "PlayQueueByIndex",
         "url": "https://opensubsonic.netlify.app/docs/responses/playgueuebyindex/"
