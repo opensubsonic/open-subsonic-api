@@ -234,6 +234,9 @@
         "/rest/getPlayQueue": {
             "$ref": "./endpoints/getPlayQueue.json"
         },
+        "/rest/getPlayQueueByIndex": {
+            "$ref": "./endpoints/getPlayQueueByIndex.json"
+        },
         "/rest/getPodcastEpisode": {
             "$ref": "./endpoints/getPodcastEpisode.json"
         },
@@ -296,6 +299,9 @@
         },
         "/rest/savePlayQueue": {
             "$ref": "./endpoints/savePlayQueue.json"
+        },
+        "/rest/savePlayQueueByIndex": {
+            "$ref": "./endpoints/savePlayQueueByIndex.json"
         },
         "/rest/scrobble": {
             "$ref": "./endpoints/scrobble.json"

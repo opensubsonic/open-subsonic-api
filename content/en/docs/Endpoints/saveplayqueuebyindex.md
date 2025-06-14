@@ -17,11 +17,11 @@ Uses an index instead, as this allows for uniquely identifying play queues which
 
 ### Parameters
 
-| Parameter      | Req. | OpenS. | Default | Comment                                                                                                        |
-| -------------- | ---- | ------ | ------- | -------------------------------------------------------------------------------------------------------------- |
-| `id`           | No   |        |         | ID of a song in the play queue. Use one `id` parameter for each song in the play queue.                        |
-| `currentIndex` | No   |        |         | The 1-based index of the current playing track. This must be between 1 and the length of the queue (inclusive) |
-| `position`     | No   |        |         | The position in milliseconds within the currently playing song.                                                |
+| Parameter      | Req. | OpenS. | Default | Comment                                                                                                            |
+| -------------- | ---- | ------ | ------- | -------------------------------------------------------------------------------------------------------------------|
+| `id`           | No   |        |         | ID of a song in the play queue. Use one `id` parameter for each song in the play queue.                            |
+| `currentIndex` | No   |        |         | The 0-based index of the current playing track. This must be between 0 and the 1 - length of the queue (inclusive) |
+| `position`     | No   |        |         | The position in milliseconds within the currently playing song.                                                    |
 
 ### Example
 

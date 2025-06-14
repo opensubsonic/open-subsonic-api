@@ -11,7 +11,7 @@ description: >
 
 `http://your-server/rest/getPlayQueueByIndex` Since [1.12.0](../../subsonic-versions)
 
-Returns the state of the play queue for this user (as set by `savePlayQueue` or `savePlayQueueByIndex`). This includes the tracks in the play queue, the currently playing track index (1-based), and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).
+Returns the state of the play queue for this user (as set by `savePlayQueue` or `savePlayQueueByIndex`). This includes the tracks in the play queue, the currently playing track index (0-based), and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).
 
 ### Parameters
 

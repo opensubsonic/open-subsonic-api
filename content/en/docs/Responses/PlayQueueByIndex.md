@@ -9,7 +9,7 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-  "currentIndex": 1,
+  "currentIndex": 0,
   "position": 1000,
   "username": "user",
   "changed": "2023-03-10T02:19:35.784818075Z",
@@ -56,7 +56,7 @@ However, as `child` ids are strings, this is updated to note that the id should 
 
 | Field          | Type                         | Req.    | OpenS. | Details                                             |
 | -------------- | ---------------------------- | ------- | ------ | --------------------------------------------------- |
-| `currentIndex` | `long`                       | No      |        | The 1-based index of the current playing track      |
+| `currentIndex` | `long`                       | No      |        | The 0-based index of the current playing track      |
 | `position`     | `long`                       | No      |        | Position in milliseconds of currently playing track |
 | `username`     | `string`                     | **Yes** |        | The user this queue belongs to                      |
 | `changed`      | `string`                     | **Yes** |        | Date modified [ISO 8601]                            |
