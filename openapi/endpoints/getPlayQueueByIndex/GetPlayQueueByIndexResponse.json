@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetPlayQueueByIndexSuccessResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getplayqueuebyindex/"
+        "url": "https://opensubsonic.netlify.app/docs/responses/playqueuebyindex/"
     }
 }
