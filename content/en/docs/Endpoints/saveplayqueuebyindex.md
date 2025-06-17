@@ -20,7 +20,7 @@ Uses an index instead, as this allows for uniquely identifying play queues which
 | Parameter      | Req. | OpenS. | Default | Comment                                                                                                            |
 | -------------- | ---- | ------ | ------- | -------------------------------------------------------------------------------------------------------------------|
 | `id`           | No   |        |         | ID of a song in the play queue. Use one `id` parameter for each song in the play queue.                            |
-| `currentIndex` | No   |        |         | The 0-based index of the current playing track. This must be between 0 and the 1 - length of the queue (inclusive) |
+| `currentIndex` | No   |        |         | The 0-based index of the current playing track. This must be between 0 and length of the queue - 1 (inclusive)     |
 | `position`     | No   |        |         | The position in milliseconds within the currently playing song.                                                    |
 
 ### Example
@@ -53,5 +53,5 @@ Does not exist
 **Note** `id` is optional. Send a call without any parameters to clear the currently saved queue.
 In this case, `currentIndex` **must not** be set.
 
-If `currentIndex` is less than 1 or larger than the queue, the server **must** respond with error code 10.
+If `currentIndex` is not between 0 and length of the queue - 1 (inclusive), the server **must** respond with error code 10.
 {{< /alert >}}
