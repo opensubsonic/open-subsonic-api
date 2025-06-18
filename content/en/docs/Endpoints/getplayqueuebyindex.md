@@ -35,7 +35,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "type": "AwesomeServerName",
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
-    "playQueue": {
+    "playQueueByIndex": {
       "currentIndex": 1,
       "position": 1000,
       "username": "user",
@@ -80,4 +80,4 @@ Does not exist.
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `PlayQueueByIndex` | [`PlayQueueByIndex`](../../responses/playqueuebyindex) | **Yes** |     | The play queue|
+| `playQueueByIndex` | [`PlayQueueByIndex`](../../responses/playqueuebyindex) | **Yes** |     | The play queue|
