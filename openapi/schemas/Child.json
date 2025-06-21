@@ -167,6 +167,17 @@
             "type": "string",
             "description": "The track MusicBrainzID."
         },
+        "isrc": {
+            "type": "array",
+            "description": "The track ISRC(s).",
+            "example" : [
+                "USSM18300073",
+                "DELV42300297"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
         "genres": {
             "type": "array",
             "items": {
