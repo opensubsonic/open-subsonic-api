@@ -36,6 +36,13 @@ on Linux.
    changes to the source code and those changes will immediately show up in your
    browser after you save.
 
+2. To update the openApi files inside docker and validate that your changes are correct run the following command
+
+   ```bash
+   docker-compose run site npm run build
+   ```
+
+
 ### Cleanup
 
 To stop Docker Compose, on your terminal window, press **Ctrl + C**.
