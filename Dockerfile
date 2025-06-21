@@ -1,4 +1,3 @@
-FROM klakegg/hugo:ext-alpine
+FROM hugomods/hugo:debian-ci-0.147.8
 
-RUN apk add git && \
-  git config --global --add safe.directory /src
+RUN git config --global --add safe.directory /src
