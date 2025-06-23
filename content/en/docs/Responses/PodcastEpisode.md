@@ -2,10 +2,10 @@
 title: "PodcastEpisode"
 linkTitle: "PodcastEpisode"
 description: >
-  A Podcast episode
+  A Podcast episode.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

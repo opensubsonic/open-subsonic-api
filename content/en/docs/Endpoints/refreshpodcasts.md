@@ -4,7 +4,7 @@ linkTitle: "refreshPodcasts"
 categories:
 - Podcast
 description: >
-    Requests the server to check for new Podcast episodes.
+  Requests the server to check for new Podcast episodes.
 ---
 
 `http://your-server/rest/refreshPodcasts` Since [1.9.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

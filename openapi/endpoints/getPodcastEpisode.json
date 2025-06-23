@@ -1,0 +1,94 @@
+{
+    "get": {
+        "summary": "Returns details for a podcast episode.",
+        "description": "OpenSubsonic extension name getPodcastEpisode (As returned by `getOpenSubsonicExtensions`). Returns details for a podcast episode.",
+        "operationId": "getPodcastEpisode",
+        "tags": [
+            "Podcast",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The podcast episode ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPodcastEpisode/GetPodcastEpisodeResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported."
+            }
+        },
+        "externalDocs": {
+            "description": "getPodcastEpisode",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpodcastepisode/"
+        }
+    },
+    "post": {
+        "summary": "Returns details for a podcast episode.",
+        "description": "OpenSubsonic extension name `getPodcastEpisode` (As returned by `getOpenSubsonicExtensions`). Returns details for a podcast episode.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetPodcastEpisode",
+        "tags": [
+            "Podcast",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The podcast episode ID."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPodcastEpisode/GetPodcastEpisodeResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported."
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getPodcastEpisode",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpodcastepisode/"
+        }
+    }
+}

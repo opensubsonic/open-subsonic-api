@@ -4,7 +4,7 @@ linkTitle: "ping"
 categories:
 - System
 description: >
-    Used to test connectivity with the server. 
+  Used to test connectivity with the server.
 ---
 
 `http://your-server/rest/ping` Since [1.0.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -4,7 +4,7 @@ linkTitle: "star"
 categories:
 - Media annotation
 description: >
-    Attaches a star to a song, album or artist.
+  Attaches a star to a song, album or artist.
 ---
 
 `http://your-server/rest/star` Since [1.8.0](../../subsonic-versions)
@@ -27,7 +27,7 @@ Attaches a star to a song, album or artist.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -4,7 +4,7 @@ linkTitle: "deletePlaylist"
 categories:
 - Playlists
 description: >
-    Deletes a saved playlist.
+  Deletes a saved playlist.
 ---
 
 `http://your-server/rest/deletePlaylist` Since [1.2.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Deletes a saved playlist.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

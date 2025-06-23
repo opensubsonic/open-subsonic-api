@@ -5,7 +5,7 @@ description: >
   NowPlayingEntry.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -80,6 +80,6 @@ description: >
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `username` | `string` | **Yes** |     | The username |
-| `minutesAgo` | `string` | **Yes** |     | Last update |
-| `playerId` | `boolean` | **Yes** |     | Player Id |
+| `minutesAgo` | `integer` | **Yes** |     | Last update |
+| `playerId` | `integer` | **Yes** |     | Player Id |
 | `playerName` | `string` | No |     | Player name |

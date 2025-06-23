@@ -7,7 +7,7 @@ opensubsonic:
 categories:
   - System
 description: >
-  Returns information about an API key
+  Returns information about an API key.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)
@@ -26,12 +26,11 @@ None
 
 {{< alert color="primary" >}} `http://your-server/rest/tokenInfo.view?apiKey=1234&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
-
 ### Result
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`tokenInfo`](../../responses/tokenInfo/) on success, or error 44 on invalid token.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {

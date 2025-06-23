@@ -4,7 +4,7 @@ linkTitle: "getAlbumInfo"
 categories:
 - Browsing
 description: >
-    Returns album info.
+  Returns album info.
 ---
 
 `http://your-server/rest/getAlbumInfo` Since [1.14.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Returns album notes, image URLs etc, using data from [last.fm](http://last.fm).
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`albumInfo`](../../responses/albuminfo) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "description": "searchResult. TODO",
+    "externalDocs": {
+        "description": "SearchResult",
+        "url": "https://opensubsonic.netlify.app/docs/responses/searchresult/"
+    }
+}

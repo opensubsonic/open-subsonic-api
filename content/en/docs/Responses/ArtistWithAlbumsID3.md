@@ -2,10 +2,10 @@
 title: "ArtistWithAlbumsID3"
 linkTitle: "ArtistWithAlbumsID3 [OS]"
 description: >
-  An extension of [`ArtistID3`](../artistid3) with [`AlbumID3`](../albumid3)
+  An extension of [`ArtistID3`](../artistid3) with [`AlbumID3`](../albumid3).
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

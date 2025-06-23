@@ -4,10 +4,10 @@ linkTitle: "AlbumID3WithSongs [OS]"
 opensubsonic:
 - Change
 description: >
-  Album with songs.
+  An extension of [`AlbumID3`](../albumid3) with song [`Child`](../child) entries.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

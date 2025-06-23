@@ -4,7 +4,7 @@ linkTitle: "updatePlaylist"
 categories:
 - Playlists
 description: >
-    Updates a playlist. Only the owner of a playlist is allowed to update it.
+  Updates a playlist. Only the owner of a playlist is allowed to update it.
 ---
 
 `http://your-server/rest/updatePlaylist` Since [1.8.0](../../subsonic-versions)
@@ -30,7 +30,7 @@ Updates a playlist. Only the owner of a playlist is allowed to update it.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

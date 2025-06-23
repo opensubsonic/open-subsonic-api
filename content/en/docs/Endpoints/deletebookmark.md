@@ -4,7 +4,7 @@ linkTitle: "deleteBookmark"
 categories:
 - Bookmarks
 description: >
-    Creates or updates a bookmark.
+  Creates or updates a bookmark.
 ---
 
 `http://your-server/rest/deleteBookmark` Since [1.9.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Creates or updates a bookmark (a position within a media file). Bookmarks are pe
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -25,7 +25,7 @@ Returns all playlists a user is allowed to play.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playlists`](../../responses/playlists) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

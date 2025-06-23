@@ -1,0 +1,64 @@
+{
+    "get": {
+        "summary": "Downloads a given media file.",
+        "description": "Downloads a given media file. Similar to stream, but this method returns the original media data without transcoding or downsampling.",
+        "operationId": "download",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "A string which uniquely identifies the file to stream. Obtained by calls to getMusicDirectory.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/BinaryResponse.json"
+            }
+        }
+    },
+    "post": {
+        "summary": "Downloads a given media file.",
+        "description": "Downloads a given media file. Similar to stream, but this method returns the original media data without transcoding or downsampling.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postDownload",
+        "tags": [
+            "Media Retrieval"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "A string which uniquely identifies the file to download. Obtained by calls to getMusicDirectory."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/BinaryResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@ linkTitle: "getPodcastEpisode"
 OpenSubsonic:
 - Extension
 description: >
-    Add support for retrieving individual podcast episode metadata
+  Add support for retrieving individual podcast episode metadata.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

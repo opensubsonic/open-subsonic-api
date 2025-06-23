@@ -2,10 +2,10 @@
 title: "PodcastChannel"
 linkTitle: "PodcastChannel"
 description: >
-  A Podcast channel
+  A Podcast channel.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -78,7 +78,6 @@ description: >
 }
 {{< /tab >}}
 {{< /tabpane >}}
-
 
 | Field              | Type                                            | Req.    | OpenS. | Details                                   |
 | ------------------ | ----------------------------------------------- | ------- | ------ | ----------------------------------------- |

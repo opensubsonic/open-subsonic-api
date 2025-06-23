@@ -4,7 +4,7 @@ linkTitle: "deleteInternetRadioStation"
 categories:
 - Internet radio
 description: >
-    Deletes an existing internet radio station.
+  Deletes an existing internet radio station.
 ---
 
 `http://your-server/rest/deleteInternetRadioStation` Since [1.16.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Deletes an existing internet radio station. Only users with admin privileges are
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

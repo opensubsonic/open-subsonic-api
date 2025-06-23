@@ -4,7 +4,7 @@ linkTitle: "getSong"
 categories:
 - Browsing
 description: >
-    Returns details for a song.
+  Returns details for a song.
 ---
 
 `http://your-server/rest/getSong` Since [1.8.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Returns details for a song.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`song`](../../responses/song) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

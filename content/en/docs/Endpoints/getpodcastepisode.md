@@ -6,7 +6,7 @@ OpenSubsonic:
 categories:
     - Browsing
 description: >
-    Returns details for a podcast episode.
+  Returns details for a podcast episode.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)
@@ -30,7 +30,7 @@ Returns details for a podcast episode.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`podcastEpisode`](../../responses/podcastepisode) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

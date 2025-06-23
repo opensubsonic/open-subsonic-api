@@ -5,7 +5,7 @@ description: >
   A date for a media item that may be just a year, or year-month, or full date.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {

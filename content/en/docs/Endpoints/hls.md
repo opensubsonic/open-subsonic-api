@@ -4,7 +4,7 @@ linkTitle: "hls"
 categories:
 - Media retrieval
 description: >
-    Downloads a given media file.
+  Downloads a given media file.
 ---
 
 `http://your-server/rest/hls.m3u8` Since [1.8.0](../../subsonic-versions)

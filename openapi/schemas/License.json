@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "description": "getLicense result.",
+    "externalDocs": {
+        "description": "License",
+        "url": "https://opensubsonic.netlify.app/docs/responses/license/"
+    },
+    "properties": {
+        "valid": {
+            "type": "boolean",
+            "description": "The status of the license"
+        },
+        "email": {
+            "type": "string",
+            "description": "User email"
+        },
+        "licenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "description": "End of license date. [ISO 8601]"
+        },
+        "trialExpires": {
+            "type": "string",
+            "format": "date-time",
+            "description": "End of trial date. [ISO 8601]"
+        }
+    },
+    "required": [
+        "valid"
+    ]
+}

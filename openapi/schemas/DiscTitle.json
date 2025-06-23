@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "description": "A disc title for an album",
+    "properties": {
+        "disc": {
+            "type": "integer",
+            "description": "The disc number."
+        },
+        "title": {
+            "type": "string",
+            "description": "The name of the disc."
+        }
+    },
+    "required": [
+        "disc",
+        "title"
+    ],
+    "externalDocs": {
+        "description": "DiscTitle",
+        "url": "https://opensubsonic.netlify.app/docs/responses/disctitle/"
+    }
+}

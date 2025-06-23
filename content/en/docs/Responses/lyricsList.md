@@ -4,10 +4,10 @@ linkTitle: "lyricsList [OS]"
 opensubsonic:
   - Addition
 description: >
-  List of structured lyrics
+  List of structured lyrics.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {

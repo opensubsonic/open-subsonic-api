@@ -4,7 +4,7 @@ linkTitle: "downloadPodcastEpisode"
 categories:
 - Podcast
 description: >
-    Request the server to start downloading a given Podcast episode. 
+  Request the server to start downloading a given Podcast episode.
 ---
 
 `http://your-server/rest/downloadPodcastEpisode` Since [1.9.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Request the server to start downloading a given Podcast episode. Note: The user 
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

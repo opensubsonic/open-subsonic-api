@@ -4,7 +4,7 @@ linkTitle: "updateInternetRadioStation"
 categories:
 - Internet radio
 description: >
-    Updates an existing internet radio station. 
+  Updates an existing internet radio station.
 ---
 
 `http://your-server/rest/updateInternetRadioStation` Since [1.16.0](../../subsonic-versions)
@@ -28,7 +28,7 @@ Updates an existing internet radio station. Only users with admin privileges are
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

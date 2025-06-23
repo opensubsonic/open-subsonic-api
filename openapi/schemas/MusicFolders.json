@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "MusicFolders.",
+    "externalDocs": {
+        "description": "MusicFolders",
+        "url": "https://opensubsonic.netlify.app/docs/responses/musicfolders/"
+    },
+    "properties": {
+        "musicFolder": {
+            "type": "array",
+            "items": {
+                "$ref": "./MusicFolder.json"
+            },
+            "description": "The folders"
+        }
+    }
+}

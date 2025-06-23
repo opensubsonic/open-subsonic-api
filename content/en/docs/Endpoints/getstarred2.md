@@ -4,7 +4,7 @@ linkTitle: "getStarred2"
 categories:
 - Lists
 description: >
-    Returns starred songs, albums and artists.
+  Returns starred songs, albums and artists.
 ---
 
 `http://your-server/rest/getStarred2` Since [1.8.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Similar to [`getStarred`](../getstarred), but organizes music according to ID3 t
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`starred2`](../../responses/starred2) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -6,7 +6,7 @@ OpenSubsonic:
 categories:
   - Media retrieval
 description: >
-  Add support for synchronized lyrics, multiple languages, and retrieval by song ID
+  Add support for synchronized lyrics, multiple languages, and retrieval by song ID.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)
@@ -22,7 +22,7 @@ The lyrics can come from embedded tags (`SYLT`/`USLT`), LRC file/text file, or a
 
 | Parameter | Req.    | OpenS.  | Default | Comment       |
 | --------- | ------- | ------- | ------- | ------------- |
-| `id`      | **Yes** | **Yes** |         | The track ID. |                                                                                         
+| `id`      | **Yes** | **Yes** |         | The track ID. |
 
 {{< alert color="warning" title="Special notes about the lang field" >}}
 Ideally, the server will return `lang` as an ISO 639 (2/3) code.
@@ -41,7 +41,7 @@ Clients should treat `xxx` as not having a specified language (equivalent to the
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`lyricsList`](../../responses/lyricslist/)
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {

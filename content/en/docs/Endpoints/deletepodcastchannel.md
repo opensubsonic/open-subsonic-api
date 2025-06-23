@@ -4,7 +4,7 @@ linkTitle: "deletePodcastChannel"
 categories:
 - Podcast
 description: >
-    Deletes a Podcast channel.
+  Deletes a Podcast channel.
 ---
 
 `http://your-server/rest/deletePodcastChannel` Since [1.9.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Deletes a Podcast channel. Note: The user must be authorized for Podcast adminis
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

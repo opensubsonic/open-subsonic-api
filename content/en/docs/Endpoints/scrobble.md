@@ -4,7 +4,7 @@ linkTitle: "scrobble"
 categories:
 - Media annotation
 description: >
-    Registers the local playback of one or more media files.
+  Registers the local playback of one or more media files.
 ---
 
 `http://your-server/rest/scrobble` Since [1.5.0](../../subsonic-versions)
@@ -33,7 +33,7 @@ Since [1.8.0](../../subsonic-versions) you may specify multiple `id` (and option
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

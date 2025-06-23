@@ -1,0 +1,23 @@
+{
+    "allOf": [
+        {
+            "$ref": "./JukeboxStatus.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "entry": {
+                    "type": "array",
+                    "description": "The songs currently enqueued in the jukebox",
+                    "items": {
+                        "$ref": "./Child.json"
+                    }
+                }
+            },
+            "externalDocs": {
+                "description": "JukeboxPlaylist",
+                "url": "https://opensubsonic.netlify.app/docs/responses/jukeboxplaylist/"
+            }
+        }
+    ]
+}

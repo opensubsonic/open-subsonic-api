@@ -4,7 +4,7 @@ linkTitle: "getVideos"
 categories:
 - Browsing
 description: >
-    Returns all video files.
+  Returns all video files.
 ---
 
 `http://your-server/rest/getVideos` Since [1.8.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`videos`](../../responses/videos) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 // TODO

@@ -1,0 +1,95 @@
+{
+    "get": {
+        "summary": "Saves the state of the play queue for this user.",
+        "description": "Saves the state of the play queue for this user. This includes the tracks in the play queue, the currently playing track, and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book). `id` is optional. Send a call without any parameters to clear the currently saved queue.",
+        "operationId": "savePlayQueue",
+        "tags": [
+            "Bookmarks",
+            "Change"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "ID of a song in the play queue. Use one id parameter for each song in the play queue.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "current",
+                "in": "query",
+                "description": "The ID of the current playing song.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "position",
+                "in": "query",
+                "description": "The position in milliseconds within the currently playing song.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "savePlayQueue",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/saveplayqueue/"
+        }
+    },
+    "post": {
+        "summary": "Saves the state of the play queue for this user.",
+        "description": "Saves the state of the play queue for this user. This includes the tracks in the play queue, the currently playing track, and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book). `id` is optional. Send a call without any parameters to clear the currently saved queue.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postSavePlayQueue",
+        "tags": [
+            "Bookmarks",
+            "Change"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "ID of a song in the play queue. Use one id parameter for each song in the play queue."
+                            },
+                            "current": {
+                                "type": "string",
+                                "description": "The ID of the current playing song."
+                            },
+                            "position": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "description": "The position in milliseconds within the currently playing song."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        }
+    }
+}

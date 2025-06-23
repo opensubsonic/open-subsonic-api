@@ -1,0 +1,86 @@
+{
+    "get": {
+        "summary": "Returns details for an album.",
+        "description": "Returns details for an album, including a list of songs. This method organizes music according to ID3 tags.",
+        "operationId": "getAlbum",
+        "tags": [
+            "Browsing"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The album ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getAlbum/GetAlbumResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getAlbum",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getalbum/"
+        }
+    },
+    "post": {
+        "summary": "Returns details for an album.",
+        "description": "Returns details for an album, including a list of songs. This method organizes music according to ID3 tags.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postGetAlbum",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The album ID."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getAlbum/GetAlbumResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getAlbum",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getalbum/"
+        }
+    }
+}

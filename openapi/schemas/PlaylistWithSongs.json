@@ -1,0 +1,23 @@
+{
+    "allOf": [
+        {
+            "$ref": "./Playlist.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "entry": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./Child.json"
+                    },
+                    "description": "The list of songs"
+                }
+            },
+            "externalDocs": {
+                "description": "PlaylistWithSongs",
+                "url": "https://opensubsonic.netlify.app/docs/responses/playlistwithsongs/"
+            }
+        }
+    ]
+}

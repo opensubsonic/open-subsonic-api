@@ -4,7 +4,7 @@ linkTitle: "deleteUser"
 categories:
 - User management
 description: >
-    Deletes an existing user on the server.
+  Deletes an existing user on the server.
 ---
 
 `http://your-server/rest/deleteUser` Since [1.3.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Deletes an existing user on the server, using the following parameters:
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

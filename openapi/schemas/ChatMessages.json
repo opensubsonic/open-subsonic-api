@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Chat messages list.",
+    "externalDocs": {
+        "description": "ChatMessages",
+        "url": "https://opensubsonic.netlify.app/docs/responses/chatmessages/"
+    },
+    "properties": {
+        "chatMessage": {
+            "type": "array",
+            "items": {
+                "$ref": "./ChatMessage.json"
+            },
+            "description": "List of chatMessage"
+        }
+    }
+}

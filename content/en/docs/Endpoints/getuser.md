@@ -4,7 +4,7 @@ linkTitle: "getUser"
 categories:
 - User management
 description: >
-    Get details about a given user, including which authorization roles and folder access it has.
+  Get details about a given user, including which authorization roles and folder access it has.
 ---
 
 `http://your-server/rest/getUser` Since [1.3.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Get details about a given user, including which authorization roles and folder a
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`user`](../../responses/user) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

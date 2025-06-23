@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "description": "searchResult3",
+    "externalDocs": {
+        "description": "SearchResult3",
+        "url": "https://opensubsonic.netlify.app/docs/responses/searchresult3/"
+    },
+    "properties": {
+        "artist": {
+            "type": "array",
+            "items": {
+                "$ref": "./ArtistID3.json"
+            },
+            "description": "Matching artists"
+        },
+        "album": {
+            "type": "array",
+            "items": {
+                "$ref": "./AlbumID3.json"
+            },
+            "description": "Matching albums"
+        },
+        "song": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "Matching songs"
+        }
+    }
+}

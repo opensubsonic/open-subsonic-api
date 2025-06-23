@@ -65,7 +65,7 @@ anchor = "smart"
 # Language configuration
 
 [languages]
-[languages.en]
+[languages.en.params]
 title = "OpenSubsonic"
 description = "OpenSubsonic API project and documentation"
 languageName ="English"
@@ -128,21 +128,23 @@ github_branch= "master"
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 gcs_engine_id = "d72aa9b2712488cc3"
 
-# Enable Algolia DocSearch
-algolia_docsearch = false
-
 # Enable Lunr.js offline search
 offlineSearch = false
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
 
+[params.seach]
+# Enable Algolia DocSearch
+algolia = false
+
 # User interface configuration
 [params.ui]
+showLightDarkModeMenu = true
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
-# Set to true to disable the About link in the site footer
-footer_about_disable = false
+# Set to false to disable the About link in the site footer
+footer_about_enable = true
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
 navbar_logo = false
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.

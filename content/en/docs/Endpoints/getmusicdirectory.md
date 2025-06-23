@@ -25,7 +25,7 @@ Returns a listing of all files in a music directory. Typically used to get list 
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`directory`](../../responses/directory) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

@@ -4,7 +4,7 @@ linkTitle: "Transcode Offset"
 OpenSubsonic:
 - Extension
 description: >
-    Add support for start offset for transcoding.
+  Add support for start offset for transcoding.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)

@@ -4,7 +4,7 @@ linkTitle: "getUsers"
 categories:
 - User management
 description: >
-    Get details about all users, including which authorization roles and folder access they have
+  Get details about all users, including which authorization roles and folder access they have.
 ---
 
 `http://your-server/rest/getUsers` Since [1.8.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`users`](../../responses/users) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -93,7 +93,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 }
 {{< /tab >}}
 {{< /tabpane >}}
-
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |

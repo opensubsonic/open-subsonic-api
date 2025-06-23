@@ -4,7 +4,7 @@ linkTitle: "createInternetRadioStation"
 categories:
 - Internet radio
 description: >
-    Adds a new internet radio station.
+  Adds a new internet radio station.
 ---
 
 `http://your-server/rest/createInternetRadioStation` Since [1.16.0](../../subsonic-versions)
@@ -27,7 +27,7 @@ Adds a new internet radio station. Only users with admin privileges are allowed 
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

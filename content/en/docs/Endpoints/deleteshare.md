@@ -4,7 +4,7 @@ linkTitle: "deleteShare"
 categories:
 - Sharing
 description: >
-    Deletes an existing share.
+  Deletes an existing share.
 ---
 
 `http://your-server/rest/deleteShare` Since [1.6.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Deletes an existing share.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

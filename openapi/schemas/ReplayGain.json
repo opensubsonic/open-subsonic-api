@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "description": "The replay gain data of a song. Note: If the data is not present the field must be ommited in the answer. (But the replayGain field on Child must always be present)",
+    "properties": {
+        "trackGain": {
+            "type": "number",
+            "description": "The track replay gain value. (In Db)"
+        },
+        "albumGain": {
+            "type": "number",
+            "description": "The album replay gain value. (In Db)"
+        },
+        "trackPeak": {
+            "type": "number",
+            "description": "The track peak value. (Must be positive)",
+            "minimum": 0
+        },
+        "albumPeak": {
+            "type": "number",
+            "description": "The album peak value. (Must be positive)",
+            "minimum": 0
+        },
+        "baseGain": {
+            "type": "number",
+            "description": "The base gain value. (In Db) (Ogg Opus Output Gain for example)"
+        },
+        "fallbackGain": {
+            "type": "number",
+            "description": "An optional fallback gain that clients should apply when the corresponding gain value is missing. (Can be computed from the tracks or exposed as an user setting.)"
+        }
+    },
+    "externalDocs": {
+        "description": "Replay Gain",
+        "url": "https://opensubsonic.netlify.app/docs/responses/replaygain/"
+    }
+}

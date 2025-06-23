@@ -4,7 +4,7 @@ linkTitle: "jukeboxControl"
 categories:
 - Jukebox
 description: >
-    Controls the jukebox, i.e., playback directly on the server's audio hardware.
+  Controls the jukebox, i.e., playback directly on the server's audio hardware.
 ---
 
 `http://your-server/rest/jukeboxControl` Since [1.2.0](../../subsonic-versions)
@@ -32,7 +32,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 - [`jukeboxStatus`](../../responses/jukeboxstatus) for all actions but `get`
 - [`jukeboxPlaylist`](../../responses/jukeboxplaylist) for `get` action
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic (Status)" lang="json">}}
 {

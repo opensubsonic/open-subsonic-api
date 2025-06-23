@@ -4,7 +4,7 @@ linkTitle: "startScan"
 categories:
 - Media library scanning
 description: >
-    Initiates a rescan of the media libraries.
+  Initiates a rescan of the media libraries.
 ---
 
 `http://your-server/rest/startScan` Since [1.15.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`scanStatus`](../../responses/scanstatus) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

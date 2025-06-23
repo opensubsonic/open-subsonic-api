@@ -4,7 +4,7 @@ linkTitle: "getNowPlaying"
 categories:
 - Lists
 description: >
-    Returns what is currently being played by all users.
+  Returns what is currently being played by all users.
 ---
 
 `http://your-server/rest/getNowPlaying` Since [1.0.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`nowPlaying`](../../responses/nowplaying) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

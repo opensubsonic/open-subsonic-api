@@ -4,7 +4,7 @@ linkTitle: "getPlayQueue"
 categories:
 - Bookmarks
 description: >
-    Returns the state of the play queue for this user.
+  Returns the state of the play queue for this user.
 ---
 
 `http://your-server/rest/getPlayQueue` Since [1.12.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playQueue`](../../responses/playqueue) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

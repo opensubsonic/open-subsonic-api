@@ -4,8 +4,10 @@
   "description": "Hugo theme for technical documentation.",
   "main": "none.js",
   "scripts": {
-    "start": "hugo server",
-    "build": "hugo build"
+    "start": "npx hugo server",
+    "build": "markdownlint 'content/**/*.md' --config .markdownlint.json && npm run build:openapi && npx hugo --gc --minify",
+    "build:openapi": "swagger-cli bundle openapi/openapi.json -o content/en/docs/Openapi/openapi.json --type json && npx vacuum lint content/en/docs/Openapi/openapi.json -d -a -e",
+    "lint:md": "markdownlint 'content/**/*.md' --config .markdownlint.json"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,12 @@
   },
   "homepage": "https://github.com/google/docsy-example#readme",
   "devDependencies": {
+    "@quobix/vacuum": "^0.16.9",
     "autoprefixer": "^10.4.0",
+    "hugo-extended": "0.133.1",
+    "markdownlint-cli": "^0.45.0",
     "postcss": "^8.3.7",
-    "postcss-cli": "^9.0.2"
+    "postcss-cli": "^9.0.2",
+    "swagger-cli": "^4.0.4"
   }
 }

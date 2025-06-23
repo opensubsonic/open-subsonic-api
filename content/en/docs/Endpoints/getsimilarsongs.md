@@ -26,7 +26,7 @@ Returns a random collection of songs from the given artist and similar artists, 
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`similarSongs`](../../responses/similarsongs) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

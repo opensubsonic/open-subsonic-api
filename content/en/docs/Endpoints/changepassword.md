@@ -4,7 +4,7 @@ linkTitle: "changePassword"
 categories:
 - User management
 description: >
-    Changes the password of an existing user on the server.
+  Changes the password of an existing user on the server.
 ---
 
 `http://your-server/rest/changePassword` Since [1.1.0](../../subsonic-versions)
@@ -26,7 +26,7 @@ Changes the password of an existing user on the server, using the following para
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

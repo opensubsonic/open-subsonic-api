@@ -4,7 +4,7 @@ linkTitle: "addChatMessage"
 categories:
 - Chat
 description: >
-    Adds a message to the chat log.
+  Adds a message to the chat log.
 ---
 
 `http://your-server/rest/addChatMessage` Since [1.2.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Adds a message to the chat log.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

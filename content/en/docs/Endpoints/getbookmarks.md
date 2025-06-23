@@ -4,7 +4,7 @@ linkTitle: "getBookmarks"
 categories:
 - Bookmarks
 description: >
-    Returns all bookmarks for this user.
+  Returns all bookmarks for this user.
 ---
 
 `http://your-server/rest/getBookmarks` Since [1.9.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`bookmarks`](../../responses/bookmarks) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

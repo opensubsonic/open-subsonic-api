@@ -1,4 +1,6 @@
 [build]
+command = "npm run build"
 [build.environment]
-HUGO_VERSION = "0.104.3"
+HUGO_VERSION = "0.133.1"
 GO_VERSION = "1.19.2"
+NODE_VERSION = "lts/*"

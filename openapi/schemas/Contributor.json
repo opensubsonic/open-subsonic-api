@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "description": "A contributor artist for a song or an album",
+  "properties": {
+      "role": {
+          "type": "string",
+          "description": "The contributor role."
+      },
+      "subRole": {
+          "type": "string",
+          "description": "The subRole for roles that may require it. Ex: The instrument for the performer role (TMCL/performer tags). Note: For consistency between different tag formats, the TIPL sub roles should be directly exposed in the role field."
+      },
+      "artist": {
+          "$ref": "./ArtistID3.json"
+      }
+  },
+  "required": [
+      "role",
+      "artist"
+  ],
+  "externalDocs": {
+      "description": "Contributor",
+      "url": "https://opensubsonic.netlify.app/docs/responses/contributor/"
+  }
+}

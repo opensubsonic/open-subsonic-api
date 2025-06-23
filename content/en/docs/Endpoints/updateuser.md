@@ -4,7 +4,7 @@ linkTitle: "updateUser"
 categories:
 - User management
 description: >
-    Modifies an existing user on the server.
+  Modifies an existing user on the server.
 ---
 
 `http://your-server/rest/updateUser` Since [1.10.1](../../subsonic-versions)
@@ -41,7 +41,7 @@ Modifies an existing user on the server.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

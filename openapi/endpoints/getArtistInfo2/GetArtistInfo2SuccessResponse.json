@@ -1,0 +1,18 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "artistInfo2": {
+                    "$ref": "../../schemas/ArtistInfo2.json"
+                }
+            },
+            "required": [
+                "artistInfo2"
+            ]
+        }
+    ]
+}

@@ -4,7 +4,7 @@ linkTitle: "createPodcastChannel"
 categories:
 - Podcast
 description: >
-    Adds a new Podcast channel.
+  Adds a new Podcast channel.
 ---
 
 `http://your-server/rest/createPodcastChannel` Since [1.9.0](.././subsonic-versions)
@@ -25,7 +25,7 @@ Adds a new Podcast channel. Note: The user must be authorized for Podcast admini
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

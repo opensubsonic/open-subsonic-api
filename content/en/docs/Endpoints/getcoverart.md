@@ -4,7 +4,7 @@ linkTitle: "getCoverArt"
 categories:
 - Media retrieval
 description: >
-    Returns a cover art image.
+  Returns a cover art image.
 ---
 
 `http://your-server/rest/getCoverArt` Since [1.0.0](../../subsonic-versions)
@@ -13,10 +13,10 @@ Returns a cover art image.
 
 ### Parameters
 
-| Parameter | Req. | OpenS. | Default | Comment |
-| --- | --- | --- | --- | --- |
-| `id` | **Yes** |     | The coverArt ID. Returned by most entities likes [`Child`](../../responses/child) or [`AlbumID3`](../../responses/albumid3) |
-| `size` | No  |     | If specified, scale image to this size. |
+| Parameter | Req.    | OpenS. | Default | Comment |
+| --------- | ------- | ------ | ------- | --- |
+| `id`      | **Yes** |        | The coverArt ID. Returned by most entities likes [`Child`](../../responses/child) or [`AlbumID3`](../../responses/albumid3) | |
+| `size`    | No      |        | If specified, scale image to this size. | |
 
 ### Example
 

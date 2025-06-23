@@ -4,7 +4,7 @@ linkTitle: "getLicense"
 categories:
 - System
 description: >
-    Get details about the software license. 
+  Get details about the software license.
 ---
 
 `http://your-server/rest/getLicense` Since [1.0.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`license`](../../responses/license) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

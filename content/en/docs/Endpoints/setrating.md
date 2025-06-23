@@ -4,7 +4,7 @@ linkTitle: "setRating"
 categories:
 - Media annotation
 description: >
-    Sets the rating for a music file.
+  Sets the rating for a music file.
 ---
 
 `http://your-server/rest/setRating` Since [1.6.0](../../subsonic-versions)
@@ -26,7 +26,7 @@ Sets the rating for a music file.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

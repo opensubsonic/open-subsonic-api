@@ -4,7 +4,7 @@ linkTitle: "getArtistInfo"
 categories:
 - Browsing
 description: >
-    Returns artist info.
+  Returns artist info.
 ---
 
 `http://your-server/rest/getArtistInfo` Since [1.11.0](../../subsonic-versions)
@@ -27,7 +27,7 @@ Returns artist info with biography, image URLs and similar artists, using data f
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`artistInfo`](../../responses/artistinfo) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

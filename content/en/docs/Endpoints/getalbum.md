@@ -23,9 +23,9 @@ Returns details for an album, including a list of songs. This method organizes m
 
 ### Result
 
-A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`album`](../../responses/albumid3withsongs) element on success.
+A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`AlbumID3WithSongs`](../../responses/albumid3withsongs) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -192,4 +192,4 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `album` | [`album`](../../responses/albumid3withsongs) | **Yes** |   | The album |
+| `album` | [`AlbumID3WithSongs`](../../responses/albumid3withsongs) | **Yes** |   | The album |

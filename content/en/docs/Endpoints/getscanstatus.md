@@ -4,7 +4,7 @@ linkTitle: "getScanStatus"
 categories:
 - Media library scanning
 description: >
-    Returns the current status for media library scanning.
+  Returns the current status for media library scanning.
 ---
 
 `http://your-server/rest/getScanStatus` Since [1.15.0](../../subsonic-versions)
@@ -23,7 +23,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`scanStatus`](../../responses/scanstatus) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
