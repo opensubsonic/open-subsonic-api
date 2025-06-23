@@ -67,4 +67,4 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `videos` | [`Child`](../../responses/child) | **Yes** |     | The videos |
+| `videos` | [`videos`](../../responses/videos) | **Yes** |     | The videos |
