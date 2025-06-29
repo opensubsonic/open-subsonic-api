@@ -11,7 +11,7 @@
             {
                 "name": "id",
                 "in": "query",
-                "description": "ID of a song in the play queue. Use one id parameter for each song in the play queue.",
+                "description": "ID of a song in the play queue. Use one id parameter for each song in the play queue. Specify no IDs to clear",
                 "required": false,
                 "schema": {
                     "type": "string"
@@ -20,7 +20,7 @@
             {
                 "name": "current",
                 "in": "query",
-                "description": "The ID of the current playing song.",
+                "description": "The ID of the current playing song.  This is required if one or more IDs is provided.",
                 "required": false,
                 "schema": {
                     "type": "string"
@@ -64,11 +64,11 @@
                         "properties": {
                             "id": {
                                 "type": "string",
-                                "description": "ID of a song in the play queue. Use one id parameter for each song in the play queue."
+                                "description": "ID of a song in the play queue. Use one id parameter for each song in the play queue. Specify no IDs to clear"
                             },
                             "current": {
                                 "type": "string",
-                                "description": "The ID of the current playing song."
+                                "description": "The ID of the current playing song. This is required if one or mode IDs is provided"
                             },
                             "position": {
                                 "type": "integer",
