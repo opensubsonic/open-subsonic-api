@@ -24,7 +24,7 @@ Saves the state of the play queue for this user. This includes the tracks in the
 | `position` | No  |  |   | The position in milliseconds within the currently playing song. |
 
 {{< alert color="warning" title="Errata/OpenSubsonic" >}}
-\* In the original Subsonic, despite the claims that `current` is optional, it was in required and **must** be in the list of `id`.
+\* In the original Subsonic, despite the claims that `current` is optional, it was required and **must** be in the list of `id`.
 
 **Note**: For OpenSubsonic servers, `id` is optional. Send a call without any parameters to clear the currently saved queue.
 
