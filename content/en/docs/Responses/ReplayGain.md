@@ -32,6 +32,7 @@ Does not exist.
 | `albumPeak` | `number` | No | **Yes**    | The album peak value. (Must be positive) |
 | `baseGain` | `number` | No | **Yes**    | The base gain value. (In Db) (Ogg Opus Output Gain for example) |
 | `fallbackGain` | `number` | No | **Yes**    | An optional fallback gain that clients should apply when the corresponding gain value is missing. (Can be computed from the tracks or exposed as an user setting.) |
+| `measurementScheme` | `string` | No | **Yes** | The name of the measurement scheme used to calculate gain values. Valid values are 'ReplayGain', 'ReplayGainV2', 'EBUR128'. |
 
 **Note**: If the data is not present the field must be ommited in the answer. (But the replayGain field on [`Child`](../child) must always be present)
 

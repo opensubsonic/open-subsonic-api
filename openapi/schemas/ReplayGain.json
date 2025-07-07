@@ -27,6 +27,10 @@
         "fallbackGain": {
             "type": "number",
             "description": "An optional fallback gain that clients should apply when the corresponding gain value is missing. (Can be computed from the tracks or exposed as an user setting.)"
+        },
+        "measurementScheme": {
+            "type": "string",
+            "description": "The name of the measurement scheme used to calculate gain values. Valid values are 'ReplayGain', 'ReplayGainV2', 'EBUR128'."
         }
     },
     "externalDocs": {
