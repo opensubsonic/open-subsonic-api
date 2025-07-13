@@ -13,7 +13,11 @@ Returns all bookmarks for this user. A bookmark is a position within a certain m
 
 ### Parameters
 
-Takes no extra parameters.
+Takes no extra parameters, unless the server supports the [Music Folder](../../extensions/musicfolder) extension, in which case the following parameter is supported.
+
+| Parameter | Req. | OpenS. | Default | Comment |
+| --- | --- | --- | --- | --- |
+| `musicFolderId` | No | **Yes** |   | Only include bookmarks within the given top-level music folder |
 
 ### Example
 
