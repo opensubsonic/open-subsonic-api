@@ -1,5 +1,5 @@
 ---
-title: "Music Folder
+title: "Music Folder"
 linkTitle: "Music Folder"
 OpenSubsonic:
   - Extension
@@ -15,4 +15,4 @@ When a server supports this extension, it supports the `musicFolderId` parameter
 
 ## Version 1
 
-This version requires servers to support the `musicFolderId` parameter on calls to the following endpoints: [`getGenres`](../../endpoints/getgenres), [`getSimilarSongs2`](../../endpoints/getsimilarsongs2), and [`getTopSongs`](../../endpoints/gettopsongs). When supplied by the client, these calls must only return songs contained within the specified music folder, and only genres for which at least one song is tagged with that genre in the specified music folder.
+This version requires servers to support the `musicFolderId` parameter on calls to the following endpoints: [`getGenres`](../../endpoints/getgenres), [`getSimilarSongs2`](../../endpoints/getsimilarsongs2), [`getTopSongs`](../../endpoints/gettopsongs), [`getArtist`](../../endpoints/getartist), [`getShares`](../../endpoints/getshares), and [`getBookmarks`](../../endpoints/getbookmarks). When supplied by the client, these calls must only return songs contained within the specified music folder, and only genres for which at least one song is tagged with that genre in the specified music folder.
