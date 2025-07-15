@@ -1,0 +1,46 @@
+{
+  "post": {
+    "summary": "Get Transcode Decision",
+    "description": "Returns a transcode decision for a given media file.",
+    "operationId": "getTranscodeDecision",
+    "tags": [
+      "Transcoding"
+    ],
+    "parameters": [
+      {
+        "name": "mediaId",
+        "in": "query",
+        "description": "The ID of the media.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "mediaType",
+        "in": "query",
+        "description": "The type of the media.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": ["song", "podcast"]
+        }
+      }
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../schemas/ClientInfo.json"
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "$ref": "../schemas/TranscodeDecisionResponse.json"
+      }
+    }
+  }
+}

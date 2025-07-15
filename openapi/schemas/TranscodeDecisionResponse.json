@@ -1,0 +1,33 @@
+{
+  "description": "A transcode decision.",
+  "content": {
+    "application/json": {
+      "schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "transcodeDecision": {
+                "$ref": "../schemas/TranscodeDecision.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "application/xml": {
+      "schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "transcodeDecision": {
+                "$ref": "../schemas/TranscodeDecision.json"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "TranscodingProfile",
+  "type": "object",
+  "properties": {
+    "container": {
+      "type": "string"
+    },
+    "audioCodec": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string",
+      "enum": ["http", "hls"]
+    },
+    "maxAudioChannels": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "container",
+    "audioCodec",
+    "protocol"
+  ]
+}

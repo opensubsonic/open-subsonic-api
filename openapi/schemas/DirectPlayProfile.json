@@ -1,0 +1,42 @@
+{
+  "title": "DirectPlayProfile",
+  "type": "object",
+  "properties": {
+    "containers": {
+      "type": "array",
+      "description" : "The list of supported containers. An empty array means any containers.",
+      "items": {
+        "type": "string",
+        "example": "mp4",
+      }
+    },
+    "audioCodecs": {
+      "type": "array",
+      "description" : "The list of supported codecs. An empty array means any codecs.",
+      "items": {
+        "type": "string",
+        "example": "flac"
+      }
+    },
+    "protocols": {
+      "type": "array",
+      "description" : "The list of supported protocols. An empty array means any protocols.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "http",
+          "hls"
+        ],
+        "example": "http"
+      }
+    },
+    "maxAudioChannels": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "containers",
+    "audioCodecs",
+    "protocols"
+  ]
+}

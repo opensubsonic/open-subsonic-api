@@ -1,0 +1,28 @@
+{
+  "title": "Transcoding",
+  "type": "object",
+  "description": "The transcoding extension",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the extension.",
+      "enum": ["transcoding"]
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the extension."
+    },
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The endpoints provided by this extension."
+    }
+  },
+  "required": [
+    "name",
+    "version",
+    "endpoints"
+  ]
+}
