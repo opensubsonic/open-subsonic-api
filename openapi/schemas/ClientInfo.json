@@ -1,0 +1,40 @@
+{
+  "title": "ClientInfo",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "maxAudioBitrate": {
+      "type": "integer"
+    },
+    "maxTranscodingAudioBitrate": {
+      "type": "integer"
+    },
+    "directPlayProfiles": {
+      "type": "array",
+      "items": {
+        "$ref": "./DirectPlayProfile.json"
+      }
+    },
+    "transcodingProfiles": {
+      "type": "array",
+      "items": {
+        "$ref": "./TranscodingProfile.json"
+      }
+    },
+    "codecProfiles": {
+      "type": "array",
+      "items": {
+        "$ref": "./CodecProfile.json"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "platform"
+  ]
+}

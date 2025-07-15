@@ -1,0 +1,44 @@
+{
+  "title": "TranscodeDecision",
+  "type": "object",
+  "properties": {
+    "canDirectPlay": {
+      "type": "boolean"
+    },
+    "canTranscode": {
+      "type": "boolean"
+    },
+    "transcodeReason": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "AudioCodecNotSupported",
+          "AudioBitrateNotSupported",
+          "AudioChannelsNotSupported",
+          "AudioSampleRateNotSupported",
+          "ContainerNotSupported",
+          "ProtocolNotSupported"
+        ]
+      }
+    },
+    "errorReason": {
+      "type": "string",
+      "default": ""
+    },
+    "transcodeUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "sourceStream": {
+      "$ref": "./StreamDetails.json"
+    },
+    "transcodeStream": {
+      "$ref": "./StreamDetails.json"
+    }
+  },
+  "required": [
+    "canDirectPlay",
+    "canTranscode"
+  ]
+}

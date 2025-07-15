@@ -1,0 +1,43 @@
+{
+  "title": "Limitation",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the limitation.",
+      "enum": [
+        "audioChannels",
+        "audioBitrate",
+        "audioProfile",
+        "audioSamplerate",
+        "audioBitdepth"
+      ]
+    },
+    "comparison": {
+      "type": "string",
+      "description": "The comparison operator.",
+      "enum": [
+        "Equals",
+        "NotEquals",
+        "LessThanEqual",
+        "GreaterThanEqual",
+        "EqualsAny",
+        "NotEqualsAny"
+      ]
+    },
+    "value": {
+      "type": "string",
+      "description": "The value to compare against."
+    },
+    "required": {
+      "type": "boolean",
+      "description": "Whether this limitation is required."
+    }
+  },
+  "required": [
+    "name",
+    "comparison",
+    "value",
+    "required"
+  ]
+}
