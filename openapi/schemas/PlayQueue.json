@@ -8,11 +8,11 @@
     "properties": {
         "current": {
             "type": "string",
-            "description": "ID of currently playing track"
+            "description": "ID of currently playing track. This will be provided if one or more entries exists"
         },
         "position": {
             "type": "integer",
-            "description": "Position in milliseconds of currently playing track"
+            "description": "Position in milliseconds of currently playing track. If not provided, treat this value as 0"
         },
         "username": {
             "type": "string",
