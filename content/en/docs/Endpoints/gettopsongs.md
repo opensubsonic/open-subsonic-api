@@ -17,6 +17,7 @@ Returns top songs for the given artist, using data from [last.fm](http://last.fm
 | --- | --- | --- | --- | --- |
 | `artist` | **Yes** |  |   | The artist name. |
 | `count` | No  | |  50  | Max number of songs to return. |
+| `musicFolderId` | No | **Yes** |  | Include only songs from the music folder with the given ID. The [`Music Folder`](../../extensions/musicfolder) extension marks support for this parameter. |
 
 ### Example
 

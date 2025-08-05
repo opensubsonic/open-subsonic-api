@@ -16,6 +16,7 @@ Returns details for an artist, including a list of albums. This method organizes
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `id` | **Yes** |  |    | The artist ID. |
+| `musicFolderId` | No | **Yes** |   | Only include albums within the given top-level music folder |
 
 ### Example
 
