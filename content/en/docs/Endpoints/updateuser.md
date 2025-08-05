@@ -18,7 +18,7 @@ Modifies an existing user on the server.
 | `username` | **Yes** |  |     | The name of the user. |
 | `password` | No  |   |    | The password of the user, either in clear text of hex-encoded (see above). |
 | `email` | No  |   |    | The email address of the user. |
-| `ldapAuthenticated` | No  | |      | Whether the user is authenicated in LDAP. |
+| `ldapAuthenticated` | No  | |      | Whether the user is authenticated in LDAP. |
 | `adminRole` | No  |   |    | Whether the user is administrator. |
 | `settingsRole` | No  |  |     | Whether the user is allowed to change personal settings and password. |
 | `streamRole` | No  |   |    | Whether the user is allowed to play files. |

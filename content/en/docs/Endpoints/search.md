@@ -18,7 +18,7 @@ Returns a listing of files matching the given search criteria. Supports paging t
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `artist` | No  ||       | Artist to search for. |
-| `album` | No  | |      | Album to searh for. |
+| `album` | No  | |      | Album to search for. |
 | `title` | No  | |      | Song title to search for. |
 | `any` | No  |  |     | Searches all fields. |
 | `count` | No  | |  20  | Maximum number of results to return. |

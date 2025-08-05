@@ -22,7 +22,7 @@ Does not exist.
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `disc` | `int` | **Yes** | **Yes**    | The disc numer. |
+| `disc` | `int` | **Yes** | **Yes**    | The disc number. |
 | `title` | `string` | **Yes**  | **Yes**     | The name of the disc. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
