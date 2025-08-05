@@ -106,4 +106,4 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `newestPodcasts` | [`NewestPodcasts`](../../responses/newestpodcasts) | **Yes** |     | The podacsts |
+| `newestPodcasts` | [`NewestPodcasts`](../../responses/newestpodcasts) | **Yes** |     | The podcasts |
