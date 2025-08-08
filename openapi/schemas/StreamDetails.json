@@ -1,0 +1,19 @@
+{
+  "title": "StreamDetails",
+  "type": "object",
+  "properties": {
+    "protocol": { "type": "string", "enum": ["http", "hls"] },
+    "container": { "type": "string" },
+    "codec": { "type": "string" },
+    "audioChannels": { "type": "integer" },
+    "audioBitrate": { "type": "integer" },
+    "audioProfile": { "type": "string" },
+    "audioSamplerate": { "type": "integer" },
+    "audioBitdepth": { "type": "integer" }
+  },
+  "required": [
+    "protocol",
+    "container",
+    "codec"
+  ]
+}

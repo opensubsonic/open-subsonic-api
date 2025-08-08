@@ -1,0 +1,14 @@
+{
+  "title": "TranscodeStream",
+  "type": "object",
+  "properties": {
+    "streamUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL of the transcoded stream."
+    }
+  },
+  "required": [
+    "streamUrl"
+  ]
+}
