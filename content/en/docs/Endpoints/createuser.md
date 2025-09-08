@@ -18,7 +18,7 @@ Creates a new user on the server, using the following parameters:
 | `username` | **Yes** |  |   | The name of the new user. |
 | `password` | **Yes** |  |   | The password of the new user, either in clear text of hex-encoded (see above). |
 | `email` | **Yes** |   |  | The email address of the new user. |
-| `ldapAuthenticated` | No  || false | Whether the user is authenicated in LDAP. |
+| `ldapAuthenticated` | No  || false | Whether the user is authenticated in LDAP. |
 | `adminRole` | No  | |false | Whether the user is administrator. |
 | `settingsRole` | No  | |true | Whether the user is allowed to change personal settings and password. |
 | `streamRole` | No  || true | Whether the user is allowed to play files. |
