@@ -20,7 +20,7 @@ Uses an index instead, as this allows for uniquely identifying play queues which
 | Parameter      | Req.                             | OpenS. | Default | Comment                                                                                                         |
 | -------------- | -------------------------------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------|
 | `id`           | No                               |        |         | ID of a song in the play queue. Use one `id` parameter for each song in the play queue.                         |
-| `currentIndex` | Yes, unless no `id` are provided |        |         | The 0-based index of the current playing track. This must be between 0 and length of the queue - 1 (inclusive). |
+| `currentIndex` | Yes, unless no `id` is provided  |        |         | The 0-based index of the current playing track. This must be between 0 and length of the queue - 1 (inclusive). |
 | `position`     | No                               |        |         | The position in milliseconds within the currently playing song.                                                 |
 
 ### Example

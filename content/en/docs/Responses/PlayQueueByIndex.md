@@ -1,7 +1,6 @@
 ---
 title: "PlayQueueByIndex"
 linkTitle: "PlayQueueByIndex"
-
 description: >
   NowPlayingEntry, with index-based positioning.
 ---
