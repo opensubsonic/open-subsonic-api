@@ -8,7 +8,7 @@
     "properties": {
         "position": {
             "type": "integer",
-            "description": "Bookmark position in seconds"
+            "description": "Bookmark position in milliseconds"
         },
         "username": {
             "type": "string",
