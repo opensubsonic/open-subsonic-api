@@ -4,7 +4,8 @@
         "description": "Returns a cover art image.",
         "operationId": "getCoverArt",
         "tags": [
-            "Media Retrieval"
+            "Media Retrieval",
+            "Clarification"
         ],
         "parameters": [
             {
