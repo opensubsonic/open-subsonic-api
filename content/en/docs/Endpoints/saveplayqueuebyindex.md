@@ -17,11 +17,11 @@ Uses an index instead, as this allows for uniquely identifying play queues which
 
 ### Parameters
 
-| Parameter      | Req. | OpenS. | Default | Comment                                                                                                            |
-| -------------- | ---- | ------ | ------- | -------------------------------------------------------------------------------------------------------------------|
-| `id`           | No   |        |         | ID of a song in the play queue. Use one `id` parameter for each song in the play queue.                            |
-| `currentIndex` | No   |        |         | The 0-based index of the current playing track. This must be between 0 and length of the queue - 1 (inclusive)     |
-| `position`     | No   |        |         | The position in milliseconds within the currently playing song.                                                    |
+| Parameter      | Req.                             | OpenS. | Default | Comment                                                                                                         |
+| -------------- | -------------------------------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------|
+| `id`           | No                               |        |         | ID of a song in the play queue. Use one `id` parameter for each song in the play queue.                         |
+| `currentIndex` | Yes, unless no `id` is provided  |        |         | The 0-based index of the current playing track. This must be between 0 and length of the queue - 1 (inclusive). |
+| `position`     | No                               |        |         | The position in milliseconds within the currently playing song.                                                 |
 
 ### Example
 
@@ -54,4 +54,7 @@ Does not exist
 In this case, `currentIndex` **must not** be set.
 
 If `currentIndex` is not between 0 and length of the queue - 1 (inclusive), the server **must** respond with error code 10.
+`currentIndex` is required **unless** no `id` is provided.
+
+If `position` is empty, servers should treat the position as 0.
 {{< /alert >}}

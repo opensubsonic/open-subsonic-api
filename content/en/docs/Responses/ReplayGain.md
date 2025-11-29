@@ -33,7 +33,7 @@ Does not exist.
 | `baseGain` | `number` | No | **Yes**    | The base gain value. (In Db) (Ogg Opus Output Gain for example) |
 | `fallbackGain` | `number` | No | **Yes**    | An optional fallback gain that clients should apply when the corresponding gain value is missing. (Can be computed from the tracks or exposed as an user setting.) |
 
-**Note**: If the data is not present the field must be ommited in the answer. (But the replayGain field on [`Child`](../child) must always be present)
+**Note**: If the data is not present the field must be omitted in the answer. (But the replayGain field on [`Child`](../child) must always be present)
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type.

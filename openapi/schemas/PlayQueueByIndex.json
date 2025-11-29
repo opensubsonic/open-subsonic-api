@@ -8,11 +8,11 @@
     "properties": {
         "currentIndex": {
             "type": "integer",
-            "description": "index of currently playing track"
+            "description": "Index of currently playing track.  This must be provided if one or more entries exists"
         },
         "position": {
             "type": "integer",
-            "description": "Position in milliseconds of currently playing track"
+            "description": "Position in milliseconds of currently playing track. If not provided, treat this value as 0"
         },
         "username": {
             "type": "string",

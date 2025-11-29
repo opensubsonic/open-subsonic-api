@@ -1,6 +1,10 @@
 ---
 title: "PlayQueue"
 linkTitle: "PlayQueue"
+opensubsonic:
+- Change
+- Clarification
+- Errata
 description: >
   NowPlayingEntry.
 ---
@@ -90,9 +94,15 @@ However, as `child` ids are strings, this is updated to note that the id should 
 
 | Field       | Type                         | Req.    | OpenS. | Details                                             |
 | ----------- | ---------------------------- | ------- | ------ | --------------------------------------------------- |
-| `current`   | `string`                     | No      |        | ID of currently playing track                       |
+| `current`   | `string`                     | No*     |        | ID of currently playing track                       |
 | `position`  | `long`                       | No      |        | Position in milliseconds of currently playing track |
 | `username`  | `string`                     | **Yes** |        | The user this queue belongs to                      |
 | `changed`   | `string`                     | **Yes** |        | Date modified [ISO 8601]                            |
 | `changedBy` | `string`                     | **Yes** |        | Name of client app                                  |
 | `entry`     | Array of [`Child`](../child) | No      |        | The list of songs in the queue                      |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+\* If `entry` exists and is non-empty, OpenSubsonic servers **must** ensure that `current` exists and is a valid id in the list of songs.
+
+If `position` is omitted, clients should treat the position as 0.
+{{< /alert >}}

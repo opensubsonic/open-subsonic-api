@@ -49,16 +49,17 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< alert color="primary" title="OpenSubsonic" >}}
-Errata: In the original spec, `current` is required to be an `int`.
-However, as `child` ids are strings, this is updated to note that the id should be a string to be consistent.
-{{< /alert >}}
-
 | Field          | Type                         | Req.    | OpenS. | Details                                             |
 | -------------- | ---------------------------- | ------- | ------ | --------------------------------------------------- |
-| `currentIndex` | `long`                       | No      |        | The 0-based index of the current playing track      |
+| `currentIndex` | `long`                       | No*     |        | The 0-based index of the current playing track      |
 | `position`     | `long`                       | No      |        | Position in milliseconds of currently playing track |
 | `username`     | `string`                     | **Yes** |        | The user this queue belongs to                      |
 | `changed`      | `string`                     | **Yes** |        | Date modified [ISO 8601]                            |
 | `changedBy`    | `string`                     | **Yes** |        | Name of client app                                  |
 | `entry`        | Array of [`Child`](../child) | No      |        | The list of songs in the queue                      |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+\* If `entry` exists and is non-empty, OpenSubsonic servers **must** ensure that `currentIndex` exists and is a valid index (between 0 and length of the queue - 1, inclusive).
+
+If `position` is omitted, clients should treat the position as 0.
+{{< /alert >}}
