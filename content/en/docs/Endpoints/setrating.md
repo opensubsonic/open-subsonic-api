@@ -18,7 +18,7 @@ Servers implementing the [ratingID3 extension](../Extensions/ratingID3.md) addit
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `id` | **Yes** |   |  | A string which uniquely identifies the file (song) or folder (album/artist) to rate. |
-| `artistId` | No | **Yes** | The ID of an artistID3 to star. Multiple parameters allowed. Supported by servers implementing the ratingID3 extension. | 
+| `artistId` | No | **Yes** | The ID of an artistID3 to star. Multiple parameters allowed. Supported by servers implementing the ratingID3 extension. |
 | `albumId` | No | **Yes** | The ID of an albumID3 to star. Multiple parameters allowed. Supported by servers implementing the ratingID3 extension. |
 | `rating` | **Yes** |  |   | The rating between 1 and 5 (inclusive), or 0 to remove the rating. |
 
