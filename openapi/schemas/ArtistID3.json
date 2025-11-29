@@ -41,6 +41,12 @@
                 "type": "string"
             },
             "description": "The list of all roles this artist has in the library."
+        },
+        "userRating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "The user rating for this artist (0-5)."
         }
     },
     "required": [

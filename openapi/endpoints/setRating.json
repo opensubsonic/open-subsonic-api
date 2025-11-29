@@ -17,6 +17,34 @@
                 }
             },
             {
+                "name": "artistId",
+                "in": "query",
+                "description": "A string which uniquely identifies the artistID3 to rate. Supported by servers implementing the ratingID3 extension.",
+                "required": true,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "style": "form",
+                "explode": true
+            },
+            {
+                "name": "albumId",
+                "in": "query",
+                "description": "A string which uniquely identifies the albumID3 to rate. Supported by servers implementing the ratingID3 extension.",
+                "required": true,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "style": "form",
+                "explode": true
+            },
+            {
                 "name": "rating",
                 "in": "query",
                 "description": "The rating between 1 and 5 (inclusive), or 0 to remove the rating.",
