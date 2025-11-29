@@ -94,7 +94,7 @@ description: >
 | `musicBrainzId`  | `string`                           | No      | **Yes** | The artist MusicBrainzID.                              |
 | `sortName`       | `string`                           | No      | **Yes** | The artist sort name.                                  |
 | `roles`          | Array of `string`                  | No      | **Yes** | The list of all roles this artist has in the library.  |
-| `userRating`     | `int`                              | No      | **Yes** | The user rating of the artist. [1-5]
+| `userRating`     | `int`                              | No      | **Yes** | The user rating of the artist. [1-5]                   |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:

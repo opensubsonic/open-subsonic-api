@@ -11,7 +11,6 @@ description: >
 
 **OpenSubsonic extension name**: `ratingID3` (As returned by [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions))
 
-
 ## Version 1
 
 Supporting this extension means that:
