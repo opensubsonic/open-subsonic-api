@@ -86,6 +86,9 @@
             "name": "Chat"
         },
         {
+            "name": "Transcoding"
+        },
+        {
             "name": "Extension"
         },
         {
@@ -236,6 +239,12 @@
         },
         "/rest/getPlayQueueByIndex": {
             "$ref": "./endpoints/getPlayQueueByIndex.json"
+        },
+        "/rest/getTranscodeDecision": {
+            "$ref": "./endpoints/getTranscodeDecision.json"
+        },
+        "/rest/getTranscodeStream": {
+            "$ref": "./endpoints/getTranscodeStream.json"
         },
         "/rest/getPodcastEpisode": {
             "$ref": "./endpoints/getPodcastEpisode.json"
@@ -937,6 +946,30 @@
             },
             "GetTokenInfoResponse": {
                 "$ref": "./endpoints/tokenInfo/GetTokenInfoResponse.json"
+            },
+            "TranscodeDecision": {
+                "$ref": "./schemas/TranscodeDecision.json"
+            },
+            "Transcoding": {
+                "$ref": "./schemas/Transcoding.json"
+            },
+            "Limitation": {
+                "$ref": "./schemas/Limitation.json"
+            },
+            "CodecProfile": {
+                "$ref": "./schemas/CodecProfile.json"
+            },
+            "TranscodingProfile": {
+                "$ref": "./schemas/TranscodingProfile.json"
+            },
+            "DirectPlayProfile": {
+                "$ref": "./schemas/DirectPlayProfile.json"
+            },
+            "ClientInfo": {
+                "$ref": "./schemas/ClientInfo.json"
+            },
+            "StreamDetails": {
+                "$ref": "./schemas/StreamDetails.json"
             }
         }
     }

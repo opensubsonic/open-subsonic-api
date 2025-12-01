@@ -1,0 +1,75 @@
+{
+  "get": {
+    "summary": "Get Transcoded Stream",
+    "description": "Returns a transcoded media stream. Clients should not try to reconstruct the `transcodeParams`. Instead, they must use the `transcodeParams` provided in the response of the `getTranscodeDecision` endpoint.",
+    "operationId": "getTranscodeStream",
+    "tags": [
+      "Transcoding"
+    ],
+    "parameters": [
+            {
+        "name": "mediaId",
+        "in": "query",
+        "description": "The ID of the media.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "mediaType",
+        "in": "query",
+        "description": "The type of the media.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": ["song", "podcast"]
+        }
+      },
+      {
+        "name": "offset",
+        "in": "query",
+        "description": "The time offset in seconds from which to start transcoding.",
+        "required": false,
+        "schema": {
+          "type": "integer",
+          "default": 0
+        }
+      },
+      {
+        "name": "transcodeParams",
+        "in": "query",
+        "description": "Server-specific transcoding parameters. This should be obtained from the `getTranscodeDecision` endpoint.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "The transcoded media stream.",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - The request was malformed or invalid."
+      },
+      "401": {
+        "description": "Unauthorized - Authentication failed."
+      },
+      "404": {
+        "description": "Not Found - The requested track does not exist."
+      },
+      "500": {
+        "description": "Internal Server Error - The server encountered an error during transcoding."
+      }
+    }
+  }
+}
