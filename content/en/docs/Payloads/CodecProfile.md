@@ -14,7 +14,7 @@ description: >
   "type": "AudioCodec",
   "name": "mp3",
   "limitations": [
-    { "name": "audioBitrate", "comparison": "LessThanEqual", "value": "320000", "required": true }
+    { "name": "audioBitrate", "comparison": "LessThanEqual", "values": ["320000"], "required": true }
   ]
 }
 {{< /tab >}}
