@@ -46,7 +46,7 @@
             "type": "integer",
             "minimum": 1,
             "maximum": 5,
-            "description": "The user rating for this artist (0-5)."
+            "description": "The user rating for this artist (1-5)."
         }
     },
     "required": [

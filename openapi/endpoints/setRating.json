@@ -11,7 +11,7 @@
                 "name": "id",
                 "in": "query",
                 "description": "A string which uniquely identifies the file (song) or folder (album/artist) to rate.",
-                "required": true,
+                "required": false,
                 "schema": {
                     "type": "string"
                 }
@@ -20,7 +20,7 @@
                 "name": "artistId",
                 "in": "query",
                 "description": "A string which uniquely identifies the artistID3 to rate. Supported by servers implementing the ratingID3 extension.",
-                "required": true,
+                "required": false,
                 "schema": {
                     "type": "array",
                     "items": {
@@ -34,7 +34,7 @@
                 "name": "albumId",
                 "in": "query",
                 "description": "A string which uniquely identifies the albumID3 to rate. Supported by servers implementing the ratingID3 extension.",
-                "required": true,
+                "required": false,
                 "schema": {
                     "type": "array",
                     "items": {
