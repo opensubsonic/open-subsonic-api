@@ -38,15 +38,15 @@ description: >
     ],
     "transcodingProfiles": [
     {
-      "containers": "mp3",
-      "audioCodecs": "mp3",
-      "protocols": "http",
+      "container": "mp3",
+      "audioCodec": "mp3",
+      "protocol": "http",
       "maxAudioChannels": 2
     },
     {
-      "containers": "flac",
-      "audioCodecs": "flac",
-      "protocols": "*",
+      "container": "flac",
+      "audioCodec": "flac",
+      "protocol": "hls",
       "maxAudioChannels": 2
     }
   ],
