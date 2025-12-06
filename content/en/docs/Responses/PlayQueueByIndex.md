@@ -2,7 +2,7 @@
 title: "PlayQueueByIndex"
 linkTitle: "PlayQueueByIndex [OS]"
 description: >
-  NowPlayingEntry, with index-based positioning.
+  Play queue with index-based indication of the current song.
 ---
 
 {{< tabpane persist=false >}}

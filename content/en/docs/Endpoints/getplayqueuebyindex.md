@@ -27,7 +27,7 @@ Takes no extra parameters.
 
 ### Result
 
-A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playQueue`](../../responses/playqueue) element on success.
+A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playQueueByIndex`](../../responses/playqueuebyindex) element on success.
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
