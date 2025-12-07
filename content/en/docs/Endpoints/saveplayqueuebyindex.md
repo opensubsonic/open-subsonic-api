@@ -9,7 +9,11 @@ description: >
   Saves the state of the play queue for this user.
 ---
 
-`http://your-server/rest/savePlayQueueByIndex` Since [1.12.0](../../subsonic-versions)
+**OpenSubsonic version**: [1](../../opensubsonic-versions)
+
+**OpenSubsonic extension name** `indexBasedQueue` (As returned by [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions))
+
+`http://your-server/rest/savePlayQueueByIndex`
 
 Saves the state of the play queue for this user. This includes the tracks in the play queue, the currently playing track, and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).
 

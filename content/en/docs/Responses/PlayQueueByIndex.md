@@ -1,8 +1,8 @@
 ---
 title: "PlayQueueByIndex"
-linkTitle: "PlayQueueByIndex"
+linkTitle: "PlayQueueByIndex [OS]"
 description: >
-  NowPlayingEntry, with index-based positioning.
+  Play queue with index-based indication of the current song.
 ---
 
 {{< tabpane persist=false >}}
@@ -59,6 +59,8 @@ Does not exist.
 | `entry`        | Array of [`Child`](../child) | No      |        | The list of songs in the queue                      |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
+This is a new OpenSubsonic response type.
+
 \* If `entry` exists and is non-empty, OpenSubsonic servers **must** ensure that `currentIndex` exists and is a valid index (between 0 and length of the queue - 1, inclusive).
 
 If `position` is omitted, clients should treat the position as 0.

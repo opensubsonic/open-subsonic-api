@@ -1,6 +1,6 @@
 ---
 title: "getPlayQueueByIndex"
-linkTitle: "getPlayQueueByIndex"
+linkTitle: "getPlayQueueByIndex [OS]"
 categories:
   - Bookmarks
 OpenSubsonic:
@@ -9,7 +9,11 @@ description: >
   Returns the state of the play queue for this user.
 ---
 
-`http://your-server/rest/getPlayQueueByIndex` Since [1.12.0](../../subsonic-versions)
+**OpenSubsonic version**: [1](../../opensubsonic-versions)
+
+**OpenSubsonic extension name** `indexBasedQueue` (As returned by [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions))
+
+`http://your-server/rest/getPlayQueueByIndex`
 
 Returns the state of the play queue for this user (as set by `savePlayQueue` or `savePlayQueueByIndex`). This includes the tracks in the play queue, the currently playing track index (0-based), and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).
 
@@ -23,7 +27,7 @@ Takes no extra parameters.
 
 ### Result
 
-A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playQueue`](../../responses/playqueue) element on success.
+A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`playQueueByIndex`](../../responses/playqueuebyindex) element on success.
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
