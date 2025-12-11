@@ -36,8 +36,8 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [LMS - Lightweight Music Server](https://github.com/epoupon/lms) | [Documentation](https://github.com/epoupon/lms/blob/master/SUBSONIC.md)  |
 | [Navidrome](https://www.navidrome.org/)  | [Documentation](https://www.navidrome.org/docs/developers/subsonic-api)  |
 | [Nextcloud Music / ownCloud Music](https://github.com/owncloud/music)  | [Documentation](https://github.com/owncloud/music/wiki/OpenSubsonic-API)   |
-| [Supysonic](https://github.com/spl0k/supysonic) | - |
 | [Qm-Music](https://github.com/chenqimiao/qm-music) | - |
+| [Supysonic](https://github.com/spl0k/supysonic) | - |
 
 ### Clients
 
