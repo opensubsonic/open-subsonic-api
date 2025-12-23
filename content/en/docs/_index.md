@@ -48,6 +48,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)  |   |
 | [Supersonic](https://github.com/dweymouth/supersonic)  |   |
 | [Symfonium](https://symfonium.app/)  | [Documentation](https://support.symfonium.app/t/1178) |
+| [Tempus](https://github.com/eddyizm/tempus)  |  [Documentation](https://eddyizm.github.io/tempus/USAGE.html) |
 
 ## Goals
 
