@@ -43,6 +43,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 
 | Name  | OpenSubsonic documentation  |
 |---|---|
+| [Airdrome](https://github.com/JPGuillemin/Airdrome)  | [Documentation](https://github.com/JPGuillemin/Airdrome#opensubsonic-endpoints) |
 | [Airsonic Refix](https://github.com/tamland/airsonic-refix)  | [Documentation](https://github.com/tamland/airsonic-refix#opensubsonic-support) |
 | [Amperfy](https://github.com/BLeeEZ/amperfy)  |   |
 | [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)  |   |
