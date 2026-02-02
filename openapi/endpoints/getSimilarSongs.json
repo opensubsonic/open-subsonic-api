@@ -4,7 +4,8 @@
         "description": "Returns a random collection of songs from the given artist and similar artists, using data from last.fm. Typically used for artist radio features.",
         "operationId": "getSimilarSongs",
         "tags": [
-            "Browsing"
+            "Browsing",
+            "Clarification"
         ],
         "parameters": [
             {
