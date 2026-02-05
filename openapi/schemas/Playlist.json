@@ -50,6 +50,15 @@
                 "type": "string"
             },
             "description": "A list of allowed usernames"
+        },
+        "readonly": {
+            "type": "boolean",
+            "description": "[OS] If true the playlist cannot be edited by the current user"
+        },
+        "validUntil": {
+            "type": "string",
+            "format": "date-time",
+            "description": "[OS] Date the playlist contents are considered valid until [ISO 8601]"
         }
     },
     "required": [
