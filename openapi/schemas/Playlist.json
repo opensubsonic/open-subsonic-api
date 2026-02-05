@@ -58,7 +58,7 @@
         "validUntil": {
             "type": "string",
             "format": "date-time",
-            "description": "[OS] Date the playlist contents are considered valid until [ISO 8601]"
+            "description": "[OS] Date the playlist contents are considered valid until [ISO 8601]. Empty or absent means no caching guarantee."
         }
     },
     "required": [

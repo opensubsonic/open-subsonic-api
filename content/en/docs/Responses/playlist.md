@@ -63,5 +63,5 @@ New fields are added:
 
 When `readonly` is true, clients should hide or disable UI actions that modify the playlist. This is useful for server-generated playlists like smart playlists, recommendations, or curated system lists. The value should reflect the current authenticated user's access level. When omitted, clients should assume the playlist is editable (`false`).
 
-The `validUntil` field indicates how long the playlist contents can be treated as fresh, inspired by HTTP caching semantics. Clients may use this to determine when to refresh the playlist data.
+The `validUntil` field indicates how long the playlist contents can be treated as fresh, inspired by HTTP caching semantics. Clients may use this to determine when to refresh the playlist data. An empty or absent value indicates no caching guarantee; clients should refresh the playlist data on each access.
 {{< /alert >}}
