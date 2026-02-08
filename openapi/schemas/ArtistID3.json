@@ -14,13 +14,13 @@
             "type": "string",
             "description": "A covertArt id."
         },
-        "artistImageUrl": {
-            "type": "string",
-            "description": "An url to an external image source."
-        },
         "albumCount": {
             "type": "integer",
             "description": "Artist album count."
+        },
+        "artistImageUrl": {
+            "type": "string",
+            "description": "An url to an external image source."
         },
         "starred": {
             "type": "string",

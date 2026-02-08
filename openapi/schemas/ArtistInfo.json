@@ -10,10 +10,6 @@
             "type": "string",
             "description": "Artist musicBrainzId"
         },
-        "lastFmUrl": {
-            "type": "string",
-            "description": "Artist lastFmUrl"
-        },
         "smallImageUrl": {
             "type": "string",
             "description": "Artist smallImageUrl"
@@ -25,6 +21,10 @@
         "largeImageUrl": {
             "type": "string",
             "description": "Artist largeImageUrl"
+        },
+        "lastFmUrl": {
+            "type": "string",
+            "description": "Artist lastFmUrl"
         },
         "similarArtist": {
             "type": "array",
