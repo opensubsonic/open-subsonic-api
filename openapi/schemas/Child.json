@@ -34,10 +34,6 @@
             "type": "integer",
             "description": "The media year."
         },
-        "genre": {
-            "type": "string",
-            "description": "The media genre"
-        },
         "coverArt": {
             "type": "string",
             "description": "The coverArt id."
@@ -54,13 +50,10 @@
             "type": "string",
             "description": "The file suffix of the media."
         },
-        "transcodedContentType": {
+        "starred": {
             "type": "string",
-            "description": "The transcoded mediaType if transcoding should happen."
-        },
-        "transcodedSuffix": {
-            "type": "string",
-            "description": "The file suffix of the transcoded media."
+            "format": "date-time",
+            "description": "Date the media was starred. [ISO 8601]"
         },
         "duration": {
             "type": "integer",
@@ -86,25 +79,14 @@
             "type": "string",
             "description": "The full path of the media."
         },
-        "isVideo": {
-            "type": "boolean",
-            "description": "Media is a video"
-        },
-        "userRating": {
-            "type": "integer",
-            "description": "The user rating of the media [1-5]",
-            "minimum": 1,
-            "maximum": 5
-        },
-        "averageRating": {
-            "type": "number",
-            "description": "The average rating of the media [1.0-5.0]",
-            "minimum": 0,
-            "maximum": 5
-        },
         "playCount": {
             "type": "integer",
             "description": "The play count."
+        },
+        "played": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the album was last played. [ISO 8601]"
         },
         "discNumber": {
             "type": "integer",
@@ -114,11 +96,6 @@
             "type": "string",
             "format": "date-time",
             "description": "Date the media was created. [ISO 8601]"
-        },
-        "starred": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Date the media was starred. [ISO 8601]"
         },
         "albumId": {
             "type": "string",
@@ -134,22 +111,9 @@
         "mediaType": {
             "$ref": "./MediaType.json"
         },
-        "bookmarkPosition": {
-            "type": "integer",
-            "description": "The bookmark position in seconds"
-        },
-        "originalWidth": {
-            "type": "integer",
-            "description": "The video original Width"
-        },
-        "originalHeight": {
-            "type": "integer",
-            "description": "The video original Height"
-        },
-        "played": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Date the album was last played. [ISO 8601]"
+        "isVideo": {
+            "type": "boolean",
+            "description": "Media is a video"
         },
         "bpm": {
             "type": "integer",
@@ -170,7 +134,7 @@
         "isrc": {
             "type": "array",
             "description": "The track ISRC(s).",
-            "example" : [
+            "example": [
                 "USSM18300073",
                 "DELV42300297"
             ],
@@ -225,12 +189,52 @@
             },
             "description": "The list of all moods of the song."
         },
-        "replayGain": {
-            "allOf": [{"$ref": "./ReplayGain.json"}],
-            "description": "The replay gain data of the song."
-        },
         "explicitStatus": {
             "$ref": "./ExplicitStatus.json"
+        },
+        "replayGain": {
+            "allOf": [
+                {
+                    "$ref": "./ReplayGain.json"
+                }
+            ],
+            "description": "The replay gain data of the song."
+        },
+        "genre": {
+            "type": "string",
+            "description": "The media genre"
+        },
+        "transcodedContentType": {
+            "type": "string",
+            "description": "The transcoded mediaType if transcoding should happen."
+        },
+        "transcodedSuffix": {
+            "type": "string",
+            "description": "The file suffix of the transcoded media."
+        },
+        "userRating": {
+            "type": "integer",
+            "description": "The user rating of the media [1-5]",
+            "minimum": 1,
+            "maximum": 5
+        },
+        "averageRating": {
+            "type": "number",
+            "description": "The average rating of the media [1.0-5.0]",
+            "minimum": 0,
+            "maximum": 5
+        },
+        "bookmarkPosition": {
+            "type": "integer",
+            "description": "The bookmark position in seconds"
+        },
+        "originalWidth": {
+            "type": "integer",
+            "description": "The video original Width"
+        },
+        "originalHeight": {
+            "type": "integer",
+            "description": "The video original Height"
         }
     },
     "required": [

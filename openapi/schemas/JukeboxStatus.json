@@ -14,16 +14,16 @@
             "type": "boolean",
             "description": "Whether the queue is currently playing"
         },
+        "position": {
+            "type": "integer",
+            "description": "The current position of the track in seconds"
+        },
         "volume": {
             "type": "integer",
             "description": "Volume, in a range of [0.0, 1.0]",
             "format": "float",
             "minimum": 0.0,
             "maximum": 1.0
-        },
-        "position": {
-            "type": "integer",
-            "description": "The current position of the track in seconds"
         }
     },
     "required": [

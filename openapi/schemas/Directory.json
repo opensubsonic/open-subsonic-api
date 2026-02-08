@@ -10,13 +10,20 @@
             "type": "string",
             "description": "The id"
         },
-        "parent": {
-            "type": "string",
-            "description": "Parent item"
-        },
         "name": {
             "type": "string",
             "description": "The directory name"
+        },
+        "child": {
+            "type": "array",
+            "items": {
+                "$ref": "./Child.json"
+            },
+            "description": "The directory content"
+        },
+        "parent": {
+            "type": "string",
+            "description": "Parent item"
         },
         "starred": {
             "type": "string",
@@ -38,13 +45,6 @@
         "playCount": {
             "type": "integer",
             "description": "The play count"
-        },
-        "child": {
-            "type": "array",
-            "items": {
-                "$ref": "./Child.json"
-            },
-            "description": "The directory content"
         }
     },
     "required": [

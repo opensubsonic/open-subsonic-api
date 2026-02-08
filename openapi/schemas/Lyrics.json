@@ -6,10 +6,6 @@
         "url": "https://opensubsonic.netlify.app/docs/responses/lyrics/"
     },
     "properties": {
-        "value": {
-            "type": "string",
-            "description": "The lyrics"
-        },
         "artist": {
             "type": "string",
             "description": "The artist name"
@@ -17,6 +13,10 @@
         "title": {
             "type": "string",
             "description": "The song title"
+        },
+        "value": {
+            "type": "string",
+            "description": "The lyrics"
         }
     },
     "required": [
