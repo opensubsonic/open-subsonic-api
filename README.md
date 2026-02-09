@@ -1,6 +1,7 @@
 # OpenSubsonic Website
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/55c14fbc-7240-4dc0-9092-3cd442400473/deploy-status)](https://app.netlify.com/sites/opensubsonic/deploys)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 This is the source code for the OpenSubsonic documentation website. It is built with [Hugo](https://gohugo.io) and the [Docsy][] theme. 
 
