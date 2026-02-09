@@ -65,5 +65,7 @@ description: >
 | `starred` | `string` | No  |     | Starred date [ISO 8601] |
 | `userRating` | `int` | No  |     | The user rating [1-5] |
 | `averageRating` | `number` | No  |     | The average rating [1.0-5.0] |
-| `playCount` | `long` | No  |     | The play count |
+| `playCount` | `long` | No  |     | Item play count (Deprecated in OS) |
+| `totalPlayCount` | `long` | No | **Yes** | Item play count for all users |
+| `userPlayCount` | `long` | No | **Yes** | Item play count for your user |
 | `child` | Array of [`Child`](../child) | No |     | The directory content |

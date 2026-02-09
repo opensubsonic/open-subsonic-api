@@ -1,6 +1,6 @@
 ---
 title: "search2"
-linkTitle: "search2"
+linkTitle: "search2 [OS]"
 categories:
 - Searching
 description: >
@@ -65,6 +65,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "created": "2021-07-22T02:09:31+00:00",
           "duration": 4248,
           "playCount": 0,
+          "totalPlayCount": 0,
+          "userPlayCount": 0,
           "artistId": "100000036",
           "artist": "Comfort Fit",
           "year": 2005,
@@ -93,6 +95,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "channelCount": 2,
           "path": "The New Deal/Live at The Casbah - 2005-04-29/04 - \"polar expedition\".flac",
           "playCount": 8,
+          "totalPlayCount": 8,
+          "userPlayCount": 1,
           "discNumber": 1,
           "created": "2023-03-14T17:51:22.112827504Z",
           "albumId": "e8a0685e3f3ec6f251649af2b58b8617",
