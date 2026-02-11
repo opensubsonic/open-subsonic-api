@@ -221,7 +221,7 @@
         "averageRating": {
             "type": "number",
             "description": "The average rating of the media [1.0-5.0]",
-            "minimum": 0,
+            "minimum": 1,
             "maximum": 5
         },
         "bookmarkPosition": {
