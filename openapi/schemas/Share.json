@@ -32,7 +32,7 @@
             "items": {
                 "$ref": "./Child.json"
             },
-            "description": "A list of share"
+            "description": "A list of shares"
         },
         "expires": {
             "type": "string",

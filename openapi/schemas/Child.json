@@ -86,7 +86,7 @@
         "played": {
             "type": "string",
             "format": "date-time",
-            "description": "Date the album was last played. [ISO 8601]"
+            "description": "Date the media was last played. [ISO 8601]"
         },
         "discNumber": {
             "type": "integer",
