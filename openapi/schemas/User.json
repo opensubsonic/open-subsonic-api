@@ -17,6 +17,10 @@
             "type": "string",
             "description": "Username"
         },
+        "email": {
+            "type": "string",
+            "description": "The user's email address"
+        },
         "scrobblingEnabled": {
             "type": "boolean",
             "description": "Scrobbling enabled"
