@@ -10,14 +10,14 @@
             "type": "string",
             "description": "Artist name"
         },
-        "artistImageUrl": {
-            "type": "string",
-            "description": "Artist image url"
-        },
         "starred": {
             "type": "string",
             "format": "date-time",
             "description": "Artist starred date [ISO 8601]"
+        },
+        "artistImageUrl": {
+            "type": "string",
+            "description": "Artist image url"
         },
         "userRating": {
             "type": "integer",

@@ -10,10 +10,6 @@
             "type": "string",
             "description": "Album musicBrainzId"
         },
-        "lastFmUrl": {
-            "type": "string",
-            "description": "Album lastFmUrl"
-        },
         "smallImageUrl": {
             "type": "string",
             "description": "Album smallImageUrl"
@@ -25,6 +21,10 @@
         "largeImageUrl": {
             "type": "string",
             "description": "Album largeImageUrl"
+        },
+        "lastFmUrl": {
+            "type": "string",
+            "description": "Album lastFmUrl"
         }
     },
     "externalDocs": {

@@ -56,6 +56,7 @@ description: >
 | Field                 | Type           | Req.    | OpenS. | Details                                      |
 | --------------------- | -------------- | ------- | ------ | -------------------------------------------- |
 | `username`            | `string`       | **Yes** |        | Username                                     |
+| `email`               | `string`       | No      |        | The user's email address                     |
 | `scrobblingEnabled`   | `boolean`      | **Yes** |        | Whether scrobling is enabled for the user    |
 | `maxBitRate`          | `int`          | No      |        |                                              |
 | `adminRole`           | `boolean`      | **Yes** |        | Whether the user is an admin                 |
