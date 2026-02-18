@@ -122,7 +122,12 @@ description: >
     "trackPeak": 9.2,
     "albumPeak": 9,
     "baseGain": 0
-  }
+  },
+  "work": "Symphony No. 5 in C minor, Op. 67",
+  "movementName": "Andante con moto",
+  "movementNumber": 2,
+  "movementCount": 4,
+  "musicBrainzWorkId": "d03bff61-26fc-301b-98ac-4d8e85771cbc"
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
@@ -210,6 +215,11 @@ description: >
 | `moods` | Array of `string` | No | **Yes**  | The list of all moods of the song. |
 | `replayGain` | [`ReplayGain`](../replaygain) | No | **Yes**  | The replaygain data of the song. |
 | `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit", "clean" or "". (For songs extracted from tags "ITUNESADVISORY": 1 = explicit, 2 = clean, MP4 "rtng": 1 or 4 = explicit, 2 = clean. See [`albumID3`](../albumid3) for albums) |
+| `work` | `string` | No |  **Yes**   | The work name of the song. |
+| `movementName` | `string` | No |  **Yes**   | The movement name of the song. |
+| `movementNumber` | `int` | No |  **Yes**   | The movement number of the song within the work. |
+| `movementCount` | `int` | No |  **Yes**   | The total number of movements in the work. |
+| `musicBrainzWorkId` | `string` | No |  **Yes**   | The MusicBrainz Work ID. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
@@ -230,6 +240,11 @@ New fields are added:
 - `moods`
 - `replayGain`
 - `explicitStatus`
+- `work`
+- `movementName`
+- `movementNumber`
+- `movementCount`
+- `musicBrainzWorkId`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 

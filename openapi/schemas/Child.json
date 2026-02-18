@@ -231,6 +231,26 @@
         },
         "explicitStatus": {
             "$ref": "./ExplicitStatus.json"
+        },
+        "work": {
+            "type": "string",
+            "description": "The work name of the song."
+        },
+        "movementName": {
+            "type": "string",
+            "description": "The movement name of the song."
+        },
+        "movementNumber": {
+            "type": "integer",
+            "description": "The movement number of the song within the work."
+        },
+        "movementCount": {
+            "type": "integer",
+            "description": "The total number of movements in the work."
+        },
+        "musicBrainzWorkId": {
+            "type": "string",
+            "description": "The MusicBrainz Work ID."
         }
     },
     "required": [
