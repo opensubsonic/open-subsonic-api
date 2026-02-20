@@ -231,6 +231,25 @@
         },
         "explicitStatus": {
             "$ref": "./ExplicitStatus.json"
+        },
+        "works": {
+            "type": "array",
+            "items": {
+                "$ref": "./Work.json"
+            },
+            "description": "The list of all works of the song."
+        },
+        "movementName": {
+            "type": "string",
+            "description": "The movement name of the song."
+        },
+        "movementNumber": {
+            "type": "integer",
+            "description": "The movement number of the song within the work."
+        },
+        "movementCount": {
+            "type": "integer",
+            "description": "The total number of movements in the work."
         }
     },
     "required": [
