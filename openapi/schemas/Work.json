@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "A work for a song.",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The work name."
+        },
+        "musicBrainzId": {
+            "type": "string",
+            "description": "The MusicBrainz Work ID."
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "externalDocs": {
+        "description": "Work",
+        "url": "https://opensubsonic.netlify.app/docs/responses/work/"
+    }
+}
