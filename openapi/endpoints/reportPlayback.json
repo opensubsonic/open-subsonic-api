@@ -1,0 +1,173 @@
+{
+    "get": {
+        "summary": "Reports playback timeline state for a song.",
+        "description": "OpenSubsonic extension name `playbackReport` (As returned by `getOpenSubsonicExtensions`). Reports playback timeline state for a song.",
+        "operationId": "reportPlayback",
+        "tags": [
+            "Media Annotation",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "mediaId",
+                "in": "query",
+                "description": "The ID of the media.",
+                "required": true,
+                "schema": {
+                "type": "string"
+                }
+            },
+            {
+                "name": "mediaType",
+                "in": "query",
+                "description": "The type of the media.",
+                "required": true,
+                "schema": {
+                "type": "string",
+                "enum": ["song", "podcast"]
+                }
+            },
+            {
+                "name": "positionMs",
+                "in": "query",
+                "description": "The playback position in milliseconds.",
+                "required": true,
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            {
+                "name": "state",
+                "in": "query",
+                "description": "Playback state.",
+                "required": true,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "starting",
+                        "playing",
+                        "paused",
+                        "stopped"
+                    ]
+                }
+            },
+            {
+                "name": "playbackRate",
+                "in": "query",
+                "description": "Playback speed multiplier.",
+                "required": false,
+                "schema": {
+                    "type": "number",
+                    "format": "float",
+                    "default": 1.0
+                }
+            },
+            {
+                "name": "ignoreScrobble",
+                "in": "query",
+                "description": "If true, server should only update now-playing display/state and should not trigger scrobble/playcount side effects.",
+                "required": false,
+                "schema": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "404": {
+                "description": "Extension not supported."
+            }
+        },
+        "externalDocs": {
+            "description": "reportPlayback",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/reportplayback/"
+        }
+    },
+    "post": {
+        "summary": "Reports playback timeline state for a song.",
+        "description": "OpenSubsonic extension name `playbackReport` (As returned by `getOpenSubsonicExtensions`). Reports playback timeline state for a song.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postReportPlayback",
+        "tags": [
+            "Media Annotation",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "mediaId": {
+                                "type": "string",
+                                "description": "TThe ID of the media."
+                            },
+                            "mediaType": {
+                                "type": "string",
+                                "description": "The type of the media.",
+                                "enum": [
+                                    "song",
+                                    "podcast"
+                                ]
+                            },
+                            "positionMs": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "description": "The playback position in milliseconds."
+                            },
+                            "state": {
+                                "type": "string",
+                                "description": "Playback state.",
+                                "enum": [
+                                    "starting",
+                                    "playing",
+                                    "paused",
+                                    "stopped"
+                                ]
+                            },
+                            "playbackRate": {
+                                "type": "number",
+                                "format": "float",
+                                "default": 1.0,
+                                "description": "Playback speed multiplier."
+                            },
+                            "ignoreScrobble": {
+                                "type": "boolean",
+                                "default": false,
+                                "description": "If true, server should only update now-playing display/state and should not trigger scrobble/playcount side effects."
+                            }
+                        },
+                        "required": [
+                            "mediaId",
+                            "mediaType",
+                            "positionMs",
+                            "state"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "404": {
+                "description": "Extension not supported."
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "reportPlayback",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/reportplayback/"
+        }
+    }
+}
