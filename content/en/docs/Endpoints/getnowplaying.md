@@ -1,6 +1,8 @@
 ---
 title: "getNowPlaying"
-linkTitle: "getNowPlaying"
+linkTitle: "getNowPlaying [OS]"
+OpenSubsonic:
+  - Change
 categories:
 - Lists
 description: >
@@ -63,7 +65,10 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "path": "Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3",
           "username": "user",
           "minutesAgo": 0,
-          "playerId": 0
+          "playerId": 0,
+          "state": "playing",
+          "positionMs": 120000,
+          "playbackRate": 1.0,
         }
       ]
     }
@@ -117,3 +122,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `nowPlaying` | [`nowPlaying`](../../responses/nowplaying) | **Yes** |     | The now playing content |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+When the server supports extension `playbackReport`, entries can include `state`, `positionMs`, and `playbackRate`.
+{{< /alert >}}
