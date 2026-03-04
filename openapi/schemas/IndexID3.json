@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "description": "An indexed artist list by ID3 tags.",
+    "externalDocs": {
+        "description": "IndexID3",
+        "url": "https://opensubsonic.netlify.app/docs/responses/indexid3/"
+    },
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Index name"
+        },
+        "artist": {
+            "type": "array",
+            "items": {
+                "$ref": "./ArtistID3.json"
+            },
+            "description": "Artist list"
+        }
+    },
+    "required": [
+        "name"
+    ]
+}
