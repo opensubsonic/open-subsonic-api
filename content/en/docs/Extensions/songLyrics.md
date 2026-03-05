@@ -33,6 +33,8 @@ Adds:
 
 All new fields are gated behind `enhanced=true` — without it, the response is identical to version 1.
 
+Servers that support Version 2 should advertise `songLyrics` versions `[1, 2]` via [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions).
+
 This extension requires the following endpoints:
 
 - [`getLyricsBySongId`](../../endpoints/getlyricsbysongid): Fetch structured song lyrics by id (with optional `enhanced` parameter)
