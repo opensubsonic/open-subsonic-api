@@ -18,17 +18,18 @@
             "type": "string",
             "description": "Artist name."
         },
-        "artistId": {
-            "type": "string",
-            "description": "The id of the artist"
+        "year": {
+            "type": "integer",
+            "description": "The album year"
         },
         "coverArt": {
             "type": "string",
             "description": "A covertArt id."
         },
-        "songCount": {
-            "type": "integer",
-            "description": "Number of songs"
+        "starred": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the album was starred. [ISO 8601]"
         },
         "duration": {
             "type": "integer",
@@ -38,23 +39,22 @@
             "type": "integer",
             "description": "Number of play of the album"
         },
+        "genre": {
+            "type": "string",
+            "description": "The album genre"
+        },
         "created": {
             "type": "string",
             "format": "date-time",
             "description": "Date the album was added. [ISO 8601]"
         },
-        "starred": {
+        "artistId": {
             "type": "string",
-            "format": "date-time",
-            "description": "Date the album was added. [ISO 8601]"
+            "description": "The id of the artist"
         },
-        "year": {
+        "songCount": {
             "type": "integer",
-            "description": "The album year"
-        },
-        "genre": {
-            "type": "string",
-            "description": "The album genre"
+            "description": "Number of songs"
         },
         "played": {
             "type": "string",
@@ -115,11 +115,19 @@
             "description": "The album sort name."
         },
         "originalReleaseDate": {
-            "allOf": [{"$ref": "./ItemDate.json"}],
+            "allOf": [
+                {
+                    "$ref": "./ItemDate.json"
+                }
+            ],
             "description": "Date the album was originally released."
         },
         "releaseDate": {
-            "allOf": [{"$ref": "./ItemDate.json"}],
+            "allOf": [
+                {
+                    "$ref": "./ItemDate.json"
+                }
+            ],
             "description": "Date the specific edition of the album was released. Note: for files using ID3 tags, releaseDate should generally be read from the TDRL tag. Servers that use a different source for this field should document the behavior."
         },
         "isCompilation": {

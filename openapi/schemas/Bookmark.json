@@ -6,6 +6,14 @@
         "url": "https://opensubsonic.netlify.app/docs/responses/bookmark/"
     },
     "properties": {
+        "entry": {
+            "allOf": [
+                {
+                    "$ref": "./Child.json"
+                }
+            ],
+            "description": "The bookmark file"
+        },
         "position": {
             "type": "integer",
             "description": "Bookmark position in milliseconds"
@@ -27,10 +35,6 @@
             "type": "string",
             "format": "date-time",
             "description": "Bookmark last updated date [ISO 8601]"
-        },
-        "entry": {
-            "allOf": [{"$ref": "./Child.json"}],
-            "description": "The bookmark file"
         }
     },
     "required": [
