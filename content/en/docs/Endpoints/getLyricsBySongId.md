@@ -20,9 +20,10 @@ The lyrics can come from embedded tags (`SYLT`/`USLT`), LRC file/text file, or a
 
 ### Parameters
 
-| Parameter | Req.    | OpenS.  | Default | Comment       |
-| --------- | ------- | ------- | ------- | ------------- |
-| `id`      | **Yes** | **Yes** |         | The track ID. |
+| Parameter  | Req.    | OpenS.  | Default | Comment                                                                                                                                                |
+| ---------- | ------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `id`       | **Yes** | **Yes** |         | The track ID.                                                                                                                                          |
+| `enhanced` | No      | **Yes** | `false` | When `true`, the response includes [`cueLine`](../../responses/cueline) arrays and non-main [`kind`](../../responses/structuredlyrics) tracks (translations, pronunciations). When `false` or omitted, only `kind="main"` entries are returned with no `cueLine` data. Added in [`songLyrics`](../../extensions/songlyrics) version 2. |
 
 {{< alert color="warning" title="Special notes about the lang field" >}}
 Ideally, the server will return `lang` as an ISO 639 (2/3) code.
@@ -40,6 +41,8 @@ Clients should treat `xxx` as not having a specified language (equivalent to the
 ### Result
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`lyricsList`](../../responses/lyricslist/)
+
+#### Version 1 (default)
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -118,6 +121,196 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
+#### Version 2 (`enhanced=true`)
+
+When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, and additional tracks such as translations and pronunciations.
+
+{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?id=456&enhanced=true&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "subsonic-response": {
+    "status": "ok",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonic": true,
+    "lyricsList": {
+      "structuredLyrics": [
+        {
+          "kind": "main",
+          "lang": "ko",
+          "synced": true,
+          "line": [
+            { "start": 2747, "value": "눈을 뜬 순간" },
+            { "start": 6214, "value": "모든 게 달라졌어" }
+          ],
+          "cueLine": [
+            {
+              "index": 0,
+              "start": 2747,
+              "end": 6214,
+              "value": "눈을 뜬 순간",
+              "cue": [
+                { "start": 2747, "end": 3018, "value": "눈" },
+                { "start": 3018, "end": 3179, "value": "을" },
+                { "start": 3179, "end": 3582, "value": " " },
+                { "start": 3582, "end": 4100, "value": "뜬" },
+                { "start": 4100, "end": 4500, "value": " " },
+                { "start": 4500, "end": 5200, "value": "순" },
+                { "start": 5200, "end": 6214, "value": "간" }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "translation",
+          "lang": "eng",
+          "synced": true,
+          "line": [
+            { "start": 2747, "value": "The moment I opened my eyes" },
+            { "start": 6214, "value": "Everything had changed" }
+          ]
+        },
+        {
+          "kind": "pronunciation",
+          "lang": "ko-Latn",
+          "synced": true,
+          "line": [
+            { "start": 2747, "value": "nuneul tteun sungan" },
+            { "start": 6214, "value": "modeun ge dallajyeosseo" }
+          ],
+          "cueLine": [
+            {
+              "index": 0,
+              "start": 2747,
+              "end": 6214,
+              "cue": [
+                { "start": 2747, "end": 3179, "value": "nuneul" },
+                { "start": 3582, "end": 4100, "value": "tteun" },
+                { "start": 4500, "end": 6214, "value": "sungan" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<subsonic-response status="ok" version="1.16.1" type="AwesomeServerName" serverVersion="0.1.3 (tag)" openSubsonic="true">
+  <lyricsList>
+    <structuredLyrics kind="main" lang="ko" synced="true">
+      <line start="2747">눈을 뜬 순간</line>
+      <line start="6214">모든 게 달라졌어</line>
+      <cueLine index="0" start="2747" end="6214" value="눈을 뜬 순간">
+        <cue start="2747" end="3018">눈</cue>
+        <cue start="3018" end="3179">을</cue>
+        <cue start="3179" end="3582"> </cue>
+        <cue start="3582" end="4100">뜬</cue>
+        <cue start="4100" end="4500"> </cue>
+        <cue start="4500" end="5200">순</cue>
+        <cue start="5200" end="6214">간</cue>
+      </cueLine>
+    </structuredLyrics>
+    <structuredLyrics kind="translation" lang="eng" synced="true">
+      <line start="2747">The moment I opened my eyes</line>
+      <line start="6214">Everything had changed</line>
+    </structuredLyrics>
+    <structuredLyrics kind="pronunciation" lang="ko-Latn" synced="true">
+      <line start="2747">nuneul tteun sungan</line>
+      <line start="6214">modeun ge dallajyeosseo</line>
+      <cueLine index="0" start="2747" end="6214">
+        <cue start="2747" end="3179">nuneul</cue>
+        <cue start="3582" end="4100">tteun</cue>
+        <cue start="4500" end="6214">sungan</cue>
+      </cueLine>
+    </structuredLyrics>
+  </lyricsList>
+</subsonic-response>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
+##### Example with background vocals (role on cueLine)
+
+When a line contains both main vocals and background vocals, the server splits them into separate cueLines with the same `index`. The main vocals cueLine (empty/omitted `role`) **must** come first:
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "cueLine": [
+    {
+      "index": 0,
+      "start": 1000,
+      "end": 3000,
+      "value": "Hello echo",
+      "cue": [
+        { "start": 1000, "end": 1400, "value": "He" },
+        { "start": 1400, "end": 1800, "value": "llo" }
+      ]
+    },
+    {
+      "index": 0,
+      "start": 1000,
+      "end": 3000,
+      "value": "Hello echo",
+      "role": "bg",
+      "cue": [
+        { "start": 2000, "end": 2500, "value": "echo" }
+      ]
+    }
+  ]
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<cueLine index="0" start="1000" end="3000" value="Hello echo">
+  <cue start="1000" end="1400">He</cue>
+  <cue start="1400" end="1800">llo</cue>
+</cueLine>
+<cueLine index="0" start="1000" end="3000" value="Hello echo" role="bg">
+  <cue start="2000" end="2500">echo</cue>
+</cueLine>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Response fields
+
 | Field        | Type                          | Req.    | OpenS.  | Details                   |
 | ------------ | ----------------------------- | ------- | ------- | ------------------------- |
 | `lyricsList` | [`lyricsList`](../../responses/lyricslist) | **Yes** | **Yes** | List of structured lyrics |
+
+### Implementation notes
+
+{{< alert color="warning" title="Backward compatibility" >}}
+Without `enhanced=true`, the response is identical to version 1:
+
+- Only `kind="main"` entries are returned (the `kind` field itself is omitted)
+- No `cueLine` arrays are included
+- The existing `line` array is always present and unchanged
+- `cueLine` is a **parallel** structure, not a replacement for `line`
+
+Servers that don't support TTML or word-level timing simply never include these fields. Clients that don't support karaoke display simply ignore them.
+{{< /alert >}}
+
+{{< alert color="primary" title="cueLine behavior" >}}
+
+- `cueLine` data is only meaningful when `synced=true`. Servers **must not** emit `cueLine` arrays for unsynced lyrics.
+- Within a `cueLine`, `cue.end` **must** be either present on **all** cues or **none** (all-or-nothing). When the source provides partial end times, servers **must** fill missing values. When no cues have end times, `end` is omitted from all cues.
+- When multiple cueLines share the same `index`, the main vocals cueLine (empty/omitted `role`) **must** come first.
+- Source data may contain overlapping cue intervals. Servers **should** normalize overlaps where possible. Clients should handle overlapping intervals gracefully.
+- Cues where `start == end` (zero-duration) may occur. Clients should treat these as instantaneous markers.
+- A pronunciation `structuredLyrics` entry may have a different number of cues per line than the main entry. Clients should not assume 1:1 cue correspondence between `kind` tracks.
+- A translation `structuredLyrics` entry may have fewer `line` entries than the main entry. Clients should not assume line arrays are the same length across `kind` tracks.
+- For right-to-left scripts (Arabic, Hebrew), cues are in logical reading order. Clients are responsible for bidi rendering.
+
+{{< /alert >}}
