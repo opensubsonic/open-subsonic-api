@@ -1,0 +1,41 @@
+{
+	"type": "object",
+	"description": "Word/syllable-level timing data for a lyrics line",
+	"externalDocs": {
+		"description": "CueLine",
+		"url": "https://opensubsonic.netlify.app/docs/responses/cueline/"
+	},
+	"properties": {
+		"index": {
+			"type": "integer",
+			"description": "Zero-based index into the parent line array this cueLine corresponds to"
+		},
+		"start": {
+			"type": "integer",
+			"description": "Start time in milliseconds (may differ from the parent line if cues are more precise)"
+		},
+		"end": {
+			"type": "integer",
+			"description": "End time in milliseconds"
+		},
+		"value": {
+			"type": "string",
+			"description": "Full text of the line (for validation/fallback)"
+		},
+		"role": {
+			"type": "string",
+			"description": "Semantic role of the cues in this cueLine. Omitted or empty for main vocals. Values: bg (background vocals), voice1 through voiceN (individual voice parts, N is any positive integer with no upper bound), group (group/chorus vocals). When multiple cueLines share the same index, the main vocals cueLine must come first"
+		},
+		"cue": {
+			"type": "array",
+			"description": "Ordered list of word/syllable cues",
+			"items": {
+				"$ref": "./Cue.json"
+			}
+		}
+	},
+	"required": [
+		"index",
+		"cue"
+	]
+}

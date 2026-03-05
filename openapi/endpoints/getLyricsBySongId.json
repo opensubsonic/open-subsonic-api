@@ -16,6 +16,16 @@
                 "schema": {
                     "type": "string"
                 }
+            },
+            {
+                "name": "enhanced",
+                "in": "query",
+                "description": "When true, the response includes cueLine arrays with word/syllable-level timing data and non-main kind tracks (translations, pronunciations). When false or omitted, only kind=main entries are returned with no cueLine data.",
+                "required": false,
+                "schema": {
+                    "type": "boolean",
+                    "default": false
+                }
             }
         ],
         "responses": {
@@ -56,6 +66,11 @@
                             "id": {
                                 "type": "string",
                                 "description": "The track ID."
+                            },
+                            "enhanced": {
+                                "type": "boolean",
+                                "default": false,
+                                "description": "When true, the response includes cueLine arrays with word/syllable-level timing data and non-main kind tracks (translations, pronunciations). When false or omitted, only kind=main entries are returned with no cueLine data."
                             }
                         },
                         "required": [
@@ -65,9 +80,7 @@
                 }
             }
         },
-        "parameters": [
-
-        ],
+        "parameters": [],
         "responses": {
             "200": {
                 "description": "Successful or failed response",
