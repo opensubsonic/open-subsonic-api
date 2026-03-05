@@ -32,6 +32,22 @@
         "offset": {
             "type": "number",
             "description": "The offset to apply to all lyrics, in milliseconds. Positive means lyrics appear sooner, negative means later. If not included, the offset must be assumed to be 0"
+        },
+        "kind": {
+            "type": "string",
+            "description": "The role of this lyrics track. One of: main (primary vocals, default if omitted), translation (a translation of the main lyrics into another language), pronunciation (a phonetic/romanized rendering, e.g. romaji for Japanese, pinyin for Chinese). Only returned when enhanced=true",
+            "enum": [
+                "main",
+                "translation",
+                "pronunciation"
+            ]
+        },
+        "cueLine": {
+            "type": "array",
+            "description": "Word/syllable-level timing data. Each cueLine corresponds to a line by its index field. Only returned when enhanced=true and synced is true",
+            "items": {
+                "$ref": "./CueLine.json"
+            }
         }
     },
     "required": [

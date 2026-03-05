@@ -653,6 +653,12 @@
             "Line": {
                 "$ref": "./schemas/Line.json"
             },
+            "Cue": {
+                "$ref": "./schemas/Cue.json"
+            },
+            "CueLine": {
+                "$ref": "./schemas/CueLine.json"
+            },
             "StructuredLyrics": {
                 "$ref": "./schemas/StructuredLyrics.json"
             },
