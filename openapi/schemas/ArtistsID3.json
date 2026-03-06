@@ -14,7 +14,7 @@
             "type": "array",
             "description": "Index list",
             "items": {
-                "$ref": "./ArtistID3.json"
+                "$ref": "./IndexID3.json"
             }
         }
     }
