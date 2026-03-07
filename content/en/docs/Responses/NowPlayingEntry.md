@@ -36,7 +36,10 @@ description: >
   "path": "Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3",
   "username": "user",
   "minutesAgo": 0,
-  "playerId": 0
+  "playerId": 0,
+  "state": "playing",
+  "positionMs": 120000,
+  "playbackRate": 1.0,
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
@@ -83,3 +86,14 @@ description: >
 | `minutesAgo` | `integer` | **Yes** |     | Last update |
 | `playerId` | `integer` | **Yes** |     | Player Id |
 | `playerName` | `string` | No |     | Player name |
+| `state` | `string` | No | **Yes** | Playback state: `playing`, `paused`, or `stopped` |
+| `positionMs` | `integer` | No | **Yes** | Current playback position in milliseconds (Calculated by the server from the last playbackReport call received) |
+| `playbackRate` | `number` | No | **Yes** | Playback speed multiplier |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+When the server supports extension `playbackReport`, these fields can be returned:
+
+- `state`
+- `positionMs`
+- `playbackRate`
+{{< /alert >}}
