@@ -237,19 +237,14 @@
             "items": {
                 "$ref": "./Work.json"
             },
-            "description": "The list of all works of the song."
+            "description": "The list of works associated with the song."
         },
-        "movementName": {
-            "type": "string",
-            "description": "The movement name of the song."
-        },
-        "movementNumber": {
-            "type": "integer",
-            "description": "The movement number of the song within the work."
-        },
-        "movementCount": {
-            "type": "integer",
-            "description": "The total number of movements in the work."
+        "movements": {
+            "type": "array",
+            "items": {
+                "$ref": "./Movement.json"
+            },
+            "description": "The list of movements associated with the song."
         }
     },
     "required": [
