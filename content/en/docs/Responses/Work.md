@@ -4,7 +4,7 @@ linkTitle: "Work [OS]"
 opensubsonic:
 - Addition
 description: >
-  A work for a song.
+  A work associated with a song.
 ---
 
 {{< tabpane persist=false >}}

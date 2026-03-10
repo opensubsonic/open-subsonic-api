@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "A work for a song.",
+    "description": "A work associated with a song.",
     "properties": {
         "name": {
             "type": "string",
