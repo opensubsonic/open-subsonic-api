@@ -2,15 +2,15 @@
     "type": "object",
     "description": "The result of a sonic path search between two songs.",
     "properties": {
-        "sonicMatch": {
+        "id": {
             "type": "array",
-            "description": "An ordered list of songs forming the path from the start song to the end song, each with its distance from the start song.",
+            "description": "An ordered list of song IDs forming the path from the start song to the end song.",
             "items": {
-                "$ref": "./SonicMatch.json"
+                "type": "string"
             }
         }
     },
     "required": [
-        "sonicMatch"
+        "id"
     ]
 }

@@ -40,27 +40,12 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "findSonicPathResult": {
-      "sonicMatch": [
-        {
-          "id": "100",
-          "distance": 0.0
-        },
-        {
-          "id": "342",
-          "distance": 0.12
-        },
-        {
-          "id": "587",
-          "distance": 0.35
-        },
-        {
-          "id": "921",
-          "distance": 0.64
-        },
-        {
-          "id": "200",
-          "distance": 0.88
-        }
+      "id": [
+        "100",
+        "342",
+        "587",
+        "921",
+        "200"
       ]
     }
   }
