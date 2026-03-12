@@ -153,8 +153,8 @@
         "/rest/downloadPodcastEpisode": {
             "$ref": "./endpoints/downloadPodcastEpisode.json"
         },
-        "/rest/findPath": {
-            "$ref": "./endpoints/findPath.json"
+        "/rest/findSonicPath": {
+            "$ref": "./endpoints/findSonicPath.json"
         },
         "/rest/getAlbum": {
             "$ref": "./endpoints/getAlbum.json"
@@ -270,6 +270,9 @@
         "/rest/getSimilarSongs2": {
             "$ref": "./endpoints/getSimilarSongs2.json"
         },
+        "/rest/getSonicSimilarTracks": {
+            "$ref": "./endpoints/getSonicSimilarTracks.json"
+        },
         "/rest/getSong": {
             "$ref": "./endpoints/getSong.json"
         },
@@ -329,9 +332,6 @@
         },
         "/rest/setRating": {
             "$ref": "./endpoints/setRating.json"
-        },
-        "/rest/similarTracks": {
-            "$ref": "./endpoints/similarTracks.json"
         },
         "/rest/star": {
             "$ref": "./endpoints/star.json"
@@ -977,29 +977,26 @@
             "StreamDetails": {
                 "$ref": "./schemas/StreamDetails.json"
             },
-            "AudioFeatureTrack": {
-                "$ref": "./schemas/AudioFeatureTrack.json"
+            "SonicMatch": {
+                "$ref": "./schemas/SonicMatch.json"
             },
-            "FindPathResult": {
-                "$ref": "./schemas/FindPathResult.json"
+            "FindSonicPathResult": {
+                "$ref": "./schemas/FindSonicPathResult.json"
             },
-            "FindPathSuccessResponse": {
-                "$ref": "./endpoints/findPath/FindPathSuccessResponse.json"
+            "FindSonicPathSuccessResponse": {
+                "$ref": "./endpoints/findSonicPath/FindSonicPathSuccessResponse.json"
             },
-            "FindPathResponse": {
-                "$ref": "./endpoints/findPath/FindPathResponse.json"
+            "FindSonicPathResponse": {
+                "$ref": "./endpoints/findSonicPath/FindSonicPathResponse.json"
             },
-            "SimilarTrack": {
-                "$ref": "./schemas/SimilarTrack.json"
+            "SonicSimilarTracksResult": {
+                "$ref": "./schemas/SonicSimilarTracksResult.json"
             },
-            "SimilarTracksResult": {
-                "$ref": "./schemas/SimilarTracksResult.json"
+            "GetSonicSimilarTracksSuccessResponse": {
+                "$ref": "./endpoints/getSonicSimilarTracks/GetSonicSimilarTracksSuccessResponse.json"
             },
-            "SimilarTracksSuccessResponse": {
-                "$ref": "./endpoints/similarTracks/SimilarTracksSuccessResponse.json"
-            },
-            "SimilarTracksResponse": {
-                "$ref": "./endpoints/similarTracks/SimilarTracksResponse.json"
+            "GetSonicSimilarTracksResponse": {
+                "$ref": "./endpoints/getSonicSimilarTracks/GetSonicSimilarTracksResponse.json"
             }
         }
     }

@@ -1,11 +1,11 @@
 {
     "type": "object",
-    "description": "A subsonic-response element with a nested `similarTracksResult` element on success.",
+    "description": "A subsonic-response element with a nested `findSonicPathResult` element on success.",
     "properties": {
         "subsonic-response": {
             "oneOf": [
                 {
-                    "$ref": "./SimilarTracksSuccessResponse.json"
+                    "$ref": "./FindSonicPathSuccessResponse.json"
                 },
                 {
                     "$ref": "../../schemas/SubsonicResponse/SubsonicFailureResponse.json"
@@ -14,7 +14,7 @@
         }
     },
     "externalDocs": {
-        "description": "similarTracks",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/similartracks/"
+        "description": "findSonicPath",
+        "url": "https://opensubsonic.netlify.app/docs/endpoints/findsonicpath/"
     }
 }

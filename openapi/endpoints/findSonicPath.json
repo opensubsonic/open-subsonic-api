@@ -1,8 +1,8 @@
 {
     "get": {
-        "summary": "Finds a path between two songs based on audio similarity.",
-        "description": "Finds a path of songs connecting a start song to an end song, navigating through audio similarity space using embedding vectors. Each step in the path represents a song that is similar to its neighbors.",
-        "operationId": "findPath",
+        "summary": "Finds a sonic path between two songs based on audio similarity.",
+        "description": "Finds a path of songs connecting a start song to an end song, navigating through audio similarity space. Each song in the path includes its normalized distance from the start song.",
+        "operationId": "findSonicPath",
         "tags": [
             "Browsing",
             "Addition"
@@ -27,24 +27,14 @@
                 }
             },
             {
-                "name": "maxSteps",
+                "name": "count",
                 "in": "query",
-                "description": "Maximum number of intermediate steps (songs) in the path.",
+                "description": "Maximum number of songs in the path.",
                 "required": false,
                 "schema": {
                     "type": "integer",
                     "default": 25,
                     "minimum": 1
-                }
-            },
-            {
-                "name": "pathFixSize",
-                "in": "query",
-                "description": "Whether the path should have a fixed number of steps.",
-                "required": false,
-                "schema": {
-                    "type": "boolean",
-                    "default": false
                 }
             }
         ],
@@ -54,21 +44,21 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "./findPath/FindPathResponse.json"
+                            "$ref": "./findSonicPath/FindSonicPathResponse.json"
                         }
                     }
                 }
             }
         },
         "externalDocs": {
-            "description": "findPath",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/findpath/"
+            "description": "findSonicPath",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/findsonicpath/"
         }
     },
     "post": {
-        "summary": "Finds a path between two songs based on audio similarity.",
-        "description": "Finds a path of songs connecting a start song to an end song, navigating through audio similarity space using embedding vectors. Each step in the path represents a song that is similar to its neighbors.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
-        "operationId": "postFindPath",
+        "summary": "Finds a sonic path between two songs based on audio similarity.",
+        "description": "Finds a path of songs connecting a start song to an end song, navigating through audio similarity space. Each song in the path includes its normalized distance from the start song.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postFindSonicPath",
         "tags": [
             "Browsing"
         ],
@@ -87,16 +77,11 @@
                                 "type": "string",
                                 "description": "The ID of the ending/target song."
                             },
-                            "maxSteps": {
+                            "count": {
                                 "type": "integer",
                                 "default": 25,
                                 "minimum": 1,
-                                "description": "Maximum number of intermediate steps (songs) in the path."
-                            },
-                            "pathFixSize": {
-                                "type": "boolean",
-                                "default": false,
-                                "description": "Whether the path should have a fixed number of steps."
+                                "description": "Maximum number of songs in the path."
                             }
                         },
                         "required": [
@@ -107,14 +92,16 @@
                 }
             }
         },
-        "parameters": [],
+        "parameters": [
+
+        ],
         "responses": {
             "200": {
                 "description": "Successful or failed response",
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "./findPath/FindPathResponse.json"
+                            "$ref": "./findSonicPath/FindSonicPathResponse.json"
                         }
                     }
                 }
@@ -124,8 +111,8 @@
             }
         },
         "externalDocs": {
-            "description": "findPath",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/findpath/"
+            "description": "findSonicPath",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/findsonicpath/"
         }
     }
 }

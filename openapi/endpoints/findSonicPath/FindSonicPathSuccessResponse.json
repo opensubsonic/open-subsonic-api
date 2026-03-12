@@ -6,12 +6,12 @@
         {
             "type": "object",
             "properties": {
-                "similarTracksResult": {
-                    "$ref": "../../schemas/SimilarTracksResult.json"
+                "findSonicPathResult": {
+                    "$ref": "../../schemas/FindSonicPathResult.json"
                 }
             },
             "required": [
-                "similarTracksResult"
+                "findSonicPathResult"
             ]
         }
     ]
