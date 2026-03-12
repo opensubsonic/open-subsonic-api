@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "description": "A similar track with distance information.",
+    "externalDocs": {
+        "description": "SimilarTrack",
+        "url": "https://opensubsonic.netlify.app/docs/responses/similartrack/"
+    },
+    "properties": {
+        "itemId": {
+            "type": "string",
+            "description": "The unique identifier of the track."
+        },
+        "title": {
+            "type": "string",
+            "description": "The title of the track."
+        },
+        "album": {
+            "type": "string",
+            "description": "The album name."
+        },
+        "author": {
+            "type": "string",
+            "description": "The author/artist of the track."
+        },
+        "distance": {
+            "type": "number",
+            "description": "The distance (similarity measure) from the query track. Lower values indicate higher similarity."
+        }
+    },
+    "required": [
+        "itemId",
+        "title",
+        "album",
+        "author",
+        "distance"
+    ]
+}

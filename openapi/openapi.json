@@ -153,6 +153,9 @@
         "/rest/downloadPodcastEpisode": {
             "$ref": "./endpoints/downloadPodcastEpisode.json"
         },
+        "/rest/findPath": {
+            "$ref": "./endpoints/findPath.json"
+        },
         "/rest/getAlbum": {
             "$ref": "./endpoints/getAlbum.json"
         },
@@ -326,6 +329,9 @@
         },
         "/rest/setRating": {
             "$ref": "./endpoints/setRating.json"
+        },
+        "/rest/similarTracks": {
+            "$ref": "./endpoints/similarTracks.json"
         },
         "/rest/star": {
             "$ref": "./endpoints/star.json"
@@ -970,6 +976,30 @@
             },
             "StreamDetails": {
                 "$ref": "./schemas/StreamDetails.json"
+            },
+            "AudioFeatureTrack": {
+                "$ref": "./schemas/AudioFeatureTrack.json"
+            },
+            "FindPathResult": {
+                "$ref": "./schemas/FindPathResult.json"
+            },
+            "FindPathSuccessResponse": {
+                "$ref": "./endpoints/findPath/FindPathSuccessResponse.json"
+            },
+            "FindPathResponse": {
+                "$ref": "./endpoints/findPath/FindPathResponse.json"
+            },
+            "SimilarTrack": {
+                "$ref": "./schemas/SimilarTrack.json"
+            },
+            "SimilarTracksResult": {
+                "$ref": "./schemas/SimilarTracksResult.json"
+            },
+            "SimilarTracksSuccessResponse": {
+                "$ref": "./endpoints/similarTracks/SimilarTracksSuccessResponse.json"
+            },
+            "SimilarTracksResponse": {
+                "$ref": "./endpoints/similarTracks/SimilarTracksResponse.json"
             }
         }
     }

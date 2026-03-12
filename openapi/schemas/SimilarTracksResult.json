@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "List of similar tracks.",
+    "externalDocs": {
+        "description": "SimilarTracksResult",
+        "url": "https://opensubsonic.netlify.app/docs/responses/similartracksresult/"
+    },
+    "properties": {
+        "track": {
+            "type": "array",
+            "items": {
+                "$ref": "./SimilarTrack.json"
+            },
+            "description": "List of similar tracks with distance information."
+        }
+    }
+}
