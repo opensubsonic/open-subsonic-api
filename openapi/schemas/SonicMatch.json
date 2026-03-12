@@ -1,20 +1,22 @@
 {
-    "type": "object",
-    "description": "A matched song with its normalized distance.",
-    "properties": {
-        "id": {
-            "type": "string",
-            "description": "The ID of the matched song."
+    "description": "A Child element with an additional normalized distance field.",
+    "allOf": [
+        {
+            "$ref": "./Child.json"
         },
-        "distance": {
-            "type": "number",
-            "description": "The normalized distance from the reference song (0.0 = identical, 1.0 = most dissimilar).",
-            "minimum": 0,
-            "maximum": 1
+        {
+            "type": "object",
+            "properties": {
+                "distance": {
+                    "type": "number",
+                    "description": "The normalized distance from the reference song (0.0 = identical, 1.0 = most dissimilar).",
+                    "minimum": 0,
+                    "maximum": 1
+                }
+            },
+            "required": [
+                "distance"
+            ]
         }
-    },
-    "required": [
-        "id",
-        "distance"
     ]
 }
