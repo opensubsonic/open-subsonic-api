@@ -26,10 +26,10 @@ Word/syllable-level timing (karaoke) and lyric layer classification (translation
 Adds:
 
 - `enhanced` query parameter on [`getLyricsBySongId`](../../endpoints/getlyricsbysongid) to opt-in to enhanced lyrics data
-- `kind` field on [`structuredLyrics`](../../responses/structuredlyrics) to classify lyric tracks (`main`, `translation`, `pronunciation`)
+- `kind` field on [`structuredLyrics`](../../responses/structuredlyrics) to classify independent lyric layers (`main`, `translation`, `pronunciation`)
 - [`cueLine`](../../responses/cueline) array on [`structuredLyrics`](../../responses/structuredlyrics) for word/syllable-level timing
 - [`cue`](../../responses/cue) objects within each `cueLine` for individual word/syllable timestamps
-- `role` field on [`cueLine`](../../responses/cueline) for vocal part identification (`bg`, `voice1`–`voiceN`, `group`)
+- `role` field on [`cueLine`](../../responses/cueline) for normalized vocal-layer identification (`bg`, `voice1`–`voiceN`, `group`), with named singer/character mapping left out of scope for version 2
 
 All new fields are gated behind `enhanced=true` — without it, the response is identical to version 1.
 

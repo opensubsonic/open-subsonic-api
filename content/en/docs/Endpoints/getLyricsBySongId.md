@@ -162,6 +162,20 @@ When `enhanced=true` is passed, the response includes `kind` to classify lyric t
                 { "start": 4500, "end": 5200, "value": "순" },
                 { "start": 5200, "end": 6214, "value": "간" }
               ]
+            },
+            {
+              "index": 1,
+              "start": 6214,
+              "end": 9000,
+              "value": "모든 게 달라졌어",
+              "cue": [
+                { "start": 6214, "end": 6800, "value": "모" },
+                { "start": 6800, "end": 7200, "value": "든" },
+                { "start": 7200, "end": 7600, "value": " " },
+                { "start": 7600, "end": 8000, "value": "게" },
+                { "start": 8000, "end": 8400, "value": " " },
+                { "start": 8400, "end": 9000, "value": "달라졌어" }
+              ]
             }
           ]
         },
@@ -192,6 +206,16 @@ When `enhanced=true` is passed, the response includes `kind` to classify lyric t
                 { "start": 3582, "end": 4100, "value": "tteun" },
                 { "start": 4500, "end": 6214, "value": "sungan" }
               ]
+            },
+            {
+              "index": 1,
+              "start": 6214,
+              "end": 9000,
+              "cue": [
+                { "start": 6214, "end": 7200, "value": "modeun" },
+                { "start": 7600, "end": 8000, "value": "ge" },
+                { "start": 8400, "end": 9000, "value": "dallajyeosseo" }
+              ]
             }
           ]
         }
@@ -215,6 +239,14 @@ When `enhanced=true` is passed, the response includes `kind` to classify lyric t
         <cue start="4500" end="5200">순</cue>
         <cue start="5200" end="6214">간</cue>
       </cueLine>
+      <cueLine index="1" start="6214" end="9000" value="모든 게 달라졌어">
+        <cue start="6214" end="6800">모</cue>
+        <cue start="6800" end="7200">든</cue>
+        <cue start="7200" end="7600"> </cue>
+        <cue start="7600" end="8000">게</cue>
+        <cue start="8000" end="8400"> </cue>
+        <cue start="8400" end="9000">달라졌어</cue>
+      </cueLine>
     </structuredLyrics>
     <structuredLyrics kind="translation" lang="eng" synced="true">
       <line start="2747">The moment I opened my eyes</line>
@@ -228,6 +260,11 @@ When `enhanced=true` is passed, the response includes `kind` to classify lyric t
         <cue start="3582" end="4100">tteun</cue>
         <cue start="4500" end="6214">sungan</cue>
       </cueLine>
+      <cueLine index="1" start="6214" end="9000">
+        <cue start="6214" end="7200">modeun</cue>
+        <cue start="7600" end="8000">ge</cue>
+        <cue start="8400" end="9000">dallajyeosseo</cue>
+      </cueLine>
     </structuredLyrics>
   </lyricsList>
 </subsonic-response>
@@ -239,7 +276,7 @@ Does not exist.
 
 ##### Example with background vocals (role on cueLine)
 
-When a line contains both main vocals and background vocals, the server splits them into separate cueLines with the same `index`. The main vocals cueLine (empty/omitted `role`) **must** come first:
+When a source distinguishes both a default/main vocal layer and background vocals within the same lyric line, the server splits them into separate cueLines with the same `index`. If a default/main cueLine is present, it uses an empty/omitted `role` and comes first:
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -306,11 +343,11 @@ Servers that don't support TTML or word-level timing simply never include these 
 
 - `cueLine` data is only meaningful when `synced=true`. Servers **must not** emit `cueLine` arrays for unsynced lyrics.
 - Within a `cueLine`, `cue.end` **must** be either present on **all** cues or **none** (all-or-nothing). When the source provides partial end times, servers **must** fill missing values. When no cues have end times, `end` is omitted from all cues.
-- When multiple cueLines share the same `index`, the main vocals cueLine (empty/omitted `role`) **must** come first.
-- Source data may contain overlapping cue intervals. Servers **should** normalize overlaps where possible. Clients should handle overlapping intervals gracefully.
+- When multiple cueLines share the same `index`, any default/main cueLine (empty/omitted `role`) **must** come first. Clients should not assume every source can distinguish or emit a default/main layer.
+- When servers derive missing cue end-times, they **should** avoid introducing overlaps within a `cueLine`. Source data may still contain overlapping cue intervals, and clients should handle them gracefully.
 - Cues where `start == end` (zero-duration) may occur. Clients should treat these as instantaneous markers.
-- A pronunciation `structuredLyrics` entry may have a different number of cues per line than the main entry. Clients should not assume 1:1 cue correspondence between `kind` tracks.
-- A translation `structuredLyrics` entry may have fewer `line` entries than the main entry. Clients should not assume line arrays are the same length across `kind` tracks.
+- `structuredLyrics` entries are independent across `kind` tracks, including `main`. Clients should not assume 1:1 correspondence of `line` arrays or `cueLine` arrays between tracks.
+- Cue counts may differ across `kind` tracks for the same lyric passage. Clients should not assume 1:1 cue correspondence between tracks.
 - For right-to-left scripts (Arabic, Hebrew), cues are in logical reading order. Clients are responsible for bidi rendering.
 
 {{< /alert >}}

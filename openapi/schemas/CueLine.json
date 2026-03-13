@@ -24,7 +24,7 @@
 		},
 		"role": {
 			"type": "string",
-			"description": "Semantic role of the cues in this cueLine. Omitted or empty for main vocals. Values: bg (background vocals), voice1 through voiceN (individual voice parts, N is any positive integer with no upper bound), group (group/chorus vocals). When multiple cueLines share the same index, the main vocals cueLine must come first"
+			"description": "Standardized semantic vocal-layer classification for the cues in this cueLine. Omitted or empty for the default/main vocal layer for this index. Values: bg (background vocals), voice1 through voiceN (individual voice parts, N is any positive integer with no upper bound), group (group/chorus vocals). This field is for normalized presentation roles, not raw performer/character metadata; mapping a cueLine to a named singer or character is outside the scope of songLyrics version 2. When multiple cueLines share the same index, any default/main cueLine with an empty or omitted role must come first"
 		},
 		"cue": {
 			"type": "array",

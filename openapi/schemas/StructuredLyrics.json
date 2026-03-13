@@ -35,7 +35,7 @@
         },
         "kind": {
             "type": "string",
-            "description": "The role of this lyrics track. One of: main (primary vocals, default if omitted), translation (a translation of the main lyrics into another language), pronunciation (a phonetic/romanized rendering, e.g. romaji for Japanese, pinyin for Chinese). Only returned when enhanced=true",
+            "description": "The primary lyric-layer classification for this structuredLyrics entry. One of: main (primary vocals for this entry, default if omitted), translation (a translation of another lyric layer into another language), pronunciation (a phonetic/romanized rendering, e.g. romaji for Japanese, pinyin for Chinese). Tracks are independent across kind values; clients should not assume 1:1 line or cue alignment between entries. Only returned when enhanced=true",
             "enum": [
                 "main",
                 "translation",
@@ -44,7 +44,7 @@
         },
         "cueLine": {
             "type": "array",
-            "description": "Word/syllable-level timing data. Each cueLine corresponds to a line by its index field. Only returned when enhanced=true and synced is true",
+            "description": "Word/syllable-level timing data. Each cueLine corresponds to a line in this structuredLyrics entry by its index field. Only returned when enhanced=true and synced is true",
             "items": {
                 "$ref": "./CueLine.json"
             }
