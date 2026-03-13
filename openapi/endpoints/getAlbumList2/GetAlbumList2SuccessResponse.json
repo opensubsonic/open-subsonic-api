@@ -7,7 +7,7 @@
             "type": "object",
             "properties": {
                 "albumList2": {
-                    "$ref": "../../schemas/AlbumList.json"
+                    "$ref": "../../schemas/AlbumList2.json"
                 }
             },
             "required": [

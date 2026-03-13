@@ -614,6 +614,9 @@
             "Index": {
                 "$ref": "./schemas/Index.json"
             },
+            "IndexID3": {
+                "$ref": "./schemas/IndexID3.json"
+            },
             "Indexes": {
                 "$ref": "./schemas/Indexes.json"
             },
