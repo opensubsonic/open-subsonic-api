@@ -78,6 +78,20 @@ Each `structuredLyrics` entry is self-contained. Clients should treat tracks wit
         { "start": 4500, "end": 5200, "value": "순" },
         { "start": 5200, "end": 6214, "value": "간" }
       ]
+    },
+    {
+      "index": 1,
+      "start": 6214,
+      "end": 9000,
+      "value": "모든 게 달라졌어",
+      "cue": [
+        { "start": 6214, "end": 6800, "value": "모" },
+        { "start": 6800, "end": 7200, "value": "든" },
+        { "start": 7200, "end": 7600, "value": " " },
+        { "start": 7600, "end": 8000, "value": "게" },
+        { "start": 8000, "end": 8400, "value": " " },
+        { "start": 8400, "end": 9000, "value": "달라졌어" }
+      ]
     }
   ]
 }
@@ -94,6 +108,14 @@ Each `structuredLyrics` entry is self-contained. Clients should treat tracks wit
     <cue start="4100" end="4500"> </cue>
     <cue start="4500" end="5200">순</cue>
     <cue start="5200" end="6214">간</cue>
+  </cueLine>
+  <cueLine index="1" start="6214" end="9000" value="모든 게 달라졌어">
+    <cue start="6214" end="6800">모</cue>
+    <cue start="6800" end="7200">든</cue>
+    <cue start="7200" end="7600"> </cue>
+    <cue start="7600" end="8000">게</cue>
+    <cue start="8000" end="8400"> </cue>
+    <cue start="8400" end="9000">달라졌어</cue>
   </cueLine>
 </structuredLyrics>
 {{< /tab >}}

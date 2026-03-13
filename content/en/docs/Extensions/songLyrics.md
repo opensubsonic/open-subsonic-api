@@ -29,7 +29,7 @@ Adds:
 - `kind` field on [`structuredLyrics`](../../responses/structuredlyrics) to classify independent lyric layers (`main`, `translation`, `pronunciation`)
 - [`cueLine`](../../responses/cueline) array on [`structuredLyrics`](../../responses/structuredlyrics) for word/syllable-level timing
 - [`cue`](../../responses/cue) objects within each `cueLine` for individual word/syllable timestamps
-- `role` field on [`cueLine`](../../responses/cueline) for normalized vocal-layer identification (`bg`, `voice1`–`voiceN`, `group`), with named singer/character mapping left out of scope for version 2
+- `role` field on [`cueLine`](../../responses/cueline) for normalized vocal-layer identification (`bg`, `voice`, `group`), with `voiceIndex` for distinguishing individual voice parts and optional `displayRole` for human-readable labels
 
 All new fields are gated behind `enhanced=true` — without it, the response is identical to version 1.
 

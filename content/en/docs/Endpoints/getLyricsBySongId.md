@@ -276,7 +276,7 @@ Does not exist.
 
 ##### Example with background vocals (role on cueLine)
 
-When a source distinguishes both a default/main vocal layer and background vocals within the same lyric line, the server splits them into separate cueLines with the same `index`. If a default/main cueLine is present, it uses an empty/omitted `role` and comes first:
+When a source distinguishes both a default/main vocal layer and background vocals within the same lyric line, the server splits them into separate cueLines with the same `index`. If a default/main cueLine is present, it uses an empty/omitted `role` and comes first. The `role` field is a clean enum (`bg`, `voice`, `group`); individual voice parts also carry a `voiceIndex`. An optional `displayRole` provides a human-readable label when the source data includes one:
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -344,7 +344,7 @@ Servers that don't support TTML or word-level timing simply never include these 
 - `cueLine` data is only meaningful when `synced=true`. Servers **must not** emit `cueLine` arrays for unsynced lyrics.
 - Within a `cueLine`, `cue.end` **must** be either present on **all** cues or **none** (all-or-nothing). When the source provides partial end times, servers **must** fill missing values. When no cues have end times, `end` is omitted from all cues.
 - When multiple cueLines share the same `index`, any default/main cueLine (empty/omitted `role`) **must** come first. Clients should not assume every source can distinguish or emit a default/main layer.
-- When servers derive missing cue end-times, they **should** avoid introducing overlaps within a `cueLine`. Source data may still contain overlapping cue intervals, and clients should handle them gracefully.
+- When servers derive missing cue end-times, they **must** avoid introducing overlaps within a `cueLine`. Since the server is generating these values (not preserving source data), it can guarantee non-overlapping output. Clients should still handle overlapping cue intervals from source data gracefully.
 - Cues where `start == end` (zero-duration) may occur. Clients should treat these as instantaneous markers.
 - `structuredLyrics` entries are independent across `kind` tracks, including `main`. Clients should not assume 1:1 correspondence of `line` arrays or `cueLine` arrays between tracks.
 - Cue counts may differ across `kind` tracks for the same lyric passage. Clients should not assume 1:1 cue correspondence between tracks.
