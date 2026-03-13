@@ -48,4 +48,4 @@ Does not exist.
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | All [`Child`](../child) fields | | | | All fields from the [`Child`](../child) type. |
-| `distance` | `number` | **Yes** |  | The normalized distance from the reference song (0.0 = identical, 1.0 = most dissimilar). |
+| `distance` | `number` | **Yes** |  | The normalized cosine similarity distance (0.0 = identical, 1.0 = most dissimilar). For `getSonicSimilarTracks`, relative to the query song. For `findSonicPath`, relative to the starting song. |

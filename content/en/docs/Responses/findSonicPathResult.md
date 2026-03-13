@@ -11,7 +11,7 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-  "song": [
+  "sonicMatch": [
     {
       "id": "300000060",
       "parent": "200000002",
@@ -36,7 +36,8 @@ description: >
       "discNumber": 1,
       "suffix": "wma",
       "contentType": "audio/x-ms-wma",
-      "path": "Synthetic/Synthetic_-_Colorsmoke_EP/04-Synthetic_-_BrownSmoke.wma"
+      "path": "Synthetic/Synthetic_-_Colorsmoke_EP/04-Synthetic_-_BrownSmoke.wma",
+      "distance": 0.0
     },
     {
       "id": "300000055",
@@ -62,7 +63,8 @@ description: >
       "discNumber": 1,
       "suffix": "mp3",
       "contentType": "audio/mpeg",
-      "path": "Synthetic/Synthetic_-_Colorsmoke_EP/05-Synthetic_-_RedGreenSmoke.mp3"
+      "path": "Synthetic/Synthetic_-_Colorsmoke_EP/05-Synthetic_-_RedGreenSmoke.mp3",
+      "distance": 0.45
     }
   ]
 }
@@ -74,4 +76,4 @@ Does not exist.
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `song` | Array of [`Child`](../child) | **Yes** |  | An ordered list of songs forming the path from the start song to the end song. |
+| `sonicMatch` | Array of [`sonicMatch`](../sonicmatch) | **Yes** |  | An ordered list of songs forming the path, each with its cosine similarity distance from the starting song. |

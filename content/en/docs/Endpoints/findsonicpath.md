@@ -40,7 +40,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "findSonicPathResult": {
-      "song": [
+      "sonicMatch": [
         {
           "id": "300000060",
           "parent": "200000002",
@@ -65,7 +65,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "discNumber": 1,
           "suffix": "wma",
           "contentType": "audio/x-ms-wma",
-          "path": "Synthetic/Synthetic_-_Colorsmoke_EP/04-Synthetic_-_BrownSmoke.wma"
+          "path": "Synthetic/Synthetic_-_Colorsmoke_EP/04-Synthetic_-_BrownSmoke.wma",
+          "distance": 0.0
         },
         {
           "id": "300000055",
@@ -91,7 +92,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "discNumber": 1,
           "suffix": "mp3",
           "contentType": "audio/mpeg",
-          "path": "Synthetic/Synthetic_-_Colorsmoke_EP/05-Synthetic_-_RedGreenSmoke.mp3"
+          "path": "Synthetic/Synthetic_-_Colorsmoke_EP/05-Synthetic_-_RedGreenSmoke.mp3",
+          "distance": 0.45
         }
       ]
     }
