@@ -9,8 +9,8 @@
             "properties": {
                 "distance": {
                     "type": "number",
-                    "description": "The normalized cosine similarity distance (0.0 = identical, 1.0 = most dissimilar). For getSonicSimilarTracks, relative to the query song. For findSonicPath, relative to the starting song.",
-                    "minimum": 0,
+                    "description": "The normalized cosine similarity distance (0.0 = identical, 1.0 = most dissimilar). For getSonicSimilarTracks, relative to the query song. For findSonicPath, relative to the starting song. Returns -1 when distance is not supported by the server.",
+                    "minimum": -1,
                     "maximum": 1
                 }
             },
