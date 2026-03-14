@@ -42,6 +42,38 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
+##### Example with voice role
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "index": 0,
+  "start": 1000,
+  "end": 4000,
+  "value": "You and I",
+  "role": "voice",
+  "voiceIndex": 0,
+  "displayRole": "Chris Martin",
+  "cue": [
+    { "start": 1000, "end": 1800, "value": "You " },
+    { "start": 1800, "end": 2400, "value": "and " },
+    { "start": 2400, "end": 3200, "value": "I" }
+  ]
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<cueLine index="0" start="1000" end="4000" value="You and I" role="voice" voiceIndex="0" displayRole="Chris Martin">
+  <cue start="1000" end="1800">You </cue>
+  <cue start="1800" end="2400">and </cue>
+  <cue start="2400" end="3200">I</cue>
+</cueLine>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
 | Field         | Type                          | Req.    | OpenS.  | Details                                                                                                                                                                                                                                                                                                         |
 | ------------- | ----------------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `index`       | `integer`                     | **Yes** | **Yes** | Zero-based index into the parent `line` array this cueLine corresponds to                                                                                                                                                                                                                                       |

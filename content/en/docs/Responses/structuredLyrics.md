@@ -124,6 +124,64 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
+The same song with `kind: "pronunciation"` — note how cue counts differ from the main track (3 romanized words vs. 7 Korean syllables):
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "kind": "pronunciation",
+  "lang": "ko-Latn",
+  "synced": true,
+  "line": [
+    { "start": 2747, "value": "nuneul tteun sungan" },
+    { "start": 6214, "value": "modeun ge dallajyeosseo" }
+  ],
+  "cueLine": [
+    {
+      "index": 0,
+      "start": 2747,
+      "end": 6214,
+      "cue": [
+        { "start": 2747, "end": 3179, "value": "nuneul" },
+        { "start": 3582, "end": 4100, "value": "tteun" },
+        { "start": 4500, "end": 6214, "value": "sungan" }
+      ]
+    },
+    {
+      "index": 1,
+      "start": 6214,
+      "end": 9000,
+      "cue": [
+        { "start": 6214, "end": 7200, "value": "modeun" },
+        { "start": 7600, "end": 8000, "value": "ge" },
+        { "start": 8400, "end": 9000, "value": "dallajyeosseo" }
+      ]
+    }
+  ]
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<structuredLyrics kind="pronunciation" lang="ko-Latn" synced="true">
+  <line start="2747">nuneul tteun sungan</line>
+  <line start="6214">modeun ge dallajyeosseo</line>
+  <cueLine index="0" start="2747" end="6214">
+    <cue start="2747" end="3179">nuneul</cue>
+    <cue start="3582" end="4100">tteun</cue>
+    <cue start="4500" end="6214">sungan</cue>
+  </cueLine>
+  <cueLine index="1" start="6214" end="9000">
+    <cue start="6214" end="7200">modeun</cue>
+    <cue start="7600" end="8000">ge</cue>
+    <cue start="8400" end="9000">dallajyeosseo</cue>
+  </cueLine>
+</structuredLyrics>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### Fields
 
 | Field           | Type                                 | Req.    | OpenS.  | Details                                                                                                                                                                |
