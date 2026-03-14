@@ -76,10 +76,12 @@ description: >
     {
       "disc": 0,
       "title": "Disc 0 title"
+      "coverArt": "100000111",
     },
     {
       "disc": 2,
       "title": "Disc 1 title"
+      "coverArt": "100000117",
     }
   ],
   "song": [

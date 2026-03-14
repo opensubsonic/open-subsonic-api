@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "A disc title for an album",
+    "description": "A disc title for an album with an optional cover art",
     "properties": {
         "disc": {
             "type": "integer",
@@ -9,6 +9,10 @@
         "title": {
             "type": "string",
             "description": "The name of the disc."
+        },
+        "coverArt": {
+            "type": "string",
+            "description": "The cover art ID of the disc."
         }
     },
     "required": [
