@@ -1,0 +1,118 @@
+{
+    "get": {
+        "summary": "Finds a sonic path between two songs based on audio similarity.",
+        "description": "Finds a path of songs connecting a start song to an end song, navigating through audio similarity space. Each song in the path includes its normalized distance from the start song.",
+        "operationId": "findSonicPath",
+        "tags": [
+            "Browsing",
+            "Addition"
+        ],
+        "parameters": [
+            {
+                "name": "startSongId",
+                "in": "query",
+                "description": "The ID of the starting song.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "endSongId",
+                "in": "query",
+                "description": "The ID of the ending/target song.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "count",
+                "in": "query",
+                "description": "Maximum number of songs in the path.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 25,
+                    "minimum": 1
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./findSonicPath/FindSonicPathResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "findSonicPath",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/findsonicpath/"
+        }
+    },
+    "post": {
+        "summary": "Finds a sonic path between two songs based on audio similarity.",
+        "description": "Finds a path of songs connecting a start song to an end song, navigating through audio similarity space. Each song in the path includes its normalized distance from the start song.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postFindSonicPath",
+        "tags": [
+            "Browsing"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "startSongId": {
+                                "type": "string",
+                                "description": "The ID of the starting song."
+                            },
+                            "endSongId": {
+                                "type": "string",
+                                "description": "The ID of the ending/target song."
+                            },
+                            "count": {
+                                "type": "integer",
+                                "default": 25,
+                                "minimum": 1,
+                                "description": "Maximum number of songs in the path."
+                            }
+                        },
+                        "required": [
+                            "startSongId",
+                            "endSongId"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./findSonicPath/FindSonicPathResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "findSonicPath",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/findsonicpath/"
+        }
+    }
+}

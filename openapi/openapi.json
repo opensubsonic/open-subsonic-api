@@ -153,6 +153,9 @@
         "/rest/downloadPodcastEpisode": {
             "$ref": "./endpoints/downloadPodcastEpisode.json"
         },
+        "/rest/findSonicPath": {
+            "$ref": "./endpoints/findSonicPath.json"
+        },
         "/rest/getAlbum": {
             "$ref": "./endpoints/getAlbum.json"
         },
@@ -266,6 +269,9 @@
         },
         "/rest/getSimilarSongs2": {
             "$ref": "./endpoints/getSimilarSongs2.json"
+        },
+        "/rest/getSonicSimilarTracks": {
+            "$ref": "./endpoints/getSonicSimilarTracks.json"
         },
         "/rest/getSong": {
             "$ref": "./endpoints/getSong.json"
@@ -976,6 +982,27 @@
             },
             "StreamDetails": {
                 "$ref": "./schemas/StreamDetails.json"
+            },
+            "SonicMatch": {
+                "$ref": "./schemas/SonicMatch.json"
+            },
+            "FindSonicPathResult": {
+                "$ref": "./schemas/FindSonicPathResult.json"
+            },
+            "FindSonicPathSuccessResponse": {
+                "$ref": "./endpoints/findSonicPath/FindSonicPathSuccessResponse.json"
+            },
+            "FindSonicPathResponse": {
+                "$ref": "./endpoints/findSonicPath/FindSonicPathResponse.json"
+            },
+            "SonicSimilarTracksResult": {
+                "$ref": "./schemas/SonicSimilarTracksResult.json"
+            },
+            "GetSonicSimilarTracksSuccessResponse": {
+                "$ref": "./endpoints/getSonicSimilarTracks/GetSonicSimilarTracksSuccessResponse.json"
+            },
+            "GetSonicSimilarTracksResponse": {
+                "$ref": "./endpoints/getSonicSimilarTracks/GetSonicSimilarTracksResponse.json"
             }
         }
     }
