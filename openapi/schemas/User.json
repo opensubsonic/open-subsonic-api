@@ -6,16 +6,24 @@
         "url": "https://opensubsonic.netlify.app/docs/responses/user/"
     },
     "properties": {
+        "folder": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            },
+            "description": "Folder ID(s)"
+        },
         "username": {
             "type": "string",
             "description": "Username"
         },
+        "email": {
+            "type": "string",
+            "description": "The user's email address"
+        },
         "scrobblingEnabled": {
             "type": "boolean",
             "description": "Scrobbling enabled"
-        },
-        "maxBitRate": {
-            "type": "integer"
         },
         "adminRole": {
             "type": "boolean",
@@ -61,6 +69,9 @@
             "type": "boolean",
             "description": "Whether the user can create a stream"
         },
+        "maxBitRate": {
+            "type": "integer"
+        },
         "videoConversionRole": {
             "type": "boolean",
             "description": "Whether the user can convert videos"
@@ -69,13 +80,6 @@
             "type": "string",
             "format": "date-time",
             "description": "Last time the avatar was changed [ISO 8601]"
-        },
-        "folder": {
-            "type": "array",
-            "items": {
-                "type": "integer"
-            },
-            "description": "Folder ID(s)"
         }
     },
     "required": [

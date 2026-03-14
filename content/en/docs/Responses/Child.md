@@ -164,52 +164,52 @@ description: >
 | `isDir` | `boolean` | **Yes** |   | The media is a directory |
 | `title` | `string` | **Yes** |   | The media name. |
 | `album` | `string` | No |   | The album name. |
-| `artist` | `string` | No |   | The artist name.  |
-| `track` | `int` | No |  | The track number. |
+| `artist` | `string` | No |   | The artist name. |
+| `track` | `int` | No |   | The track number. |
 | `year` | `int` | No |   | The media year. |
-| `genre` | `string` | No |   | The media genre|
-| `coverArt` | `string` | No |   | A covertArt id.  |
-| `size` | `long` | No |   | A file size of the media.  |
-| `contentType` | `string` | No |   | The mimeType of the media.  |
-| `suffix` | `string` | No |   | The file suffix of the media.  |
-| `transcodedContentType` | `string` | No |   | The transcoded mediaType if transcoding should happen. |
-| `transcodedSuffix` | `string` | No |   | The file suffix of the transcoded media.  |
+| `coverArt` | `string` | No |   | A covertArt id. |
+| `size` | `long` | No |   | A file size of the media. |
+| `contentType` | `string` | No |   | The mimeType of the media. |
+| `suffix` | `string` | No |   | The file suffix of the media. |
+| `starred` | `string` | No |   | Date the media was starred. [ISO 8601] |
 | `duration` | `int` | No |   | The duration of the media in seconds. |
 | `bitRate` | `int` | No |   | The bitrate of the media. |
 | `bitDepth` | `int` | No | **Yes** | The bit depth of the media. |
 | `samplingRate` | `int` | No | **Yes** | The sampling rate of the media. |
 | `channelCount` | `int` | No | **Yes** | The number of channels of the media. |
 | `path` | `string` | No |   | The full path of the media. |
-| `isVideo` | `boolean` | No |   | Media is a video |
-| `userRating` | `int` | No |   | The user rating of the media [1-5] |
-| `averageRating` | `number` | No |   | The average rating of the media [1.0-5.0] |
 | `playCount` | `long` | No |   | The play count. |
+| `played` | `string` | No | **Yes** | Date the media was last played. [ISO 8601] |
 | `discNumber` | `int` | No |   | The disc number. |
 | `created` | `string` | No |   | Date the media was created. [ISO 8601] |
-| `starred` | `string` | No |   | Date the media was starred. [ISO 8601] |
 | `albumId` | `string` | No |   | The corresponding album id |
 | `artistId` | `string` | No |   | The corresponding artist id |
-| `type` | `string` | No |   | The generic type of media [music/podcast/audiobook/video]|
+| `type` | `string` | No |   | The generic type of media [music/podcast/audiobook/video] |
 | `mediaType` | `string` | No | **Yes** | The actual media type [song/album/artist] **Note**: If you support `musicBrainzId` you must support this field to ensure clients knows what the ID refers to. |
+| `isVideo` | `boolean` | No |   | Media is a video |
+| `bpm` | `int` | No | **Yes** | The BPM of the song. |
+| `comment` | `string` | No | **Yes** | The comment tag of the song. |
+| `sortName` | `string` | No | **Yes** | The song sort name. |
+| `musicBrainzId` | `string` | No | **Yes** | The track MusicBrainzID. |
+| `isrc` | Array of `string` | No | **Yes** | The track ISRC(s). |
+| `genres` | Array of [`ItemGenre`](../itemgenre) | No | **Yes** | The list of all genres of the song. |
+| `artists` | Array of [`ArtistID3`](../artistid3) | No | **Yes** | The list of all song artists of the song. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default) |
+| `displayArtist` | `string` | No | **Yes** | The single value display artist. |
+| `albumArtists` | Array of [`ArtistID3`](../artistid3) | No | **Yes** | The list of all album artists of the song. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default) |
+| `displayAlbumArtist` | `string` | No | **Yes** | The single value display album artist. |
+| `contributors` | Array of [`Contributor`](../contributor) | No | **Yes** | The list of all contributor artists of the song. |
+| `displayComposer` | `string` | No | **Yes** | The single value display composer. |
+| `moods` | Array of `string` | No | **Yes** | The list of all moods of the song. |
+| `explicitStatus` | `string` | No | **Yes** | Returns "explicit", "clean" or "". (For songs extracted from tags "ITUNESADVISORY": 1 = explicit, 2 = clean, MP4 "rtng": 1 or 4 = explicit, 2 = clean. See [`albumID3`](../albumid3) for albums) |
+| `replayGain` | [`ReplayGain`](../replaygain) | No | **Yes** | The replaygain data of the song. |
+| `genre` | `string` | No |   | The media genre |
+| `transcodedContentType` | `string` | No |   | The transcoded mediaType if transcoding should happen. |
+| `transcodedSuffix` | `string` | No |   | The file suffix of the transcoded media. |
+| `userRating` | `int` | No |   | The user rating of the media [1-5] |
+| `averageRating` | `number` | No |   | The average rating of the media [1.0-5.0] |
 | `bookmarkPosition` | `long` | No |   | The bookmark position in seconds |
 | `originalWidth` | `int` | No |   | The video original Width |
 | `originalHeight` | `int` | No |   | The video original Height |
-| `played` | `string` | No | **Yes**  | Date the album was last played. [ISO 8601]|
-| `bpm` | `int` | No |   **Yes**   | The BPM of the song. |
-| `comment` | `string` | No |  **Yes**  | The comment tag of the song. |
-| `sortName` | `string` | No |  **Yes**   | The song sort name. |
-| `musicBrainzId` | `string` | No |  **Yes**   | The track MusicBrainzID. |
-| `isrc` | Array of `string` | No |  **Yes**   | The track ISRC(s). |
-| `genres` | Array of [`ItemGenre`](../itemgenre) | No | **Yes**  | The list of all genres of the song. |
-| `artists` | Array of [`ArtistID3`](../artistid3) | No | **Yes**  | The list of all song artists of the song. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default)|
-| `displayArtist` | `string` | No |  **Yes**   | The single value display artist. |
-| `albumArtists` | Array of [`ArtistID3`](../artistid3) | No | **Yes**  | The list of all album artists of the song. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default)|
-| `displayAlbumArtist` | `string` | No |  **Yes**   | The single value display album artist. |
-| `contributors` | Array of [`Contributor`](../contributor) | No | **Yes**  | The list of all contributor artists of the song. |
-| `displayComposer` | `string` | No |  **Yes**   | The single value display composer. |
-| `moods` | Array of `string` | No | **Yes**  | The list of all moods of the song. |
-| `replayGain` | [`ReplayGain`](../replaygain) | No | **Yes**  | The replaygain data of the song. |
-| `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit", "clean" or "". (For songs extracted from tags "ITUNESADVISORY": 1 = explicit, 2 = clean, MP4 "rtng": 1 or 4 = explicit, 2 = clean. See [`albumID3`](../albumid3) for albums) |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:

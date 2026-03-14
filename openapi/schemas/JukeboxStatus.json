@@ -14,21 +14,20 @@
             "type": "boolean",
             "description": "Whether the queue is currently playing"
         },
-        "volume": {
-            "type": "integer",
-            "description": "Volume, in a range of [0.0, 1.0]",
-            "format": "float",
-            "minimum": 0.0,
-            "maximum": 1.0
-        },
         "position": {
             "type": "integer",
             "description": "The current position of the track in seconds"
+        },
+        "gain": {
+            "type": "number",
+            "description": "Volume, in a range of [0.0, 1.0]",
+            "minimum": 0.0,
+            "maximum": 1.0
         }
     },
     "required": [
         "currentIndex",
         "playing",
-        "volume"
+        "gain"
     ]
 }

@@ -6,10 +6,6 @@
         "url": "https://opensubsonic.netlify.app/docs/responses/genre/"
     },
     "properties": {
-        "value": {
-            "type": "string",
-            "description": "Genre name"
-        },
         "songCount": {
             "type": "integer",
             "description": "Genre song count"
@@ -17,6 +13,10 @@
         "albumCount": {
             "type": "integer",
             "description": "Genre album count"
+        },
+        "value": {
+            "type": "string",
+            "description": "Genre name"
         }
     },
     "required": [
