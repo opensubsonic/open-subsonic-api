@@ -38,7 +38,10 @@ description: >
       "path": "Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3",
       "username": "user",
       "minutesAgo": 0,
-      "playerId": 0
+      "playerId": 0,
+      "state": "playing",
+      "positionMs": 120000,
+      "playbackRate": 1.0,
     }
   ]
 }
@@ -84,3 +87,7 @@ description: >
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `entry` | Array of [`NowPlayingEntry`](../nowplayingentry) | **Yes** |   | A list of NowPlayingEntry |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+When the server supports extension `playbackReport`, each entry can include timeline fields (`state`, `positionMs`, `playbackRate`).
+{{< /alert >}}
