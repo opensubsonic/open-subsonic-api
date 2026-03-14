@@ -659,6 +659,9 @@
             "Line": {
                 "$ref": "./schemas/Line.json"
             },
+            "Agent": {
+                "$ref": "./schemas/Agent.json"
+            },
             "Cue": {
                 "$ref": "./schemas/Cue.json"
             },

@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "description": "Reusable metadata for a vocal agent within a structuredLyrics entry",
+  "externalDocs": {
+    "description": "Agent",
+    "url": "https://opensubsonic.netlify.app/docs/responses/agent/"
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Opaque identifier for this agent. The value is only meaningful within the parent structuredLyrics entry and must be unique within that entry"
+    },
+    "role": {
+      "type": "string",
+      "description": "Semantic vocal-layer classification for cueLines that reference this agent. One of: main (lead/default vocal layer), voice (additional explicit individual voice part), bg (background vocals), group (group/chorus vocals). When a structuredLyrics entry uses agents for cue-attributed lyrics, it must define exactly one main agent",
+      "enum": [
+        "main",
+        "voice",
+        "bg",
+        "group"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Optional human-readable label for this agent, such as a singer or character name from the source metadata"
+    }
+  },
+  "required": [
+    "id",
+    "role"
+  ]
+}

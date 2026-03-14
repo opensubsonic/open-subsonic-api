@@ -42,9 +42,17 @@
                 "pronunciation"
             ]
         },
+        "agents": {
+            "type": "array",
+            "description": "Reusable per-track attribution metadata for cueLine entries. When present, agents must contain at least one entry, and each agents[].id must be unique within this structuredLyrics entry. Agents are optional for simple unattributed single-layer lyrics. When a structuredLyrics entry represents multiple vocal agents or layers, it must include agents; a single-agent attributed or default entry may also include agents, and if it does, exactly one agent must use role main. Agents should not be emitted without cueLine data",
+            "minItems": 1,
+            "items": {
+                "$ref": "./Agent.json"
+            }
+        },
         "cueLine": {
             "type": "array",
-            "description": "Word/syllable-level timing data. Each cueLine corresponds to a line in this structuredLyrics entry by its index field. Only returned when enhanced=true and synced is true",
+            "description": "Word/syllable-level timing data. Each cueLine corresponds to a line in this structuredLyrics entry by its index field. If agents is present, every cueLine in the entry must include agentId, and each agentId must match exactly one agents[].id in that entry. If agents is absent, cueLines must not include agentId. Only returned when enhanced=true and synced is true",
             "items": {
                 "$ref": "./CueLine.json"
             }

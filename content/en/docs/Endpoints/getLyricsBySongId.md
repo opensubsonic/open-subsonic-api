@@ -123,7 +123,7 @@ Does not exist.
 
 #### Version 2 (`enhanced=true`)
 
-When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, and additional tracks such as translations and pronunciations.
+When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, optional per-entry [`agents`](../../responses/agent) metadata for agent attribution, and additional tracks such as translations and pronunciations.
 
 {{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?id=456&enhanced=true&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
@@ -274,17 +274,22 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-##### Example with background vocals (role on cueLine)
+##### Example with background vocals (agents + agentId)
 
-When a source distinguishes both a default/main vocal layer and background vocals within the same lyric line, the server splits them into separate cueLines with the same `index`. If a default/main cueLine is present, it uses an empty/omitted `role` and comes first. The `role` field is a clean enum (`bg`, `voice`, `group`); individual voice parts also carry a `voiceIndex`. An optional `displayRole` provides a human-readable label when the source data includes one:
+When a source distinguishes both a lead/default vocal layer and background vocals within the same lyric line, the server emits a shared `agents` array on that `structuredLyrics` entry and splits the lyric into separate cueLines with the same `index`. Each cueLine references one agent via `agentId`, and the cueLine whose referenced agent has `role: "main"` comes first:
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {
+  "agents": [
+    { "id": "lead", "role": "main", "name": "Lead Vocal" },
+    { "id": "backing", "role": "bg" }
+  ],
   "cueLine": [
     {
       "index": 0,
+      "agentId": "lead",
       "start": 1000,
       "end": 3000,
       "value": "Hello echo",
@@ -295,10 +300,10 @@ When a source distinguishes both a default/main vocal layer and background vocal
     },
     {
       "index": 0,
+      "agentId": "backing",
       "start": 1000,
       "end": 3000,
       "value": "Hello echo",
-      "role": "bg",
       "cue": [
         { "start": 2000, "end": 2500, "value": "echo" }
       ]
@@ -307,11 +312,13 @@ When a source distinguishes both a default/main vocal layer and background vocal
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
-<cueLine index="0" start="1000" end="3000" value="Hello echo">
+<agent id="lead" role="main" name="Lead Vocal" />
+<agent id="backing" role="bg" />
+<cueLine index="0" agentId="lead" start="1000" end="3000" value="Hello echo">
   <cue start="1000" end="1400">He</cue>
   <cue start="1400" end="1800">llo</cue>
 </cueLine>
-<cueLine index="0" start="1000" end="3000" value="Hello echo" role="bg">
+<cueLine index="0" agentId="backing" start="1000" end="3000" value="Hello echo">
   <cue start="2000" end="2500">echo</cue>
 </cueLine>
 {{< /tab >}}
@@ -320,23 +327,26 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-##### Example with multiple voices (voiceIndex and displayRole)
+##### Example with multiple agents (TTML-style attribution)
 
-When a source has multiple named singers (e.g. a duet from TTML with `ttm:agent` and `ttm:name`), each voice gets its own cueLine with `role: "voice"`, a `voiceIndex` to distinguish them, and an optional `displayRole` carrying the singer name:
+When a source has multiple named singers (e.g. a duet from TTML with `ttm:agent` and `ttm:name`), the server stores those identities once in `agents` and each cueLine references the relevant singer or group via `agentId`:
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {
+  "agents": [
+    { "id": "lead", "role": "main", "name": "Chris Martin" },
+    { "id": "guest", "role": "voice", "name": "Jin" },
+    { "id": "choir", "role": "group", "name": "All" }
+  ],
   "cueLine": [
     {
       "index": 0,
+      "agentId": "lead",
       "start": 1000,
       "end": 4000,
       "value": "You and I",
-      "role": "voice",
-      "voiceIndex": 0,
-      "displayRole": "Chris Martin",
       "cue": [
         { "start": 1000, "end": 1800, "value": "You " },
         { "start": 1800, "end": 2400, "value": "and " },
@@ -345,12 +355,10 @@ When a source has multiple named singers (e.g. a duet from TTML with `ttm:agent`
     },
     {
       "index": 1,
+      "agentId": "guest",
       "start": 4000,
       "end": 7000,
       "value": "Under this sky",
-      "role": "voice",
-      "voiceIndex": 1,
-      "displayRole": "Jin",
       "cue": [
         { "start": 4000, "end": 4800, "value": "Un" },
         { "start": 4800, "end": 5400, "value": "der " },
@@ -360,11 +368,10 @@ When a source has multiple named singers (e.g. a duet from TTML with `ttm:agent`
     },
     {
       "index": 2,
+      "agentId": "choir",
       "start": 7000,
       "end": 10000,
       "value": "Together tonight",
-      "role": "group",
-      "displayRole": "All",
       "cue": [
         { "start": 7000, "end": 8000, "value": "To" },
         { "start": 8000, "end": 8800, "value": "ge" },
@@ -376,18 +383,21 @@ When a source has multiple named singers (e.g. a duet from TTML with `ttm:agent`
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
-<cueLine index="0" start="1000" end="4000" value="You and I" role="voice" voiceIndex="0" displayRole="Chris Martin">
+<agent id="lead" role="main" name="Chris Martin" />
+<agent id="guest" role="voice" name="Jin" />
+<agent id="choir" role="group" name="All" />
+<cueLine index="0" agentId="lead" start="1000" end="4000" value="You and I">
   <cue start="1000" end="1800">You </cue>
   <cue start="1800" end="2400">and </cue>
   <cue start="2400" end="3200">I</cue>
 </cueLine>
-<cueLine index="1" start="4000" end="7000" value="Under this sky" role="voice" voiceIndex="1" displayRole="Jin">
+<cueLine index="1" agentId="guest" start="4000" end="7000" value="Under this sky">
   <cue start="4000" end="4800">Un</cue>
   <cue start="4800" end="5400">der </cue>
   <cue start="5400" end="5900">this </cue>
   <cue start="5900" end="7000">sky</cue>
 </cueLine>
-<cueLine index="2" start="7000" end="10000" value="Together tonight" role="group" displayRole="All">
+<cueLine index="2" agentId="choir" start="7000" end="10000" value="Together tonight">
   <cue start="7000" end="8000">To</cue>
   <cue start="8000" end="8800">ge</cue>
   <cue start="8800" end="9200">ther </cue>
@@ -421,11 +431,14 @@ Servers that don't support TTML or word-level timing simply never include these 
 {{< alert color="primary" title="cueLine behavior" >}}
 
 - `cueLine` data is only meaningful when `synced=true`. Servers **must not** emit `cueLine` arrays for unsynced lyrics.
-- Within a `cueLine`, `cue.end` **must** be either present on **all** cues or **none** (all-or-nothing). When the source provides partial end times, servers **must** fill missing values. When no cues have end times, `end` is omitted from all cues.
-- When multiple cueLines share the same `index`, any default/main cueLine (empty/omitted `role`) **must** come first. Clients should not assume every source can distinguish or emit a default/main layer.
-- Cues within a `cueLine` **must not** overlap (i.e. `cue[n].end` **must** be ≤ `cue[n+1].start`). Servers **must** normalize any source overlaps so that clients can iterate cues sequentially without overlap-resolution logic. Overlapping timing across different cueLines (different `role`/`voiceIndex`) is expected, since those represent parallel vocal layers.
+- Within a `cueLine`, `cue.end` **must** be either present on **all** cues or **none** (all-or-nothing). When the source provides partial end times, servers **must** fill missing values. When no cues have end times, `end` is omitted from all cues. This is a documented contract rule; the OpenAPI schema does not encode the all-or-none shape structurally.
+- `agents` are scoped to a single `structuredLyrics` entry. When present, `agents` **must** contain at least one entry, and each `agents[].id` **must** be unique within that entry. `agents` are optional for simple unattributed single-layer lyrics. When a `structuredLyrics` entry represents multiple vocal agents/layers, it **must** include `agents`; a single-agent attributed/default entry may also include `agents`, and if it does, exactly one agent **must** use `role: "main"`. `agents` should not be emitted without `cueLine` data.
+- When multiple cueLines share the same `index`, the cueLine whose referenced agent has `role: "main"` **must** come first. Clients should not assume every source can distinguish or emit multiple agents.
+- If `agents` is present, every `cueLine` in that entry **must** include `agentId`, and each `agentId` **must** match exactly one `agents[].id` in that entry. If `agents` is absent, cueLines **must not** include `agentId`.
+- Cues within a `cueLine` **must not** overlap (i.e. `cue[n].end` **must** be ≤ `cue[n+1].start`). Servers **must** normalize any source overlaps so that clients can iterate cues sequentially without overlap-resolution logic. Overlapping timing across different cueLines (different `agentId` values) is expected, since those represent parallel vocal layers.
 - Cues where `start == end` (zero-duration) may occur. Clients should treat these as instantaneous markers.
 - `structuredLyrics` entries are independent across `kind` tracks, including `main`. Clients should not assume 1:1 correspondence of `line` arrays or `cueLine` arrays between tracks.
+- Agent identity is also independent across `kind` tracks. Clients should not assume an `agentId` in one `structuredLyrics` entry refers to the same singer, character, or vocal layer in another entry.
 - Cue counts may differ across `kind` tracks for the same lyric passage. Clients should not assume 1:1 cue correspondence between tracks.
 - For right-to-left scripts (Arabic, Hebrew), cues are in logical reading order. Clients are responsible for bidi rendering.
 

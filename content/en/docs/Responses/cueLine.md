@@ -42,7 +42,7 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-##### Example with voice role
+##### Example with agent attribution
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -52,9 +52,7 @@ Does not exist.
   "start": 1000,
   "end": 4000,
   "value": "You and I",
-  "role": "voice",
-  "voiceIndex": 0,
-  "displayRole": "Chris Martin",
+  "agentId": "lead",
   "cue": [
     { "start": 1000, "end": 1800, "value": "You " },
     { "start": 1800, "end": 2400, "value": "and " },
@@ -63,7 +61,7 @@ Does not exist.
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
-<cueLine index="0" start="1000" end="4000" value="You and I" role="voice" voiceIndex="0" displayRole="Chris Martin">
+<cueLine index="0" start="1000" end="4000" value="You and I" agentId="lead">
   <cue start="1000" end="1800">You </cue>
   <cue start="1800" end="2400">and </cue>
   <cue start="2400" end="3200">I</cue>
@@ -74,16 +72,14 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field         | Type                          | Req.    | OpenS.  | Details                                                                                                                                                                                                                                                                                                         |
-| ------------- | ----------------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `index`       | `integer`                     | **Yes** | **Yes** | Zero-based index into the parent `line` array this cueLine corresponds to                                                                                                                                                                                                                                       |
-| `start`       | `integer`                     | No      | **Yes** | Start time in milliseconds (may differ from the parent line if cues are more precise)                                                                                                                                                                                                                           |
-| `end`         | `integer`                     | No      | **Yes** | End time in milliseconds                                                                                                                                                                                                                                                                                        |
-| `value`       | `string`                      | No      | **Yes** | Full text of the line (for validation/fallback)                                                                                                                                                                                                                                                                 |
-| `role`        | `string`                      | No      | **Yes** | Semantic vocal-layer classification for the cues in this cueLine. Omitted or empty for the default/main vocal layer for this `index`. Values: `bg` (background vocals), `voice` (individual voice part — use `voiceIndex` to distinguish between voices), `group` (group/chorus vocals). When multiple cueLines share the same `index`, any default/main cueLine (empty/omitted `role`) **must** come first |
-| `voiceIndex`  | `integer`                     | No      | **Yes** | Zero-based index identifying a specific voice part. Only present when `role` is `voice`. Used to distinguish individual singers in multi-voice tracks (e.g. duets, ensembles). The numbering is server-assigned per track and has no cross-track meaning                                                         |
-| `displayRole` | `string`                      | No      | **Yes** | Optional human-readable label for this vocal layer (e.g. a singer name from TTML `ttm:name`, or a descriptive tag like `"Tenor"`). Servers include this when the source data provides a name or label; omit otherwise. Clients may display this value but should not depend on its presence or format             |
-| `cue`         | Array of [`cue`](../cue)      | **Yes** | **Yes** | Ordered list of word/syllable cues                                                                                                                                                                                                                                                                              |
+| Field     | Type                          | Req.    | OpenS.  | Details                                                                                                                                                                                                                                                                                                                                                      |
+| --------- | ----------------------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `index`   | `integer`                     | **Yes** | **Yes** | Zero-based index into the parent `line` array this cueLine corresponds to                                                                                                                                                                                                                                                                                    |
+| `start`   | `integer`                     | No      | **Yes** | Start time in milliseconds (may differ from the parent line if cues are more precise)                                                                                                                                                                                                                                                                        |
+| `end`     | `integer`                     | No      | **Yes** | End time in milliseconds                                                                                                                                                                                                                                                                                                                                     |
+| `value`   | `string`                      | No      | **Yes** | Full text of the line (for validation/fallback)                                                                                                                                                                                                                                                                                                              |
+| `agentId` | `string`                      | No      | **Yes** | Opaque identifier referencing an [`agent`](../agent) in the same [`structuredLyrics`](../structuredlyrics) entry. If the parent `structuredLyrics` entry includes `agents`, every cueLine in that entry **must** include `agentId`, and the value **must** match exactly one `agents[].id` in that entry. If the parent entry does not include `agents`, cueLines **must not** include `agentId`. When multiple cueLines share the same `index`, the cueLine whose referenced agent has `role: "main"` **must** come first |
+| `cue`     | Array of [`cue`](../cue)      | **Yes** | **Yes** | Ordered list of word/syllable cues                                                                                                                                                                                                                                                                                                                           |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 This is a new OpenSubsonic response type added in extension [`songLyrics`](../../extensions/songlyrics) version 2.
