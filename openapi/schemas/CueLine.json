@@ -24,7 +24,15 @@
     },
     "role": {
       "type": "string",
-      "description": "Standardized semantic vocal-layer classification for the cues in this cueLine. Omitted or empty for the default/main vocal layer for this index. Values: bg (background vocals), voice1 through voiceN (individual voice parts, N is any positive integer with no upper bound), group (group/chorus vocals). This field is for normalized presentation roles, not raw performer/character metadata; mapping a cueLine to a named singer or character is outside the scope of songLyrics version 2. When multiple cueLines share the same index, any default/main cueLine with an empty or omitted role must come first"
+      "description": "Semantic vocal-layer classification for the cues in this cueLine. Omitted or empty for the default/main vocal layer for this index. Values: bg (background vocals), voice (individual voice part — use voiceIndex to distinguish between voices), group (group/chorus vocals). When multiple cueLines share the same index, any default/main cueLine with an empty or omitted role must come first"
+    },
+    "voiceIndex": {
+      "type": "integer",
+      "description": "Zero-based index identifying a specific voice part. Only present when role is voice. Used to distinguish individual singers in multi-voice tracks (e.g. duets, ensembles). The numbering is server-assigned per track and has no cross-track meaning"
+    },
+    "displayRole": {
+      "type": "string",
+      "description": "Optional human-readable label for this vocal layer (e.g. a singer name from TTML ttm:name, or a descriptive tag like \"Tenor\"). Servers include this when the source data provides a name or label; omit otherwise. Clients may display this value but should not depend on its presence or format"
     },
     "cue": {
       "type": "array",
