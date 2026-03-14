@@ -26,6 +26,25 @@
                 "playerName": {
                     "type": "string",
                     "description": "Player name"
+                },
+                "state": {
+                    "type": "string",
+                    "description": "Playback state.",
+                    "enum": [
+                        "starting",
+                        "playing",
+                        "paused",
+                        "stopped"
+                    ]
+                },
+                "positionMs": {
+                    "type": "integer",
+                    "description": "Current playback position in milliseconds (Calculated by the server from the last playbackReport call received)"
+                },
+                "playbackRate": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Playback speed multiplier"
                 }
             },
             "required": [

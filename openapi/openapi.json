@@ -306,6 +306,9 @@
         "/rest/refreshPodcasts": {
             "$ref": "./endpoints/refreshPodcasts.json"
         },
+        "/rest/reportPlayback": {
+            "$ref": "./endpoints/reportPlayback.json"
+        },
         "/rest/savePlayQueue": {
             "$ref": "./endpoints/savePlayQueue.json"
         },
