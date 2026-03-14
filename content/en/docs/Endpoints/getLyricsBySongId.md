@@ -320,6 +320,85 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
+##### Example with multiple voices (voiceIndex and displayRole)
+
+When a source has multiple named singers (e.g. a duet from TTML with `ttm:agent` and `ttm:name`), each voice gets its own cueLine with `role: "voice"`, a `voiceIndex` to distinguish them, and an optional `displayRole` carrying the singer name:
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "cueLine": [
+    {
+      "index": 0,
+      "start": 1000,
+      "end": 4000,
+      "value": "You and I",
+      "role": "voice",
+      "voiceIndex": 0,
+      "displayRole": "Chris Martin",
+      "cue": [
+        { "start": 1000, "end": 1800, "value": "You " },
+        { "start": 1800, "end": 2400, "value": "and " },
+        { "start": 2400, "end": 3200, "value": "I" }
+      ]
+    },
+    {
+      "index": 1,
+      "start": 4000,
+      "end": 7000,
+      "value": "Under this sky",
+      "role": "voice",
+      "voiceIndex": 1,
+      "displayRole": "Jin",
+      "cue": [
+        { "start": 4000, "end": 4800, "value": "Un" },
+        { "start": 4800, "end": 5400, "value": "der " },
+        { "start": 5400, "end": 5900, "value": "this " },
+        { "start": 5900, "end": 7000, "value": "sky" }
+      ]
+    },
+    {
+      "index": 2,
+      "start": 7000,
+      "end": 10000,
+      "value": "Together tonight",
+      "role": "group",
+      "displayRole": "All",
+      "cue": [
+        { "start": 7000, "end": 8000, "value": "To" },
+        { "start": 8000, "end": 8800, "value": "ge" },
+        { "start": 8800, "end": 9200, "value": "ther " },
+        { "start": 9200, "end": 10000, "value": "tonight" }
+      ]
+    }
+  ]
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<cueLine index="0" start="1000" end="4000" value="You and I" role="voice" voiceIndex="0" displayRole="Chris Martin">
+  <cue start="1000" end="1800">You </cue>
+  <cue start="1800" end="2400">and </cue>
+  <cue start="2400" end="3200">I</cue>
+</cueLine>
+<cueLine index="1" start="4000" end="7000" value="Under this sky" role="voice" voiceIndex="1" displayRole="Jin">
+  <cue start="4000" end="4800">Un</cue>
+  <cue start="4800" end="5400">der </cue>
+  <cue start="5400" end="5900">this </cue>
+  <cue start="5900" end="7000">sky</cue>
+</cueLine>
+<cueLine index="2" start="7000" end="10000" value="Together tonight" role="group" displayRole="All">
+  <cue start="7000" end="8000">To</cue>
+  <cue start="8000" end="8800">ge</cue>
+  <cue start="8800" end="9200">ther </cue>
+  <cue start="9200" end="10000">tonight</cue>
+</cueLine>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### Response fields
 
 | Field        | Type                          | Req.    | OpenS.  | Details                   |
