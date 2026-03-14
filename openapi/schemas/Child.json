@@ -231,6 +231,20 @@
         },
         "explicitStatus": {
             "$ref": "./ExplicitStatus.json"
+        },
+        "works": {
+            "type": "array",
+            "items": {
+                "$ref": "./Work.json"
+            },
+            "description": "The list of works associated with the song."
+        },
+        "movements": {
+            "type": "array",
+            "items": {
+                "$ref": "./Movement.json"
+            },
+            "description": "The list of movements associated with the song."
         }
     },
     "required": [
