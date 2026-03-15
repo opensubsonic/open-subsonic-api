@@ -438,7 +438,6 @@ Servers that don't support TTML or word-level timing simply never include these 
 - Cues within a `cueLine` **must not** overlap (i.e. `cue[n].end` **must** be ≤ `cue[n+1].start`). Servers **must** normalize any source overlaps so that clients can iterate cues sequentially without overlap-resolution logic. Overlapping timing across different cueLines (different `agentId` values) is expected, since those represent parallel vocal layers.
 - Cues where `start == end` (zero-duration) may occur. Clients should treat these as instantaneous markers.
 - `structuredLyrics` entries are independent across `kind` tracks, including `main`. Clients should not assume 1:1 correspondence of `line` arrays or `cueLine` arrays between tracks.
-- Agent identity is also independent across `kind` tracks. Clients should not assume an `agentId` in one `structuredLyrics` entry refers to the same singer, character, or vocal layer in another entry.
 - Cue counts may differ across `kind` tracks for the same lyric passage. Clients should not assume 1:1 cue correspondence between tracks.
 - For right-to-left scripts (Arabic, Hebrew), cues are in logical reading order. Clients are responsible for bidi rendering.
 
