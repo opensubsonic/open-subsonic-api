@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "description": "Word/syllable-level timing data for a lyrics line",
+  "externalDocs": {
+    "description": "CueLine",
+    "url": "https://opensubsonic.netlify.app/docs/responses/cueline/"
+  },
+  "properties": {
+    "index": {
+      "type": "integer",
+      "description": "Zero-based index into the parent line array this cueLine corresponds to"
+    },
+    "start": {
+      "type": "integer",
+      "description": "Start time in milliseconds (may differ from the parent line if cues are more precise)"
+    },
+    "end": {
+      "type": "integer",
+      "description": "End time in milliseconds"
+    },
+    "value": {
+      "type": "string",
+      "description": "Full text of the line (for validation/fallback)"
+    },
+    "agentId": {
+      "type": "string",
+      "description": "Opaque identifier referencing an agent in the same structuredLyrics entry. If the parent structuredLyrics entry includes agents, every cueLine in that entry must include agentId, and the value must match exactly one agents[].id in that entry. If the parent entry does not include agents, cueLines must not include agentId. When multiple cueLines share the same index, the cueLine whose referenced agent has role main must come first"
+    },
+    "cue": {
+      "type": "array",
+      "description": "Ordered list of word/syllable cues",
+      "items": {
+        "$ref": "./Cue.json"
+      }
+    }
+  },
+  "required": [
+    "index",
+    "cue"
+  ]
+}

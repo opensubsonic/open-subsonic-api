@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "A word or syllable cue within a cueLine",
+  "externalDocs": {
+    "description": "Cue",
+    "url": "https://opensubsonic.netlify.app/docs/responses/cue/"
+  },
+  "properties": {
+    "start": {
+      "type": "integer",
+      "description": "Start time in milliseconds"
+    },
+    "end": {
+      "type": "integer",
+      "description": "End time in milliseconds. Within a cueLine, end must be either present on all cues or none. When the source provides partial end times, servers must fill missing values (e.g., using the next cue's start, or the cueLine's end for the final cue). When no cues have end times (e.g., Enhanced LRC with start-only timing), end is omitted from all cues. This is a documented contract rule; this schema does not enforce the all-or-none shape structurally"
+    },
+    "value": {
+      "type": "string",
+      "description": "The text of this word or syllable"
+    }
+  },
+  "required": [
+    "start",
+    "value"
+  ]
+}
