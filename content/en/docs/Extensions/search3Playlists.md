@@ -26,4 +26,4 @@ The server **should** use the query text to search playlist names.
 
 The server **may** also use the query text to search playlists by other metadata; this is an implementation detail left up to the server developer. However it is implemented, the server **should not** return playlist results irrelevant to the user's query.
 
-The server **may** order playlist results by name, by relevance, or by some other criteria.
+The server **may** order playlist results by name, by relevance, or by some other criteria. The same input **should** return results in the same order every time (deterministic).
