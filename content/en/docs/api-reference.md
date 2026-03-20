@@ -174,3 +174,16 @@ Note that even though the error text for `41` is `Token authentication not suppo
 To indicate differences between cases (where LDAP is used, versus no LDAP), servers may use the new `helpUrl` field.
 New fields are added, see [`error`](../responses/error)
 {{< /alert >}}
+
+## Endpoints
+
+For the widest possible compatibility with clients, server developers may find it useful implement as many endpoints as possible (aside from endpoints that are defined as extensions, which provide a specific mechanism to declare presence or absence of that endpoint).
+
+However, for reasons of practicality, some servers may be unwilling or unable to implement every endpoint defined by this specification. In these cases, the server may return an HTTP error status code.
+
+Client developers may check for these status codes to determine if the server implements functionality related to a particular endpoint. This allows the client to selectively disable access to specific features or functionality depending on what the server supports. In the case of 410, the client should implement the recommended replacement endpoint.
+
+| Code     | Description                                                                                                           |
+| -------- | --------------------------------------------------------------------------------------------------------------------- |
+| HTTP 404 | This server does not implement the requested endpoint.                                                                |
+| HTTP 410 | This server does not implement the requested endpoint because it has been marked obsolete in the OpenSubsonic spec.   |
