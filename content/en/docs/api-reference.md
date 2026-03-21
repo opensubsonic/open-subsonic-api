@@ -177,7 +177,7 @@ New fields are added, see [`error`](../responses/error)
 
 ## Endpoints
 
-For the widest possible compatibility with clients, server developers may find it useful to implement as many endpoints as possible (aside from endpoints that are defined as extensions, which provide a specific mechanism to declare presence or absence of that endpoint).
+For the widest possible compatibility with clients, server developers may find it useful implement as many endpoints as possible (aside from endpoints that are defined as extensions, which provide a specific mechanism to declare presence or absence of that endpoint).
 
 However, for reasons of practicality, some servers may be unwilling or unable to implement every endpoint defined by this specification. In these cases, the server may return an HTTP error status code.
 
