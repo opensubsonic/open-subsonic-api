@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "description": "A movement associated with a song.",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The movement name."
+        },
+        "number": {
+            "type": "integer",
+            "description": "The movement number."
+        },
+        "count": {
+            "type": "integer",
+            "description": "The total number of movements."
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "externalDocs": {
+        "description": "Movement",
+        "url": "https://opensubsonic.netlify.app/docs/responses/movement/"
+    }
+}
