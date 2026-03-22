@@ -39,19 +39,22 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "id": "1",
           "name": "HBR1.com - Dream Factory",
           "streamUrl": "http://ubuntu.hbr1.com:19800/ambient.aac",
-          "homepageUrl": "http://www.hbr1.com/"
+          "homepageUrl": "http://www.hbr1.com/",
+          "coverArt": "ir-1"
         },
         {
           "id": "2",
           "name": "HBR1.com - I.D.M. Tranceponder",
           "streamUrl": "http://ubuntu.hbr1.com:19800/trance.ogg",
-          "homepageUrl": "http://www.hbr1.com/"
+          "homepageUrl": "http://www.hbr1.com/",
+          "coverArt": "ir-2"
         },
         {
           "id": "3",
           "name": "4ZZZ Community Radio",
           "streamUrl": "https://stream.4zzz.org.au:9200/4zzz",
-          "homepageUrl": "https://4zzzfm.org.au"
+          "homepageUrl": "https://4zzzfm.org.au",
+          "coverArt": "ir-3"
         }
       ]
     }

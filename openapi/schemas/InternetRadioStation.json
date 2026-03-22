@@ -21,6 +21,10 @@
         "homePageUrl": {
             "type": "string",
             "description": "Genre name"
+        },
+        "coverArt": {
+            "type": "string",
+            "description": "The cover art id."
         }
     },
     "required": [
