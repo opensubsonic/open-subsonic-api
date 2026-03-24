@@ -31,5 +31,5 @@ description: >
 | `id` | `string` | **Yes** |     | The Id |
 | `name` | `string` | **Yes** |     | The name |
 | `streamUrl` | `string` | **Yes**|     | The radio url |
-| `homePageUrl` | `string` | No |     | Genre name |
+| `homepageUrl` | `string` | No |     | The home page URL for the station. |
 | `coverArt` | `string` | No | **Yes** | The cover art id. |

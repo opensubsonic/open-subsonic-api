@@ -18,9 +18,9 @@
             "type": "string",
             "description": "The streamUrl"
         },
-        "homePageUrl": {
+        "homepageUrl": {
             "type": "string",
-            "description": "Genre name"
+            "description": "The home page URL for the station."
         },
         "coverArt": {
             "type": "string",
