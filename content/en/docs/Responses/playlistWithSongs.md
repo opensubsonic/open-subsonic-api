@@ -101,7 +101,7 @@ description: >
 | --- | --- | --- | --- | --- |
 | `id` | `string` | **Yes** |     | Id of the playlist |
 | `name` | `string` | **Yes** |     | Name of the playlist |
-| `comment` | `string` | No|     | A commnet |
+| `comment` | `string` | No|     | A comment |
 | `owner` | `string` | No |     | Owner of the playlist |
 | `public` | `boolean` | No|     | Is the playlist public |
 | `songCount` | `int` | **Yes** |     | number of songs |
