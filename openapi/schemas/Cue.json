@@ -14,6 +14,16 @@
       "type": "integer",
       "description": "End time in milliseconds. Within a cueLine, end must be either present on all cues or none. When the source provides partial end times, servers must fill missing values (e.g., using the next cue's start, or the cueLine's end for the final cue). When no cues have end times (e.g., Enhanced LRC with start-only timing), end is omitted from all cues. This is a documented contract rule; this schema does not enforce the all-or-none shape structurally"
     },
+    "byteStart": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Zero-based inclusive UTF-8 byte offset into the parent cueLine.value where this cue begins. If present, byteEnd must also be present, the parent cueLine must include value, and the offsets must be calculated against the final cueLine.value with no normalization step. This is a documented contract rule; the schema does not enforce the pairing or cross-field consistency structurally"
+    },
+    "byteEnd": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Zero-based inclusive UTF-8 byte offset into the parent cueLine.value where this cue ends. If present, byteStart must also be present, byteStart must be less than or equal to byteEnd, the parent cueLine must include value, and the offsets must be calculated against the final cueLine.value with no normalization step. This is a documented contract rule; the schema does not enforce the pairing or cross-field consistency structurally"
+    },
     "value": {
       "type": "string",
       "description": "The text of this word or syllable"

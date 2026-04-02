@@ -23,7 +23,7 @@ The lyrics can come from embedded tags (`SYLT`/`USLT`), LRC file/text file, or a
 | Parameter  | Req.    | OpenS.  | Default | Comment                                                                                                                                                |
 | ---------- | ------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `id`       | **Yes** | **Yes** |         | The track ID.                                                                                                                                          |
-| `enhanced` | No      | **Yes** | `false` | When `true`, the response includes [`cueLine`](../../responses/cueline) arrays and non-main [`kind`](../../responses/structuredlyrics) tracks (translations, pronunciations). When `false` or omitted, only `kind="main"` entries are returned with no `cueLine` data. Added in [`songLyrics`](../../extensions/songlyrics) version 2. |
+| `enhanced` | No      | **Yes** | `false` | When `true`, the response includes [`cueLine`](../../responses/cueline) arrays, optional cue `byteStart` / `byteEnd` offsets into `cueLine.value`, and non-main [`kind`](../../responses/structuredlyrics) tracks (translations, pronunciations). When `false` or omitted, only `kind="main"` entries are returned with no `cueLine` data. Added in [`songLyrics`](../../extensions/songlyrics) version 2. |
 
 {{< alert color="warning" title="Special notes about the lang field" >}}
 Ideally, the server will return `lang` as an ISO 639 (2/3) code.
@@ -123,7 +123,7 @@ Does not exist.
 
 #### Version 2 (`enhanced=true`)
 
-When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, optional per-entry [`agents`](../../responses/agent) metadata for agent attribution, and additional tracks such as translations and pronunciations.
+When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, optional cue `byteStart` / `byteEnd` offsets into `cueLine.value` for ambiguous repeated text, optional per-entry [`agents`](../../responses/agent) metadata for agent attribution, and additional tracks such as translations and pronunciations.
 
 {{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?id=456&enhanced=true&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
@@ -409,6 +409,43 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
+##### Example with ambiguous repeated text
+
+When `cueLine.value` contains untimed text between timed cues, `byteStart` / `byteEnd` identifies the exact substring each timed cue covers:
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "cueLine": [
+    {
+      "index": 0,
+      "start": 0,
+      "end": 2400,
+      "value": "Oh love love me tonight",
+      "cue": [
+        { "start": 0, "end": 300, "value": "Oh", "byteStart": 0, "byteEnd": 1 },
+        { "start": 900, "end": 1300, "value": "love", "byteStart": 8, "byteEnd": 11 },
+        { "start": 1300, "end": 1600, "value": "me", "byteStart": 13, "byteEnd": 14 },
+        { "start": 1600, "end": 2400, "value": "tonight", "byteStart": 16, "byteEnd": 22 }
+      ]
+    }
+  ]
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<cueLine index="0" start="0" end="2400" value="Oh love love me tonight">
+  <cue start="0" end="300" byteStart="0" byteEnd="1">Oh</cue>
+  <cue start="900" end="1300" byteStart="8" byteEnd="11">love</cue>
+  <cue start="1300" end="1600" byteStart="13" byteEnd="14">me</cue>
+  <cue start="1600" end="2400" byteStart="16" byteEnd="22">tonight</cue>
+</cueLine>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### Response fields
 
 | Field        | Type                          | Req.    | OpenS.  | Details                   |
@@ -435,6 +472,7 @@ Servers that don't support TTML or word-level timing simply never include these 
 - `agents` are scoped to a single `structuredLyrics` entry. When present, `agents` **must** contain at least one entry, and each `agents[].id` **must** be unique within that entry. `agents` are optional for simple unattributed single-layer lyrics. When a `structuredLyrics` entry represents multiple vocal agents/layers, it **must** include `agents`; a single-agent attributed/default entry may also include `agents`, and if it does, exactly one agent **must** use `role: "main"`. `agents` should not be emitted without `cueLine` data.
 - When multiple cueLines share the same `index`, the cueLine whose referenced agent has `role: "main"` **must** come first. Clients should not assume every source can distinguish or emit multiple agents.
 - If `agents` is present, every `cueLine` in that entry **must** include `agentId`, and each `agentId` **must** match exactly one `agents[].id` in that entry. If `agents` is absent, cueLines **must not** include `agentId`.
+- `byteStart` / `byteEnd` on a cue are optional, but when present they **must** appear together, the parent `cueLine` **must** include `value`, they are 0-based inclusive offsets into the final UTF-8 encoding of that `cueLine.value` with no normalization step, and `byteStart` **must** be ≤ `byteEnd`. This is a documented contract rule; the OpenAPI schema does not encode the pairing or cross-field consistency structurally.
 - Cues within a `cueLine` **must not** overlap (i.e. `cue[n].end` **must** be ≤ `cue[n+1].start`). Servers **must** normalize any source overlaps so that clients can iterate cues sequentially without overlap-resolution logic. Overlapping timing across different cueLines (different `agentId` values) is expected, since those represent parallel vocal layers.
 - Cues where `start == end` (zero-duration) may occur. Clients should treat these as instantaneous markers.
 - `structuredLyrics` entries are independent across `kind` tracks, including `main`. Clients should not assume 1:1 correspondence of `line` arrays or `cueLine` arrays between tracks.

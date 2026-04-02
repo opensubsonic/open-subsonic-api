@@ -48,9 +48,9 @@ Does not exist.
 
 ### Version 2 (enhanced — word/syllable-level with kind)
 
-When `enhanced=true` is passed to [`getLyricsBySongId`](../../endpoints/getlyricsbysongid), the response includes additional fields: `kind` to classify lyric tracks, `cueLine` arrays with word/syllable-level timing, and optional `agents` arrays for reusable agent attribution.
+When `enhanced=true` is passed to [`getLyricsBySongId`](../../endpoints/getlyricsbysongid), the response includes additional fields: `kind` to classify lyric tracks, `cueLine` arrays with word/syllable-level timing, optional cue `byteStart` / `byteEnd` offsets into `cueLine.value` when repeated text would otherwise be ambiguous, and optional `agents` arrays for reusable agent attribution.
 
-Each `structuredLyrics` entry is self-contained. Clients should treat tracks with different `kind` values, including `main`, as independent layers rather than assuming 1:1 line or cue alignment between them. Agent identity is also scoped to a single `structuredLyrics` entry; `agents[].id` values have no meaning outside that entry.
+Each `structuredLyrics` entry is self-contained. Clients should treat tracks with different `kind` values, including `main`, as independent layers rather than assuming 1:1 line or cue alignment between them. Agent identity is also scoped to a single `structuredLyrics` entry; `agents[].id` values have no meaning outside that entry. When a cue uses `byteStart` / `byteEnd`, those offsets are always relative to the final `cueLine.value` string in the same entry.
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
