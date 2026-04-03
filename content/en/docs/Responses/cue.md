@@ -13,11 +13,13 @@ description: >
 {
   "start": 2747,
   "end": 3018,
-  "value": "눈"
+  "value": "눈",
+  "byteStart": 0,
+  "byteEnd": 2
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
-<cue start="2747" end="3018">눈</cue>
+<cue start="2747" end="3018" byteStart="0" byteEnd="2">눈</cue>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.
@@ -51,12 +53,12 @@ Does not exist.
 | ----------- | --------- | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `start`     | `integer` | **Yes** | **Yes** | Start time in milliseconds                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `end`       | `integer` | No      | **Yes** | End time in milliseconds. Within a [`cueLine`](../cueline), `end` **must** be either present on **all** cues or **none**. When the source provides partial end times, servers **must** fill missing values (e.g., using the next cue's `start`, or the cueLine's `end` for the final cue). When no cues have end times (e.g., Enhanced LRC with start-only timing), `end` is omitted from all cues. This is a documented contract rule; the OpenAPI schema does not enforce the all-or-none shape structurally |
-| `byteStart` | `integer` | No      | **Yes** | Zero-based inclusive UTF-8 byte offset into the parent [`cueLine.value`](../cueline) where this cue begins                                                                                                                                                                                                                                                                                                                                                                            |
-| `byteEnd`   | `integer` | No      | **Yes** | Zero-based inclusive UTF-8 byte offset into the parent [`cueLine.value`](../cueline) where this cue ends                                                                                                                                                                                                                                                                                                                                                                              |
+| `byteStart` | `integer` | **Yes** | **Yes** | Zero-based inclusive UTF-8 byte offset into the parent [`cueLine.value`](../cueline) where this cue begins                                                                                                                                                                                                                                                                                                                                                                            |
+| `byteEnd`   | `integer` | **Yes** | **Yes** | Zero-based inclusive UTF-8 byte offset into the parent [`cueLine.value`](../cueline) where this cue ends                                                                                                                                                                                                                                                                                                                                                                              |
 | `value`     | `string`  | **Yes** | **Yes** | The text of this word or syllable                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 {{< alert color="primary" title="byteStart / byteEnd behavior" >}}
-`byteStart` and `byteEnd` are an all-or-none pair on a cue. When present, both **must** be present, the parent `cueLine` **must** include `value`, the offsets are calculated against the final UTF-8 encoding of that `cueLine.value` with no normalization step, and `byteStart` **must** be less than or equal to `byteEnd`. This is a documented contract rule; the OpenAPI schema does not enforce the pairing or cross-field consistency structurally.
+Every cue **must** include `byteStart` and `byteEnd`. The parent `cueLine` **must** include `value`, the offsets are calculated against the final UTF-8 encoding of that `cueLine.value` with no normalization step, and `byteStart` **must** be less than or equal to `byteEnd`. The OpenAPI schema enforces the presence of the fields, but not the cross-field ordering constraint structurally.
 {{< /alert >}}
 
 {{< alert color="warning" title="OpenSubsonic" >}}

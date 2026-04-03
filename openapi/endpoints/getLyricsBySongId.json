@@ -20,7 +20,7 @@
             {
                 "name": "enhanced",
                 "in": "query",
-                "description": "When true, the response includes cueLine arrays with word/syllable-level timing data, optional cue byteStart and byteEnd offsets into cueLine.value, and non-main kind tracks (translations, pronunciations). When false or omitted, only kind=main entries are returned with no cueLine data.",
+                "description": "When true, the response includes cueLine arrays with word/syllable-level timing data, required cue byteStart and byteEnd offsets into cueLine.value, and non-main kind tracks (translations, pronunciations). When false or omitted, only kind=main entries are returned with no cueLine data.",
                 "required": false,
                 "schema": {
                     "type": "boolean",
@@ -70,7 +70,7 @@
                             "enhanced": {
                                 "type": "boolean",
                                 "default": false,
-                                "description": "When true, the response includes cueLine arrays with word/syllable-level timing data, optional cue byteStart and byteEnd offsets into cueLine.value, and non-main kind tracks (translations, pronunciations). When false or omitted, only kind=main entries are returned with no cueLine data."
+                                "description": "When true, the response includes cueLine arrays with word/syllable-level timing data, required cue byteStart and byteEnd offsets into cueLine.value, and non-main kind tracks (translations, pronunciations). When false or omitted, only kind=main entries are returned with no cueLine data."
                             }
                         },
                         "required": [

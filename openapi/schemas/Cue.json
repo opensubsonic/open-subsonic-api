@@ -17,12 +17,12 @@
     "byteStart": {
       "type": "integer",
       "minimum": 0,
-      "description": "Zero-based inclusive UTF-8 byte offset into the parent cueLine.value where this cue begins. If present, byteEnd must also be present, the parent cueLine must include value, and the offsets must be calculated against the final cueLine.value with no normalization step. This is a documented contract rule; the schema does not enforce the pairing or cross-field consistency structurally"
+      "description": "Required zero-based inclusive UTF-8 byte offset into the parent cueLine.value where this cue begins. The parent cueLine must include value, and the offsets must be calculated against the final cueLine.value with no normalization step"
     },
     "byteEnd": {
       "type": "integer",
       "minimum": 0,
-      "description": "Zero-based inclusive UTF-8 byte offset into the parent cueLine.value where this cue ends. If present, byteStart must also be present, byteStart must be less than or equal to byteEnd, the parent cueLine must include value, and the offsets must be calculated against the final cueLine.value with no normalization step. This is a documented contract rule; the schema does not enforce the pairing or cross-field consistency structurally"
+      "description": "Required zero-based inclusive UTF-8 byte offset into the parent cueLine.value where this cue ends. byteStart must be less than or equal to byteEnd, the parent cueLine must include value, and the offsets must be calculated against the final cueLine.value with no normalization step. This schema does not enforce the cross-field ordering constraint structurally"
     },
     "value": {
       "type": "string",
@@ -31,6 +31,8 @@
   },
   "required": [
     "start",
+    "byteStart",
+    "byteEnd",
     "value"
   ]
 }

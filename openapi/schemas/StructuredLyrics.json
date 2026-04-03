@@ -52,7 +52,7 @@
         },
         "cueLine": {
             "type": "array",
-            "description": "Word/syllable-level timing data. Each cueLine corresponds to a line in this structuredLyrics entry by its index field. If agents is present, every cueLine in the entry must include agentId, and each agentId must match exactly one agents[].id in that entry. If agents is absent, cueLines must not include agentId. Cues may also include byteStart and byteEnd offsets into cueLine.value when repeated text would otherwise be ambiguous. Only returned when enhanced=true and synced is true",
+            "description": "Word/syllable-level timing data. Each cueLine corresponds to a line in this structuredLyrics entry by its index field. Every cueLine includes value, and every cue includes byteStart and byteEnd offsets into that exact string. If agents is present, every cueLine in the entry must include agentId, and each agentId must match exactly one agents[].id in that entry. If agents is absent, cueLines must not include agentId. Only returned when enhanced=true and synced is true",
             "items": {
                 "$ref": "./CueLine.json"
             }
