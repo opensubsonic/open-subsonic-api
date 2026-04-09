@@ -112,6 +112,7 @@ description: >
 | `artist` | `string` | No |     | Artist name.  |
 | `artistId` | `string` | No |    | The id of the artist |
 | `coverArt` | `string` | No |     | A covertArt id.  |
+| `coverArtUrl` | `string` | No | **Yes** | A direct URL to the cover art image. Clients SHOULD prefer this over calling `getCoverArt` when available. `infiniteLibrary` extension. |
 | `songCount` | `int` | **Yes** |     | Number of songs |
 | `duration` | `int` | **Yes** |     | Total duration of the album in seconds |
 | `playCount` | `long` | No |     | Number of play of the album |
@@ -153,6 +154,7 @@ New fields are added:
 - `isCompilation`
 - `discTitles`
 - `explicitStatus`
+- `coverArtUrl` (`infiniteLibrary` extension)
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 

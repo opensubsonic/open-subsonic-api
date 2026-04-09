@@ -136,3 +136,6 @@ description: >
 | `artist` | Array of [`ArtistID3`](../artistid3) | No |     | Matching artists |
 | `album` | Array of [`AlbumID3`](../albumid3) | No |     |  Matching albums  |
 | `song` | Array of [`Child`](../child) | No |     | Matching songs |
+| `totalArtistCount` | `int` | No | **Yes** | Total number of matching artists (may exceed returned count due to pagination). `infiniteLibrary` extension. |
+| `totalAlbumCount` | `int` | No | **Yes** | Total number of matching albums. `infiniteLibrary` extension. |
+| `totalSongCount` | `int` | No | **Yes** | Total number of matching songs. `infiniteLibrary` extension. |

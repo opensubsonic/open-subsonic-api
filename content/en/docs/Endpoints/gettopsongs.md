@@ -15,8 +15,17 @@ Returns top songs for the given artist, using data from [last.fm](http://last.fm
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `artist` | **Yes** |  |   | The artist name. |
+| `artist` | **Yes*** |  |   | The artist name. |
+| `artistId` | No | **Yes** |   | The artist ID. If provided, takes precedence over the `artist` string. |
 | `count` | No  | |  50  | Max number of songs to return. |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+**`infiniteLibrary` extension (version 1):**
+
+The `artist` parameter requires the server to perform a string-based lookup which can be ambiguous when multiple artists share similar names. Servers that support the [`infiniteLibrary`](../../extensions/infinitelibrary/) extension SHOULD accept the `artistId` parameter and use it for a direct, deterministic lookup.
+
+When `artistId` is provided, the `artist` parameter becomes optional. Servers MUST return an error if neither `artist` nor `artistId` is provided.
+{{< /alert >}}
 
 ### Example
 

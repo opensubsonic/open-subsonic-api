@@ -27,9 +27,16 @@ Music is organized according to ID3 tags.
 | `songCount` | No |   | 20  | Maximum number of songs to return. |
 | `songOffset` | No |   | 0   | Search result offset for songs. Used for paging. |
 | `musicFolderId` | No |   |     | (Since [1.12.0](../../subsonic-versions)) Only return results from music folder with the given ID. See `getMusicFolders`. |
+| `type` | No | **Yes** |  | Comma-separated list of result types to include: `artist`, `album`, `song`. If omitted, all types are returned. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 Servers must support an **empty query** and return all the data to allow clients to properly access all the media information for offline sync.
+
+**`infiniteLibrary` extension (version 1):**
+
+- Servers that support very large catalogs MAY return error code `71` for empty queries when the library exceeds a practical sync threshold.
+- The `type` parameter allows clients to explicitly request only the result types they need. When specified, the server SHOULD skip computation for excluded types entirely (not just omit them from the response). This is semantically stronger than setting a count to `0`, which has undefined behavior across implementations.
+- When a count parameter is explicitly set to `0` (e.g., `artistCount=0`), servers MUST NOT return results of that type, and SHOULD NOT perform the underlying search for that type.
 {{< /alert >}}
 
 ### Example

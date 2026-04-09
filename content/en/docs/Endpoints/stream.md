@@ -26,6 +26,7 @@ Streams a given media file.
 | `size` | No  |   |   | (Since [1.6.0](../../subsonic-versions)) Only applicable to video streaming. Requested video size specified as WxH, for instance "640x480". |
 | `estimateContentLength` | No |  | false | (Since [1.8.0](../../subsonic-versions)). If set to "true", the *Content-Length* HTTP header will be set to an estimated value for transcoded or downsampled media. |
 | `converted` | No  | | false | (Since [1.14.0](../../subsonic-versions)) Only applicable to video streaming. Servers can optimize videos for streaming by converting them to MP4. If a conversion exists for the video in question, then setting this parameter to "true" will cause the converted video to be returned instead of the original. |
+| `streamMode` | No | **Yes** | `binary` | `binary`: current behavior (raw audio bytes). `redirect`: server returns HTTP 302 to the audio source URL. `manifest`: server returns an HLS/DASH manifest if the source supports adaptive streaming. `infiniteLibrary` extension (version 2). |
 
 ### Example
 
@@ -40,4 +41,12 @@ OpenSubsonic servers **must not** count access to this endpoint as a play and in
 
 If the server support the [`Transcode Offset`](../../extensions/transcodeoffset/) extension, then it must accept the `timeOffset` parameter for music too.
 
+**`infiniteLibrary` extension (version 2):**
+
+The `streamMode` parameter allows clients to opt into more efficient streaming modes:
+
+- `redirect`: The server responds with HTTP 302 pointing to the actual audio file URL. Suitable for native clients that can follow redirects and handle direct streams. This eliminates server-side proxying overhead entirely.
+- `manifest`: The server responds with an HLS (`.m3u8`) or DASH (`.mpd`) manifest. Suitable for clients that support adaptive bitrate streaming. The response Content-Type will be `application/vnd.apple.mpegurl` or `application/dash+xml`.
+
+If the server cannot fulfill the requested `streamMode`, it MUST fall back to `binary` mode silently.
 {{< /alert >}}

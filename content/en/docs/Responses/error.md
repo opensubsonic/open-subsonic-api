@@ -46,3 +46,4 @@ The following error codes are defined:
 | 50   | User is not authorized for the given operation.                                                                       |
 | 60   | The trial period for the Subsonic server is over. Please upgrade to Subsonic Premium. Visit subsonic.org for details. |
 | 70   | The requested data was not found.                                                                                     |
+| 71   | The requested operation would return too many results. The client should refine the query. (`infiniteLibrary` extension) |
