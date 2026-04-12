@@ -30,9 +30,11 @@ Adds:
 - [`agent`](../../responses/agent) objects within an optional `agents` array on [`structuredLyrics`](../../responses/structuredlyrics) for reusable agent attribution metadata
 - [`cueLine`](../../responses/cueline) array on [`structuredLyrics`](../../responses/structuredlyrics) for word/syllable-level timing
 - `agentId` field on [`cueLine`](../../responses/cueline) to reference an [`agent`](../../responses/agent) in the same `structuredLyrics` entry
-- [`cue`](../../responses/cue) objects within each `cueLine` for individual word/syllable timestamps
+- [`cue`](../../responses/cue) objects within each `cueLine` for individual word/syllable timestamps, with required `byteStart` / `byteEnd` offsets into `cueLine.value`
 
 When agent attribution is present, the reusable agent metadata lives once in `structuredLyrics.agents`, while each `cueLine` points at the relevant agent via `agentId`. Simple unattributed single-layer lyrics may omit `agents` entirely. Entries with multiple vocal agents/layers **must** emit `agents`, and every attributed entry that uses `agents` **must** define exactly one `role: "main"` agent. A single-agent attributed/default layer may also use `agents` with that lone agent marked as `main`.
+
+Each cue includes `byteStart` / `byteEnd`, defined as 0-based inclusive offsets into the UTF-8 encoding of the final parent `cueLine.value`, with no normalization step. Accordingly, each `cueLine` that contains cues must also include `value`.
 
 All new fields are gated behind `enhanced=true` — without it, the response is identical to version 1.
 

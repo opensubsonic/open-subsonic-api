@@ -20,7 +20,7 @@
     },
     "value": {
       "type": "string",
-      "description": "Full text of the line (for validation/fallback)"
+      "description": "Required full text of the line. Nested cue byteStart and byteEnd offsets are always calculated against this exact final UTF-8 string"
     },
     "agentId": {
       "type": "string",
@@ -28,7 +28,7 @@
     },
     "cue": {
       "type": "array",
-      "description": "Ordered list of word/syllable cues",
+      "description": "Ordered list of word/syllable cues. Every cue includes required byteStart and byteEnd offsets into value",
       "items": {
         "$ref": "./Cue.json"
       }
@@ -36,6 +36,7 @@
   },
   "required": [
     "index",
+    "value",
     "cue"
   ]
 }
