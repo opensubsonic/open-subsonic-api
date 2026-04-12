@@ -1,0 +1,22 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "sonicMatch": {
+                    "type": "array",
+                    "description": "An ordered list of songs with similarity values.",
+                    "items": {
+                        "$ref": "../../schemas/SonicMatch.json"
+                    }
+                }
+            },
+            "required": [
+                "sonicMatch"
+            ]
+        }
+    ]
+}

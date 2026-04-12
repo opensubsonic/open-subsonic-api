@@ -50,6 +50,12 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
                 "versions": [
                     1
                 ]
+            },
+            {
+                "name": "sonicSimilarity",
+                "versions": [
+                    1
+                ]
             }
         ]
     }

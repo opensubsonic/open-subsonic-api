@@ -1,0 +1,19 @@
+{
+    "description": "A sonic match entry, containing a Child entry object and a normalized similarity score.",
+    "type": "object",
+    "properties": {
+        "entry": {
+            "$ref": "./Child.json"
+        },
+        "similarity": {
+            "type": "number",
+            "description": "The normalized similarity score (1.0 = same exact song, 0.0 = most different). For getSonicSimilarTracks, relative to the query song. For findSonicPath, relative to the starting song. Returns -1 when similarity is not supported by the server.",
+            "minimum": -1,
+            "maximum": 1
+        }
+    },
+    "required": [
+        "entry",
+        "similarity"
+    ]
+}
