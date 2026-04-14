@@ -135,7 +135,8 @@ description: >
       "number": 2,
       "count": 4
     }
-  ]
+  ],
+  "groupings": ["Soundtrack", "Live"]
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
@@ -225,6 +226,7 @@ description: >
 | `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit", "clean" or "". (For songs extracted from tags "ITUNESADVISORY": 1 = explicit, 2 = clean, MP4 "rtng": 1 or 4 = explicit, 2 = clean. See [`albumID3`](../albumid3) for albums) |
 | `works` | Array of [`Work`](../work) | No |  **Yes**   | The list of works associated with the song. |
 | `movements` | Array of [`Movement`](../movement) | No |  **Yes**   | The list of movements associated with the song. |
+| `groupings` | Array of `string` | No |  **Yes**   | The list of groupings associated with the song. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
@@ -247,6 +249,7 @@ New fields are added:
 - `explicitStatus`
 - `works`
 - `movements`
+- `groupings`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 
