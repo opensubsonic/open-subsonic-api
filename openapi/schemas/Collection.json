@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "description": "Collection.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Id of the collection"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the collection"
+        },
+        "comment": {
+            "type": "string",
+            "description": "A comment"
+        },
+        "owner": {
+            "type": "string",
+            "description": "Owner of the collection"
+        },
+        "public": {
+            "type": "boolean",
+            "description": "Is the collection public"
+        },
+        "itemCount": {
+            "type": "integer",
+            "description": "Number of items"
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation date [ISO 8601]"
+        },
+        "changed": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last changed date [ISO 8601]"
+        },
+        "allowedUser": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "A list of allowed usernames"
+        },
+        "readonly": {
+            "type": "boolean",
+            "description": "If true the collection cannot be edited by the current user"
+        },
+        "validUntil": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date the collection contents are considered valid until [ISO 8601]. Empty or absent means no caching guarantee."
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "itemCount",
+        "created",
+        "changed"
+    ],
+    "externalDocs": {
+        "description": "Collection",
+        "url": "https://opensubsonic.netlify.app/docs/responses/collection/"
+    }
+}
