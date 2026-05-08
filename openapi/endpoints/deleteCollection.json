@@ -1,0 +1,72 @@
+{
+    "get": {
+        "summary": "Deletes a saved collection.",
+        "description": "Deletes a saved collection.",
+        "operationId": "deleteCollection",
+        "tags": [
+            "Collections"
+        ],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "ID of the collection to delete, as obtained by `getCollections`.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deleteCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deletecollection/"
+        }
+    },
+    "post": {
+        "summary": "Deletes a saved collection.",
+        "description": "Deletes a saved collection.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postDeleteCollection",
+        "tags": [
+            "Collections"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "ID of the collection to delete, as obtained by `getCollections`."
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deleteCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deletecollection/"
+        }
+    }
+}

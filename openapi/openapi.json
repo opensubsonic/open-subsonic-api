@@ -59,6 +59,9 @@
             "name": "Playlists"
         },
         {
+            "name": "Collections"
+        },
+        {
             "name": "Lists"
         },
         {
@@ -117,6 +120,9 @@
         "/rest/createPlaylist": {
             "$ref": "./endpoints/createPlaylist.json"
         },
+        "/rest/createCollection": {
+            "$ref": "./endpoints/createCollection.json"
+        },
         "/rest/createPodcastChannel": {
             "$ref": "./endpoints/createPodcastChannel.json"
         },
@@ -134,6 +140,9 @@
         },
         "/rest/deletePlaylist": {
             "$ref": "./endpoints/deletePlaylist.json"
+        },
+        "/rest/deleteCollection": {
+            "$ref": "./endpoints/deleteCollection.json"
         },
         "/rest/deletePodcastChannel": {
             "$ref": "./endpoints/deletePodcastChannel.json"
@@ -236,6 +245,12 @@
         },
         "/rest/getPlaylists": {
             "$ref": "./endpoints/getPlaylists.json"
+        },
+        "/rest/getCollection": {
+            "$ref": "./endpoints/getCollection.json"
+        },
+        "/rest/getCollections": {
+            "$ref": "./endpoints/getCollections.json"
         },
         "/rest/getPlayQueue": {
             "$ref": "./endpoints/getPlayQueue.json"
@@ -356,6 +371,9 @@
         },
         "/rest/updatePlaylist": {
             "$ref": "./endpoints/updatePlaylist.json"
+        },
+        "/rest/updateCollection": {
+            "$ref": "./endpoints/updateCollection.json"
         },
         "/rest/updateShare": {
             "$ref": "./endpoints/updateShare.json"
@@ -478,6 +496,21 @@
             },
             "CreatePlaylistResponse": {
                 "$ref": "./endpoints/createPlaylist/CreatePlaylistResponse.json"
+            },
+            "Collection": {
+                "$ref": "./schemas/Collection.json"
+            },
+            "CollectionItem": {
+                "$ref": "./schemas/CollectionItem.json"
+            },
+            "CollectionWithItems": {
+                "$ref": "./schemas/CollectionWithItems.json"
+            },
+            "CreateCollectionSuccessResponse": {
+                "$ref": "./endpoints/createCollection/CreateCollectionSuccessResponse.json"
+            },
+            "CreateCollectionResponse": {
+                "$ref": "./endpoints/createCollection/CreateCollectionResponse.json"
             },
             "Share": {
                 "$ref": "./schemas/Share.json"
@@ -757,6 +790,21 @@
             },
             "GetPlaylistsResponse": {
                 "$ref": "./endpoints/getPlaylists/GetPlaylistsResponse.json"
+            },
+            "GetCollectionSuccessResponse": {
+                "$ref": "./endpoints/getCollection/GetCollectionSuccessResponse.json"
+            },
+            "GetCollectionResponse": {
+                "$ref": "./endpoints/getCollection/GetCollectionResponse.json"
+            },
+            "Collections": {
+                "$ref": "./schemas/Collections.json"
+            },
+            "GetCollectionsSuccessResponse": {
+                "$ref": "./endpoints/getCollections/GetCollectionsSuccessResponse.json"
+            },
+            "GetCollectionsResponse": {
+                "$ref": "./endpoints/getCollections/GetCollectionsResponse.json"
             },
             "PlayQueue": {
                 "$ref": "./schemas/PlayQueue.json"

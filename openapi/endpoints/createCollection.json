@@ -1,0 +1,176 @@
+{
+    "get": {
+        "summary": "Creates (or updates) a collection.",
+        "description": "Creates (or updates) a collection.",
+        "operationId": "createCollection",
+        "tags": [
+            "Collections"
+        ],
+        "parameters": [
+            {
+                "name": "collectionId",
+                "in": "query",
+                "description": "The collection ID. Required if updating an existing collection.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "The human-readable name of the collection. Required if creating a new collection.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "songId",
+                "in": "query",
+                "description": "ID of a song in the collection. Use one `songId` parameter for each song in the collection.",
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "albumId",
+                "in": "query",
+                "description": "ID of an album in the collection. Use one `albumId` parameter for each album in the collection.",
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "artistId",
+                "in": "query",
+                "description": "ID of an artist in the collection. Use one `artistId` parameter for each artist in the collection.",
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "playlistId",
+                "in": "query",
+                "description": "ID of an playlist in the collection. Use one `playlistId` parameter for each playlist in the collection.",
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./createCollection/CreateCollectionResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "createCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createcollection/"
+        }
+    },
+    "post": {
+        "summary": "Creates (or updates) a collection.",
+        "description": "Creates (or updates) a collection.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postCreateCollection",
+        "tags": [
+            "Collections"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "collectionId": {
+                                "type": "string",
+                                "description": "The collection ID. Required if updating an existing collection."
+                            },
+                            "name": {
+                                "type": "string",
+                                "description": "The human-readable name of the collection. Required if creating a new collection."
+                            },
+                            "songId": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "ID of a song in the collection. Use one `songId` parameter for each song in the collection."
+                            },
+                            "albumId": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "ID of an album in the collection. Use one `albumId` parameter for each album in the collection."
+                            },
+                            "artistId": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "ID of a artist in the collection. Use one `artistId` parameter for each artist in the collection."
+                            },
+                            "playlistId": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "ID of a playlist in the collection. Use one `playlistId` parameter for each playlist in the collection."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./createCollection/CreateCollectionResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createcollection/"
+        }
+    }
+}
