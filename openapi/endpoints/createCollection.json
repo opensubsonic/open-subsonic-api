@@ -1,10 +1,11 @@
 {
     "get": {
         "summary": "Creates (or updates) a collection.",
-        "description": "Creates (or updates) a collection.",
+        "description": "OpenSubsonic extension name `collections` (As returned by `getOpenSubsonicExtensions`). Creates (or updates) a collection.",
         "operationId": "createCollection",
         "tags": [
-            "Collections"
+            "Collections",
+            "Extension"
         ],
         "parameters": [
             {
@@ -88,6 +89,9 @@
                         }
                     }
                 }
+            },
+            "404": {
+                "description": "Extension not supported."
             }
         },
         "externalDocs": {
@@ -97,10 +101,11 @@
     },
     "post": {
         "summary": "Creates (or updates) a collection.",
-        "description": "Creates (or updates) a collection.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "description": "OpenSubsonic extension name `collections` (As returned by `getOpenSubsonicExtensions`). Creates (or updates) a collection.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
         "operationId": "postCreateCollection",
         "tags": [
-            "Collections"
+            "Collections",
+            "Extension"
         ],
         "requestBody": {
             "required": true,
@@ -163,6 +168,9 @@
                         }
                     }
                 }
+            },
+            "404": {
+                "description": "Extension not supported."
             },
             "405": {
                 "$ref": "../responses/HTTPFormPostNotSupported.json"
