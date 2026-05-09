@@ -126,17 +126,13 @@ github_repo = "https://github.com/opensubsonic/open-subsonic-api"
 github_branch= "master"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "d72aa9b2712488cc3"
+# gcs_engine_id = "d72aa9b2712488cc3"
 
 # Enable Lunr.js offline search
-offlineSearch = false
+offlineSearch = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
-
-[params.seach]
-# Enable Algolia DocSearch
-algolia = false
 
 # User interface configuration
 [params.ui]
