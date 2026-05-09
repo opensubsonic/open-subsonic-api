@@ -47,7 +47,7 @@
             {
                 "name": "add",
                 "in": "query",
-                "description": "Add the specified items to the collection.",
+                "description": "Add the specified items to the collection. Items are appended to the tail of the collection.",
                 "explode": true,
                 "style": "form",
                 "required": false,
