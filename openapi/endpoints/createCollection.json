@@ -27,54 +27,15 @@
                 }
             },
             {
-                "name": "songId",
+                "name": "items",
                 "in": "query",
-                "description": "ID of a song in the collection. Use one `songId` parameter for each song in the collection.",
+                "description": "IDs of items in the collection. Use one `items` parameter for each item in the collection.",
                 "explode": true,
                 "style": "form",
                 "schema": {
                     "type": "array",
                     "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            {
-                "name": "albumId",
-                "in": "query",
-                "description": "ID of an album in the collection. Use one `albumId` parameter for each album in the collection.",
-                "explode": true,
-                "style": "form",
-                "schema": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            {
-                "name": "artistId",
-                "in": "query",
-                "description": "ID of an artist in the collection. Use one `artistId` parameter for each artist in the collection.",
-                "explode": true,
-                "style": "form",
-                "schema": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            {
-                "name": "playlistId",
-                "in": "query",
-                "description": "ID of an playlist in the collection. Use one `playlistId` parameter for each playlist in the collection.",
-                "explode": true,
-                "style": "form",
-                "schema": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
+                        "$ref": "../schemas/CollectionItemId.json"
                     }
                 }
             }
@@ -122,33 +83,12 @@
                                 "type": "string",
                                 "description": "The human-readable name of the collection. Required if creating a new collection."
                             },
-                            "songId": {
+                            "items": {
                                 "type": "array",
                                 "items": {
-                                    "type": "string"
+                                    "$ref": "../schemas/CollectionItemId.json"
                                 },
-                                "description": "ID of a song in the collection. Use one `songId` parameter for each song in the collection."
-                            },
-                            "albumId": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                },
-                                "description": "ID of an album in the collection. Use one `albumId` parameter for each album in the collection."
-                            },
-                            "artistId": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                },
-                                "description": "ID of a artist in the collection. Use one `artistId` parameter for each artist in the collection."
-                            },
-                            "playlistId": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                },
-                                "description": "ID of a playlist in the collection. Use one `playlistId` parameter for each playlist in the collection."
+                                "description": "IDs of items in the collection."
                             }
                         }
                     }

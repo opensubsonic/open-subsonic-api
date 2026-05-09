@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "description": "Collection item identifier.",
+    "properties": {
+        "type": {
+            "type": "string",
+            "description": "Type of the collection item.",
+            "enum": [
+                "song",
+                "album",
+                "artist",
+                "playlist"
+            ]
+        },
+        "id": {
+            "type": "string",
+            "description": "Id of the item."
+        }
+    },
+    "required": [
+        "type",
+        "id"
+    ],
+    "externalDocs": {
+        "description": "CollectionItemId",
+        "url": "https://opensubsonic.netlify.app/docs/payloads/collectionitemid/"
+    }
+}

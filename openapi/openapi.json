@@ -503,6 +503,9 @@
             "CollectionItem": {
                 "$ref": "./schemas/CollectionItem.json"
             },
+            "CollectionItemId": {
+                "$ref": "./schemas/CollectionItemId.json"
+            },
             "CollectionWithItems": {
                 "$ref": "./schemas/CollectionWithItems.json"
             },

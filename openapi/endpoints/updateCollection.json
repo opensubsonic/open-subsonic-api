@@ -47,43 +47,14 @@
             {
                 "name": "add",
                 "in": "query",
-                "description": "Add the specified items to the collection. Multiple items can be specified.",
+                "description": "Add the specified items to the collection.",
                 "explode": true,
                 "style": "form",
                 "required": false,
                 "schema": {
                     "type": "array",
                     "items": {
-                        "oneOf": [
-                            {
-                                "type": "object",
-                                "required": ["songId"],
-                                "properties": {
-                                    "songId": {"type": "string"}
-                                }
-                            },
-                            {
-                                "type": "object",
-                                "required": ["albumId"],
-                                "properties": {
-                                    "albumId": {"type": "string"}
-                                }
-                            },
-                            {
-                                "type": "object",
-                                "required": ["artistId"],
-                                "properties": {
-                                    "artistId": {"type": "string"}
-                                }
-                            },
-                            {
-                                "type": "object",
-                                "required": ["playlistId"],
-                                "properties": {
-                                    "playlistId": {"type": "string"}
-                                }
-                            }
-                        ]
+                        "$ref": "../schemas/CollectionItemId.json"
                     }
                 }
             },
@@ -106,7 +77,7 @@
             {
                 "name": "remove",
                 "in": "query",
-                "description": "Remove the item at this position from the collection. Multiple items can be specified.",
+                "description": "Remove the items at the specified positions from the collection.",
                 "explode": true,
                 "style": "form",
                 "required": false,
@@ -166,36 +137,7 @@
                                 "description": "Add the specified items to the collection. Multiple items can be specified.",
                                 "type": "array",
                                 "items": {
-                                    "oneOf": [
-                                        {
-                                            "type": "object",
-                                            "required": ["songId"],
-                                            "properties": {
-                                                "songId": {"type": "string"}
-                                            }
-                                        },
-                                        {
-                                            "type": "object",
-                                            "required": ["albumId"],
-                                            "properties": {
-                                                "albumId": {"type": "string"}
-                                            }
-                                        },
-                                        {
-                                            "type": "object",
-                                            "required": ["artistId"],
-                                            "properties": {
-                                                "artistId": {"type": "string"}
-                                            }
-                                        },
-                                        {
-                                            "type": "object",
-                                            "required": ["playlistId"],
-                                            "properties": {
-                                                "playlistId": {"type": "string"}
-                                            }
-                                        }
-                                    ]
+                                    "$ref": "../schemas/CollectionItemId.json"
                                 }
                             },
                             "move":  {
