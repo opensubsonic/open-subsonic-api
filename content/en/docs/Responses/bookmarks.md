@@ -1,6 +1,6 @@
 ---
 title: "bookmarks"
-linkTitle: "bookmarks"
+linkTitle: "bookmarks [OS]"
 description: >
   Bookmarks list.
 ---
@@ -65,6 +65,8 @@ description: >
         "channelCount": 2,
         "path": "The Polish Ambassador/First Words/17 - Ill with the Skills.mp3",
         "playCount": 1,
+        "totalPlayCount": 1,
+        "userPlayCount": 0,
         "played": "2023-03-15T15:23:37Z",
         "created": "2023-03-25T11:44:51Z",
         "albumId": "dc8d8889a6fe08d8da7698c7ee1de61c",
