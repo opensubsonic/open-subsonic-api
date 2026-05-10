@@ -245,6 +245,13 @@
                 "$ref": "./Movement.json"
             },
             "description": "The list of movements associated with the song."
+        },
+        "groupings": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "The list of groupings associated with the song."
         }
     },
     "required": [
