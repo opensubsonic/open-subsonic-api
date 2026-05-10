@@ -1,6 +1,8 @@
 ---
 title: "scrobble"
 linkTitle: "scrobble"
+opensubsonic:
+- Clarification
 categories:
 - Media annotation
 description: >
@@ -55,3 +57,30 @@ An empty [`subsonic-response`](../../responses/subsonic-response) element on suc
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+If any `id` is invalid the result is an empty [`subsonic-response`](../../responses/subsonic-response) with error code 70 "The requested data was not found". Note that in this case the whole request has failed and no scrobbling should be performed for those `id` which are valid.
+
+{{< tabpane persist=false >}}
+{{< tab header="OpenSubsonic" lang="json">}}
+{
+  "subsonic-response": {
+    "status": "failed",
+    "version": "1.16.1",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
+    "openSubsonic": true,
+    "error": {
+      "code": 70,
+      "message": "The requested data was not found.",
+      "helpUrl": "https://example.org/scrobble"
+    }
+  }
+}
+{{< /tab >}}
+{{< /tabpane >}}
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+In the original Subsonic, the the result is always succesful.
+
+For OpenSubsonic servers, the result is a failure if any of the `id` parameters is an invalid object.
+{{< /alert >}}
