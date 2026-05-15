@@ -7,7 +7,7 @@
       "description" : "The list of supported containers. An empty array means any containers.",
       "items": {
         "type": "string",
-        "example": "mp4",
+        "example": "mp4"
       }
     },
     "audioCodecs": {
