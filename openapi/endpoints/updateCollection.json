@@ -1,0 +1,186 @@
+{
+    "get": {
+        "summary": "Updates a collection. Only the owner of a collection is allowed to update it.",
+        "description": "OpenSubsonic extension name `collections` (As returned by `getOpenSubsonicExtensions`). Updates a collection. Only the owner of a collection is allowed to update it.",
+        "operationId": "updateCollection",
+        "tags": [
+            "Collections",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "collectionId",
+                "in": "query",
+                "description": "The collection ID.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "The human-readable name of the collection.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "comment",
+                "in": "query",
+                "description": "The collection comment.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "public",
+                "in": "query",
+                "description": "`true` if the collection should be visible to all users, `false` otherwise.",
+                "required": false,
+                "schema": {
+                    "type": "boolean"
+                }
+            },
+            {
+                "name": "add",
+                "in": "query",
+                "description": "Add the specified items to the collection. Items are appended to the tail of the collection.",
+                "explode": true,
+                "style": "form",
+                "required": false,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../schemas/CollectionItemId.json"
+                    }
+                }
+            },
+            {
+                "name": "move",
+                "in": "query",
+                "description": "Move items from the original position to a new one in the collection. The original range is specified by the `fromStart` (inclusive) and `fromEnd` (exclusive) positions. The first item in the range moves to the position specified by `to`",
+                "style": "form",
+                "required": false,
+                "schema": {
+                    "type": "object",
+                    "required": ["fromStart", "fromEnd", "to"],
+                    "properties": {
+                        "fromStart": {"type": "integer"},
+                        "fromEnd": {"type": "integer"},
+                        "to": {"type": "integer"}
+                    }
+                }
+            },
+            {
+                "name": "remove",
+                "in": "query",
+                "description": "Remove the items at the specified positions from the collection.",
+                "explode": true,
+                "style": "form",
+                "required": false,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "404": {
+                "description": "Extension not supported."
+            }
+        },
+        "externalDocs": {
+            "description": "updateCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updatecollection/"
+        }
+    },
+    "post": {
+        "summary": "Updates a collection. Only the owner of a collection is allowed to update it.",
+        "description": "OpenSubsonic extension name `collections` (As returned by `getOpenSubsonicExtensions`). Updates a collection. Only the owner of a collection is allowed to update it.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postUpdateCollection",
+        "tags": [
+            "Collections",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "collectionId": {
+                                "description": "The collection ID.",
+                                "type": "string"
+                            },
+                            "name": {
+                                "description": "The human-readable name of the collection.",
+                                "type": "string"
+                            },
+                            "comment": {
+                                "description": "The collection comment.",
+                                "type": "string"
+                            },
+                            "public": {
+                                "description": "`true` if the collection should be visible to all users, `false` otherwise.",
+                                "type": "boolean"
+                            },
+                            "add": {
+                                "description": "Add the specified items to the collection. Multiple items can be specified.",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "../schemas/CollectionItemId.json"
+                                }
+                            },
+                            "move":  {
+                                "description": "Move items from the original position to a new one in the collection. The original range is specified by the `fromStart` (inclusive) and `fromEnd` (exclusive) positions. The first item in the range moves to the position specified by `to`",
+                                "type": "object",
+                                "required": ["fromStart", "fromEnd", "to"],
+                                "properties": {
+                                    "fromStart": {"type": "integer"},
+                                    "fromEnd": {"type": "integer"},
+                                    "to": {"type": "integer"}
+                                }
+                            },
+                            "remove": {
+                                "description": "Remove the item at this position from the collection. Multiple items can be specified.",
+                                "type": "array",
+                                "items": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "required": [
+                            "collectionId"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "404": {
+                "description": "Extension not supported."
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updateCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updatecollection/"
+        }
+    }
+}

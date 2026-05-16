@@ -1,0 +1,124 @@
+{
+    "get": {
+        "summary": "Creates (or updates) a collection.",
+        "description": "OpenSubsonic extension name `collections` (As returned by `getOpenSubsonicExtensions`). Creates (or updates) a collection.",
+        "operationId": "createCollection",
+        "tags": [
+            "Collections",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "collectionId",
+                "in": "query",
+                "description": "The collection ID. Required if updating an existing collection.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "The human-readable name of the collection. Required if creating a new collection.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "items",
+                "in": "query",
+                "description": "IDs of items in the collection. Use one `items` parameter for each item in the collection.",
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../schemas/CollectionItemId.json"
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./createCollection/CreateCollectionResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported."
+            }
+        },
+        "externalDocs": {
+            "description": "createCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createcollection/"
+        }
+    },
+    "post": {
+        "summary": "Creates (or updates) a collection.",
+        "description": "OpenSubsonic extension name `collections` (As returned by `getOpenSubsonicExtensions`). Creates (or updates) a collection.\n\nRequires OpenSubsonic extension name `formPost` (As returned by `getOpenSubsonicExtensions`)",
+        "operationId": "postCreateCollection",
+        "tags": [
+            "Collections",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "collectionId": {
+                                "type": "string",
+                                "description": "The collection ID. Required if updating an existing collection."
+                            },
+                            "name": {
+                                "type": "string",
+                                "description": "The human-readable name of the collection. Required if creating a new collection."
+                            },
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "../schemas/CollectionItemId.json"
+                                },
+                                "description": "IDs of items in the collection."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./createCollection/CreateCollectionResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Extension not supported."
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createcollection/"
+        }
+    }
+}
