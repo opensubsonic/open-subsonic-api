@@ -50,7 +50,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Supersonic](https://github.com/dweymouth/supersonic)  |   |
 | [Symfonium](https://symfonium.app/)  | [Documentation](https://support.symfonium.app/t/1178) |
 | [Tempus](https://github.com/eddyizm/tempus)  |  |
-| [tinysub](https://devins.page/tinysub)  |  |
+| [tinysub](https://devins.page/tinysub)  | [Documentation](https://tangled.org/devins.page/tinysub#opensubsonic-extensions) |
 
 ## Goals
 
