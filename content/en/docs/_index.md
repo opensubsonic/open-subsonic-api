@@ -37,6 +37,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Navidrome](https://www.navidrome.org/)  | [Documentation](https://www.navidrome.org/docs/developers/subsonic-api)  |
 | [Nextcloud Music / ownCloud Music](https://github.com/owncloud/music)  | [Documentation](https://github.com/owncloud/music/wiki/OpenSubsonic-API)   |
 | [Qm-Music](https://github.com/chenqimiao/qm-music) | - |
+| [Radiccio Server](https://radiccio.music/server) | [Documentation](https://api-docs.radiccio.music/opensubsonic/) |
 | [Supysonic](https://github.com/spl0k/supysonic) | - |
 
 ### Clients
@@ -47,6 +48,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Airsonic Refix](https://github.com/tamland/airsonic-refix)  | [Documentation](https://github.com/tamland/airsonic-refix#opensubsonic-support) |
 | [Amperfy](https://github.com/BLeeEZ/amperfy)  |   |
 | [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)  |   |
+| [Radiccio](https://radiccio.music) | [Documentation](https://guide.radiccio.music/sources/opensubsonic) |
 | [Supersonic](https://github.com/dweymouth/supersonic)  |   |
 | [Symfonium](https://symfonium.app/)  | [Documentation](https://support.symfonium.app/t/1178) |
 | [Tempus](https://github.com/eddyizm/tempus)  |  |
