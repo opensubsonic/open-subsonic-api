@@ -1,5 +1,5 @@
 {
-    "delete": {
+    "get": {
         "summary": "Deletes a saved collection.",
         "description": "Deletes a saved collection.",
         "operationId": "deleteCollection",

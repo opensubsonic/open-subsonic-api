@@ -11,7 +11,8 @@ description: >
 `http://your-server/rest/updateCollection`
 
 Updates a collection. Only the owner of a collection is allowed to update it.
-This endpoint must be accessed using an HTTP PATCH request, only the fields specified in the request payload will have an effect on a collection.
+This endpoint must be accessed using an HTTP POST request.
+Only the fields specified in the request payload will have an effect on a collection.
 
 ### Request Body
 
@@ -31,7 +32,7 @@ Only one of `add`, `move`, and `remove` can be non-empty in a single request.
 
 ### Example request
 
-{{< alert color="primary" >}} `PATCH http://your-server/rest/updateCollection.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `POST http://your-server/rest/updateCollection.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 {{< tabpane persist=false >}}
 {{< tab header="**Body**:" disabled=true />}}

@@ -1,7 +1,7 @@
 {
-    "patch": {
+    "post": {
         "summary": "Updates a collection.",
-        "description": "Updates a collection. Only the owner of a collection is allowed to update it. The endpoint follows the PATCH semantics, so only the fields specified in the request payload will have an effect on a collection.",
+        "description": "Updates a collection. Only the owner of a collection is allowed to update it. Only the fields specified in the request payload will have an effect on a collection.",
         "operationId": "updateCollection",
         "tags": [
             "Collections",
