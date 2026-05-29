@@ -31,7 +31,7 @@
                                 "items": {
                                     "$ref": "../schemas/CollectionItemId.json"
                                 },
-                                "description": "IDs of items in the collection."
+                                "description": "Identifiers of items in the collection."
                             }
                         },
                         "required": [

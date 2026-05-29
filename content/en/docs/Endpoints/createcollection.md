@@ -42,6 +42,10 @@ The request payload should be provided in the body as a JSON object.
     {
       "type": "album",
       "id": "200000021"
+    },
+    {
+      "type": "genre",
+      "name": "vaporwave"
     }
   ]
 }
@@ -68,7 +72,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a top-le
       "comment" "this is a collection",
       "owner": "user",
       "public": false,
-      "itemCount": 2,
+      "itemCount": 3,
       "created": "2023-03-16T03:18:41+00:00",
       "changed": "2023-03-16T03:18:41+00:00",
       "items": [
@@ -119,6 +123,13 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a top-le
             "artist": "Comfort Fit",
             "year": 2005,
             "genre": "Hip-Hop"
+          }
+        },
+        {
+          "genre": {
+            "value": "vaporwave",
+            "songCount": 6,
+            "albumCount": 1
           }
         }
       ]

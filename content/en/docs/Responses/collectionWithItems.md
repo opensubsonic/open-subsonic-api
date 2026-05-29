@@ -71,6 +71,13 @@ description: >
         "year": 2005,
         "genre": "Hip-Hop"
       }
+    },
+    {
+      "genre": {
+        "value": "vaporwave",
+        "songCount": 6,
+        "albumCount": 1
+      }
     }
   ]
 }

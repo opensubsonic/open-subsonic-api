@@ -33,6 +33,38 @@
                     "$ref": "Playlist.json"
                 }
             }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "genre": {
+                    "$ref": "Genre.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "internetRadioStation": {
+                    "$ref": "InternetRadioStation.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "podcastEpisode": {
+                    "$ref": "PodcastEpisode.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "podcast": {
+                    "$ref": "PodcastChannel.json"
+                }
+            }
         }
     ]
 }

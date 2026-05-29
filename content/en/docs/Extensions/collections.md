@@ -12,7 +12,7 @@ description: >
 **OpenSubsonic extension name**: `collections` (As returned by [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions))
 
 This extension allows users to create and manage collections.
-A collection is an ordered list of items - songs, artist, albums, playlists.
+A collection is an ordered list of items - songs, artist, albums, playlists, etc.
 
 ## Version 1
 

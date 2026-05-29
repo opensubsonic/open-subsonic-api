@@ -15,6 +15,10 @@ An item in a collection is a wrapper around one of the following types:
 - [AlbumID3](../albumid3/)
 - [ArtistID3](../artistid3/)
 - [Playlist](../playlist/)
+- [Genre](../genre)
+- [InternetRadioStation](../internetradiostation)
+- [PodcastEpisode](../podcastepisode)
+- [PodcastChannel](../podcastchannel)
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -262,6 +266,66 @@ An item in a collection is a wrapper around one of the following types:
     "duration": 304,
     "readonly": true,
     "validUntil": "2023-03-23T03:18:41+00:00"
+  }
+}
+{{< /tab >}}
+{{< tab header="Genre" lang="json">}}
+{
+  "genre": {
+    "value": "vaporwave",
+    "songCount": 6,
+    "albumCount": 1
+  }
+}
+{{< /tab >}}
+{{< tab header="Internet radio station" lang="json">}}
+{
+  "internetRadioStation": {
+    "id": "2",
+    "name": "HBR1.com - I.D.M. Tranceponder",
+    "streamUrl": "http://ubuntu.hbr1.com:19800/trance.ogg",
+    "homePageUrl": "http://www.hbr1.com/"
+  }
+}
+{{< /tab >}}
+{{< tab header="Podcast episode" lang="json">}}
+{
+  "podcastEpisode": {
+    "id": "7390",
+    "parent": "7389",
+    "isDir": "false",
+    "title": "Jonas Gahr Støre",
+    "album": "NRK – Hallo P3",
+    "artist": "Podcast",
+    "year": "2015",
+    "coverArt": "7389",
+    "size": "41808585",
+    "contentType": "audio/mpeg",
+    "suffix": "mp3",
+    "duration": "2619",
+    "bitRate": "128",
+    "isVideo": "false",
+    "created": "2015-09-07T20:07:31.000Z",
+    "artistId": "453",
+    "type": "podcast",
+    "streamId": "7410",
+    "channelId": "17",
+    "description": "Jonas Gahr Støre fra Arbeiderpartiet er med i dagens partilederutspørring i Hallo P3!",
+    "status": "completed",
+    "publishDate": "2015-09-07T15:29:00.000Z"
+  }
+}
+{{< /tab >}}
+{{< tab header="Podcast" lang="json">}}
+{
+  "podcast": {
+    "id": "1",
+    "url": "http://downloads.bbc.co.uk/podcasts/fivelive/drkarl/rss.xml",
+    "title": "Dr Karl and the Naked Scientist",
+    "description": "Dr Chris Smith aka The Naked Scientist with the latest news from the world of science and Dr Karl answers listeners' science questions.",
+    "coverArt": "pod-1",
+    "originalImageUrl": "http://downloads.bbc.co.uk/podcasts/fivelive/drkarl/drkarl.jpg",
+    "status": "completed"
   }
 }
 {{< /tab >}}
