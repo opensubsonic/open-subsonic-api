@@ -36,6 +36,10 @@
             "format": "date-time",
             "description": "Last changed date [ISO 8601]"
         },
+        "coverArt": {
+            "type": "string",
+            "description": "A cover Art Id"
+        },
         "allowedUser": {
             "type": "array",
             "items": {

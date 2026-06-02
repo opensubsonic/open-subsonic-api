@@ -38,6 +38,7 @@ Does not contain the items in the collection, look at [collectionWithItems](../.
 | `itemCount` | `int` | **Yes** |     | number of items |
 | `created` | `string` | **Yes** |     | Creation date [ISO 8601] |
 | `changed` | `string` | **Yes** |     | Last changed date [ISO 8601] |
+| `coverArt` | `string` | No |     | A cover Art Id |
 | `allowedUser` | Array of `string` | No |     | A list of allowed usernames |
 | `readonly` | `boolean` | No |  | If true the collection cannot be edited by the current user |
 | `validUntil` | `string` | No |  | Date the collection contents are considered valid until [ISO 8601] |
