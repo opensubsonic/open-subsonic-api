@@ -16,6 +16,28 @@
                 "schema": {
                     "type": "string"
                 }
+            },
+            {
+                "name": "itemCount",
+                "in": "query",
+                "description": "The number of items from the collection to return. If unset or set to a negative value, return all items.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": -1,
+                    "minimum": 0
+                }
+            },
+            {
+                "name": "itemOffset",
+                "in": "query",
+                "description": "The number of items to skip.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 0,
+                    "minimum": 0
+                }
             }
         ],
         "responses": {

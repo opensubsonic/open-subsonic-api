@@ -18,6 +18,8 @@ Returns a collection with the items it contains.
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `id` | **Yes** |  |  | ID of the collection to return, as obtained by `getCollections`. |
+| `itemCount` | No |  |  | The number of items from the collection to return. If unset or set to a negative value, return all items. |
+| `itemOffset` | No |  |  | The number of items to skip. |
 
 ### Example
 
