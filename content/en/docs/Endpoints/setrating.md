@@ -9,13 +9,17 @@ description: >
 
 `http://your-server/rest/setRating` Since [1.6.0](../../subsonic-versions)
 
-Sets the rating for a music file.
+Sets the rating for a music file, folder, album, or artist.
+
+Servers implementing the [ratingID3 extension](../Extensions/ratingID3.md) additionally support setting ratings for ArtistID3 and AlbumID3.
 
 ### Parameters
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `id` | **Yes** |   |  | A string which uniquely identifies the file (song) or folder (album/artist) to rate. |
+| `id` | No |   |  | A string which uniquely identifies the file (song) or folder (album/artist) to rate. |
+| `artistId` | No | **Yes** |   | The ID of an artistID3 to rate. Multiple parameters allowed. Supported by servers implementing the ratingID3 extension. |
+| `albumId` | No | **Yes** |   | The ID of an albumID3 to rate. Multiple parameters allowed. Supported by servers implementing the ratingID3 extension. |
 | `rating` | **Yes** |  |   | The rating between 1 and 5 (inclusive), or 0 to remove the rating. |
 
 ### Example
