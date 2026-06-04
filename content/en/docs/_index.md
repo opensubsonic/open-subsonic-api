@@ -35,7 +35,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [gonic](https://github.com/sentriz/gonic) | [Documentation](https://github.com/sentriz/gonic/wiki/subsonic-api-compatibility)  |
 | [LMS - Lightweight Music Server](https://github.com/epoupon/lms) | [Documentation](https://github.com/epoupon/lms/blob/master/SUBSONIC.md)  |
 | [Navidrome](https://www.navidrome.org/)  | [Documentation](https://www.navidrome.org/docs/developers/subsonic-api)  |
-| [Nextcloud Music / ownCloud Music](https://github.com/owncloud/music)  | [Documentation](https://github.com/owncloud/music/wiki/OpenSubsonic-API)   |
+| [Nextcloud Music](https://github.com/nc-music/music)  | [Documentation](https://github.com/nc-music/music/wiki/OpenSubsonic-API)   |
 | [Qm-Music](https://github.com/chenqimiao/qm-music) | - |
 | [Radiccio Server](https://radiccio.music/server) | [Documentation](https://api-docs.radiccio.music/opensubsonic/) |
 | [Supysonic](https://github.com/spl0k/supysonic) | - |
