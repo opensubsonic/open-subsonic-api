@@ -16,21 +16,10 @@ This endpoint must be accessed using an HTTP POST request.
 
 ### Request Body
 
-The request payload should be provided in the body as a JSON object.
-
-| Parameter | Req. | OpenS. | Default | Comment |
-| --- | --- | --- | --- | --- |
-| `name` | **Yes** |  |  | The human-readable name of the collection. |
-| `comment` | No |  |  | The collection comment. |
-| `public` | No |  | `false`  | `true` if the collection should be visible to all users, `false` otherwise. |
-| `items` | No |  |  | A list of [collectionItemID](../payloads/collectionitemid) objects. |
-
-### Example request
-
-{{< alert color="primary" >}} `POST http://your-server/rest/createCollection.view?u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{< /alert >}}
+The request payload should be provided in the body as a JSON object, as specified by the [CreateCollectionRequest](../payloads/createcollectionrequest) schema.
 
 {{< tabpane persist=false >}}
-{{< tab header="Request body" lang="json">}}
+{{< tab header="CreateCollectionRequest" lang="json">}}
 {
   "name": "test collection",
   "comment": "this is a collection",
@@ -51,6 +40,10 @@ The request payload should be provided in the body as a JSON object.
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+### Example request
+
+{{< alert color="primary" >}} `POST http://your-server/rest/createCollection.view?u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

@@ -12,31 +12,7 @@
             "content": {
                 "application/json": {
                     "schema": {
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string",
-                                "description": "The human-readable name of the collection."
-                            },
-                            "comment": {
-                                "type": "string",
-                                "description": "The collection comment."
-                            },
-                            "public": {
-                                "description": "`true` if the collection should be visible to all users, `false` otherwise.",
-                                "type": "boolean"
-                            },
-                            "items": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "../schemas/CollectionItemId.json"
-                                },
-                                "description": "Identifiers of items in the collection."
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ]
+                        "$ref": "./createCollection/CreateCollectionRequest.json"
                     }
                 }
             }

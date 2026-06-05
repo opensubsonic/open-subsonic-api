@@ -509,6 +509,9 @@
             "CollectionWithItems": {
                 "$ref": "./schemas/CollectionWithItems.json"
             },
+            "CreateCollectionRequest": {
+                "$ref": "./endpoints/createCollection/CreateCollectionRequest.json"
+            },
             "CreateCollectionSuccessResponse": {
                 "$ref": "./endpoints/createCollection/CreateCollectionSuccessResponse.json"
             },
