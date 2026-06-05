@@ -23,7 +23,7 @@
                 "$ref": "../responses/EmptySubsonicResponse.json"
             },
             "400": {
-                "descritpion": "Request is malformed or doesn't follow the schema."
+                "description": "Request is malformed or doesn't follow the schema."
             },
             "404": {
                 "description": "Collection does not exist, or extension not supported."
