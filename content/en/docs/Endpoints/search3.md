@@ -32,6 +32,18 @@ Music is organized according to ID3 tags.
 Servers must support an **empty query** and return all the data to allow clients to properly access all the media information for offline sync.
 {{< /alert >}}
 
+{{< alert color="warning" title="OpenSubsonic" >}}
+OpenSubsonic servers **must accomodate** the following rules for `query` parameters:
+
+* Search only for `name`/`title` for each object being searched
+  * e.g. Search album name when searching for albums, not album artist
+* Match on any word individually
+* Words are `like` matched on the end of each string
+  * e.g. `plast ci` is the same as searching `plastic city`
+* Group words by using `+` to join spaces or wrap strings in quotes `"`
+* Grouped words are exact match only
+  * e.g. `"plast ci"` will not match the album "plastic city"
+
 ### Example
 
 {{< alert color="primary" >}} `http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json&query=""&artistCount=1&albumCount=1&songCount=1` {{< /alert >}}
