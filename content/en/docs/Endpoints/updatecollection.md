@@ -12,27 +12,11 @@ description: >
 
 Updates a collection. Only the owner of a collection is allowed to update it.
 This endpoint must be accessed using an HTTP POST request.
-Only the fields specified in the request payload will have an effect on a collection.
 
 ### Request Body
 
-The request payload should be provided in the body as a JSON object.
-
-| Parameter | Req. | OpenS. | Default | Comment |
-| --- | --- | --- | --- | --- |
-| `collectionId` | **Yes** |  |  | The collection ID. |
-| `name` | No |  |  | The human-readable name of the collection. |
-| `comment` | No |  |  | The collection comment. |
-| `public` | No |  |  | `true` if the collection should be visible to all users, `false` otherwise. |
-| `add` | No |  |  | Add the specified items to the collection. The payload is an array of [collectionItemID](../payloads/collectionitemid) objects. Items are appended to the tail of the collection. |
-| `move` | No |  |  | Move items from the original position to a new one in the collection. The original range is specified by the `fromStart` (inclusive) and `fromEnd` (exclusive) positions. The first item in the range moves to the position specified by `to` |
-| `remove` | No |  |  | Remove the items at the specified positions from the collection. The payload is an array of integer indices. |
-
-Only one of `add`, `move`, and `remove` can be non-empty in a single request.
-
-### Example request
-
-{{< alert color="primary" >}} `POST http://your-server/rest/updateCollection.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+The request payload should be provided in the body as a JSON object, as specified by the [UpdateCollectionRequest](../payloads/updatecollectionrequest) schema.
+Only the fields specified in the request payload will have an effect on a collection.
 
 {{< tabpane persist=false >}}
 {{< tab header="**Body**:" disabled=true />}}
@@ -71,6 +55,10 @@ Only one of `add`, `move`, and `remove` can be non-empty in a single request.
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+### Example request
+
+{{< alert color="primary" >}} `POST http://your-server/rest/updateCollection.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 

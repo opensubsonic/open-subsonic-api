@@ -1,7 +1,7 @@
 {
     "post": {
         "summary": "Updates a collection.",
-        "description": "Updates a collection. Only the owner of a collection is allowed to update it. Only the fields specified in the request payload will have an effect on a collection.",
+        "description": "Updates a collection. Only the owner of a collection is allowed to update it.",
         "operationId": "updateCollection",
         "tags": [
             "Collections",
@@ -12,52 +12,7 @@
             "content": {
                 "application/json": {
                     "schema": {
-                        "type": "object",
-                        "properties": {
-                            "collectionId": {
-                                "description": "The collection ID.",
-                                "type": "string"
-                            },
-                            "name": {
-                                "description": "The human-readable name of the collection.",
-                                "type": "string"
-                            },
-                            "comment": {
-                                "description": "The collection comment.",
-                                "type": "string"
-                            },
-                            "public": {
-                                "description": "`true` if the collection should be visible to all users, `false` otherwise.",
-                                "type": "boolean"
-                            },
-                            "add": {
-                                "description": "Add the specified items to the collection. Multiple items can be specified.",
-                                "type": "array",
-                                "items": {
-                                    "$ref": "../schemas/CollectionItemId.json"
-                                }
-                            },
-                            "move":  {
-                                "description": "Move items from the original position to a new one in the collection. The original range is specified by the `fromStart` (inclusive) and `fromEnd` (exclusive) positions. The first item in the range moves to the position specified by `to`",
-                                "type": "object",
-                                "required": ["fromStart", "fromEnd", "to"],
-                                "properties": {
-                                    "fromStart": {"type": "integer"},
-                                    "fromEnd": {"type": "integer"},
-                                    "to": {"type": "integer"}
-                                }
-                            },
-                            "remove": {
-                                "description": "Remove the item at this position from the collection. Multiple items can be specified.",
-                                "type": "array",
-                                "items": {
-                                    "type": "integer"
-                                }
-                            }
-                        },
-                        "required": [
-                            "collectionId"
-                        ]
+                        "$ref": "./updateCollection/UpdateCollectionRequest.json"
                     }
                 }
             }
@@ -66,6 +21,9 @@
         "responses": {
             "200": {
                 "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "400": {
+                "descritpion": "Request is malformed or doesn't follow the schema."
             },
             "404": {
                 "description": "Collection does not exist, or extension not supported."

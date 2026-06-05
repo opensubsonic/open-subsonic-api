@@ -518,6 +518,12 @@
             "CreateCollectionResponse": {
                 "$ref": "./endpoints/createCollection/CreateCollectionResponse.json"
             },
+            "UpdateCollectionRequest": {
+                "$ref": "./endpoints/updateCollection/UpdateCollectionRequest.json"
+            },
+            "MoveRange": {
+                "$ref": "./schemas/MoveRange.json"
+            },
             "Share": {
                 "$ref": "./schemas/Share.json"
             },

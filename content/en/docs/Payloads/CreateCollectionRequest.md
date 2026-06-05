@@ -9,6 +9,8 @@ description: >
   Request payload for creating a collection.
 ---
 
+Should be used in the [CreateCollection](../endpoints/createcollection) endpoint.
+
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
