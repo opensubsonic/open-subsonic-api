@@ -11,11 +11,16 @@
                     "items": {
                         "$ref": "../../schemas/Collection.json"
                     },
-                    "description": "The collections"
+                    "description": "The collections."
+                },
+                "totalCount": {
+                     "type": "integer",
+                     "description": "The total number of collections a user has access to."
                 }
             },
             "required": [
-                "collections"
+                "collections",
+                "totalCount"
             ]
         }
     ]

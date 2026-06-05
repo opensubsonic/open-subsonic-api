@@ -18,10 +18,12 @@ Returns all collections a user has access to.
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `username` | No |  |  | If specified, return collections for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used. |
+| `count` | No |  |  | The number of collections to return. If unset or set to a negative value, return all collections. |
+| `offset` | No |  |  | The number of collections to skip. |
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getCollections.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{< alert color="primary" >}} `http://your-server/rest/getCollections.view?count=2&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
 ### Result
 
@@ -60,7 +62,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a top-le
         "changed": "2026-03-16T03:18:41+00:00",
         "readonly": true
       }
-    ]
+    ],
+    "totalCount": 10
   }
 }
 {{< /tab >}}
@@ -68,4 +71,5 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a top-le
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `collections` | Array of [`collection`](../../responses/collection) | **Yes** |   | The collections |
+| `collections` | Array of [`collection`](../../responses/collection) | **Yes** |   | The collections. |
+| `totalCount` | integer | **Yes** |   | The total number of collections a user has access to. |
