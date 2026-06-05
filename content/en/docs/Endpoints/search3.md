@@ -43,6 +43,7 @@ OpenSubsonic servers **must accomodate** the following rules for `query` paramet
 * Group words by using `+` to join spaces or wrap strings in quotes `"`
 * Grouped words are exact match only
   * e.g. `"plast ci"` will not match the album "plastic city"
+{{< /alert >}}
 
 ### Example
 
