@@ -41,6 +41,7 @@ OpenSubsonic servers **must accomodate** the following rules for `query` paramet
 * Words are `like` matched on the end of each string
   * e.g. `plast ci` is the same as searching `plastic city`
 * Group words by using `+` to join spaces or wrap strings in quotes `"`
+  * e.g. `plastic+city` is the same as `"plastic city"`
 * Grouped words are exact match only
   * e.g. `"plast ci"` will not match the album "plastic city"
 {{< /alert >}}
