@@ -38,13 +38,15 @@ OpenSubsonic servers **must accomodate** the following rules for `query` paramet
 * Search only for `name`/`title` for each object being searched
   * e.g. Search album name when searching for albums, not album artist
 * Match on any word individually
-* Wildcard (`like`) match on `*` and consider strings joined by `*` as one word
+* Wildcard (`like`) match on `*` and `%` characters and consider strings joined by these characters as one word
 * Individual words are `like` matched on the end of each string
   * e.g. `plast ci` is the same as searching `plastic city`
 * Group words by using `+` to join spaces or wrap strings in quotes `"`
   * e.g. `plastic+city` is the same as `"plastic city"`
 * Grouped words are exact match only
   * e.g. `"plast ci"` will not match the album "plastic city"
+* Wildcard characters inside groups are considered literal
+  * e.g. `"100%"` will not match `100% (The Tenth Stage Remix)`
 {{< /alert >}}
 
 ### Example
