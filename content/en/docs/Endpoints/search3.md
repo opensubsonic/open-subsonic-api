@@ -33,20 +33,16 @@ Servers must support an **empty query** and return all the data to allow clients
 {{< /alert >}}
 
 {{< alert color="warning" title="OpenSubsonic" >}}
-OpenSubsonic servers **must accomodate** the following rules for `query` parameters:
+By default OpenSubsonic servers **must accomodate** the following rules for `query` parameters:
 
-* Search only for `name`/`title` for each object being searched
-  * e.g. Search album name when searching for albums, not album artist
-* Match on any word individually
-* Wildcard (`like`) match on `*` and `%` characters and consider strings joined by these characters as one word
-* Individual words are `like` matched on the end of each string
-  * e.g. `plast ci` is the same as searching `plastic city`
-* Group words by using `+` to join spaces or wrap strings in quotes `"`
-  * e.g. `plastic+city` is the same as `"plastic city"`
-* Grouped words are exact match only
-  * e.g. `"plast ci"` will not match the album "plastic city"
-* Wildcard characters inside groups are considered literal
-  * e.g. `"100%"` will not match `100% (The Tenth Stage Remix)`
+* Search only by `name`/`title` for the object type
+* Prefix match (starts with) by default for all search terms
+* Split all words by space (` `) into individual (**OR**) search terms
+* Wrap multiple words with quotes (`"`) to group them together
+* Join multiple words with plus (`+`) to group them together
+* Group search terms are **EXACT** matched by default
+* Group search terms ending with `*`|`%` are prefix matched (**LIKE**)
+* Special characters (`*`|`%`) inside group strings are literal
 {{< /alert >}}
 
 ### Example
