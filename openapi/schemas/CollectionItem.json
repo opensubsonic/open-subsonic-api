@@ -1,0 +1,70 @@
+{
+    "type": "object",
+    "description": "Item that can be part of a collection.",
+    "oneOf": [
+        {
+            "type": "object",
+            "properties": {
+                "song": {
+                    "$ref": "Child.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "album": {
+                    "$ref": "AlbumID3.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "artist": {
+                    "$ref": "ArtistID3.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "playlist": {
+                    "$ref": "Playlist.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "genre": {
+                    "$ref": "Genre.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "internetRadioStation": {
+                    "$ref": "InternetRadioStation.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "podcastEpisode": {
+                    "$ref": "PodcastEpisode.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "podcast": {
+                    "$ref": "PodcastChannel.json"
+                }
+            }
+        }
+    ]
+}
