@@ -21,7 +21,6 @@ description: >
   "changed": "2026-03-16T03:18:41+00:00",
   "itemCount": 3,
   "readonly": true,
-  "validUntil": "2026-03-23T03:18:41+00:00",
   "items": [
     {
       "song": {
@@ -94,11 +93,7 @@ description: >
 | `itemCount` | `int` | **Yes** |     | number of items |
 | `created` | `string` | **Yes** |     | Creation date [ISO 8601] |
 | `changed` | `string` | **Yes** |     | Last changed date [ISO 8601] |
-| `allowedUser` | Array of `string` | No |     | A list of allowed usernames |
 | `readonly` | `boolean` | No |  | If true the collection cannot be edited by the current user |
-| `validUntil` | `string` | No |  | Date the collection contents are considered valid until [ISO 8601] |
 | `items` | Array of [`collectionItem`](../collectionitem) | **Yes** |     | The list of items |
 
 When `readonly` is true, clients should hide or disable UI actions that modify the collection. This is useful for server-generated collections like smart collections, recommendations, or curated system lists. The value should reflect the current authenticated user's access level. When omitted, clients should assume the collection is editable (`false`).
-
-The `validUntil` field indicates how long the collection contents can be treated as fresh, inspired by HTTP caching semantics. Clients may use this to determine when to refresh the collection data. An empty or absent value indicates no caching guarantee; clients should refresh the collection data on each access.

@@ -48,8 +48,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a top-le
         "created": "2026-03-16T03:18:41+00:00",
         "changed": "2026-03-16T03:18:41+00:00",
         "itemCount": 3,
-        "readonly": true,
-        "validUntil": "2026-03-23T03:18:41+00:00"
+        "readonly": true
       },
       {
         "id": "800000076",

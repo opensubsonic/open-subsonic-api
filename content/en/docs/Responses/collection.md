@@ -22,8 +22,7 @@ Does not contain the items in the collection, look at [collectionWithItems](../.
   "created": "2026-03-16T03:18:41+00:00",
   "changed": "2026-03-16T03:18:41+00:00",
   "itemCount": 3,
-  "readonly": true,
-  "validUntil": "2026-03-23T03:18:41+00:00"
+  "readonly": true
 }
 {{< /tab >}}
 {{< /tabpane >}}
@@ -39,9 +38,7 @@ Does not contain the items in the collection, look at [collectionWithItems](../.
 | `created` | `string` | **Yes** |     | Creation date [ISO 8601] |
 | `changed` | `string` | **Yes** |     | Last changed date [ISO 8601] |
 | `coverArt` | `string` | No |     | A cover Art Id |
-| `allowedUser` | Array of `string` | No |     | A list of allowed usernames |
 | `readonly` | `boolean` | No |  | If true the collection cannot be edited by the current user |
-| `validUntil` | `string` | No |  | Date the collection contents are considered valid until [ISO 8601] |
 
 When `readonly` is true, clients should hide or disable UI actions that modify the collection. The value should reflect the current authenticated user's access level. When omitted, clients should assume the collection is editable (`false`).
 

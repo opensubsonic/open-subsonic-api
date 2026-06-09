@@ -40,21 +40,9 @@
             "type": "string",
             "description": "A cover Art Id"
         },
-        "allowedUser": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "description": "A list of allowed usernames"
-        },
         "readonly": {
             "type": "boolean",
             "description": "If true the collection cannot be edited by the current user"
-        },
-        "validUntil": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Date the collection contents are considered valid until [ISO 8601]. Empty or absent means no caching guarantee."
         }
     },
     "required": [

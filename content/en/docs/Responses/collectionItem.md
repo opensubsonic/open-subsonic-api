@@ -264,8 +264,7 @@ An item in a collection is a wrapper around one of the following types:
     "changed": "2023-03-16T03:18:41+00:00",
     "songCount": 1,
     "duration": 304,
-    "readonly": true,
-    "validUntil": "2023-03-23T03:18:41+00:00"
+    "readonly": true
   }
 }
 {{< /tab >}}
