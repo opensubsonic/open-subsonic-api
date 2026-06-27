@@ -4,7 +4,7 @@ linkTitle: "cueLine [OS]"
 opensubsonic:
   - Addition
 description: >
-  Word/syllable-level timing data for a lyrics line.
+  Word/syllable-level timing data for a lyrics line or agent layer.
 ---
 
 {{< tabpane persist=false >}}
@@ -110,7 +110,7 @@ Does not exist.
 | `index`   | `integer`                | **Yes** | **Yes** | Zero-based index into the parent `line` array this cueLine corresponds to                                                                                                                                                                                                                                                                                    |
 | `start`   | `integer`                | No      | **Yes** | Start time in milliseconds (may differ from the parent line if cues are more precise)                                                                                                                                                                                                                                                                        |
 | `end`     | `integer`                | No      | **Yes** | End time in milliseconds                                                                                                                                                                                                                                                                                                                                     |
-| `value`   | `string`                 | **Yes** | **Yes** | Full text of the line. Required because every nested [`cue`](../cue) defines `byteStart` / `byteEnd` against this exact final UTF-8 string                                                                                                                                                                                                                                                                                                                                       |
+| `value`   | `string`                 | **Yes** | **Yes** | Full text for this cueLine. When agent attribution splits one parent line into multiple cueLines, this is the text for that cueLine's agent/layer, not necessarily the parent line's combined text. Required because every nested [`cue`](../cue) defines `byteStart` / `byteEnd` against this exact final UTF-8 string                                                                                             |
 | `agentId` | `string`                 | No      | **Yes** | Opaque identifier referencing an [`agent`](../agent) in the same [`structuredLyrics`](../structuredlyrics) entry. If the parent `structuredLyrics` entry includes `agents`, every cueLine in that entry **must** include `agentId`, and the value **must** match exactly one `agents[].id` in that entry. If the parent entry does not include `agents`, cueLines **must not** include `agentId`. When multiple cueLines share the same `index`, the cueLine whose referenced agent has `role: "main"` **must** come first |
 | `cue`     | Array of [`cue`](../cue) | **Yes** | **Yes** | Ordered list of word/syllable cues. Every cue **must** include `byteStart` / `byteEnd` offsets into `value`                                                                                                                                                                                                                                                                                                                       |
 
