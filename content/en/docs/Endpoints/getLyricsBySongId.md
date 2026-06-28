@@ -278,12 +278,15 @@ Does not exist.
 
 ##### Example with background vocals (agents + agentId)
 
-When a source distinguishes both a lead/default vocal layer and background vocals within the same lyric line, the server emits a shared `agents` array on that `structuredLyrics` entry and splits the lyric into separate cueLines with the same `index`. Each cueLine references one agent via `agentId`, and the cueLine whose referenced agent has `role: "main"` comes first:
+When a source distinguishes both a lead/default vocal layer and background vocals within the same lyric line, the server emits a shared `agents` array on that `structuredLyrics` entry and splits the lyric into separate cueLines with the same `index`. Each cueLine references one agent via `agentId`, contains that agent/layer's renderable text in `value`, and the cueLine whose referenced agent has `role: "main"` comes first. The parent `line` remains the combined fallback line:
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic JSON" lang="json">}}
 {
+  "line": [
+    { "start": 1000, "value": "Hello echo" }
+  ],
   "agents": [
     { "id": "lead", "role": "main", "name": "Lead Vocal" },
     { "id": "backing", "role": "bg" }
@@ -294,7 +297,7 @@ When a source distinguishes both a lead/default vocal layer and background vocal
       "agentId": "lead",
       "start": 1000,
       "end": 3000,
-      "value": "Hello echo",
+      "value": "Hello",
       "cue": [
         { "start": 1000, "end": 1400, "value": "He", "byteStart": 0, "byteEnd": 1 },
         { "start": 1400, "end": 1800, "value": "llo", "byteStart": 2, "byteEnd": 4 }
@@ -305,23 +308,24 @@ When a source distinguishes both a lead/default vocal layer and background vocal
       "agentId": "backing",
       "start": 1000,
       "end": 3000,
-      "value": "Hello echo",
+      "value": "echo",
       "cue": [
-        { "start": 2000, "end": 2500, "value": "echo", "byteStart": 6, "byteEnd": 9 }
+        { "start": 2000, "end": 2500, "value": "echo", "byteStart": 0, "byteEnd": 3 }
       ]
     }
   ]
 }
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
+<line start="1000">Hello echo</line>
 <agent id="lead" role="main" name="Lead Vocal" />
 <agent id="backing" role="bg" />
-<cueLine index="0" agentId="lead" start="1000" end="3000" value="Hello echo">
+<cueLine index="0" agentId="lead" start="1000" end="3000" value="Hello">
   <cue start="1000" end="1400" byteStart="0" byteEnd="1">He</cue>
   <cue start="1400" end="1800" byteStart="2" byteEnd="4">llo</cue>
 </cueLine>
-<cueLine index="0" agentId="backing" start="1000" end="3000" value="Hello echo">
-  <cue start="2000" end="2500" byteStart="6" byteEnd="9">echo</cue>
+<cueLine index="0" agentId="backing" start="1000" end="3000" value="echo">
+  <cue start="2000" end="2500" byteStart="0" byteEnd="3">echo</cue>
 </cueLine>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
@@ -473,6 +477,7 @@ Servers that don't support TTML or word-level timing simply never include these 
 - Within a `cueLine`, `cue.end` **must** be either present on **all** cues or **none** (all-or-nothing). When the source provides partial end times, servers **must** fill missing values. When no cues have end times, `end` is omitted from all cues. This is a documented contract rule; the OpenAPI schema does not encode the all-or-none shape structurally.
 - `agents` are scoped to a single `structuredLyrics` entry. When present, `agents` **must** contain at least one entry, and each `agents[].id` **must** be unique within that entry. `agents` are optional for simple unattributed single-layer lyrics. When a `structuredLyrics` entry represents multiple vocal agents/layers, it **must** include `agents`; a single-agent attributed/default entry may also include `agents`, and if it does, exactly one agent **must** use `role: "main"`. `agents` should not be emitted without `cueLine` data.
 - When multiple cueLines share the same `index`, the cueLine whose referenced agent has `role: "main"` **must** come first. Clients should not assume every source can distinguish or emit multiple agents.
+- When multiple agent cueLines share the same `index`, each `cueLine.value` **must** be independently renderable for that agent/layer. Clients should use `structuredLyrics.line[index].value` as the combined fallback line, not as the per-agent cueLine text.
 - If `agents` is present, every `cueLine` in that entry **must** include `agentId`, and each `agentId` **must** match exactly one `agents[].id` in that entry. If `agents` is absent, cueLines **must not** include `agentId`.
 - Every cue **must** include `byteStart` / `byteEnd`, and every `cueLine` **must** include `value`. The offsets are 0-based inclusive positions into the final UTF-8 encoding of that `cueLine.value`, with no normalization step, and `byteStart` **must** be ≤ `byteEnd`. The OpenAPI schema enforces the presence of these fields, but not the cross-field ordering constraint structurally.
 - Cues within a `cueLine` **must not** overlap (i.e. `cue[n].end` **must** be ≤ `cue[n+1].start`). Servers **must** normalize any source overlaps so that clients can iterate cues sequentially without overlap-resolution logic. Overlapping timing across different cueLines (different `agentId` values) is expected, since those represent parallel vocal layers.

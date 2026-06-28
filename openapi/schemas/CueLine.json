@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "Word/syllable-level timing data for a lyrics line",
+  "description": "Word/syllable-level timing data for a lyrics line or agent layer",
   "externalDocs": {
     "description": "CueLine",
     "url": "https://opensubsonic.netlify.app/docs/responses/cueline/"
@@ -20,7 +20,7 @@
     },
     "value": {
       "type": "string",
-      "description": "Required full text of the line. Nested cue byteStart and byteEnd offsets are always calculated against this exact final UTF-8 string"
+      "description": "Required full text for this cueLine. When agent attribution splits one parent line into multiple cueLines, this is the text for that cueLine's agent/layer, not necessarily the parent line's combined text. Nested cue byteStart and byteEnd offsets are always calculated against this exact final UTF-8 string"
     },
     "agentId": {
       "type": "string",
