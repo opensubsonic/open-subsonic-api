@@ -1,0 +1,114 @@
+{
+    "get": {
+        "summary": "Creates a playlist folder.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Creates a playlist folder in the authenticated user's playlist organization.",
+        "operationId": "createPlaylistFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "in": "query",
+                "description": "The human-readable name of the playlist folder.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "parentId",
+                "in": "query",
+                "description": "ID of the parent playlist folder. Omit to create a root-level folder.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "sortOrder",
+                "in": "query",
+                "description": "Position among siblings, as a client-assigned integer. If omitted, the server assigns a position after the existing siblings.",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./createPlaylistFolder/CreatePlaylistFolderResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "createPlaylistFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createplaylistfolder/"
+        }
+    },
+    "post": {
+        "summary": "Creates a playlist folder.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Creates a playlist folder in the authenticated user's playlist organization.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "operationId": "postCreatePlaylistFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The human-readable name of the playlist folder."
+                            },
+                            "parentId": {
+                                "type": "string",
+                                "description": "ID of the parent playlist folder. Omit to create a root-level folder."
+                            },
+                            "sortOrder": {
+                                "type": "integer",
+                                "description": "Position among siblings, as a client-assigned integer. If omitted, the server assigns a position after the existing siblings."
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./createPlaylistFolder/CreatePlaylistFolderResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "createPlaylistFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/createplaylistfolder/"
+        }
+    }
+}

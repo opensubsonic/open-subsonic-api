@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Folders in a user's private playlist organization.",
+    "properties": {
+        "playlistFolder": {
+            "type": "array",
+            "items": {
+                "$ref": "./PlaylistFolder.json"
+            },
+            "description": "The selected user's playlist folders."
+        }
+    },
+    "externalDocs": {
+        "description": "PlaylistFolders",
+        "url": "https://opensubsonic.netlify.app/docs/responses/playlistfolders/"
+    }
+}
