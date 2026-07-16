@@ -91,6 +91,20 @@
                 "schema": {
                     "type": "string"
                 }
+            },
+            {
+                "name": "artistRole",
+                "in": "query",
+                "description": "Requires the `artistRoleFilter` OpenSubsonic extension. Repeat this parameter to filter the returned artists by one or more roles (as in `ArtistID3.roles`, e.g. `albumartist`, `artist`, `composer`); an artist is returned if it has any of the requested roles. The special value `all` returns every artist regardless of role. Only affects the returned artists (albums and songs are unaffected). When omitted, the behavior is server-defined.",
+                "required": false,
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
             }
         ],
         "responses": {
@@ -168,6 +182,13 @@
                             "musicFolderId": {
                                 "type": "string",
                                 "description": "(Since 1.12.0) Only return albums in the music folder with the given ID. See `getMusicFolders`."
+                            },
+                            "artistRole": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "Requires the `artistRoleFilter` OpenSubsonic extension. Repeat this parameter to filter the returned artists by one or more roles (as in `ArtistID3.roles`, e.g. `albumartist`, `artist`, `composer`); an artist is returned if it has any of the requested roles. The special value `all` returns every artist regardless of role. Only affects the returned artists (albums and songs are unaffected). When omitted, the behavior is server-defined."
                             }
                         },
                         "required": [

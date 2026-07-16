@@ -15,6 +15,20 @@
                 "schema": {
                     "type": "string"
                 }
+            },
+            {
+                "name": "role",
+                "in": "query",
+                "description": "Requires the `artistRoleFilter` OpenSubsonic extension. Repeat this parameter to filter the returned artists by one or more roles (as in `ArtistID3.roles`, e.g. `albumartist`, `artist`, `composer`); an artist is returned if it has any of the requested roles. The special value `all` returns every artist regardless of role. When omitted, the behavior is server-defined.",
+                "required": false,
+                "explode": true,
+                "style": "form",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
             }
         ],
         "responses": {
@@ -51,6 +65,13 @@
                             "musicFolderId": {
                                 "type": "string",
                                 "description": "If specified, only return artists in the music folder with the given ID. See `getMusicFolders`."
+                            },
+                            "role": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "Requires the `artistRoleFilter` OpenSubsonic extension. Repeat this parameter to filter the returned artists by one or more roles (as in `ArtistID3.roles`, e.g. `albumartist`, `artist`, `composer`); an artist is returned if it has any of the requested roles. The special value `all` returns every artist regardless of role. When omitted, the behavior is server-defined."
                             }
                         }
                     }
