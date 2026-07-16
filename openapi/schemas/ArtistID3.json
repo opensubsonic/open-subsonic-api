@@ -35,6 +35,10 @@
             "type": "string",
             "description": "The artist sort name."
         },
+        "disambiguation": {
+            "type": "string",
+            "description": "A short human-readable comment, meant to be shown to users to distinguish between artists with the same name (e.g. 'French electronic duo')."
+        },
         "roles": {
             "type": "array",
             "items": {

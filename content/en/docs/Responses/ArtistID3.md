@@ -20,6 +20,7 @@ description: >
   "starred": "2017-04-11T10:42:50.842Z",
   "musicBrainzId": "189002e7-3285-4e2e-92a3-7f6c30d407a2",
   "sortName": "Mello (2)",
+  "disambiguation": "French electronic duo",
   "roles": [
     "artist",
     "albumartist",
@@ -50,6 +51,7 @@ description: >
 | `starred` | `string` | No |     | Date the artist was starred. [ISO 8601]|
 | `musicBrainzId` | `string` | No |  **Yes**   | The artist MusicBrainzID. |
 | `sortName` | `string` | No |  **Yes**   | The artist sort name. |
+| `disambiguation` | `string` | No |  **Yes**   | A short human-readable comment, meant to be shown to users to distinguish between artists with the same name (e.g. `French electronic duo`). |
 | `roles` | Array of `string` | No | **Yes**    | The list of all roles this artist has in the library. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
@@ -57,6 +59,7 @@ New fields are added:
 
 - `musicBrainzId`
 - `sortName`
+- `disambiguation`
 - `roles`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
