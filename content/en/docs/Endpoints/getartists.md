@@ -1,6 +1,9 @@
 ---
 title: "getArtists"
-linkTitle: "getArtists"
+linkTitle: "getArtists [OS]"
+opensubsonic:
+- Addition
+- Extension
 categories:
 - Browsing
 description: >
@@ -16,6 +19,15 @@ Similar to [`getIndexes`](../getindexes), but organizes music according to ID3 t
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `musicFolderId` | No  |  |  | If specified, only return artists in the music folder with the given ID. See [`getMusicFolders`](../getmusicfolders). |
+| `roles` | No | No / **Yes** |  | A comma-separated list of roles used to filter the returned artists. Requires the [`Artist role filter`](../../extensions/artistRoleFilter/) extension. |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+If the server supports the [`Artist role filter`](../../extensions/artistRoleFilter/) extension, it **must** accept the `roles` parameter and filter the returned artists accordingly.
+
+`roles` is a comma-separated list of roles as found in the [`ArtistID3`](../../responses/artistid3) `roles` field (e.g. `albumartist`, `artist`, `composer`). An artist is returned if it has **any** of the requested roles. The special value `all` returns every artist regardless of role.
+
+The behavior when `roles` is **not** provided is left to the server (historically, returning only album artists), so that existing clients are unaffected.
+{{< /alert >}}
 
 ### Example
 

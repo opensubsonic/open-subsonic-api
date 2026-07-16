@@ -91,6 +91,15 @@
                 "schema": {
                     "type": "string"
                 }
+            },
+            {
+                "name": "artistRoles",
+                "in": "query",
+                "description": "Requires the `artistRoleFilter` OpenSubsonic extension. A comma-separated list of roles (as in `ArtistID3.roles`, e.g. `albumartist`, `artist`, `composer`) used to filter the returned artists; an artist is returned if it has any of the requested roles. The special value `all` returns every artist regardless of role. Only affects the returned artists (albums and songs are unaffected). When omitted, the behavior is server-defined.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
             }
         ],
         "responses": {
@@ -168,6 +177,10 @@
                             "musicFolderId": {
                                 "type": "string",
                                 "description": "(Since 1.12.0) Only return albums in the music folder with the given ID. See `getMusicFolders`."
+                            },
+                            "artistRoles": {
+                                "type": "string",
+                                "description": "Requires the `artistRoleFilter` OpenSubsonic extension. A comma-separated list of roles (as in `ArtistID3.roles`, e.g. `albumartist`, `artist`, `composer`) used to filter the returned artists; an artist is returned if it has any of the requested roles. The special value `all` returns every artist regardless of role. Only affects the returned artists (albums and songs are unaffected). When omitted, the behavior is server-defined."
                             }
                         },
                         "required": [

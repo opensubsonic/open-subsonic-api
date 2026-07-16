@@ -3,6 +3,8 @@ title: "search3"
 linkTitle: "search3 [OS]"
 opensubsonic:
 - Clarification
+- Addition
+- Extension
 categories:
 - Searching
 description: >
@@ -27,9 +29,14 @@ Music is organized according to ID3 tags.
 | `songCount` | No |   | 20  | Maximum number of songs to return. |
 | `songOffset` | No |   | 0   | Search result offset for songs. Used for paging. |
 | `musicFolderId` | No |   |     | (Since [1.12.0](../../subsonic-versions)) Only return results from music folder with the given ID. See `getMusicFolders`. |
+| `artistRoles` | No | No / **Yes** |     | A comma-separated list of roles used to filter the returned artists. Requires the [`Artist role filter`](../../extensions/artistRoleFilter/) extension. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 Servers must support an **empty query** and return all the data to allow clients to properly access all the media information for offline sync.
+
+If the server supports the [`Artist role filter`](../../extensions/artistRoleFilter/) extension, it **must** accept the `artistRoles` parameter and filter the returned **artists** accordingly (albums and songs are unaffected).
+
+`artistRoles` is a comma-separated list of roles as found in the [`ArtistID3`](../../responses/artistid3) `roles` field (e.g. `albumartist`, `artist`, `composer`). An artist is returned if it has **any** of the requested roles. The special value `all` returns every artist regardless of role. The behavior when `artistRoles` is **not** provided is left to the server (historically, returning only album artists), so that existing clients are unaffected.
 {{< /alert >}}
 
 ### Example
