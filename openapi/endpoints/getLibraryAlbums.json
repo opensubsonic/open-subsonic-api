@@ -1,0 +1,74 @@
+{
+    "post": {
+        "summary": "Returns a projected, filtered, sorted page of library albums.",
+        "description": "OpenSubsonic extension `extendedLibrary` version 1. This endpoint only accepts an application/json request body and only returns JSON. Authentication, client, and protocol parameters remain in the query string.",
+        "operationId": "postGetLibraryAlbums",
+        "tags": ["Browsing", "Extension"],
+        "parameters": [
+            {
+                "name": "f",
+                "in": "query",
+                "description": "The response format. extendedLibrary version 1 requires json.",
+                "required": true,
+                "schema": {"type": "string", "enum": ["json"]}
+            }
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/json": {
+                    "schema": {"$ref": "../schemas/ExtendedLibraryAlbumQuery.json"},
+                    "examples": {
+                        "default": {"summary": "Core fields in default id order", "value": {}},
+                        "filtered": {
+                            "value": {
+                                "properties": ["artist", "year", "genres", "releaseTypes"],
+                                "filter": {
+                                    "and": [
+                                        {"field": "year", "operator": "between", "value": [1990, 1999]},
+                                        {"field": "musicFolderId", "operator": "equals", "value": "folder-1"}
+                                    ]
+                                },
+                                "sort": [
+                                    {"field": "artist", "direction": "ascending"},
+                                    {"field": "year", "direction": "descending"}
+                                ],
+                                "limit": 100
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "responses": {
+            "200": {
+                "description": "Successful or failed subsonic-response. A missing body fails with code 10; an invalid query or cursor fails with code 0.",
+                "content": {
+                    "application/json": {
+                        "schema": {"$ref": "./getLibraryAlbums/GetLibraryAlbumsResponse.json"},
+                        "example": {
+                            "subsonic-response": {
+                                "status": "ok", "version": "1.16.1",
+                                "libraryAlbums": {
+                                    "album": [
+                                        {
+                                            "id": "album-7", "name": "Example Album",
+                                            "songCount": 10, "duration": 2580,
+                                            "created": "2025-04-20T12:00:00Z"
+                                        }
+                                    ],
+                                    "total": 1
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "404": {"description": "Extension not supported."}
+        },
+        "externalDocs": {
+            "description": "getLibraryAlbums",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlibraryalbums/"
+        }
+    }
+}

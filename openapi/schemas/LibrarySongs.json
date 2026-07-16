@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "A page of distinct authorized songs. Child required fields are always present. Optional fields are projection-dependent and must be omitted unless requested; requested metadata may be omitted when unavailable.",
+    "additionalProperties": false,
+    "properties": {
+        "song": {
+            "type": "array",
+            "items": {"$ref": "./Child.json"}
+        },
+        "total": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Current total number of authorized, filtered songs before pagination."
+        },
+        "nextCursor": {
+            "type": "string",
+            "description": "Opaque continuation token. Omitted on the final page."
+        }
+    },
+    "required": ["song", "total"]
+}

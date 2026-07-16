@@ -1,0 +1,70 @@
+{
+    "post": {
+        "summary": "Returns a projected, filtered, sorted page of library artists.",
+        "description": "OpenSubsonic extension `extendedLibrary` version 1. This endpoint only accepts an application/json request body and only returns JSON. Authentication, client, and protocol parameters remain in the query string.",
+        "operationId": "postGetLibraryArtists",
+        "tags": ["Browsing", "Extension"],
+        "parameters": [
+            {
+                "name": "f",
+                "in": "query",
+                "description": "The response format. extendedLibrary version 1 requires json.",
+                "required": true,
+                "schema": {"type": "string", "enum": ["json"]}
+            }
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/json": {
+                    "schema": {"$ref": "../schemas/ExtendedLibraryArtistQuery.json"},
+                    "examples": {
+                        "default": {"summary": "Core fields in default id order", "value": {}},
+                        "relationFilter": {
+                            "value": {
+                                "properties": ["albumCount", "sortName", "roles"],
+                                "filter": {
+                                    "or": [
+                                        {"field": "role", "operator": "equals", "value": "composer"},
+                                        {"field": "songId", "operator": "equals", "value": "song-42"}
+                                    ]
+                                },
+                                "sort": [
+                                    {"field": "sortName", "direction": "ascending"},
+                                    {"field": "name", "direction": "ascending"}
+                                ],
+                                "limit": 100
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "responses": {
+            "200": {
+                "description": "Successful or failed subsonic-response. A missing body fails with code 10; an invalid query or cursor fails with code 0.",
+                "content": {
+                    "application/json": {
+                        "schema": {"$ref": "./getLibraryArtists/GetLibraryArtistsResponse.json"},
+                        "example": {
+                            "subsonic-response": {
+                                "status": "ok", "version": "1.16.1",
+                                "libraryArtists": {
+                                    "artist": [
+                                        {"id": "artist-9", "name": "Example Artist", "albumCount": 4}
+                                    ],
+                                    "total": 1
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "404": {"description": "Extension not supported."}
+        },
+        "externalDocs": {
+            "description": "getLibraryArtists",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlibraryartists/"
+        }
+    }
+}

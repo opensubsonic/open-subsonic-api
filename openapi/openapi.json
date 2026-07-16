@@ -207,6 +207,18 @@
         "/rest/getInternetRadioStations": {
             "$ref": "./endpoints/getInternetRadioStations.json"
         },
+        "/rest/getLibraryAlbums": {
+            "$ref": "./endpoints/getLibraryAlbums.json"
+        },
+        "/rest/getLibraryArtists": {
+            "$ref": "./endpoints/getLibraryArtists.json"
+        },
+        "/rest/getLibraryFacetValues": {
+            "$ref": "./endpoints/getLibraryFacetValues.json"
+        },
+        "/rest/getLibrarySongs": {
+            "$ref": "./endpoints/getLibrarySongs.json"
+        },
         "/rest/getLicense": {
             "$ref": "./endpoints/getLicense.json"
         },
@@ -428,6 +440,87 @@
             }
         },
         "schemas": {
+            "ExtendedLibrarySortDirection": {
+                "$ref": "./schemas/ExtendedLibrarySortDirection.json"
+            },
+            "ExtendedLibrarySongSort": {
+                "$ref": "./schemas/ExtendedLibrarySongSort.json"
+            },
+            "ExtendedLibraryAlbumSort": {
+                "$ref": "./schemas/ExtendedLibraryAlbumSort.json"
+            },
+            "ExtendedLibraryArtistSort": {
+                "$ref": "./schemas/ExtendedLibraryArtistSort.json"
+            },
+            "ExtendedLibrarySongFilterRule": {
+                "$ref": "./schemas/ExtendedLibrarySongFilterRule.json"
+            },
+            "ExtendedLibraryAlbumFilterRule": {
+                "$ref": "./schemas/ExtendedLibraryAlbumFilterRule.json"
+            },
+            "ExtendedLibraryArtistFilterRule": {
+                "$ref": "./schemas/ExtendedLibraryArtistFilterRule.json"
+            },
+            "ExtendedLibrarySongFilter": {
+                "$ref": "./schemas/ExtendedLibrarySongFilter.json"
+            },
+            "ExtendedLibraryAlbumFilter": {
+                "$ref": "./schemas/ExtendedLibraryAlbumFilter.json"
+            },
+            "ExtendedLibraryArtistFilter": {
+                "$ref": "./schemas/ExtendedLibraryArtistFilter.json"
+            },
+            "ExtendedLibrarySongQuery": {
+                "$ref": "./schemas/ExtendedLibrarySongQuery.json"
+            },
+            "ExtendedLibraryAlbumQuery": {
+                "$ref": "./schemas/ExtendedLibraryAlbumQuery.json"
+            },
+            "ExtendedLibraryArtistQuery": {
+                "$ref": "./schemas/ExtendedLibraryArtistQuery.json"
+            },
+            "ExtendedLibraryFacetQuery": {
+                "$ref": "./schemas/ExtendedLibraryFacetQuery.json"
+            },
+            "LibrarySongs": {
+                "$ref": "./schemas/LibrarySongs.json"
+            },
+            "LibraryAlbums": {
+                "$ref": "./schemas/LibraryAlbums.json"
+            },
+            "LibraryArtists": {
+                "$ref": "./schemas/LibraryArtists.json"
+            },
+            "LibraryFacetValue": {
+                "$ref": "./schemas/LibraryFacetValue.json"
+            },
+            "LibraryFacetValues": {
+                "$ref": "./schemas/LibraryFacetValues.json"
+            },
+            "GetLibrarySongsSuccessResponse": {
+                "$ref": "./endpoints/getLibrarySongs/GetLibrarySongsSuccessResponse.json"
+            },
+            "GetLibrarySongsResponse": {
+                "$ref": "./endpoints/getLibrarySongs/GetLibrarySongsResponse.json"
+            },
+            "GetLibraryAlbumsSuccessResponse": {
+                "$ref": "./endpoints/getLibraryAlbums/GetLibraryAlbumsSuccessResponse.json"
+            },
+            "GetLibraryAlbumsResponse": {
+                "$ref": "./endpoints/getLibraryAlbums/GetLibraryAlbumsResponse.json"
+            },
+            "GetLibraryArtistsSuccessResponse": {
+                "$ref": "./endpoints/getLibraryArtists/GetLibraryArtistsSuccessResponse.json"
+            },
+            "GetLibraryArtistsResponse": {
+                "$ref": "./endpoints/getLibraryArtists/GetLibraryArtistsResponse.json"
+            },
+            "GetLibraryFacetValuesSuccessResponse": {
+                "$ref": "./endpoints/getLibraryFacetValues/GetLibraryFacetValuesSuccessResponse.json"
+            },
+            "GetLibraryFacetValuesResponse": {
+                "$ref": "./endpoints/getLibraryFacetValues/GetLibraryFacetValuesResponse.json"
+            },
             "SubsonicError": {
                 "$ref": "./schemas/Error.json"
             },

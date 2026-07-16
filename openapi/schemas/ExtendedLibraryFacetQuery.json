@@ -1,0 +1,105 @@
+{
+    "description": "An extendedLibrary version 1 facet-value query. The entity selects the field and filter catalogs. Results use a fixed ascending typed-value order.",
+    "oneOf": [
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "entity": {
+                    "type": "string",
+                    "enum": ["song"]
+                },
+                "field": {
+                    "type": "string",
+                    "enum": [
+                        "genre", "mood", "grouping", "role", "year",
+                        "musicFolderId", "contentType", "suffix", "explicitStatus"
+                    ]
+                },
+                "filter": {
+                    "$ref": "./ExtendedLibrarySongFilter.json"
+                },
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 500,
+                    "default": 100
+                },
+                "cursor": {
+                    "type": "string",
+                    "description": "An opaque forward-only facet continuation token."
+                }
+            },
+            "required": ["entity", "field"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "entity": {
+                    "type": "string",
+                    "enum": ["album"]
+                },
+                "field": {
+                    "type": "string",
+                    "enum": [
+                        "genre", "mood", "releaseType", "recordLabel", "year",
+                        "musicFolderId", "isCompilation", "explicitStatus"
+                    ]
+                },
+                "filter": {
+                    "$ref": "./ExtendedLibraryAlbumFilter.json"
+                },
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 500,
+                    "default": 100
+                },
+                "cursor": {
+                    "type": "string",
+                    "description": "An opaque forward-only facet continuation token."
+                }
+            },
+            "required": ["entity", "field"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "entity": {
+                    "type": "string",
+                    "enum": ["artist"]
+                },
+                "field": {
+                    "type": "string",
+                    "enum": ["role", "genre", "musicFolderId"]
+                },
+                "filter": {
+                    "$ref": "./ExtendedLibraryArtistFilter.json"
+                },
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 500,
+                    "default": 100
+                },
+                "cursor": {
+                    "type": "string",
+                    "description": "An opaque forward-only facet continuation token."
+                }
+            },
+            "required": ["entity", "field"]
+        }
+    ],
+    "example": {
+        "entity": "album",
+        "field": "recordLabel",
+        "filter": {
+            "field": "year",
+            "operator": "greaterThanOrEqual",
+            "value": 2000
+        },
+        "limit": 100
+    }
+}

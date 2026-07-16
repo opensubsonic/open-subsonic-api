@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "description": "An extendedLibrary version 1 song query. An empty object requests the first page, in id order, with core fields only.",
+    "additionalProperties": false,
+    "properties": {
+        "properties": {
+            "type": "array",
+            "uniqueItems": true,
+            "description": "Optional Child fields to return in addition to id, isDir, and title. Omitted or empty means core fields only. Wildcards, dotted paths, and nested projection are not supported.",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "parent", "album", "artist", "track", "year", "genre",
+                    "coverArt", "size", "contentType", "suffix",
+                    "transcodedContentType", "transcodedSuffix", "duration",
+                    "bitRate", "bitDepth", "samplingRate", "channelCount", "path",
+                    "isVideo", "userRating", "averageRating", "playCount",
+                    "discNumber", "created", "starred", "albumId", "artistId",
+                    "type", "mediaType", "bookmarkPosition", "originalWidth",
+                    "originalHeight", "played", "bpm", "comment", "sortName",
+                    "musicBrainzId", "isrc", "genres", "artists", "displayArtist",
+                    "albumArtists", "displayAlbumArtist", "contributors",
+                    "displayComposer", "moods", "replayGain", "explicitStatus",
+                    "works", "movements", "groupings"
+                ]
+            }
+        },
+        "filter": {
+            "$ref": "./ExtendedLibrarySongFilter.json"
+        },
+        "sort": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "uniqueItems": true,
+            "description": "Ordered unique sort fields. If id is explicit it must be last; otherwise id ascending is appended.",
+            "items": {
+                "$ref": "./ExtendedLibrarySongSort.json"
+            }
+        },
+        "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 500,
+            "default": 100
+        },
+        "cursor": {
+            "type": "string",
+            "description": "An opaque forward-only continuation token returned by the same endpoint."
+        }
+    },
+    "example": {
+        "properties": ["album", "artist", "duration", "coverArt"],
+        "filter": {
+            "and": [
+                {"field": "year", "operator": "greaterThanOrEqual", "value": 2000},
+                {"field": "genre", "operator": "equals", "value": "Rock"}
+            ]
+        },
+        "sort": [
+            {"field": "artist", "direction": "ascending"},
+            {"field": "album", "direction": "ascending"}
+        ],
+        "limit": 100
+    }
+}

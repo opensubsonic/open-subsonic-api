@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "description": "A subsonic-response envelope containing libraryAlbums on success or the standard error on failure.",
+    "properties": {
+        "subsonic-response": {
+            "oneOf": [
+                {"$ref": "./GetLibraryAlbumsSuccessResponse.json"},
+                {"$ref": "../../schemas/SubsonicResponse/SubsonicFailureResponse.json"}
+            ]
+        }
+    },
+    "required": ["subsonic-response"]
+}

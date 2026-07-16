@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "A page of distinct authorized albums. AlbumID3 required fields are always present. Optional fields are projection-dependent and must be omitted unless requested; requested metadata may be omitted when unavailable. song is never returned.",
+    "additionalProperties": false,
+    "properties": {
+        "album": {
+            "type": "array",
+            "items": {"$ref": "./AlbumID3.json"}
+        },
+        "total": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Current total number of authorized, filtered albums before pagination."
+        },
+        "nextCursor": {
+            "type": "string",
+            "description": "Opaque continuation token. Omitted on the final page."
+        }
+    },
+    "required": ["album", "total"]
+}
