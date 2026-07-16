@@ -1,0 +1,114 @@
+{
+    "post": {
+        "summary": "Returns a projected, filtered, sorted page of library songs.",
+        "description": "OpenSubsonic extension `extendedLibrary` version 1. This endpoint only accepts an application/json request body and only returns JSON. Authentication, client, and protocol parameters remain in the query string.",
+        "operationId": "postGetLibrarySongs",
+        "tags": ["Browsing", "Extension"],
+        "parameters": [
+            {
+                "name": "f",
+                "in": "query",
+                "description": "The response format. extendedLibrary version 1 requires json.",
+                "required": true,
+                "schema": {"type": "string", "enum": ["json"]}
+            }
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/json": {
+                    "schema": {"$ref": "../schemas/ExtendedLibrarySongQuery.json"},
+                    "examples": {
+                        "firstPage": {
+                            "summary": "First page with projection, recursive filtering, and sorting",
+                            "value": {
+                                "properties": ["album", "artist", "duration", "coverArt"],
+                                "filter": {
+                                    "and": [
+                                        {"field": "year", "operator": "greaterThanOrEqual", "value": 2000},
+                                        {"field": "genre", "operator": "equals", "value": "Rock"}
+                                    ]
+                                },
+                                "sort": [
+                                    {"field": "artist", "direction": "ascending"},
+                                    {"field": "album", "direction": "ascending"}
+                                ],
+                                "limit": 100
+                            }
+                        },
+                        "continuation": {
+                            "summary": "Continuation with a changed projection and limit",
+                            "value": {
+                                "properties": ["album", "artist", "year"],
+                                "filter": {
+                                    "and": [
+                                        {"field": "year", "operator": "greaterThanOrEqual", "value": 2000},
+                                        {"field": "genre", "operator": "equals", "value": "Rock"}
+                                    ]
+                                },
+                                "sort": [
+                                    {"field": "artist", "direction": "ascending"},
+                                    {"field": "album", "direction": "ascending"}
+                                ],
+                                "limit": 50,
+                                "cursor": "opaque-next-cursor"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "responses": {
+            "200": {
+                "description": "Successful or failed subsonic-response. A missing body fails with code 10; an invalid query or cursor fails with code 0.",
+                "content": {
+                    "application/json": {
+                        "schema": {"$ref": "./getLibrarySongs/GetLibrarySongsResponse.json"},
+                        "examples": {
+                            "success": {
+                                "value": {
+                                    "subsonic-response": {
+                                        "status": "ok",
+                                        "version": "1.16.1",
+                                        "librarySongs": {
+                                            "song": [
+                                                {
+                                                    "id": "song-42", "isDir": false,
+                                                    "title": "Example", "album": "Album",
+                                                    "artist": "Artist", "duration": 213
+                                                }
+                                            ],
+                                            "total": 237,
+                                            "nextCursor": "opaque-next-cursor"
+                                        }
+                                    }
+                                }
+                            },
+                            "zeroMatches": {
+                                "value": {
+                                    "subsonic-response": {
+                                        "status": "ok", "version": "1.16.1",
+                                        "librarySongs": {"song": [], "total": 0}
+                                    }
+                                }
+                            },
+                            "invalidQuery": {
+                                "value": {
+                                    "subsonic-response": {
+                                        "status": "failed", "version": "1.16.1",
+                                        "error": {"code": 0, "message": "Invalid extended library query"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "404": {"description": "Extension not supported."}
+        },
+        "externalDocs": {
+            "description": "getLibrarySongs",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlibrarysongs/"
+        }
+    }
+}

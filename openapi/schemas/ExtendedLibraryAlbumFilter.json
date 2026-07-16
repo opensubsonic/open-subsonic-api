@@ -1,0 +1,36 @@
+{
+    "description": "A recursive album filter node. A node is exactly one leaf rule, non-empty AND group, or non-empty OR group.",
+    "oneOf": [
+        {
+            "$ref": "./ExtendedLibraryAlbumFilterRule.json"
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "and": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "./ExtendedLibraryAlbumFilter.json"
+                    }
+                }
+            },
+            "required": ["and"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "or": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "./ExtendedLibraryAlbumFilter.json"
+                    }
+                }
+            },
+            "required": ["or"]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "A page of distinct non-null facet values in fixed ascending typed-value order.",
+    "additionalProperties": false,
+    "properties": {
+        "value": {
+            "type": "array",
+            "items": {
+                "$ref": "./LibraryFacetValue.json"
+            }
+        },
+        "total": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Current total number of distinct non-null facet values before pagination."
+        },
+        "nextCursor": {
+            "type": "string",
+            "description": "Opaque continuation token. Omitted on the final page."
+        }
+    },
+    "required": ["value", "total"]
+}

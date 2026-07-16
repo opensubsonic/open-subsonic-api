@@ -1,0 +1,96 @@
+{
+    "post": {
+        "summary": "Returns authorized distinct values and counts for one library facet.",
+        "description": "OpenSubsonic extension `extendedLibrary` version 1. Applies an optional entity-specific base filter, groups distinct non-null values for the requested field, and returns them in a fixed ascending typed-value order. This endpoint only accepts an application/json request body and only returns JSON.",
+        "operationId": "postGetLibraryFacetValues",
+        "tags": ["Browsing", "Extension"],
+        "parameters": [
+            {
+                "name": "f",
+                "in": "query",
+                "description": "The response format. extendedLibrary version 1 requires json.",
+                "required": true,
+                "schema": {"type": "string", "enum": ["json"]}
+            }
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/json": {
+                    "schema": {"$ref": "../schemas/ExtendedLibraryFacetQuery.json"},
+                    "examples": {
+                        "firstPage": {
+                            "summary": "Record labels for albums released since 2000",
+                            "value": {
+                                "entity": "album",
+                                "field": "recordLabel",
+                                "filter": {
+                                    "field": "year",
+                                    "operator": "greaterThanOrEqual",
+                                    "value": 2000
+                                },
+                                "limit": 100
+                            }
+                        },
+                        "continuation": {
+                            "summary": "Continuation with a changed page size",
+                            "value": {
+                                "entity": "album",
+                                "field": "recordLabel",
+                                "filter": {
+                                    "field": "year",
+                                    "operator": "greaterThanOrEqual",
+                                    "value": 2000
+                                },
+                                "limit": 50,
+                                "cursor": "opaque-facet-cursor"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "responses": {
+            "200": {
+                "description": "Successful or failed subsonic-response. A missing body fails with code 10; an invalid query or cursor fails with code 0.",
+                "content": {
+                    "application/json": {
+                        "schema": {"$ref": "./getLibraryFacetValues/GetLibraryFacetValuesResponse.json"},
+                        "examples": {
+                            "success": {
+                                "value": {
+                                    "subsonic-response": {
+                                        "status": "ok",
+                                        "version": "1.16.1",
+                                        "libraryFacetValues": {
+                                            "value": [
+                                                {"value": "4AD", "count": 18},
+                                                {"value": "Blue Note", "count": 42}
+                                            ],
+                                            "total": 27,
+                                            "nextCursor": "opaque-facet-cursor"
+                                        }
+                                    }
+                                }
+                            },
+                            "zeroValues": {
+                                "value": {
+                                    "subsonic-response": {
+                                        "status": "ok",
+                                        "version": "1.16.1",
+                                        "libraryFacetValues": {"value": [], "total": 0}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "404": {"description": "Extension not supported."}
+        },
+        "externalDocs": {
+            "description": "getLibraryFacetValues",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlibraryfacetvalues/"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "description": "An artist sort key. Sort keys are evaluated in array order.",
+    "additionalProperties": false,
+    "properties": {
+        "field": {
+            "type": "string",
+            "enum": ["id", "name", "sortName", "albumCount", "starred"]
+        },
+        "direction": {
+            "$ref": "./ExtendedLibrarySortDirection.json"
+        }
+    },
+    "required": ["field", "direction"]
+}

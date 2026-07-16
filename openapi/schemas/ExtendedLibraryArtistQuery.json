@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "description": "An extendedLibrary version 1 artist query. An empty object requests the first page, in id order, with core fields only.",
+    "additionalProperties": false,
+    "properties": {
+        "properties": {
+            "type": "array",
+            "uniqueItems": true,
+            "description": "Optional ArtistID3 fields to return in addition to id and name. Omitted or empty means core fields only.",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "coverArt", "artistImageUrl", "albumCount", "starred",
+                    "musicBrainzId", "sortName", "disambiguation", "roles"
+                ]
+            }
+        },
+        "filter": {
+            "$ref": "./ExtendedLibraryArtistFilter.json"
+        },
+        "sort": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "uniqueItems": true,
+            "description": "Ordered unique sort fields. If id is explicit it must be last; otherwise id ascending is appended.",
+            "items": {
+                "$ref": "./ExtendedLibraryArtistSort.json"
+            }
+        },
+        "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 500,
+            "default": 100
+        },
+        "cursor": {
+            "type": "string",
+            "description": "An opaque forward-only continuation token returned by the same endpoint."
+        }
+    }
+}

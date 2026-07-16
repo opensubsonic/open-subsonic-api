@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "description": "One non-null facet value and the number of distinct authorized entities in the base result set that have it. The value type is determined by the requested facet field.",
+    "additionalProperties": false,
+    "properties": {
+        "value": {
+            "oneOf": [
+                {"type": "string"},
+                {"type": "integer"},
+                {"type": "boolean"}
+            ]
+        },
+        "count": {
+            "type": "integer",
+            "minimum": 1
+        }
+    },
+    "required": ["value", "count"]
+}

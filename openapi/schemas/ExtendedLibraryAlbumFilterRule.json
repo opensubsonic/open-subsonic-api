@@ -1,0 +1,217 @@
+{
+    "description": "A typed album filter leaf. The operator determines whether value is a scalar, a non-empty set, a two-value inclusive range, or absent.",
+    "oneOf": [
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": [
+                        "id", "name", "version", "artist", "artistId", "genre",
+                        "mood", "releaseType", "recordLabel", "musicFolderId",
+                        "sortName", "musicBrainzId", "explicitStatus"
+                    ]
+                },
+                "operator": {
+                    "type": "string",
+                    "enum": [
+                        "equals", "notEquals", "contains", "notContains",
+                        "startsWith", "endsWith", "greaterThan",
+                        "greaterThanOrEqual", "lessThan", "lessThanOrEqual"
+                    ]
+                },
+                "value": {"type": "string"}
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": [
+                        "id", "name", "version", "artist", "artistId", "genre",
+                        "mood", "releaseType", "recordLabel", "musicFolderId",
+                        "sortName", "musicBrainzId", "explicitStatus"
+                    ]
+                },
+                "operator": {"type": "string", "enum": ["in", "notIn"]},
+                "value": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 100,
+                    "items": {"type": "string"}
+                }
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": [
+                        "id", "name", "version", "artist", "artistId", "genre",
+                        "mood", "releaseType", "recordLabel", "musicFolderId",
+                        "sortName", "musicBrainzId", "explicitStatus"
+                    ]
+                },
+                "operator": {"type": "string", "enum": ["between"]},
+                "value": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {"type": "string"}
+                }
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": ["year", "songCount", "duration", "playCount", "userRating"]
+                },
+                "operator": {
+                    "type": "string",
+                    "enum": [
+                        "equals", "notEquals", "greaterThan",
+                        "greaterThanOrEqual", "lessThan", "lessThanOrEqual"
+                    ]
+                },
+                "value": {"type": "integer"}
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": ["year", "songCount", "duration", "playCount", "userRating"]
+                },
+                "operator": {"type": "string", "enum": ["in", "notIn"]},
+                "value": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 100,
+                    "items": {"type": "integer"}
+                }
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": ["year", "songCount", "duration", "playCount", "userRating"]
+                },
+                "operator": {"type": "string", "enum": ["between"]},
+                "value": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {"type": "integer"}
+                }
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {"type": "string", "enum": ["created", "starred", "played"]},
+                "operator": {
+                    "type": "string",
+                    "enum": [
+                        "equals", "notEquals", "greaterThan",
+                        "greaterThanOrEqual", "lessThan", "lessThanOrEqual"
+                    ]
+                },
+                "value": {"type": "string", "format": "date-time"}
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {"type": "string", "enum": ["created", "starred", "played"]},
+                "operator": {"type": "string", "enum": ["in", "notIn"]},
+                "value": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 100,
+                    "items": {"type": "string", "format": "date-time"}
+                }
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {"type": "string", "enum": ["created", "starred", "played"]},
+                "operator": {"type": "string", "enum": ["between"]},
+                "value": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {"type": "string", "format": "date-time"}
+                }
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {"type": "string", "enum": ["isCompilation"]},
+                "operator": {"type": "string", "enum": ["equals", "notEquals"]},
+                "value": {"type": "boolean"}
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {"type": "string", "enum": ["isCompilation"]},
+                "operator": {"type": "string", "enum": ["in", "notIn"]},
+                "value": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 100,
+                    "items": {"type": "boolean"}
+                }
+            },
+            "required": ["field", "operator", "value"]
+        },
+        {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "enum": [
+                        "id", "name", "version", "artist", "artistId", "genre",
+                        "mood", "releaseType", "recordLabel", "musicFolderId",
+                        "year", "songCount", "duration", "playCount", "userRating",
+                        "created", "starred", "played", "sortName", "musicBrainzId",
+                        "isCompilation", "explicitStatus"
+                    ]
+                },
+                "operator": {"type": "string", "enum": ["isNull", "isNotNull"]}
+            },
+            "required": ["field", "operator"]
+        }
+    ]
+}

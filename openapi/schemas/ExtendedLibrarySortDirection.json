@@ -1,0 +1,8 @@
+{
+    "type": "string",
+    "description": "The direction for an extended library sort key.",
+    "enum": [
+        "ascending",
+        "descending"
+    ]
+}

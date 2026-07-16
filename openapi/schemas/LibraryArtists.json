@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "A page of distinct authorized artists. ArtistID3 required fields are always present. Optional fields are projection-dependent and must be omitted unless requested; requested metadata may be omitted when unavailable.",
+    "additionalProperties": false,
+    "properties": {
+        "artist": {
+            "type": "array",
+            "items": {"$ref": "./ArtistID3.json"}
+        },
+        "total": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Current total number of authorized, filtered artists before pagination."
+        },
+        "nextCursor": {
+            "type": "string",
+            "description": "Opaque continuation token. Omitted on the final page."
+        }
+    },
+    "required": ["artist", "total"]
+}

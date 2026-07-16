@@ -12,7 +12,7 @@ This table shows the supported extensions by OpenSubsonic versions:
 
 | OpenSubsonic version | Supported extension |
 | --- | --- |
-| 1 | [Template extension](../extensions/template), [Sonic similarity](../extensions/sonicSimilarity) |
+| 1 | [Template extension](../extensions/template), [Sonic similarity](../extensions/sonicSimilarity), [Extended Library](../extensions/extendedLibrary) |
 
 **Note**: Since extensions are optional, more extensions can be added over time to the same OpenSubsonic API version.
 

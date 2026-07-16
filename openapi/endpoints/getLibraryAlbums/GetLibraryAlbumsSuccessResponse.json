@@ -1,0 +1,12 @@
+{
+    "allOf": [
+        {"$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"},
+        {
+            "type": "object",
+            "properties": {
+                "libraryAlbums": {"$ref": "../../schemas/LibraryAlbums.json"}
+            },
+            "required": ["libraryAlbums"]
+        }
+    ]
+}
