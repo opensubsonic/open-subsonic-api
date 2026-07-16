@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "description": "Request payload for updating a collection. Only the fields supplied in the request payload will have an effect. Only one of `add`, `move`, and `remove` can be non-empty in a single request.",
+    "properties": {
+        "collectionId": {
+            "description": "The collection ID.",
+            "type": "string"
+        },
+        "name": {
+            "description": "The human-readable name of the collection.",
+            "type": "string"
+        },
+        "comment": {
+            "description": "The collection comment.",
+            "type": "string"
+        },
+        "public": {
+            "description": "`true` if the collection should be visible to all users, `false` otherwise.",
+            "type": "boolean"
+        },
+        "add": {
+            "description": "Add the specified items to the collection. Multiple items can be specified.",
+            "type": "array",
+            "items": {
+                "$ref": "../../schemas/CollectionItemId.json"
+            }
+        },
+        "move":  {
+            "$ref": "../../schemas/MoveRange.json"
+        },
+        "remove": {
+            "description": "Remove the item at this position from the collection. Multiple items can be specified.",
+            "type": "array",
+            "items": {
+                "type": "integer"
+            }
+        }
+    },
+    "required": [
+        "collectionId"
+    ]
+}

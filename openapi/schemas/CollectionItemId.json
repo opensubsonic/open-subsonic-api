@@ -1,0 +1,59 @@
+{
+    "allOf": [
+        {
+            "type": "object",
+            "description": "Collection item identifier. Depending on the item type, either `id` or `name` must be provided.",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "Type of the collection item.",
+                    "enum": [
+                        "song",
+                        "album",
+                        "artist",
+                        "playlist",
+                        "genre",
+                        "internetRadioStation",
+                        "podcastEpisode",
+                        "podcast"
+                    ]
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "externalDocs": {
+                "description": "CollectionItemId",
+                "url": "https://opensubsonic.netlify.app/docs/payloads/collectionitemid/"
+            }
+        },
+        {
+            "oneOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "ID of the item, where applicable."
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the item, where applicable."
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ]
+                }
+            ]
+        }
+    ]
+}
