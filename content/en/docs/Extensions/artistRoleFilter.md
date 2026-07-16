@@ -21,6 +21,6 @@ Historically these endpoints return only album artists. Some clients want the fu
 
 The parameter may be repeated to request several roles, using the values found in the [`ArtistID3`](../../responses/artistid3) `roles` field (e.g. `albumartist`, `artist`, `composer`). An artist is returned if it has **any** of the requested roles. The special value `all` returns every artist regardless of role.
 
-The behavior when the parameter is **not** provided is left to the server (historically, returning only album artists) so that existing clients are unaffected. On [`search3`](../../endpoints/search3), the parameter only affects the returned artists; albums and songs are unaffected.
+When the parameter is omitted the server returns what it does today, so the extension is purely additive and existing clients are unaffected. On [`search3`](../../endpoints/search3), the parameter only affects the returned artists; albums and songs are unaffected.
 
 This extension requires the support of the `role` parameter of [`getArtists`](../../endpoints/getartists) and the `artistRole` parameter of [`search3`](../../endpoints/search3).

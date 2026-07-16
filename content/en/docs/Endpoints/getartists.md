@@ -26,7 +26,7 @@ If the server supports the [`Artist role filter`](../../extensions/artistRoleFil
 
 `role` may be repeated to request several roles, using the values found in the [`ArtistID3`](../../responses/artistid3) `roles` field (e.g. `albumartist`, `artist`, `composer`). An artist is returned if it has **any** of the requested roles. The special value `all` returns every artist regardless of role.
 
-The behavior when `role` is **not** provided is left to the server (historically, returning only album artists), so that existing clients are unaffected.
+When `role` is omitted the server returns what it does today, so the extension is purely additive and existing clients are unaffected.
 {{< /alert >}}
 
 ### Example
