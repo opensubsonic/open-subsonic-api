@@ -1,0 +1,16 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "publicImage": {
+                    "$ref": "../../schemas/PublicImage.json"
+                }
+            },
+            "required": ["publicImage"]
+        }
+    ]
+}
