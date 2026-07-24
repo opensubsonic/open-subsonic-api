@@ -59,6 +59,14 @@
             "type": "string",
             "format": "date-time",
             "description": "[OS] Date the playlist contents are considered valid until [ISO 8601]. Empty or absent means no caching guarantee."
+        },
+        "playlistFolderId": {
+            "type": "string",
+            "description": "[OS] ID of the containing folder in the selected user's playlist organization (extension playlistFolders). Empty for a root-level playlist. The value is user-specific and does not depend on playlist ownership."
+        },
+        "playlistFolderSortOrder": {
+            "type": "integer",
+            "description": "[OS] Position among siblings in the selected user's playlist organization (extension playlistFolders)."
         }
     },
     "required": [

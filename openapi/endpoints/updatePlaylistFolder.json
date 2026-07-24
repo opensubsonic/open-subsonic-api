@@ -1,0 +1,131 @@
+{
+    "get": {
+        "summary": "Renames, moves, or reorders a playlist folder.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Updates a folder in the authenticated user's playlist organization: rename it, move it under another folder or to the root, or change its position among its siblings. At least one optional parameter must be supplied.",
+        "operationId": "updatePlaylistFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "playlistFolderId",
+                "in": "query",
+                "description": "ID of the playlist folder to update.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "The new human-readable name of the playlist folder.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "parentId",
+                "in": "query",
+                "description": "ID of the new parent playlist folder. An empty value moves the folder to the root. Omit to leave the parent unchanged.",
+                "required": false,
+                "allowEmptyValue": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "sortOrder",
+                "in": "query",
+                "description": "New position among siblings, as a client-assigned integer.",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updatePlaylistFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateplaylistfolder/"
+        }
+    },
+    "post": {
+        "summary": "Renames, moves, or reorders a playlist folder.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Updates a folder in the authenticated user's playlist organization: rename it, move it under another folder or to the root, or change its position among its siblings. At least one optional parameter must be supplied.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "operationId": "postUpdatePlaylistFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "playlistFolderId": {
+                                "type": "string",
+                                "description": "ID of the playlist folder to update."
+                            },
+                            "name": {
+                                "type": "string",
+                                "description": "The new human-readable name of the playlist folder."
+                            },
+                            "parentId": {
+                                "type": "string",
+                                "description": "ID of the new parent playlist folder. An empty value moves the folder to the root. Omit to leave the parent unchanged."
+                            },
+                            "sortOrder": {
+                                "type": "integer",
+                                "description": "New position among siblings, as a client-assigned integer."
+                            }
+                        },
+                        "required": [
+                            "playlistFolderId"
+                        ],
+                        "anyOf": [
+                            {
+                                "required": [
+                                    "name"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "parentId"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "sortOrder"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updatePlaylistFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateplaylistfolder/"
+        }
+    }
+}
