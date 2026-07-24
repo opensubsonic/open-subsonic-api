@@ -1,6 +1,9 @@
 ---
 title: "getTopSongs"
-linkTitle: "getTopSongs"
+linkTitle: "getTopSongs [OS]"
+opensubsonic:
+- Addition
+- Extension
 categories:
 - Browsing
 description: >
@@ -15,8 +18,15 @@ Returns top songs for the given artist, using data from [last.fm](http://last.fm
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
-| `artist` | **Yes** |  |   | The artist name. |
+| `artist` | Yes, unless `id` is provided* |  |   | The artist name. |
+| `id` | No | **Yes** |   | The artist ID. Requires the [`topSongsByArtistId`](../../extensions/topsongsbyartistid/) extension. |
 | `count` | No  | |  50  | Max number of songs to return. |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+\* If the server supports the [`topSongsByArtistId`](../../extensions/topsongsbyartistid/) extension, it **must** accept the `id` parameter and return the top songs for the artist with that ID. When `id` is provided, `artist` is not required, and `id` takes precedence over it.
+
+On servers without the extension, `id` is ignored and `artist` remains required.
+{{< /alert >}}
 
 ### Example
 
