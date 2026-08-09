@@ -13,7 +13,11 @@ Returns information about shared media this user is allowed to manage. Takes no 
 
 ### Parameters
 
-Takes no extra parameters.
+Takes no extra parameters, unless the server supports the [Music Folder](../../extensions/musicfolder) extension, in which case the following parameter is supported.
+
+| Parameter | Req. | OpenS. | Default | Comment |
+| --- | --- | --- | --- | --- |
+| `musicFolderId` | No | **Yes** |   | Only include shares within the given top-level music folder |
 
 ### Example
 
