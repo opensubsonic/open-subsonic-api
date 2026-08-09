@@ -66,6 +66,20 @@ description: >
       "type": "music",
       "isVideo": false
     }
+  ],
+  "playlist": [
+    {
+      "id": "800000075",
+      "name": "testcreate",
+      "owner": "user",
+      "public": true,
+      "created": "2023-03-16T03:18:41+00:00",
+      "changed": "2023-03-16T03:18:41+00:00",
+      "songCount": 1,
+      "duration": 304,
+      "readonly": true,
+      "validUntil": "2023-03-23T03:18:41+00:00"
+    }
   ]
 }
 {{< /tab >}}
@@ -136,3 +150,10 @@ description: >
 | `artist` | Array of [`ArtistID3`](../artistid3) | No |     | Matching artists |
 | `album` | Array of [`AlbumID3`](../albumid3) | No |     |  Matching albums  |
 | `song` | Array of [`Child`](../child) | No |     | Matching songs |
+| `playlist` | Array of [`Playlist`](../playlist) | No | **Yes** | Matching playlists |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+New field is added:
+
+- `playlist`
+{{< /alert >}}
