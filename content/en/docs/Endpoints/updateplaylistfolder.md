@@ -15,7 +15,7 @@ description: >
 
 `http://your-server/rest/updatePlaylistFolder`
 
-Updates a folder in the authenticated user's playlist organization: rename it, move it under another folder or to the root, or change its position among its siblings. Playlists are moved into and out of folders with [`movePlaylist`](../moveplaylist).
+Updates a folder in the authenticated user's playlist organization: rename it, move it under another folder or to the root, or change its position among its siblings. Playlists are placed in and removed from folders with [`addPlaylistToFolder`](../addplaylisttofolder) and [`removePlaylistFromFolder`](../removeplaylistfromfolder).
 
 ### Parameters
 

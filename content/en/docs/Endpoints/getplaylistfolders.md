@@ -15,7 +15,7 @@ description: >
 
 `http://your-server/rest/getPlaylistFolders`
 
-Returns a user's playlist organization: all folders as a flat list, and all playlist placed within them. Clients build the hierarchy by matching each folder's `parentId` to another folder's `id`, and place playlists using the `playlistPlacement` array. A playlist not named by any placement appears implicitly at the root, unordered. Playlist data itself comes from [`getPlaylists`](../getplaylists).
+Returns a user's playlist organization: all folders as a flat list, and all playlists placed within them. Clients build the hierarchy by matching each folder's `parentId` to another folder's `id`, and place playlists using the `playlistPlacement` array. A playlist not named by any placement appears implicitly at the root, unordered. Playlist data itself comes from [`getPlaylists`](../getplaylists).
 
 ### Parameters
 

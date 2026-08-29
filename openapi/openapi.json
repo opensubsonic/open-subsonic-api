@@ -318,9 +318,6 @@
         "/rest/jukeboxControl": {
             "$ref": "./endpoints/jukeboxControl.json"
         },
-        "/rest/movePlaylist": {
-            "$ref": "./endpoints/movePlaylist.json"
-        },
         "/rest/ping": {
             "$ref": "./endpoints/ping.json"
         },

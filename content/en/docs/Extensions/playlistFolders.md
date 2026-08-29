@@ -20,7 +20,6 @@ This extension requires the following endpoints:
 - [`createPlaylistFolder`](../../endpoints/createplaylistfolder) creates a folder.
 - [`deletePlaylistFolder`](../../endpoints/deleteplaylistfolder) deletes a folder, releasing its contents.
 - [`getPlaylistFolders`](../../endpoints/getplaylistfolders) returns all of the selected user's folders and playlist placements.
-- [`movePlaylist`](../../endpoints/moveplaylist) files playlists in a folder or at the root and sets their position. Replaces all other placements.
 - [`updatePlaylistFolder`](../../endpoints/updateplaylistfolder) renames, moves, or reorders a folder.
 - [`addPlaylistToFolder`](../../endpoints/addplaylisttofolder) adds a single placement.
 - [`removePlaylistFromFolder`](../../endpoints/removeplaylistfromfolder) removes a single placement.
@@ -33,7 +32,7 @@ A **placement** files one playlist in one folder within one user's organization.
 
 The root behaves as a folder identified by an empty ID: a placement with an empty or omitted `playlistFolderId` is an explicit root placement, and is what carries a playlist's position at the root. A playlist with no placements at all appears implicitly at the root, unordered — this is the automatic degrade path for servers, users, or clients that never touch folders.
 
-Two styles of write are available. [`movePlaylist`](../../endpoints/moveplaylist) *sets* a playlist's only location: afterwards, its placements in the caller's tree are exactly the destination given, others are removed. [`addPlaylistToFolder`](../../endpoints/addplaylisttofolder) and [`removePlaylistFromFolder`](../../endpoints/removeplaylistfromfolder) *edit* individual placements. A client that only ever calls `movePlaylist` maintains a single-home tree and can ignore multi-placement entirely. NOTE: Client inheriting a multi-folder schema would immediately start eroding it upon moving playlists.
+Writes operate on individual placements: [`addPlaylistToFolder`](../../endpoints/addplaylisttofolder) adds a placement (or reorders an existing one), and [`removePlaylistFromFolder`](../../endpoints/removeplaylistfromfolder) removes one. A client that thinks in single-home trees implements a move as a remove from the old folder plus an add to the new one, and never observes multi-placement.
 
 ### Hierarchy and user scope
 
@@ -53,14 +52,14 @@ A placement exists only while its playlist is visible to the user: when a playli
 
 Folders are an organizational schema laid over playlists, deleting a folder is a pure schema operation: the folder and the placements it held are removed, its child folders are re-parented to the deleted folder's parent, and the playlists themselves are untouched. A playlist placed nowhere else simply reappears at the implicit root.
 
-An omitted `parentId` on [`updatePlaylistFolder`](../../endpoints/updateplaylistfolder) leaves the folder's parent unchanged, while an explicitly empty value moves the folder to the root. The `playlistFolderId` parameter of [`movePlaylist`](../../endpoints/moveplaylist) behaves the same way. Servers must distinguish an empty parameter value from an absent parameter.
+An omitted `parentId` on [`updatePlaylistFolder`](../../endpoints/updateplaylistfolder) leaves the folder's parent unchanged, while an explicitly empty value moves the folder to the root. Servers must distinguish an empty parameter value from an absent parameter.
 
 ### Error handling
 
 - A folder ID (including `parentId`) that does not exist or belongs to another user's tree returns error `70`, indistinguishable from not-found, so that folder IDs cannot be probed across users.
 - A `playlistId` that does not exist or is not visible to the authenticated user returns error `70`.
 - A move that would create a cycle returns error `0`.
-- Calling [`updatePlaylistFolder`](../../endpoints/updateplaylistfolder) or [`movePlaylist`](../../endpoints/moveplaylist) without any of their optional parameters returns error `10`.
+- Calling [`updatePlaylistFolder`](../../endpoints/updateplaylistfolder) without any of its optional parameters returns error `10`.
 - Removing a placement that does not exist is not an error ([`removePlaylistFromFolder`](../../endpoints/removeplaylistfromfolder) is idempotent).
 
 ### Backward compatibility

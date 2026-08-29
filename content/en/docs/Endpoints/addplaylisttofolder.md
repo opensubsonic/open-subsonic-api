@@ -15,9 +15,9 @@ description: >
 
 `http://your-server/rest/addPlaylistToFolder`
 
-Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching any of the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead. Like [`movePlaylist`](../moveplaylist), this never modifies the playlists themselves, so it works on any playlist visible to the user, including shared, public, and `readonly` playlists owned by others.
+Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching any of the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead. This never modifies the playlists themselves, so it works on any playlist visible to the user, including shared, public, and `readonly` playlists owned by others.
 
-Where [`movePlaylist`](../moveplaylist) *sets* a playlist's location, this endpoint *edits* individual placements — it is how a playlist comes to appear in more than one folder.
+Placing a playlist in a second folder is how it comes to appear in more than one; a single-home move is this endpoint plus [`removePlaylistFromFolder`](../removeplaylistfromfolder) on the old folder.
 
 ### Parameters
 
