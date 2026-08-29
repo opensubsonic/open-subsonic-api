@@ -1,0 +1,96 @@
+{
+    "get": {
+        "summary": "Removes playlist placements from a folder or the root.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Removes placements from the authenticated user's playlist organization: unfiles each given playlist from the given folder (or removes its explicit root placement) without touching the playlist's other placements. Removing a playlist's last placement returns it to the implicit root. Removing a placement that does not exist is not an error (idempotent). Never modifies the playlists themselves.",
+        "operationId": "removePlaylistFromFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "playlistId",
+                "in": "query",
+                "description": "ID of the playlist to unfile. Multiple parameters allowed.",
+                "explode": true,
+                "style": "form",
+                "required": true,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "playlistFolderId",
+                "in": "query",
+                "description": "ID of the folder to remove the playlists from. An empty or omitted value removes explicit root placements.",
+                "required": false,
+                "allowEmptyValue": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "removePlaylistFromFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/removeplaylistfromfolder/"
+        }
+    },
+    "post": {
+        "summary": "Removes playlist placements from a folder or the root.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Removes placements from the authenticated user's playlist organization: unfiles each given playlist from the given folder (or removes its explicit root placement) without touching the playlist's other placements. Removing a playlist's last placement returns it to the implicit root. Removing a placement that does not exist is not an error (idempotent). Never modifies the playlists themselves.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "operationId": "postRemovePlaylistFromFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "playlistId": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "ID of the playlist to unfile. Multiple parameters allowed."
+                            },
+                            "playlistFolderId": {
+                                "type": "string",
+                                "description": "ID of the folder to remove the playlists from. An empty or omitted value removes explicit root placements."
+                            }
+                        },
+                        "required": [
+                            "playlistId"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "removePlaylistFromFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/removeplaylistfromfolder/"
+        }
+    }
+}

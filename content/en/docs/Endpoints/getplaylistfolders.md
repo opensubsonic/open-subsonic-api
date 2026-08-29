@@ -6,7 +6,7 @@ OpenSubsonic:
 categories:
   - Playlists
 description: >
-  Returns all folders in a user's playlist organization.
+  Returns all folders and playlist placements in a user's playlist organization.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)
@@ -15,7 +15,7 @@ description: >
 
 `http://your-server/rest/getPlaylistFolders`
 
-Returns all folders in a user's playlist organization as a flat list. Clients build the hierarchy by matching each folder's `parentId` to another folder's `id`, and place playlists using the `playlistFolderId` returned by [`getPlaylists`](../getplaylists).
+Returns a user's entire playlist organization: all folders as a flat list, and all playlist placements. Clients build the hierarchy by matching each folder's `parentId` to another folder's `id`, and place playlists using the `playlistPlacement` array. A playlist not named by any placement appears implicitly at the root, unordered. Playlist data itself comes from [`getPlaylists`](../getplaylists), which is unchanged by this extension.
 
 ### Parameters
 
@@ -53,6 +53,22 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
           "name": "2026",
           "parentId": "folder-dj",
           "sortOrder": 1
+        }
+      ],
+      "playlistPlacement": [
+        {
+          "playlistId": "playlist-summer",
+          "playlistFolderId": "folder-2026",
+          "sortOrder": 3
+        },
+        {
+          "playlistId": "playlist-summer",
+          "playlistFolderId": "folder-dj",
+          "sortOrder": 1
+        },
+        {
+          "playlistId": "playlist-road",
+          "sortOrder": 2
         }
       ]
     }

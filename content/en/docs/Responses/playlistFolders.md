@@ -4,7 +4,7 @@ linkTitle: "playlistFolders [OS]"
 OpenSubsonic:
   - Extension
 description: >
-  Folders in a user's playlist organization.
+  Folders and playlist placements in a user's playlist organization.
 ---
 
 {{< tabpane persist=false >}}
@@ -23,6 +23,22 @@ description: >
       "parentId": "folder-dj",
       "sortOrder": 1
     }
+  ],
+  "playlistPlacement": [
+    {
+      "playlistId": "playlist-summer",
+      "playlistFolderId": "folder-2026",
+      "sortOrder": 3
+    },
+    {
+      "playlistId": "playlist-summer",
+      "playlistFolderId": "folder-dj",
+      "sortOrder": 1
+    },
+    {
+      "playlistId": "playlist-road",
+      "sortOrder": 2
+    }
   ]
 }
 {{< /tab >}}
@@ -34,3 +50,4 @@ Does not exist.
 | Field | Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `playlistFolder` | Array of [`playlistFolder`](../playlistfolder) | No | **Yes** | The selected user's playlist folders. |
+| `playlistPlacement` | Array of [`playlistPlacement`](../playlistplacement) | No | **Yes** | The selected user's playlist placements. Playlists with no placement appear implicitly at the root and are not listed. |

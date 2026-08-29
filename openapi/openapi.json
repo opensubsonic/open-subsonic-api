@@ -105,6 +105,9 @@
         "/rest/addChatMessage": {
             "$ref": "./endpoints/addChatMessage.json"
         },
+        "/rest/addPlaylistToFolder": {
+            "$ref": "./endpoints/addPlaylistToFolder.json"
+        },
         "/rest/changePassword": {
             "$ref": "./endpoints/changePassword.json"
         },
@@ -324,6 +327,9 @@
         "/rest/refreshPodcasts": {
             "$ref": "./endpoints/refreshPodcasts.json"
         },
+        "/rest/removePlaylistFromFolder": {
+            "$ref": "./endpoints/removePlaylistFromFolder.json"
+        },
         "/rest/reportPlayback": {
             "$ref": "./endpoints/reportPlayback.json"
         },
@@ -493,6 +499,9 @@
             },
             "PlaylistFolders": {
                 "$ref": "./schemas/PlaylistFolders.json"
+            },
+            "PlaylistPlacement": {
+                "$ref": "./schemas/PlaylistPlacement.json"
             },
             "CreatePlaylistFolderSuccessResponse": {
                 "$ref": "./endpoints/createPlaylistFolder/CreatePlaylistFolderSuccessResponse.json"

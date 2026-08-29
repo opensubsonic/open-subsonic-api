@@ -6,7 +6,7 @@ OpenSubsonic:
 categories:
   - Playlists
 description: >
-  Deletes an empty playlist folder.
+  Deletes a playlist folder, releasing its contents.
 ---
 
 **OpenSubsonic version**: [1](../../opensubsonic-versions)
@@ -15,7 +15,7 @@ description: >
 
 `http://your-server/rest/deletePlaylistFolder`
 
-Deletes an empty folder from the authenticated user's playlist organization.
+Deletes a folder from the authenticated user's playlist organization. The folder does not have to be empty: deleting it removes the folder and the placements it held, re-parents its child folders to the deleted folder's parent, and touches nothing else. Playlists are never modified or deleted by this endpoint — a playlist placed nowhere else simply reappears at the implicit root.
 
 ### Parameters
 
@@ -23,7 +23,7 @@ Deletes an empty folder from the authenticated user's playlist organization.
 | --- | --- | --- | --- | --- |
 | `playlistFolderId` | **Yes** | **Yes** | | ID of the playlist folder to delete. |
 
-The folder must contain no child folders and no playlists currently visible to the user. A server must return error `0` when the folder is not empty and must not implicitly delete or move its contents. A `playlistFolderId` that does not exist or belongs to another user's tree returns error `70`. See the [extension description](../../extensions/playlistfolders) for the placement lifecycle and error handling.
+Whether to confirm before deleting a non-empty folder, or to forbid it, is a client UX decision; clients are free to be stricter than the API. A `playlistFolderId` that does not exist or belongs to another user's tree returns error `70`. See the [extension description](../../extensions/playlistfolders) for the placement lifecycle and error handling.
 
 ### Example
 

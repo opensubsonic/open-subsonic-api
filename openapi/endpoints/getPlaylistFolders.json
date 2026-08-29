@@ -1,7 +1,7 @@
 {
     "get": {
-        "summary": "Returns all folders in a user's private playlist organization.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Returns all folders in a user's private playlist organization as a flat list.",
+        "summary": "Returns all folders and playlist placements in a user's private playlist organization.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Returns a user's entire private playlist organization: all folders as a flat list, plus all playlist placements. A playlist not named by any placement appears implicitly at the root, unordered.",
         "operationId": "getPlaylistFolders",
         "tags": [
             "Playlists",
@@ -36,8 +36,8 @@
         }
     },
     "post": {
-        "summary": "Returns all folders in a user's private playlist organization.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Returns all folders in a user's private playlist organization as a flat list.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "summary": "Returns all folders and playlist placements in a user's private playlist organization.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Returns a user's entire private playlist organization: all folders as a flat list, plus all playlist placements. A playlist not named by any placement appears implicitly at the root, unordered.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
         "operationId": "postGetPlaylistFolders",
         "tags": [
             "Playlists",

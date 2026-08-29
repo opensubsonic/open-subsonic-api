@@ -1,7 +1,7 @@
 {
     "get": {
-        "summary": "Deletes an empty playlist folder.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes an empty folder from the authenticated user's playlist organization.",
+        "summary": "Deletes a playlist folder, releasing its contents.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. The folder does not have to be empty: the folder and the placements it held are removed, child folders are re-parented to the deleted folder's parent, and playlists are never modified or deleted.",
         "operationId": "deletePlaylistFolder",
         "tags": [
             "Playlists",
@@ -29,8 +29,8 @@
         }
     },
     "post": {
-        "summary": "Deletes an empty playlist folder.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes an empty folder from the authenticated user's playlist organization.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "summary": "Deletes a playlist folder, releasing its contents.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. The folder does not have to be empty: the folder and the placements it held are removed, child folders are re-parented to the deleted folder's parent, and playlists are never modified or deleted.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
         "operationId": "postDeletePlaylistFolder",
         "tags": [
             "Playlists",
