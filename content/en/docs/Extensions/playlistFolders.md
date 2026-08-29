@@ -11,7 +11,7 @@ description: >
 
 **OpenSubsonic extension name** `playlistFolders` (As returned by [`getOpenSubsonicExtensions`](../../endpoints/getopensubsonicextensions))
 
-When a server supports this extension, each user can organize the playlists available to them in ordered folders of arbitrary depth, as in iTunes/Apple Music, Spotify, or Rekordbox. Existing clients remain compatible because the extension changes no existing response: [`getPlaylists`](../../endpoints/getplaylists) continues to return every visible playlist as a flat list, byte-identical to a server without the extension.
+When a server supports this extension, each user can organize the playlists available to them in ordered folders of arbitrary depth, as in iTunes/Apple Music, Spotify, or Rekordbox. Existing clients remain compatible because the extension changes no existing response: [`getPlaylists`](../../endpoints/getplaylists) continues to return every visible playlist as a flat list with no extra fields.
 
 ## Version 1
 
@@ -20,7 +20,7 @@ This extension requires the following endpoints:
 - [`createPlaylistFolder`](../../endpoints/createplaylistfolder) creates a folder.
 - [`deletePlaylistFolder`](../../endpoints/deleteplaylistfolder) deletes a folder, releasing its contents.
 - [`getPlaylistFolders`](../../endpoints/getplaylistfolders) returns all of the selected user's folders and playlist placements.
-- [`movePlaylist`](../../endpoints/moveplaylist) files playlists in a folder or at the root — exactly there — and sets their position.
+- [`movePlaylist`](../../endpoints/moveplaylist) files playlists in a folder or at the root and sets their position. Replaces all other placements.
 - [`updatePlaylistFolder`](../../endpoints/updateplaylistfolder) renames, moves, or reorders a folder.
 - [`addPlaylistToFolder`](../../endpoints/addplaylisttofolder) adds a single placement.
 - [`removePlaylistFromFolder`](../../endpoints/removeplaylistfromfolder) removes a single placement.
@@ -33,13 +33,13 @@ A **placement** files one playlist in one folder within one user's organization.
 
 The root behaves as a folder identified by an empty ID: a placement with an empty or omitted `playlistFolderId` is an explicit root placement, and is what carries a playlist's position at the root. A playlist with no placements at all appears implicitly at the root, unordered — this is the automatic degrade path for servers, users, or clients that never touch folders.
 
-Two styles of write are available. [`movePlaylist`](../../endpoints/moveplaylist) *sets* a playlist's location: afterwards, its placements in the caller's tree are exactly the destination given. [`addPlaylistToFolder`](../../endpoints/addplaylisttofolder) and [`removePlaylistFromFolder`](../../endpoints/removeplaylistfromfolder) *edit* individual placements. A client that only ever calls `movePlaylist` maintains a single-home tree by construction and can ignore multi-placement entirely.
+Two styles of write are available. [`movePlaylist`](../../endpoints/moveplaylist) *sets* a playlist's only location: afterwards, its placements in the caller's tree are exactly the destination given, others are removed. [`addPlaylistToFolder`](../../endpoints/addplaylisttofolder) and [`removePlaylistFromFolder`](../../endpoints/removeplaylistfromfolder) *edit* individual placements. A client that only ever calls `movePlaylist` maintains a single-home tree and can ignore multi-placement entirely. NOTE: Client inheriting a multi-folder schema would immediately start eroding it upon moving playlists.
 
 ### Hierarchy and user scope
 
-[`getPlaylistFolders`](../../endpoints/getplaylistfolders) returns a flat list. A folder's optional `parentId` identifies its parent; no `parentId` means that the folder is at the root. This representation supports arbitrary nesting without recursive responses. Clients reconstruct the full tree from two requests: [`getPlaylistFolders`](../../endpoints/getplaylistfolders) for the organization — folders and placements — and [`getPlaylists`](../../endpoints/getplaylists) for the playlist data.
+[`getPlaylistFolders`](../../endpoints/getplaylistfolders) returns a flat list. A folder's optional `parentId` identifies its parent; no `parentId` means that the folder is at the root. This representation supports arbitrary nesting without recursive responses. Clients reconstruct the full tree from two requests: [`getPlaylistFolders`](../../endpoints/getplaylistfolders) for the organization (folders and placements), and [`getPlaylists`](../../endpoints/getplaylists) for the playlists.
 
-A user's folder tree is private to that user, and placement is independent of playlist ownership. A user can place any playlist visible to them — including a public or shared playlist owned by another user, or a `readonly` one — without modifying the playlist itself. Different users can place the same playlist in different folders. Folder names do not have to be unique.
+A user's folder tree is private to that user, and folder placement is independent of playlist ownership. A user can place any playlist visible to them — including a public or shared playlist owned by another user, or a `readonly` one — without modifying the playlist itself. Different users can place the same playlist in different folders. Folder names do not have to be unique.
 
 The selected user is the authenticated user, or the user named by the admin-only `username` parameter on [`getPlaylists`](../../endpoints/getplaylists) and [`getPlaylistFolders`](../../endpoints/getplaylistfolders). Servers must never expose one user's folders or placements to another user.
 
@@ -51,7 +51,7 @@ Sibling items — the child folders and playlist placements sharing one parent, 
 
 A placement exists only while its playlist is visible to the user: when a playlist is deleted or stops being visible, all of that user's placements of it cease to exist.
 
-Folders are an organizational schema laid over playlists; they never own them. Deleting a folder is therefore a pure schema operation: the folder and the placements it held are removed, its child folders are re-parented to the deleted folder's parent, and the playlists themselves are untouched — a playlist placed nowhere else simply reappears at the implicit root. Servers must never delete or modify a playlist through this extension's endpoints. Whether to confirm before deleting a non-empty folder is a client UX decision; clients are free to be stricter than the API.
+Folders are an organizational schema laid over playlists, deleting a folder is a pure schema operation: the folder and the placements it held are removed, its child folders are re-parented to the deleted folder's parent, and the playlists themselves are untouched. A playlist placed nowhere else simply reappears at the implicit root.
 
 An omitted `parentId` on [`updatePlaylistFolder`](../../endpoints/updateplaylistfolder) leaves the folder's parent unchanged, while an explicitly empty value moves the folder to the root. The `playlistFolderId` parameter of [`movePlaylist`](../../endpoints/moveplaylist) behaves the same way. Servers must distinguish an empty parameter value from an absent parameter.
 

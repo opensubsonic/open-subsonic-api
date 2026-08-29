@@ -1,7 +1,7 @@
 {
     "get": {
         "summary": "Deletes a playlist folder, releasing its contents.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. The folder does not have to be empty: the folder and the placements it held are removed, child folders are re-parented to the deleted folder's parent, and playlists are never modified or deleted.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. If the folder is not empty, child folders are re-parented to the deleted folder's parent. Playlists with no remaining folder placements appear at the root.",
         "operationId": "deletePlaylistFolder",
         "tags": [
             "Playlists",
@@ -30,7 +30,7 @@
     },
     "post": {
         "summary": "Deletes a playlist folder, releasing its contents.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. The folder does not have to be empty: the folder and the placements it held are removed, child folders are re-parented to the deleted folder's parent, and playlists are never modified or deleted.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. If the folder is not empty, child folders are re-parented to the deleted folder's parent. Playlists with no remaining folder placements appear at the root.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
         "operationId": "postDeletePlaylistFolder",
         "tags": [
             "Playlists",

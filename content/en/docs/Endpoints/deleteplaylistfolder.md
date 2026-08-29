@@ -15,7 +15,7 @@ description: >
 
 `http://your-server/rest/deletePlaylistFolder`
 
-Deletes a folder from the authenticated user's playlist organization. The folder does not have to be empty: deleting it removes the folder and the placements it held, re-parents its child folders to the deleted folder's parent, and touches nothing else. Playlists are never modified or deleted by this endpoint — a playlist placed nowhere else simply reappears at the implicit root.
+Deletes a folder from the authenticated user's playlist organization. Re-parents its child folders to the deleted folder's parent. Playlists placed nowhere else reappear at the implicit root.
 
 ### Parameters
 
@@ -23,7 +23,7 @@ Deletes a folder from the authenticated user's playlist organization. The folder
 | --- | --- | --- | --- | --- |
 | `playlistFolderId` | **Yes** | **Yes** | | ID of the playlist folder to delete. |
 
-Whether to confirm before deleting a non-empty folder, or to forbid it, is a client UX decision; clients are free to be stricter than the API. A `playlistFolderId` that does not exist or belongs to another user's tree returns error `70`. See the [extension description](../../extensions/playlistfolders) for the placement lifecycle and error handling.
+A `playlistFolderId` that does not exist or belongs to another user's tree returns error `70`. See the [extension description](../../extensions/playlistfolders) for the placement lifecycle and error handling. Note: playlists orphaned by folder deletion reappear at the implicit root.
 
 ### Example
 

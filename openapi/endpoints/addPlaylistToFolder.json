@@ -1,7 +1,7 @@
 {
     "get": {
         "summary": "Adds playlist placements to a folder or the root.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead. Never modifies the playlists themselves.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead.",
         "operationId": "addPlaylistToFolder",
         "tags": [
             "Playlists",
@@ -59,7 +59,7 @@
     },
     "post": {
         "summary": "Adds playlist placements to a folder or the root.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead. Never modifies the playlists themselves.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead. \n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
         "operationId": "postAddPlaylistToFolder",
         "tags": [
             "Playlists",

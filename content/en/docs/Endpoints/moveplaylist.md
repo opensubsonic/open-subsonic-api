@@ -17,7 +17,7 @@ description: >
 
 Places playlists in the authenticated user's playlist organization. This endpoint moves playlists into a folder or to the root and sets their position among siblings. It never modifies the playlists themselves, so it works on any playlist visible to the user, including shared, public, and `readonly` playlists owned by others.
 
-`movePlaylist` *sets* a playlist's location: after the call, each moved playlist's placements in the caller's tree are exactly the destination given — any other placements of that playlist are removed. For a playlist with zero or one placement this is simply "file it here, and only here", which is what a tree-drag UI means. To add or remove individual placements without touching the others, use [`addPlaylistToFolder`](../addplaylisttofolder) and [`removePlaylistFromFolder`](../removeplaylistfromfolder).
+`movePlaylist` sets a playlist's single location: after the call any other placements of that playlist are removed. To add or remove individual placements without touching the others, use [`addPlaylistToFolder`](../addplaylisttofolder) and [`removePlaylistFromFolder`](../removeplaylistfromfolder). Note: Not sure we should continue to support movePlaylist.
 
 ### Parameters
 

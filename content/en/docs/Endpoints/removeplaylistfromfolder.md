@@ -15,7 +15,7 @@ description: >
 
 `http://your-server/rest/removePlaylistFromFolder`
 
-Removes placements from the authenticated user's playlist organization: unfiles each given playlist from the given folder (or removes its explicit root placement) without touching any of the playlist's other placements. Removing a playlist's last placement returns it to the implicit root. Playlists themselves are never modified or deleted.
+Removes individual placements (this playlist is in this folder) from the authenticated user's playlist organization. Removing a playlist's last placement returns it to the implicit root. Playlists themselves are never modified or deleted. You can remove explcit root placement of a playlist, but never implicit root placement.
 
 ### Parameters
 

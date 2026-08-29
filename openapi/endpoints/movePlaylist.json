@@ -1,7 +1,7 @@
 {
     "get": {
         "summary": "Places playlists in a folder or at the root and sets their position.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Places playlists in the authenticated user's playlist organization: moves them into a folder or to the root and sets their position among siblings. Never modifies the playlists themselves, so it works on any playlist visible to the user regardless of ownership or `readonly` state. Sets each moved playlist's location: after the call its placements in the caller's tree are exactly the destination given; any other placements are removed (see addPlaylistToFolder / removePlaylistFromFolder for placement-level edits). At least one of `playlistFolderId` or `sortOrder` must be supplied.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Places playlists in the authenticated user's playlist organization: moves them into a folder or to the root and sets their position among siblings. Any other placements are removed (see addPlaylistToFolder / removePlaylistFromFolder for placement-level edits). Never modifies the playlists themselves, so it works on any playlist visible to the user regardless of ownership or `readonly` state. At least one of `playlistFolderId` or `sortOrder` must be supplied.",
         "operationId": "movePlaylist",
         "tags": [
             "Playlists",
@@ -59,7 +59,7 @@
     },
     "post": {
         "summary": "Places playlists in a folder or at the root and sets their position.",
-        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Places playlists in the authenticated user's playlist organization: moves them into a folder or to the root and sets their position among siblings. Never modifies the playlists themselves, so it works on any playlist visible to the user regardless of ownership or `readonly` state. Sets each moved playlist's location: after the call its placements in the caller's tree are exactly the destination given; any other placements are removed (see addPlaylistToFolder / removePlaylistFromFolder for placement-level edits). At least one of `playlistFolderId` or `sortOrder` must be supplied.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Places playlists in the authenticated user's playlist organization: moves them into a folder or to the root and sets their position among siblings. Any other placements are removed (see addPlaylistToFolder / removePlaylistFromFolder for placement-level edits). Never modifies the playlists themselves, so it works on any playlist visible to the user regardless of ownership or `readonly` state. At least one of `playlistFolderId` or `sortOrder` must be supplied.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
         "operationId": "postMovePlaylist",
         "tags": [
             "Playlists",
