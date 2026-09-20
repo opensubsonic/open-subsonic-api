@@ -13,6 +13,7 @@ description: >
 
 This extension allows users to create and manage collections.
 A collection is an ordered list of items - songs, artist, albums, playlists, etc.
+Items in a collection must be unique.
 
 ## Version 1
 

@@ -10,6 +10,7 @@ description: >
 ---
 
 Should be used in the [CreateCollection](../endpoints/createcollection) endpoint.
+Items in a collection must be unique, repeated items in a payload result in an error.
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -40,4 +41,4 @@ Should be used in the [CreateCollection](../endpoints/createcollection) endpoint
 | `name` | string | **Yes** | **Yes** | The human-readable name of the collection. |
 | `comment` | string | No | **Yes** | The collection comment. |
 | `public` | boolean | No | **Yes**  | `true` if the collection should be visible to all users, `false` otherwise. Default `false`. |
-| `items` | [CollectionItemID[]](../payloads/collectionitemid) | No | **Yes** | A list of items. |
+| `items` | [CollectionItemID[]](../payloads/collectionitemid) | No | **Yes** | A list of items. Each item must occur at most once. |

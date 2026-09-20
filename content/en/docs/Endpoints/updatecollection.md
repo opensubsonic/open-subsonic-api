@@ -16,7 +16,6 @@ This endpoint must be accessed using an HTTP POST request.
 ### Request Body
 
 The request payload should be provided in the body as a JSON object, as specified by the [UpdateCollectionRequest](../payloads/updatecollectionrequest) schema.
-Only the fields specified in the request payload will have an effect on a collection.
 
 {{< tabpane persist=false >}}
 {{< tab header="**Body**:" disabled=true />}}

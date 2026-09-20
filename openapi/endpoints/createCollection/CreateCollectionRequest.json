@@ -19,7 +19,7 @@
             "items": {
                 "$ref": "../../schemas/CollectionItemId.json"
             },
-            "description": "Identifiers of items in the collection."
+            "description": "A list of items. Each item must occur at most once."
         }
     },
     "required": [
