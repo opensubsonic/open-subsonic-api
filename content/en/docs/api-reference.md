@@ -68,7 +68,7 @@ There are four available authentication methods:
   * For best possible compatibility with clients, servers **should** implement all four auth methods.
     * In the event that the server does not implement a requested auth method, the server **must** return error code `41` or `42` (depending on auth method). See [error handling](#error-handling).
   * Servers **may** accept the API Key instead of a password for all four auth methods.
-  * An API Key **must** be randomly generated and **must not** be user-supplied. Servers **must not** accept a user-supplied password in the `apiKey` field. 
+  * An API Key **must** be randomly generated and **must not** be user-supplied. Servers **must not** accept a user-supplied password in the `apiKey` field.
   * Servers **should** support the [HTTP form POST](../extensions/formpost) extension to reduce the risk of incidental credential leaks (see [risk model](#risk-model)).
 
 ### API Key
