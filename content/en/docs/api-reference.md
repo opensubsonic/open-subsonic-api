@@ -56,7 +56,7 @@ There are four available authentication methods:
 * **Clients:**
   * Clients **should** prefer to use [API Key authentication](../extensions/apikeyauth) when the server supports it.
     * Clients **must not** assume the server supports it. Clients **must** check [`getOpensubsonicExtensions`](../endpoints/getopensubsonicextensions) before prompting the user.
-  * For best possible compatibility with servers, clients **should** implement all four methods.
+  * For best possible compatibility with servers, clients **should** implement all four auth methods.
     * If the server returns error code `41` or `42`, the client **should** retry with a different auth method. See [error handling](#error-handling).
   * When the server supports API Key auth, a client **may** suppress other auth methods.
   * When using API Key auth, a client **should not** prompt the user to enter a username. Use [`tokenInfo`](../endpoints/tokeninfo) for this, if needed.
@@ -68,7 +68,7 @@ There are four available authentication methods:
   * For best possible compatibility with clients, servers **should** implement all four auth methods.
     * In the event that the server does not implement a requested auth method, the server **must** return error code `41` or `42` (depending on auth method). See [error handling](#error-handling).
   * Servers **may** accept the API Key instead of a password for all four auth methods.
-  * An API Key **must** be randomly generated and **must not** be user-supplied. Servers **must not** accept a user-supplied password in the `apiKey` field.
+  * An API Key **must** be randomly generated and **must not** be user-supplied. Servers **must not** accept a user-supplied password in the `apiKey` parameter.
   * Servers **should** support the [HTTP form POST](../extensions/formpost) extension to reduce the risk of incidental credential leaks (see [risk model](#risk-model)).
 
 ### API Key
