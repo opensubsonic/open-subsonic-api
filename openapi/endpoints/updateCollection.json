@@ -1,0 +1,40 @@
+{
+    "post": {
+        "summary": "Updates a collection.",
+        "description": "Updates a collection. Only the owner of a collection is allowed to update it.",
+        "operationId": "updateCollection",
+        "tags": [
+            "Collections",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "./updateCollection/UpdateCollectionRequest.json"
+                    }
+                }
+            }
+        },
+        "parameters": [],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "400": {
+                "description": "Request is malformed or doesn't follow the schema."
+            },
+            "404": {
+                "description": "Collection does not exist, or extension not supported."
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "updateCollection",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/updatecollection/"
+        }
+    }
+}

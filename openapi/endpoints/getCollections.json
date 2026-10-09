@@ -1,0 +1,99 @@
+{
+    "get": {
+        "summary": "Get collections a user has access to.",
+        "description": "Get collections a user has access to, with optional filters and pagination.",
+        "operationId": "getCollections",
+        "tags": [
+            "Collections",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "username",
+                "in": "query",
+                "description": "If specified, return collections for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "If specified, return collections that have the provided string in their name.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "sort",
+                "in": "query",
+                "description": "If specified, sort the list by the provided field or randomly. Sorting is applied before the `count` and `offset` parameters are taken into account. The default is to sort by name.",
+                "required": false,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "name",
+                        "created",
+                        "random"
+                    ]
+                }
+            },
+            {
+                "name": "order",
+                "in": "query",
+                "description": "The order of sorting.",
+                "required": false,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "asc",
+                        "desc"
+                    ]
+                }
+            },
+            {
+                "name": "count",
+                "in": "query",
+                "description": "The number of collections to return. If unset or set to a negative value, return all collections.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": -1,
+                    "minimum": 0
+                }
+            },
+            {
+                "name": "offset",
+                "in": "query",
+                "description": "The number of collections to skip.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 0,
+                    "minimum": 0
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getCollections/GetCollectionsResponse.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "User does not exist, or extension not supported."
+            }
+        },
+        "externalDocs": {
+            "description": "getCollections",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcollections/"
+        }
+    }
+}

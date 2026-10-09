@@ -1,0 +1,27 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../schemas/SubsonicResponse/SubsonicSuccessResponse.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "collections": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../../schemas/Collection.json"
+                    },
+                    "description": "The collections."
+                },
+                "totalCount": {
+                     "type": "integer",
+                     "description": "The total number of collections a user has access to."
+                }
+            },
+            "required": [
+                "collections",
+                "totalCount"
+            ]
+        }
+    ]
+}

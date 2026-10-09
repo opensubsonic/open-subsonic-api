@@ -1,0 +1,26 @@
+{
+    "allOf": [
+        {
+            "$ref": "./Collection.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./CollectionItem.json"
+                    },
+                    "description": "The list of items in the collection"
+                }
+            },
+            "required": [
+                "items"
+            ],
+            "externalDocs": {
+                "description": "CollectionWithItems",
+                "url": "https://opensubsonic.netlify.app/docs/responses/collectionwithitems/"
+            }
+        }
+    ]
+}
