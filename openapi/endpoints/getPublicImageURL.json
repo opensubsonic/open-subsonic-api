@@ -1,0 +1,89 @@
+{
+    "get": {
+        "summary": "Returns a URL for accessing cover art publicly.",
+        "operationId": "getPublicImageURL",
+        "tags": ["Media Retrieval"],
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "description": "The coverArt ID. Returned by most entities likes `Child` or `AlbumID3`",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "size",
+                "in": "query",
+                "description": "If specified, scale image to this size.",
+                "required": false,
+                "schema": {
+                    "type": "integer"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPublicImageURL/GetPublicImageUrlResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getPublicImageURL",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpublicimageurl/"
+        }
+    },
+    "post": {
+        "summary": "Returns a URL for accessing cover art publicly.",
+        "operationId": "postGetPublicImageURL",
+        "tags": ["Media Retrieval"],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "The coverArt ID. Returned by most entities likes `Child` or `AlbumID3`"
+                            },
+                            "size": {
+                                "type": "integer",
+                                "description": "If specified, scale image to this size."
+                            }
+                        },
+                        "required": ["id"]
+                    }
+                }
+            }
+        },
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPublicImageURL/GetPublicImageUrlResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getPublicImageURL",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpublicimageurl/"
+        }
+    }
+}
