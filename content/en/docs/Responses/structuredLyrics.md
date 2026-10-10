@@ -48,7 +48,7 @@ Does not exist.
 
 ### Version 2 (enhanced — word/syllable-level with kind)
 
-When `enhanced=true` is passed to [`getLyricsBySongId`](../../endpoints/getlyricsbysongid), the response includes additional fields: `kind` to classify lyric tracks, `cueLine` arrays with word/syllable-level timing, cue `byteStart` / `byteEnd` offsets into `cueLine.value`, and optional `agents` arrays for reusable agent attribution.
+When `enhanced=true` is passed to [`getLyricsBySongId`](../../endpoints/getlyricsbysongid), the response includes additional fields: `kind` to classify lyric tracks, optional exact `line.end` timing, `cueLine` arrays with word/syllable-level timing, cue `byteStart` / `byteEnd` offsets into `cueLine.value`, and optional `agents` arrays for reusable agent attribution.
 
 Each `structuredLyrics` entry is self-contained. Clients should treat tracks with different `kind` values, including `main`, as independent layers rather than assuming 1:1 line or cue alignment between them. Agent identity is also scoped to a single `structuredLyrics` entry; `agents[].id` values have no meaning outside that entry. When a cue uses `byteStart` / `byteEnd`, those offsets are always relative to the final `cueLine.value` string in the same entry.
 
@@ -60,8 +60,8 @@ Each `structuredLyrics` entry is self-contained. Clients should treat tracks wit
   "lang": "ko",
   "synced": true,
   "line": [
-    { "start": 2747, "value": "눈을 뜬 순간" },
-    { "start": 6214, "value": "모든 게 달라졌어" }
+    { "start": 2747, "end": 6214, "value": "눈을 뜬 순간" },
+    { "start": 6214, "end": 9000, "value": "모든 게 달라졌어" }
   ],
   "cueLine": [
     {
@@ -98,8 +98,8 @@ Each `structuredLyrics` entry is self-contained. Clients should treat tracks wit
 {{< /tab >}}
 {{< tab header="OpenSubsonic XML" lang="xml">}}
 <structuredLyrics kind="main" lang="ko" synced="true">
-  <line start="2747">눈을 뜬 순간</line>
-  <line start="6214">모든 게 달라졌어</line>
+  <line start="2747" end="6214">눈을 뜬 순간</line>
+  <line start="6214" end="9000">모든 게 달라졌어</line>
   <cueLine index="0" start="2747" end="6214" value="눈을 뜬 순간">
     <cue start="2747" end="3018" byteStart="0" byteEnd="2">눈</cue>
     <cue start="3018" end="3179" byteStart="3" byteEnd="5">을</cue>
@@ -117,6 +117,37 @@ Each `structuredLyrics` entry is self-contained. Clients should treat tracks wit
     <cue start="8000" end="8400" byteStart="10" byteEnd="10"> </cue>
     <cue start="8400" end="9000" byteStart="11" byteEnd="22">달라졌어</cue>
   </cueLine>
+</structuredLyrics>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
+#### Explicit line-end behavior
+
+`line.end` is exact timing when known; it is not inferred from the next line. It may be present independently per line, including on the final line. Gaps, overlaps, and zero-duration markers are all valid:
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "lang": "eng",
+  "synced": true,
+  "line": [
+    { "start": 0, "end": 1800, "value": "An explicit gap follows" },
+    { "start": 2000, "end": 3500, "value": "This line overlaps the next" },
+    { "start": 3200, "end": 3200, "value": "Instantaneous marker" },
+    { "start": 5000, "end": 6400, "value": "The final line has an explicit end" }
+  ]
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<structuredLyrics lang="eng" synced="true">
+  <line start="0" end="1800">An explicit gap follows</line>
+  <line start="2000" end="3500">This line overlaps the next</line>
+  <line start="3200" end="3200">Instantaneous marker</line>
+  <line start="5000" end="6400">The final line has an explicit end</line>
 </structuredLyrics>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
@@ -288,7 +319,7 @@ Does not exist.
 | `line`          | Array of [`line`](../line)           | **Yes** | **Yes** | The actual lyrics. Ordered by start time (synced) or appearance order (unsynced)                                                                                                                                                                                                                                                                |
 | `displayArtist` | `string`                             | No      | **Yes** | The artist name to display. This could be the localized name, or any other value                                                                                                                                                                                                                                                                |
 | `displayTitle`  | `string`                             | No      | **Yes** | The title to display. This could be the song title (localized), or any other value                                                                                                                                                                                                                                                              |
-| `offset`        | `number`                             | No      | **Yes** | The offset to apply to all lyrics, in milliseconds. Positive means lyrics appear sooner, negative means later. If not included, the offset **must** be assumed to be 0                                                                                                                                                                         |
+| `offset`        | `number`                             | No      | **Yes** | The offset to apply to all lyric timing, in milliseconds, including both `line.start` and `line.end`. Positive means lyrics appear sooner, negative means later. If not included, the offset **must** be assumed to be 0                                                                                                                          |
 | `kind`          | `string`                             | No      | **Yes** | The primary lyric-layer classification for this `structuredLyrics` entry. One of: `main` (primary vocals for this entry, default if omitted), `translation` (a translation of another lyric layer into another language), `pronunciation` (a phonetic/romanized rendering, e.g. romaji for Japanese, pinyin for Chinese). Tracks are independent across `kind` values; clients should not assume 1:1 line or cue alignment between entries. Only returned when `enhanced=true`. Added in [`songLyrics`](../../extensions/songlyrics) version 2 |
 | `agents`        | Array of [`agent`](../agent)         | No      | **Yes** | Reusable per-track attribution metadata for `cueLine` entries. When present, **must** contain at least one entry, and each `agents[].id` **must** be unique within this `structuredLyrics` entry. `agents` are optional for simple unattributed single-layer lyrics. When a `structuredLyrics` entry represents multiple vocal agents/layers, it **must** include `agents`; a single-agent attributed/default entry may also include `agents`, and if it does, exactly one agent **must** use `role: "main"`. `agents` should not be emitted without `cueLine` data |
 | `cueLine`       | Array of [`cueLine`](../cueline)     | No      | **Yes** | Word/syllable-level timing data. Each cueLine corresponds to a `line` by its `index` field. Every cueLine **must** include `value`, and every nested cue **must** include `byteStart` / `byteEnd` offsets into that exact string. If `agents` is present, every cueLine in the entry **must** include `agentId`; if `agents` is absent, cueLines **must not** include `agentId`. Only returned when `enhanced=true` and `synced` is `true`. Added in [`songLyrics`](../../extensions/songlyrics) version 2 |

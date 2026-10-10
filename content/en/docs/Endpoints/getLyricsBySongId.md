@@ -123,7 +123,7 @@ Does not exist.
 
 #### Version 2 (`enhanced=true`)
 
-When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, cue `byteStart` / `byteEnd` offsets into `cueLine.value`, optional per-entry [`agents`](../../responses/agent) metadata for agent attribution, and additional tracks such as translations and pronunciations.
+When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, optional exact `line.end` timing, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, cue `byteStart` / `byteEnd` offsets into `cueLine.value`, optional per-entry [`agents`](../../responses/agent) metadata for agent attribution, and additional tracks such as translations and pronunciations.
 
 {{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?id=456&enhanced=true&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
 
@@ -144,8 +144,8 @@ When `enhanced=true` is passed, the response includes `kind` to classify lyric t
           "lang": "ko",
           "synced": true,
           "line": [
-            { "start": 2747, "value": "눈을 뜬 순간" },
-            { "start": 6214, "value": "모든 게 달라졌어" }
+            { "start": 2747, "end": 6214, "value": "눈을 뜬 순간" },
+            { "start": 6214, "end": 9000, "value": "모든 게 달라졌어" }
           ],
           "cueLine": [
             {
@@ -230,8 +230,8 @@ When `enhanced=true` is passed, the response includes `kind` to classify lyric t
 <subsonic-response status="ok" version="1.16.1" type="AwesomeServerName" serverVersion="0.1.3 (tag)" openSubsonic="true">
   <lyricsList>
     <structuredLyrics kind="main" lang="ko" synced="true">
-      <line start="2747">눈을 뜬 순간</line>
-      <line start="6214">모든 게 달라졌어</line>
+      <line start="2747" end="6214">눈을 뜬 순간</line>
+      <line start="6214" end="9000">모든 게 달라졌어</line>
       <cueLine index="0" start="2747" end="6214" value="눈을 뜬 순간">
         <cue start="2747" end="3018" byteStart="0" byteEnd="2">눈</cue>
         <cue start="3018" end="3179" byteStart="3" byteEnd="5">을</cue>
@@ -270,6 +270,33 @@ When `enhanced=true` is passed, the response includes `kind` to classify lyric t
     </structuredLyrics>
   </lyricsList>
 </subsonic-response>
+{{< /tab >}}
+{{< tab header="Subsonic"  >}}
+Does not exist.
+{{< /tab >}}
+{{< /tabpane >}}
+
+##### Explicit line-end timing
+
+In a version 2 enhanced response, `line.end` uses the same track-relative millisecond timeline as `line.start`. It is exact timing when known and is never inferred from the next line. The field may be present independently per line, including on the final line. Gaps, overlaps, and zero-duration markers are valid:
+
+{{< tabpane persist=false >}}
+{{< tab header="**Example**:" disabled=true />}}
+{{< tab header="OpenSubsonic JSON" lang="json">}}
+{
+  "line": [
+    { "start": 0, "end": 1800, "value": "An explicit gap follows" },
+    { "start": 2000, "end": 3500, "value": "This line overlaps the next" },
+    { "start": 3200, "end": 3200, "value": "Instantaneous marker" },
+    { "start": 5000, "end": 6400, "value": "The final line has an explicit end" }
+  ]
+}
+{{< /tab >}}
+{{< tab header="OpenSubsonic XML" lang="xml">}}
+<line start="0" end="1800">An explicit gap follows</line>
+<line start="2000" end="3500">This line overlaps the next</line>
+<line start="3200" end="3200">Instantaneous marker</line>
+<line start="5000" end="6400">The final line has an explicit end</line>
 {{< /tab >}}
 {{< tab header="Subsonic"  >}}
 Does not exist.
@@ -465,7 +492,7 @@ Without `enhanced=true`, the response is identical to version 1:
 
 - Only `kind="main"` entries are returned (the `kind` field itself is omitted)
 - No `cueLine` arrays are included
-- The existing `line` array is always present and unchanged
+- The existing `line` array is always present and unchanged, with no `end` fields
 - `cueLine` is a **parallel** structure, not a replacement for `line`
 
 Servers that don't support TTML or word-level timing simply never include these fields. Clients that don't support karaoke display simply ignore them.
