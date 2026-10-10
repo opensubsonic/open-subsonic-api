@@ -3,3 +3,4 @@ resources/
 node_modules/
 .hugo_build.lock
 content/en/docs/Openapi/openapi.json
+openapi-opensubsonic.json
