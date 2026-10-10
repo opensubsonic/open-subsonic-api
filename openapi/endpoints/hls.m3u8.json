@@ -44,10 +44,14 @@
                             "type": "string"
                         }
                     },
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../schemas/SubsonicResponse/SubsonicFailureResponse.json"
+                        }
+                    },
                     "text/xml": {
                         "schema": {
-                            "type": "object",
-                            "description": "Error response TODO: TO BE DESCRIBED"
+                            "$ref": "../schemas/SubsonicResponse/SubsonicFailureResponse.json"
                         }
                     }
                 }
@@ -104,10 +108,14 @@
                             "type": "string"
                         }
                     },
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../schemas/SubsonicResponse/SubsonicFailureResponse.json"
+                        }
+                    },
                     "text/xml": {
                         "schema": {
-                            "type": "object",
-                            "description": "Error response TODO: TO BE DESCRIBED"
+                            "$ref": "../schemas/SubsonicResponse/SubsonicFailureResponse.json"
                         }
                     }
                 }

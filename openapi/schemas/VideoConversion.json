@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "description": "Transcoded video files.",
+    "externalDocs": {
+        "description": "VideoConversion",
+        "url": "https://opensubsonic.netlify.app/docs/responses/videoconversion/"
+    },
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The ID of a transcoded version of the video file"
+        },
+        "bitRate": {
+            "type": "integer",
+            "description": "File bitrate in Kbps"
+        },
+        "audioTrackId": {
+            "type": "integer",
+            "description": "The ID of the audio track this version carries"
+        }
+    },
+    "required": [
+        "id"
+    ]
+}

@@ -1,8 +1,29 @@
 {
     "type": "object",
-    "description": "searchResult. TODO",
+    "description": "Search results.",
     "externalDocs": {
         "description": "SearchResult",
         "url": "https://opensubsonic.netlify.app/docs/responses/searchresult/"
-    }
+    },
+    "properties": {
+        "match": {
+            "type": "array",
+            "description": "Search results",
+            "items": {
+                "$ref": "./Child.json"
+            }
+        },
+        "offset": {
+            "type": "integer",
+            "description": "Starting list offset"
+        },
+        "totalHits": {
+            "type": "integer",
+            "description": "Total results from the search"
+        }
+    },
+    "required": [
+        "offset",
+        "totalHits"
+    ]
 }
