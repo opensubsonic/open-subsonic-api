@@ -1,0 +1,85 @@
+{
+    "get": {
+        "summary": "Returns all folders in a user's private playlist organization.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Returns all folders in a user's private playlist organization as a flat list.",
+        "operationId": "getPlaylistFolders",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "username",
+                "in": "query",
+                "description": "If specified, return folders for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPlaylistFolders/GetPlaylistFoldersResponse.json"
+                        }
+                    }
+                }
+            }
+        },
+        "externalDocs": {
+            "description": "getPlaylistFolders",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylistfolders/"
+        }
+    },
+    "post": {
+        "summary": "Returns all folders in a user's private playlist organization.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Returns all folders in a user's private playlist organization as a flat list.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "operationId": "postGetPlaylistFolders",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": false,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "username": {
+                                "type": "string",
+                                "description": "If specified, return folders for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "description": "Successful or failed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "./getPlaylistFolders/GetPlaylistFoldersResponse.json"
+                        }
+                    }
+                }
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "getPlaylistFolders",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylistfolders/"
+        }
+    }
+}

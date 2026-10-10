@@ -1,0 +1,129 @@
+{
+    "get": {
+        "summary": "Places playlists in a folder or at the root and sets their position.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Places playlists in the authenticated user's playlist organization: moves them into a folder or to the root and sets their position among siblings. Never modifies the playlists themselves, so it works on any playlist visible to the user regardless of ownership or `readonly` state. At least one of `playlistFolderId` or `sortOrder` must be supplied.",
+        "operationId": "movePlaylist",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "playlistId",
+                "in": "query",
+                "description": "ID of the playlist to place. Multiple parameters allowed; playlists are placed in the order given.",
+                "explode": true,
+                "style": "form",
+                "required": true,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "playlistFolderId",
+                "in": "query",
+                "description": "ID of the destination folder. An empty value moves the playlists to the root. Omit to keep each playlist in its current location and only change its position.",
+                "required": false,
+                "allowEmptyValue": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "sortOrder",
+                "in": "query",
+                "description": "Position among siblings, as a client-assigned integer. Multiple parameters allowed, paired in order with `playlistId`. When omitted, moved playlists are placed after the existing contents of the destination.",
+                "explode": true,
+                "style": "form",
+                "required": false,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "movePlaylist",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/moveplaylist/"
+        }
+    },
+    "post": {
+        "summary": "Places playlists in a folder or at the root and sets their position.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Places playlists in the authenticated user's playlist organization: moves them into a folder or to the root and sets their position among siblings. Never modifies the playlists themselves, so it works on any playlist visible to the user regardless of ownership or `readonly` state. At least one of `playlistFolderId` or `sortOrder` must be supplied.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "operationId": "postMovePlaylist",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "playlistId": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "ID of the playlist to place. Multiple parameters allowed; playlists are placed in the order given."
+                            },
+                            "playlistFolderId": {
+                                "type": "string",
+                                "description": "ID of the destination folder. An empty value moves the playlists to the root. Omit to keep each playlist in its current location and only change its position."
+                            },
+                            "sortOrder": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer"
+                                },
+                                "description": "Position among siblings, as a client-assigned integer. Multiple parameters allowed, paired in order with `playlistId`. When omitted, moved playlists are placed after the existing contents of the destination."
+                            }
+                        },
+                        "required": [
+                            "playlistId"
+                        ],
+                        "anyOf": [
+                            {
+                                "required": [
+                                    "playlistFolderId"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "sortOrder"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "movePlaylist",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/moveplaylist/"
+        }
+    }
+}
