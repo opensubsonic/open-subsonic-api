@@ -51,6 +51,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Airsonic Refix](https://github.com/tamland/airsonic-refix)  | [Documentation](https://github.com/tamland/airsonic-refix#opensubsonic-support) |
 | [Amperfy](https://github.com/BLeeEZ/amperfy)  |   |
 | [Baton](https://batonmusic.app/) | [Documentation](https://github.com/anatoliv/baton/blob/main/docs/opensubsonic.md) |
+| [Discophile](https://github.com/debba/discophile)  |   |
 | [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)  |   |
 | [Radiccio](https://radiccio.music) | [Documentation](https://guide.radiccio.music/sources/opensubsonic) |
 | [Solomorph](https://solomorph.com/)  | [Documentation](https://solomorph.com/servers/) |
