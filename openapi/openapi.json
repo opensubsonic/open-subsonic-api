@@ -105,6 +105,9 @@
         "/rest/addChatMessage": {
             "$ref": "./endpoints/addChatMessage.json"
         },
+        "/rest/addPlaylistToFolder": {
+            "$ref": "./endpoints/addPlaylistToFolder.json"
+        },
         "/rest/changePassword": {
             "$ref": "./endpoints/changePassword.json"
         },
@@ -116,6 +119,9 @@
         },
         "/rest/createPlaylist": {
             "$ref": "./endpoints/createPlaylist.json"
+        },
+        "/rest/createPlaylistFolder": {
+            "$ref": "./endpoints/createPlaylistFolder.json"
         },
         "/rest/createPodcastChannel": {
             "$ref": "./endpoints/createPodcastChannel.json"
@@ -134,6 +140,9 @@
         },
         "/rest/deletePlaylist": {
             "$ref": "./endpoints/deletePlaylist.json"
+        },
+        "/rest/deletePlaylistFolder": {
+            "$ref": "./endpoints/deletePlaylistFolder.json"
         },
         "/rest/deletePodcastChannel": {
             "$ref": "./endpoints/deletePodcastChannel.json"
@@ -234,6 +243,9 @@
         "/rest/getPlaylist": {
             "$ref": "./endpoints/getPlaylist.json"
         },
+        "/rest/getPlaylistFolders": {
+            "$ref": "./endpoints/getPlaylistFolders.json"
+        },
         "/rest/getPlaylists": {
             "$ref": "./endpoints/getPlaylists.json"
         },
@@ -312,6 +324,9 @@
         "/rest/refreshPodcasts": {
             "$ref": "./endpoints/refreshPodcasts.json"
         },
+        "/rest/removePlaylistFromFolder": {
+            "$ref": "./endpoints/removePlaylistFromFolder.json"
+        },
         "/rest/reportPlayback": {
             "$ref": "./endpoints/reportPlayback.json"
         },
@@ -356,6 +371,9 @@
         },
         "/rest/updatePlaylist": {
             "$ref": "./endpoints/updatePlaylist.json"
+        },
+        "/rest/updatePlaylistFolder": {
+            "$ref": "./endpoints/updatePlaylistFolder.json"
         },
         "/rest/updateShare": {
             "$ref": "./endpoints/updateShare.json"
@@ -472,6 +490,21 @@
             },
             "PlaylistWithSongs": {
                 "$ref": "./schemas/PlaylistWithSongs.json"
+            },
+            "PlaylistFolder": {
+                "$ref": "./schemas/PlaylistFolder.json"
+            },
+            "PlaylistFolders": {
+                "$ref": "./schemas/PlaylistFolders.json"
+            },
+            "PlaylistPlacement": {
+                "$ref": "./schemas/PlaylistPlacement.json"
+            },
+            "CreatePlaylistFolderSuccessResponse": {
+                "$ref": "./endpoints/createPlaylistFolder/CreatePlaylistFolderSuccessResponse.json"
+            },
+            "CreatePlaylistFolderResponse": {
+                "$ref": "./endpoints/createPlaylistFolder/CreatePlaylistFolderResponse.json"
             },
             "CreatePlaylistSuccessResponse": {
                 "$ref": "./endpoints/createPlaylist/CreatePlaylistSuccessResponse.json"
@@ -748,6 +781,12 @@
             },
             "GetPlaylistResponse": {
                 "$ref": "./endpoints/getPlaylist/GetPlaylistResponse.json"
+            },
+            "GetPlaylistFoldersSuccessResponse": {
+                "$ref": "./endpoints/getPlaylistFolders/GetPlaylistFoldersSuccessResponse.json"
+            },
+            "GetPlaylistFoldersResponse": {
+                "$ref": "./endpoints/getPlaylistFolders/GetPlaylistFoldersResponse.json"
             },
             "Playlists": {
                 "$ref": "./schemas/Playlists.json"

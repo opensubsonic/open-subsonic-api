@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "description": "A playlist's placement in a folder in a user's playlist organization. A playlist may have any number of placements, at most one per folder.",
+    "properties": {
+        "playlistId": {
+            "type": "string",
+            "description": "ID of the placed playlist."
+        },
+        "playlistFolderId": {
+            "type": "string",
+            "description": "ID of the containing playlist folder. Empty or omitted for an explicit root placement."
+        },
+        "sortOrder": {
+            "type": "integer",
+            "description": "Position among siblings, as a client-assigned integer."
+        }
+    },
+    "required": [
+        "playlistId"
+    ],
+    "externalDocs": {
+        "description": "PlaylistPlacement",
+        "url": "https://opensubsonic.netlify.app/docs/responses/playlistplacement/"
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "get": {
+        "summary": "Adds playlist placements to a folder or the root.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead.",
+        "operationId": "addPlaylistToFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "playlistId",
+                "in": "query",
+                "description": "ID of the playlist to place. Multiple parameters allowed; playlists are placed in the order given.",
+                "explode": true,
+                "style": "form",
+                "required": true,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "playlistFolderId",
+                "in": "query",
+                "description": "ID of the destination folder. An empty or omitted value creates an explicit root placement.",
+                "required": false,
+                "allowEmptyValue": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "sortOrder",
+                "in": "query",
+                "description": "Position among siblings, as a client-assigned integer. Multiple parameters allowed, paired in order with `playlistId`. When omitted, added playlists are placed after the existing contents of the destination.",
+                "explode": true,
+                "style": "form",
+                "required": false,
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "addPlaylistToFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/addplaylisttofolder/"
+        }
+    },
+    "post": {
+        "summary": "Adds playlist placements to a folder or the root.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Adds placements to the authenticated user's playlist organization: files each given playlist in the given folder (or at the root) without touching the playlist's other placements. If the placement already exists, its `sortOrder` is updated instead. \n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "operationId": "postAddPlaylistToFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "playlistId": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "ID of the playlist to place. Multiple parameters allowed; playlists are placed in the order given."
+                            },
+                            "playlistFolderId": {
+                                "type": "string",
+                                "description": "ID of the destination folder. An empty or omitted value creates an explicit root placement."
+                            },
+                            "sortOrder": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer"
+                                },
+                                "description": "Position among siblings, as a client-assigned integer. Multiple parameters allowed, paired in order with `playlistId`. When omitted, added playlists are placed after the existing contents of the destination."
+                            }
+                        },
+                        "required": [
+                            "playlistId"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "addPlaylistToFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/addplaylisttofolder/"
+        }
+    }
+}
