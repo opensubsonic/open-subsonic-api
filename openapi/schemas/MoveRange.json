@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "description": "Move a range of items from one position to another. The range is specified by the `fromStart` (inclusive) and `fromEnd` (exclusive) indices. The first item in the range moves to the index `to`.",
+    "properties": {
+        "fromStart": {"type": "integer"},
+        "fromEnd": {"type": "integer"},
+        "to": {"type": "integer"}
+    },
+    "required": ["fromStart", "fromEnd", "to"]
+}
