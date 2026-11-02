@@ -21,6 +21,8 @@ description: >
   "duration": 304,
   "readonly": true,
   "validUntil": "2023-03-23T03:18:41+00:00",
+  "playlistFolderId": "folder-dj",
+  "playlistFolderSortOrder": 2,
   "entry": [
     {
       "id": "300000060",
@@ -112,6 +114,8 @@ description: >
 | `allowedUser` | Array of `string` | No |     | A list of allowed usernames |
 | `readonly` | `boolean` | No | **Yes** | If true the playlist cannot be edited by the current user |
 | `validUntil` | `string` | No | **Yes** | Date the playlist contents are considered valid until [ISO 8601] |
+| `playlistFolderId` | `string` | No | **Yes** | ID of the containing folder in the selected user's playlist organization. Empty for a root-level playlist. |
+| `playlistFolderSortOrder` | `int` | No | **Yes** | Position among siblings in the selected user's playlist organization. |
 | `entry` | Array of [`Child`](../child) | No |     | The list of songs |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
@@ -120,9 +124,16 @@ New fields are added:
 - `readonly`
 - `validUntil`
 
+When the server supports extension [`playlistFolders`](../../extensions/playlistfolders), these fields can be returned:
+
+- `playlistFolderId`
+- `playlistFolderSortOrder`
+
 **Note**: All OpenSubsonic added fields are **optional**. But if a server supports a field it **must** return it with an empty / default value when not present in its database so that clients know what the server supports.
 
 When `readonly` is true, clients should hide or disable UI actions that modify the playlist. This is useful for server-generated playlists like smart playlists, recommendations, or curated system lists. The value should reflect the current authenticated user's access level. When omitted, clients should assume the playlist is editable (`false`).
 
 The `validUntil` field indicates how long the playlist contents can be treated as fresh, inspired by HTTP caching semantics. Clients may use this to determine when to refresh the playlist data. An empty or absent value indicates no caching guarantee; clients should refresh the playlist data on each access.
+
+The `playlistFolderId` and `playlistFolderSortOrder` fields are user-specific: they reflect the selected user's playlist organization regardless of who owns the playlist. See the [playlistFolders extension](../../extensions/playlistfolders) for the hierarchy, ordering, and privacy rules.
 {{< /alert >}}
