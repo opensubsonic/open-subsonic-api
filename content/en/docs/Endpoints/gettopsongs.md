@@ -21,6 +21,7 @@ Returns top songs for the given artist, using data from [last.fm](http://last.fm
 | `artist` | Yes, unless `id` is provided* |  |   | The artist name. |
 | `id` | No | **Yes** |   | The artist ID. Requires the [`topSongsByArtistId`](../../extensions/topsongsbyartistid/) extension. |
 | `count` | No  | |  50  | Max number of songs to return. |
+| `musicFolderId` | No | **Yes** |  | Include only songs from the music folder with the given ID. The [`Music Folder`](../../extensions/musicfolder) extension marks support for this parameter. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 \* If the server supports the [`topSongsByArtistId`](../../extensions/topsongsbyartistid/) extension, it **must** accept the `id` parameter and return the top songs for the artist with that ID. When `id` is provided, `artist` is not required, and `id` takes precedence over it.

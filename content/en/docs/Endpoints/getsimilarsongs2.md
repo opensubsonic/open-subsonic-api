@@ -17,6 +17,7 @@ Similar to [`getSimilarSongs`](../getsimilarsongs), but organizes music accordin
 | --- | --- | --- | --- | --- |
 | `id` | **Yes** |  |   | The artist ID. |
 | `count` | No  | |50  | Max number of songs to return. |
+| `musicFolderId` | No | **Yes** |  | Include only songs from the music folder with the given ID. The [`Music Folder`](../../extensions/musicfolder) extension marks support for this parameter. |
 
 ### Example
 

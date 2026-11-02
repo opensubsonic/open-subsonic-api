@@ -13,7 +13,10 @@ Returns all genres.
 
 ### Parameters
 
-Takes no extra parameters.
+Takes no extra parameters, unless the server supports the [Music Folder](../../extensions/musicfolder) extension, in which case the following parameter is supported.
+
+| Parameter | Req. | OpenS. | Default | Comment |
+| `musicFolderId` | No| **Yes**   |     | Include only genres for which at least one song in the specified music folder is tagged with that genre. Servers **should** calculate and return `songCount` and `albumCount` relative to the specified music folder only. |
 
 ### Example
 
