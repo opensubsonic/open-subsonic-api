@@ -53,6 +53,7 @@ description: >
 | `sortName` | `string` | No |  **Yes**   | The artist sort name. |
 | `disambiguation` | `string` | No |  **Yes**   | A short human-readable comment, meant to be shown to users to distinguish between artists with the same name (e.g. `French electronic duo`). |
 | `roles` | Array of `string` | No | **Yes**    | The list of all roles this artist has in the library. |
+| `userRating` | `int` | No | **Yes** | The user rating of the artist. [1-5]|
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
@@ -61,6 +62,7 @@ New fields are added:
 - `sortName`
 - `disambiguation`
 - `roles`
+- `userRating`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 
