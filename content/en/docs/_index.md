@@ -32,6 +32,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 |---|---|
 | [Ampache](https://ampache.org/)  | [Documentation](https://ampache.org/api/subsonic)  |
 | [Astiga](https://asti.ga)  | - |
+| [BeetstreamNext](https://github.com/FlorentLM/BeetstreamNext) | [Documentation](https://florentlm.github.io/BeetstreamNext/api-coverage.html) |
 | [EdgeSonic](https://github.com/wuyilingwei/edgesonic) | [Documentation](https://github.com/wuyilingwei/edgesonic/blob/main/docs/OPENSUBSONIC.md) |
 | [funoteka](https://github.com/kzntsv-dev/funoteka) | [Documentation](https://github.com/kzntsv-dev/funoteka/blob/main/docs/OPENSUBSONIC.md) |
 | [GainDrive](https://www.gaindrive.org/) | [Documentation](https://www.gaindrive.org/api.html) |
