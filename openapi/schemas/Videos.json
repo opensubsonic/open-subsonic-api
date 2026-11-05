@@ -1,8 +1,17 @@
 {
     "type": "object",
-    "description": "videos. TODO",
+    "description": "Video list.",
     "externalDocs": {
         "description": "Videos",
         "url": "https://opensubsonic.netlify.app/docs/responses/videos/"
+    },
+    "properties": {
+        "video": {
+            "type": "array",
+            "description": "List of videos",
+            "items": {
+                "$ref": "./Child.json"
+            }
+        }
     }
 }

@@ -893,6 +893,15 @@
             "GetUsersResponse": {
                 "$ref": "./endpoints/getUsers/GetUsersResponse.json"
             },
+            "Captions": {
+                "$ref": "./schemas/Captions.json"
+            },
+            "AudioTrack": {
+                "$ref": "./schemas/AudioTrack.json"
+            },
+            "VideoConversion": {
+                "$ref": "./schemas/VideoConversion.json"
+            },
             "VideoInfo": {
                 "$ref": "./schemas/VideoInfo.json"
             },

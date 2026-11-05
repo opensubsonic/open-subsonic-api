@@ -1,5 +1,5 @@
 {
-    "description": "Success (binary) or error (xml) response",
+    "description": "Success (binary) or error (json/xml) response",
     "content": {
         "application/binary": {
             "schema": {
@@ -7,10 +7,14 @@
                 "format": "binary"
             }
         },
+        "application/json": {
+            "schema": {
+                "$ref": "../schemas/SubsonicResponse/SubsonicFailureResponse.json"
+            }
+        },
         "text/xml": {
             "schema": {
-                "type": "object",
-                "description": "Error response TODO: TO BE DESCRIBED"
+                "$ref": "../schemas/SubsonicResponse/SubsonicFailureResponse.json"
             }
         }
     }

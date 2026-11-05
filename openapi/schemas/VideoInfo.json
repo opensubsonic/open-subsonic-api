@@ -1,8 +1,38 @@
 {
     "type": "object",
-    "description": "videoInfo. TODO",
+    "description": "Video details.",
     "externalDocs": {
         "description": "VideoInfo",
         "url": "https://opensubsonic.netlify.app/docs/responses/videoinfo/"
-    }
+    },
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The ID of the video file"
+        },
+        "captions": {
+            "type": "array",
+            "description": "Available subtitle tracks",
+            "items": {
+                "$ref": "./Captions.json"
+            }
+        },
+        "audioTrack": {
+            "type": "array",
+            "description": "Available audio tracks",
+            "items": {
+                "$ref": "./AudioTrack.json"
+            }
+        },
+        "conversion": {
+            "type": "array",
+            "description": "Available transcoded versions of the video file",
+            "items": {
+                "$ref": "./VideoConversion.json"
+            }
+        }
+    },
+    "required": [
+        "id"
+    ]
 }
