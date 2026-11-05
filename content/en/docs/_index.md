@@ -33,6 +33,8 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Ampache](https://ampache.org/)  | [Documentation](https://ampache.org/api/subsonic)  |
 | [Astiga](https://asti.ga)  | - |
 | [EdgeSonic](https://github.com/wuyilingwei/edgesonic) | [Documentation](https://github.com/wuyilingwei/edgesonic/blob/main/docs/OPENSUBSONIC.md) |
+| [funoteka](https://github.com/kzntsv-dev/funoteka) | [Documentation](https://github.com/kzntsv-dev/funoteka/blob/main/docs/OPENSUBSONIC.md) |
+| [GainDrive](https://www.gaindrive.org/) | [Documentation](https://www.gaindrive.org/api.html) |
 | [gonic](https://github.com/sentriz/gonic) | [Documentation](https://github.com/sentriz/gonic/wiki/subsonic-api-compatibility)  |
 | [LMS - Lightweight Music Server](https://github.com/epoupon/lms) | [Documentation](https://github.com/epoupon/lms/blob/master/SUBSONIC.md)  |
 | [Navidrome](https://www.navidrome.org/)  | [Documentation](https://www.navidrome.org/docs/developers/subsonic-api)  |
@@ -48,8 +50,10 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Airdrome](https://github.com/JPGuillemin/Airdrome)  | [Documentation](https://github.com/JPGuillemin/Airdrome#opensubsonic-endpoints) |
 | [Airsonic Refix](https://github.com/tamland/airsonic-refix)  | [Documentation](https://github.com/tamland/airsonic-refix#opensubsonic-support) |
 | [Amperfy](https://github.com/BLeeEZ/amperfy)  |   |
+| [Baton](https://batonmusic.app/) | [Documentation](https://github.com/anatoliv/baton/blob/main/docs/opensubsonic.md) |
 | [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)  |   |
 | [Radiccio](https://radiccio.music) | [Documentation](https://guide.radiccio.music/sources/opensubsonic) |
+| [Solomorph](https://solomorph.com/)  | [Documentation](https://solomorph.com/servers/) |
 | [Supersonic](https://github.com/dweymouth/supersonic)  |   |
 | [Symfonium](https://symfonium.app/)  | [Documentation](https://support.symfonium.app/t/1178) |
 | [Tempus](https://github.com/eddyizm/tempus)  |  |
