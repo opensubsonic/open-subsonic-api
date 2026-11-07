@@ -53,6 +53,7 @@ Any server or client can join the organization and make proposals for [OpenSubso
 | [Baton](https://batonmusic.app/) | [Documentation](https://github.com/anatoliv/baton/blob/main/docs/opensubsonic.md) |
 | [Feishin (ex Sonixd)](https://github.com/jeffvli/feishin)  |   |
 | [Radiccio](https://radiccio.music) | [Documentation](https://guide.radiccio.music/sources/opensubsonic) |
+| [SMPlayer](https://smplayer.gaotao.vip/) |   |
 | [Solomorph](https://solomorph.com/)  | [Documentation](https://solomorph.com/servers/) |
 | [Supersonic](https://github.com/dweymouth/supersonic)  |   |
 | [Symfonium](https://symfonium.app/)  | [Documentation](https://support.symfonium.app/t/1178) |
