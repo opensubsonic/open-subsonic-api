@@ -48,6 +48,7 @@ description: >
 | `coverArt` | `string` | No |     | A covertArt id.  |
 | `artistImageUrl` | `string` | No  |   | An url to an external image source. |
 | `albumCount` | `int` | No |     | Artist album count.  |
+| `userRating` | `int` | No |     | The user rating of the album. [1-5] |
 | `starred` | `string` | No |     | Date the artist was starred. [ISO 8601]|
 | `musicBrainzId` | `string` | No |  **Yes**   | The artist MusicBrainzID. |
 | `sortName` | `string` | No |  **Yes**   | The artist sort name. |
