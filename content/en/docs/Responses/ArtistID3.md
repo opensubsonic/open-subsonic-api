@@ -49,7 +49,7 @@ description: >
 | `artistImageUrl` | `string` | No  |   | An url to an external image source. |
 | `albumCount` | `int` | No |     | Artist album count.  |
 | `starred` | `string` | No |     | Date the artist was starred. [ISO 8601]|
-| `userRating` | `int` | No |  **Yes**  | The user rating of the album. [1-5] |
+| `userRating` | `int` | No |  **Yes**  | The user rating of the artist. [1-5] |
 | `musicBrainzId` | `string` | No |  **Yes**   | The artist MusicBrainzID. |
 | `sortName` | `string` | No |  **Yes**   | The artist sort name. |
 | `disambiguation` | `string` | No |  **Yes**   | A short human-readable comment, meant to be shown to users to distinguish between artists with the same name (e.g. `French electronic duo`). |
