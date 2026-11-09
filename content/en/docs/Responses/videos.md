@@ -49,7 +49,7 @@ description: >
     {
       "id": "vi-3",
       "parent": "mf-7",
-      "title": "SPACE   Magic Fly (1977) - https://archive.org/details/SPACE_Magic_Fly_1977.mp4",
+      "title": "SPACE - Magic Fly (1977).mp4",
       "isDir": false,
       "isVideo": true,
       "type": "video",
