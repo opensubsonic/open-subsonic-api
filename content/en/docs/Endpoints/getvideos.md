@@ -30,8 +30,8 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
   "subsonic-response": {
     "status": "ok",
     "version": "1.16.1",
-    "type": "ampache",
-    "serverVersion": "8.0.0",
+    "type": "AwesomeServerName",
+    "serverVersion": "0.1.3 (tag)",
     "openSubsonic": true,
     "videos": {
       "video": [
