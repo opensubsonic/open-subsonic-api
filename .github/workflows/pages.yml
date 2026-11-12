@@ -1,9 +1,6 @@
 name: Site
 
-# Builds the site. On main, publishes it to the gh-pages branch.
-# On PRs, only builds it with a preview baseURL and uploads it as an artifact.
-# The PR preview is published by pr-preview.yml, which runs with a write token
-# (fork PRs never get one here).
+# PR builds are published by pr-preview.yml
 
 on:
   push:
@@ -26,10 +23,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # Hugo enableGitInfo needs the full history for "last modified" dates.
+          # enableGitInfo
           fetch-depth: 0
 
-      # Hugo modules (Docsy) need Go.
+      # Hugo modules
       - uses: actions/setup-go@v5
         with:
           go-version: stable
@@ -44,7 +41,6 @@ jobs:
 
       - name: Build
         env:
-          # Non-production builds get <meta name="robots" content="noindex"> from Docsy.
           HUGO_ENVIRONMENT: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
           HUGO_BASEURL: ${{ github.event_name == 'pull_request' && format('{0}/pr/{1}/', env.SITE_URL, github.event.number) || format('{0}/', env.SITE_URL) }}
         run: npm run build

@@ -1,13 +1,6 @@
 name: PR preview
 
-# Publishes PR builds from the "Site" workflow to
-#   <SITE_URL>/pr/<N>/
-# and removes them when the PR closes.
-#
-# Security: these jobs have a write token, so they never run code from the PR.
-# They only check out the default branch (for the scripts) and copy the static
-# files the PR build produced. The PR number comes from the GitHub API, not
-# from the artifact.
+# Has a write token: never run PR code, only copy its built files.
 
 on:
   workflow_run:
@@ -39,7 +32,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
-          # Only match the PR's current head. Old or closed builds are skipped.
           number=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls?state=open&per_page=100" \
             --jq ".[] | select(.head.sha == \"${HEAD_SHA}\") | .number" | head -1)
           echo "number=${number}" >> "$GITHUB_OUTPUT"
@@ -83,7 +75,6 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      # pull_request_target checks out the base branch, not the PR code.
       - uses: actions/checkout@v4
 
       - name: Remove preview

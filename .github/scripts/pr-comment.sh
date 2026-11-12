@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Create or update the bot's single preview comment on a PR.
-# Usage: pr-comment.sh <pr-number> <body>
-# Env: GH_TOKEN, GITHUB_REPOSITORY.
+# Usage: pr-comment.sh <pr> <body>   (upserts the bot comment)
 set -euo pipefail
 
 pr=${1:?pr number}

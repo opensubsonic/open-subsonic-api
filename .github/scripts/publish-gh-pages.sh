@@ -1,18 +1,6 @@
 #!/usr/bin/env bash
-# Publish a built site into the gh-pages branch, which GitHub Pages serves.
-#
-# Usage: publish-gh-pages.sh <dest> [src]
-#   dest  "." for the main site, or a sub-folder such as "pr/12".
-#   src   Folder with the built site. Omit it to delete <dest>.
-#
-# Publishing to "." replaces the main site and keeps the previews in "pr/".
-# The branch is always rewritten as a single commit, so old builds do not pile
-# up in the repo history. --force-with-lease plus a retry loop makes concurrent
-# publishers (main deploy, previews, cleanups) safe: a push only lands if
-# nobody else pushed since we cloned.
-#
-# Env: GITHUB_TOKEN and GITHUB_REPOSITORY (set by Actions), or PAGES_REMOTE to
-# point at another remote (used for local testing).
+# Usage: publish-gh-pages.sh <.|pr/N> [src]   (no src: delete)
+# Rewrites gh-pages as a single commit; lease + retries handle concurrent runs.
 set -euo pipefail
 
 dest=${1:?usage: publish-gh-pages.sh <dest> [src]}
@@ -29,7 +17,6 @@ fi
 if [ -n "$src" ]; then
   src=$(cd "$src" && pwd)
 fi
-# "pr/" at the root is reserved for previews. Stop if the main site has one.
 if [ "$dest" = "." ] && [ -e "$src/pr" ]; then
   echo "The site has its own top-level 'pr' path, which clashes with previews" >&2
   exit 1
@@ -60,7 +47,6 @@ publish() {
     if [ -n "$src" ]; then
       mkdir -p "$dest"
       cp -R "$src"/. "$dest"
-      # Never let a build smuggle in a nested git repo.
       find "$dest" -name .git -prune -exec rm -rf {} +
     fi
   fi
@@ -75,7 +61,7 @@ publish() {
 }
 
 for attempt in $(seq 1 10); do
-  # Not "if publish": bash turns off set -e inside an if condition.
+  # set -e is ignored inside "if"
   set +e
   (set -e; publish)
   rc=$?

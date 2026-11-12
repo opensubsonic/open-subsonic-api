@@ -1,4 +1,4 @@
-# The site moved to GitHub Pages. Netlify only redirects old links now.
+# Redirect only; the site is on GitHub Pages
 [build]
 publish = "static"
 
