@@ -3,7 +3,7 @@
     "description": "Genres list.",
     "externalDocs": {
         "description": "Genres",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/genres/"
+        "url": "https://opensubsonic.github.io/docs/responses/genres/"
     },
     "properties": {
         "genre": {

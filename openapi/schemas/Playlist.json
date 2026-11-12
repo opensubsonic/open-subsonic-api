@@ -71,6 +71,6 @@
     ],
     "externalDocs": {
         "description": "Playlist",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/playlist/"
+        "url": "https://opensubsonic.github.io/docs/responses/playlist/"
     }
 }

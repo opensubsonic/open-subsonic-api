@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 env:
-  SITE_URL: https://opensubsonic.github.io/open-subsonic-api
+  SITE_URL: https://opensubsonic.github.io
 
 jobs:
   build:

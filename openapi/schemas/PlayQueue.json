@@ -3,7 +3,7 @@
     "description": "NowPlayingEntry.",
     "externalDocs": {
         "description": "PlayQueue",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/playqueue/"
+        "url": "https://opensubsonic.github.io/docs/responses/playqueue/"
     },
     "properties": {
         "current": {

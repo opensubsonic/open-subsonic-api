@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "SubsonicResponse",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/subsonic-response/"
+        "url": "https://opensubsonic.github.io/docs/responses/subsonic-response/"
     }
 }

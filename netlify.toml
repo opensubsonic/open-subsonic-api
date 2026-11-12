@@ -4,6 +4,6 @@ publish = "static"
 
 [[redirects]]
 from = "/*"
-to = "https://opensubsonic.github.io/open-subsonic-api/:splat"
+to = "https://opensubsonic.github.io/:splat"
 status = 301
 force = true

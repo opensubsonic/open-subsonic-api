@@ -3,7 +3,7 @@
     "description": "NewestPodcasts.",
     "externalDocs": {
         "description": "NewestPodcasts",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/newestpodcasts/"
+        "url": "https://opensubsonic.github.io/docs/responses/newestpodcasts/"
     },
     "properties": {
         "episode": {

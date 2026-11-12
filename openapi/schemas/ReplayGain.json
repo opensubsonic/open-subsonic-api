@@ -31,6 +31,6 @@
     },
     "externalDocs": {
         "description": "Replay Gain",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/replaygain/"
+        "url": "https://opensubsonic.github.io/docs/responses/replaygain/"
     }
 }

@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getScanStatus",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getscanstatus/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getscanstatus/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getScanStatus",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getscanstatus/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getscanstatus/"
         }
     }
 }

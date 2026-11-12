@@ -3,7 +3,7 @@
     "description": "Starred2.",
     "externalDocs": {
         "description": "Starred2",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/starred2/"
+        "url": "https://opensubsonic.github.io/docs/responses/starred2/"
     },
     "properties": {
         "artist": {

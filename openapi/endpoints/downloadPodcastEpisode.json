@@ -24,7 +24,7 @@
         },
         "externalDocs": {
             "description": "downloadPodcastEpisode",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/downloadpodcastepisode/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/downloadpodcastepisode/"
         }
     },
     "post": {

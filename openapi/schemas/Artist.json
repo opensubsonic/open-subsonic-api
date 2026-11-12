@@ -38,6 +38,6 @@
     ],
     "externalDocs": {
         "description": "Artist",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/artist/"
+        "url": "https://opensubsonic.github.io/docs/responses/artist/"
     }
 }

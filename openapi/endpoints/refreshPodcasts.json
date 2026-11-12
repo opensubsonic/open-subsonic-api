@@ -16,7 +16,7 @@
         },
         "externalDocs": {
             "description": "refreshPodcasts",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/refreshpodcasts/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/refreshpodcasts/"
         }
     },
     "post": {
@@ -49,7 +49,7 @@
         },
         "externalDocs": {
             "description": "refreshPodcasts",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/refreshpodcasts/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/refreshpodcasts/"
         }
     }
 }

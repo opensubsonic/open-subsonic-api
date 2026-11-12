@@ -3,7 +3,7 @@
     "description": "List of structured lyrics",
     "externalDocs": {
         "description": "LyricsList",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/lyricslist/"
+        "url": "https://opensubsonic.github.io/docs/responses/lyricslist/"
     },
     "properties": {
         "structuredLyrics": {

@@ -52,7 +52,7 @@
         },
         "externalDocs": {
             "description": "getArtistInfo2",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getartistinfo2/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getartistinfo2/"
         }
     },
     "post": {
@@ -112,7 +112,7 @@
         },
         "externalDocs": {
             "description": "getArtistInfo2",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getartistinfo2/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getartistinfo2/"
         }
     }
 }

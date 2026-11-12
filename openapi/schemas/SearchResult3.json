@@ -3,7 +3,7 @@
     "description": "searchResult3",
     "externalDocs": {
         "description": "SearchResult3",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/searchresult3/"
+        "url": "https://opensubsonic.github.io/docs/responses/searchresult3/"
     },
     "properties": {
         "artist": {

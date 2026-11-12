@@ -31,7 +31,7 @@
         },
         "externalDocs": {
             "description": "getAlbumInfo",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getalbuminfo/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getalbuminfo/"
         }
     },
     "post": {
@@ -80,7 +80,7 @@
         },
         "externalDocs": {
             "description": "getAlbumInfo",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getalbuminfo/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getalbuminfo/"
         }
     }
 }

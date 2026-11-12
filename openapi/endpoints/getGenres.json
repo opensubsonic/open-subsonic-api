@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getGenres",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getgenres/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getgenres/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getGenres",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getgenres/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getgenres/"
         }
     }
 }

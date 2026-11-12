@@ -42,7 +42,7 @@
         },
         "externalDocs": {
             "description": "createInternetRadioStation",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/createinternetradiostation/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/createinternetradiostation/"
         }
     },
     "post": {
@@ -93,7 +93,7 @@
         },
         "externalDocs": {
             "description": "createInternetRadioStation",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/createinternetradiostation/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/createinternetradiostation/"
         }
     }
 }

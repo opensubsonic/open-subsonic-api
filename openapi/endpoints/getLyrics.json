@@ -40,7 +40,7 @@
         },
         "externalDocs": {
             "description": "getLyrics",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getlyrics/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getlyrics/"
         }
     },
     "post": {

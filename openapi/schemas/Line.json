@@ -3,7 +3,7 @@
     "description": "One line of a song lyric",
     "externalDocs": {
         "description": "Line",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/line/"
+        "url": "https://opensubsonic.github.io/docs/responses/line/"
     },
     "properties": {
         "value": {

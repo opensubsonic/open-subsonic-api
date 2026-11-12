@@ -3,7 +3,7 @@
     "description": "MusicFolders.",
     "externalDocs": {
         "description": "MusicFolders",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/musicfolders/"
+        "url": "https://opensubsonic.github.io/docs/responses/musicfolders/"
     },
     "properties": {
         "musicFolder": {

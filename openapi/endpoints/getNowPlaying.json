@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getNowPlaying",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getnowplaying/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getnowplaying/"
         }
     },
     "post": {

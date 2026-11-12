@@ -1,4 +1,4 @@
-baseURL = "https://opensubsonic.github.io/open-subsonic-api/"
+baseURL = "https://opensubsonic.github.io/"
 title = "OpenSubsonic"
 
 # Language settings
@@ -77,7 +77,7 @@ weight = 1
     [markup.goldmark.renderer]
       unsafe = true
     # Resolve root-relative links (e.g. "/categories/system/") to the page's
-    # permalink, so they include the sub-folder from baseURL.
+    # permalink, so they keep the sub-folder in baseURL (PR previews use /pr/<N>/).
     [markup.goldmark.renderHooks.link]
       enableDefault = true
   [markup.highlight]
@@ -118,7 +118,7 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/opensubsonic/open-subsonic-api"
+github_repo = "https://github.com/opensubsonic/opensubsonic.github.io"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
 #github_project_repo = "https://github.com/opensubsonic"
 
@@ -178,7 +178,7 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "GitHub"
-  url = "https://github.com/opensubsonic/open-subsonic-api"
+  url = "https://github.com/opensubsonic/opensubsonic.github.io"
   icon = "fab fa-github"
   desc = "Development takes place here!"
 

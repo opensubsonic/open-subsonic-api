@@ -3,7 +3,7 @@
     "description": "getLicense result.",
     "externalDocs": {
         "description": "License",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/license/"
+        "url": "https://opensubsonic.github.io/docs/responses/license/"
     },
     "properties": {
         "valid": {

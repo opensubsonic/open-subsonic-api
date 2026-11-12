@@ -89,7 +89,7 @@
         },
         "externalDocs": {
             "description": "getAlbumList2",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getalbumlist2/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getalbumlist2/"
         }
     },
     "post": {
@@ -166,7 +166,7 @@
         },
         "externalDocs": {
             "description": "getAlbumList2",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getalbumlist2/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getalbumlist2/"
         }
     }
 }

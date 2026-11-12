@@ -3,7 +3,7 @@
     "description": "user.",
     "externalDocs": {
         "description": "User",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/user/"
+        "url": "https://opensubsonic.github.io/docs/responses/user/"
     },
     "properties": {
         "username": {

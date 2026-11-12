@@ -19,7 +19,7 @@ on:
 permissions: {}
 
 env:
-  SITE_URL: https://opensubsonic.github.io/open-subsonic-api
+  SITE_URL: https://opensubsonic.github.io
 
 jobs:
   deploy:

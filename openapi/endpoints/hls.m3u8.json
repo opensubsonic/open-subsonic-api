@@ -55,7 +55,7 @@
         },
         "externalDocs": {
             "description": "hls.m3u8",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/hls/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/hls/"
         }
     },
     "post": {
@@ -118,7 +118,7 @@
         },
         "externalDocs": {
             "description": "hls.m3u8",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/hls/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/hls/"
         }
     }
 }

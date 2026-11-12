@@ -3,7 +3,7 @@
     "description": "Playlists.",
     "externalDocs": {
         "description": "Playlists",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/playlists/"
+        "url": "https://opensubsonic.github.io/docs/responses/playlists/"
     },
     "properties": {
         "playlist": {

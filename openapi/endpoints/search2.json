@@ -106,7 +106,7 @@
         },
         "externalDocs": {
             "description": "search2",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/search2/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/search2/"
         }
     },
     "post": {
@@ -195,7 +195,7 @@
         },
         "externalDocs": {
             "description": "search2",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/search2/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/search2/"
         }
     }
 }

@@ -3,7 +3,7 @@
     "description": "An indexed artist list by ID3 tags.",
     "externalDocs": {
         "description": "IndexID3",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/indexid3/"
+        "url": "https://opensubsonic.github.io/docs/responses/indexid3/"
     },
     "properties": {
         "name": {

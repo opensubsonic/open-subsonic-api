@@ -3,7 +3,7 @@
   "description": "Reusable metadata for a vocal agent within a structuredLyrics entry",
   "externalDocs": {
     "description": "Agent",
-    "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/agent/"
+    "url": "https://opensubsonic.github.io/docs/responses/agent/"
   },
   "properties": {
     "id": {

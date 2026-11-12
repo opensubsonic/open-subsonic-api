@@ -35,7 +35,7 @@
         },
         "externalDocs": {
             "description": "getPodcastEpisode",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getpodcastepisode/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getpodcastepisode/"
         }
     },
     "post": {
@@ -88,7 +88,7 @@
         },
         "externalDocs": {
             "description": "getPodcastEpisode",
-            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getpodcastepisode/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getpodcastepisode/"
         }
     }
 }

@@ -3,6 +3,6 @@
     "description": "videoInfo. TODO",
     "externalDocs": {
         "description": "VideoInfo",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/videoinfo/"
+        "url": "https://opensubsonic.github.io/docs/responses/videoinfo/"
     }
 }

@@ -1,6 +1,6 @@
 # OpenSubsonic Website
 
-[![Deploy to GitHub Pages](https://github.com/opensubsonic/open-subsonic-api/actions/workflows/pages.yml/badge.svg)](https://github.com/opensubsonic/open-subsonic-api/actions/workflows/pages.yml)
+[![Deploy to GitHub Pages](https://github.com/opensubsonic/opensubsonic.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/opensubsonic/opensubsonic.github.io/actions/workflows/pages.yml)
 
 This is the source code for the OpenSubsonic documentation website. It is built with [Hugo](https://gohugo.io) and the [Docsy][] theme. 
 
@@ -63,8 +63,8 @@ documentation](https://docs.docker.com/compose/gettingstarted/).
    - [Node.js][]
 2. Clone this repository
    ```bash
-   git clone https://github.com/deluan/open-subsonic-api
-   cd open-subsonic-api
+   git clone https://github.com/opensubsonic/opensubsonic.github.io
+   cd opensubsonic.github.io
    ```
 3. If you want to do SCSS edits and want to publish these, you need to install `PostCSS`
    ```bash

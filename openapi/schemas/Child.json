@@ -261,6 +261,6 @@
     ],
     "externalDocs": {
         "description": "Child",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/child/"
+        "url": "https://opensubsonic.github.io/docs/responses/child/"
     }
 }

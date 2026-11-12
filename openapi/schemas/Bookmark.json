@@ -3,7 +3,7 @@
     "description": "A bookmark.",
     "externalDocs": {
         "description": "Bookmark",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/bookmark/"
+        "url": "https://opensubsonic.github.io/docs/responses/bookmark/"
     },
     "properties": {
         "position": {

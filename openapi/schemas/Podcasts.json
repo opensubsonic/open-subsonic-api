@@ -3,7 +3,7 @@
     "description": "Podcasts.",
     "externalDocs": {
         "description": "Podcasts",
-        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/podcasts/"
+        "url": "https://opensubsonic.github.io/docs/responses/podcasts/"
     },
     "properties": {
         "channel": {
