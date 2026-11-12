@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "description": "Video file audio tracks.",
+    "externalDocs": {
+        "description": "AudioTrack",
+        "url": "https://opensubsonic.netlify.app/docs/responses/audiotrack/"
+    },
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The ID of a transcoded version of the video file"
+        },
+        "name": {
+            "type": "string",
+            "description": "Language Name (e.g. English, French)"
+        },
+        "languageCode": {
+            "type": "string",
+            "description": "ISO 639 (2/3) code"
+        }
+    },
+    "required": [
+        "id"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "Video file caption details.",
+    "externalDocs": {
+        "description": "Captions",
+        "url": "https://opensubsonic.netlify.app/docs/responses/captions/"
+    },
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The ID of a transcoded version of the video file"
+        },
+        "name": {
+            "type": "string",
+            "description": "Subtitle track name"
+        }
+    },
+    "required": [
+        "id"
+    ]
+}
