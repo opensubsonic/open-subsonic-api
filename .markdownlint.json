@@ -1,6 +1,6 @@
 {
   "default": true,
-  "MD001": true,
+  "MD001": { "front_matter_title": "" },
   "MD003": { "style": "atx" },
   "MD004": { "style": "consistent" },
   "MD007": { "indent": 2 },
@@ -12,5 +12,6 @@
   "MD034": false,
   "MD040": true,
   "MD041": false,
-  "MD059": false
+  "MD059": false,
+  "MD060": false
 }

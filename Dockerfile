@@ -1,3 +1,3 @@
-FROM hugomods/hugo:debian-ci-0.147.8
+FROM hugomods/hugo:debian-dart-sass-go-git-0.165.0
 
 RUN git config --global --add safe.directory /src
