@@ -30,6 +30,6 @@ Does not exist.
 | `subRole` | `string` | No | **Yes**    | The subRole for roles that may require it. Ex: The instrument for the performer role (TMCL/performer tags). **Note:** For consistency between different tag formats, the TIPL sub roles should be directly exposed in the role field. |
 | `artist` | [`ArtistID3`](../artistid3) | **Yes**  | **Yes**     | The artist taking on the role. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default)|
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

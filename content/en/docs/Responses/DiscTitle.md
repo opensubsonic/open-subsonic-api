@@ -27,6 +27,6 @@ Does not exist.
 | `title` | `string` | **Yes**  | **Yes**     | The name of the disc. |
 | `coverArt` | `string` | No  | **Yes**     | The cover art ID of the disc. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

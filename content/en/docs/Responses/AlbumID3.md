@@ -135,7 +135,7 @@ description: >
 | `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit" if at least one song is explicit, "clean" if no song is explicit and at least one is "clean" else "". |
 | `discTitles` | Array of [`DiscTitle`](../disctitle) | No | **Yes**    | The list of all disc titles of the album. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 New fields are added:
 
 - `version`
@@ -157,4 +157,4 @@ New fields are added:
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 
 **Note**: Even if some added fields may looks duplicated, it's important to still return the legacy data for compatibility reasons.
-{{< /alert >}}
+{{% /alert %}}

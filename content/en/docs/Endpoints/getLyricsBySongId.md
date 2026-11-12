@@ -25,18 +25,18 @@ The lyrics can come from embedded tags (`SYLT`/`USLT`), LRC file/text file, or a
 | `id`       | **Yes** | **Yes** |         | The track ID.                                                                                                                                          |
 | `enhanced` | No      | **Yes** | `false` | When `true`, the response includes [`cueLine`](../../responses/cueline) arrays, cue `byteStart` / `byteEnd` offsets into `cueLine.value`, and non-main [`kind`](../../responses/structuredlyrics) tracks (translations, pronunciations). When `false` or omitted, only `kind="main"` entries are returned with no `cueLine` data. Added in [`songLyrics`](../../extensions/songlyrics) version 2. |
 
-{{< alert color="warning" title="Special notes about the lang field" >}}
+{{% alert color="warning" title="Special notes about the lang field" %}}
 Ideally, the server will return `lang` as an ISO 639 (2/3) code.
 However, tagged files and external lyrics can come with any value as a potential language code, so clients should take care when displaying `lang`.
 
 Furthermore, there is special behavior for the value `xxx`.
 While not an ISO code, it is commonly used by taggers and other parsing software.
 Clients should treat `xxx` as not having a specified language (equivalent to the `und` code).
-{{< /alert >}}
+{{% /alert %}}
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getLyricsBySongId.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
@@ -125,7 +125,7 @@ Does not exist.
 
 When `enhanced=true` is passed, the response includes `kind` to classify lyric tracks, optional exact `line.end` timing, [`cueLine`](../../responses/cueline) arrays with word/syllable-level timing, cue `byteStart` / `byteEnd` offsets into `cueLine.value`, optional per-entry [`agents`](../../responses/agent) metadata for agent attribution, and additional tracks such as translations and pronunciations.
 
-{{< alert color="primary" >}} `http://your-server/rest/getLyricsBySongId.view?id=456&enhanced=true&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getLyricsBySongId.view?id=456&enhanced=true&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -487,7 +487,7 @@ Does not exist.
 
 ### Implementation notes
 
-{{< alert color="warning" title="Backward compatibility" >}}
+{{% alert color="warning" title="Backward compatibility" %}}
 Without `enhanced=true`, the response is identical to version 1:
 
 - Only `kind="main"` entries are returned (the `kind` field itself is omitted)
@@ -496,9 +496,9 @@ Without `enhanced=true`, the response is identical to version 1:
 - `cueLine` is a **parallel** structure, not a replacement for `line`
 
 Servers that don't support TTML or word-level timing simply never include these fields. Clients that don't support karaoke display simply ignore them.
-{{< /alert >}}
+{{% /alert %}}
 
-{{< alert color="primary" title="cueLine behavior" >}}
+{{% alert color="primary" title="cueLine behavior" %}}
 
 - `cueLine` data is only meaningful when `synced=true`. Servers **must not** emit `cueLine` arrays for unsynced lyrics.
 - Within a `cueLine`, `cue.end` **must** be either present on **all** cues or **none** (all-or-nothing). When the source provides partial end times, servers **must** fill missing values. When no cues have end times, `end` is omitted from all cues. This is a documented contract rule; the OpenAPI schema does not encode the all-or-none shape structurally.
@@ -513,4 +513,4 @@ Servers that don't support TTML or word-level timing simply never include these 
 - Cue counts may differ across `kind` tracks for the same lyric passage. Clients should not assume 1:1 cue correspondence between tracks.
 - For right-to-left scripts (Arabic, Hebrew), cues are in logical reading order. Clients are responsible for bidi rendering.
 
-{{< /alert >}}
+{{% /alert %}}

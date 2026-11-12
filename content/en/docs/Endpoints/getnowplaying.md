@@ -19,7 +19,7 @@ Takes no extra parameters.
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getNowPlaying.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getNowPlaying.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
@@ -123,6 +123,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 | --- | --- | --- | --- | --- |
 | `nowPlaying` | [`nowPlaying`](../../responses/nowplaying) | **Yes** |     | The now playing content |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 When the server supports extension `playbackReport`, entries can include `state`, `positionMs`, and `playbackRate`.
-{{< /alert >}}
+{{% /alert %}}

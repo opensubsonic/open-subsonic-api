@@ -27,6 +27,6 @@ Does not exist.
 | `number` | `int` | No | **Yes**    | The movement number. |
 | `count` | `int` | No | **Yes**    | The total number of movements. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

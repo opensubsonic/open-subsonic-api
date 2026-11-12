@@ -26,6 +26,6 @@ Does not exist.
 | `name` | `String` | Yes | **Yes**    | The name of the extension. |
 | `versions` | Array of `int` | Yes | **Yes**       | The list of supported versions of the this extension. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new response type.
-{{< /alert >}}
+{{% /alert %}}

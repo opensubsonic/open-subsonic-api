@@ -24,7 +24,7 @@ Returns a transcoded media stream. **Note:** Clients should not try to reconstru
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getTranscodeStream.view?mediaIdId=123&mediaType=song&offset=0&parameters=...&u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getTranscodeStream.view?mediaIdId=123&mediaType=song&offset=0&parameters=...&u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

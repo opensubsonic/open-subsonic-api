@@ -25,6 +25,6 @@ Does not exist.
 | `name` | `string` | **Yes** | **Yes**    | The work name. |
 | `musicBrainzId` | `string` | No | **Yes**    | The MusicBrainz Work ID. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

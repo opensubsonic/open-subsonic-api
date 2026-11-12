@@ -24,7 +24,7 @@ None
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/tokenInfo.view?apiKey=1234&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/tokenInfo.view?apiKey=1234&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

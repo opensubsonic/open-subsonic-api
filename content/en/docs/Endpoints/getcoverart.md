@@ -20,15 +20,15 @@ Returns a cover art image.
 | `id`      | **Yes** |        | The coverArt ID. Returned by most entities likes [`Child`](../../responses/child) or [`AlbumID3`](../../responses/albumid3) | |
 | `size`    | No      |        | If specified, scale image to this size. | |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 In the original Subsonic, the `id` could refer to several entities: song, album or artist.
 
 For OpenSubsonic servers, `id` refers to coverArt ID only.
-{{< /alert >}}
+{{% /alert %}}
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getCoverArt.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getCoverArt.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

@@ -57,10 +57,10 @@ Does not exist.
 | `byteEnd`   | `integer` | **Yes** | **Yes** | Zero-based inclusive UTF-8 byte offset into the parent [`cueLine.value`](../cueline) where this cue ends                                                                                                                                                                                                                                                                                                                                                                              |
 | `value`     | `string`  | **Yes** | **Yes** | The text of this word or syllable                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-{{< alert color="primary" title="byteStart / byteEnd behavior" >}}
+{{% alert color="primary" title="byteStart / byteEnd behavior" %}}
 Every cue **must** include `byteStart` and `byteEnd`. The parent `cueLine` **must** include `value`, the offsets are calculated against the final UTF-8 encoding of that `cueLine.value` with no normalization step, and `byteStart` **must** be less than or equal to `byteEnd`. The OpenAPI schema enforces the presence of the fields, but not the cross-field ordering constraint structurally.
-{{< /alert >}}
+{{% /alert %}}
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type added in extension [`songLyrics`](../../extensions/songlyrics) version 2.
-{{< /alert >}}
+{{% /alert %}}

@@ -23,7 +23,7 @@ Saves the state of the play queue for this user. This includes the tracks in the
 | `current` | Yes (subsonic) / No (OpenSubsonic)*  |   |  | The ID of the current playing song. |
 | `position` | No  |  |   | The position in milliseconds within the currently playing song. |
 
-{{< alert color="warning" title="Errata/OpenSubsonic" >}}
+{{% alert color="warning" title="Errata/OpenSubsonic" %}}
 \* In the original Subsonic, despite the claims that `current` is optional, it was required and **must** be in the list of `id`.
 
 **Note**: For OpenSubsonic servers, `id` is optional. Send a call without any parameters to clear the currently saved queue.
@@ -31,11 +31,11 @@ Saves the state of the play queue for this user. This includes the tracks in the
 For OpenSubsonic servers only, `current` is required **unless** `id` is empty.
 
 If `position` is empty, servers should treat the position as 0.
-{{< /alert >}}
+{{% /alert %}}
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/savePlayQueue.view?id=123&current=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/savePlayQueue.view?id=123&current=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

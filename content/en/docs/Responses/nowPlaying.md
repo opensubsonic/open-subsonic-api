@@ -88,6 +88,6 @@ description: >
 | --- | --- | --- | --- | --- |
 | `entry` | Array of [`NowPlayingEntry`](../nowplayingentry) | **Yes** |   | A list of NowPlayingEntry |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 When the server supports extension `playbackReport`, each entry can include timeline fields (`state`, `positionMs`, `playbackRate`).
-{{< /alert >}}
+{{% /alert %}}

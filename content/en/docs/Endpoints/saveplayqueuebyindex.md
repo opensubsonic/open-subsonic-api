@@ -29,7 +29,7 @@ Uses an index instead, as this allows for uniquely identifying play queues which
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/savePlayQueueByIndex.view?id=123&currentIndex=1&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/savePlayQueueByIndex.view?id=123&currentIndex=1&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
@@ -53,7 +53,7 @@ Does not exist
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 **Note** `id` is optional. Send a call without any parameters to clear the currently saved queue.
 In this case, `currentIndex` **must not** be set.
 
@@ -61,4 +61,4 @@ If `currentIndex` is not between 0 and length of the queue - 1 (inclusive), the 
 `currentIndex` is required **unless** no `id` is provided.
 
 If `position` is empty, servers should treat the position as 0.
-{{< /alert >}}
+{{% /alert %}}

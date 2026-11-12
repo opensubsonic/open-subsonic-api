@@ -17,6 +17,6 @@ This extension requires that the server support passing API arguments via POST w
 
 See: [API reference](../../api-reference)
 
-{{< alert color="warning" >}}
+{{% alert color="warning" %}}
 `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by '&', with a '=' between the key and the value. Non-alphanumeric characters in both keys and values are [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding).
-{{< /alert >}}
+{{% /alert %}}

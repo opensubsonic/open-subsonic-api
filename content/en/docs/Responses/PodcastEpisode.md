@@ -61,9 +61,9 @@ description: >
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< alert color="primary" title="OpenSubsonic" >}}
+{{% alert color="primary" title="OpenSubsonic" %}}
 `PodcastEntry` extends [`Child`](../child) (See [`Child`](../child) documentation for the corresponding fields)
-{{< /alert >}}
+{{% /alert %}}
 
 | Field         | Type                              | Req.    | OpenS. | Details                                   |
 | ------------- | ----------------------------------| ------- | ------ | ----------------------------------------- |

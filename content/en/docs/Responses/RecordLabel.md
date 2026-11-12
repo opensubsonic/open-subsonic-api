@@ -21,6 +21,6 @@ Does not exist.
 | --- | --- | --- | --- | --- |
 | `name` | `string` | **Yes** |  **Yes**   | The record label name. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

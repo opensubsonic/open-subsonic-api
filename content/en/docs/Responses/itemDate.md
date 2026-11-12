@@ -29,6 +29,6 @@ Does not exist.
 | `month` | `integer` | No      |  **Yes**   | The month (1-12) |
 | `day`   | `integer` | No      |  **Yes**   | The day (1-31) |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}
