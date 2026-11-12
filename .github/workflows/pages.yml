@@ -46,7 +46,7 @@ jobs:
         env:
           # Non-production builds get <meta name="robots" content="noindex"> from Docsy.
           HUGO_ENVIRONMENT: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
-          HUGO_BASEURL: ${{ github.event_name == 'pull_request' && format('{0}/pr-preview/pr-{1}/', env.SITE_URL, github.event.number) || format('{0}/', env.SITE_URL) }}
+          HUGO_BASEURL: ${{ github.event_name == 'pull_request' && format('{0}/pr/{1}/', env.SITE_URL, github.event.number) || format('{0}/', env.SITE_URL) }}
         run: npm run build
 
       - uses: actions/upload-artifact@v4

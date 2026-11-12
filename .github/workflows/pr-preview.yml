@@ -1,7 +1,7 @@
 name: PR preview
 
 # Publishes PR builds from the "Site" workflow to
-#   <SITE_URL>/pr-preview/pr-<N>/
+#   <SITE_URL>/pr/<N>/
 # and removes them when the PR closes.
 #
 # Security: these jobs have a write token, so they never run code from the PR.
@@ -63,7 +63,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PR: ${{ steps.pr.outputs.number }}
-        run: .github/scripts/publish-gh-pages.sh "pr-preview/pr-${PR}" "$RUNNER_TEMP/site"
+        run: .github/scripts/publish-gh-pages.sh "pr/${PR}" "$RUNNER_TEMP/site"
 
       - name: Comment on the PR
         if: steps.pr.outputs.number
@@ -72,7 +72,7 @@ jobs:
           PR: ${{ steps.pr.outputs.number }}
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
-          .github/scripts/pr-comment.sh "$PR" "🔍 **Preview:** ${SITE_URL}/pr-preview/pr-${PR}/
+          .github/scripts/pr-comment.sh "$PR" "🔍 **Preview:** ${SITE_URL}/pr/${PR}/
 
           Built from ${HEAD_SHA}. It can take a minute to go live."
 
@@ -90,7 +90,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PR: ${{ github.event.number }}
-        run: .github/scripts/publish-gh-pages.sh "pr-preview/pr-${PR}"
+        run: .github/scripts/publish-gh-pages.sh "pr/${PR}"
 
       - name: Update the PR comment
         env:

@@ -2,10 +2,10 @@
 # Publish a built site into the gh-pages branch, which GitHub Pages serves.
 #
 # Usage: publish-gh-pages.sh <dest> [src]
-#   dest  "." for the main site, or a sub-folder such as "pr-preview/pr-12".
+#   dest  "." for the main site, or a sub-folder such as "pr/12".
 #   src   Folder with the built site. Omit it to delete <dest>.
 #
-# Publishing to "." replaces the main site and keeps "pr-preview/".
+# Publishing to "." replaces the main site and keeps the previews in "pr/".
 # The branch is always rewritten as a single commit, so old builds do not pile
 # up in the repo history. --force-with-lease plus a retry loop makes concurrent
 # publishers (main deploy, previews, cleanups) safe: a push only lands if
@@ -20,13 +20,19 @@ src=${2:-}
 branch=gh-pages
 remote=${PAGES_REMOTE:-"https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"}
 
-case "$dest" in
-  .) [ -n "$src" ] || { echo "The main site needs a src folder" >&2; exit 1; } ;;
-  pr-preview/pr-[0-9]*) ;;
-  *) echo "Unsupported dest: $dest" >&2; exit 1 ;;
-esac
+if [ "$dest" = "." ]; then
+  [ -n "$src" ] || { echo "The main site needs a src folder" >&2; exit 1; }
+elif ! [[ "$dest" =~ ^pr/[0-9]+$ ]]; then
+  echo "Unsupported dest: $dest" >&2
+  exit 1
+fi
 if [ -n "$src" ]; then
   src=$(cd "$src" && pwd)
+fi
+# "pr/" at the root is reserved for previews. Stop if the main site has one.
+if [ "$dest" = "." ] && [ -e "$src/pr" ]; then
+  echo "The site has its own top-level 'pr' path, which clashes with previews" >&2
+  exit 1
 fi
 
 publish() {
@@ -43,7 +49,7 @@ publish() {
   cd "$work"
 
   if [ "$dest" = "." ]; then
-    find . -mindepth 1 -maxdepth 1 ! -name .git ! -name pr-preview -exec rm -rf {} +
+    find . -mindepth 1 -maxdepth 1 ! -name .git ! -name pr -exec rm -rf {} +
     cp -R "$src"/. .
   else
     if [ -z "$src" ] && [ ! -e "$dest" ]; then
