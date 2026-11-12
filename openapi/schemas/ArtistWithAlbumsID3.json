@@ -19,7 +19,7 @@
             ],
             "externalDocs": {
                 "description": "ArtistWithAlbumsID3",
-                "url": "https://opensubsonic.netlify.app/docs/responses/artistwithalbumsid3/"
+                "url": "https://opensubsonic.github.io/docs/responses/artistwithalbumsid3/"
             }
         }
     ]

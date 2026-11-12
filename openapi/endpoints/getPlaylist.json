@@ -31,7 +31,7 @@
         },
         "externalDocs": {
             "description": "getPlaylist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylist/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getplaylist/"
         }
     },
     "post": {
@@ -80,7 +80,7 @@
         },
         "externalDocs": {
             "description": "getPlaylist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplaylist/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getplaylist/"
         }
     }
 }

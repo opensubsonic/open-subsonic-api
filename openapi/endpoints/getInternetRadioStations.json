@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getInternetRadioStations",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getinternetradiostations/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getinternetradiostations/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getInternetRadioStations",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getinternetradiostations/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getinternetradiostations/"
         }
     }
 }

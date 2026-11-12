@@ -20,6 +20,6 @@
     ],
     "externalDocs": {
         "description": "Movement",
-        "url": "https://opensubsonic.netlify.app/docs/responses/movement/"
+        "url": "https://opensubsonic.github.io/docs/responses/movement/"
     }
 }

@@ -53,6 +53,6 @@
     ],
     "externalDocs": {
         "description": "ArtistID3",
-        "url": "https://opensubsonic.netlify.app/docs/responses/artistid3/"
+        "url": "https://opensubsonic.github.io/docs/responses/artistid3/"
     }
 }

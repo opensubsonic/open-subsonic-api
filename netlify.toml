@@ -1,6 +1,9 @@
+# Redirect only; the site is on GitHub Pages
 [build]
-command = "npm run build"
-[build.environment]
-HUGO_VERSION = "0.133.1"
-GO_VERSION = "1.19.2"
-NODE_VERSION = "lts/*"
+publish = "static"
+
+[[redirects]]
+from = "/*"
+to = "https://opensubsonic.github.io/:splat"
+status = 301
+force = true

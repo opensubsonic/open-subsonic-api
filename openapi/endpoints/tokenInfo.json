@@ -28,7 +28,7 @@
         },
         "externalDocs": {
             "description": "tokenInfo",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/tokeninfo/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/tokeninfo/"
         }
     },
     "post": {
@@ -73,7 +73,7 @@
         },
         "externalDocs": {
             "description": "tokenInfo",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/tokeninfo/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/tokeninfo/"
         }
     }
 }

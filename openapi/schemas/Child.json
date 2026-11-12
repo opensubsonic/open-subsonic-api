@@ -261,6 +261,6 @@
     ],
     "externalDocs": {
         "description": "Child",
-        "url": "https://opensubsonic.netlify.app/docs/responses/child/"
+        "url": "https://opensubsonic.github.io/docs/responses/child/"
     }
 }

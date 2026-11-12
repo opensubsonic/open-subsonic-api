@@ -3,7 +3,7 @@
     "description": "A supported OpenSubsonic API extension.",
     "externalDocs": {
         "description": "OpenSubsonicExtension",
-        "url": "https://opensubsonic.netlify.app/docs/responses/opensubsonicextension/"
+        "url": "https://opensubsonic.github.io/docs/responses/opensubsonicextension/"
     },
     "properties": {
         "name": {

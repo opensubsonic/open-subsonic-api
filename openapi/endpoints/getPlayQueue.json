@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getPlayQueue",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplayqueue/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getplayqueue/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getPlayQueue",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplayqueue/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getplayqueue/"
         }
     }
 }

@@ -23,7 +23,7 @@
             ],
             "externalDocs": {
                 "description": "SubsonicResponse",
-                "url": "https://opensubsonic.netlify.app/docs/responses/subsonic-response/"
+                "url": "https://opensubsonic.github.io/docs/responses/subsonic-response/"
             }
         }
     ]

@@ -3,7 +3,7 @@
     "description": "jukeboxStatus.",
     "externalDocs": {
         "description": "JukeboxStatus",
-        "url": "https://opensubsonic.netlify.app/docs/responses/jukeboxstatus/"
+        "url": "https://opensubsonic.github.io/docs/responses/jukeboxstatus/"
     },
     "properties": {
         "currentIndex": {

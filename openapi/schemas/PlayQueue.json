@@ -3,7 +3,7 @@
     "description": "NowPlayingEntry.",
     "externalDocs": {
         "description": "PlayQueue",
-        "url": "https://opensubsonic.netlify.app/docs/responses/playqueue/"
+        "url": "https://opensubsonic.github.io/docs/responses/playqueue/"
     },
     "properties": {
         "current": {

@@ -3,7 +3,7 @@
   "description": "A word or syllable cue within a cueLine",
   "externalDocs": {
     "description": "Cue",
-    "url": "https://opensubsonic.netlify.app/docs/responses/cue/"
+    "url": "https://opensubsonic.github.io/docs/responses/cue/"
   },
   "properties": {
     "start": {

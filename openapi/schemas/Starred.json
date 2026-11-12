@@ -3,7 +3,7 @@
     "description": "starred.",
     "externalDocs": {
         "description": "Starred",
-        "url": "https://opensubsonic.netlify.app/docs/responses/starred/"
+        "url": "https://opensubsonic.github.io/docs/responses/starred/"
     },
     "properties": {
         "artist": {

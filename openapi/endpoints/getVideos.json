@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getVideos",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideos/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getvideos/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getVideos",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideos/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getvideos/"
         }
     }
 }

@@ -186,7 +186,7 @@
         },
         "externalDocs": {
             "description": "createUser",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/createuser/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/createuser/"
         }
     },
     "post": {
@@ -310,7 +310,7 @@
         },
         "externalDocs": {
             "description": "createUser",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/createuser/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/createuser/"
         }
     }
 }

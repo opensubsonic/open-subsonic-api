@@ -24,7 +24,7 @@
         },
         "externalDocs": {
             "description": "deleteShare",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/deleteshare/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/deleteshare/"
         }
     },
     "post": {
@@ -66,7 +66,7 @@
         },
         "externalDocs": {
             "description": "deleteShare",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/deleteshare/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/deleteshare/"
         }
     }
 }
