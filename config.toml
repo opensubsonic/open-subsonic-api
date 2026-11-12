@@ -152,6 +152,7 @@ sidebar_menu_compact = true
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 
+navbar_theme = "dark"
 sidebar_menu_foldable = true
 sidebar_cache_limit = 2000
 sidebar_menu_truncate = 500

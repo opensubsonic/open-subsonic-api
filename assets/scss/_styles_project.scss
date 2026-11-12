@@ -1,3 +1,12 @@
+// Keep the Docsy 0.11 alert titles: the title uses the alert's theme color.
+.alert {
+    @each $color, $value in $theme-colors {
+        &-#{$color} .alert-heading {
+            color: $value;
+        }
+    }
+}
+
 .redoc-container {
     // TODO: Support dark them in the future
     background: white;
