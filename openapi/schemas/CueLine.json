@@ -3,7 +3,7 @@
   "description": "Word/syllable-level timing data for a lyrics line or agent layer",
   "externalDocs": {
     "description": "CueLine",
-    "url": "https://opensubsonic.netlify.app/docs/responses/cueline/"
+    "url": "https://opensubsonic.github.io/docs/responses/cueline/"
   },
   "properties": {
     "index": {

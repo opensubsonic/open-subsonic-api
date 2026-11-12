@@ -3,7 +3,7 @@
     "description": "NowPlayingEntry with queue index.",
     "externalDocs": {
         "description": "PlayQueueByIndex",
-        "url": "https://opensubsonic.netlify.app/docs/responses/playgueuebyindex/"
+        "url": "https://opensubsonic.github.io/docs/responses/playgueuebyindex/"
     },
     "properties": {
         "currentIndex": {

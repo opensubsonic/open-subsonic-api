@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getSongsByGenre",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsongsbygenre/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getsongsbygenre/"
         }
     },
     "post": {
@@ -129,7 +129,7 @@
         },
         "externalDocs": {
             "description": "getSongsByGenre",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsongsbygenre/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getsongsbygenre/"
         }
     }
 }

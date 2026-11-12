@@ -16,7 +16,7 @@
             },
             "externalDocs": {
                 "description": "PlaylistWithSongs",
-                "url": "https://opensubsonic.netlify.app/docs/responses/playlistwithsongs/"
+                "url": "https://opensubsonic.github.io/docs/responses/playlistwithsongs/"
             }
         }
     ]

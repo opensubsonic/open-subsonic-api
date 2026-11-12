@@ -44,7 +44,7 @@
         },
         "externalDocs": {
             "description": "savePlayQueue",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/saveplayqueue/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/saveplayqueue/"
         }
     },
     "post": {

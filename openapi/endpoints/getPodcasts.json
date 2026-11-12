@@ -41,7 +41,7 @@
         },
         "externalDocs": {
             "description": "getPodcasts",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpodcasts/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getpodcasts/"
         }
     },
     "post": {
@@ -92,7 +92,7 @@
         },
         "externalDocs": {
             "description": "getPodcasts",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getpodcasts/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getpodcasts/"
         }
     }
 }

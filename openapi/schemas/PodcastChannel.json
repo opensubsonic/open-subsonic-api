@@ -3,7 +3,7 @@
     "description": "A Podcast channel",
     "externalDocs": {
         "description": "PodcastChannel",
-        "url": "https://opensubsonic.netlify.app/docs/responses/podcastchannel/"
+        "url": "https://opensubsonic.github.io/docs/responses/podcastchannel/"
     },
     "properties": {
         "id": {

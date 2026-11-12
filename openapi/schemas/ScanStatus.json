@@ -3,7 +3,7 @@
     "description": "Scan status information.",
     "externalDocs": {
         "description": "ScanStatus",
-        "url": "https://opensubsonic.netlify.app/docs/responses/scanstatus/"
+        "url": "https://opensubsonic.github.io/docs/responses/scanstatus/"
     },
     "properties": {
         "scanning": {

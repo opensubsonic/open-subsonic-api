@@ -45,7 +45,7 @@
         },
         "externalDocs": {
             "description": "getLyricsBySongId",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyricsbysongid/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getlyricsbysongid/"
         }
     },
     "post": {
@@ -101,7 +101,7 @@
         },
         "externalDocs": {
             "description": "getLyricsBySongId",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyricsbysongid/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getlyricsbysongid/"
         }
     }
 }

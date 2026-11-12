@@ -86,7 +86,7 @@
         },
         "externalDocs": {
             "description": "stream",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/stream/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/stream/"
         }
     },
     "post": {

@@ -3,7 +3,7 @@
     "description": "Bookmarks list.",
     "externalDocs": {
         "description": "Bookmarks",
-        "url": "https://opensubsonic.netlify.app/docs/responses/bookmarks/"
+        "url": "https://opensubsonic.github.io/docs/responses/bookmarks/"
     },
     "properties": {
         "bookmark": {

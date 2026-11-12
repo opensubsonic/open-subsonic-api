@@ -29,6 +29,6 @@
     },
     "externalDocs": {
         "description": "AlbumInfo",
-        "url": "https://opensubsonic.netlify.app/docs/responses/albuminfo/"
+        "url": "https://opensubsonic.github.io/docs/responses/albuminfo/"
     }
 }

@@ -3,7 +3,7 @@
     "description": "Structured lyrics",
     "externalDocs": {
         "description": "StructuredLyrics",
-        "url": "https://opensubsonic.netlify.app/docs/responses/structuredlyrics/"
+        "url": "https://opensubsonic.github.io/docs/responses/structuredlyrics/"
     },
     "properties": {
         "lang": {

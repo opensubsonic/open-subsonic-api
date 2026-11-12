@@ -59,7 +59,7 @@
         },
         "externalDocs": {
             "description": "hls.m3u8",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/hls/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/hls/"
         }
     },
     "post": {
@@ -126,7 +126,7 @@
         },
         "externalDocs": {
             "description": "hls.m3u8",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/hls/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/hls/"
         }
     }
 }

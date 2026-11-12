@@ -24,7 +24,7 @@ See:
 
 OpenSubsonic is built with servers and clients trying to improve the global media center ecosystem by providing a common expandable API that can fit most of the needs of modern music apps.
 
-Any server or client can join the organization and make proposals for [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions). The only condition is that if (as a client) you request an API extension that is accepted, you engage yourself in implementing it in your client in a timely manner.
+Any server or client can join the organization and make proposals for [OpenSubsonic](https://github.com/opensubsonic/opensubsonic.github.io/discussions). The only condition is that if (as a client) you request an API extension that is accepted, you engage yourself in implementing it in your client in a timely manner.
 
 ### Servers
 
@@ -82,4 +82,4 @@ By extending the existing Subsonic API, the OpenSubsonic API hopes to create a m
 
 ## Join us
 
-Feel free to join the [OpenSubsonic](https://github.com/opensubsonic/open-subsonic-api/discussions) forum for discussions, suggestions, and questions.
+Feel free to join the [OpenSubsonic](https://github.com/opensubsonic/opensubsonic.github.io/discussions) forum for discussions, suggestions, and questions.

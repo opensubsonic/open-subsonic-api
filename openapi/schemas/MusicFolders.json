@@ -3,7 +3,7 @@
     "description": "MusicFolders.",
     "externalDocs": {
         "description": "MusicFolders",
-        "url": "https://opensubsonic.netlify.app/docs/responses/musicfolders/"
+        "url": "https://opensubsonic.github.io/docs/responses/musicfolders/"
     },
     "properties": {
         "musicFolder": {

@@ -50,7 +50,7 @@
         },
         "externalDocs": {
             "description": "getCaptions",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcaptions/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getcaptions/"
         }
     },
     "post": {
@@ -113,7 +113,7 @@
         },
         "externalDocs": {
             "description": "getCaptions",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcaptions/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getcaptions/"
         }
     }
 }
