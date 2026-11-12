@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getChatMessages",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getchatmessages/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getchatmessages/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getChatMessages",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getchatmessages/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getchatmessages/"
         }
     }
 }

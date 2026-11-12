@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getLicense",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlicense/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getlicense/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getLicense",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getlicense/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getlicense/"
         }
     }
 }

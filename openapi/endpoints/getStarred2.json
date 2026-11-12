@@ -31,7 +31,7 @@
         },
         "externalDocs": {
             "description": "getStarred2",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getstarred2/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getstarred2/"
         }
     },
     "post": {
@@ -71,7 +71,7 @@
         },
         "externalDocs": {
             "description": "getStarred2",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getstarred2/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getstarred2/"
         }
     }
 }

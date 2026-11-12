@@ -42,7 +42,7 @@
         },
         "externalDocs": {
             "description": "getSimilarSongs2",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsimilarsongs2/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getsimilarsongs2/"
         }
     },
     "post": {
@@ -97,7 +97,7 @@
         },
         "externalDocs": {
             "description": "getSimilarSongs2",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsimilarsongs2/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getsimilarsongs2/"
         }
     }
 }

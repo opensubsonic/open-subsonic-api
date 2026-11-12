@@ -21,6 +21,6 @@
     },
     "externalDocs": {
         "description": "ItemDate",
-        "url": "https://opensubsonic.netlify.app/docs/responses/itemdate/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/itemdate/"
     }
 }

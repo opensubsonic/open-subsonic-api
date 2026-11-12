@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetNowPlayingResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getnowplaying/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getnowplaying/"
     }
 }

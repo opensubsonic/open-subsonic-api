@@ -43,7 +43,7 @@
         },
         "externalDocs": {
             "description": "updateShare",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateshare/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/updateshare/"
         }
     },
     "post": {
@@ -94,7 +94,7 @@
         },
         "externalDocs": {
             "description": "updateShare",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateshare/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/updateshare/"
         }
     }
 }

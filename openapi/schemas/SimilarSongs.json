@@ -3,7 +3,7 @@
     "description": "SimilarSongs list.",
     "externalDocs": {
         "description": "SimilarSongs",
-        "url": "https://opensubsonic.netlify.app/docs/responses/similarsongs/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/similarsongs/"
     },
     "properties": {
         "song": {

@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetLicenseResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getlyrics/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getlyrics/"
     }
 }

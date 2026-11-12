@@ -36,6 +36,6 @@
     },
     "externalDocs": {
         "description": "ArtistInfo2",
-        "url": "https://opensubsonic.netlify.app/docs/responses/artistinfo2/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/artistinfo2/"
     }
 }

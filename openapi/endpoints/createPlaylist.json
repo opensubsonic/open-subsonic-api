@@ -53,7 +53,7 @@
         },
         "externalDocs": {
             "description": "createPlaylist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/createplaylist/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/createplaylist/"
         }
     },
     "post": {
@@ -110,7 +110,7 @@
         },
         "externalDocs": {
             "description": "createPlaylist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/createplaylist/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/createplaylist/"
         }
     }
 }

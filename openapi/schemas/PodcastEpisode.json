@@ -8,7 +8,7 @@
             "description": "A podcast episode.",
             "externalDocs": {
                 "description": "PodcastEpisode",
-                "url": "https://opensubsonic.netlify.app/docs/responses/podcastepisode/"
+                "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/podcastepisode/"
             },
             "properties": {
                 "streamId": {

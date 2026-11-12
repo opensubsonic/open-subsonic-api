@@ -51,7 +51,7 @@
         },
         "externalDocs": {
             "description": "updateInternetRadioStation",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateinternetradiostation/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/updateinternetradiostation/"
         }
     },
     "post": {
@@ -107,7 +107,7 @@
         },
         "externalDocs": {
             "description": "updateInternetRadioStation",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateinternetradiostation/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/updateinternetradiostation/"
         }
     }
 }

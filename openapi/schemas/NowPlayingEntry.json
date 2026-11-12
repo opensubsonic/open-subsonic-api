@@ -8,7 +8,7 @@
             "description": "NowPlayingEntry.",
             "externalDocs": {
                 "description": "NowPlayingEntry",
-                "url": "https://opensubsonic.netlify.app/docs/responses/nowplayingentry/"
+                "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/nowplayingentry/"
             },
             "properties": {
                 "username": {

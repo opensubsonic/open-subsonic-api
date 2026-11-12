@@ -3,7 +3,7 @@
     "description": "An internetRadioStation.",
     "externalDocs": {
         "description": "InternetRadioStation",
-        "url": "https://opensubsonic.netlify.app/docs/responses/internetradiostation/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/internetradiostation/"
     },
     "properties": {
         "id": {

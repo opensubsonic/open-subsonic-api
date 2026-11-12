@@ -3,7 +3,7 @@
     "description": "A chatMessage.",
     "externalDocs": {
         "description": "ChatMessage",
-        "url": "https://opensubsonic.netlify.app/docs/responses/chatmessage/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/chatmessage/"
     },
     "properties": {
         "username": {

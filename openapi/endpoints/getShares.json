@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getShares",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getshares/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getshares/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getShares",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getshares/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getshares/"
         }
     }
 }

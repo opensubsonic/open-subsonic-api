@@ -3,7 +3,7 @@
     "description": "nowPlaying.",
     "externalDocs": {
         "description": "NowPlaying",
-        "url": "https://opensubsonic.netlify.app/docs/responses/nowplaying/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/nowplaying/"
     },
     "properties": {
         "entry": {

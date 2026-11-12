@@ -44,7 +44,7 @@
         },
         "externalDocs": {
             "description": "scrobble",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/scrobble/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/scrobble/"
         }
     },
     "post": {
@@ -96,7 +96,7 @@
         },
         "externalDocs": {
             "description": "scrobble",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/scrobble/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/scrobble/"
         }
     }
 }

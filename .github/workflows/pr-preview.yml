@@ -1,0 +1,99 @@
+name: PR preview
+
+# Publishes PR builds from the "Site" workflow to
+#   <SITE_URL>/pr-preview/pr-<N>/
+# and removes them when the PR closes.
+#
+# Security: these jobs have a write token, so they never run code from the PR.
+# They only check out the default branch (for the scripts) and copy the static
+# files the PR build produced. The PR number comes from the GitHub API, not
+# from the artifact.
+
+on:
+  workflow_run:
+    workflows: [Site]
+    types: [completed]
+  pull_request_target:
+    types: [closed]
+
+permissions: {}
+
+env:
+  SITE_URL: https://opensubsonic.github.io/open-subsonic-api
+
+jobs:
+  deploy:
+    if: >-
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Find the open PR for this build
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          # Only match the PR's current head. Old or closed builds are skipped.
+          number=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls?state=open&per_page=100" \
+            --jq ".[] | select(.head.sha == \"${HEAD_SHA}\") | .number" | head -1)
+          echo "number=${number}" >> "$GITHUB_OUTPUT"
+          if [ -z "$number" ]; then
+            echo "No open PR has ${HEAD_SHA} as its head. Skipping."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.pr.outputs.number
+
+      - uses: actions/download-artifact@v4
+        if: steps.pr.outputs.number
+        with:
+          name: site
+          path: ${{ runner.temp }}/site
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Publish preview
+        if: steps.pr.outputs.number
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR: ${{ steps.pr.outputs.number }}
+        run: .github/scripts/publish-gh-pages.sh "pr-preview/pr-${PR}" "$RUNNER_TEMP/site"
+
+      - name: Comment on the PR
+        if: steps.pr.outputs.number
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ steps.pr.outputs.number }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          .github/scripts/pr-comment.sh "$PR" "🔍 **Preview:** ${SITE_URL}/pr-preview/pr-${PR}/
+
+          Built from ${HEAD_SHA}. It can take a minute to go live."
+
+  cleanup:
+    if: github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      # pull_request_target checks out the base branch, not the PR code.
+      - uses: actions/checkout@v4
+
+      - name: Remove preview
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.number }}
+        run: .github/scripts/publish-gh-pages.sh "pr-preview/pr-${PR}"
+
+      - name: Update the PR comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.number }}
+        run: .github/scripts/pr-comment.sh "$PR" "Preview removed because the PR is closed."

@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getAvatar",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getavatar/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getavatar/"
         }
     },
     "post": {
@@ -65,7 +65,7 @@
         },
         "externalDocs": {
             "description": "getAvatar",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getavatar/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getavatar/"
         }
     }
 }

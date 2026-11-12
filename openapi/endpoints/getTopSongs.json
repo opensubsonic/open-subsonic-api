@@ -51,7 +51,7 @@
         },
         "externalDocs": {
             "description": "getTopSongs",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/gettopsongs/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/gettopsongs/"
         }
     },
     "post": {
@@ -107,7 +107,7 @@
         },
         "externalDocs": {
             "description": "getTopSongs",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/gettopsongs/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/gettopsongs/"
         }
     }
 }

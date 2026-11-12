@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetSongResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getsong/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getsong/"
     }
 }

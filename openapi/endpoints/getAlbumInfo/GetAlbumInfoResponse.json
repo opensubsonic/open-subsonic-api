@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetAlbumInfoResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getalbuminfo/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getalbuminfo/"
     }
 }

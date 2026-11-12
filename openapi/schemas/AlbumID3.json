@@ -153,6 +153,6 @@
     ],
     "externalDocs": {
         "description": "AlbumID3",
-        "url": "https://opensubsonic.netlify.app/docs/responses/albumid3/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/albumid3/"
     }
 }

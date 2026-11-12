@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetMusicFoldersResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getmusicfolders/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getmusicfolders/"
     }
 }

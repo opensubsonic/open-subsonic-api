@@ -3,7 +3,7 @@
     "description": "An indexed artist list.",
     "externalDocs": {
         "description": "Index",
-        "url": "https://opensubsonic.netlify.app/docs/responses/index_/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/index_/"
     },
     "properties": {
         "name": {

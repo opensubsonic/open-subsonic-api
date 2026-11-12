@@ -21,6 +21,6 @@
     ],
     "externalDocs": {
         "description": "DiscTitle",
-        "url": "https://opensubsonic.netlify.app/docs/responses/disctitle/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/disctitle/"
     }
 }

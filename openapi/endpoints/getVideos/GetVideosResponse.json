@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetVideosResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideos/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getvideos/"
     }
 }

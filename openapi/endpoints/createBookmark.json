@@ -42,7 +42,7 @@
         },
         "externalDocs": {
             "description": "createBookmark",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/createbookmark/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/createbookmark/"
         }
     },
     "post": {
@@ -93,7 +93,7 @@
         },
         "externalDocs": {
             "description": "createBookmark",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/createbookmark/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/createbookmark/"
         }
     }
 }

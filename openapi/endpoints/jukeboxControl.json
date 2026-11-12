@@ -77,7 +77,7 @@
         },
         "externalDocs": {
             "description": "jukeboxControl",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/jukeboxcontrol/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/jukeboxcontrol/"
         }
     },
     "post": {
@@ -246,7 +246,7 @@
         },
         "externalDocs": {
             "description": "jukeboxControl",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/jukeboxcontrol/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/jukeboxcontrol/"
         }
     }
 }

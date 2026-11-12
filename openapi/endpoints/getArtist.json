@@ -31,7 +31,7 @@
         },
         "externalDocs": {
             "description": "getArtist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartist/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getartist/"
         }
     },
     "post": {
@@ -80,7 +80,7 @@
         },
         "externalDocs": {
             "description": "getArtist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getartist/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getartist/"
         }
     }
 }

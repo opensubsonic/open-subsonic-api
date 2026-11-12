@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetIndexesResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getindexes/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getindexes/"
     }
 }

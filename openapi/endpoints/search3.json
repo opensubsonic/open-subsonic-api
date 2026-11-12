@@ -107,7 +107,7 @@
         },
         "externalDocs": {
             "description": "search3",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/search3/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/search3/"
         }
     },
     "post": {
@@ -197,7 +197,7 @@
         },
         "externalDocs": {
             "description": "search3",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/search3/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/search3/"
         }
     }
 }

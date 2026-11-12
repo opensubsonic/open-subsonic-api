@@ -45,7 +45,7 @@
         },
         "externalDocs": {
             "description": "savePlayQueueByIndex",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/saveplayqueuebyindex/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/saveplayqueuebyindex/"
         }
     },
     "post": {

@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getUsers",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getusers/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getusers/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getUsers",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getusers/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getusers/"
         }
     }
 }

@@ -6,5 +6,5 @@ description: Reference for the OpenSubsonic API
 ---
 
 <div class="swagger-container">
-{{< swaggerui src="/docs/openapi/openapi.json" >}}
+{{< swaggerui src="docs/openapi/openapi.json" >}}
 <div>

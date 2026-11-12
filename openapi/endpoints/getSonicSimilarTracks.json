@@ -43,7 +43,7 @@
         },
         "externalDocs": {
             "description": "getSonicSimilarTracks",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsonicsimilartracks/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getsonicsimilartracks/"
         }
     },
     "post": {
@@ -98,7 +98,7 @@
         },
         "externalDocs": {
             "description": "getSonicSimilarTracks",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getsonicsimilartracks/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getsonicsimilartracks/"
         }
     }
 }

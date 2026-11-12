@@ -31,7 +31,7 @@
         },
         "externalDocs": {
             "description": "getAlbumInfo2",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getalbuminfo2/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getalbuminfo2/"
         }
     },
     "post": {
@@ -80,7 +80,7 @@
         },
         "externalDocs": {
             "description": "getAlbumInfo2",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getalbuminfo2/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getalbuminfo2/"
         }
     }
 }

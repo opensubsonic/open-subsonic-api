@@ -54,6 +54,6 @@
     ],
     "externalDocs": {
         "description": "Share",
-        "url": "https://opensubsonic.netlify.app/docs/responses/share/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/share/"
     }
 }

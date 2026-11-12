@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "startScan",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/startscan/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/startscan/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "startScan",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/startscan/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/startscan/"
         }
     }
 }

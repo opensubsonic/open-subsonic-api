@@ -84,7 +84,7 @@
         },
         "externalDocs": {
             "description": "reportPlayback",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/reportplayback/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/reportplayback/"
         }
     },
     "post": {
@@ -167,7 +167,7 @@
         },
         "externalDocs": {
             "description": "reportPlayback",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/reportplayback/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/reportplayback/"
         }
     }
 }

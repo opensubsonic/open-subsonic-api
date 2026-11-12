@@ -31,7 +31,7 @@
         },
         "externalDocs": {
             "description": "getVideoInfo",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideoinfo/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getvideoinfo/"
         }
     },
     "post": {
@@ -80,7 +80,7 @@
         },
         "externalDocs": {
             "description": "getVideoInfo",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getvideoinfo/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getvideoinfo/"
         }
     }
 }

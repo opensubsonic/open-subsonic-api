@@ -79,7 +79,7 @@
         },
         "externalDocs": {
             "description": "updatePlaylist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateplaylist/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/updateplaylist/"
         }
     },
     "post": {
@@ -147,7 +147,7 @@
         },
         "externalDocs": {
             "description": "updatePlaylist",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateplaylist/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/updateplaylist/"
         }
     }
 }

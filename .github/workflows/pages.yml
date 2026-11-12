@@ -1,0 +1,75 @@
+name: Site
+
+# Builds the site. On main, publishes it to the gh-pages branch.
+# On PRs, only builds it with a preview baseURL and uploads it as an artifact.
+# The PR preview is published by pr-preview.yml, which runs with a write token
+# (fork PRs never get one here).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  SITE_URL: https://opensubsonic.github.io/open-subsonic-api
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: site-build-${{ github.ref }}
+      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Hugo enableGitInfo needs the full history for "last modified" dates.
+          fetch-depth: 0
+
+      # Hugo modules (Docsy) need Go.
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        env:
+          # Non-production builds get <meta name="robots" content="noindex"> from Docsy.
+          HUGO_ENVIRONMENT: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
+          HUGO_BASEURL: ${{ github.event_name == 'pull_request' && format('{0}/pr-preview/pr-{1}/', env.SITE_URL, github.event.number) || format('{0}/', env.SITE_URL) }}
+        run: npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: public
+          retention-days: 7
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: ${{ runner.temp }}/site
+
+      - name: Publish to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: .github/scripts/publish-gh-pages.sh . "$RUNNER_TEMP/site"

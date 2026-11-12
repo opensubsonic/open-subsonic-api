@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://opensubsonic.github.io/open-subsonic-api/"
 title = "OpenSubsonic"
 
 # Language settings
@@ -76,6 +76,10 @@ weight = 1
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    # Resolve root-relative links (e.g. "/categories/system/") to the page's
+    # permalink, so they include the sub-folder from baseURL.
+    [markup.goldmark.renderHooks.link]
+      enableDefault = true
   [markup.highlight]
     # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
     style = "native"

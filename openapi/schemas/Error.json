@@ -38,6 +38,6 @@
     },
     "externalDocs": {
         "description": "Error",
-        "url": "https://opensubsonic.netlify.app/docs/responses/error/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/error/"
     }
 }

@@ -35,7 +35,7 @@
         },
         "externalDocs": {
             "description": "setRating",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/setrating/"
+            "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/setrating/"
         }
     },
     "post": {

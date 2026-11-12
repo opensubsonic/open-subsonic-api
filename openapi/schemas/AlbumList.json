@@ -12,6 +12,6 @@
     },
     "externalDocs": {
         "description": "AlbumList",
-        "url": "https://opensubsonic.netlify.app/docs/responses/albumlist/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/albumlist/"
     }
 }

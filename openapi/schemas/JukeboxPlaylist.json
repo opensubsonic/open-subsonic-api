@@ -16,7 +16,7 @@
             },
             "externalDocs": {
                 "description": "JukeboxPlaylist",
-                "url": "https://opensubsonic.netlify.app/docs/responses/jukeboxplaylist/"
+                "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/jukeboxplaylist/"
             }
         }
     ]

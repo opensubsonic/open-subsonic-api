@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetPodcastsResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getpodcasts/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/endpoints/getpodcasts/"
     }
 }

@@ -3,7 +3,7 @@
     "description": "A list of indexed Artists.",
     "externalDocs": {
         "description": "ArtistsID3",
-        "url": "https://opensubsonic.netlify.app/docs/responses/artistsid3/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/artistsid3/"
     },
     "properties": {
         "ignoredArticles": {

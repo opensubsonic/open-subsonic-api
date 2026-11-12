@@ -3,7 +3,7 @@
     "description": "Directory.",
     "externalDocs": {
         "description": "Directory",
-        "url": "https://opensubsonic.netlify.app/docs/responses/directory/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/directory/"
     },
     "properties": {
         "id": {

@@ -3,7 +3,7 @@
     "description": "Chat messages list.",
     "externalDocs": {
         "description": "ChatMessages",
-        "url": "https://opensubsonic.netlify.app/docs/responses/chatmessages/"
+        "url": "https://opensubsonic.github.io/open-subsonic-api/docs/responses/chatmessages/"
     },
     "properties": {
         "chatMessage": {
