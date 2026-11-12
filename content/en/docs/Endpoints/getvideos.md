@@ -101,7 +101,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
       "version" : "1.16.1",
       "videos" : {
          "video" : [ {
-            "id" : "83",
+            "id" : "81",
             "isDir" : false,
             "title" : "SPACE - Magic Fly (1977)",
             "size" : 14950742,
@@ -115,18 +115,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
          }, {
             "id" : "82",
             "isDir" : false,
-            "title" : "SPACE_Magic_Fly_1977",
-            "size" : 20084777,
-            "contentType" : "video/mp4",
-            "suffix" : "mp4",
-            "path" : "SPACE_Magic_Fly_1977.mp4",
-            "isVideo" : true,
-            "playCount" : 1,
-            "created" : "2021-02-23T04:21:29.040Z",
-            "type" : "video"
-         }, {
-            "id" : "81",
-            "isDir" : false,
             "title" : "Lisa Simpson playing a Beer Jug as her new instrument",
             "size" : 16967352,
             "contentType" : "video/mp4",
@@ -135,6 +123,18 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
             "isVideo" : true,
             "playCount" : 0,
             "created" : "2021-02-23T04:25:12.040Z",
+            "type" : "video"
+         }, {
+            "id" : "83",
+            "isDir" : false,
+            "title" : "SPACE_Magic_Fly_1977",
+            "size" : 20084777,
+            "contentType" : "video/mp4",
+            "suffix" : "mp4",
+            "path" : "SPACE_Magic_Fly_1977.mp4",
+            "isVideo" : true,
+            "playCount" : 1,
+            "created" : "2021-02-23T04:21:29.040Z",
             "type" : "video"
          } ]
       }
