@@ -35,6 +35,6 @@ Does not exist.
 
 **Note**: If the data is not present the field must be omitted in the answer. (But the replayGain field on [`Child`](../child) must always be present)
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

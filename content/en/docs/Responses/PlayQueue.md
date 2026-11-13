@@ -87,10 +87,10 @@ description: >
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< alert color="primary" title="OpenSubsonic" >}}
+{{% alert color="primary" title="OpenSubsonic" %}}
 Errata: In the original spec, `current` is required to be an `int`.
 However, as `child` ids are strings, this is updated to note that the id should be a string to be consistent.
-{{< /alert >}}
+{{% /alert %}}
 
 | Field       | Type                         | Req.    | OpenS. | Details                                             |
 | ----------- | ---------------------------- | ------- | ------ | --------------------------------------------------- |
@@ -101,8 +101,8 @@ However, as `child` ids are strings, this is updated to note that the id should 
 | `changedBy` | `string`                     | **Yes** |        | Name of client app                                  |
 | `entry`     | Array of [`Child`](../child) | No      |        | The list of songs in the queue                      |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 \* If `entry` exists and is non-empty, OpenSubsonic servers **must** ensure that `current` exists and is a valid id in the list of songs.
 
 If `position` is omitted, clients should treat the position as 0.
-{{< /alert >}}
+{{% /alert %}}

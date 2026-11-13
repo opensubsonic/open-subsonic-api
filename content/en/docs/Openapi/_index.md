@@ -7,9 +7,9 @@ description: >
 
 Can be found [here](openapi.json) Only relevant to OpenSubsonic servers.
 
-{{< alert color="warning" title="WIP" >}}
+{{% alert color="warning" title="WIP" %}}
 This work is still ongoing, there are some inconsistencies between the docs and the schema. Users should still check the actual docs and servers results until work on it is completely finished.
-{{< /alert >}}
+{{% /alert %}}
 
 ## List of known differences compared to official documentation
 

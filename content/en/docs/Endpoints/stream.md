@@ -29,15 +29,15 @@ Streams a given media file.
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/stream.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/stream.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
 Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with "text/xml").
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 OpenSubsonic servers **must not** count access to this endpoint as a play and increase playcount. Clients can use the [`Scrobble`](../scrobble) endpoint to indicate that a media is played ensuring proper data in all cases.
 
 If the server support the [`Transcode Offset`](../../extensions/transcodeoffset/) extension, then it must accept the `timeOffset` parameter for music too.
 
-{{< /alert >}}
+{{% /alert %}}

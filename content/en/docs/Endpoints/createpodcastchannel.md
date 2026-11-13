@@ -19,7 +19,7 @@ Adds a new Podcast channel. Note: The user must be authorized for Podcast admini
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/createPodcastChannel.view?url=url&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/createPodcastChannel.view?url=url&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

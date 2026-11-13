@@ -76,9 +76,9 @@ description: >
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< alert color="primary" title="OpenSubsonic" >}}
+{{% alert color="primary" title="OpenSubsonic" %}}
 `NowPlayingEntry` extends [`Child`](../child) (See [`Child`](../child) documentation for the corresponding fields)
-{{< /alert >}}
+{{% /alert %}}
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
@@ -90,10 +90,10 @@ description: >
 | `positionMs` | `integer` | No | **Yes** | Current playback position in milliseconds (Calculated by the server from the last playbackReport call received) |
 | `playbackRate` | `number` | No | **Yes** | Playback speed multiplier |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 When the server supports extension `playbackReport`, these fields can be returned:
 
 - `state`
 - `positionMs`
 - `playbackRate`
-{{< /alert >}}
+{{% /alert %}}

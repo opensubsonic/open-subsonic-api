@@ -114,6 +114,6 @@ Does not exist.
 | `agentId` | `string`                 | No      | **Yes** | Opaque identifier referencing an [`agent`](../agent) in the same [`structuredLyrics`](../structuredlyrics) entry. If the parent `structuredLyrics` entry includes `agents`, every cueLine in that entry **must** include `agentId`, and the value **must** match exactly one `agents[].id` in that entry. If the parent entry does not include `agents`, cueLines **must not** include `agentId`. When multiple cueLines share the same `index`, the cueLine whose referenced agent has `role: "main"` **must** come first |
 | `cue`     | Array of [`cue`](../cue) | **Yes** | **Yes** | Ordered list of word/syllable cues. Every cue **must** include `byteStart` / `byteEnd` offsets into `value`                                                                                                                                                                                                                                                                                                                       |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type added in extension [`songLyrics`](../../extensions/songlyrics) version 2.
-{{< /alert >}}
+{{% /alert %}}

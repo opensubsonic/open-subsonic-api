@@ -228,7 +228,7 @@ description: >
 | `movements` | Array of [`Movement`](../movement) | No |  **Yes**   | The list of movements associated with the song. |
 | `groupings` | Array of `string` | No |  **Yes**   | The list of groupings associated with the song. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 New fields are added:
 
 - `played`
@@ -254,4 +254,4 @@ New fields are added:
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 
 **Note**: Even if some added fields may looks duplicated, it's important to still return the legacy data for compatibility reasons.
-{{< /alert >}}
+{{% /alert %}}

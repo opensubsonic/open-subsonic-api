@@ -91,7 +91,7 @@ The request body must be a JSON object containing the client's capabilities. See
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getTranscodeDecision.view?mediaId=123&mediaType=song&u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getTranscodeDecision.view?mediaId=123&mediaType=song&u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
@@ -143,6 +143,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 | --- | --- | --- | --- | --- |
 | `transcodeDecision` | [`transcodeDecision`](../../responses/transcodedecision)  | **Yes** |     | The transcode decision |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This endpoint must be accessed using a POST request
-{{< /alert >}}
+{{% /alert %}}

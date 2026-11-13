@@ -21,7 +21,7 @@ Takes no extra parameters.
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getOpenSubsonicExtensions.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getOpenSubsonicExtensions.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
@@ -76,6 +76,6 @@ Does not exist.
 | --- | --- | --- | --- | --- |
 | `openSubsonicExtensions` | An array of [`openSubsonicExtension`](../../responses/opensubsonicextension)| **Yes** |   | The list of supported extensions |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new endpoint.
-{{< /alert >}}
+{{% /alert %}}

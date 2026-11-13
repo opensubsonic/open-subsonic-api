@@ -31,6 +31,6 @@ Does not exist.
 
 `end` is optional independently for each line. Its omission means the exact end is unknown. Servers **must not** derive `end` from the next line's `start`. Clients may infer a fallback end, for example from the next line's start, but should not treat it as exact source timing. Gaps and overlapping lines are valid, as is `end == start` for an instantaneous marker. Unsynced lyrics **must** omit both `start` and `end`.
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

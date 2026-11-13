@@ -23,7 +23,7 @@ Finds a path of songs connecting a start song to an end song, navigating through
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/findSonicPath.view?startSongId=100&endSongId=200&count=5&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/findSonicPath.view?startSongId=100&endSongId=200&count=5&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

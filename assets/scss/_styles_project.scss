@@ -1,3 +1,27 @@
+// Keep the Docsy 0.11 alert titles: the title uses the alert's theme color.
+.alert {
+    @each $color, $value in $theme-colors {
+        &-#{$color} .alert-heading {
+            color: $value;
+        }
+    }
+}
+
+// Keep the Docsy 0.11 inline code in alerts: colored text, no box.
+// Alert bodies are now Markdown paragraphs, so Docsy's inline code box
+// (`.td-content p code`) would apply to them.
+.td-content .alert {
+    p code,
+    li > code {
+        color: var(--bs-code-color);
+        padding: 0;
+        font-size: $code-font-size;
+        word-wrap: break-word;
+        background-color: transparent;
+        border-radius: 0;
+    }
+}
+
 .redoc-container {
     // TODO: Support dark them in the future
     background: white;

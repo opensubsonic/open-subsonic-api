@@ -326,6 +326,6 @@ Does not exist.
 
 If `agents` is present, each `cueLine.agentId` **must** resolve to exactly one `agents[].id` in the same `structuredLyrics` entry.
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type.
-{{< /alert >}}
+{{% /alert %}}

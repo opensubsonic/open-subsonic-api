@@ -22,7 +22,7 @@ Returns tracks that are sonically similar to a given track, based on audio analy
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getSonicSimilarTracks.view?id=100&count=5&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getSonicSimilarTracks.view?id=100&count=5&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

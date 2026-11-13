@@ -28,13 +28,13 @@ Music is organized according to ID3 tags.
 | `songOffset` | No |   | 0   | Search result offset for songs. Used for paging. |
 | `musicFolderId` | No |   |     | (Since [1.12.0](../../subsonic-versions)) Only return results from music folder with the given ID. See `getMusicFolders`. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 Servers must support an **empty query** and return all the data to allow clients to properly access all the media information for offline sync.
-{{< /alert >}}
+{{% /alert %}}
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json&query=""&artistCount=1&albumCount=1&songCount=1` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/search3.view?u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json&query=""&artistCount=1&albumCount=1&songCount=1` {{% /alert %}}
 
 ### Result
 

@@ -4,3 +4,24 @@ Add styles or override variables from the theme here.
 
 */
 
+// Keep the look the site had with Docsy 0.11. Docsy 0.13+ uses Bootstrap's
+// default colors and fonts, and Docsy 0.14+ uses the body color for the navbar.
+// These values are the old Docsy defaults.
+
+$enable-gradients: true;
+$enable-shadows: true;
+
+$primary: #30638e;
+$secondary: #ffa630;
+$success: #3772ff;
+$info: #c0e0de;
+$warning: #ed6a5a;
+$danger: #ed6a5a;
+$light: #d3f3ee;
+$dark: #403f4c;
+
+$code-color: shade-color($secondary, 40%);
+
+$td-enable-google-fonts: true;
+
+$td-navbar-bg-color: $primary;

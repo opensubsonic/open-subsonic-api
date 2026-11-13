@@ -10,9 +10,9 @@ description: >
 
 In the documentation all changes from the original Subsonic API will be emphasized with the following warning:
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 Changes (Required or optional) related to OpenSubsonic.
-{{< /alert >}}
+{{% /alert %}}
 
 All endpoints or responses modified by the OpenSubsonic API will have **[OS]** indicator in the navigation menu.
 

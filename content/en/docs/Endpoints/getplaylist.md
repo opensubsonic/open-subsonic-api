@@ -19,7 +19,7 @@ Returns a listing of files in a saved playlist.
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getPlaylist.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getPlaylist.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 

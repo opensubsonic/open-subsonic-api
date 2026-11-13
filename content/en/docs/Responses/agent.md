@@ -53,6 +53,6 @@ Does not exist.
 | `role` | `string` | **Yes** | **Yes** | Semantic vocal-layer classification for cueLines that reference this agent. One of: `main` (lead/default vocal layer), `voice` (additional explicit individual voice part), `bg` (background vocals), `group` (group/chorus vocals). When a [`structuredLyrics`](../structuredlyrics) entry uses `agents` for cue-attributed lyrics, it **must** define exactly one `main` agent |
 | `name` | `string` | No      | **Yes** | Optional human-readable label for this agent, such as a singer or character name from the source metadata                                                                                                                                                             |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new OpenSubsonic response type added in extension [`songLyrics`](../../extensions/songlyrics) version 2.
-{{< /alert >}}
+{{% /alert %}}

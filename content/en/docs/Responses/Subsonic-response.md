@@ -39,10 +39,10 @@ description: >
 | `openSubsonic` | `boolean` | **Yes**  | **Yes**    | Must return true if the server support OpenSubsonic API v1 |
 | `error` |  [`error`](../error) | No |    | The error details when `status` is `failed` |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 New fields are added:
 
 - `type` containing the server type/name (Ex: Navidrome or gonic). Mandatory to help clients adapt to actual Subsonic API support.
 - `serverVersion` containing the server version (Ex: 1.2.3) this is different from the `version` field that expose the Subsonic API version. Mandatory for clients to be able to detect servers updates and check again supported OpenSubsonic extensions.
 - `openSubsonic` must return true if the server support OpenSubsonic API v1
-{{< /alert >}}
+{{% /alert %}}

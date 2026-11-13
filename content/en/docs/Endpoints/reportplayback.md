@@ -33,7 +33,7 @@ The server should only start moving it's internal clock after the state changes 
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/reportPlayback.view?mediaId=123&mediaType=song&positionMs=120000&state=playing&playbackRate=1.0&ignoreScrobble=false&u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/reportPlayback.view?mediaId=123&mediaType=song&positionMs=120000&state=playing&playbackRate=1.0&ignoreScrobble=false&u=demo&p=demo&v=1.16.1&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
@@ -57,6 +57,6 @@ Does not exist.
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 This is a new extension endpoint.
-{{< /alert >}}
+{{% /alert %}}

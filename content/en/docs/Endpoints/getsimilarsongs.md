@@ -20,15 +20,15 @@ Returns a random collection of songs from the given artist and similar artists, 
 | `id` | **Yes** |  |   | The artist, album or song ID. |
 | `count` | No  | |50  | Max number of songs to return. |
 
-{{< alert color="warning" title="OpenSubsonic" >}}
+{{% alert color="warning" title="OpenSubsonic" %}}
 In the original Subsonic, the specification for [`getSimilarSongs2`](../getsimilarsongs2) implies that it should be used instead of this endpoint if the client and/or server organizes by ID3 tags.
 
 For OpenSubsonic servers, `getSimilarSongs` may be used instead of `getSimilarSongs2` when organizing by ID3 tags, and there are no differences in results returned when using artist IDs.
-{{< /alert >}}
+{{% /alert %}}
 
 ### Example
 
-{{< alert color="primary" >}} `http://your-server/rest/getSimilarSongs.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
+{{% alert color="primary" %}} `http://your-server/rest/getSimilarSongs.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{% /alert %}}
 
 ### Result
 
