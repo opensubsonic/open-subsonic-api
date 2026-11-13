@@ -1,0 +1,74 @@
+{
+    "get": {
+        "summary": "Deletes a playlist folder, releasing its contents.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. If the folder is not empty, child folders are re-parented to the deleted folder's parent. Playlists with no remaining folder placements appear at the root.",
+        "operationId": "deletePlaylistFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "parameters": [
+            {
+                "name": "playlistFolderId",
+                "in": "query",
+                "description": "ID of the playlist folder to delete.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deletePlaylistFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deleteplaylistfolder/"
+        }
+    },
+    "post": {
+        "summary": "Deletes a playlist folder, releasing its contents.",
+        "description": "OpenSubsonic extension name `playlistFolders` (as returned by `getOpenSubsonicExtensions`). Deletes a folder from the authenticated user's playlist organization. If the folder is not empty, child folders are re-parented to the deleted folder's parent. Playlists with no remaining folder placements appear at the root.\n\nRequires OpenSubsonic extension name `formPost` (as returned by `getOpenSubsonicExtensions`).",
+        "operationId": "postDeletePlaylistFolder",
+        "tags": [
+            "Playlists",
+            "Extension"
+        ],
+        "requestBody": {
+            "required": true,
+            "content": {
+                "application/x-www-form-urlencoded": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "playlistFolderId": {
+                                "type": "string",
+                                "description": "ID of the playlist folder to delete."
+                            }
+                        },
+                        "required": [
+                            "playlistFolderId"
+                        ]
+                    }
+                }
+            }
+        },
+        "parameters": [
+
+        ],
+        "responses": {
+            "200": {
+                "$ref": "../responses/EmptySubsonicResponse.json"
+            },
+            "405": {
+                "$ref": "../responses/HTTPFormPostNotSupported.json"
+            }
+        },
+        "externalDocs": {
+            "description": "deletePlaylistFolder",
+            "url": "https://opensubsonic.netlify.app/docs/endpoints/deleteplaylistfolder/"
+        }
+    }
+}

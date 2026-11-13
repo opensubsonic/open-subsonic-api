@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "description": "Folders and playlist placements in a user's private playlist organization.",
+    "properties": {
+        "playlistFolder": {
+            "type": "array",
+            "items": {
+                "$ref": "./PlaylistFolder.json"
+            },
+            "description": "The selected user's playlist folders."
+        },
+        "playlistPlacement": {
+            "type": "array",
+            "items": {
+                "$ref": "./PlaylistPlacement.json"
+            },
+            "description": "The selected user's playlist placements. Playlists with no placement appear implicitly at the root and are not listed."
+        }
+    },
+    "externalDocs": {
+        "description": "PlaylistFolders",
+        "url": "https://opensubsonic.netlify.app/docs/responses/playlistfolders/"
+    }
+}
