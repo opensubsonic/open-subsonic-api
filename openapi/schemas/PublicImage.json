@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "A public image.",
+    "externalDocs": {
+        "description": "PublicImage",
+        "url": "https://opensubsonic.netlify.app/docs/responses/publicimage/"
+    },
+    "properties": {
+        "url": {
+            "type": "string",
+            "description": "Public image URL"
+        },
+        "expiresAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When this URL expires"
+        }
+    },
+    "required": ["url"]
+}

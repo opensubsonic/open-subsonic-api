@@ -255,6 +255,9 @@
         "/rest/getPodcasts": {
             "$ref": "./endpoints/getPodcasts.json"
         },
+        "/rest/getPublicImageURL": {
+            "$ref": "./endpoints/getPublicImageURL.json"
+        },
         "/rest/getRandomSongs": {
             "$ref": "./endpoints/getRandomSongs.json"
         },
