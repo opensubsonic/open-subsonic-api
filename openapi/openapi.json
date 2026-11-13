@@ -400,13 +400,13 @@
                 "type": "apiKey",
                 "in": "query",
                 "name": "t",
-                "description": "(Since 1.13.0) The authentication token computed as md5(password + salt). `u` and `s` must be specified. See https://opensubsonic.netlify.app/docs/api-reference/#authentication for details."
+                "description": "(Since 1.13.0) The authentication token computed as md5(password + salt). `u` and `s` must be specified. See https://opensubsonic.github.io/docs/api-reference/#authentication for details."
             },
             "salt": {
                 "type": "apiKey",
                 "in": "query",
                 "name": "s",
-                "description": "(Since 1.13.0) A random string (“salt”) used as input for computing the password hash. `u` and `t` must be specified. See https://opensubsonic.netlify.app/docs/api-reference/#authentication for details."
+                "description": "(Since 1.13.0) A random string (“salt”) used as input for computing the password hash. `u` and `t` must be specified. See https://opensubsonic.github.io/docs/api-reference/#authentication for details."
             },
             "protocolVersion": {
                 "type": "apiKey",

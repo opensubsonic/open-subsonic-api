@@ -71,6 +71,6 @@
     ],
     "externalDocs": {
         "description": "Playlist",
-        "url": "https://opensubsonic.netlify.app/docs/responses/playlist/"
+        "url": "https://opensubsonic.github.io/docs/responses/playlist/"
     }
 }

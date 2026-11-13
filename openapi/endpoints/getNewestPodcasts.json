@@ -32,7 +32,7 @@
         },
         "externalDocs": {
             "description": "getNewestPodcasts",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getnewestpodcasts/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getnewestpodcasts/"
         }
     },
     "post": {
@@ -79,7 +79,7 @@
         },
         "externalDocs": {
             "description": "getNewestPodcasts",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getnewestpodcasts/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getnewestpodcasts/"
         }
     }
 }

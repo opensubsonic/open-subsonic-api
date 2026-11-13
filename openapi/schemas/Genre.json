@@ -3,7 +3,7 @@
     "description": "A genre.",
     "externalDocs": {
         "description": "Genre",
-        "url": "https://opensubsonic.netlify.app/docs/responses/genre/"
+        "url": "https://opensubsonic.github.io/docs/responses/genre/"
     },
     "properties": {
         "value": {

@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "CreateSharesResponse",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/createshare/"
+        "url": "https://opensubsonic.github.io/docs/endpoints/createshare/"
     }
 }

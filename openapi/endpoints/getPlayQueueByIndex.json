@@ -23,7 +23,7 @@
         },
         "externalDocs": {
             "description": "getPlayQueueByIndex",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplayqueuebyindex/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getplayqueuebyindex/"
         }
     },
     "post": {
@@ -63,7 +63,7 @@
         },
         "externalDocs": {
             "description": "getPlayQueueByIndex",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getplayqueuebyindex/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getplayqueuebyindex/"
         }
     }
 }

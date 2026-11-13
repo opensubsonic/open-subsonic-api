@@ -3,7 +3,7 @@
     "description": "user.",
     "externalDocs": {
         "description": "User",
-        "url": "https://opensubsonic.netlify.app/docs/responses/user/"
+        "url": "https://opensubsonic.github.io/docs/responses/user/"
     },
     "properties": {
         "username": {

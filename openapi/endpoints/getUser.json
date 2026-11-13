@@ -31,7 +31,7 @@
         },
         "externalDocs": {
             "description": "getUser",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getuser/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getuser/"
         }
     },
     "post": {
@@ -80,7 +80,7 @@
         },
         "externalDocs": {
             "description": "getUser",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getuser/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getuser/"
         }
     }
 }

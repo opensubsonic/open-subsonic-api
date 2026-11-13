@@ -34,7 +34,7 @@
         },
         "externalDocs": {
             "description": "getCoverArt",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcoverart/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getcoverart/"
         }
     },
     "post": {
@@ -80,7 +80,7 @@
         },
         "externalDocs": {
             "description": "getCoverArt",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/getcoverart/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/getcoverart/"
         }
     }
 }

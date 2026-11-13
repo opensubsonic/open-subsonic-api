@@ -52,7 +52,7 @@
         },
         "externalDocs": {
             "description": "findSonicPath",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/findsonicpath/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/findsonicpath/"
         }
     },
     "post": {
@@ -112,7 +112,7 @@
         },
         "externalDocs": {
             "description": "findSonicPath",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/findsonicpath/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/findsonicpath/"
         }
     }
 }

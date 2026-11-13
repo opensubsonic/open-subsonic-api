@@ -15,6 +15,6 @@
     },
     "externalDocs": {
         "description": "GetSimilarSongs2Response",
-        "url": "https://opensubsonic.netlify.app/docs/endpoints/getsimilarsongs2/"
+        "url": "https://opensubsonic.github.io/docs/endpoints/getsimilarsongs2/"
     }
 }

@@ -202,7 +202,7 @@
         },
         "externalDocs": {
             "description": "updateUser",
-            "url": "https://opensubsonic.netlify.app/docs/endpoints/updateuser/"
+            "url": "https://opensubsonic.github.io/docs/endpoints/updateuser/"
         }
     },
     "post": {

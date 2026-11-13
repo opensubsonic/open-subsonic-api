@@ -19,7 +19,7 @@
             ],
             "externalDocs": {
                 "description": "AlbumID3WithSongs",
-                "url": "https://opensubsonic.netlify.app/docs/responses/albumid3withsongs/"
+                "url": "https://opensubsonic.github.io/docs/responses/albumid3withsongs/"
             }
         }
     ]
