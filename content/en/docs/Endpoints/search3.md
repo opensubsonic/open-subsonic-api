@@ -26,10 +26,21 @@ Music is organized according to ID3 tags.
 | `albumOffset` | No|    | 0   | Search result offset for albums. Used for paging. |
 | `songCount` | No |   | 20  | Maximum number of songs to return. |
 | `songOffset` | No |   | 0   | Search result offset for songs. Used for paging. |
+| `playlistCount` | No |  **Yes** | 0  | Maximum number of playlists to return. |
+| `playlistOffset` | No | **Yes**  | 0   | Search result offset for playlists. Used for paging. |
 | `musicFolderId` | No |   |     | (Since [1.12.0](../../subsonic-versions)) Only return results from music folder with the given ID. See `getMusicFolders`. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 Servers must support an **empty query** and return all the data to allow clients to properly access all the media information for offline sync.
+{{< /alert >}}
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+New parameters are added:
+
+- `playlistCount`
+- `playlistOffset`
+
+To ensure compatibility with clients that are not expecting these playlist results, `playlistCount` defaults to 0. If you want playlist results, you must opt in by specifying a positive integer value.
 {{< /alert >}}
 
 ### Example
@@ -107,6 +118,20 @@ A [`subsonic-response`](../../responses/subsonic-response) with a nested [`searc
           "artistId": "97e0398acf63f9fb930d7d4ce209a52b",
           "type": "music",
           "isVideo": false
+        }
+      ],
+      "playlist": [
+        {
+          "id": "800000075",
+          "name": "testcreate",
+          "owner": "user",
+          "public": true,
+          "created": "2023-03-16T03:18:41+00:00",
+          "changed": "2023-03-16T03:18:41+00:00",
+          "songCount": 1,
+          "duration": 304,
+          "readonly": true,
+          "validUntil": "2023-03-23T03:18:41+00:00"
         }
       ]
     }
