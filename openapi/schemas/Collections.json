@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Collections.",
+    "externalDocs": {
+        "description": "Collections",
+        "url": "https://opensubsonic.netlify.app/docs/responses/collections/"
+    },
+    "properties": {
+        "collection": {
+            "type": "array",
+            "items": {
+                "$ref": "./Collection.json"
+            },
+            "description": "The collections"
+        }
+    }
+}

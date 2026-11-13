@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "description": "Add the specified items to a collection. Adding duplicate items, or items that are already present, is disallowed. If `to` is set and non-negative, the first item in the array will be added at this index; if unset or set to a negative value, items will be appended to the tail of the collection.",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "$ref": "../schemas/CollectionItemId.json"
+            },
+        },
+        "to": {
+            "type": "integer",
+            "default": -1
+        }
+    },
+    "required": ["items"]
+}
