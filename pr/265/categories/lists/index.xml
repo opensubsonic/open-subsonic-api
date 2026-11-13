@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lists on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/265/categories/lists/</link><description>Recent content in Lists on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/265/categories/lists/index.xml" rel="self" type="application/rss+xml"/><item><title>getAlbumList</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getalbumlist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getalbumlist/</guid><description>&lt;p>&lt;code>http://your-server/rest/getAlbumList&lt;/code> Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>&lt;/p>
+&lt;p>Returns a list of random, newest, highest rated etc. albums. Similar to the album lists on the home page of the Subsonic web interface.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>type&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The list type. Must be one of the following: &lt;code>random&lt;/code>, &lt;code>newest&lt;/code>, &lt;code>highest&lt;/code>, &lt;code>frequent&lt;/code>, &lt;code>recent&lt;/code>. Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a> you can also use &lt;code>alphabeticalByName&lt;/code> or &lt;code>alphabeticalByArtist&lt;/code> to page through all albums alphabetically, and &lt;code>starred&lt;/code> to retrieve starred albums. Since &lt;a href="../../subsonic-versions">1.10.1&lt;/a> you can use &lt;code>byYear&lt;/code> and &lt;code>byGenre&lt;/code> to list albums in a given year range or genre.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>10&lt;/td>
+ &lt;td>The number of albums to return. Max 500.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>offset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>The list offset. Useful if you for example want to page through the list of newest albums.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>fromYear&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if &lt;code>type&lt;/code> is &lt;code>byYear&lt;/code>)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The first year in the range. If &lt;code>fromYear &amp;gt; toYear&lt;/code> a reverse chronological list is returned.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>toYear&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if &lt;code>type&lt;/code> is &lt;code>byYear&lt;/code>)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The last year in the range.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>genre&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if &lt;code>type&lt;/code> is &lt;code>byGenre&lt;/code>)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The name of the genre, e.g., &amp;ldquo;Rock&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.11.0&lt;/a>) Only return albums in the music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getAlbumList.view?type=random&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/albumlist">&lt;code>albumList&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>getAlbumList2</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getalbumlist2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getalbumlist2/</guid><description>&lt;p>&lt;code>http://your-server/rest/getAlbumList2&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Similar to &lt;a href="../getalbumlist">&lt;code>getAlbumList&lt;/code>&lt;/a>, but organizes music according to ID3 tags.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>type&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The list type. Must be one of the following: &lt;code>random&lt;/code>, &lt;code>newest&lt;/code>, &lt;code>highest&lt;/code>, &lt;code>frequent&lt;/code>, &lt;code>recent&lt;/code>. Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a> you can also use &lt;code>alphabeticalByName&lt;/code> or &lt;code>alphabeticalByArtist&lt;/code> to page through all albums alphabetically, and &lt;code>starred&lt;/code> to retrieve starred albums. Since &lt;a href="../../subsonic-versions">1.10.1&lt;/a> you can use &lt;code>byYear&lt;/code> and &lt;code>byGenre&lt;/code> to list albums in a given year range or genre.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>10&lt;/td>
+ &lt;td>The number of albums to return. Max 500.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>offset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>The list offset. Useful if you for example want to page through the list of newest albums.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>fromYear&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if &lt;code>type&lt;/code> is &lt;code>byYear&lt;/code>)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The first year in the range. If &lt;code>fromYear &amp;gt; toYear&lt;/code> a reverse chronological list is returned.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>toYear&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if &lt;code>type&lt;/code> is &lt;code>byYear&lt;/code>)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The last year in the range.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>genre&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if &lt;code>type&lt;/code> is &lt;code>byGenre&lt;/code>)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The name of the genre, e.g., &amp;ldquo;Rock&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.11.0&lt;/a>) Only return albums in the music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getAlbumList2.view?type=random&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/albumlist2">&lt;code>albumList2&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>getNowPlaying</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getnowplaying/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getnowplaying/</guid><description>&lt;p>&lt;code>http://your-server/rest/getNowPlaying&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Returns what is currently being played by all users. Takes no extra parameters.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;p>Takes no extra parameters.&lt;/p>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getNowPlaying.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/nowplaying">&lt;code>nowPlaying&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;nowPlaying&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300115266&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200147046&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Take the Home&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200147046&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;How I Learned to Love Our Robot Overlords&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100002619&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Raggedy Angry&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300115266&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">227&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">222&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">7&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2010&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Industrial&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">6341039&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/mpeg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;minutesAgo&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playerId&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;state&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;playing&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;positionMs&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">120000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playbackRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1.0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;nowPlaying&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300115266&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200147046&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Take the Home&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200147046&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;How I Learned to Love Our Robot Overlords&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100002619&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Raggedy Angry&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300115266&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">227&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">222&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">7&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2010&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Industrial&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">6341039&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/mpeg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Raggedy Angry/(2010) How I Learned to Love Our Robot Overlords/1-07 - Take the Home.mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;minutesAgo&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playerId&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>nowPlaying&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/nowplaying">&lt;code>nowPlaying&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The now playing content&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ When the server supports extension &lt;code>playbackReport&lt;/code>, entries can include &lt;code>state&lt;/code>, &lt;code>positionMs&lt;/code>, and &lt;code>playbackRate&lt;/code>.
+
+&lt;/div></description></item><item><title>getRandomSongs</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getrandomsongs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getrandomsongs/</guid><description>&lt;p>&lt;code>http://your-server/rest/getRandomSongs&lt;/code> Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>&lt;/p>
+&lt;p>Returns random songs matching the given criteria.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>10&lt;/td>
+ &lt;td>The maximum number of songs to return. Max 500.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>genre&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Only returns songs belonging to this genre.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>fromYear&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Only return songs published after or in this year.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>toYear&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Only return songs published before or in this year.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Only return songs in the music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getRandomSongs.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/randomsongs">&lt;code>randomSongs&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>getSongsByGenre</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getsongsbygenre/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getsongsbygenre/</guid><description>&lt;p>&lt;code>http://your-server/rest/getSongsByGenre&lt;/code> Since &lt;a href="../../subsonic-versions">1.9.0&lt;/a>&lt;/p>
+&lt;p>Returns songs in a given genre.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>genre&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The genre, as returned by &lt;code>getGenres&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>count&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>10&lt;/td>
+ &lt;td>The maximum number of songs to return. Max 500.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>offset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>The offset. Useful if you want to page through the songs in a genre.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>) Only return albums in the music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getSongsByGenre.view?genre=Electronic&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/songsbygenre">&lt;code>songsByGenre&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>getStarred</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getstarred/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getstarred/</guid><description>&lt;p>&lt;code>http://your-server/rest/getStarred&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Returns starred songs, albums and artists.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>) Only return results from the music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getStarred.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/starred">&lt;code>starred&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ar-100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-22T05:54:18Z&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;al-200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">20&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-07-22T02:09:31+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4248&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Comfort Fit&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;song&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;082f435a363c32c57d5edb6a678a28d4&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;\&amp;#34;polar expedition\&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Live at The Casbah - 2005-04-29&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mf-082f435a363c32c57d5edb6a678a28d4_6410b3ce&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">19866778&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-27T09:45:27Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">178&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">880&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal/Live at The Casbah - 2005-04-29/04 - \&amp;#34;polar expedition\&amp;#34;.flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-14T17:51:22.112827504Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;97e0398acf63f9fb930d7d4ce209a52b&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ar-100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-22T05:54:18Z&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;al-200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">20&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-07-22T02:09:31+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4248&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Comfort Fit&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;song&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;082f435a363c32c57d5edb6a678a28d4&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;\&amp;#34;polar expedition\&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Live at The Casbah - 2005-04-29&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mf-082f435a363c32c57d5edb6a678a28d4_6410b3ce&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">19866778&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-27T09:45:27Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">178&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">880&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal/Live at The Casbah - 2005-04-29/04 - \&amp;#34;polar expedition\&amp;#34;.flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-14T17:51:22.112827504Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;97e0398acf63f9fb930d7d4ce209a52b&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>starred&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/starred">&lt;code>starred&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The song&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>getStarred2</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getstarred2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getstarred2/</guid><description>&lt;p>&lt;code>http://your-server/rest/getStarred2&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Similar to &lt;a href="../getstarred">&lt;code>getStarred&lt;/code>&lt;/a>, but organizes music according to ID3 tags.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>) Only return results from the music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getStarred2.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/starred2">&lt;code>starred2&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred2&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;37ec820ca7193e17040c98f7da7c4b51&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2 Mello&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ar-37ec820ca7193e17040c98f7da7c4b51_0&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistImageUrl&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;https://demo.org/image.jpg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2017-04-11T10:42:50.842Z&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ad0f112b6dcf83de5e9cae85d07f0d35&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;8-bit lagerfeuer&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;pornophonique&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2007&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;al-ad0f112b6dcf83de5e9cae85d07f0d35_640a93a8&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-22T01:51:06Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1954&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">97&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-10T02:19:35.784818075Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;91c3901ac465b9efc439e4be4270c2b6&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;song&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;082f435a363c32c57d5edb6a678a28d4&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;\&amp;#34;polar expedition\&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Live at The Casbah - 2005-04-29&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mf-082f435a363c32c57d5edb6a678a28d4_6410b3ce&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">19866778&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-27T09:45:27Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">178&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">880&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal/Live at The Casbah - 2005-04-29/04 - \&amp;#34;polar expedition\&amp;#34;.flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-14T17:51:22.112827504Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;97e0398acf63f9fb930d7d4ce209a52b&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred2&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;37ec820ca7193e17040c98f7da7c4b51&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2 Mello&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ar-37ec820ca7193e17040c98f7da7c4b51_0&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistImageUrl&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;https://demo.org/image.jpg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2017-04-11T10:42:50.842Z&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ad0f112b6dcf83de5e9cae85d07f0d35&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;8-bit lagerfeuer&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;pornophonique&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2007&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;al-ad0f112b6dcf83de5e9cae85d07f0d35_640a93a8&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-22T01:51:06Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1954&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">97&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-10T02:19:35.784818075Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;91c3901ac465b9efc439e4be4270c2b6&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;song&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;082f435a363c32c57d5edb6a678a28d4&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;\&amp;#34;polar expedition\&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Live at The Casbah - 2005-04-29&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mf-082f435a363c32c57d5edb6a678a28d4_6410b3ce&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">19866778&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;starred&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-27T09:45:27Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">178&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">880&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The New Deal/Live at The Casbah - 2005-04-29/04 - \&amp;#34;polar expedition\&amp;#34;.flac&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-14T17:51:22.112827504Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;e8a0685e3f3ec6f251649af2b58b8617&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;97e0398acf63f9fb930d7d4ce209a52b&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>starred2&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/starred2">&lt;code>starred2&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The song&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item></channel></rss>

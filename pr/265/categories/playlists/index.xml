@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Playlists on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/265/categories/playlists/</link><description>Recent content in Playlists on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/265/categories/playlists/index.xml" rel="self" type="application/rss+xml"/><item><title>createPlaylist</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/createplaylist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/createplaylist/</guid><description>&lt;p>&lt;code>http://your-server/rest/createPlaylist&lt;/code> Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>&lt;/p>
+&lt;p>Creates (or updates) a playlist.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>playlistId&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if updating)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The playlist ID.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>name&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong> (if creating)&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The human-readable name of the playlist.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>ID of a song in the playlist. Use one &lt;code>songId&lt;/code> parameter for each song in the playlist.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/createPlaylist.view?name=abc&amp;amp;songId=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;h4 id="since-1140">Since &lt;a href="../../subsonic-versions">1.14.0&lt;/a>&lt;/h4>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/playlistwithsongs">&lt;code>playlist&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlist&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000075&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;testcreate&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;BrownSmoke&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Colorsmoke EP&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">20&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;averageRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2007&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Electronic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">792375&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/x-ms-wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic/Synthetic_-_Colorsmoke_EP-20k217-2007/04-Synthetic_-_BrownSmokeYSBM20k22khS.wma&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlist&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000075&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;testcreate&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;BrownSmoke&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Colorsmoke EP&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">20&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;averageRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2007&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Electronic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">792375&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/x-ms-wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic/Synthetic_-_Colorsmoke_EP-20k217-2007/04-Synthetic_-_BrownSmokeYSBM20k22khS.wma&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>playlist&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/playlistwithsongs">&lt;code>playlist&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The created playlist&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h4 id="before-1140">Before &lt;a href="../../subsonic-versions">1.14.0&lt;/a>&lt;/h4>
+&lt;p>An empty &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>deletePlaylist</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/deleteplaylist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/deleteplaylist/</guid><description>&lt;p>&lt;code>http://your-server/rest/deletePlaylist&lt;/code> Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>&lt;/p>
+&lt;p>Deletes a saved playlist.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>ID of the playlist to delete, as obtained by &lt;a href="../getplaylists">&lt;code>getPlaylists&lt;/code>&lt;/a>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/deletePlaylist.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>An empty &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div></description></item><item><title>getPlaylist</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getplaylist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getplaylist/</guid><description>&lt;p>&lt;code>http://your-server/rest/getPlaylist&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Returns a listing of files in a saved playlist.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>ID of the playlist to return, as obtained by &lt;code>getPlaylists&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getPlaylist.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/playlistwithsongs">&lt;code>playlist&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlist&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000075&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;testcreate&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;BrownSmoke&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Colorsmoke EP&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">20&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;averageRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2007&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Electronic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">792375&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/x-ms-wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic/Synthetic_-_Colorsmoke_EP-20k217-2007/04-Synthetic_-_BrownSmokeYSBM20k22khS.wma&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlist&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000075&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;testcreate&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-16T03:18:41+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;BrownSmoke&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Colorsmoke EP&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">20&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;userRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;averageRating&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2007&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Electronic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">792375&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/x-ms-wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic/Synthetic_-_Colorsmoke_EP-20k217-2007/04-Synthetic_-_BrownSmokeYSBM20k22khS.wma&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>playlist&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/playlistwithsongs">&lt;code>playlist&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The created playlist&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>getPlaylists</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getplaylists/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getplaylists/</guid><description>&lt;p>&lt;code>http://your-server/rest/getPlaylists&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Returns all playlists a user is allowed to play.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>username&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>no&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>) If specified, return playlists for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getPlaylists.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/playlists">&lt;code>playlists&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlists&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlist&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000003&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;random - admin - private (admin)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;admin&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:35:38+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:35:38+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">43&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">17875&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;random - admin - public (admin)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;admin&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:34:56+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:34:56+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">43&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">17786&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlists&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;playlist&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000003&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;random - admin - private (admin)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;admin&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:35:38+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:35:38+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">43&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">17875&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;800000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;random - admin - public (admin)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;admin&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;public&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:34:56+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2021-02-23T04:34:56+00:00&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;songCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">43&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">17786&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>playlists&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/playlists">&lt;code>playlists&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The playlists&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>updatePlaylist</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/updateplaylist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/updateplaylist/</guid><description>&lt;p>&lt;code>http://your-server/rest/updatePlaylist&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Updates a playlist. Only the owner of a playlist is allowed to update it.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>playlistId&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The playlist ID.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>name&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The human-readable name of the playlist.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>comment&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The playlist comment.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>public&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;code>true&lt;/code> if the playlist should be visible to all users, &lt;code>false&lt;/code> otherwise.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songIdToAdd&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Add this song with this ID to the playlist. Multiple parameters allowed.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songIndexToRemove&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Remove the song at this position in the playlist. Multiple parameters allowed.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/updatePlaylist.view?playlistId=123&amp;amp;name=test&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>An empty &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element on success.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Errata on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/293/opensubsonic/errata/</link><description>Recent content in Errata on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/293/opensubsonic/errata/index.xml" rel="self" type="application/rss+xml"/><item><title>PlayQueue</title><link>https://opensubsonic.github.io/pr/293/docs/responses/playqueue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/293/docs/responses/playqueue/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;current&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;position&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-10T02:19:35.784818075Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changedBy&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;example client&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Can I Help U?&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Comfort Fit&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">103&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">216&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2811819&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/mpeg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user/Comfort Fit/Forget And Remember/1 - Can I Help U?.mp3&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;current&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;position&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-10T02:19:35.784818075Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changedBy&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;example client&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Can I Help U?&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Comfort Fit&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">103&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">216&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2811819&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/mpeg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user/Comfort Fit/Forget And Remember/1 - Can I Help U?.mp3&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ Errata: In the original spec, &lt;code>current&lt;/code> is required to be an &lt;code>int&lt;/code>.
+However, as &lt;code>child&lt;/code> ids are strings, this is updated to note that the id should be a string to be consistent.
+
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>current&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>No*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>ID of currently playing track&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>position&lt;/code>&lt;/td>
+ &lt;td>&lt;code>long&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Position in milliseconds of currently playing track&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>username&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The user this queue belongs to&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>changed&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Date modified [ISO 8601]&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>changedBy&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Name of client app&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>entry&lt;/code>&lt;/td>
+ &lt;td>Array of &lt;a href="../child">&lt;code>Child&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The list of songs in the queue&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ &lt;p>* If &lt;code>entry&lt;/code> exists and is non-empty, OpenSubsonic servers &lt;strong>must&lt;/strong> ensure that &lt;code>current&lt;/code> exists and is a valid id in the list of songs.&lt;/p></description></item><item><title>savePlayQueue</title><link>https://opensubsonic.github.io/pr/293/docs/endpoints/saveplayqueue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/293/docs/endpoints/saveplayqueue/</guid><description>&lt;p>&lt;code>http://your-server/rest/savePlayQueue&lt;/code> Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>&lt;/p>
+&lt;p>Saves the state of the play queue for this user. This includes the tracks in the play queue, the currently playing track, and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>ID of a song in the play queue. Use one &lt;code>id&lt;/code> parameter for each song in the play queue.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>current&lt;/code>&lt;/td>
+ &lt;td>Yes (subsonic) / No (OpenSubsonic)*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the current playing song.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>position&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The position in milliseconds within the currently playing song.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Errata/OpenSubsonic&lt;/h4>
+
+ &lt;p>* In the original Subsonic, despite the claims that &lt;code>current&lt;/code> is optional, it was required and &lt;strong>must&lt;/strong> be in the list of &lt;code>id&lt;/code>.&lt;/p></description></item></channel></rss>

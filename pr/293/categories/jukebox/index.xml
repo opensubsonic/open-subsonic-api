@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jukebox on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/293/categories/jukebox/</link><description>Recent content in Jukebox on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/293/categories/jukebox/index.xml" rel="self" type="application/rss+xml"/><item><title>jukeboxControl</title><link>https://opensubsonic.github.io/pr/293/docs/endpoints/jukeboxcontrol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/293/docs/endpoints/jukeboxcontrol/</guid><description>&lt;p>&lt;code>http://your-server/rest/jukeboxControl&lt;/code> Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>&lt;/p>
+&lt;p>Controls the jukebox, i.e., playback directly on the server&amp;rsquo;s audio hardware. Note: The user must be authorized to control the jukebox (see Settings &amp;gt; Users &amp;gt; User is allowed to play files in jukebox mode).&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>action&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The operation to perform. Must be one of: &lt;code>get&lt;/code>, &lt;code>status&lt;/code> (since &lt;a href="../../subsonic-versions">1.7.0&lt;/a>), &lt;code>set&lt;/code> (since &lt;a href="../../subsonic-versions">1.7.0&lt;/a>), &lt;code>start&lt;/code>, &lt;code>stop&lt;/code>, &lt;code>skip&lt;/code>, &lt;code>add&lt;/code>, &lt;code>clear&lt;/code>, &lt;code>remove&lt;/code>, &lt;code>shuffle&lt;/code>, &lt;code>setGain&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>index&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Used by &lt;code>skip&lt;/code> and &lt;code>remove&lt;/code>. Zero-based index of the song to skip to or remove.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>offset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.7.0&lt;/a>) Used by &lt;code>skip&lt;/code>. Start playing this many seconds into the track.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Used by &lt;code>add&lt;/code> and &lt;code>set&lt;/code>. ID of song to add to the jukebox playlist. Use multiple &lt;code>id&lt;/code> parameters to add many songs in the same request. (&lt;code>set&lt;/code> is similar to a &lt;code>clear&lt;/code> followed by a &lt;code>add&lt;/code>, but will not change the currently playing track.)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>gain&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Used by &lt;code>setGain&lt;/code> to control the playback volume. A float value between 0.0 and 1.0.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/jukeboxControl.view?action=get&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested :&lt;/p></description></item></channel></rss>

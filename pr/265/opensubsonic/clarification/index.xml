@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clarification on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/265/opensubsonic/clarification/</link><description>Recent content in Clarification on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/265/opensubsonic/clarification/index.xml" rel="self" type="application/rss+xml"/><item><title>API Reference</title><link>https://opensubsonic.github.io/pr/265/docs/api-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/api-reference/</guid><description>&lt;h2 id="parameters">Parameters&lt;/h2>
+&lt;p>Please note that all methods take the following parameters:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>u&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>**&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The username.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>p&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The password, either in clear text or hex-encoded with a &amp;ldquo;enc:&amp;rdquo; prefix. Since &lt;a href="../subsonic-versions">1.13.0&lt;/a> this should only be used for testing purposes.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>t&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../subsonic-versions">1.13.0&lt;/a>) The authentication token computed as &lt;strong>md5(password + salt)&lt;/strong>. See below for details.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>s&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../subsonic-versions">1.13.0&lt;/a>) A random string (&amp;ldquo;salt&amp;rdquo;) used as input for computing the password hash. See below for details.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>apiKey&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>**&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>[OS] An API key used for authentication&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>v&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The protocol version implemented by the client, i.e., the version of the &lt;a href="../subsonic-versions">subsonic-rest-api.xsd&lt;/a> schema used (see below).&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>c&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>A unique string identifying the client application.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>f&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>xml&lt;/td>
+ &lt;td>Request data to be returned in this format. Supported values are &amp;ldquo;xml&amp;rdquo;, &amp;ldquo;json&amp;rdquo; (since &lt;a href="../subsonic-versions">1.4.0&lt;/a>) and &amp;ldquo;jsonp&amp;rdquo; (since &lt;a href="../subsonic-versions">1.6.0&lt;/a>). If using jsonp, specify name of javascript callback function using a &lt;code>callback&lt;/code> parameter.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>*) Either &lt;code>p&lt;/code> or both &lt;code>t&lt;/code> and &lt;code>s&lt;/code> must be specified.&lt;/p></description></item><item><title>Subsonic API versions</title><link>https://opensubsonic.github.io/pr/265/docs/subsonic-versions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/subsonic-versions/</guid><description>&lt;h2 id="versions">Versions&lt;/h2>
+&lt;p>This table shows the REST API version implemented in different Subsonic versions:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Subsonic version&lt;/th>
+ &lt;th>REST API version&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>6.1.4&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.16.1.xsd">1.16.1&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>6.1.2&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.16.0.xsd">1.16.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>6.1&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.15.0.xsd">1.15.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>6.0&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.14.0.xsd">1.14.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>5.3&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.13.0.xsd">1.13.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>5.2&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.12.0.xsd">1.12.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>5.1&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.11.0.xsd">1.11.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.9&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.10.2.xsd">1.10.2&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.8&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.9.0.xsd">1.9.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.7&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.8.0.xsd">1.8.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.6&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.7.0.xsd">1.7.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.5&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.6.0.xsd">1.6.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.4&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.5.0.xsd">1.5.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.2&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.4.0.xsd">1.4.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.1&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.3.0.xsd">1.3.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4.0&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.2.0.xsd">1.2.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3.9&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.1.1.xsd">1.1.1&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3.8&lt;/td>
+ &lt;td>&lt;a href="http://subsonic.org/pages/inc/api/schema/subsonic-rest-api-1.1.0.xsd">1.1.0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Note that a Subsonic-compatible server is backward compatible with a REST client if and only if the major version is the same, and the minor version of the client is less than or equal to the server&amp;rsquo;s. For example, if the server has REST API version 2.2, it supports client versions 2.0, 2.1 and 2.2, but not versions 1.x, 2.3+ or 3.x. The third part of the version number is not used to determine compatibility.&lt;/p></description></item><item><title>getCoverArt</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getcoverart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getcoverart/</guid><description>&lt;p>&lt;code>http://your-server/rest/getCoverArt&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Returns a cover art image.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The coverArt ID. Returned by most entities likes &lt;a href="../../responses/child">&lt;code>Child&lt;/code>&lt;/a> or &lt;a href="../../responses/albumid3">&lt;code>AlbumID3&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>If specified, scale image to this size.&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ &lt;p>In the original Subsonic, the &lt;code>id&lt;/code> could refer to several entities: song, album or artist.&lt;/p>
+&lt;p>For OpenSubsonic servers, &lt;code>id&lt;/code> refers to coverArt ID only.&lt;/p>
+
+
+&lt;/div>
+
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getCoverArt.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with “text/xml”).&lt;/p></description></item><item><title>getSimilarSongs</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getsimilarsongs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getsimilarsongs/</guid><description>&lt;p>&lt;code>http://your-server/rest/getSimilarSongs&lt;/code> Since &lt;a href="../../subsonic-versions">1.11.0&lt;/a>&lt;/p>
+&lt;p>Returns a random collection of songs from the given artist and similar artists, using data from &lt;a href="http://last.fm">last.fm&lt;/a>. Typically used for artist radio features.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The artist, album or song ID.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>count&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>50&lt;/td>
+ &lt;td>Max number of songs to return.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ &lt;p>In the original Subsonic, the specification for &lt;a href="../getsimilarsongs2">&lt;code>getSimilarSongs2&lt;/code>&lt;/a> implies that it should be used instead of this endpoint if the client and/or server organizes by ID3 tags.&lt;/p></description></item><item><title>PlayQueue</title><link>https://opensubsonic.github.io/pr/265/docs/responses/playqueue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/playqueue/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;current&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;position&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-10T02:19:35.784818075Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changedBy&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;example client&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Can I Help U?&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Comfort Fit&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">103&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">216&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2811819&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/mpeg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user/Comfort Fit/Forget And Remember/1 - Can I Help U?.mp3&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;current&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;position&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changed&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;2023-03-10T02:19:35.784818075Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;changedBy&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;example client&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Can I Help U?&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000021&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Forget and Remember&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000036&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Comfort Fit&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1234&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">103&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">216&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2005&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hip-Hop&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2811819&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;mp3&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/mpeg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;user/Comfort Fit/Forget And Remember/1 - Can I Help U?.mp3&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ Errata: In the original spec, &lt;code>current&lt;/code> is required to be an &lt;code>int&lt;/code>.
+However, as &lt;code>child&lt;/code> ids are strings, this is updated to note that the id should be a string to be consistent.
+
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>current&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>No*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>ID of currently playing track&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>position&lt;/code>&lt;/td>
+ &lt;td>&lt;code>long&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Position in milliseconds of currently playing track&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>username&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The user this queue belongs to&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>changed&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Date modified [ISO 8601]&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>changedBy&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Name of client app&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>entry&lt;/code>&lt;/td>
+ &lt;td>Array of &lt;a href="../child">&lt;code>Child&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The list of songs in the queue&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ &lt;p>* If &lt;code>entry&lt;/code> exists and is non-empty, OpenSubsonic servers &lt;strong>must&lt;/strong> ensure that &lt;code>current&lt;/code> exists and is a valid id in the list of songs.&lt;/p></description></item><item><title>savePlayQueue</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/saveplayqueue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/saveplayqueue/</guid><description>&lt;p>&lt;code>http://your-server/rest/savePlayQueue&lt;/code> Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>&lt;/p>
+&lt;p>Saves the state of the play queue for this user. This includes the tracks in the play queue, the currently playing track, and the position within this track. Typically used to allow a user to move between different clients/apps while retaining the same play queue (for instance when listening to an audio book).&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>ID of a song in the play queue. Use one &lt;code>id&lt;/code> parameter for each song in the play queue.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>current&lt;/code>&lt;/td>
+ &lt;td>Yes (subsonic) / No (OpenSubsonic)*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the current playing song.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>position&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The position in milliseconds within the currently playing song.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Errata/OpenSubsonic&lt;/h4>
+
+ &lt;p>* In the original Subsonic, despite the claims that &lt;code>current&lt;/code> is optional, it was required and &lt;strong>must&lt;/strong> be in the list of &lt;code>id&lt;/code>.&lt;/p></description></item><item><title>search3</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/search3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/search3/</guid><description>&lt;p>&lt;code>http://your-server/rest/search3&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Returns albums, artists and songs matching the given search criteria. Supports paging through the result.&lt;/p>
+&lt;p>Music is organized according to ID3 tags.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Requ.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>query&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>See below*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Search query.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>artistCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of artists to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>artistOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for artists. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of albums to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for albums. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of songs to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for songs. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>) Only return results from music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ Servers must support an &lt;strong>empty query&lt;/strong> and return all the data to allow clients to properly access all the media information for offline sync.
+
+&lt;/div>
+
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/search3.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&amp;amp;query=&amp;quot;&amp;quot;&amp;amp;artistCount=1&amp;amp;albumCount=1&amp;amp;songCount=1&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> with a nested &lt;a href="../../responses/searchresult3">&lt;code>searchResult3&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>stream</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/stream/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/stream/</guid><description>&lt;p>&lt;code>http://your-server/rest/stream&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Streams a given media file.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>A string which uniquely identifies the file to stream. Obtained by calls to getMusicDirectory.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>maxBitRate&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>) If specified, the server will attempt to limit the bitrate to this value, in kilobits per second. If set to zero, no limit is imposed.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>format&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.6.0&lt;/a>) Specifies the preferred target format (e.g., &amp;ldquo;mp3&amp;rdquo; or &amp;ldquo;flv&amp;rdquo;) in case there are multiple applicable transcodings. Starting with &lt;a href="../../subsonic-versions">1.9.0&lt;/a> you can use the special value &amp;ldquo;raw&amp;rdquo; to disable transcoding.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>timeOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>No / &lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>By default only applicable to video streaming. If specified, start streaming at the given offset (in seconds) into the media. The &lt;a href="../../extensions/transcodeoffset/">&lt;code>Transcode Offset&lt;/code>&lt;/a> extension enables the parameter to music too.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.6.0&lt;/a>) Only applicable to video streaming. Requested video size specified as WxH, for instance &amp;ldquo;640x480&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>estimateContentLength&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>false&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>). If set to &amp;ldquo;true&amp;rdquo;, the &lt;em>Content-Length&lt;/em> HTTP header will be set to an estimated value for transcoded or downsampled media.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>converted&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>false&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.14.0&lt;/a>) Only applicable to video streaming. Servers can optimize videos for streaming by converting them to MP4. If a conversion exists for the video in question, then setting this parameter to &amp;ldquo;true&amp;rdquo; will cause the converted video to be returned instead of the original.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/stream.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with &amp;ldquo;text/xml&amp;rdquo;).&lt;/p></description></item></channel></rss>

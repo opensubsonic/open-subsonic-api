@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Addition on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/265/opensubsonic/addition/</link><description>Recent content in Addition on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/265/opensubsonic/addition/index.xml" rel="self" type="application/rss+xml"/><item><title>agent</title><link>https://opensubsonic.github.io/pr/265/docs/responses/agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/agent/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;lead&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;role&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;main&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Chris Martin&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;agent&lt;/span> &lt;span style="color:#bbb">id=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;lead&amp;#34;&lt;/span> &lt;span style="color:#bbb">role=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;main&amp;#34;&lt;/span> &lt;span style="color:#bbb">name=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Chris Martin&amp;#34;&lt;/span> &lt;span style="color:#6ab825;font-weight:bold">/&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;h5 id="example-agent-list-within-one-structuredlyrics-entry">Example agent list within one &lt;code>structuredLyrics&lt;/code> entry&lt;/h5>
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-03" role="tab"
+ aria-controls="tabs-01-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>[
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;lead&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;role&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;main&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Chris Martin&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;guest&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;role&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;voice&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Jin&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;choir&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;role&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;group&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;All&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;backing&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;role&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;bg&amp;#34;&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;agent&lt;/span> &lt;span style="color:#bbb">id=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;lead&amp;#34;&lt;/span> &lt;span style="color:#bbb">role=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;main&amp;#34;&lt;/span> &lt;span style="color:#bbb">name=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Chris Martin&amp;#34;&lt;/span> &lt;span style="color:#6ab825;font-weight:bold">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;agent&lt;/span> &lt;span style="color:#bbb">id=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;guest&amp;#34;&lt;/span> &lt;span style="color:#bbb">role=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;voice&amp;#34;&lt;/span> &lt;span style="color:#bbb">name=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Jin&amp;#34;&lt;/span> &lt;span style="color:#6ab825;font-weight:bold">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;agent&lt;/span> &lt;span style="color:#bbb">id=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;choir&amp;#34;&lt;/span> &lt;span style="color:#bbb">role=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;group&amp;#34;&lt;/span> &lt;span style="color:#bbb">name=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;All&amp;#34;&lt;/span> &lt;span style="color:#6ab825;font-weight:bold">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;agent&lt;/span> &lt;span style="color:#bbb">id=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;backing&amp;#34;&lt;/span> &lt;span style="color:#bbb">role=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;bg&amp;#34;&lt;/span> &lt;span style="color:#6ab825;font-weight:bold">/&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-03" role="tabpanel" aria-labelled-by="tabs-01-03-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>Opaque identifier for this agent. The value is only meaningful within the parent &lt;a href="../structuredlyrics">&lt;code>structuredLyrics&lt;/code>&lt;/a> entry and &lt;strong>must&lt;/strong> be unique within that entry&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>role&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>Semantic vocal-layer classification for cueLines that reference this agent. One of: &lt;code>main&lt;/code> (lead/default vocal layer), &lt;code>voice&lt;/code> (additional explicit individual voice part), &lt;code>bg&lt;/code> (background vocals), &lt;code>group&lt;/code> (group/chorus vocals). When a &lt;a href="../structuredlyrics">&lt;code>structuredLyrics&lt;/code>&lt;/a> entry uses &lt;code>agents&lt;/code> for cue-attributed lyrics, it &lt;strong>must&lt;/strong> define exactly one &lt;code>main&lt;/code> agent&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>name&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>Optional human-readable label for this agent, such as a singer or character name from the source metadata&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ This is a new OpenSubsonic response type added in extension &lt;a href="../../extensions/songlyrics">&lt;code>songLyrics&lt;/code>&lt;/a> version 2.
+
+&lt;/div></description></item><item><title>Contributor</title><link>https://opensubsonic.github.io/pr/265/docs/responses/contributor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/contributor/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;role&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;performer&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subRole&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Bass&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ar-1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Artist 1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>role&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The contributor role.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>subRole&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The subRole for roles that may require it. Ex: The instrument for the performer role (TMCL/performer tags). &lt;strong>Note:&lt;/strong> For consistency between different tag formats, the TIPL sub roles should be directly exposed in the role field.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>artist&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../artistid3">&lt;code>ArtistID3&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The artist taking on the role. (Note: Only the required &lt;a href="../artistid3">&lt;code>ArtistID3&lt;/code>&lt;/a> fields should be returned by default)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ This is a new OpenSubsonic response type.
+
+&lt;/div></description></item><item><title>cue</title><link>https://opensubsonic.github.io/pr/265/docs/responses/cue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/cue/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2747&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3018&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;눈&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2747&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3018&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>눈&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;h5 id="example-with-byte-offsets">Example with byte offsets&lt;/h5>
+&lt;p>When untimed text appears between timed cues, &lt;code>byteStart&lt;/code> and &lt;code>byteEnd&lt;/code> disambiguate repeated tokens by pointing at the exact substring within the parent &lt;code>cueLine.value&lt;/code>. For example, within &lt;code>cueLine.value = &amp;quot;Oh love love me tonight&amp;quot;&lt;/code>, the timed second &lt;code>love&lt;/code> uses &lt;code>byteStart = 8&lt;/code> and &lt;code>byteEnd = 11&lt;/code>:&lt;/p></description></item><item><title>cueLine</title><link>https://opensubsonic.github.io/pr/265/docs/responses/cueline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/cueline/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;index&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2747&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">6214&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;눈을 뜬 순간&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;cue&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2747&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3018&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;눈&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3018&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3179&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;을&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3179&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3582&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34; &amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">6&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">6&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3582&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4100&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;뜬&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">7&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">9&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4100&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4500&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34; &amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">10&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">10&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4500&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5200&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;순&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">11&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">13&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">5200&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">6214&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;간&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">14&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cueLine&lt;/span> &lt;span style="color:#bbb">index=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2747&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;6214&amp;#34;&lt;/span> &lt;span style="color:#bbb">value=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;눈을 뜬 순간&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2747&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3018&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>눈&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3018&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3179&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;5&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>을&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3179&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3582&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;6&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;6&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3582&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;4100&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;7&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;9&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>뜬&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;4100&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;4500&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;10&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;10&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;4500&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;5200&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;11&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;13&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>순&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;5200&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;6214&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;14&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;16&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>간&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cueLine&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;h5 id="example-with-agent-attribution">Example with agent attribution&lt;/h5>
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-03" role="tab"
+ aria-controls="tabs-01-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;index&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;You and I&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;agentId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;lead&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;cue&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1000&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1800&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;You &amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1800&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2400&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;and &amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">7&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2400&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;end&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3200&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;I&amp;#34;&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteStart&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span>, &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;byteEnd&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">8&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cueLine&lt;/span> &lt;span style="color:#bbb">index=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;1000&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;4000&amp;#34;&lt;/span> &lt;span style="color:#bbb">value=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;You and I&amp;#34;&lt;/span> &lt;span style="color:#bbb">agentId=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;lead&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;1000&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;1800&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>You &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;1800&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2400&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;4&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;7&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>and &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;cue&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2400&amp;#34;&lt;/span> &lt;span style="color:#bbb">end=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3200&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteStart=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;8&amp;#34;&lt;/span> &lt;span style="color:#bbb">byteEnd=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;8&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>I&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cue&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/cueLine&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-03" role="tabpanel" aria-labelled-by="tabs-01-03-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;h5 id="example-with-ambiguous-repeated-text">Example with ambiguous repeated text&lt;/h5>
+&lt;p>When untimed text appears between timed cues, &lt;code>cueLine.value&lt;/code> plus cue &lt;code>byteStart&lt;/code> / &lt;code>byteEnd&lt;/code> offsets identifies the exact occurrence of a repeated token:&lt;/p></description></item><item><title>DiscTitle</title><link>https://opensubsonic.github.io/pr/265/docs/responses/disctitle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/disctitle/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;disc&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;The disc title&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ed9d13">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;65135&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>disc&lt;/code>&lt;/td>
+ &lt;td>&lt;code>int&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The disc number.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>title&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The name of the disc.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>coverArt&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The cover art ID of the disc.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ This is a new OpenSubsonic response type.
+
+&lt;/div></description></item><item><title>findSonicPath</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/findsonicpath/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/findsonicpath/</guid><description>&lt;p>&lt;code>http://your-server/rest/findSonicPath&lt;/code>&lt;/p>
+&lt;p>Finds a path of songs connecting a start song to an end song, navigating through audio similarity space.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>startSongId&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the starting song.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>endSongId&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the ending/target song.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>count&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>25&lt;/td>
+ &lt;td>Maximum number of songs in the path.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/findSonicPath.view?startSongId=100&amp;amp;endSongId=200&amp;amp;count=5&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a top-level &lt;code>sonicMatch&lt;/code> array on success. The returned path MUST contain the start song as the first entry and the end song as the last entry.&lt;/p></description></item><item><title>getOpenSubsonicExtensions</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getopensubsonicextensions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getopensubsonicextensions/</guid><description>&lt;p>&lt;code>http://your-server/rest/getOpenSubsonicExtensions&lt;/code> OpenSubsonic version &lt;a href="../../opensubsonic-versions">1&lt;/a>&lt;/p>
+&lt;p>List the OpenSubsonic extensions supported by this server.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;p>Takes no extra parameters.&lt;/p>
+&lt;p>&lt;strong>Note&lt;/strong>: Unlike all other APIs &lt;code>getOpenSubsonicExtensions&lt;/code> &lt;strong>must&lt;/strong> be publicly accessible.&lt;/p>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getOpenSubsonicExtensions.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;code>openSubsonicExtensions&lt;/code> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonicExtensions&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;template&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;versions&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#3677a9">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;transcodeOffset&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;versions&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#3677a9">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;sonicSimilarity&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;versions&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#3677a9">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;topSongsByArtistId&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;versions&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#3677a9">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>openSubsonicExtensions&lt;/code>&lt;/td>
+ &lt;td>An array of &lt;a href="../../responses/opensubsonicextension">&lt;code>openSubsonicExtension&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The list of supported extensions&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ This is a new endpoint.
+
+&lt;/div></description></item><item><title>getSonicSimilarTracks</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getsonicsimilartracks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getsonicsimilartracks/</guid><description>&lt;p>&lt;code>http://your-server/rest/getSonicSimilarTracks&lt;/code>&lt;/p>
+&lt;p>Returns tracks that are sonically similar to a given track, based on audio analysis. Results are ordered from most similar to least similar. Each result includes a normalized similarity score to the query track. Higher values indicate greater similarity, with &lt;code>1.0&lt;/code> meaning it is the exact same song and &lt;code>0.0&lt;/code> meaning the most different.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the song.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>count&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>10&lt;/td>
+ &lt;td>Max number of similar tracks to return.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getSonicSimilarTracks.view?id=100&amp;amp;count=5&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a top-level &lt;code>sonicMatch&lt;/code> array on success.&lt;/p></description></item><item><title>getTopSongs</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/gettopsongs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/gettopsongs/</guid><description>&lt;p>&lt;code>http://your-server/rest/getTopSongs&lt;/code> Since &lt;a href="../../subsonic-versions">1.13.0&lt;/a>&lt;/p>
+&lt;p>Returns top songs for the given artist, using data from &lt;a href="http://last.fm">last.fm&lt;/a>.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>artist&lt;/code>&lt;/td>
+ &lt;td>Yes, unless &lt;code>id&lt;/code> is provided*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The artist name.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The artist ID. Requires the &lt;a href="../../extensions/topsongsbyartistid/">&lt;code>topSongsByArtistId&lt;/code>&lt;/a> extension.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>count&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>50&lt;/td>
+ &lt;td>Max number of songs to return.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ &lt;p>* If the server supports the &lt;a href="../../extensions/topsongsbyartistid/">&lt;code>topSongsByArtistId&lt;/code>&lt;/a> extension, it &lt;strong>must&lt;/strong> accept the &lt;code>id&lt;/code> parameter and return the top songs for the artist with that ID. When &lt;code>id&lt;/code> is provided, &lt;code>artist&lt;/code> is not required, and &lt;code>id&lt;/code> takes precedence over it.&lt;/p></description></item><item><title>line</title><link>https://opensubsonic.github.io/pr/265/docs/responses/line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/line/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;It&amp;#39;s bugging me&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>It&amp;#39;s bugging me&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>value&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The actual text of this line&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>start&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The start time of the lyrics, relative to the start time of the track, in milliseconds. If this is not part of synced lyrics, &lt;code>start&lt;/code> &lt;strong>must&lt;/strong> be omitted&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>end&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The exact end time on the same timeline as &lt;code>start&lt;/code>, in milliseconds. When present, &lt;code>start&lt;/code> &lt;strong>must&lt;/strong> also be present and &lt;code>end&lt;/code> &lt;strong>must&lt;/strong> be greater than or equal to &lt;code>start&lt;/code>. Only returned by &lt;a href="../../extensions/songlyrics">&lt;code>songLyrics&lt;/code>&lt;/a> version 2 with &lt;code>enhanced=true&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>&lt;code>end&lt;/code> is optional independently for each line. Its omission means the exact end is unknown. Servers &lt;strong>must not&lt;/strong> derive &lt;code>end&lt;/code> from the next line&amp;rsquo;s &lt;code>start&lt;/code>. Clients may infer a fallback end, for example from the next line&amp;rsquo;s start, but should not treat it as exact source timing. Gaps and overlapping lines are valid, as is &lt;code>end == start&lt;/code> for an instantaneous marker. Unsynced lyrics &lt;strong>must&lt;/strong> omit both &lt;code>start&lt;/code> and &lt;code>end&lt;/code>.&lt;/p></description></item><item><title>lyricsList</title><link>https://opensubsonic.github.io/pr/265/docs/responses/lyricslist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/lyricslist/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;structuredLyrics&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;displayArtist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Muse&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;displayTitle&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hysteria&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;lang&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;eng&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;offset&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">-100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;synced&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;line&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;It&amp;#39;s bugging me&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Grating me&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3001&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;And twisting me around...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;displayArtist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Muse&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;displayTitle&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hysteria&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;lang&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;xxx&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;offset&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;synced&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;line&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;It&amp;#39;s bugging me&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Grating me&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;And twisting me around...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;lyricsList&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;structuredLyrics&lt;/span> &lt;span style="color:#bbb">displayArtist=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Muse&amp;#34;&lt;/span> &lt;span style="color:#bbb">displayTitle=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Hysteria&amp;#34;&lt;/span> &lt;span style="color:#bbb">lang=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;eng&amp;#34;&lt;/span> &lt;span style="color:#bbb">offset=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;-100&amp;#34;&lt;/span> &lt;span style="color:#bbb">synced=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;true&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>It&amp;#39;s bugging me&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2000&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>Grating me&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3001&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>And twisting me around...&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/structuredLyrics&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;structuredLyrics&lt;/span> &lt;span style="color:#bbb">displayArtist=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Muse&amp;#34;&lt;/span> &lt;span style="color:#bbb">displayTitle=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Hysteria&amp;#34;&lt;/span> &lt;span style="color:#bbb">lang=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;xxx&amp;#34;&lt;/span> &lt;span style="color:#bbb">offset=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;100&amp;#34;&lt;/span> &lt;span style="color:#bbb">synced=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;false&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&amp;gt;&lt;/span>It&amp;#39;s bugging me&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&amp;gt;&lt;/span>Grating me&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&amp;gt;&lt;/span>And twisting me around...&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/structuredLyrics&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/lyricsList&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>structuredLyrics&lt;/code>&lt;/td>
+ &lt;td>Array of &lt;a href="../structuredlyrics">&lt;code>structuredLyrics&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>Structured lyrics. There can be multiple lyrics of the same type with the same language&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ This is a new OpenSubsonic response type.
+
+&lt;/div></description></item><item><title>Movement</title><link>https://opensubsonic.github.io/pr/265/docs/responses/movement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/movement/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Andante con moto&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;number&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;count&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>name&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The movement name.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>&lt;code>int&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The movement number.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>count&lt;/code>&lt;/td>
+ &lt;td>&lt;code>int&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The total number of movements.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ This is a new OpenSubsonic response type.
+
+&lt;/div></description></item><item><title>ReplayGain</title><link>https://opensubsonic.github.io/pr/265/docs/responses/replaygain/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/replaygain/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;trackGain&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0.1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumGain&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1.1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;trackPeak&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">9.2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumPeak&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;baseGain&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;fallbackGain&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">-8.1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>trackGain&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The track replay gain value. (In Db)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumGain&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The album replay gain value. (In Db)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>trackPeak&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The track peak value. (Must be positive)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumPeak&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The album peak value. (Must be positive)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>baseGain&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The base gain value. (In Db) (Ogg Opus Output Gain for example)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>fallbackGain&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>An optional fallback gain that clients should apply when the corresponding gain value is missing. (Can be computed from the tracks or exposed as an user setting.)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>Note&lt;/strong>: If the data is not present the field must be omitted in the answer. (But the replayGain field on &lt;a href="../child">&lt;code>Child&lt;/code>&lt;/a> must always be present)&lt;/p></description></item><item><title>sonicMatch</title><link>https://opensubsonic.github.io/pr/265/docs/responses/sonicmatch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/sonicmatch/</guid><description>&lt;p>A &lt;code>sonicMatch&lt;/code> is a wrapper object with:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>entry&lt;/code> as a &lt;a href="../child">&lt;code>Child&lt;/code>&lt;/a> object&lt;/li>
+&lt;li>&lt;code>similarity&lt;/code> (normalized similarity value)&lt;/li>
+&lt;/ul>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;entry&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;parent&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;BrownSmoke&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isDir&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;isVideo&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;music&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;albumId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;200000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;album&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Colorsmoke EP&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artistId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;100000002&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;coverArt&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;300000060&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;duration&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">304&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">20&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;bitDepth&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">16&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;samplingRate&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">44100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;channelCount&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;track&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">4&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;year&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2007&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;genre&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Electronic&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;size&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">792375&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;discNumber&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;suffix&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;contentType&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;audio/x-ms-wma&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Synthetic/Synthetic_-_Colorsmoke_EP/04-Synthetic_-_BrownSmoke.wma&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;similarity&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">1.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a61717;background-color:#e3d2d2">Does&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">not&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">exist.&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>entry&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../child">&lt;code>Child&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The child metadata object (id, parent, title, etc.).&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>similarity&lt;/code>&lt;/td>
+ &lt;td>&lt;code>number&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The normalized similarity score (1.0 = same exact song, 0.0 = most different). For &lt;code>getSonicSimilarTracks&lt;/code>, relative to the query song. For &lt;code>findSonicPath&lt;/code>, relative to the starting song. Returns -1 when similarity is not supported by the server.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>stream</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/stream/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/stream/</guid><description>&lt;p>&lt;code>http://your-server/rest/stream&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Streams a given media file.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>A string which uniquely identifies the file to stream. Obtained by calls to getMusicDirectory.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>maxBitRate&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>) If specified, the server will attempt to limit the bitrate to this value, in kilobits per second. If set to zero, no limit is imposed.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>format&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.6.0&lt;/a>) Specifies the preferred target format (e.g., &amp;ldquo;mp3&amp;rdquo; or &amp;ldquo;flv&amp;rdquo;) in case there are multiple applicable transcodings. Starting with &lt;a href="../../subsonic-versions">1.9.0&lt;/a> you can use the special value &amp;ldquo;raw&amp;rdquo; to disable transcoding.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>timeOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>No / &lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>By default only applicable to video streaming. If specified, start streaming at the given offset (in seconds) into the media. The &lt;a href="../../extensions/transcodeoffset/">&lt;code>Transcode Offset&lt;/code>&lt;/a> extension enables the parameter to music too.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.6.0&lt;/a>) Only applicable to video streaming. Requested video size specified as WxH, for instance &amp;ldquo;640x480&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>estimateContentLength&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>false&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>). If set to &amp;ldquo;true&amp;rdquo;, the &lt;em>Content-Length&lt;/em> HTTP header will be set to an estimated value for transcoded or downsampled media.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>converted&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>false&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.14.0&lt;/a>) Only applicable to video streaming. Servers can optimize videos for streaming by converting them to MP4. If a conversion exists for the video in question, then setting this parameter to &amp;ldquo;true&amp;rdquo; will cause the converted video to be returned instead of the original.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/stream.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with &amp;ldquo;text/xml&amp;rdquo;).&lt;/p></description></item><item><title>structuredLyrics</title><link>https://opensubsonic.github.io/pr/265/docs/responses/structuredlyrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/structuredlyrics/</guid><description>&lt;h3 id="version-1-line-level">Version 1 (line-level)&lt;/h3>
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;displayArtist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Muse&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;displayTitle&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Hysteria&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;lang&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;xxx&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;offset&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">-100&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;synced&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;line&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">0&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;It&amp;#39;s bugging me&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">2000&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Grating me&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#3677a9">3001&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;And twisting me around...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;structuredLyrics&lt;/span> &lt;span style="color:#bbb">displayArtist=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Muse&amp;#34;&lt;/span> &lt;span style="color:#bbb">displayTitle=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;Hysteria&amp;#34;&lt;/span> &lt;span style="color:#bbb">lang=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;xxx&amp;#34;&lt;/span> &lt;span style="color:#bbb">offset=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;-100&amp;#34;&lt;/span> &lt;span style="color:#bbb">synced=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;true&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>It&amp;#39;s bugging me&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;2000&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>Grating me&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;line&lt;/span> &lt;span style="color:#bbb">start=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;3001&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>And twisting me around...&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/line&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/structuredLyrics&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;h3 id="version-2-enhanced--wordsyllable-level-with-kind">Version 2 (enhanced — word/syllable-level with kind)&lt;/h3>
+&lt;p>When &lt;code>enhanced=true&lt;/code> is passed to &lt;a href="../../endpoints/getlyricsbysongid">&lt;code>getLyricsBySongId&lt;/code>&lt;/a>, the response includes additional fields: &lt;code>kind&lt;/code> to classify lyric tracks, optional exact &lt;code>line.end&lt;/code> timing, &lt;code>cueLine&lt;/code> arrays with word/syllable-level timing, cue &lt;code>byteStart&lt;/code> / &lt;code>byteEnd&lt;/code> offsets into &lt;code>cueLine.value&lt;/code>, and optional &lt;code>agents&lt;/code> arrays for reusable agent attribution.&lt;/p></description></item><item><title>tokenInfo</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/tokeninfo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/tokeninfo/</guid><description>&lt;p>&lt;strong>OpenSubsonic version&lt;/strong>: &lt;a href="../../opensubsonic-versions">1&lt;/a>&lt;/p>
+&lt;p>&lt;strong>OpenSubsonic extension name&lt;/strong> &lt;code>apiKeyAuthentication&lt;/code> (As returned by &lt;a href="../../endpoints/getopensubsonicextensions">&lt;code>getOpenSubsonicExtensions&lt;/code>&lt;/a>)&lt;/p>
+&lt;p>Returns data about an API key.&lt;/p>
+&lt;p>&lt;code>http://your-server/rest/tokenInfo&lt;/code>&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;p>None&lt;/p>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/tokenInfo.view?apiKey=1234&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/tokenInfo/">&lt;code>tokenInfo&lt;/code>&lt;/a> on success, or error 44 on invalid token.&lt;/p>
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-03" role="tab"
+ aria-controls="tabs-01-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;tokenInfo&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;token username&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;subsonic-response&lt;/span> &lt;span style="color:#bbb">status=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span> &lt;span style="color:#bbb">version=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span> &lt;span style="color:#bbb">type=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span> &lt;span style="color:#bbb">serverVersion=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span> &lt;span style="color:#bbb">openSubsonic=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;true&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;lt;tokenInfo&lt;/span> &lt;span style="color:#bbb">username=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;token username&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&amp;lt;/tokenInfo&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;/subsonic-response&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-03" role="tabpanel" aria-labelled-by="tabs-01-03-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>tokenInfo&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/tokeninfo">&lt;code>tokenInfo&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>Information about the token&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>tokenInfo</title><link>https://opensubsonic.github.io/pr/265/docs/responses/tokeninfo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/tokeninfo/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic JSON
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ OpenSubsonic XML
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;tokenInfo&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;username&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;token username&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6ab825;font-weight:bold">&amp;lt;tokenInfo&lt;/span> &lt;span style="color:#bbb">username=&lt;/span>&lt;span style="color:#ed9d13">&amp;#34;token username&amp;#34;&lt;/span>&lt;span style="color:#6ab825;font-weight:bold">&amp;gt;&amp;lt;/tokenInfo&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>username&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>Username associated with token&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>Work</title><link>https://opensubsonic.github.io/pr/265/docs/responses/work/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/responses/work/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Symphony No. 5 in C minor, Op. 67&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;musicBrainzId&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;d03bff61-26fc-301b-98ac-4d8e85771cbc&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>Does not exist.&lt;/code>&lt;/pre>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>name&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The work name.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicBrainzId&lt;/code>&lt;/td>
+ &lt;td>&lt;code>string&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>The MusicBrainz Work ID.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ This is a new OpenSubsonic response type.
+
+&lt;/div></description></item></channel></rss>

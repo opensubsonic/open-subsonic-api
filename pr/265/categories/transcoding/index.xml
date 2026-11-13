@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transcoding on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/265/categories/transcoding/</link><description>Recent content in Transcoding on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/265/categories/transcoding/index.xml" rel="self" type="application/rss+xml"/><item><title>getTranscodeDecision</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/gettranscodedecision/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/gettranscodedecision/</guid><description>&lt;p>&lt;code>http://your-server/rest/getTranscodeDecision&lt;/code>&lt;/p>
+&lt;p>Returns a transcode decision for a given media file. This endpoint is used by clients to determine if a media file should be transcoded before streaming. The server will analyze the provided client information and return a decision.
+This endpoint must be accessed using a POST request&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>mediaId&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the media to be transcoded.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>mediaType&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Either song or podcast so the server knows what the mediaId is referring to.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="request-body">Request Body&lt;/h3>
+&lt;p>The request body must be a JSON object containing the client&amp;rsquo;s capabilities. See the &lt;a href="https://opensubsonic.github.io/pr/265/docs/payloads/clientinfo/">&lt;code>ClientInfo&lt;/code>&lt;/a> documentation for more details.&lt;/p></description></item><item><title>getTranscodeStream</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/gettranscodestream/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/gettranscodestream/</guid><description>&lt;p>&lt;code>http://your-server/rest/getTranscodeStream&lt;/code>&lt;/p>
+&lt;p>Returns a transcoded media stream. &lt;strong>Note:&lt;/strong> Clients should not try to reconstruct the &lt;code>transcodeParams&lt;/code>. Instead, they must use the &lt;code>transcodeParams&lt;/code> provided in the response of the &lt;a href="../gettranscodedecision">&lt;code>getTranscodeDecision&lt;/code>&lt;/a> endpoint.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>mediaId&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the media to be transcoded.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>mediaType&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Either song or podcast so the server knows what the mediaId is referring to.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>offset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>The time offset in seconds from which to start transcoding.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>transcodeParams&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Server-specific transcoding parameters, obtained from the property &lt;code>transcodeParams&lt;/code> of the result of the endpoint &lt;code>getTranscodeDecision&lt;/code>. The value is unique and already properly escaped.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getTranscodeStream.view?mediaIdId=123&amp;amp;mediaType=song&amp;amp;offset=0&amp;amp;parameters=...&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.16.1&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>The raw transcoded media stream. In case of an error, a standard HTTP error code is returned with a descriptive message.&lt;/p></description></item></channel></rss>

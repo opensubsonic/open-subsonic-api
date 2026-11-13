@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Media Retrieval on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/265/categories/media-retrieval/</link><description>Recent content in Media Retrieval on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/265/categories/media-retrieval/index.xml" rel="self" type="application/rss+xml"/><item><title>download</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/download/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/download/</guid><description>&lt;p>&lt;code>http://your-server/rest/download&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Downloads a given media file. Similar to &lt;a href="../stream">stream&lt;/a>, but this method returns the original media data without transcoding or downsampling.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>A string which uniquely identifies the file to stream. Obtained by calls to getMusicDirectory.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/download.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with “text/xml”).&lt;/p></description></item><item><title>getAvatar</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getavatar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getavatar/</guid><description>&lt;p>&lt;code>http://your-server/rest/getAvatar&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Returns the avatar (personal image) for a user.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>username&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The user in question..&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getAvatar.view?username=test&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns the avatar image in binary form on success, or an XML document on error (in which case the HTTP content type will start with “text/xml”).&lt;/p></description></item><item><title>getCaptions</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getcaptions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getcaptions/</guid><description>&lt;p>&lt;code>http://your-server/rest/getCaptions&lt;/code> Since &lt;a href="../../subsonic-versions">1.14.0&lt;/a>&lt;/p>
+&lt;p>Returns captions (subtitles) for a video. Use &lt;a href="../getvideoinfo">&lt;code>getVideoInfo&lt;/code>&lt;/a> to get a list of available captions.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the video.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>format&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Preferred captions format (&amp;ldquo;srt&amp;rdquo; or &amp;ldquo;vtt&amp;rdquo;).&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getCaptions.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns the raw video captions.&lt;/p></description></item><item><title>getCoverArt</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getcoverart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getcoverart/</guid><description>&lt;p>&lt;code>http://your-server/rest/getCoverArt&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Returns a cover art image.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The coverArt ID. Returned by most entities likes &lt;a href="../../responses/child">&lt;code>Child&lt;/code>&lt;/a> or &lt;a href="../../responses/albumid3">&lt;code>AlbumID3&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>If specified, scale image to this size.&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ &lt;p>In the original Subsonic, the &lt;code>id&lt;/code> could refer to several entities: song, album or artist.&lt;/p>
+&lt;p>For OpenSubsonic servers, &lt;code>id&lt;/code> refers to coverArt ID only.&lt;/p>
+
+
+&lt;/div>
+
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getCoverArt.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with “text/xml”).&lt;/p></description></item><item><title>getLyrics</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getlyrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getlyrics/</guid><description>&lt;p>&lt;code>http://your-server/rest/getLyrics&lt;/code> Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>&lt;/p>
+&lt;p>Searches for and returns lyrics for a given song.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>artist&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The artist name.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>title&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The song title.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/getLyrics.view?artist=toto&amp;amp;title=tata&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/lyrics">&lt;code>lyrics&lt;/code>&lt;/a> element on success.&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+ aria-controls="tabs-01-00" aria-selected="false">
+ &lt;strong>Example&lt;/strong>:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+ aria-controls="tabs-01-01" aria-selected="true">
+ OpenSubsonic
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
+ aria-controls="tabs-01-02" aria-selected="false">
+ Subsonic
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-1-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;AwesomeServerName&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;serverVersion&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;0.1.3 (tag)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;openSubsonic&amp;#34;&lt;/span>: &lt;span style="color:#6ab825;font-weight:bold">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;lyrics&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Metallica&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Blitzkrieg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Let us have peace, let us have life\n\nLet us escape the cruel night\n\nLet us have time, let the sun shine\n\nLet us beware the deadly sign\n\n\n\nThe day is coming\n\nArmageddon&amp;#39;s near\n\nInferno&amp;#39;s coming\n\nCan we survive the blitzkrieg?\n\nThe blitzkrieg\n\nThe blitzkrieg\n\n\n\nSave us from fate, save us from hate\n\nSave ourselves before it&amp;#39;s too late\n\nCome to our need, hear our plea\n\nSave ourselves before the earth bleeds\n\n\n\nThe day is dawning\n\nThe time is near\n\nAliens calling\n\nCan we survive the blitzkrieg?&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-01-02" role="tabpanel" aria-labelled-by="tabs-01-02-tab" tabindex="1">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;subsonic-response&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;ok&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;1.16.1&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;lyrics&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;artist&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Metallica&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Blitzkrieg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6ab825;font-weight:bold">&amp;#34;value&amp;#34;&lt;/span>: &lt;span style="color:#ed9d13">&amp;#34;Let us have peace, let us have life\n\nLet us escape the cruel night\n\nLet us have time, let the sun shine\n\nLet us beware the deadly sign\n\n\n\nThe day is coming\n\nArmageddon&amp;#39;s near\n\nInferno&amp;#39;s coming\n\nCan we survive the blitzkrieg?\n\nThe blitzkrieg\n\nThe blitzkrieg\n\n\n\nSave us from fate, save us from hate\n\nSave ourselves before it&amp;#39;s too late\n\nCome to our need, hear our plea\n\nSave ourselves before the earth bleeds\n\n\n\nThe day is dawning\n\nThe time is near\n\nAliens calling\n\nCan we survive the blitzkrieg?&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Details&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>lyrics&lt;/code>&lt;/td>
+ &lt;td>&lt;a href="../../responses/lyrics">&lt;code>lyrics&lt;/code>&lt;/a>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The lyrics&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>getLyricsBySongId</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/getlyricsbysongid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/getlyricsbysongid/</guid><description>&lt;p>&lt;strong>OpenSubsonic version&lt;/strong>: &lt;a href="../../opensubsonic-versions">1&lt;/a>&lt;/p>
+&lt;p>&lt;strong>OpenSubsonic extension name&lt;/strong> &lt;code>songLyrics&lt;/code> (As returned by &lt;a href="../../endpoints/getopensubsonicextensions">&lt;code>getOpenSubsonicExtensions&lt;/code>&lt;/a>)&lt;/p>
+&lt;p>Retrieves all structured lyrics from the server for a given song.
+The lyrics can come from embedded tags (&lt;code>SYLT&lt;/code>/&lt;code>USLT&lt;/code>), LRC file/text file, or any other external source.&lt;/p>
+&lt;p>&lt;code>http://your-server/rest/getLyricsBySongId&lt;/code>&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The track ID.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>enhanced&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;code>false&lt;/code>&lt;/td>
+ &lt;td>When &lt;code>true&lt;/code>, the response includes &lt;a href="../../responses/cueline">&lt;code>cueLine&lt;/code>&lt;/a> arrays, cue &lt;code>byteStart&lt;/code> / &lt;code>byteEnd&lt;/code> offsets into &lt;code>cueLine.value&lt;/code>, and non-main &lt;a href="../../responses/structuredlyrics">&lt;code>kind&lt;/code>&lt;/a> tracks (translations, pronunciations). When &lt;code>false&lt;/code> or omitted, only &lt;code>kind=&amp;quot;main&amp;quot;&lt;/code> entries are returned with no &lt;code>cueLine&lt;/code> data. Added in &lt;a href="../../extensions/songlyrics">&lt;code>songLyrics&lt;/code>&lt;/a> version 2.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Special notes about the lang field&lt;/h4>
+
+ &lt;p>Ideally, the server will return &lt;code>lang&lt;/code> as an ISO 639 (2/3) code.
+However, tagged files and external lyrics can come with any value as a potential language code, so clients should take care when displaying &lt;code>lang&lt;/code>.&lt;/p></description></item><item><title>hls</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/hls/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/hls/</guid><description>&lt;p>&lt;code>http://your-server/rest/hls.m3u8&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Creates an HLS (&lt;a href="http://en.wikipedia.org/wiki/HTTP_Live_Streaming">HTTP Live Streaming&lt;/a>) playlist used for streaming video or audio. HLS is a streaming protocol implemented by Apple and works by breaking the overall stream into a sequence of small HTTP-based file downloads. It&amp;rsquo;s supported by iOS and newer versions of Android. This method also supports &lt;strong>adaptive bitrate streaming&lt;/strong>, see the &lt;code>bitRate&lt;/code> parameter.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>A string which uniquely identifies the media file to stream.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>bitRate&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>If specified, the server will attempt to limit the bitrate to this value, in kilobits per second. If this parameter is specified more than once, the server will create a &lt;strong>variant playlist&lt;/strong>, suitable for adaptive bitrate streaming. The playlist will support streaming at all the specified bitrates. The server will automatically choose video dimensions that are suitable for the given bitrates. Since &lt;a href="../../subsonic-versions">1.9.0&lt;/a> you may explicitly request a certain width (480) and height (360) like so: &lt;code>bitRate=1000@480x360&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>audioTrack&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>The ID of the audio track to use. See&lt;a href="../getvideoinfo">&lt;code>getVideoInfo&lt;/code>&lt;/a> for how to get the list of available audio tracks for a video.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/hls.m3u8?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns an M3U8 playlist on success (content type &amp;ldquo;application/vnd.apple.mpegurl&amp;rdquo;), or an XML document on error (in which case the HTTP content type will start with &amp;ldquo;text/xml&amp;rdquo;).&lt;/p></description></item><item><title>stream</title><link>https://opensubsonic.github.io/pr/265/docs/endpoints/stream/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/265/docs/endpoints/stream/</guid><description>&lt;p>&lt;code>http://your-server/rest/stream&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Streams a given media file.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>id&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>A string which uniquely identifies the file to stream. Obtained by calls to getMusicDirectory.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>maxBitRate&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.2.0&lt;/a>) If specified, the server will attempt to limit the bitrate to this value, in kilobits per second. If set to zero, no limit is imposed.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>format&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.6.0&lt;/a>) Specifies the preferred target format (e.g., &amp;ldquo;mp3&amp;rdquo; or &amp;ldquo;flv&amp;rdquo;) in case there are multiple applicable transcodings. Starting with &lt;a href="../../subsonic-versions">1.9.0&lt;/a> you can use the special value &amp;ldquo;raw&amp;rdquo; to disable transcoding.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>timeOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>No / &lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>By default only applicable to video streaming. If specified, start streaming at the given offset (in seconds) into the media. The &lt;a href="../../extensions/transcodeoffset/">&lt;code>Transcode Offset&lt;/code>&lt;/a> extension enables the parameter to music too.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>size&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.6.0&lt;/a>) Only applicable to video streaming. Requested video size specified as WxH, for instance &amp;ldquo;640x480&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>estimateContentLength&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>false&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>). If set to &amp;ldquo;true&amp;rdquo;, the &lt;em>Content-Length&lt;/em> HTTP header will be set to an estimated value for transcoded or downsampled media.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>converted&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>false&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.14.0&lt;/a>) Only applicable to video streaming. Servers can optimize videos for streaming by converting them to MP4. If a conversion exists for the video in question, then setting this parameter to &amp;ldquo;true&amp;rdquo; will cause the converted video to be returned instead of the original.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/stream.view?id=123&amp;amp;u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>Returns binary data on success, or an XML document on error (in which case the HTTP content type will start with &amp;ldquo;text/xml&amp;rdquo;).&lt;/p></description></item></channel></rss>

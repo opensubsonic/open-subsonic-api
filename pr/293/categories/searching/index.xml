@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Searching on OpenSubsonic</title><link>https://opensubsonic.github.io/pr/293/categories/searching/</link><description>Recent content in Searching on OpenSubsonic</description><generator>Hugo</generator><language>en</language><atom:link href="https://opensubsonic.github.io/pr/293/categories/searching/index.xml" rel="self" type="application/rss+xml"/><item><title>search</title><link>https://opensubsonic.github.io/pr/293/docs/endpoints/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/293/docs/endpoints/search/</guid><description>&lt;p>&lt;code>http://your-server/rest/search&lt;/code> Since &lt;a href="../../subsonic-versions">1.0.0&lt;/a>&lt;/p>
+&lt;p>Deprecated since &lt;a href="../../subsonic-versions">1.4.0&lt;/a>, use &lt;a href="../search2">&lt;code>search2&lt;/code>&lt;/a> instead.&lt;/p>
+&lt;p>Returns a listing of files matching the given search criteria. Supports paging through the result.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>artist&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Artist to search for.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>album&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Album to search for.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>title&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Song title to search for.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>any&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Searches all fields.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>count&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of results to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>offset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>newerThan&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Only return matches that are newer than this. Given as milliseconds since 1970.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/search.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/searchresult">&lt;code>searchResult&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>search2</title><link>https://opensubsonic.github.io/pr/293/docs/endpoints/search2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/293/docs/endpoints/search2/</guid><description>&lt;p>&lt;code>http://your-server/rest/search2&lt;/code> Since &lt;a href="../../subsonic-versions">1.4.0&lt;/a>&lt;/p>
+&lt;p>Returns albums, artists and songs matching the given search criteria. Supports paging through the result.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Req.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>query&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Search query.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>artistCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of artists to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>artistOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for artists. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of albums to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for albums. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of songs to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for songs. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>) Only return results from the music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/search2.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> element with a nested &lt;a href="../../responses/searchresult2">&lt;code>searchResult2&lt;/code>&lt;/a> element on success.&lt;/p></description></item><item><title>search3</title><link>https://opensubsonic.github.io/pr/293/docs/endpoints/search3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://opensubsonic.github.io/pr/293/docs/endpoints/search3/</guid><description>&lt;p>&lt;code>http://your-server/rest/search3&lt;/code> Since &lt;a href="../../subsonic-versions">1.8.0&lt;/a>&lt;/p>
+&lt;p>Returns albums, artists and songs matching the given search criteria. Supports paging through the result.&lt;/p>
+&lt;p>Music is organized according to ID3 tags.&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Parameter&lt;/th>
+ &lt;th>Requ.&lt;/th>
+ &lt;th>OpenS.&lt;/th>
+ &lt;th>Default&lt;/th>
+ &lt;th>Comment&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>query&lt;/code>&lt;/td>
+ &lt;td>&lt;strong>Yes&lt;/strong>&lt;/td>
+ &lt;td>See below*&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>Search query.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>artistCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of artists to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>artistOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for artists. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of albums to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>albumOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for albums. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songCount&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>20&lt;/td>
+ &lt;td>Maximum number of songs to return.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>songOffset&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>Search result offset for songs. Used for paging.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>musicFolderId&lt;/code>&lt;/td>
+ &lt;td>No&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>(Since &lt;a href="../../subsonic-versions">1.12.0&lt;/a>) Only return results from music folder with the given ID. See &lt;code>getMusicFolders&lt;/code>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OpenSubsonic&lt;/h4>
+
+ Servers must support an &lt;strong>empty query&lt;/strong> and return all the data to allow clients to properly access all the media information for offline sync.
+
+&lt;/div>
+
+&lt;h3 id="example">Example&lt;/h3>
+
+
+&lt;div class="alert alert-primary" role="alert">
+
+
+ &lt;code>http://your-server/rest/search3.view?u=demo&amp;amp;p=demo&amp;amp;v=1.13.0&amp;amp;c=AwesomeClientName&amp;amp;f=json&amp;amp;query=&amp;quot;&amp;quot;&amp;amp;artistCount=1&amp;amp;albumCount=1&amp;amp;songCount=1&lt;/code>
+
+&lt;/div>
+
+&lt;h3 id="result">Result&lt;/h3>
+&lt;p>A &lt;a href="../../responses/subsonic-response">&lt;code>subsonic-response&lt;/code>&lt;/a> with a nested &lt;a href="../../responses/searchresult3">&lt;code>searchResult3&lt;/code>&lt;/a> element on success.&lt;/p></description></item></channel></rss>
